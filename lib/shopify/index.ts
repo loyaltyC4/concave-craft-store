@@ -3,6 +3,13 @@ import {
   SHOPIFY_GRAPHQL_API_ENDPOINT,
   TAGS,
 } from "lib/constants";
+import {
+  staticGetCollectionProducts,
+  staticGetCollections,
+  staticGetMenu,
+  staticGetProduct,
+  staticGetProducts,
+} from "./static-data";
 import { isShopifyError } from "lib/type-guards";
 import { ensureStartsWith } from "lib/utils";
 import {
@@ -322,10 +329,7 @@ export async function getCollectionProducts({
   cacheLife("days");
 
   if (!endpoint) {
-    console.log(
-      `Skipping getCollectionProducts for '${collection}' - Shopify not configured`
-    );
-    return [];
+    return staticGetCollectionProducts(collection);
   }
 
   const res = await shopifyFetch<ShopifyCollectionProductsOperation>({
@@ -353,20 +357,7 @@ export async function getCollections(): Promise<Collection[]> {
   cacheLife("days");
 
   if (!endpoint) {
-    console.log("Skipping getCollections - Shopify not configured");
-    return [
-      {
-        handle: "",
-        title: "All",
-        description: "All products",
-        seo: {
-          title: "All",
-          description: "All products",
-        },
-        path: "/search",
-        updatedAt: new Date().toISOString(),
-      },
-    ];
+    return staticGetCollections();
   }
 
   const res = await shopifyFetch<ShopifyCollectionsOperation>({
@@ -401,8 +392,7 @@ export async function getMenu(handle: string): Promise<Menu[]> {
   cacheLife("days");
 
   if (!endpoint) {
-    console.log(`Skipping getMenu for '${handle}' - Shopify not configured`);
-    return [];
+    return staticGetMenu(handle);
   }
 
   const res = await shopifyFetch<ShopifyMenuOperation>({
@@ -446,8 +436,7 @@ export async function getProduct(handle: string): Promise<Product | undefined> {
   cacheLife("days");
 
   if (!endpoint) {
-    console.log(`Skipping getProduct for '${handle}' - Shopify not configured`);
-    return undefined;
+    return staticGetProduct(handle);
   }
 
   const res = await shopifyFetch<ShopifyProductOperation>({
@@ -466,6 +455,11 @@ export async function getProductRecommendations(
   "use cache";
   cacheTag(TAGS.products);
   cacheLife("days");
+
+  if (!endpoint) {
+    // Return a random sample of other products as recommendations
+    return staticGetProducts({}).slice(0, 4);
+  }
 
   const res = await shopifyFetch<ShopifyProductRecommendationsOperation>({
     query: getProductRecommendationsQuery,
@@ -489,6 +483,10 @@ export async function getProducts({
   "use cache";
   cacheTag(TAGS.products);
   cacheLife("days");
+
+  if (!endpoint) {
+    return staticGetProducts({ query, sortKey, reverse });
+  }
 
   const res = await shopifyFetch<ShopifyProductsOperation>({
     query: getProductsQuery,

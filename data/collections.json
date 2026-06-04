@@ -1,0 +1,111 @@
+{
+  "collections": [
+    {
+      "id": 514248343874,
+      "handle": "starter-kits",
+      "title": "Completes & Setups",
+      "updated_at": "2026-05-26T19:13:34+02:00",
+      "body_html": "<p>Fully assembled fingerboards ready to skate from the moment they arrive. All widths, multiple configurations \u2014 pick up and go.</p>",
+      "published_at": "2026-03-23T22:46:15+02:00",
+      "sort_order": "best-selling",
+      "template_suffix": "",
+      "published_scope": "global",
+      "admin_graphql_api_id": "gid://shopify/Collection/514248343874",
+      "image": {
+        "created_at": "2026-04-16T19:17:21+02:00",
+        "alt": "Completes & Setups - Concave Craft",
+        "width": 1920,
+        "height": 600,
+        "src": "https://cdn.shopify.com/s/files/1/0999/9987/5394/collections/starter-kits_banner-4629889.png?v=1776359841"
+      }
+    },
+    {
+      "id": 515526132034,
+      "handle": "decks",
+      "title": "Decks",
+      "updated_at": "2026-05-26T19:13:34+02:00",
+      "body_html": "<p>Bare fingerboard decks ready for your own build. Maple, graphic, handmade, and CNC-finished \u2014 in 32mm, 34mm, and 36mm widths. Build it the way you want it.</p>",
+      "published_at": "2026-04-16T07:34:35+02:00",
+      "sort_order": "best-selling",
+      "template_suffix": null,
+      "published_scope": "web",
+      "admin_graphql_api_id": "gid://shopify/Collection/515526132034",
+      "image": {
+        "created_at": "2026-04-16T19:17:24+02:00",
+        "alt": "Decks - Concave Craft",
+        "width": 1920,
+        "height": 600,
+        "src": "https://cdn.shopify.com/s/files/1/0999/9987/5394/collections/decks_banner-9058867.png?v=1776359844"
+      }
+    },
+    {
+      "id": 514248278338,
+      "handle": "concave-molds",
+      "title": "Fingerboard Molds",
+      "updated_at": "2026-05-26T19:13:34+02:00",
+      "body_html": "<p>Precision-engineered fingerboard molds for builders who care about consistency. Every profile in the Concave Craft lineup \u2014 from entry-level ABS to full CNC metal construction. Press boards that actually feel the way they should.</p>",
+      "published_at": "2026-03-23T22:43:22+02:00",
+      "sort_order": "best-selling",
+      "template_suffix": "",
+      "published_scope": "global",
+      "admin_graphql_api_id": "gid://shopify/Collection/514248278338",
+      "image": {
+        "created_at": "2026-04-16T19:17:19+02:00",
+        "alt": "Fingerboard Molds - Concave Craft",
+        "width": 1920,
+        "height": 600,
+        "src": "https://cdn.shopify.com/s/files/1/0999/9987/5394/collections/concave-molds_banner-2132349.png?v=1776359839"
+      }
+    },
+    {
+      "id": 514248442178,
+      "handle": "accessories",
+      "title": "Hardware & Tools",
+      "updated_at": "2026-05-26T19:13:34+02:00",
+      "body_html": "<p>Every component and tool you need to build, tune, and maintain a fingerboard setup. Trucks, wheels, bearings, bushings, hardware, and tools \u2014 sourced and tested for real fingerboard use.</p>",
+      "published_at": "2026-03-23T22:49:05+02:00",
+      "sort_order": "created-desc",
+      "template_suffix": "",
+      "published_scope": "global",
+      "admin_graphql_api_id": "gid://shopify/Collection/514248442178",
+      "image": {
+        "created_at": "2026-04-16T19:17:22+02:00",
+        "alt": "Hardware & Tools - Concave Craft",
+        "width": 1920,
+        "height": 600,
+        "src": "https://cdn.shopify.com/s/files/1/0999/9987/5394/collections/accessories_banner-6995283.png?v=1776359843"
+      }
+    },
+    {
+      "id": 514238808386,
+      "handle": "frontpage",
+      "title": "Home page",
+      "updated_at": "2026-05-26T19:13:34+02:00",
+      "body_html": null,
+      "published_at": "2026-03-23T17:52:15+02:00",
+      "sort_order": "best-selling",
+      "template_suffix": null,
+      "published_scope": "global",
+      "admin_graphql_api_id": "gid://shopify/Collection/514238808386"
+    },
+    {
+      "id": 515526164802,
+      "handle": "ramps-parks",
+      "title": "Ramps & Parks",
+      "updated_at": "2026-05-26T19:13:34+02:00",
+      "body_html": "<p>Wooden fingerboard obstacles, ramps, rails, and full park sets. Built for real skating \u2014 not display. Set them up on any flat surface and go.</p>",
+      "published_at": "2026-04-16T07:34:36+02:00",
+      "sort_order": "manual",
+      "template_suffix": null,
+      "published_scope": "web",
+      "admin_graphql_api_id": "gid://shopify/Collection/515526164802",
+      "image": {
+        "created_at": "2026-04-16T19:17:26+02:00",
+        "alt": "Ramps & Parks - Concave Craft",
+        "width": 1920,
+        "height": 600,
+        "src": "https://cdn.shopify.com/s/files/1/0999/9987/5394/collections/ramps-parks_banner-1327792.png?v=1776359846"
+      }
+    }
+  ]
+}
