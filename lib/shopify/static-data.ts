@@ -173,18 +173,29 @@ export function staticGetCollections(): Collection[] {
 }
 
 export function staticGetCollectionProducts(handle: string): Product[] {
+  // Special hidden collections used by the homepage — return a spread of products
+  if (handle === "hidden-homepage-featured-items") {
+    return allProducts.slice(0, 3);
+  }
+  if (handle === "hidden-homepage-carousel") {
+    return allProducts.slice(0, 12);
+  }
+
   const raw = collectionsRaw.collections.find(
     (c: any) => c.handle === handle
   );
-  if (!raw) return [];
+  // Fall back to all products if collection not found
+  if (!raw) return allProducts.slice(0, 48);
 
   const keyword = (raw.title as string).toLowerCase();
-  return allProducts.filter(
+  const filtered = allProducts.filter(
     (p) =>
       p.title.toLowerCase().includes(keyword) ||
       p.tags.some((t) => t.toLowerCase().includes(keyword)) ||
       p.description.toLowerCase().includes(keyword)
   );
+  // If keyword filter returns nothing, return all products
+  return filtered.length > 0 ? filtered : allProducts.slice(0, 48);
 }
 
 export function staticGetMenu(handle: string) {
