@@ -3,6 +3,9 @@
 @plugin "@tailwindcss/container-queries";
 @plugin "@tailwindcss/typography";
 
+/* Force class-based dark mode so the whole storefront stays dark regardless of OS setting */
+@custom-variant dark (&:where(.dark, .dark *));
+
 @layer base {
   *,
   ::after,
@@ -10,12 +13,6 @@
   ::backdrop,
   ::file-selector-button {
     border-color: var(--color-gray-200, currentColor);
-  }
-}
-
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
   }
 }
 
@@ -28,5 +25,43 @@
 a,
 input,
 button {
-  @apply focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-neutral-400 focus-visible:ring-offset-2 focus-visible:ring-offset-neutral-50 dark:focus-visible:ring-neutral-600 dark:focus-visible:ring-offset-neutral-900;
+  @apply focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-[#c5f23c]/60 focus-visible:ring-offset-2 focus-visible:ring-offset-[#0b0c0e];
+}
+
+/* ===== Concave Craft — Direction C ===== */
+:root {
+  --cc-asphalt: #0b0c0e;
+  --cc-panel: #15171c;
+  --cc-lime: #c5f23c;
+  --cc-cream: #f3f1ea;
+  --font-display: "Clash Display", var(--font-geist-sans), ui-sans-serif, sans-serif;
+  --font-body: "General Sans", var(--font-geist-sans), system-ui, sans-serif;
+}
+
+html {
+  color-scheme: dark;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-display);
+  letter-spacing: -0.02em;
+}
+
+@keyframes cc-marquee {
+  to { transform: translateX(-50%); }
+}
+.cc-marquee { animation: cc-marquee 32s linear infinite; will-change: transform; }
+
+@keyframes cc-float {
+  50% { transform: translateY(-12px) rotate(8deg); }
+}
+.cc-float { animation: cc-float 6s ease-in-out infinite; }
+
+@media (prefers-reduced-motion: reduce) {
+  .cc-marquee, .cc-float { animation: none; }
 }
