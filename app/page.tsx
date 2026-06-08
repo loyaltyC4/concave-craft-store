@@ -2,6 +2,7 @@ import { getCollections, getProducts } from "lib/shopify";
 import type { Product } from "lib/shopify/types";
 import Image from "next/image";
 import Link from "next/link";
+import Footer from "components/layout/footer";
 
 export const metadata = {
   title: "Concave Craft — Precision Fingerboard Hardware",
@@ -348,6 +349,8 @@ export default async function HomePage() {
           ))}
         </div>
       </section>
+
+      <Footer />
     </div>
   );
 }

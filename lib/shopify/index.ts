@@ -305,6 +305,10 @@ export async function getCollection(
   cacheTag(TAGS.collections);
   cacheLife("days");
 
+  if (!endpoint) {
+    return (await staticGetCollections()).find((c) => c.handle === handle);
+  }
+
   const res = await shopifyFetch<ShopifyCollectionOperation>({
     query: getCollectionQuery,
     variables: {
