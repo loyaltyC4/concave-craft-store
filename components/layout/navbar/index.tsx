@@ -1,4 +1,5 @@
 import CartModal from "components/cart/modal";
+import LogoMark from "components/icons/logo-mark";
 import { getMenu } from "lib/shopify";
 import { Menu } from "lib/shopify/types";
 import Link from "next/link";
@@ -24,9 +25,9 @@ export async function Navbar() {
       </div>
 
       <Link href="/" prefetch={true} className="flex flex-none items-center gap-2.5">
-        <img src="/cc-mascot.jpg" alt="Concave Craft" className="h-9 w-9 rounded-lg object-cover" />
+        <LogoMark className="h-9 w-9" />
         <span className="hidden text-base font-semibold tracking-tight text-[#f3f1ea] sm:block">
-          Concave<span className="text-[#c5f23c]">.</span>Craft
+          Fingerboard<span className="text-[#c5f23c]">.</span>Lab
         </span>
       </Link>
 

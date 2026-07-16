@@ -9,7 +9,7 @@ const productsRaw: { products: any[] } = require("../../data/products.json");
 // eslint-disable-next-line @typescript-eslint/no-require-imports
 const collectionsRaw: { collections: any[] } = require("../../data/collections.json");
 
-import type { Collection, Product } from "./types";
+import type { Collection, Product, ProductVariant } from "./types";
 
 // ── Helpers ──────────────────────────────────────────────────────────────────
 
@@ -116,6 +116,24 @@ const allCollections: Collection[] = collectionsRaw.collections
   .filter((c: any) => !c.handle.startsWith("hidden"))
   .map(restCollectionToCollection);
 
+// ── Variant index (powers the local cart + Stripe line items) ─────────────────
+
+const variantIndex = new Map<
+  string,
+  { product: Product; variant: ProductVariant }
+>();
+for (const p of allProducts) {
+  for (const v of p.variants) {
+    variantIndex.set(v.id, { product: p, variant: v });
+  }
+}
+
+export function staticGetVariant(
+  variantId: string,
+): { product: Product; variant: ProductVariant } | undefined {
+  return variantIndex.get(variantId);
+}
+
 // ── Public API ────────────────────────────────────────────────────────────────
 
 export function staticGetProducts({
@@ -207,8 +225,11 @@ export function staticGetMenu(handle: string) {
   }
   if (handle === "next-js-frontend-footer-menu") {
     return [
-      { title: "Home", path: "/" },
       { title: "All Products", path: "/search" },
+      { title: "Shipping", path: "/shipping" },
+      { title: "Returns", path: "/returns" },
+      { title: "Privacy Policy", path: "/privacy" },
+      { title: "Terms of Service", path: "/terms" },
     ];
   }
   return [];
