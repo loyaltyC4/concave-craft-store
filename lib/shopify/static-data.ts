@@ -93,13 +93,16 @@ function restProductToProduct(p: any): Product {
 }
 
 function restCollectionToCollection(c: any): Collection {
+  const strippedBody = stripHtml((c.body_html as string) ?? "");
   return {
     handle: c.handle as string,
     title: c.title as string,
-    description: stripHtml((c.body_html as string) ?? ""),
+    description: strippedBody,
+    // Prefer curated SEO copy (data/collections.json "seo" field) when present;
+    // fall back to an auto-generated title/description otherwise.
     seo: {
-      title: c.title as string,
-      description: stripHtml((c.body_html as string) ?? "").slice(0, 160),
+      title: (c.seo?.title as string) || (c.title as string),
+      description: (c.seo?.description as string) || strippedBody.slice(0, 160),
     },
     updatedAt: (c.updated_at as string) ?? new Date().toISOString(),
     path: `/search/${c.handle as string}`,
@@ -112,8 +115,17 @@ const allProducts: Product[] = productsRaw.products
   .filter((p: any) => p.status === "active")
   .map(restProductToProduct);
 
+// Drop Shopify system collections that aren't real storefront categories:
+// "hidden-*" (used internally for homepage rails) and "frontpage" (Shopify's
+// legacy default collection — not a real category, would otherwise leak into
+// the sitemap as a duplicate-content page showing all products again).
+const NON_CATEGORY_HANDLES = new Set(["frontpage"]);
+
 const allCollections: Collection[] = collectionsRaw.collections
-  .filter((c: any) => !c.handle.startsWith("hidden"))
+  .filter(
+    (c: any) =>
+      !c.handle.startsWith("hidden") && !NON_CATEGORY_HANDLES.has(c.handle),
+  )
   .map(restCollectionToCollection);
 
 // ── Variant index (powers the local cart + Stripe line items) ─────────────────
