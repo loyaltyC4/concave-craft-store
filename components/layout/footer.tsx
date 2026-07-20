@@ -1,6 +1,7 @@
 import Link from "next/link";
 
 import FooterMenu from "components/layout/footer-menu";
+import LogoMark from "components/icons/logo-mark";
 import { getMenu } from "lib/shopify";
 import { Suspense } from "react";
 
@@ -8,11 +9,11 @@ const { COMPANY_NAME, SITE_NAME } = process.env;
 
 export default async function Footer() {
   const currentYear = new Date().getFullYear();
-  const copyrightDate = 2023 + (currentYear > 2023 ? `-${currentYear}` : "");
+  const copyrightDate = 2026 + (currentYear > 2026 ? `-${currentYear}` : "");
   const skeleton =
     "w-full h-6 animate-pulse rounded-sm bg-neutral-800";
   const menu = await getMenu("next-js-frontend-footer-menu");
-  const copyrightName = COMPANY_NAME || SITE_NAME || "Concave Craft";
+  const copyrightName = COMPANY_NAME || SITE_NAME || "Fingerboard Lab";
 
   return (
     <footer className="border-t border-white/10 bg-[#0b0c0e] text-sm text-neutral-400">
@@ -22,9 +23,9 @@ export default async function Footer() {
             className="flex items-center gap-2 text-[#f3f1ea]"
             href="/"
           >
-            <img src="/cc-mascot.jpg" alt="Concave Craft" className="h-9 w-9 rounded-lg object-cover" />
+            <LogoMark className="h-9 w-9" />
             <span className="text-base font-semibold tracking-tight">
-              Concave<span className="text-[#c5f23c]">.</span>Craft
+              Fingerboard<span className="text-[#c5f23c]">.</span>Lab
             </span>
           </Link>
           <p className="mt-4 text-sm leading-relaxed text-neutral-500">

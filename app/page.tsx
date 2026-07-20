@@ -5,9 +5,13 @@ import Link from "next/link";
 import Footer from "components/layout/footer";
 
 export const metadata = {
-  title: "Concave Craft — Precision Fingerboard Hardware",
+  title: {
+    absolute:
+      "Fingerboard Lab — Precision Fingerboard Hardware, Pro Decks & Molds",
+  },
   description:
-    "Precision-machined fingerboard trucks, hand-pressed decks, concave molds, wheels, ramps, and technical hardware for serious players. Free sticker sheet in every box.",
+    "Shop precision-machined fingerboard trucks, hand-pressed pro decks, concave molds, wheels, ramps, and complete setups. Built for real fingerboarding. Free sticker sheet in every box. Worldwide shipping.",
+  alternates: { canonical: "/" },
 };
 
 const LIME = "#c5f23c";

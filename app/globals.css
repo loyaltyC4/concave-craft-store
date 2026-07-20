@@ -28,7 +28,7 @@ button {
   @apply focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-[#c5f23c]/60 focus-visible:ring-offset-2 focus-visible:ring-offset-[#0b0c0e];
 }
 
-/* ===== Concave Craft — Direction C ===== */
+/* ===== Fingerboard Lab — brand tokens ===== */
 :root {
   --cc-asphalt: #0b0c0e;
   --cc-panel: #15171c;

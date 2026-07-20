@@ -9,7 +9,7 @@ const productsRaw: { products: any[] } = require("../../data/products.json");
 // eslint-disable-next-line @typescript-eslint/no-require-imports
 const collectionsRaw: { collections: any[] } = require("../../data/collections.json");
 
-import type { Collection, Product } from "./types";
+import type { Collection, Product, ProductVariant } from "./types";
 
 // ── Helpers ──────────────────────────────────────────────────────────────────
 
@@ -93,13 +93,16 @@ function restProductToProduct(p: any): Product {
 }
 
 function restCollectionToCollection(c: any): Collection {
+  const strippedBody = stripHtml((c.body_html as string) ?? "");
   return {
     handle: c.handle as string,
     title: c.title as string,
-    description: stripHtml((c.body_html as string) ?? ""),
+    description: strippedBody,
+    // Prefer curated SEO copy (data/collections.json "seo" field) when present;
+    // fall back to an auto-generated title/description otherwise.
     seo: {
-      title: c.title as string,
-      description: stripHtml((c.body_html as string) ?? "").slice(0, 160),
+      title: (c.seo?.title as string) || (c.title as string),
+      description: (c.seo?.description as string) || strippedBody.slice(0, 160),
     },
     updatedAt: (c.updated_at as string) ?? new Date().toISOString(),
     path: `/search/${c.handle as string}`,
@@ -112,9 +115,36 @@ const allProducts: Product[] = productsRaw.products
   .filter((p: any) => p.status === "active")
   .map(restProductToProduct);
 
+// Drop Shopify system collections that aren't real storefront categories:
+// "hidden-*" (used internally for homepage rails) and "frontpage" (Shopify's
+// legacy default collection — not a real category, would otherwise leak into
+// the sitemap as a duplicate-content page showing all products again).
+const NON_CATEGORY_HANDLES = new Set(["frontpage"]);
+
 const allCollections: Collection[] = collectionsRaw.collections
-  .filter((c: any) => !c.handle.startsWith("hidden"))
+  .filter(
+    (c: any) =>
+      !c.handle.startsWith("hidden") && !NON_CATEGORY_HANDLES.has(c.handle),
+  )
   .map(restCollectionToCollection);
+
+// ── Variant index (powers the local cart + Stripe line items) ─────────────────
+
+const variantIndex = new Map<
+  string,
+  { product: Product; variant: ProductVariant }
+>();
+for (const p of allProducts) {
+  for (const v of p.variants) {
+    variantIndex.set(v.id, { product: p, variant: v });
+  }
+}
+
+export function staticGetVariant(
+  variantId: string,
+): { product: Product; variant: ProductVariant } | undefined {
+  return variantIndex.get(variantId);
+}
 
 // ── Public API ────────────────────────────────────────────────────────────────
 
@@ -207,8 +237,11 @@ export function staticGetMenu(handle: string) {
   }
   if (handle === "next-js-frontend-footer-menu") {
     return [
-      { title: "Home", path: "/" },
       { title: "All Products", path: "/search" },
+      { title: "Shipping", path: "/shipping" },
+      { title: "Returns", path: "/returns" },
+      { title: "Privacy Policy", path: "/privacy" },
+      { title: "Terms of Service", path: "/terms" },
     ];
   }
   return [];

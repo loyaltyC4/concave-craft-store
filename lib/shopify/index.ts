@@ -417,7 +417,11 @@ export async function getMenu(handle: string): Promise<Menu[]> {
   );
 }
 
-export async function getPage(handle: string): Promise<Page> {
+export async function getPage(handle: string): Promise<Page | undefined> {
+  // Static mode: legacy Shopify "pages" are not used. Return undefined so the
+  // dynamic /[page] route renders a 404 instead of throwing.
+  if (!endpoint) return undefined;
+
   const res = await shopifyFetch<ShopifyPageOperation>({
     query: getPageQuery,
     variables: { handle },
@@ -427,6 +431,9 @@ export async function getPage(handle: string): Promise<Page> {
 }
 
 export async function getPages(): Promise<Page[]> {
+  // Static mode: no Shopify pages.
+  if (!endpoint) return [];
+
   const res = await shopifyFetch<ShopifyPagesOperation>({
     query: getPagesQuery,
   });
