@@ -1,60 +1,142 @@
 import Link from "next/link";
+import { BrandLogo } from "components/brand-logo";
+import { NewsletterForm } from "components/newsletter-form";
+import {
+  COLLECTIONS,
+  GUIDES,
+  SITE_NAME,
+  SUPPORT_EMAIL,
+  SOCIALS,
+} from "lib/brand";
 
-import FooterMenu from "components/layout/footer-menu";
-import { getMenu } from "lib/shopify";
-import { Suspense } from "react";
+function Column({
+  title,
+  links,
+}: {
+  title: string;
+  links: { label: string; href: string }[];
+}) {
+  return (
+    <div>
+      <h3 className="text-xs font-semibold uppercase tracking-[0.18em] text-neutral-500">
+        {title}
+      </h3>
+      <ul className="mt-4 space-y-2.5">
+        {links.map((l) => (
+          <li key={l.href}>
+            <Link
+              href={l.href}
+              className="text-sm text-neutral-400 transition-colors hover:text-[#c5f23c]"
+            >
+              {l.label}
+            </Link>
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+}
 
-const { COMPANY_NAME, SITE_NAME } = process.env;
-
-export default async function Footer() {
+export default function Footer() {
   const currentYear = new Date().getFullYear();
   const copyrightDate = 2023 + (currentYear > 2023 ? `-${currentYear}` : "");
-  const skeleton =
-    "w-full h-6 animate-pulse rounded-sm bg-neutral-800";
-  const menu = await getMenu("next-js-frontend-footer-menu");
-  const copyrightName = COMPANY_NAME || SITE_NAME || "Concave Craft";
 
   return (
     <footer className="border-t border-white/10 bg-[#0b0c0e] text-sm text-neutral-400">
-      <div className="mx-auto flex w-full max-w-7xl flex-col gap-6 px-6 py-14 text-sm md:flex-row md:gap-12 md:px-4 min-[1320px]:px-0">
-        <div className="md:max-w-xs">
-          <Link
-            className="flex items-center gap-2 text-[#f3f1ea]"
-            href="/"
-          >
-            <img src="/cc-mascot.jpg" alt="Concave Craft" className="h-9 w-9 rounded-lg object-cover" />
-            <span className="text-base font-semibold tracking-tight">
-              Concave<span className="text-[#c5f23c]">.</span>Craft
-            </span>
-          </Link>
-          <p className="mt-4 text-sm leading-relaxed text-neutral-500">
-            Precision fingerboard hardware, decks, molds, and hand-built ramps for serious players. Free sticker sheet in every box.
+      <div className="mx-auto grid w-full max-w-7xl grid-cols-2 gap-10 px-6 py-16 md:grid-cols-6 md:px-12">
+        <div className="col-span-2 md:col-span-2">
+          <BrandLogo />
+          <p className="mt-4 max-w-xs text-sm leading-relaxed text-neutral-500">
+            Precision-engineered fingerboard hardware for real skating —
+            completes, hand-pressed decks, CNC concave molds, trucks, wheels,
+            and wooden ramps. Free sticker sheet in every box.
           </p>
+          <div className="mt-5 flex gap-3">
+            {[
+              ["Instagram", SOCIALS.instagram],
+              ["YouTube", SOCIALS.youtube],
+              ["TikTok", SOCIALS.tiktok],
+            ].map(([label, href]) => (
+              <a
+                key={label}
+                href={href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="rounded-full border border-white/10 px-3 py-1.5 text-xs text-neutral-400 transition hover:border-[#c5f23c]/50 hover:text-[#c5f23c]"
+              >
+                {label}
+              </a>
+            ))}
+          </div>
         </div>
-        <Suspense
-          fallback={
-            <div className="flex h-[188px] w-[200px] flex-col gap-2">
-              <div className={skeleton} />
-              <div className={skeleton} />
-              <div className={skeleton} />
-              <div className={skeleton} />
-              <div className={skeleton} />
-              <div className={skeleton} />
-            </div>
-          }
-        >
-          <FooterMenu menu={menu} />
-        </Suspense>
+
+        <Column
+          title="Shop"
+          links={[
+            { label: "All products", href: "/search" },
+            ...COLLECTIONS.map((c) => ({
+              label: c.title,
+              href: `/search/${c.handle}`,
+            })),
+          ]}
+        />
+
+        <Column
+          title="Learn"
+          links={[
+            { label: "All guides", href: "/guides" },
+            ...GUIDES.slice(0, 3).map((g) => ({
+              label: g.title.split(":")[0] ?? g.title,
+              href: `/guides/${g.slug}`,
+            })),
+          ]}
+        />
+
+        <Column
+          title="Support"
+          links={[
+            { label: "Shipping & returns", href: "/shipping-returns" },
+            { label: "FAQ", href: "/faq" },
+            { label: "Contact", href: "/contact" },
+            { label: "About", href: "/about" },
+          ]}
+        />
+
+        <div className="col-span-2 md:col-span-1">
+          <h3 className="text-xs font-semibold uppercase tracking-[0.18em] text-neutral-500">
+            The drop list
+          </h3>
+          <p className="mt-4 text-sm text-neutral-500">
+            Restocks, new molds, and build tips.
+          </p>
+          <div className="mt-3">
+            <NewsletterForm />
+          </div>
+        </div>
       </div>
-      <div className="border-t border-white/10 py-6 text-sm">
-        <div className="mx-auto flex w-full max-w-7xl flex-col items-center gap-1 px-4 md:flex-row md:gap-0 md:px-4 min-[1320px]:px-0">
-          <p className="text-neutral-500">
-            &copy; {copyrightDate} {copyrightName}
-            {copyrightName.length && !copyrightName.endsWith(".") ? "." : ""} Built for real fingerboarding.
+
+      <div className="border-t border-white/10">
+        <div className="mx-auto flex w-full max-w-7xl flex-col items-center gap-3 px-6 py-6 text-xs text-neutral-500 md:flex-row md:px-12">
+          <p>
+            &copy; {copyrightDate} {SITE_NAME}. Built for real fingerboarding.
           </p>
-          <p className="md:ml-auto text-neutral-500">
-            Grip it and rip it.
+          <p className="md:ml-6">
+            Secure checkout by Stripe · Visa · Mastercard · Amex · Apple Pay
           </p>
+          <div className="flex gap-4 md:ml-auto">
+            <Link href="/privacy" className="hover:text-neutral-300">
+              Privacy
+            </Link>
+            <Link href="/terms" className="hover:text-neutral-300">
+              Terms
+            </Link>
+            <a
+              href={`mailto:${SUPPORT_EMAIL}`}
+              className="hover:text-neutral-300"
+            >
+              {SUPPORT_EMAIL}
+            </a>
+          </div>
         </div>
       </div>
     </footer>

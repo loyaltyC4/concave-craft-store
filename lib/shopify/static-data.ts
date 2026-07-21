@@ -2,19 +2,33 @@
  * Static data layer — products/collections bundled at build time.
  * Activated automatically when SHOPIFY_STORE_DOMAIN is not set.
  * No API tokens. No network requests. Zero Shopify dependency.
+ *
+ * Collection membership is EXPLICIT: data/collection-map.json maps each
+ * collection handle to an ordered list of product handles. This replaces the
+ * old fragile title-keyword matching so category pages are accurate.
  */
 
 // eslint-disable-next-line @typescript-eslint/no-require-imports
 const productsRaw: { products: any[] } = require("../../data/products.json");
 // eslint-disable-next-line @typescript-eslint/no-require-imports
-const collectionsRaw: { collections: any[] } = require("../../data/collections.json");
+const collectionsRaw: {
+  collections: any[];
+} = require("../../data/collections.json");
+// eslint-disable-next-line @typescript-eslint/no-require-imports
+const collectionMap: Record<
+  string,
+  string[]
+> = require("../../data/collection-map.json");
 
 import type { Collection, Product } from "./types";
 
 // ── Helpers ──────────────────────────────────────────────────────────────────
 
 function stripHtml(html: string): string {
-  return html.replace(/<[^>]*>/g, " ").replace(/\s+/g, " ").trim();
+  return html
+    .replace(/<[^>]*>/g, " ")
+    .replace(/\s+/g, " ")
+    .trim();
 }
 
 // ── Transformers ─────────────────────────────────────────────────────────────
@@ -54,12 +68,16 @@ function restProductToProduct(p: any): Product {
       availableForSale: v.available !== false,
       selectedOptions,
       price: { amount: (v.price as string) ?? "0.00", currencyCode: "USD" },
+      sku: (v.sku as string) ?? "",
     };
   });
 
   const tags =
     typeof p.tags === "string"
-      ? p.tags.split(",").map((t: string) => t.trim()).filter(Boolean)
+      ? p.tags
+          .split(",")
+          .map((t: string) => t.trim())
+          .filter(Boolean)
       : Array.isArray(p.tags)
         ? (p.tags as string[])
         : [];
@@ -112,8 +130,41 @@ const allProducts: Product[] = productsRaw.products
   .filter((p: any) => p.status === "active")
   .map(restProductToProduct);
 
+const productByHandle = new Map<string, Product>(
+  allProducts.map((p) => [p.handle, p]),
+);
+
+// Variant id -> { product, variant } for server-side checkout price resolution
+const variantIndex = new Map<
+  string,
+  { product: Product; variant: Product["variants"][number] }
+>();
+for (const p of allProducts) {
+  for (const v of p.variants)
+    variantIndex.set(v.id, { product: p, variant: v });
+}
+
+export function staticGetVariant(id: string) {
+  return variantIndex.get(id);
+}
+
+// Reverse index: product handle -> its primary collection handle
+const collectionOfProduct = new Map<string, string>();
+for (const [handle, productHandles] of Object.entries(collectionMap)) {
+  for (const ph of productHandles) {
+    if (!collectionOfProduct.has(ph)) collectionOfProduct.set(ph, handle);
+  }
+}
+
+const HIDDEN_COLLECTION_HANDLES = new Set(["frontpage", ""]);
+
 const allCollections: Collection[] = collectionsRaw.collections
-  .filter((c: any) => !c.handle.startsWith("hidden"))
+  .filter(
+    (c: any) =>
+      !String(c.handle).startsWith("hidden") &&
+      !HIDDEN_COLLECTION_HANDLES.has(c.handle) &&
+      String(c.title).toLowerCase() !== "home page",
+  )
   .map(restCollectionToCollection);
 
 // ── Public API ────────────────────────────────────────────────────────────────
@@ -135,7 +186,7 @@ export function staticGetProducts({
       (p) =>
         p.title.toLowerCase().includes(q) ||
         p.description.toLowerCase().includes(q) ||
-        p.tags.some((t) => t.toLowerCase().includes(q))
+        p.tags.some((t) => t.toLowerCase().includes(q)),
     );
   }
 
@@ -149,7 +200,7 @@ export function staticGetProducts({
     products.sort((a, b) =>
       reverse
         ? b.updatedAt.localeCompare(a.updatedAt)
-        : a.updatedAt.localeCompare(b.updatedAt)
+        : a.updatedAt.localeCompare(b.updatedAt),
     );
   }
 
@@ -157,7 +208,7 @@ export function staticGetProducts({
 }
 
 export function staticGetProduct(handle: string): Product | undefined {
-  return allProducts.find((p) => p.handle === handle);
+  return productByHandle.get(handle);
 }
 
 export function staticGetCollections(): Collection[] {
@@ -172,30 +223,58 @@ export function staticGetCollections(): Collection[] {
   return [all, ...allCollections];
 }
 
+function productsForHandles(handles: string[]): Product[] {
+  return handles
+    .map((h) => productByHandle.get(h))
+    .filter((p): p is Product => Boolean(p));
+}
+
 export function staticGetCollectionProducts(handle: string): Product[] {
-  // Special hidden collections used by the homepage — return a spread of products
+  // Homepage helper collections
   if (handle === "hidden-homepage-featured-items") {
-    return allProducts.slice(0, 3);
+    return productsForHandles(collectionMap["starter-kits"] ?? []).slice(0, 3);
   }
   if (handle === "hidden-homepage-carousel") {
-    return allProducts.slice(0, 12);
+    const spread: Product[] = [];
+    for (const h of Object.keys(collectionMap)) {
+      spread.push(...productsForHandles(collectionMap[h] ?? []).slice(0, 3));
+    }
+    return spread.slice(0, 12);
   }
 
-  const raw = collectionsRaw.collections.find(
-    (c: any) => c.handle === handle
-  );
-  // Fall back to all products if collection not found
-  if (!raw) return allProducts.slice(0, 48);
+  // Explicit collection membership
+  if (collectionMap[handle]) {
+    return productsForHandles(collectionMap[handle]);
+  }
 
-  const keyword = (raw.title as string).toLowerCase();
-  const filtered = allProducts.filter(
-    (p) =>
-      p.title.toLowerCase().includes(keyword) ||
-      p.tags.some((t) => t.toLowerCase().includes(keyword)) ||
-      p.description.toLowerCase().includes(keyword)
-  );
-  // If keyword filter returns nothing, return all products
-  return filtered.length > 0 ? filtered : allProducts.slice(0, 48);
+  // Unknown handle -> everything (search "all")
+  return [...allProducts];
+}
+
+/** Primary collection handle a product belongs to (for breadcrumbs / cross-sell). */
+export function staticGetProductCollection(
+  productHandle: string,
+): string | undefined {
+  return collectionOfProduct.get(productHandle);
+}
+
+/** Same-collection recommendations, filled from the wider catalog if needed. */
+export function staticGetRelatedProducts(
+  productHandle: string,
+  limit = 8,
+): Product[] {
+  const collectionHandle = collectionOfProduct.get(productHandle);
+  const pool = collectionHandle
+    ? productsForHandles(collectionMap[collectionHandle] ?? [])
+    : [];
+  const related = pool.filter((p) => p.handle !== productHandle);
+  if (related.length < limit) {
+    for (const p of allProducts) {
+      if (related.length >= limit) break;
+      if (p.handle !== productHandle && !related.includes(p)) related.push(p);
+    }
+  }
+  return related.slice(0, limit);
 }
 
 export function staticGetMenu(handle: string) {

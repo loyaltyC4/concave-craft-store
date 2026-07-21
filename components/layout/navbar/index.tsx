@@ -1,38 +1,52 @@
 import CartModal from "components/cart/modal";
-import { getMenu } from "lib/shopify";
-import { Menu } from "lib/shopify/types";
+import { BrandLogo } from "components/brand-logo";
+import { getCollections } from "lib/shopify";
 import Link from "next/link";
 import { Suspense } from "react";
 import MobileMenu from "./mobile-menu";
 import Search, { SearchSkeleton } from "./search";
 
-export async function Navbar() {
-  const menu = await getMenu("next-js-frontend-header-menu");
+const ANNOUNCEMENTS = [
+  "Free sticker sheet in every box",
+  "Machined to ±0.1mm",
+  "Worldwide shipping",
+  "30-day returns",
+];
 
-  // Drop non-category entries (Home page, the synthetic "All", bare root)
-  const links = menu.filter((item: Menu) => {
-    const t = (item.title || "").toLowerCase();
-    return t !== "home page" && t !== "home" && t !== "all" && item.path !== "/" && item.path !== "/search";
-  });
+export async function Navbar() {
+  const collections = await getCollections();
+  const links = [
+    ...collections
+      .filter((c) => c.handle)
+      .map((c) => ({ title: c.title, path: c.path })),
+    { title: "Guides", path: "/guides" },
+  ];
 
   return (
-    <nav className="sticky top-0 z-50 flex items-center gap-4 border-b border-white/10 bg-[#0b0c0e]/85 px-4 py-3 backdrop-blur-md lg:px-6">
-      <div className="flex-none md:hidden">
-        <Suspense fallback={null}>
-          <MobileMenu menu={links} />
-        </Suspense>
+    <header className="sticky top-0 z-50">
+      {/* Announcement bar */}
+      <div className="hidden bg-[#c5f23c] text-black sm:block">
+        <div className="mx-auto flex max-w-7xl items-center justify-center gap-8 px-6 py-1.5 text-[12px] font-semibold tracking-wide">
+          {ANNOUNCEMENTS.map((a) => (
+            <span key={a} className="flex items-center gap-8">
+              {a}
+              <span className="text-black/30">◆</span>
+            </span>
+          ))}
+        </div>
       </div>
 
-      <Link href="/" prefetch={true} className="flex flex-none items-center gap-2.5">
-        <img src="/cc-mascot.jpg" alt="Concave Craft" className="h-9 w-9 rounded-lg object-cover" />
-        <span className="hidden text-base font-semibold tracking-tight text-[#f3f1ea] sm:block">
-          Concave<span className="text-[#c5f23c]">.</span>Craft
-        </span>
-      </Link>
+      <nav className="flex items-center gap-4 border-b border-white/10 bg-[#0b0c0e]/85 px-4 py-3 backdrop-blur-md lg:px-6">
+        <div className="flex-none md:hidden">
+          <Suspense fallback={null}>
+            <MobileMenu menu={links} />
+          </Suspense>
+        </div>
 
-      {links.length ? (
+        <BrandLogo />
+
         <ul className="hidden flex-1 items-center gap-6 pl-4 md:flex">
-          {links.map((item: Menu) => (
+          {links.map((item) => (
             <li key={item.title}>
               <Link
                 href={item.path}
@@ -44,18 +58,16 @@ export async function Navbar() {
             </li>
           ))}
         </ul>
-      ) : (
-        <div className="flex-1" />
-      )}
 
-      <div className="ml-auto flex flex-none items-center gap-3">
-        <div className="hidden w-52 xl:w-64 lg:block">
-          <Suspense fallback={<SearchSkeleton />}>
-            <Search />
-          </Suspense>
+        <div className="ml-auto flex flex-none items-center gap-3">
+          <div className="hidden w-52 lg:block xl:w-64">
+            <Suspense fallback={<SearchSkeleton />}>
+              <Search />
+            </Suspense>
+          </div>
+          <CartModal />
         </div>
-        <CartModal />
-      </div>
-    </nav>
+      </nav>
+    </header>
   );
 }

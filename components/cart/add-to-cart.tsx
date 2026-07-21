@@ -2,27 +2,30 @@
 
 import { PlusIcon } from "@heroicons/react/24/outline";
 import clsx from "clsx";
-import { addItem } from "components/cart/actions";
 import { Product, ProductVariant } from "lib/shopify/types";
 import { useSearchParams } from "next/navigation";
-import { useActionState } from "react";
+import { toast } from "sonner";
 import { useCart } from "./cart-context";
 
 function SubmitButton({
   availableForSale,
   selectedVariantId,
+  onClick,
 }: {
   availableForSale: boolean;
   selectedVariantId: string | undefined;
+  onClick: () => void;
 }) {
   const buttonClasses =
-    "relative flex w-full items-center justify-center rounded-full bg-blue-600 p-4 tracking-wide text-white";
-  const disabledClasses = "cursor-not-allowed opacity-60 hover:opacity-60";
+    "relative flex w-full items-center justify-center gap-2 rounded-full p-4 text-sm font-semibold uppercase tracking-wide transition active:scale-[0.99]";
+  const enabled =
+    "bg-[#c5f23c] text-black hover:brightness-110 shadow-[0_10px_30px_-12px_rgba(197,242,60,0.6)]";
+  const disabledClasses = "cursor-not-allowed bg-white/10 text-neutral-400";
 
   if (!availableForSale) {
     return (
       <button disabled className={clsx(buttonClasses, disabledClasses)}>
-        Out Of Stock
+        Out of stock
       </button>
     );
   }
@@ -34,25 +37,21 @@ function SubmitButton({
         disabled
         className={clsx(buttonClasses, disabledClasses)}
       >
-        <div className="absolute left-0 ml-4">
-          <PlusIcon className="h-5" />
-        </div>
-        Add To Cart
+        <PlusIcon className="h-5" />
+        Select an option
       </button>
     );
   }
 
   return (
     <button
+      type="button"
       aria-label="Add to cart"
-      className={clsx(buttonClasses, {
-        "hover:opacity-90": true,
-      })}
+      onClick={onClick}
+      className={clsx(buttonClasses, enabled)}
     >
-      <div className="absolute left-0 ml-4">
-        <PlusIcon className="h-5" />
-      </div>
-      Add To Cart
+      <PlusIcon className="h-5" />
+      Add to cart
     </button>
   );
 }
@@ -61,7 +60,6 @@ export function AddToCart({ product }: { product: Product }) {
   const { variants, availableForSale } = product;
   const { addCartItem } = useCart();
   const searchParams = useSearchParams();
-  const [message, formAction] = useActionState(addItem, null);
 
   const variant = variants.find((variant: ProductVariant) =>
     variant.selectedOptions.every(
@@ -70,25 +68,21 @@ export function AddToCart({ product }: { product: Product }) {
   );
   const defaultVariantId = variants.length === 1 ? variants[0]?.id : undefined;
   const selectedVariantId = variant?.id || defaultVariantId;
-  const addItemAction = formAction.bind(null, selectedVariantId);
   const finalVariant = variants.find(
     (variant) => variant.id === selectedVariantId,
-  )!;
+  );
 
   return (
-    <form
-      action={async () => {
+    <SubmitButton
+      availableForSale={availableForSale}
+      selectedVariantId={selectedVariantId}
+      onClick={() => {
+        if (!finalVariant) return;
         addCartItem(finalVariant, product);
-        addItemAction();
+        toast.success(`Added to cart`, {
+          description: product.title,
+        });
       }}
-    >
-      <SubmitButton
-        availableForSale={availableForSale}
-        selectedVariantId={selectedVariantId}
-      />
-      <p aria-live="polite" className="sr-only" role="status">
-        {message}
-      </p>
-    </form>
+    />
   );
 }

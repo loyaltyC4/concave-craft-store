@@ -34,7 +34,8 @@ button {
   --cc-panel: #15171c;
   --cc-lime: #c5f23c;
   --cc-cream: #f3f1ea;
-  --font-display: "Clash Display", var(--font-geist-sans), ui-sans-serif, sans-serif;
+  --font-display:
+    "Clash Display", var(--font-geist-sans), ui-sans-serif, sans-serif;
   --font-body: "General Sans", var(--font-geist-sans), system-ui, sans-serif;
 }
 
@@ -47,21 +48,36 @@ body {
   font-family: var(--font-body);
 }
 
-h1, h2, h3, h4 {
+h1,
+h2,
+h3,
+h4 {
   font-family: var(--font-display);
   letter-spacing: -0.02em;
 }
 
 @keyframes cc-marquee {
-  to { transform: translateX(-50%); }
+  to {
+    transform: translateX(-50%);
+  }
 }
-.cc-marquee { animation: cc-marquee 32s linear infinite; will-change: transform; }
+.cc-marquee {
+  animation: cc-marquee 32s linear infinite;
+  will-change: transform;
+}
 
 @keyframes cc-float {
-  50% { transform: translateY(-12px) rotate(8deg); }
+  50% {
+    transform: translateY(-12px) rotate(8deg);
+  }
 }
-.cc-float { animation: cc-float 6s ease-in-out infinite; }
+.cc-float {
+  animation: cc-float 6s ease-in-out infinite;
+}
 
 @media (prefers-reduced-motion: reduce) {
-  .cc-marquee, .cc-float { animation: none; }
+  .cc-marquee,
+  .cc-float {
+    animation: none;
+  }
 }

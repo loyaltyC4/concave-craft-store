@@ -1,8 +1,7 @@
 "use client";
 
-import clsx from "clsx";
 import { Dialog, Transition } from "@headlessui/react";
-import { ShoppingCartIcon, XMarkIcon } from "@heroicons/react/24/outline";
+import { ShoppingBagIcon, XMarkIcon } from "@heroicons/react/24/outline";
 import LoadingDots from "components/loading-dots";
 import Price from "components/price";
 import { DEFAULT_OPTION } from "lib/constants";
@@ -10,42 +9,70 @@ import { createUrl } from "lib/utils";
 import Image from "next/image";
 import Link from "next/link";
 import { Fragment, useEffect, useRef, useState } from "react";
-import { useFormStatus } from "react-dom";
-import { createCartAndSetCookie, redirectToCheckout } from "./actions";
+import { toast } from "sonner";
 import { useCart } from "./cart-context";
 import { DeleteItemButton } from "./delete-item-button";
 import { EditItemQuantityButton } from "./edit-item-quantity-button";
 import OpenCart from "./open-cart";
 
-type MerchandiseSearchParams = {
-  [key: string]: string;
-};
+type MerchandiseSearchParams = { [key: string]: string };
 
 export default function CartModal() {
   const { cart, updateCartItem } = useCart();
   const [isOpen, setIsOpen] = useState(false);
+  const [loading, setLoading] = useState(false);
   const quantityRef = useRef(cart?.totalQuantity);
   const openCart = () => setIsOpen(true);
   const closeCart = () => setIsOpen(false);
 
-  useEffect(() => {
-    if (!cart) {
-      createCartAndSetCookie();
-    }
-  }, [cart]);
-
+  // Open the cart automatically when an item is added.
   useEffect(() => {
     if (
       cart?.totalQuantity &&
       cart?.totalQuantity !== quantityRef.current &&
       cart?.totalQuantity > 0
     ) {
-      if (!isOpen) {
-        setIsOpen(true);
-      }
+      if (!isOpen) setIsOpen(true);
       quantityRef.current = cart?.totalQuantity;
     }
-  }, [isOpen, cart?.totalQuantity, quantityRef]);
+  }, [isOpen, cart?.totalQuantity]);
+
+  async function handleCheckout() {
+    if (!cart || cart.lines.length === 0) return;
+    setLoading(true);
+    try {
+      const res = await fetch("/api/checkout", {
+        method: "POST",
+        headers: { "content-type": "application/json" },
+        body: JSON.stringify({
+          lines: cart.lines.map((l) => ({
+            merchandiseId: l.merchandise.id,
+            quantity: l.quantity,
+          })),
+        }),
+      });
+      const data = await res.json();
+      if (res.ok && data.url) {
+        window.location.href = data.url;
+        return;
+      }
+      if (res.status === 503) {
+        toast.error("Checkout isn't live yet", {
+          description:
+            "Add your Stripe key to enable card payments (see setup notes).",
+        });
+      } else {
+        toast.error("Couldn't start checkout", {
+          description: data?.message || "Please try again in a moment.",
+        });
+      }
+    } catch {
+      toast.error("Network error", { description: "Please try again." });
+    }
+    setLoading(false);
+  }
+
+  const isEmpty = !cart || cart.lines.length === 0;
 
   return (
     <>
@@ -63,7 +90,7 @@ export default function CartModal() {
             leaveFrom="opacity-100 backdrop-blur-[.5px]"
             leaveTo="opacity-0 backdrop-blur-none"
           >
-            <div className="fixed inset-0 bg-black/30" aria-hidden="true" />
+            <div className="fixed inset-0 bg-black/50" aria-hidden="true" />
           </Transition.Child>
           <Transition.Child
             as={Fragment}
@@ -74,23 +101,30 @@ export default function CartModal() {
             leaveFrom="translate-x-0"
             leaveTo="translate-x-full"
           >
-            <Dialog.Panel className="fixed bottom-0 right-0 top-0 flex h-full w-full flex-col border-l border-neutral-200 bg-white/80 p-6 text-black backdrop-blur-xl md:w-[390px] dark:border-neutral-700 dark:bg-black/80 dark:text-white">
+            <Dialog.Panel className="fixed bottom-0 right-0 top-0 flex h-full w-full flex-col border-l border-white/10 bg-[#0b0c0e]/95 p-6 text-[#f3f1ea] backdrop-blur-xl md:w-[420px]">
               <div className="flex items-center justify-between">
-                <p className="text-lg font-semibold">My Cart</p>
+                <p className="text-lg font-semibold">Your cart</p>
                 <button aria-label="Close cart" onClick={closeCart}>
                   <CloseCart />
                 </button>
               </div>
 
-              {!cart || cart.lines.length === 0 ? (
-                <div className="mt-20 flex w-full flex-col items-center justify-center overflow-hidden">
-                  <ShoppingCartIcon className="h-16" />
-                  <p className="mt-6 text-center text-2xl font-bold">
+              {isEmpty ? (
+                <div className="mt-24 flex w-full flex-col items-center justify-center">
+                  <ShoppingBagIcon className="h-16 text-neutral-600" />
+                  <p className="mt-6 text-center text-2xl font-semibold">
                     Your cart is empty.
                   </p>
+                  <Link
+                    href="/search"
+                    onClick={closeCart}
+                    className="mt-6 rounded-full bg-[#c5f23c] px-6 py-3 text-sm font-semibold text-black transition hover:brightness-110"
+                  >
+                    Shop the catalog
+                  </Link>
                 </div>
               ) : (
-                <div className="flex h-full flex-col justify-between overflow-hidden p-1">
+                <div className="flex h-full flex-col justify-between overflow-hidden">
                   <ul className="grow overflow-auto py-4">
                     {cart.lines
                       .sort((a, b) =>
@@ -101,7 +135,6 @@ export default function CartModal() {
                       .map((item, i) => {
                         const merchandiseSearchParams =
                           {} as MerchandiseSearchParams;
-
                         item.merchandise.selectedOptions.forEach(
                           ({ name, value }) => {
                             if (value !== DEFAULT_OPTION) {
@@ -110,16 +143,14 @@ export default function CartModal() {
                             }
                           },
                         );
-
                         const merchandiseUrl = createUrl(
                           `/product/${item.merchandise.product.handle}`,
                           new URLSearchParams(merchandiseSearchParams),
                         );
-
                         return (
                           <li
                             key={i}
-                            className="flex w-full flex-col border-b border-neutral-300 dark:border-neutral-700"
+                            className="flex w-full flex-col border-b border-white/10"
                           >
                             <div className="relative flex w-full flex-row justify-between px-1 py-4">
                               <div className="absolute z-40 -ml-1 -mt-2">
@@ -129,33 +160,37 @@ export default function CartModal() {
                                 />
                               </div>
                               <div className="flex flex-row">
-                                <div className="relative h-16 w-16 overflow-hidden rounded-md border border-neutral-300 bg-neutral-300 dark:border-neutral-700 dark:bg-neutral-900 dark:hover:bg-neutral-800">
-                                  <Image
-                                    className="h-full w-full object-cover"
-                                    width={64}
-                                    height={64}
-                                    alt={
-                                      item.merchandise.product.featuredImage
-                                        .altText ||
-                                      item.merchandise.product.title
-                                    }
-                                    src={
-                                      item.merchandise.product.featuredImage.url
-                                    }
-                                  />
+                                <div className="relative h-16 w-16 overflow-hidden rounded-md border border-white/10 bg-white">
+                                  {item.merchandise.product.featuredImage
+                                    ?.url ? (
+                                    <Image
+                                      className="h-full w-full object-contain p-1"
+                                      width={64}
+                                      height={64}
+                                      alt={
+                                        item.merchandise.product.featuredImage
+                                          .altText ||
+                                        item.merchandise.product.title
+                                      }
+                                      src={
+                                        item.merchandise.product.featuredImage
+                                          .url
+                                      }
+                                    />
+                                  ) : null}
                                 </div>
                                 <Link
                                   href={merchandiseUrl}
                                   onClick={closeCart}
-                                  className="z-30 ml-2 flex flex-row space-x-4"
+                                  className="z-30 ml-3 flex flex-row"
                                 >
-                                  <div className="flex flex-1 flex-col text-base">
-                                    <span className="leading-tight">
+                                  <div className="flex flex-1 flex-col text-sm">
+                                    <span className="pr-2 leading-tight">
                                       {item.merchandise.product.title}
                                     </span>
                                     {item.merchandise.title !==
                                     DEFAULT_OPTION ? (
-                                      <p className="text-sm text-neutral-500 dark:text-neutral-400">
+                                      <p className="mt-1 text-xs text-neutral-500">
                                         {item.merchandise.title}
                                       </p>
                                     ) : null}
@@ -164,13 +199,13 @@ export default function CartModal() {
                               </div>
                               <div className="flex h-16 flex-col justify-between">
                                 <Price
-                                  className="flex justify-end space-y-2 text-right text-sm"
+                                  className="flex justify-end text-right text-sm"
                                   amount={item.cost.totalAmount.amount}
                                   currencyCode={
                                     item.cost.totalAmount.currencyCode
                                   }
                                 />
-                                <div className="ml-auto flex h-9 flex-row items-center rounded-full border border-neutral-200 dark:border-neutral-700">
+                                <div className="ml-auto flex h-9 flex-row items-center rounded-full border border-white/15">
                                   <EditItemQuantityButton
                                     item={item}
                                     type="minus"
@@ -193,31 +228,36 @@ export default function CartModal() {
                         );
                       })}
                   </ul>
-                  <div className="py-4 text-sm text-neutral-500 dark:text-neutral-400">
-                    <div className="mb-3 flex items-center justify-between border-b border-neutral-200 pb-1 dark:border-neutral-700">
-                      <p>Taxes</p>
-                      <Price
-                        className="text-right text-base text-black dark:text-white"
-                        amount={cart.cost.totalTaxAmount.amount}
-                        currencyCode={cart.cost.totalTaxAmount.currencyCode}
-                      />
-                    </div>
-                    <div className="mb-3 flex items-center justify-between border-b border-neutral-200 pb-1 pt-1 dark:border-neutral-700">
+                  <div className="py-4 text-sm text-neutral-400">
+                    <div className="mb-3 flex items-center justify-between border-b border-white/10 pb-2">
                       <p>Shipping</p>
-                      <p className="text-right">Calculated at checkout</p>
+                      <p className="text-right text-neutral-300">
+                        Calculated at checkout
+                      </p>
                     </div>
-                    <div className="mb-3 flex items-center justify-between border-b border-neutral-200 pb-1 pt-1 dark:border-neutral-700">
-                      <p>Total</p>
+                    <div className="mb-3 flex items-center justify-between border-b border-white/10 pb-2 text-base font-semibold text-[#f3f1ea]">
+                      <p>Subtotal</p>
                       <Price
-                        className="text-right text-base text-black dark:text-white"
+                        className="text-right"
                         amount={cart.cost.totalAmount.amount}
                         currencyCode={cart.cost.totalAmount.currencyCode}
                       />
                     </div>
                   </div>
-                  <form action={redirectToCheckout}>
-                    <CheckoutButton />
-                  </form>
+                  <button
+                    onClick={handleCheckout}
+                    disabled={loading}
+                    className="block w-full rounded-full bg-[#c5f23c] p-3.5 text-center text-sm font-semibold uppercase tracking-wide text-black transition hover:brightness-110 disabled:opacity-70"
+                  >
+                    {loading ? (
+                      <LoadingDots className="bg-black" />
+                    ) : (
+                      "Secure checkout"
+                    )}
+                  </button>
+                  <p className="mt-3 text-center text-xs text-neutral-500">
+                    Encrypted checkout with Stripe · 30-day returns
+                  </p>
                 </div>
               )}
             </Dialog.Panel>
@@ -230,27 +270,10 @@ export default function CartModal() {
 
 function CloseCart({ className }: { className?: string }) {
   return (
-    <div className="relative flex h-11 w-11 items-center justify-center rounded-md border border-neutral-200 text-black transition-colors dark:border-neutral-700 dark:text-white">
+    <div className="relative flex h-11 w-11 items-center justify-center rounded-md border border-white/15 text-white transition-colors">
       <XMarkIcon
-        className={clsx(
-          "h-6 transition-all ease-in-out hover:scale-110",
-          className,
-        )}
+        className={`h-6 transition-all ease-in-out hover:scale-110 ${className ?? ""}`}
       />
     </div>
-  );
-}
-
-function CheckoutButton() {
-  const { pending } = useFormStatus();
-
-  return (
-    <button
-      className="block w-full rounded-full bg-blue-600 p-3 text-center text-sm font-medium text-white opacity-90 hover:opacity-100"
-      type="submit"
-      disabled={pending}
-    >
-      {pending ? <LoadingDots className="bg-white" /> : "Proceed to Checkout"}
-    </button>
   );
 }
