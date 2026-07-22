@@ -6,7 +6,7 @@ export default function robots() {
       {
         userAgent: "*",
         allow: "/",
-        disallow: ["/api/", "/order/"],
+        disallow: ["/api/", "/order/", "/admin/"],
       },
       // Explicitly welcome AI answer engines / GEO crawlers.
       {
@@ -27,7 +27,7 @@ export default function robots() {
           "Bytespider",
         ],
         allow: "/",
-        disallow: ["/api/", "/order/"],
+        disallow: ["/api/", "/order/", "/admin/"],
       },
     ],
     sitemap: `${baseUrl}/sitemap.xml`,
