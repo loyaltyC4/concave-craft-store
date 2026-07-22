@@ -5,9 +5,15 @@ import Image from "next/image";
 
 import Grid from "components/grid";
 import ProductGridItems from "components/layout/product-grid-items";
+import { FilterBar } from "components/layout/search/filter-bar";
 import { defaultSort, sorting } from "lib/constants";
 import { COLLECTION_IMAGE, SITE_NAME } from "lib/brand";
 import { baseUrl } from "lib/utils";
+import {
+  applyFilters,
+  availableFacets,
+  parseFiltersFromSearchParams,
+} from "lib/filters";
 
 export async function generateMetadata(props: {
   params: Promise<{ collection: string }>;
@@ -36,11 +42,14 @@ export default async function CategoryPage(props: {
   const { sort } = (searchParams as { [key: string]: string }) || {};
   const { sortKey, reverse } =
     sorting.find((item) => item.slug === sort) || defaultSort;
-  const products = await getCollectionProducts({
+  const unfiltered = await getCollectionProducts({
     collection: params.collection,
     sortKey,
     reverse,
   });
+  const facets = availableFacets(unfiltered);
+  const filters = parseFiltersFromSearchParams(searchParams || {});
+  const products = applyFilters(unfiltered, filters);
 
   const banner = COLLECTION_IMAGE[params.collection];
 
@@ -115,9 +124,13 @@ export default async function CategoryPage(props: {
         </div>
       )}
 
+      <FilterBar facets={facets} />
+
       {products.length === 0 ? (
         <p className="py-3 text-lg text-neutral-400">
-          No products found in this collection.
+          {unfiltered.length === 0
+            ? "No products found in this collection."
+            : "No products match these filters. Try clearing one."}
         </p>
       ) : (
         <Grid className="grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">

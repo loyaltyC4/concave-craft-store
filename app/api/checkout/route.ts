@@ -2,6 +2,7 @@ import { NextRequest, NextResponse } from "next/server";
 import { getStripe } from "lib/stripe";
 import { staticGetVariant } from "lib/shopify/static-data";
 import { baseUrl } from "lib/utils";
+import { FREE_SHIPPING_THRESHOLD } from "lib/brand";
 
 export const dynamic = "force-dynamic";
 
@@ -128,6 +129,40 @@ export async function POST(req: NextRequest) {
 
   const origin = req.headers.get("origin") || baseUrl;
 
+  // Free shipping is a real promise, computed from the actual subtotal —
+  // not just cosmetic in the cart UI. Keep FREE_SHIPPING_THRESHOLD in sync
+  // with lib/brand.ts.
+  const subtotalCents = line_items.reduce(
+    (sum, li) => sum + li.price_data.unit_amount * li.quantity,
+    0,
+  );
+  const qualifiesForFreeShipping =
+    subtotalCents >= FREE_SHIPPING_THRESHOLD * 100;
+
+  const standardShippingOption = qualifiesForFreeShipping
+    ? {
+        shipping_rate_data: {
+          type: "fixed_amount" as const,
+          fixed_amount: { amount: 0, currency: "usd" },
+          display_name: "Free shipping",
+          delivery_estimate: {
+            minimum: { unit: "business_day" as const, value: 3 },
+            maximum: { unit: "business_day" as const, value: 8 },
+          },
+        },
+      }
+    : {
+        shipping_rate_data: {
+          type: "fixed_amount" as const,
+          fixed_amount: { amount: 495, currency: "usd" },
+          display_name: "Standard shipping",
+          delivery_estimate: {
+            minimum: { unit: "business_day" as const, value: 3 },
+            maximum: { unit: "business_day" as const, value: 8 },
+          },
+        },
+      };
+
   try {
     const session = await stripe.checkout.sessions.create({
       mode: "payment",
@@ -137,17 +172,7 @@ export async function POST(req: NextRequest) {
         allowed_countries: [...ALLOWED_COUNTRIES] as any,
       },
       shipping_options: [
-        {
-          shipping_rate_data: {
-            type: "fixed_amount",
-            fixed_amount: { amount: 495, currency: "usd" },
-            display_name: "Standard shipping",
-            delivery_estimate: {
-              minimum: { unit: "business_day", value: 3 },
-              maximum: { unit: "business_day", value: 8 },
-            },
-          },
-        },
+        standardShippingOption,
         {
           shipping_rate_data: {
             type: "fixed_amount",

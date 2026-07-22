@@ -21,6 +21,11 @@ export const SOCIALS = {
   tiktok: "https://tiktok.com/@fingerboardlab",
 };
 
+// Revenue mechanics
+export const FREE_SHIPPING_THRESHOLD = 50; // USD subtotal; must match app/api/checkout logic
+export const WELCOME_DISCOUNT_CODE = "LABFIRST10";
+export const WELCOME_DISCOUNT_LABEL = "10% off your first order";
+
 // Palette (mirrors globals.css tokens)
 export const VOLT = "#c5f23c"; // signature acid volt-green
 export const INK = "#0b0c0e"; // near-black canvas

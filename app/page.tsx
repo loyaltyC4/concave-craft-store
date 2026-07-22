@@ -5,6 +5,7 @@ import Link from "next/link";
 import Footer from "components/layout/footer";
 import { ProductCard } from "components/product-card";
 import { HeroVideo } from "components/hero-video";
+import { NewsletterForm } from "components/newsletter-form";
 import { COLLECTIONS, COLLECTION_IMAGE, GUIDES, VOLT } from "lib/brand";
 
 export const metadata = {
@@ -454,6 +455,28 @@ export default async function HomePage() {
               </span>
             </Link>
           ))}
+        </div>
+      </section>
+
+      {/* WELCOME OFFER */}
+      <section className="mx-auto max-w-7xl px-6 pb-4 md:px-12">
+        <div className="flex flex-col items-center gap-6 rounded-3xl border border-[#c5f23c]/25 bg-gradient-to-br from-[#15171c] to-[#0b0c0e] p-8 text-center md:flex-row md:justify-between md:p-10 md:text-left">
+          <div>
+            <span
+              className="text-xs font-semibold uppercase tracking-[0.18em]"
+              style={{ color: VOLT }}
+            >
+              Join the drop list
+            </span>
+            <h2 className="mt-2 text-2xl font-semibold md:text-3xl">
+              Get 10% off your first order.
+            </h2>
+            <p className="mt-2 max-w-md text-sm text-neutral-400">
+              Restocks, new molds, and build tips — no spam, unsubscribe
+              anytime.
+            </p>
+          </div>
+          <NewsletterForm source="homepage" />
         </div>
       </section>
 

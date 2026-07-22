@@ -3,7 +3,9 @@ import { Gallery } from "components/product/gallery";
 import { ProductDescription } from "components/product/product-description";
 import Prose from "components/prose";
 import { ProductCard } from "components/product-card";
+import { ReviewsSection } from "components/product/reviews-section";
 import { HIDDEN_PRODUCT_TAG } from "lib/constants";
+import { getProductReviews } from "lib/reviews";
 import {
   getProduct,
   getProductCollection,
@@ -73,6 +75,7 @@ export default async function ProductPage(props: {
   const guideLink = collectionHandle
     ? GUIDE_FOR_COLLECTION[collectionHandle]
     : undefined;
+  const { reviews, average, count } = await getProductReviews(product.handle);
 
   const productJsonLd = {
     "@context": "https://schema.org",
@@ -82,6 +85,16 @@ export default async function ProductPage(props: {
     image: product.images.map((i) => i.url),
     sku: product.variants[0]?.sku || product.handle,
     brand: { "@type": "Brand", name: SITE_NAME },
+    // Only present when real reviews exist — never fabricated.
+    ...(count > 0
+      ? {
+          aggregateRating: {
+            "@type": "AggregateRating",
+            ratingValue: average.toFixed(1),
+            reviewCount: count,
+          },
+        }
+      : {}),
     offers: {
       "@type": "AggregateOffer",
       availability: product.availableForSale
@@ -238,6 +251,13 @@ export default async function ProductPage(props: {
             )}
           </div>
         )}
+
+        <ReviewsSection
+          productHandle={product.handle}
+          initialReviews={reviews}
+          initialAverage={average}
+          initialCount={count}
+        />
 
         {/* RELATED */}
         {related.length > 0 && (

@@ -1,7 +1,13 @@
 import Grid from "components/grid";
 import ProductGridItems from "components/layout/product-grid-items";
+import { FilterBar } from "components/layout/search/filter-bar";
 import { defaultSort, sorting } from "lib/constants";
 import { getProducts } from "lib/shopify";
+import {
+  applyFilters,
+  availableFacets,
+  parseFiltersFromSearchParams,
+} from "lib/filters";
 
 export const metadata = {
   title: "Search all fingerboard gear",
@@ -20,7 +26,14 @@ export default async function SearchPage(props: {
   const { sortKey, reverse } =
     sorting.find((item) => item.slug === sort) || defaultSort;
 
-  const products = await getProducts({ sortKey, reverse, query: searchValue });
+  const unfiltered = await getProducts({
+    sortKey,
+    reverse,
+    query: searchValue,
+  });
+  const facets = availableFacets(unfiltered);
+  const filters = parseFiltersFromSearchParams(searchParams || {});
+  const products = applyFilters(unfiltered, filters);
   const resultsText = products.length > 1 ? "results" : "result";
 
   return (
@@ -44,11 +57,17 @@ export default async function SearchPage(props: {
           </p>
         )}
       </div>
+      <FilterBar facets={facets} />
+
       {products.length > 0 ? (
         <Grid className="grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
           <ProductGridItems products={products} />
         </Grid>
-      ) : null}
+      ) : (
+        <p className="py-3 text-lg text-neutral-400">
+          No products match these filters. Try clearing one.
+        </p>
+      )}
     </>
   );
 }

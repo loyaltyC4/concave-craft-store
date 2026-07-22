@@ -5,6 +5,7 @@ import { XMarkIcon } from "@heroicons/react/24/outline";
 import LoadingDots from "components/loading-dots";
 import Price from "components/price";
 import { DEFAULT_OPTION } from "lib/constants";
+import { FREE_SHIPPING_THRESHOLD } from "lib/brand";
 import { createUrl } from "lib/utils";
 import Image from "next/image";
 import Link from "next/link";
@@ -13,6 +14,8 @@ import { toast } from "sonner";
 import { useCart } from "./cart-context";
 import { DeleteItemButton } from "./delete-item-button";
 import { EditItemQuantityButton } from "./edit-item-quantity-button";
+import { FreeShippingBar } from "./free-shipping-bar";
+import { CartCrossSell } from "./cart-cross-sell";
 import OpenCart from "./open-cart";
 
 type MerchandiseSearchParams = { [key: string]: string };
@@ -131,7 +134,12 @@ export default function CartModal() {
                 </div>
               ) : (
                 <div className="flex h-full flex-col justify-between overflow-hidden">
-                  <ul className="grow overflow-auto py-4">
+                  <div className="pt-4">
+                    <FreeShippingBar
+                      subtotal={parseFloat(cart.cost.totalAmount.amount)}
+                    />
+                  </div>
+                  <ul className="grow overflow-auto py-2">
                     {cart.lines
                       .sort((a, b) =>
                         a.merchandise.product.title.localeCompare(
@@ -234,11 +242,20 @@ export default function CartModal() {
                         );
                       })}
                   </ul>
+                  <CartCrossSell
+                    excludeHandles={cart.lines.map(
+                      (l) => l.merchandise.product.handle,
+                    )}
+                  />
+
                   <div className="py-4 text-sm text-neutral-400">
                     <div className="mb-3 flex items-center justify-between border-b border-white/10 pb-2">
                       <p>Shipping</p>
                       <p className="text-right text-neutral-300">
-                        Calculated at checkout
+                        {parseFloat(cart.cost.totalAmount.amount) >=
+                        FREE_SHIPPING_THRESHOLD
+                          ? "Free"
+                          : "Calculated at checkout"}
                       </p>
                     </div>
                     <div className="mb-3 flex items-center justify-between border-b border-white/10 pb-2 text-base font-semibold text-[#f3f1ea]">

@@ -2,23 +2,49 @@
 
 import { useState } from "react";
 import { toast } from "sonner";
+import { WELCOME_DISCOUNT_CODE } from "lib/brand";
 
-export function NewsletterForm() {
+export function NewsletterForm({ source = "footer" }: { source?: string }) {
   const [email, setEmail] = useState("");
+  const [submitting, setSubmitting] = useState(false);
+
+  async function handleSubmit(e: React.FormEvent) {
+    e.preventDefault();
+    if (!email || !email.includes("@")) {
+      toast.error("Enter a valid email");
+      return;
+    }
+    setSubmitting(true);
+    try {
+      const res = await fetch("/api/subscribe", {
+        method: "POST",
+        headers: { "content-type": "application/json" },
+        body: JSON.stringify({ email, source }),
+      });
+      const data = await res.json();
+      if (res.status === 503) {
+        toast.error("Sign-ups aren't open yet", {
+          description: "Check back soon — we're setting this up.",
+        });
+      } else if (!res.ok) {
+        toast.error("Couldn't sign you up", {
+          description: "Please check your email and try again.",
+        });
+      } else {
+        toast.success("You're on the list!", {
+          description: `Use code ${data.code || WELCOME_DISCOUNT_CODE} for 10% off your first order.`,
+        });
+        setEmail("");
+      }
+    } catch {
+      toast.error("Network error", { description: "Please try again." });
+    }
+    setSubmitting(false);
+  }
 
   return (
     <form
-      onSubmit={(e) => {
-        e.preventDefault();
-        if (!email || !email.includes("@")) {
-          toast.error("Enter a valid email");
-          return;
-        }
-        toast.success("You're on the list", {
-          description: "Early drops, restocks, and build tips — no spam.",
-        });
-        setEmail("");
-      }}
+      onSubmit={handleSubmit}
       className="flex w-full max-w-sm items-center gap-2"
     >
       <input
@@ -31,9 +57,10 @@ export function NewsletterForm() {
       />
       <button
         type="submit"
-        className="shrink-0 rounded-full bg-[#c5f23c] px-4 py-2.5 text-sm font-semibold text-black transition hover:brightness-110"
+        disabled={submitting}
+        className="shrink-0 rounded-full bg-[#c5f23c] px-4 py-2.5 text-sm font-semibold text-black transition hover:brightness-110 disabled:opacity-60"
       >
-        Join
+        {submitting ? "…" : "Join"}
       </button>
     </form>
   );
