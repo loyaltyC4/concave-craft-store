@@ -1,7 +1,7 @@
 "use client";
 
 import { Dialog, Transition } from "@headlessui/react";
-import { ShoppingBagIcon, XMarkIcon } from "@heroicons/react/24/outline";
+import { XMarkIcon } from "@heroicons/react/24/outline";
 import LoadingDots from "components/loading-dots";
 import Price from "components/price";
 import { DEFAULT_OPTION } from "lib/constants";
@@ -111,7 +111,13 @@ export default function CartModal() {
 
               {isEmpty ? (
                 <div className="mt-24 flex w-full flex-col items-center justify-center">
-                  <ShoppingBagIcon className="h-16 text-neutral-600" />
+                  <Image
+                    src="/brand/mascot.png"
+                    alt=""
+                    width={120}
+                    height={120}
+                    className="opacity-90"
+                  />
                   <p className="mt-6 text-center text-2xl font-semibold">
                     Your cart is empty.
                   </p>

@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import Footer from "components/layout/footer";
 import { ProductCard } from "components/product-card";
+import { HeroVideo } from "components/hero-video";
 import { COLLECTIONS, COLLECTION_IMAGE, GUIDES, VOLT } from "lib/brand";
 
 export const metadata = {
@@ -73,6 +74,10 @@ export default async function HomePage() {
           priority
           sizes="100vw"
           className="object-cover object-right"
+        />
+        <HeroVideo
+          src="/brand/hero-loop.mp4"
+          className="absolute inset-0 h-full w-full object-cover object-right"
         />
         <div
           className="absolute inset-0"
