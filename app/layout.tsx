@@ -52,7 +52,10 @@ export const metadata = {
     title: `${SITE_NAME} — ${SITE_TAGLINE}`,
     description: SITE_DESCRIPTION,
   },
-  alternates: { canonical: baseUrl },
+  // Deliberately NOT setting a site-wide default canonical here: every real
+  // page sets its own explicit alternates.canonical. A root-level default
+  // would be silently (and wrongly) inherited by any page that forgets to
+  // set one, telling Google that page is a duplicate of the homepage.
   category: "shopping",
 };
 

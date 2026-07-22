@@ -85,6 +85,7 @@ export default function Footer() {
           title="Learn"
           links={[
             { label: "All guides", href: "/guides" },
+            { label: "Glossary", href: "/glossary" },
             ...GUIDES.slice(0, 3).map((g) => ({
               label: g.title.split(":")[0] ?? g.title,
               href: `/guides/${g.slug}`,

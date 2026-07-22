@@ -9,11 +9,21 @@ import {
   parseFiltersFromSearchParams,
 } from "lib/filters";
 
-export const metadata = {
-  title: "Search all fingerboard gear",
-  description:
-    "Search Fingerboard Lab — completes, decks, molds, trucks, wheels, bushings, tools, and ramps.",
-};
+export async function generateMetadata(props: {
+  searchParams?: Promise<{ [key: string]: string | string[] | undefined }>;
+}) {
+  const searchParams = await props.searchParams;
+  const q = typeof searchParams?.q === "string" ? searchParams.q : undefined;
+  return {
+    title: q ? `"${q}" — Search results` : "Search all fingerboard gear",
+    description:
+      "Search Fingerboard Lab — completes, decks, molds, trucks, wheels, bushings, tools, and ramps.",
+    // Every sort/filter/query combination collapses to one canonical URL —
+    // otherwise each parameter combo is a thin near-duplicate page competing
+    // with itself in the index.
+    alternates: { canonical: "/search" },
+  };
+}
 
 export default async function SearchPage(props: {
   searchParams?: Promise<{ [key: string]: string | string[] | undefined }>;

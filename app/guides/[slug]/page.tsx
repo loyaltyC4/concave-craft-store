@@ -1,6 +1,6 @@
 import Footer from "components/layout/footer";
 import { FaqList } from "components/faq-list";
-import { getGuide, guides } from "lib/guides-data";
+import { getGuide, allGuides } from "lib/all-guides";
 import { SITE_NAME } from "lib/brand";
 import { baseUrl } from "lib/utils";
 import type { Metadata } from "next";
@@ -8,7 +8,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 
 export function generateStaticParams() {
-  return guides.map((g) => ({ slug: g.slug }));
+  return allGuides.map((g) => ({ slug: g.slug }));
 }
 
 export async function generateMetadata(props: {

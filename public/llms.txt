@@ -7,6 +7,8 @@
 - Most popular deck width: 34mm (versatile for most riders); 32mm is more technical/nimble; 36mm is wider and more stable.
 - Checkout is card payment via Stripe. Currency: USD.
 - A "complete" is a ready-to-ride assembled fingerboard (deck + trucks + wheels + grip tape).
+- Standard fingerboard decks are 5-ply maple veneer pressed on a concave mold; concave is the curve across the deck's width, camber is the curve along its length.
+- Truck width should roughly match deck width; bushing durometer (Shore A) and kingpin nut tightness together control turning looseness vs. stability.
 
 ## Shop
 - [All products](https://fingerboardlab.com/search): The full catalog of fingerboard gear.
@@ -25,6 +27,14 @@
 - [Fingerboard vs Tech Deck](https://fingerboardlab.com/guides/fingerboard-vs-tech-deck): What is actually different.
 - [Best Beginner Fingerboard Setup](https://fingerboardlab.com/guides/best-beginner-fingerboard-setup): Complete buying guide for beginners.
 - [Truck-to-Deck Width Compatibility Chart](https://fingerboardlab.com/guides/truck-to-deck-width-chart): Reference table.
+- [Fingerboard Deck Materials Explained](https://fingerboardlab.com/guides/fingerboard-deck-materials-explained): Maple plies, veneer grade, and press molds.
+- [How to Clean Fingerboard Bearings and Wheels](https://fingerboardlab.com/guides/how-to-clean-fingerboard-bearings-and-wheels): Maintenance guide.
+- [Wooden Fingerboard Ramps: DIY & Buying Guide](https://fingerboardlab.com/guides/wooden-fingerboard-ramps-diy-park-guide): Obstacles and desk-setup guide.
+- [Fingerboard Grip Tape Guide](https://fingerboardlab.com/guides/fingerboard-grip-tape-guide): Foam vs sandpaper-style tape.
+- [How to Tune Fingerboard Trucks](https://fingerboardlab.com/guides/how-to-tune-fingerboard-trucks): Speed vs stability tuning.
+
+## Reference
+- [Fingerboard Glossary](https://fingerboardlab.com/glossary): Plain-English definitions of every core term — baseplate, bushing, concave, durometer, kingpin, pivot cup, wheelbase, and more.
 
 ## About
 - [About Fingerboard Lab](https://fingerboardlab.com/about): Who we are and how we build.

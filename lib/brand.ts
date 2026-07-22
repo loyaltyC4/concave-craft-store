@@ -1,4 +1,5 @@
 import { baseUrl } from "lib/utils";
+import { allGuides } from "lib/all-guides";
 
 /**
  * Central brand configuration for Fingerboard Lab.
@@ -50,48 +51,9 @@ export const COLLECTION_IMAGE: Record<string, string> = {
   "ramps-parks": "/brand/collection-ramps.jpg",
 };
 
-// Cornerstone guides (drives the /guides hub, nav, sitemap, and internal links)
-export const GUIDES = [
-  {
-    slug: "fingerboard-sizing-guide",
-    title: "Fingerboard Sizing Guide: 32mm vs 34mm vs 36mm",
-    query: "what size fingerboard should I get",
-  },
-  {
-    slug: "how-to-press-a-fingerboard-deck",
-    title: "How to Press a Fingerboard Deck With a Mold",
-    query: "how to press a fingerboard deck",
-  },
-  {
-    slug: "fingerboard-concave-explained",
-    title: "Fingerboard Concave Explained: Low vs Medium vs High",
-    query: "fingerboard concave explained",
-  },
-  {
-    slug: "how-to-choose-fingerboard-trucks",
-    title: "How to Choose Fingerboard Trucks",
-    query: "how to choose fingerboard trucks",
-  },
-  {
-    slug: "fingerboard-bushings-guide",
-    title: "Fingerboard Bushings Guide: Durometer & Tuning",
-    query: "fingerboard bushings guide",
-  },
-  {
-    slug: "fingerboard-vs-tech-deck",
-    title: "Fingerboard vs Tech Deck: What's Actually Different",
-    query: "fingerboard vs tech deck",
-  },
-  {
-    slug: "best-beginner-fingerboard-setup",
-    title: "Best Fingerboard Setup for Beginners",
-    query: "best fingerboard for beginners",
-  },
-  {
-    slug: "truck-to-deck-width-chart",
-    title: "Fingerboard Truck-to-Deck Width Compatibility Chart",
-    query: "fingerboard truck sizing chart",
-  },
-] as const;
+// Cornerstone guides (drives the /guides hub, nav, sitemap, and internal
+// links). Derived from the real guide content (lib/all-guides.ts) so this
+// list can never drift out of sync with what's actually published.
+export const GUIDES = allGuides.map((g) => ({ slug: g.slug, title: g.title }));
 
 export type GuideMeta = (typeof GUIDES)[number];

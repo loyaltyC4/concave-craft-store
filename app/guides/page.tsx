@@ -1,5 +1,5 @@
 import Footer from "components/layout/footer";
-import { guides } from "lib/guides-data";
+import { allGuides } from "lib/all-guides";
 import Link from "next/link";
 import type { Metadata } from "next";
 
@@ -28,8 +28,15 @@ export default function GuidesHub() {
           your own decks — written by people who actually skate them.
         </p>
 
+        <Link
+          href="/glossary"
+          className="mt-6 inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/[0.03] px-4 py-2 text-sm text-neutral-300 transition hover:border-[#c5f23c]/50 hover:text-[#c5f23c]"
+        >
+          Not sure what a term means? Check the glossary →
+        </Link>
+
         <div className="mt-12 grid gap-5 md:grid-cols-2">
-          {guides.map((g) => (
+          {allGuides.map((g) => (
             <Link
               key={g.slug}
               href={`/guides/${g.slug}`}

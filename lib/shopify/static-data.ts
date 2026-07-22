@@ -31,6 +31,25 @@ function stripHtml(html: string): string {
     .trim();
 }
 
+/**
+ * Truncates to a meta-description-friendly length WITHOUT cutting a word or
+ * sentence in half. Prefers ending on a sentence boundary (". "); falls back
+ * to the last full word before the limit.
+ */
+function truncateForMeta(text: string, maxLength = 155): string {
+  if (text.length <= maxLength) return text;
+  const hardCut = text.slice(0, maxLength);
+
+  const lastSentenceEnd = hardCut.lastIndexOf(". ");
+  if (lastSentenceEnd > maxLength * 0.4) {
+    return hardCut.slice(0, lastSentenceEnd + 1).trim();
+  }
+
+  const lastSpace = hardCut.lastIndexOf(" ");
+  const clean = lastSpace > 0 ? hardCut.slice(0, lastSpace) : hardCut;
+  return `${clean.trim()}…`;
+}
+
 // ── Transformers ─────────────────────────────────────────────────────────────
 
 function restProductToProduct(p: any): Product {
@@ -103,7 +122,7 @@ function restProductToProduct(p: any): Product {
     images,
     seo: {
       title: p.title as string,
-      description: stripHtml((p.body_html as string) ?? "").slice(0, 160),
+      description: truncateForMeta(stripHtml((p.body_html as string) ?? "")),
     },
     tags,
     updatedAt: (p.updated_at as string) ?? new Date().toISOString(),
@@ -117,7 +136,7 @@ function restCollectionToCollection(c: any): Collection {
     description: stripHtml((c.body_html as string) ?? ""),
     seo: {
       title: c.title as string,
-      description: stripHtml((c.body_html as string) ?? "").slice(0, 160),
+      description: truncateForMeta(stripHtml((c.body_html as string) ?? "")),
     },
     updatedAt: (c.updated_at as string) ?? new Date().toISOString(),
     path: `/search/${c.handle as string}`,
