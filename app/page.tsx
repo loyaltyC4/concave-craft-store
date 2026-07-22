@@ -69,7 +69,7 @@ export default async function HomePage() {
       <section className="relative flex min-h-[86vh] items-center overflow-hidden">
         <Image
           src="/brand/hero.jpg"
-          alt="Precision fingerboard mid-trick over a concrete ledge"
+          alt="A hand riding a precision fingerboard on a wooden desk"
           fill
           priority
           sizes="100vw"
