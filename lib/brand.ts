@@ -9,9 +9,9 @@ import { allGuides } from "lib/all-guides";
 
 export const SITE_NAME = "Fingerboard Lab";
 export const SITE_LEGAL_NAME = "Fingerboard Lab";
-export const SITE_TAGLINE = "Precision-engineered fingerboard hardware";
+export const SITE_TAGLINE = "Fingerboard parks, ramps & gear";
 export const SITE_DESCRIPTION =
-  "Fingerboard Lab builds precision-engineered fingerboard hardware for real skating — complete setups, hand-pressed maple decks, CNC concave molds, trucks, wheels, bearings, and wooden ramps. Machined to ±0.1mm. Free sticker sheet in every box.";
+  "Fingerboard Lab is a curated shop for fingerboard park kits, ramps, obstacles, completes and grip tape. Hand-picked gear, honest prices, and free build guides. Free sticker sheet in every box.";
 export const SITE_URL = baseUrl;
 
 // Contact / social
@@ -35,20 +35,18 @@ export const CREAM = "#f3f1ea"; // primary text
 
 // Collection handles used across the store (explicit, not keyword-guessed)
 export const COLLECTIONS = [
-  { handle: "starter-kits", title: "Completes & Setups", short: "Completes" },
-  { handle: "decks", title: "Decks", short: "Decks" },
-  { handle: "concave-molds", title: "Fingerboard Molds", short: "Molds" },
-  { handle: "accessories", title: "Hardware & Tools", short: "Hardware" },
-  { handle: "ramps-parks", title: "Ramps & Parks", short: "Ramps" },
+  { handle: "park-kits", title: "Park Kits", short: "Park Kits" },
+  { handle: "obstacles", title: "Ramps & Obstacles", short: "Obstacles" },
+  { handle: "completes", title: "Complete Fingerboards", short: "Completes" },
+  { handle: "parts", title: "Grip Tape & Parts", short: "Parts" },
 ] as const;
 
 // Banner image per collection (staged in /public/brand)
 export const COLLECTION_IMAGE: Record<string, string> = {
-  "starter-kits": "/brand/collection-completes.jpg",
-  decks: "/brand/collection-decks.jpg",
-  "concave-molds": "/brand/collection-molds.jpg",
-  accessories: "/brand/collection-hardware.jpg",
-  "ramps-parks": "/brand/collection-ramps.jpg",
+  "park-kits": "/brand/collection-ramps.jpg",
+  obstacles: "/brand/collection-ramps.jpg",
+  completes: "/brand/collection-completes.jpg",
+  parts: "/brand/collection-hardware.jpg",
 };
 
 // Cornerstone guides (drives the /guides hub, nav, sitemap, and internal

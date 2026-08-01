@@ -9,9 +9,9 @@ import { NewsletterForm } from "components/newsletter-form";
 import { COLLECTIONS, COLLECTION_IMAGE, GUIDES, VOLT } from "lib/brand";
 
 export const metadata = {
-  title: "Fingerboard Lab — Precision Fingerboard Hardware for Real Skating",
+  title: "Fingerboard Lab — Fingerboard Park Kits, Ramps & Gear",
   description:
-    "Pro fingerboard completes, hand-pressed maple decks, CNC concave molds, trucks, wheels, bearings, and wooden ramps — machined to ±0.1mm. Free sticker sheet in every box. Worldwide shipping, 30-day returns.",
+    "Fingerboard park kits, ramps, obstacles, completes and grip tape — hand-picked and honestly priced from $12.99. Free build guides, free sticker sheet, 30-day returns.",
   alternates: { canonical: "/" },
 };
 
@@ -20,39 +20,35 @@ function priceNum(p: Product) {
 }
 
 export default async function HomePage() {
-  const [completes, decks, molds, hardware, ramps] = await Promise.all([
-    getCollectionProducts({ collection: "starter-kits" }),
-    getCollectionProducts({ collection: "decks" }),
-    getCollectionProducts({ collection: "concave-molds" }),
-    getCollectionProducts({ collection: "accessories" }),
-    getCollectionProducts({ collection: "ramps-parks" }),
+  const [parkKits, obstacles, completes, parts] = await Promise.all([
+    getCollectionProducts({ collection: "park-kits" }),
+    getCollectionProducts({ collection: "obstacles" }),
+    getCollectionProducts({ collection: "completes" }),
+    getCollectionProducts({ collection: "parts" }),
   ]);
 
   const counts: Record<string, number> = {
-    "starter-kits": completes.length,
-    decks: decks.length,
-    "concave-molds": molds.length,
-    accessories: hardware.length,
-    "ramps-parks": ramps.length,
+    "park-kits": parkKits.length,
+    obstacles: obstacles.length,
+    completes: completes.length,
+    parts: parts.length,
   };
   const totalProducts =
-    completes.length +
-    decks.length +
-    molds.length +
-    hardware.length +
-    ramps.length;
+    parkKits.length + obstacles.length + completes.length + parts.length;
 
-  const featuredCompletes = [...completes]
-    .sort((a, b) => priceNum(b) - priceNum(a))
-    .slice(0, 8);
-  const featuredMolds = molds.slice(0, 6);
+  const featuredCompletes = [...parkKits].sort(
+    (a, b) => priceNum(a) - priceNum(b),
+  );
+  const featuredMolds = [...obstacles]
+    .sort((a, b) => priceNum(a) - priceNum(b))
+    .slice(0, 6);
 
   const specs = [
-    "±0.1mm tolerance",
-    "5-ply maple decks",
-    "CNC concave molds",
-    "500+ presses",
+    "Park kits from $34.99",
+    "Obstacles from $24.99",
+    "Free build guides",
     "Free sticker sheet",
+    "30-day returns",
     "Worldwide shipping",
   ];
 
@@ -95,29 +91,28 @@ export default async function HomePage() {
                 className="text-xs font-semibold uppercase tracking-[0.18em]"
                 style={{ color: VOLT }}
               >
-                Engineered for real fingerboarding
+                Build a park you can actually skate
               </span>
             </div>
             <h1 className="text-5xl font-semibold leading-[1.02] md:text-7xl">
-              Precision <span style={{ color: VOLT }}>fingerboard</span>
+              Fingerboard <span style={{ color: VOLT }}>parks</span>,
               <br />
-              hardware.
+              ramps &amp; gear.
             </h1>
             <p className="mt-6 max-w-lg text-base text-neutral-300 md:text-lg">
-              Pro completes, hand-pressed maple decks, CNC concave molds, and
-              tuned hardware — machined to ±0.1mm for real skating, not the toy
-              aisle.{" "}
+              Ramp sets, obstacles, completes and grip tape — hand-picked,
+              honestly priced, and backed by free build guides.{" "}
               <span className="text-[#f3f1ea]">
-                {totalProducts} products, dialed and ride-ready.
+                {totalProducts} products, nothing filler.
               </span>
             </p>
             <div className="mt-8 flex flex-wrap gap-3.5">
               <Link
-                href="/search/starter-kits"
+                href="/search/park-kits"
                 className="rounded-full px-6 py-3.5 text-sm font-semibold text-black transition hover:brightness-110"
                 style={{ background: VOLT }}
               >
-                Shop completes
+                Shop park kits
               </Link>
               <Link
                 href="/search"
@@ -128,7 +123,7 @@ export default async function HomePage() {
             </div>
             <div className="mt-10 flex flex-wrap gap-2.5">
               {[
-                "±0.1mm tolerance",
+                "Kits from $34.99",
                 "Free sticker sheet",
                 "30-day returns",
                 "Worldwide shipping",
@@ -166,12 +161,9 @@ export default async function HomePage() {
       <section className="mx-auto max-w-7xl px-6 py-14 md:px-12">
         <div className="grid grid-cols-2 gap-6 md:grid-cols-4">
           {[
-            [
-              "Machined precision",
-              "±0.1mm trucks & molds, tested for real feel",
-            ],
-            ["Real wood decks", "5-ply maple, pressed on true concave molds"],
-            ["Ships ride-ready", "Assembled, tuned, dispatched in 1–2 days"],
+            ["Curated, not cluttered", "25 products we'd actually skate — no filler"],
+            ["Honest about what it is", "Real specs, no invented engineering claims"],
+            ["Free build guides", "13 guides + a full glossary, free to read"],
             ["30-day returns", "Not feeling it? Send it back, no drama"],
           ].map(([t, d]) => (
             <div key={t}>
@@ -194,15 +186,15 @@ export default async function HomePage() {
               Start here
             </span>
             <h2 className="mt-3 text-3xl font-semibold md:text-5xl">
-              Complete setups, dialed in.
+              Park kits, ready to skate.
             </h2>
             <p className="mt-3 max-w-md text-neutral-400">
-              Assembled, tuned, and ride-ready out of the box — the fastest way
-              onto a real board.
+              Multi-piece ramp and obstacle sets — the fastest way to a setup
+              you can actually session.
             </p>
           </div>
           <Link
-            href="/search/starter-kits"
+            href="/search/park-kits"
             className="hidden shrink-0 text-sm font-semibold text-neutral-300 hover:text-[#c5f23c] md:block"
           >
             View all →
@@ -484,7 +476,7 @@ export default async function HomePage() {
       <section className="mx-auto max-w-7xl px-6 pb-24 md:px-12">
         <div className="grid grid-cols-2 overflow-hidden rounded-3xl border border-white/10 md:grid-cols-4">
           {[
-            ["±0.1mm", "machining tolerance"],
+            ["25", "hand-picked products"],
             ["30 days", "easy returns"],
             ["Worldwide", "fast dispatch"],
             ["Stripe", "encrypted checkout"],

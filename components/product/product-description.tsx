@@ -50,7 +50,7 @@ export function ProductDescription({ product }: { product: Product }) {
 
       <ul className="mt-6 grid grid-cols-1 gap-2 text-sm text-neutral-400 sm:grid-cols-2">
         {[
-          "Machined to ±0.1mm tolerance",
+          "Hand-picked and quality-checked",
           "Free sticker sheet in every box",
           "Encrypted checkout with Stripe",
           "30-day easy returns",

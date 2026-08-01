@@ -47,9 +47,9 @@ export default function Footer() {
         <div className="col-span-2 md:col-span-2">
           <BrandLogo />
           <p className="mt-4 max-w-xs text-sm leading-relaxed text-neutral-500">
-            Precision-engineered fingerboard hardware for real skating —
-            completes, hand-pressed decks, CNC concave molds, trucks, wheels,
-            and wooden ramps. Free sticker sheet in every box.
+            A curated fingerboard shop — park kits, ramps, obstacles,
+            completes and grip tape. Hand-picked gear, honest prices, free
+            build guides, and a sticker sheet in every box.
           </p>
           <div className="mt-5 flex gap-3">
             {[

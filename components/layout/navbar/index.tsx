@@ -8,7 +8,7 @@ import Search, { SearchSkeleton } from "./search";
 
 const ANNOUNCEMENTS = [
   "Free sticker sheet in every box",
-  "Machined to ±0.1mm",
+  "Curated, not mass-listed",
   "Worldwide shipping",
   "30-day returns",
 ];

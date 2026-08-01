@@ -17,7 +17,7 @@ const FAQS: Faq[] = [
   },
   {
     q: "What's the difference between a fingerboard and a Tech Deck?",
-    a: "Tech Decks are mass-produced plastic toys. Pro fingerboards from Fingerboard Lab use hand-pressed maple decks, machined metal trucks with tunable bushings, and urethane wheels — they feel and perform in a completely different league. See our Fingerboard vs Tech Deck guide for a full comparison.",
+    a: "Tech Decks are mass-produced plastic toys sold in multipacks. The wooden completes we stock use real maple decks, metal trucks with tunable bushings, and urethane wheels on bearings — they roll, pop and grind far better. See our Fingerboard vs Tech Deck guide for a full comparison.",
   },
   {
     q: "What size fingerboard should I get?",

@@ -5,7 +5,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "About Fingerboard Lab",
   description:
-    "Fingerboard Lab builds precision-engineered fingerboard hardware for real skating — machined to ±0.1mm, pressed on true concave molds, and tuned to ride.",
+    "Fingerboard Lab is a curated fingerboard shop — park kits, ramps, obstacles and gear, hand-picked and honestly priced, with free build guides.",
   alternates: { canonical: "/about" },
 };
 
@@ -16,12 +16,9 @@ export default function AboutPage() {
       title="Built for real fingerboarding."
       intro="Fingerboard Lab exists for one reason: fingerboards that actually skate. Not the toy-aisle kind — real wood, real concave, real hardware, engineered to tolerances you can feel under two fingers."
     >
-      <Section heading="Precision is the point">
+      <Section heading="Curated, not manufactured">
         <p>
-          Everything we make or curate is held to a ±0.1mm standard. Our decks
-          are pressed from 5-ply maple on true concave molds. Our trucks are
-          machined and tuned, not stamped. When a millimeter changes how a board
-          pops, precision isn&apos;t a marketing word — it&apos;s the product.
+          We don&apos;t manufacture — we curate. Every product here is chosen, ordered and checked by us before it goes in the catalogue, and we tell you plainly what something is and what it isn&apos;t. No invented engineering claims, no fake spec sheets.
         </p>
       </Section>
       <Section heading="For builders and skaters">
