@@ -38,3 +38,6 @@ yarn-error.log*
 next-env.d.ts
 .env*.local
 .env.local
+
+# Decoded at build time from data/product-images/ by scripts/decode-product-images.mjs
+public/products/
