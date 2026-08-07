@@ -189,7 +189,7 @@ export default async function GuidePage(props: {
           </p>
           <div className="mt-5 flex flex-wrap justify-center gap-3">
             <Link
-              href="/search/starter-kits"
+              href="/search/completes"
               className="rounded-full bg-[#c5f23c] px-6 py-3 text-sm font-semibold text-black transition hover:brightness-110"
             >
               Shop completes
