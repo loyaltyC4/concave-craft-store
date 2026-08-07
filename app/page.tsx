@@ -337,7 +337,7 @@ export default async function HomePage() {
               </p>
               <div className="mt-6 flex flex-wrap gap-4">
                 <Link
-                  href="/search/concave-molds"
+                  href="/search/deck-building"
                   className="rounded-full border border-white/20 px-6 py-3.5 text-sm font-semibold transition hover:border-[#c5f23c] hover:text-[#c5f23c]"
                 >
                   Explore molds →
@@ -395,7 +395,7 @@ export default async function HomePage() {
               skating, not display. Set them up on any flat surface and go.
             </p>
             <Link
-              href="/search/ramps-parks"
+              href="/search/ramps-obstacles"
               className="mt-7 inline-block rounded-full px-6 py-3.5 text-sm font-semibold text-black transition hover:brightness-110"
               style={{ background: VOLT }}
             >
