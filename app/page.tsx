@@ -1,4 +1,4 @@
-import { getCollectionProducts } from "lib/shopify";
+import { getCollectionProducts, getPicks } from "lib/shopify";
 import type { Product } from "lib/shopify/types";
 import Image from "next/image";
 import Link from "next/link";
@@ -9,9 +9,9 @@ import { NewsletterForm } from "components/newsletter-form";
 import { COLLECTIONS, COLLECTION_IMAGE, GUIDES, VOLT } from "lib/brand";
 
 export const metadata = {
-  title: "Fingerboard Lab — Fingerboard Park Kits, Ramps & Gear",
+  title: "Fingerboard Lab — Completes, Decks, Molds, Ramps & Parts",
   description:
-    "Fingerboard park kits, ramps, obstacles, completes and grip tape — hand-picked and honestly priced from $12.99. Free build guides, free sticker sheet, 30-day returns.",
+    "Pro fingerboard completes, decks, trucks, wheels, park kits and the deck-pressing molds almost nobody stocks. Hand-picked, free build guides, 30-day returns.",
   alternates: { canonical: "/" },
 };
 
@@ -20,43 +20,48 @@ function priceNum(p: Product) {
 }
 
 export default async function HomePage() {
-  const [parkKits, obstacles, completes, parts] = await Promise.all([
-    getCollectionProducts({ collection: "park-kits" }),
-    getCollectionProducts({ collection: "obstacles" }),
-    getCollectionProducts({ collection: "completes" }),
-    getCollectionProducts({ collection: "parts" }),
+  // Real counts for every collection, so the category tiles never lie.
+  const collectionProducts = await Promise.all(
+    COLLECTIONS.map((c) => getCollectionProducts({ collection: c.handle })),
+  );
+  const counts: Record<string, number> = {};
+  COLLECTIONS.forEach((c, i) => {
+    counts[c.handle] = collectionProducts[i]!.length;
+  });
+  const totalProducts = collectionProducts.reduce((n, p) => n + p.length, 0);
+
+  // Hand-curated editorial slots (data/homepage.json) rather than
+  // "cheapest few in a collection", which is what used to run here.
+  const [topPicks, featuredMolds, proCompletes, parkPicks] = await Promise.all([
+    getPicks("top_picks"),
+    getPicks("molds"),
+    getPicks("pro_completes"),
+    getPicks("parks"),
   ]);
 
-  const counts: Record<string, number> = {
-    "park-kits": parkKits.length,
-    obstacles: obstacles.length,
-    completes: completes.length,
-    parts: parts.length,
-  };
-  const totalProducts =
-    parkKits.length + obstacles.length + completes.length + parts.length;
-
-  const featuredCompletes = [...parkKits].sort(
-    (a, b) => priceNum(a) - priceNum(b),
-  );
-  const featuredMolds = [...obstacles]
-    .sort((a, b) => priceNum(a) - priceNum(b))
-    .slice(0, 6);
+  const entry = (list: Product[]) =>
+    list.length
+      ? `$${Math.min(...list.map(priceNum)).toFixed(2).replace(/\.00$/, "")}`
+      : "";
 
   const specs = [
-    "Park kits from $34.99",
-    "Obstacles from $24.99",
+    `${totalProducts} products in stock`,
+    `Completes from ${entry(collectionProducts[0] ?? [])}`,
+    "Deck molds & pressing supplies",
     "Free build guides",
     "Free sticker sheet",
     "30-day returns",
-    "Worldwide shipping",
   ];
 
-  function completeBadge(p: Product, i: number): string | undefined {
-    if (i === 0) return "Staff pick";
+  function pickBadge(p: Product, i: number): string | undefined {
+    if (i === 0) return "Editor's pick";
+    const t = p.title.toLowerCase();
+    if (t.includes("mold") || t.includes("scribe")) return "Build your own";
+    if (t.includes("collab")) return "Limited";
+    if (t.includes("park")) return "Best seller";
     const price = priceNum(p);
-    if (price >= 55) return "Pro";
-    if (price <= 35) return "Great value";
+    if (price >= 60) return "Pro";
+    if (price <= 30) return "Great value";
     return undefined;
   }
 
@@ -100,7 +105,7 @@ export default async function HomePage() {
               ramps &amp; gear.
             </h1>
             <p className="mt-6 max-w-lg text-base text-neutral-300 md:text-lg">
-              Ramp sets, obstacles, completes and grip tape — hand-picked,
+              Completes, decks, molds, park sets and parts — hand-picked,
               honestly priced, and backed by free build guides.{" "}
               <span className="text-[#f3f1ea]">
                 {totalProducts} products, nothing filler.
@@ -183,30 +188,30 @@ export default async function HomePage() {
               className="text-xs font-semibold uppercase tracking-[0.18em]"
               style={{ color: VOLT }}
             >
-              Start here
+              New in
             </span>
             <h2 className="mt-3 text-3xl font-semibold md:text-5xl">
-              Park kits, ready to skate.
+              This week&apos;s picks.
             </h2>
             <p className="mt-3 max-w-md text-neutral-400">
-              Multi-piece ramp and obstacle sets — the fastest way to a setup
-              you can actually session.
+              Hand-picked from what just landed — press molds, collab completes,
+              race-grade wheels and park sets. One of each, low to high.
             </p>
           </div>
           <Link
-            href="/search/park-kits"
+            href="/search"
             className="hidden shrink-0 text-sm font-semibold text-neutral-300 hover:text-[#c5f23c] md:block"
           >
             View all →
           </Link>
         </div>
         <div className="flex snap-x snap-mandatory gap-5 overflow-x-auto pb-4 [scrollbar-width:none]">
-          {featuredCompletes.map((p, i) => (
+          {topPicks.map((p, i) => (
             <div
               key={p.id}
               className="w-[78%] shrink-0 snap-start sm:w-[44%] lg:w-[28%]"
             >
-              <ProductCard product={p} badge={completeBadge(p, i)} />
+              <ProductCard product={p} badge={pickBadge(p, i)} />
             </div>
           ))}
         </div>
@@ -331,9 +336,9 @@ export default async function HomePage() {
                 Press your own. Precision molds.
               </h2>
               <p className="mt-4 text-neutral-400">
-                Every profile in the lineup — from shallow to deep concave,
-                entry to full CNC metal. Consistent concave, every press. The
-                serious builder&apos;s edge.
+                Press your own decks: shallow through deep concave, three- and
+                four-piece sets, alignment pins and marking jigs, plus maple
+                veneer to press. Almost nobody stocks this — we stock the range.
               </p>
               <div className="mt-6 flex flex-wrap gap-4">
                 <Link
@@ -350,12 +355,54 @@ export default async function HomePage() {
                 </Link>
               </div>
             </div>
-            <div className="grid grid-cols-2 gap-4 sm:grid-cols-3">
+            <div className="grid grid-cols-2 gap-4">
               {featuredMolds.map((p) => (
                 <ProductCard
                   key={p.id}
                   product={p}
-                  sizes="(min-width:768px) 22vw, 44vw"
+                  sizes="(min-width:768px) 28vw, 44vw"
+                />
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
+      {/* PRO COMPLETES — aspirational anchor. Collab and limited-run boards set
+          the top of the range, which makes the mid-range read as sensible. */}
+      {proCompletes.length > 0 && (
+        <section className="border-y border-white/10 bg-[#0e1013]">
+          <div className="mx-auto max-w-7xl px-6 py-20 md:px-12 md:py-24">
+            <div className="mb-10 flex items-end justify-between gap-6">
+              <div>
+                <span
+                  className="text-xs font-semibold uppercase tracking-[0.18em]"
+                  style={{ color: VOLT }}
+                >
+                  Collabs &amp; limited runs
+                </span>
+                <h2 className="mt-3 text-3xl font-semibold md:text-5xl">
+                  The boards worth keeping.
+                </h2>
+                <p className="mt-3 max-w-lg text-neutral-400">
+                  Pro maple, real bearing wheels, and graphics that came from a
+                  collaboration rather than a catalogue. Built to be skated, and
+                  worth putting on a shelf when you are not.
+                </p>
+              </div>
+              <Link
+                href="/search/completes"
+                className="hidden shrink-0 text-sm font-semibold text-neutral-300 hover:text-[#c5f23c] md:block"
+              >
+                All completes →
+              </Link>
+            </div>
+            <div className="grid grid-cols-2 gap-5 lg:grid-cols-4">
+              {proCompletes.map((p) => (
+                <ProductCard
+                  key={p.id}
+                  product={p}
+                  sizes="(min-width:1024px) 22vw, 44vw"
                 />
               ))}
             </div>
@@ -391,17 +438,30 @@ export default async function HomePage() {
               Set the scene.
             </h2>
             <p className="mt-4 text-neutral-300">
-              Wooden ramps, rails, ledges, and full park sets — built for real
-              skating, not display. Set them up on any flat surface and go.
+              Modular ramps, rails, ledges and full park sets in wood and alloy —
+              built for real skating, not display. Rearrange them into new lines
+              and add a piece at a time.
             </p>
             <Link
-              href="/search/ramps-obstacles"
+              href="/search/park-kits"
               className="mt-7 inline-block rounded-full px-6 py-3.5 text-sm font-semibold text-black transition hover:brightness-110"
               style={{ background: VOLT }}
             >
-              Shop ramps & parks
+              Shop park kits
             </Link>
           </div>
+
+          {parkPicks.length > 0 && (
+            <div className="mt-12 grid grid-cols-3 gap-4 md:max-w-2xl">
+              {parkPicks.map((p) => (
+                <ProductCard
+                  key={p.id}
+                  product={p}
+                  sizes="(min-width:768px) 20vw, 30vw"
+                />
+              ))}
+            </div>
+          )}
         </div>
       </section>
 

@@ -11,6 +11,7 @@ import {
   staticGetProducts,
   staticGetRelatedProducts,
   staticGetProductCollection,
+  staticGetPicks,
 } from "./static-data";
 import { isShopifyError } from "lib/type-guards";
 import { ensureStartsWith } from "lib/utils";
@@ -489,6 +490,14 @@ export async function getRelatedProducts(handle: string): Promise<Product[]> {
   cacheTag(TAGS.products);
   cacheLife("days");
   return staticGetRelatedProducts(handle, 8);
+}
+
+/** Hand-curated homepage picks for a named slot (data/homepage.json). */
+export async function getPicks(slot: string): Promise<Product[]> {
+  "use cache";
+  cacheTag(TAGS.products);
+  cacheLife("days");
+  return staticGetPicks(slot);
 }
 
 /** Primary collection handle a product belongs to (for breadcrumbs). */
