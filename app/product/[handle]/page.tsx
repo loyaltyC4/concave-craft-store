@@ -43,7 +43,7 @@ export async function generateMetadata(props: {
 }
 
 const GUIDE_FOR_COLLECTION: Record<string, { label: string; href: string }> = {
-  "starter-kits": {
+  completes: {
     label: "New to it? Read the beginner buying guide",
     href: "/guides/best-beginner-fingerboard-setup",
   },
@@ -51,15 +51,32 @@ const GUIDE_FOR_COLLECTION: Record<string, { label: string; href: string }> = {
     label: "Not sure on width? Read the sizing guide",
     href: "/guides/fingerboard-sizing-guide",
   },
-  "concave-molds": {
-    label: "Learn how to press a deck with a mold",
-    href: "/guides/how-to-press-a-fingerboard-deck",
-  },
-  accessories: {
+  trucks: {
     label: "How to choose the right trucks",
     href: "/guides/how-to-choose-fingerboard-trucks",
   },
-  "ramps-parks": { label: "Explore all build guides", href: "/guides" },
+  wheels: {
+    label: "Keep them rolling: clean your bearings and wheels",
+    href: "/guides/how-to-clean-fingerboard-bearings-and-wheels",
+  },
+  "grip-tape": {
+    label: "Which grip tape should you use?",
+    href: "/guides/fingerboard-grip-tape-guide",
+  },
+  "tuning-hardware": {
+    label: "Dial in your setup: the bushings guide",
+    href: "/guides/fingerboard-bushings-guide",
+  },
+  "deck-building": {
+    label: "Learn how to press a deck with a mold",
+    href: "/guides/how-to-press-a-fingerboard-deck",
+  },
+  "ramps-obstacles": {
+    label: "Build your own park: the DIY ramp guide",
+    href: "/guides/wooden-fingerboard-ramps-diy-park-guide",
+  },
+  "park-kits": { label: "Explore all build guides", href: "/guides" },
+  "storage-display": { label: "Explore all build guides", href: "/guides" },
 };
 
 export default async function ProductPage(props: {

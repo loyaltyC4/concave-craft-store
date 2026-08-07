@@ -1,43 +1,113 @@
 {
  "collections": [
   {
-   "id": 600000000,
-   "handle": "park-kits",
-   "title": "Park Kits",
-   "body_html": "<p>Multi-piece fingerboard skateparks and ramp sets \u2014 the fastest way to build a setup you can actually skate.</p>",
-   "updated_at": "2026-08-01T00:00:00+00:00",
-   "published_at": "2026-08-01T00:00:00+00:00",
-   "sort_order": "manual",
-   "published_scope": "web"
-  },
-  {
-   "id": 600000001,
-   "handle": "obstacles",
-   "title": "Ramps & Obstacles",
-   "body_html": "<p>Single ramps, rails, ledges and walls. Mix and match to build your own park.</p>",
-   "updated_at": "2026-08-01T00:00:00+00:00",
-   "published_at": "2026-08-01T00:00:00+00:00",
-   "sort_order": "manual",
-   "published_scope": "web"
-  },
-  {
-   "id": 600000002,
-   "handle": "parts",
-   "title": "Grip Tape & Parts",
-   "body_html": "<p>Foam grip tape, tools, locknuts and small parts to keep your setup dialled.</p>",
-   "updated_at": "2026-08-01T00:00:00+00:00",
-   "published_at": "2026-08-01T00:00:00+00:00",
-   "sort_order": "manual",
-   "published_scope": "web"
-  },
-  {
-   "id": 600000003,
+   "id": 600000000000,
    "handle": "completes",
    "title": "Complete Fingerboards",
-   "body_html": "<p>Assembled and ride-ready out of the box.</p>",
-   "updated_at": "2026-08-01T00:00:00+00:00",
-   "published_at": "2026-08-01T00:00:00+00:00",
+   "body_html": "<p>Assembled and ready to skate out of the box — real maple decks, metal trucks and genuine bearing wheels. The board you buy when the plastic one stopped being enough.</p>",
+   "published_at": "2026-04-16T07:34:35+02:00",
+   "updated_at": "2026-08-07T10:00:00+02:00",
    "sort_order": "manual",
+   "template_suffix": null,
+   "published_scope": "web"
+  },
+  {
+   "id": 600000000001,
+   "handle": "decks",
+   "title": "Decks",
+   "body_html": "<p>Bare decks for riders building their own setup. Choose your width, concave and graphic, then bolt on the trucks and wheels you already trust.</p>",
+   "published_at": "2026-04-16T07:34:35+02:00",
+   "updated_at": "2026-08-07T10:00:00+02:00",
+   "sort_order": "manual",
+   "template_suffix": null,
+   "published_scope": "web"
+  },
+  {
+   "id": 600000000002,
+   "handle": "trucks",
+   "title": "Trucks",
+   "body_html": "<p>The first upgrade that changes how a board actually rides. Single axle, inverted and regular kingpin geometry across every common deck width.</p>",
+   "published_at": "2026-04-16T07:34:35+02:00",
+   "updated_at": "2026-08-07T10:00:00+02:00",
+   "sort_order": "manual",
+   "template_suffix": null,
+   "published_scope": "web"
+  },
+  {
+   "id": 600000000003,
+   "handle": "wheels",
+   "title": "Wheels",
+   "body_html": "<p>Urethane and CNC wheels with real, rated bearings — the part that fails first on a cheap board, and the easiest way to make a setup feel new.</p>",
+   "published_at": "2026-04-16T07:34:35+02:00",
+   "updated_at": "2026-08-07T10:00:00+02:00",
+   "sort_order": "manual",
+   "template_suffix": null,
+   "published_scope": "web"
+  },
+  {
+   "id": 600000000004,
+   "handle": "grip-tape",
+   "title": "Grip Tape",
+   "body_html": "<p>Foam grip tape in uncut sheets, plus the file to trim it cleanly. Cut it to your own deck shape for a finish that looks deliberate.</p>",
+   "published_at": "2026-04-16T07:34:35+02:00",
+   "updated_at": "2026-08-07T10:00:00+02:00",
+   "sort_order": "manual",
+   "template_suffix": null,
+   "published_scope": "web"
+  },
+  {
+   "id": 600000000005,
+   "handle": "tuning-hardware",
+   "title": "Tuning & Hardware",
+   "body_html": "<p>Bushings, pivot cups, bearings, locknuts, baseplates and tools. The tuning layer that keeps a setup turning sweetly and holds it together.</p>",
+   "published_at": "2026-04-16T07:34:35+02:00",
+   "updated_at": "2026-08-07T10:00:00+02:00",
+   "sort_order": "manual",
+   "template_suffix": null,
+   "published_scope": "web"
+  },
+  {
+   "id": 600000000006,
+   "handle": "ramps-obstacles",
+   "title": "Ramps & Obstacles",
+   "body_html": "<p>Single pieces in wood and metal — quarter pipes, rails, ledges, stairs and walls. Equipment that earns its place on a desk between sessions.</p>",
+   "published_at": "2026-04-16T07:34:35+02:00",
+   "updated_at": "2026-08-07T10:00:00+02:00",
+   "sort_order": "manual",
+   "template_suffix": null,
+   "published_scope": "web"
+  },
+  {
+   "id": 600000000007,
+   "handle": "park-kits",
+   "title": "Park Kits & Sets",
+   "body_html": "<p>Multi-piece sets and complete parks. Modular pieces you can rearrange into new lines, and expand one obstacle at a time.</p>",
+   "published_at": "2026-04-16T07:34:35+02:00",
+   "updated_at": "2026-08-07T10:00:00+02:00",
+   "sort_order": "manual",
+   "template_suffix": null,
+   "published_scope": "web"
+  },
+  {
+   "id": 600000000008,
+   "handle": "deck-building",
+   "title": "Deck Building & Molds",
+   "body_html": "<p>Press your own decks. Concave molds across shallow, medium and deep profiles, plus dyed maple veneer — the part of fingerboarding almost nobody stocks.</p>",
+   "published_at": "2026-04-16T07:34:35+02:00",
+   "updated_at": "2026-08-07T10:00:00+02:00",
+   "sort_order": "manual",
+   "template_suffix": null,
+   "published_scope": "web"
+  },
+  {
+   "id": 600000000009,
+   "handle": "storage-display",
+   "title": "Storage & Display",
+   "body_html": "<p>Cases and bags that protect a collection in transit and make it look considered at rest.</p>",
+   "published_at": "2026-04-16T07:34:35+02:00",
+   "updated_at": "2026-08-07T10:00:00+02:00",
+   "sort_order": "manual",
+   "template_suffix": null,
    "published_scope": "web"
   }
  ]

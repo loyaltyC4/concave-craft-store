@@ -33,20 +33,34 @@ export const INK = "#0b0c0e"; // near-black canvas
 export const PANEL = "#15171c"; // raised panel
 export const CREAM = "#f3f1ea"; // primary text
 
-// Collection handles used across the store (explicit, not keyword-guessed)
+// Collection handles used across the store (explicit, not keyword-guessed).
+// Order here drives the header nav and the homepage category grid, so it runs
+// from finished boards, through parts, to the deck-building range.
 export const COLLECTIONS = [
-  { handle: "park-kits", title: "Park Kits", short: "Park Kits" },
-  { handle: "obstacles", title: "Ramps & Obstacles", short: "Obstacles" },
   { handle: "completes", title: "Complete Fingerboards", short: "Completes" },
-  { handle: "parts", title: "Grip Tape & Parts", short: "Parts" },
+  { handle: "decks", title: "Decks", short: "Decks" },
+  { handle: "trucks", title: "Trucks", short: "Trucks" },
+  { handle: "wheels", title: "Wheels", short: "Wheels" },
+  { handle: "grip-tape", title: "Grip Tape", short: "Grip Tape" },
+  { handle: "tuning-hardware", title: "Tuning & Hardware", short: "Hardware" },
+  { handle: "ramps-obstacles", title: "Ramps & Obstacles", short: "Obstacles" },
+  { handle: "park-kits", title: "Park Kits & Sets", short: "Park Kits" },
+  { handle: "deck-building", title: "Deck Building & Molds", short: "Molds" },
+  { handle: "storage-display", title: "Storage & Display", short: "Storage" },
 ] as const;
 
 // Banner image per collection (staged in /public/brand)
 export const COLLECTION_IMAGE: Record<string, string> = {
-  "park-kits": "/brand/collection-ramps.jpg",
-  obstacles: "/brand/collection-ramps.jpg",
   completes: "/brand/collection-completes.jpg",
-  parts: "/brand/collection-hardware.jpg",
+  decks: "/brand/collection-decks.jpg",
+  trucks: "/brand/collection-hardware.jpg",
+  wheels: "/brand/collection-hardware.jpg",
+  "grip-tape": "/brand/collection-hardware.jpg",
+  "tuning-hardware": "/brand/collection-hardware.jpg",
+  "ramps-obstacles": "/brand/collection-ramps.jpg",
+  "park-kits": "/brand/collection-ramps.jpg",
+  "deck-building": "/brand/collection-molds.jpg",
+  "storage-display": "/brand/collection-completes.jpg",
 };
 
 // Cornerstone guides (drives the /guides hub, nav, sitemap, and internal
