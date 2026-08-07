@@ -268,7 +268,7 @@ function productsForHandles(handles: string[]): Product[] {
 export function staticGetCollectionProducts(handle: string): Product[] {
   // Homepage helper collections
   if (handle === "hidden-homepage-featured-items") {
-    return productsForHandles(collectionMap["starter-kits"] ?? []).slice(0, 3);
+    return productsForHandles(collectionMap["completes"] ?? []).slice(0, 3);
   }
   if (handle === "hidden-homepage-carousel") {
     const spread: Product[] = [];
