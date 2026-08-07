@@ -81,12 +81,26 @@ function restProductToProduct(p: any): Product {
       ] as (null | { name: string; value: string })[]
     ).filter((x): x is { name: string; value: string } => x !== null);
 
+    const compareAt = v.compare_at_price
+      ? parseFloat(v.compare_at_price as string)
+      : NaN;
+    const price = parseFloat((v.price as string) ?? "0");
+
     return {
       id: `gid://shopify/ProductVariant/${v.id as string}`,
       title: v.title as string,
       availableForSale: v.available !== false,
       selectedOptions,
       price: { amount: (v.price as string) ?? "0.00", currencyCode: "USD" },
+      // Only surface a compare-at when it is genuinely higher than the price.
+      ...(!isNaN(compareAt) && compareAt > price
+        ? {
+            compareAtPrice: {
+              amount: compareAt.toFixed(2),
+              currencyCode: "USD",
+            },
+          }
+        : {}),
       sku: (v.sku as string) ?? "",
     };
   });
@@ -121,8 +135,11 @@ function restProductToProduct(p: any): Product {
     featuredImage: images[0] ?? { url: "", altText: "", width: 0, height: 0 },
     images,
     seo: {
-      title: p.title as string,
-      description: truncateForMeta(stripHtml((p.body_html as string) ?? "")),
+      // Hand-written SEO copy wins; fall back to a derived description.
+      title: (p.seo_title as string) || (p.title as string),
+      description:
+        (p.seo_description as string) ||
+        truncateForMeta(stripHtml((p.body_html as string) ?? "")),
     },
     tags,
     updatedAt: (p.updated_at as string) ?? new Date().toISOString(),
