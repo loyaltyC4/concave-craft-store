@@ -19,6 +19,8 @@ const collectionMap: Record<
   string,
   string[]
 > = require("../../data/collection-map.json");
+// eslint-disable-next-line @typescript-eslint/no-require-imports
+const homepagePicks: Record<string, string[]> = require("../../data/homepage.json");
 
 import type { Collection, Product } from "./types";
 
@@ -245,6 +247,11 @@ export function staticGetProducts({
 
 export function staticGetProduct(handle: string): Product | undefined {
   return productByHandle.get(handle);
+}
+
+/** Hand-curated homepage slots (data/homepage.json), resolved in editorial order. */
+export function staticGetPicks(slot: string): Product[] {
+  return productsForHandles(homepagePicks[slot] ?? []);
 }
 
 export function staticGetCollections(): Collection[] {
