@@ -88,6 +88,9 @@ export type ProductVariant = {
     value: string;
   }[];
   price: Money;
+  /** Original price, present only when this variant is a genuine saving
+   *  (e.g. a multipack priced below the same count bought as small packs). */
+  compareAtPrice?: Money;
   sku?: string;
 };
 
