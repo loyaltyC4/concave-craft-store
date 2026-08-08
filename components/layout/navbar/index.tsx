@@ -1,6 +1,7 @@
 import CartModal from "components/cart/modal";
 import { BrandLogo } from "components/brand-logo";
 import { getCollections } from "lib/shopify";
+import { COLLECTIONS } from "lib/brand";
 import Link from "next/link";
 import { Suspense } from "react";
 import MobileMenu from "./mobile-menu";
@@ -13,12 +14,25 @@ const ANNOUNCEMENTS = [
   "30-day returns",
 ];
 
+// handle -> short label, e.g. "Tuning & Hardware" -> "Hardware". The full
+// titles ("Deck Building & Molds", "Ramps & Obstacles", ...) are correct for
+// page <h1>s and breadcrumbs but 11 of them side by side in one nav row
+// overflowed the viewport at anything under ~1700px — the header pushed the
+// search bar and cart off-screen and forced horizontal scroll on the whole
+// page. Short labels are purpose-built for exactly this in lib/brand.ts.
+const SHORT_LABEL: Record<string, string> = Object.fromEntries(
+  COLLECTIONS.map((c) => [c.handle, c.short]),
+);
+
 export async function Navbar() {
   const collections = await getCollections();
   const links = [
     ...collections
       .filter((c) => c.handle)
-      .map((c) => ({ title: c.title, path: c.path })),
+      .map((c) => ({
+        title: SHORT_LABEL[c.handle] ?? c.title,
+        path: c.path,
+      })),
     { title: "Guides", path: "/guides" },
   ];
 
@@ -45,9 +59,15 @@ export async function Navbar() {
 
         <BrandLogo />
 
-        <ul className="hidden flex-1 items-center gap-6 pl-4 md:flex">
+        {/*
+         * min-w-0 is load-bearing: without it a flex-1 child's min-width
+         * defaults to its max-content size, so this <ul> could never shrink
+         * below "every link at full width" and the browser widened the whole
+         * nav (and page) to fit instead of wrapping or clipping.
+         */}
+        <ul className="hidden min-w-0 flex-1 items-center gap-5 pl-4 md:flex">
           {links.map((item) => (
-            <li key={item.title}>
+            <li key={item.title} className="shrink-0">
               <Link
                 href={item.path}
                 prefetch={true}
@@ -60,7 +80,7 @@ export async function Navbar() {
         </ul>
 
         <div className="ml-auto flex flex-none items-center gap-3">
-          <div className="hidden w-52 lg:block xl:w-64">
+          <div className="hidden w-52 xl:block">
             <Suspense fallback={<SearchSkeleton />}>
               <Search />
             </Suspense>
