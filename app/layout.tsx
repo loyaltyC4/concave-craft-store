@@ -3,6 +3,8 @@ import { Navbar } from "components/layout/navbar";
 import { GeistSans } from "geist/font/sans";
 import { ReactNode } from "react";
 import { Toaster } from "sonner";
+import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import "./globals.css";
 import { baseUrl } from "lib/utils";
 import {
@@ -125,6 +127,10 @@ export default async function RootLayout({
             <Toaster closeButton richColors theme="dark" />
           </main>
         </CartProvider>
+        {/* Vercel Analytics: pageviews + custom events. */}
+        <Analytics />
+        {/* Vercel Speed Insights: real-user Core Web Vitals (LCP, INP, CLS). */}
+        <SpeedInsights />
       </body>
     </html>
   );
