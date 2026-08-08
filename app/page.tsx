@@ -173,7 +173,7 @@ export default async function HomePage() {
           ].map(([t, d]) => (
             <div key={t}>
               <div className="mb-2 h-px w-8" style={{ background: VOLT }} />
-              <h3 className="text-base font-semibold">{t}</h3>
+              <h2 className="text-base font-semibold">{t}</h2>
               <p className="mt-1 text-sm text-neutral-400">{d}</p>
             </div>
           ))}

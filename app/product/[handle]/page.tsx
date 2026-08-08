@@ -12,12 +12,28 @@ import {
   getRelatedProducts,
 } from "lib/shopify";
 import type { Image } from "lib/shopify/types";
-import { baseUrl } from "lib/utils";
+import { baseUrl, pageTitle } from "lib/utils";
 import { COLLECTIONS, SITE_NAME } from "lib/brand";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import { getProducts } from "lib/shopify";
 import { Suspense } from "react";
+
+/**
+ * Prerender every product and refuse unknown handles.
+ *
+ * Without this, an unknown /product/<anything> served the cached PPR shell with
+ * HTTP 200 and the not-found body — a soft 404. Search engines treat those as
+ * thin duplicates instead of dropping them. Listing every handle also makes all
+ * 154 product pages fully static, so crawlers get server-rendered HTML.
+ */
+export async function generateStaticParams() {
+  const products = await getProducts({});
+  return products.map((p) => ({ handle: p.handle }));
+}
+
+export const dynamicParams = false;
 
 export async function generateMetadata(props: {
   params: Promise<{ handle: string }>;
@@ -30,7 +46,7 @@ export async function generateMetadata(props: {
   const indexable = !product.tags.includes(HIDDEN_PRODUCT_TAG);
 
   return {
-    title: product.seo.title || product.title,
+    title: pageTitle(product.seo.title || product.title),
     description: product.seo.description || product.description,
     alternates: { canonical: `/product/${product.handle}` },
     robots: {

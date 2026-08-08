@@ -50,3 +50,19 @@ export const validateEnvironmentVariables = () => {
     );
   }
 };
+
+/**
+ * Build a page <title> that survives Google's ~60-character truncation.
+ *
+ * The global metadata template appends " | Fingerboard Lab" to every title,
+ * which pushed 149 of 154 product titles past 60 characters and got them
+ * truncated in the SERP. This appends the brand only when it actually fits,
+ * and returns an absolute title so the template cannot double it up.
+ */
+export const BRAND_SUFFIX = " | Fingerboard Lab";
+
+export function pageTitle(title: string, limit = 60): { absolute: string } {
+  const clean = title.replace(/\s*\|\s*Fingerboard Lab\s*$/i, "").trim();
+  const withBrand = `${clean}${BRAND_SUFFIX}`;
+  return { absolute: withBrand.length <= limit ? withBrand : clean };
+}

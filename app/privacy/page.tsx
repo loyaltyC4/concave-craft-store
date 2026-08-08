@@ -4,7 +4,8 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Privacy Policy",
-  description: "How Fingerboard Lab collects, uses, and protects your data.",
+  description:
+    "How Fingerboard Lab collects, uses and protects your data — what we store when you order, which processors we rely on, and how to request deletion.",
   alternates: { canonical: "/privacy" },
   robots: { index: true, follow: true },
 };
