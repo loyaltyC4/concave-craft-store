@@ -47,28 +47,10 @@
    ],
    "images": [
     {
-     "id": 1029712914060200,
-     "product_id": 10297129140602,
-     "position": 1,
-     "src": "/products/completes-761989555593-1.jpg",
-     "width": 800,
-     "height": 800,
-     "alt": "Maple & Alloy Fingerboard Complete — Bearing Trucks, 2-Pack — Fingerboard Lab"
-    },
-    {
-     "id": 1029712914060201,
-     "product_id": 10297129140602,
-     "position": 2,
-     "src": "https://img.alicdn.com/bao/uploaded/1974109483/O1CN01Xo0tTD2JvGkbFQwYX_!!1974109483.png",
-     "width": 1000,
-     "height": 1000,
-     "alt": "Maple & Alloy Fingerboard Complete — Bearing Trucks, 2-Pack — Fingerboard Lab"
-    },
-    {
      "id": 1029712914060202,
      "product_id": 10297129140602,
-     "position": 3,
-     "src": "https://img.alicdn.com/bao/uploaded/1974109483/O1CN01ZTAd2J2JvGoBe7fL0_!!1974109483.jpg",
+     "position": 1,
+     "src": "/products/primary-10297129140602.jpg",
      "width": 800,
      "height": 800,
      "alt": "Maple & Alloy Fingerboard Complete — Bearing Trucks, 2-Pack — Fingerboard Lab"
@@ -76,7 +58,7 @@
     {
      "id": 1029712914060203,
      "product_id": 10297129140602,
-     "position": 4,
+     "position": 2,
      "src": "https://img.alicdn.com/bao/uploaded/1974109483/O1CN01T19Owy2JvGoAlLw3A_!!1974109483.jpg",
      "width": 800,
      "height": 800,
@@ -85,7 +67,7 @@
     {
      "id": 1029712914060204,
      "product_id": 10297129140602,
-     "position": 5,
+     "position": 3,
      "src": "https://img.alicdn.com/bao/uploaded/1974109483/O1CN010pt7H42JvGoAmDi05_!!1974109483.png",
      "width": 1000,
      "height": 1000,
@@ -93,10 +75,10 @@
     }
    ],
    "image": {
-    "id": 1029712914060200,
+    "id": 1029712914060202,
     "product_id": 10297129140602,
     "position": 1,
-    "src": "/products/completes-761989555593-1.jpg",
+    "src": "/products/primary-10297129140602.jpg",
     "width": 800,
     "height": 800,
     "alt": "Maple & Alloy Fingerboard Complete — Bearing Trucks, 2-Pack — Fingerboard Lab"
@@ -251,125 +233,23 @@
    ],
    "images": [
     {
-     "id": 1029712914055500,
-     "product_id": 10297129140555,
-     "position": 1,
-     "src": "/products/completes-840635976721-1.jpg",
-     "width": 800,
-     "height": 800,
-     "alt": "5-Ply Maple Fingerboard Complete with Bearing Wheels — Fingerboard Lab"
-    },
-    {
-     "id": 1029712914055501,
-     "product_id": 10297129140555,
-     "position": 2,
-     "src": "https://img.alicdn.com/bao/uploaded/O1CN01ZOeFIx1UtrGG0ZfQL_!!0-item_pic.jpg",
-     "width": 800,
-     "height": 800,
-     "alt": "5-Ply Maple Fingerboard Complete with Bearing Wheels — Fingerboard Lab"
-    },
-    {
      "id": 1029712914055502,
      "product_id": 10297129140555,
-     "position": 3,
-     "src": "https://img.alicdn.com/bao/uploaded/O1CN01tAXbZU1UtrGFOBlLF_!!0-item_pic.jpg",
-     "width": 800,
-     "height": 800,
-     "alt": "5-Ply Maple Fingerboard Complete with Bearing Wheels — Fingerboard Lab"
-    },
-    {
-     "id": 1029712914055503,
-     "product_id": 10297129140555,
-     "position": 4,
-     "src": "https://img.alicdn.com/bao/uploaded/O1CN014sslLf1UtrGI0Zroa_!!0-item_pic.jpg",
-     "width": 800,
-     "height": 800,
-     "alt": "5-Ply Maple Fingerboard Complete with Bearing Wheels — Fingerboard Lab"
-    },
-    {
-     "id": 1029712914055504,
-     "product_id": 10297129140555,
-     "position": 5,
-     "src": "https://img.alicdn.com/bao/uploaded/O1CN0165kUno1UtrG8jmPCn_!!0-item_pic.jpg",
+     "position": 1,
+     "src": "/products/primary-10297129140555.jpg",
      "width": 800,
      "height": 800,
      "alt": "5-Ply Maple Fingerboard Complete with Bearing Wheels — Fingerboard Lab"
     }
    ],
    "image": {
-    "id": 1029712914055500,
+    "id": 1029712914055502,
     "product_id": 10297129140555,
     "position": 1,
-    "src": "/products/completes-840635976721-1.jpg",
+    "src": "/products/primary-10297129140555.jpg",
     "width": 800,
     "height": 800,
     "alt": "5-Ply Maple Fingerboard Complete with Bearing Wheels — Fingerboard Lab"
-   }
-  },
-  {
-   "id": 10297129140566,
-   "title": "Maple Fingerboard Complete — Bearing Wheels, Mini Double Kick",
-   "body_html": "<p>A compact maple fingerboard complete with bearing wheels — the combination that defines the difference between a toy and a real board. Mini proportions make it genuinely portable, while the double kick and maple deck mean it skates like a scaled-down real board.</p><p><strong>Why this one</strong></p><ul><li>Bearing wheels for real, lasting spin — not decorative non-spinning plastic</li><li>Maple deck construction for snap and feel that plastic boards don't deliver</li><li>Double-kick mini profile — compact enough to carry anywhere, proportioned to actually skate</li><li>Complete and assembled — no setup needed</li><li>Suits active skating and desk display equally well</li></ul><p><strong>Specifications</strong></p><table><tbody><tr><td><strong>Deck material</strong></td><td>Maple</td></tr><tr><td><strong>Wheels</strong></td><td>Bearing wheels</td></tr><tr><td><strong>Shape</strong></td><td>Double kick</td></tr><tr><td><strong>What's included</strong></td><td>Complete fingerboard (assembled)</td></tr></tbody></table><p><strong>Who it suits</strong></p><p>Riders and gifters looking for a compact, genuinely-specced complete at an accessible price. The bearing wheels and maple construction are what make it worth buying over a cheaper toy-grade board.</p><p><em>Hand-picked and quality-checked before dispatch. Free sticker sheet in every box, and 30-day returns if it is not right for you.</em></p>",
-   "vendor": "Fingerboard Lab",
-   "product_type": "Complete Fingerboards",
-   "handle": "maple-fingerboard-complete-bearing-wheels-mini-double-kick",
-   "created_at": "2026-08-07T15:00:00+02:00",
-   "updated_at": "2026-08-07T15:00:00+02:00",
-   "published_at": "2026-08-07T15:00:00+02:00",
-   "template_suffix": null,
-   "published_scope": "web",
-   "tags": "maple, bearing wheels, double kick, mini fingerboard, complete, portable, pro spec",
-   "status": "active",
-   "seo_title": "Maple Mini Fingerboard Complete — Bearing Wheels",
-   "seo_description": "Compact maple fingerboard complete with bearing wheels and double kick. Real spec in a mini form. Suits skating and desk display. Assembled and ready.",
-   "variants": [
-    {
-     "id": 52930359165271,
-     "product_id": 10297129140566,
-     "title": "Default Title",
-     "price": "21.95",
-     "compare_at_price": null,
-     "position": 1,
-     "option1": "Default Title",
-     "inventory_policy": "continue",
-     "taxable": false,
-     "sku": "FL-10297129140566",
-     "requires_shipping": true,
-     "available": true,
-     "inventory_quantity": 8,
-     "weight": 0.07,
-     "weight_unit": "kg"
-    }
-   ],
-   "options": [
-    {
-     "id": 102971291405660,
-     "name": "Option",
-     "position": 1,
-     "values": [
-      "Default Title"
-     ]
-    }
-   ],
-   "images": [
-    {
-     "id": 1029712914056600,
-     "product_id": 10297129140566,
-     "position": 1,
-     "src": "/products/completes-3826489726915969564-1.jpg",
-     "width": 800,
-     "height": 800,
-     "alt": "Maple Fingerboard Complete — Bearing Wheels, Mini Double Kick — Fingerboard Lab"
-    }
-   ],
-   "image": {
-    "id": 1029712914056600,
-    "product_id": 10297129140566,
-    "position": 1,
-    "src": "/products/completes-3826489726915969564-1.jpg",
-    "width": 800,
-    "height": 800,
-    "alt": "Maple Fingerboard Complete — Bearing Wheels, Mini Double Kick — Fingerboard Lab"
    }
   },
   {
@@ -521,56 +401,20 @@
    ],
    "images": [
     {
-     "id": 1029712914054800,
-     "product_id": 10297129140548,
-     "position": 1,
-     "src": "/products/completes-724189264391-1.jpg",
-     "width": 800,
-     "height": 800,
-     "alt": "5-Ply Maple Complete — Alloy Trucks & Bearing Wheels — Pack of 2 — Fingerboard Lab"
-    },
-    {
-     "id": 1029712914054801,
-     "product_id": 10297129140548,
-     "position": 2,
-     "src": "https://img.alicdn.com/bao/uploaded/1823951403/O1CN01bY5b0p1MEcWvrPwUG_!!1823951403.png",
-     "width": 1000,
-     "height": 1000,
-     "alt": "5-Ply Maple Complete — Alloy Trucks & Bearing Wheels — Pack of 2 — Fingerboard Lab"
-    },
-    {
-     "id": 1029712914054802,
-     "product_id": 10297129140548,
-     "position": 3,
-     "src": "https://img.alicdn.com/bao/uploaded/1823951403/O1CN01MJMjID1MEcWy652vu_!!1823951403.png",
-     "width": 1000,
-     "height": 1000,
-     "alt": "5-Ply Maple Complete — Alloy Trucks & Bearing Wheels — Pack of 2 — Fingerboard Lab"
-    },
-    {
-     "id": 1029712914054803,
-     "product_id": 10297129140548,
-     "position": 4,
-     "src": "https://img.alicdn.com/bao/uploaded/1823951403/O1CN01WdfZVA1MEcWzd8uvc_!!1823951403.png",
-     "width": 1000,
-     "height": 1000,
-     "alt": "5-Ply Maple Complete — Alloy Trucks & Bearing Wheels — Pack of 2 — Fingerboard Lab"
-    },
-    {
      "id": 1029712914054804,
      "product_id": 10297129140548,
-     "position": 5,
-     "src": "https://img.alicdn.com/bao/uploaded/1823951403/O1CN011rzTYQ1MEcWuTfpRl_!!1823951403.jpg",
+     "position": 1,
+     "src": "/products/primary-10297129140548.jpg",
      "width": 800,
      "height": 800,
      "alt": "5-Ply Maple Complete — Alloy Trucks & Bearing Wheels — Pack of 2 — Fingerboard Lab"
     }
    ],
    "image": {
-    "id": 1029712914054800,
+    "id": 1029712914054804,
     "product_id": 10297129140548,
     "position": 1,
-    "src": "/products/completes-724189264391-1.jpg",
+    "src": "/products/primary-10297129140548.jpg",
     "width": 800,
     "height": 800,
     "alt": "5-Ply Maple Complete — Alloy Trucks & Bearing Wheels — Pack of 2 — Fingerboard Lab"
@@ -725,27 +569,18 @@
    ],
    "images": [
     {
-     "id": 1029712914055400,
-     "product_id": 10297129140554,
-     "position": 1,
-     "src": "/products/completes-938296095893-1.jpg",
-     "width": 1000,
-     "height": 1000,
-     "alt": "WP Dyed Series Fingerboard Complete — Handmade Maple — Fingerboard Lab"
-    },
-    {
      "id": 1029712914055401,
      "product_id": 10297129140554,
-     "position": 2,
-     "src": "https://img.alicdn.com/bao/uploaded/2217982279826/O1CN01RQKTQy2MSMo3JDFCw_!!2217982279826.jpg",
-     "width": 1000,
-     "height": 1000,
+     "position": 1,
+     "src": "/products/primary-10297129140554.jpg",
+     "width": 800,
+     "height": 800,
      "alt": "WP Dyed Series Fingerboard Complete — Handmade Maple — Fingerboard Lab"
     },
     {
      "id": 1029712914055402,
      "product_id": 10297129140554,
-     "position": 3,
+     "position": 2,
      "src": "https://img.alicdn.com/bao/uploaded/2217982279826/O1CN01D004fk2MSMo3yIzbo_!!2217982279826.jpg",
      "width": 999,
      "height": 999,
@@ -754,7 +589,7 @@
     {
      "id": 1029712914055403,
      "product_id": 10297129140554,
-     "position": 4,
+     "position": 3,
      "src": "https://img.alicdn.com/bao/uploaded/2217982279826/O1CN01lN2MFb2MSMo4jxTz8_!!2217982279826.jpg",
      "width": 1000,
      "height": 1000,
@@ -763,7 +598,7 @@
     {
      "id": 1029712914055404,
      "product_id": 10297129140554,
-     "position": 5,
+     "position": 4,
      "src": "https://img.alicdn.com/bao/uploaded/2217982279826/O1CN019gBvrp2MSMo53Gtgz_!!2217982279826.jpg",
      "width": 1000,
      "height": 1000,
@@ -771,12 +606,12 @@
     }
    ],
    "image": {
-    "id": 1029712914055400,
+    "id": 1029712914055401,
     "product_id": 10297129140554,
     "position": 1,
-    "src": "/products/completes-938296095893-1.jpg",
-    "width": 1000,
-    "height": 1000,
+    "src": "/products/primary-10297129140554.jpg",
+    "width": 800,
+    "height": 800,
     "alt": "WP Dyed Series Fingerboard Complete — Handmade Maple — Fingerboard Lab"
    }
   },
@@ -1810,19 +1645,10 @@
    ],
    "images": [
     {
-     "id": 1029712914055800,
-     "product_id": 10297129140558,
-     "position": 1,
-     "src": "/products/completes-946982814217-1.jpg",
-     "width": 743,
-     "height": 999,
-     "alt": "32mm Colour-Laminated Fingerboard Complete — Maple, Single Axle — Fingerboard Lab"
-    },
-    {
      "id": 1029712914055801,
      "product_id": 10297129140558,
-     "position": 2,
-     "src": "https://cbu01.alicdn.com/img/ibank/O1CN0156tFZU1KudrBxYLdE_!!4151531224-0-cib.jpg",
+     "position": 1,
+     "src": "/products/primary-10297129140558.jpg",
      "width": 552,
      "height": 736,
      "alt": "32mm Colour-Laminated Fingerboard Complete — Maple, Single Axle — Fingerboard Lab"
@@ -1830,7 +1656,7 @@
     {
      "id": 1029712914055802,
      "product_id": 10297129140558,
-     "position": 3,
+     "position": 2,
      "src": "https://cbu01.alicdn.com/img/ibank/O1CN01caDD711KudrCY3SVO_!!4151531224-0-cib.jpg",
      "width": 546,
      "height": 728,
@@ -1839,7 +1665,7 @@
     {
      "id": 1029712914055803,
      "product_id": 10297129140558,
-     "position": 4,
+     "position": 3,
      "src": "https://cbu01.alicdn.com/img/ibank/O1CN01DwmaQM1KudrCtX8Eb_!!4151531224-0-cib.jpg",
      "width": 681,
      "height": 908,
@@ -1848,7 +1674,7 @@
     {
      "id": 1029712914055804,
      "product_id": 10297129140558,
-     "position": 5,
+     "position": 4,
      "src": "https://cbu01.alicdn.com/img/ibank/O1CN01Oer5vB1KudrAgdIOE_!!4151531224-0-cib.jpg",
      "width": 600,
      "height": 800,
@@ -1856,12 +1682,12 @@
     }
    ],
    "image": {
-    "id": 1029712914055800,
+    "id": 1029712914055801,
     "product_id": 10297129140558,
     "position": 1,
-    "src": "/products/completes-946982814217-1.jpg",
-    "width": 743,
-    "height": 999,
+    "src": "/products/primary-10297129140558.jpg",
+    "width": 552,
+    "height": 736,
     "alt": "32mm Colour-Laminated Fingerboard Complete — Maple, Single Axle — Fingerboard Lab"
    }
   },
@@ -2134,18 +1960,9 @@
      "alt": "DTzero 1.4 Series Pro Fingerboard Complete — Maple — Fingerboard Lab"
     },
     {
-     "id": 1029712914056402,
-     "product_id": 10297129140564,
-     "position": 3,
-     "src": "https://img.alicdn.com/bao/uploaded/406006991/O1CN01WYWj7v21VvnxP6qvT_!!406006991.jpg",
-     "width": 800,
-     "height": 800,
-     "alt": "DTzero 1.4 Series Pro Fingerboard Complete — Maple — Fingerboard Lab"
-    },
-    {
      "id": 1029712914056403,
      "product_id": 10297129140564,
-     "position": 4,
+     "position": 3,
      "src": "https://img.alicdn.com/bao/uploaded/406006991/O1CN01KTNTl821VvnwOHiF4_!!406006991.jpg",
      "width": 800,
      "height": 800,
@@ -2154,7 +1971,7 @@
     {
      "id": 1029712914056404,
      "product_id": 10297129140564,
-     "position": 5,
+     "position": 4,
      "src": "https://img.alicdn.com/bao/uploaded/406006991/O1CN01YDbXHs21VvnzIOawO_!!406006991.jpg",
      "width": 800,
      "height": 800,
@@ -4309,27 +4126,9 @@
      "alt": "34mm Fingerboard Complete — Maple, Wide Trucks, Bearing Wheels — Fingerboard Lab"
     },
     {
-     "id": 1029712914055102,
-     "product_id": 10297129140551,
-     "position": 3,
-     "src": "https://img.alicdn.com/bao/uploaded/2210875383406/O1CN01uRva8V1b208g5pJbm_!!2210875383406.jpg",
-     "width": 800,
-     "height": 800,
-     "alt": "34mm Fingerboard Complete — Maple, Wide Trucks, Bearing Wheels — Fingerboard Lab"
-    },
-    {
-     "id": 1029712914055103,
-     "product_id": 10297129140551,
-     "position": 4,
-     "src": "https://img.alicdn.com/bao/uploaded/2210875383406/O1CN01Krg2Pi1b208eYRyTl_!!2210875383406.jpg",
-     "width": 800,
-     "height": 800,
-     "alt": "34mm Fingerboard Complete — Maple, Wide Trucks, Bearing Wheels — Fingerboard Lab"
-    },
-    {
      "id": 1029712914055104,
      "product_id": 10297129140551,
-     "position": 5,
+     "position": 3,
      "src": "https://img.alicdn.com/bao/uploaded/2210875383406/O1CN01P9wWo61b208el3Apk_!!2210875383406.jpg",
      "width": 800,
      "height": 800,
@@ -6889,19 +6688,10 @@
    ],
    "images": [
     {
-     "id": 1029712914056200,
-     "product_id": 10297129140562,
-     "position": 1,
-     "src": "/products/completes-728303357945-1.jpg",
-     "width": 800,
-     "height": 800,
-     "alt": "BM Collab Fingerboard Complete — Pro Maple — Fingerboard Lab"
-    },
-    {
      "id": 1029712914056201,
      "product_id": 10297129140562,
-     "position": 2,
-     "src": "https://img.alicdn.com/bao/uploaded/45603829/O1CN01yDUV6o1e9jSK3SUyy_!!45603829.jpg",
+     "position": 1,
+     "src": "/products/primary-10297129140562.jpg",
      "width": 800,
      "height": 800,
      "alt": "BM Collab Fingerboard Complete — Pro Maple — Fingerboard Lab"
@@ -6909,7 +6699,7 @@
     {
      "id": 1029712914056202,
      "product_id": 10297129140562,
-     "position": 3,
+     "position": 2,
      "src": "https://img.alicdn.com/bao/uploaded/45603829/O1CN01PruXD11e9jSRzvtoJ_!!45603829.jpg",
      "width": 800,
      "height": 800,
@@ -6918,7 +6708,7 @@
     {
      "id": 1029712914056203,
      "product_id": 10297129140562,
-     "position": 4,
+     "position": 3,
      "src": "https://img.alicdn.com/bao/uploaded/45603829/O1CN01yqude21e9jSPeGqOr_!!45603829.jpg",
      "width": 800,
      "height": 800,
@@ -6927,7 +6717,7 @@
     {
      "id": 1029712914056204,
      "product_id": 10297129140562,
-     "position": 5,
+     "position": 4,
      "src": "https://img.alicdn.com/bao/uploaded/45603829/O1CN01jIeTGr1e9jSUWRbF4_!!45603829.jpg",
      "width": 800,
      "height": 800,
@@ -6935,13 +6725,13 @@
     }
    ],
    "image": {
-    "id": 1029712914056200,
+    "id": 1029712914056201,
     "product_id": 10297129140562,
     "position": 1,
-    "src": "/products/completes-728303357945-1.jpg",
+    "src": "/products/primary-10297129140562.jpg",
     "width": 800,
     "height": 800,
-    "alt": "BM x 翻 Team Collab Fingerboard Complete — Pro Maple — Fingerboard Lab"
+    "alt": "BM Collab Fingerboard Complete — Pro Maple — Fingerboard Lab"
    }
   },
   {
@@ -6991,59 +6781,23 @@
    ],
    "images": [
     {
-     "id": 1029712914055000,
-     "product_id": 10297129140550,
-     "position": 1,
-     "src": "/products/completes-667383669639-1.jpg",
-     "width": 800,
-     "height": 800,
-     "alt": "BlackMarket Collab Fingerboard Complete — Pro Maple — Fingerboard Lab"
-    },
-    {
-     "id": 1029712914055001,
-     "product_id": 10297129140550,
-     "position": 2,
-     "src": "https://img.alicdn.com/bao/uploaded/2208998319270/O1CN01Wm3Nuq2ILiGTLlV8j_!!2208998319270.jpg",
-     "width": 800,
-     "height": 800,
-     "alt": "BlackMarket Collab Fingerboard Complete — Pro Maple — Fingerboard Lab"
-    },
-    {
-     "id": 1029712914055002,
-     "product_id": 10297129140550,
-     "position": 3,
-     "src": "https://img.alicdn.com/bao/uploaded/2208998319270/O1CN01LG2Vcy2ILiGRnon1v_!!2208998319270.jpg",
-     "width": 800,
-     "height": 800,
-     "alt": "BlackMarket Collab Fingerboard Complete — Pro Maple — Fingerboard Lab"
-    },
-    {
-     "id": 1029712914055003,
-     "product_id": 10297129140550,
-     "position": 4,
-     "src": "https://img.alicdn.com/bao/uploaded/2208998319270/O1CN01sbLyle2ILiGRnoisR_!!2208998319270.jpg",
-     "width": 800,
-     "height": 800,
-     "alt": "BlackMarket Collab Fingerboard Complete — Pro Maple — Fingerboard Lab"
-    },
-    {
      "id": 1029712914055004,
      "product_id": 10297129140550,
-     "position": 5,
-     "src": "https://img.alicdn.com/bao/uploaded/2208998319270/O1CN01urwf9R2ILiIbzvq58_!!2208998319270.jpg",
-     "width": 808,
-     "height": 800,
+     "position": 1,
+     "src": "/products/primary-10297129140550.jpg",
+     "width": 800,
+     "height": 792,
      "alt": "BlackMarket Collab Fingerboard Complete — Pro Maple — Fingerboard Lab"
     }
    ],
    "image": {
-    "id": 1029712914055000,
+    "id": 1029712914055004,
     "product_id": 10297129140550,
     "position": 1,
-    "src": "/products/completes-667383669639-1.jpg",
+    "src": "/products/primary-10297129140550.jpg",
     "width": 800,
-    "height": 800,
-    "alt": "BlackMarket x 翻 Team Collab Fingerboard Complete — Pro Maple — Fingerboard Lab"
+    "height": 792,
+    "alt": "BlackMarket Collab Fingerboard Complete — Pro Maple — Fingerboard Lab"
    }
   },
   {
@@ -9925,72 +9679,6 @@
    }
   },
   {
-   "id": 10297129140582,
-   "title": "WP Seconds Blind-Box Deck — Medium Concave, Maple, Double Kick",
-   "body_html": "<p>WP's seconds blind-box deck ships with minor cosmetic imperfections — the kind of small finish variations that don't affect how the deck skates but do bring the price down considerably. The maple construction, medium concave and double-kick shape are the same spec as WP's mainline decks.</p><p><strong>Why this one</strong></p><ul><li>Blind-box format — the specific graphic or colourway is a surprise; that's part of the appeal</li><li>Cosmetically imperfect — minor finish variations from WP's quality-check process, not structural defects</li><li>Same maple construction as WP's regular decks — the concave and shape are unaffected</li><li>Medium concave sits comfortably between flat and deep — accessible for most riding styles</li><li>Double-kick shape for nose and tail trick versatility</li><li>Deck only — build it your way</li></ul><p><strong>Specifications</strong></p><table><tbody><tr><td><strong>Brand</strong></td><td>WP</td></tr><tr><td><strong>Deck material</strong></td><td>Maple</td></tr><tr><td><strong>Concave</strong></td><td>Medium</td></tr><tr><td><strong>Shape</strong></td><td>Double kick</td></tr><tr><td><strong>Condition</strong></td><td>Cosmetic seconds — minor imperfections</td></tr><tr><td><strong>Format</strong></td><td>Blind box — graphic/colourway not specified</td></tr><tr><td><strong>What's included</strong></td><td>Deck only (no trucks, wheels or grip)</td></tr></tbody></table><p><strong>Who it suits</strong></p><p>Budget-conscious builders who want WP maple quality without paying full price, and riders who enjoy the blind-box surprise element. Worth noting: these are cosmetic seconds, not structural rejects — the concave and shape are intact.</p><p><em>Hand-picked and quality-checked before dispatch. Free sticker sheet in every box, and 30-day returns if it is not right for you.</em></p>",
-   "vendor": "Fingerboard Lab",
-   "product_type": "Decks",
-   "handle": "wp-seconds-blind-box-deck-medium-concave-maple-double-kick",
-   "created_at": "2026-08-07T15:00:00+02:00",
-   "updated_at": "2026-08-07T15:00:00+02:00",
-   "published_at": "2026-08-07T15:00:00+02:00",
-   "template_suffix": null,
-   "published_scope": "web",
-   "tags": "WP, blind box, seconds, medium concave, maple, double kick, deck only, budget deck",
-   "status": "active",
-   "seo_title": "WP Seconds Blind-Box Maple Deck — Medium Concave",
-   "seo_description": "WP cosmetic-seconds blind-box fingerboard deck. Maple, medium concave, double kick. Minor finish imperfections only. Deck only — surprise graphic.",
-   "variants": [
-    {
-     "id": 52930359165288,
-     "product_id": 10297129140582,
-     "title": "Default Title",
-     "price": "20.95",
-     "compare_at_price": null,
-     "position": 1,
-     "option1": "Default Title",
-     "inventory_policy": "continue",
-     "taxable": false,
-     "sku": "FL-10297129140582",
-     "requires_shipping": true,
-     "available": true,
-     "inventory_quantity": 8,
-     "weight": 0.15,
-     "weight_unit": "kg"
-    }
-   ],
-   "options": [
-    {
-     "id": 102971291405820,
-     "name": "Option",
-     "position": 1,
-     "values": [
-      "Default Title"
-     ]
-    }
-   ],
-   "images": [
-    {
-     "id": 1029712914058200,
-     "product_id": 10297129140582,
-     "position": 1,
-     "src": "/products/decks-1070520648256-1.jpg",
-     "width": 1000,
-     "height": 1000,
-     "alt": "WP Seconds Blind-Box Deck — Medium Concave, Maple, Double Kick — Fingerboard Lab"
-    }
-   ],
-   "image": {
-    "id": 1029712914058200,
-    "product_id": 10297129140582,
-    "position": 1,
-    "src": "/products/decks-1070520648256-1.jpg",
-    "width": 1000,
-    "height": 1000,
-    "alt": "WP Seconds Blind-Box Deck — Medium Concave, Maple, Double Kick — Fingerboard Lab"
-   }
-  },
-  {
    "id": 10297129140578,
    "title": "32mm Colour-Laminated Maple Deck — Rounded Edges — Pack of 3",
    "body_html": "<p>Three 32mm maple decks with dual-face colour laminate and rounded edges in one pack — the rounded-edge finish removes the sharp bite of fresh-cut veneers and gives the deck a more finished, comfortable feel straight away. The colour runs through the wood layers on both faces, not just the top.</p><p><strong>Why this one</strong></p><ul><li>Pack of 3 decks — three boards to build, customise or keep as blanks</li><li>32mm width for the tighter, more responsive feel of the narrower pro fingerboard standard</li><li>Dual-face colour laminate — colour is in the maple veneers, not a surface print</li><li>Rounded edges for a smoother hand feel and a more finished look from the start</li><li>Maple construction throughout for real board feel and snap</li><li>Deck only — choose and fit your own trucks, wheels and grip</li></ul><p><strong>Specifications</strong></p><table><tbody><tr><td><strong>Pack size</strong></td><td>3 decks</td></tr><tr><td><strong>Width</strong></td><td>32mm</td></tr><tr><td><strong>Deck material</strong></td><td>Maple</td></tr><tr><td><strong>Deck finish</strong></td><td>Dual-face colour laminate</td></tr><tr><td><strong>Edge finish</strong></td><td>Rounded edges</td></tr><tr><td><strong>What's included</strong></td><td>3 bare decks (no trucks, wheels or grip)</td></tr></tbody></table><p><strong>Choosing your option</strong></p><p>Supplied as a pack of 3.</p><p><strong>Who it suits</strong></p><p>Builders who want multiple 32mm blanks for custom setups, grip experiments or keeping spares. The rounded edges and colour-laminate finish mean these are more than raw blanks — they're ready to build on without further prep.</p><p><em>Hand-picked and quality-checked before dispatch. Free sticker sheet in every box, and 30-day returns if it is not right for you.</em></p>",
@@ -10055,18 +9743,9 @@
      "alt": "32mm Colour-Laminated Maple Deck — Rounded Edges — Pack of 3 — Fingerboard Lab"
     },
     {
-     "id": 1029712914057802,
-     "product_id": 10297129140578,
-     "position": 3,
-     "src": "https://cbu01.alicdn.com/img/ibank/O1CN01P61gDx2MtOBvq0Unx_!!1643279885-0-cib.jpg",
-     "width": 800,
-     "height": 800,
-     "alt": "32mm Colour-Laminated Maple Deck — Rounded Edges — Pack of 3 — Fingerboard Lab"
-    },
-    {
      "id": 1029712914057803,
      "product_id": 10297129140578,
-     "position": 4,
+     "position": 3,
      "src": "https://cbu01.alicdn.com/img/ibank/O1CN01DGq9Ng2MtOBuhV56M_!!1643279885-0-cib.jpg",
      "width": 800,
      "height": 800,
@@ -10075,7 +9754,7 @@
     {
      "id": 1029712914057804,
      "product_id": 10297129140578,
-     "position": 5,
+     "position": 4,
      "src": "https://cbu01.alicdn.com/img/ibank/O1CN01DmpvNT2MtOBvpzQGN_!!1643279885-0-cib.jpg",
      "width": 800,
      "height": 800,
@@ -10090,72 +9769,6 @@
     "width": 800,
     "height": 800,
     "alt": "32mm Colour-Laminated Maple Deck — Rounded Edges — Pack of 3 — Fingerboard Lab"
-   }
-  },
-  {
-   "id": 10297129140586,
-   "title": "DSG Boxy Shape Blank Deck — 5-Ply Maple, Medium-Shallow Concave",
-   "body_html": "<p>DSG's Boxy shape is a distinct deck geometry — squarer nose and tail than the typical tapered fingerboard outline — and this blank ships with a gloss lacquer finish over 5-ply maple so it's ready to grip and build without any additional prep. The medium-shallow concave sits at an accessible depth: more feel than a completely flat deck, without the extreme cup of a deep concave.</p><p><strong>Why this one</strong></p><ul><li>DSG Boxy shape — a squarer, boxier outline than standard fingerboard taper for a different feel underfoot</li><li>5-ply maple construction for the stiffness and snap the shape demands</li><li>Medium-shallow concave: more feel than flat, less extreme than deep — suits a wide range of riding styles</li><li>Smooth gloss lacquer finish straight from the factory — grip and go</li><li>Blank deck — no graphic, clean for custom treatment or grip direct</li><li>Deck only — build it with your choice of trucks and wheels</li></ul><p><strong>Specifications</strong></p><table><tbody><tr><td><strong>Brand</strong></td><td>DSG</td></tr><tr><td><strong>Shape</strong></td><td>Boxy</td></tr><tr><td><strong>Deck material</strong></td><td>5-ply maple</td></tr><tr><td><strong>Concave</strong></td><td>Medium-shallow</td></tr><tr><td><strong>Deck finish</strong></td><td>Smooth gloss lacquer, blank</td></tr><tr><td><strong>What's included</strong></td><td>Deck only (no trucks, wheels or grip)</td></tr></tbody></table><p><strong>Who it suits</strong></p><p>Riders and builders who want the DSG Boxy shape specifically — its squarer outline produces a noticeably different feel from standard tapered decks. The medium-shallow concave keeps it accessible whether you skate street or park. Choose a deeper concave option if you specifically want the locked-in flip-trick feel.</p><p><em>Hand-picked and quality-checked before dispatch. Free sticker sheet in every box, and 30-day returns if it is not right for you.</em></p>",
-   "vendor": "Fingerboard Lab",
-   "product_type": "Decks",
-   "handle": "dsg-boxy-shape-blank-deck-5-ply-maple-medium-shallow-concave",
-   "created_at": "2026-08-07T15:00:00+02:00",
-   "updated_at": "2026-08-07T15:00:00+02:00",
-   "published_at": "2026-08-07T15:00:00+02:00",
-   "template_suffix": null,
-   "published_scope": "web",
-   "tags": "DSG, Boxy shape, 5-ply maple, medium-shallow concave, blank deck, gloss lacquer, deck only, fingerboard deck",
-   "status": "active",
-   "seo_title": "DSG Boxy Shape Fingerboard Deck — 5-Ply Maple, Blank",
-   "seo_description": "DSG Boxy shape fingerboard deck. 5-ply maple, medium-shallow concave, smooth gloss lacquer blank finish. Squarer outline for a distinct feel. Deck only.",
-   "variants": [
-    {
-     "id": 52930359165292,
-     "product_id": 10297129140586,
-     "title": "Default Title",
-     "price": "22.95",
-     "compare_at_price": null,
-     "position": 1,
-     "option1": "Default Title",
-     "inventory_policy": "continue",
-     "taxable": false,
-     "sku": "FL-10297129140586",
-     "requires_shipping": true,
-     "available": true,
-     "inventory_quantity": 8,
-     "weight": 0.05,
-     "weight_unit": "kg"
-    }
-   ],
-   "options": [
-    {
-     "id": 102971291405860,
-     "name": "Option",
-     "position": 1,
-     "values": [
-      "Default Title"
-     ]
-    }
-   ],
-   "images": [
-    {
-     "id": 1029712914058600,
-     "product_id": 10297129140586,
-     "position": 1,
-     "src": "/products/decks-3763601170770297304-1.jpg",
-     "width": 800,
-     "height": 800,
-     "alt": "DSG Boxy Shape Blank Deck — 5-Ply Maple, Medium-Shallow Concave — Fingerboard Lab"
-    }
-   ],
-   "image": {
-    "id": 1029712914058600,
-    "product_id": 10297129140586,
-    "position": 1,
-    "src": "/products/decks-3763601170770297304-1.jpg",
-    "width": 800,
-    "height": 800,
-    "alt": "DSG Boxy Shape Blank Deck — 5-Ply Maple, Medium-Shallow Concave — Fingerboard Lab"
    }
   },
   {
@@ -10205,19 +9818,10 @@
    ],
    "images": [
     {
-     "id": 1029712914058500,
-     "product_id": 10297129140585,
-     "position": 1,
-     "src": "/products/decks-939202629601-1.jpg",
-     "width": 800,
-     "height": 800,
-     "alt": "34mm Colour-Laminated Maple Deck — Rounded Edges — Pack of 2 — Fingerboard Lab"
-    },
-    {
      "id": 1029712914058501,
      "product_id": 10297129140585,
-     "position": 2,
-     "src": "https://cbu01.alicdn.com/img/ibank/O1CN01r8SjGv1KudqdWvZER_!!4151531224-0-cib.jpg",
+     "position": 1,
+     "src": "/products/primary-10297129140585.jpg",
      "width": 800,
      "height": 800,
      "alt": "34mm Colour-Laminated Maple Deck — Rounded Edges — Pack of 2 — Fingerboard Lab"
@@ -10225,7 +9829,7 @@
     {
      "id": 1029712914058502,
      "product_id": 10297129140585,
-     "position": 3,
+     "position": 2,
      "src": "https://cbu01.alicdn.com/img/ibank/O1CN01sfFWB71KudqfDvToA_!!4151531224-0-cib.jpg",
      "width": 800,
      "height": 800,
@@ -10234,7 +9838,7 @@
     {
      "id": 1029712914058503,
      "product_id": 10297129140585,
-     "position": 4,
+     "position": 3,
      "src": "https://cbu01.alicdn.com/img/ibank/O1CN012QeLVd1Kudqfr67SJ_!!4151531224-0-cib.jpg",
      "width": 800,
      "height": 800,
@@ -10243,7 +9847,7 @@
     {
      "id": 1029712914058504,
      "product_id": 10297129140585,
-     "position": 5,
+     "position": 4,
      "src": "https://cbu01.alicdn.com/img/ibank/O1CN01ZvHLY41KudqfwjqZG_!!4151531224-0-cib.jpg",
      "width": 800,
      "height": 800,
@@ -10251,79 +9855,13 @@
     }
    ],
    "image": {
-    "id": 1029712914058500,
+    "id": 1029712914058501,
     "product_id": 10297129140585,
     "position": 1,
-    "src": "/products/decks-939202629601-1.jpg",
+    "src": "/products/primary-10297129140585.jpg",
     "width": 800,
     "height": 800,
     "alt": "34mm Colour-Laminated Maple Deck — Rounded Edges — Pack of 2 — Fingerboard Lab"
-   }
-  },
-  {
-   "id": 10297129140581,
-   "title": "WP 28mm Blank Deck — Pro Maple, Medium Concave, Double Kick",
-   "body_html": "<p>At 28mm wide this WP blank is noticeably narrower than the 32–34mm pro standard — a deliberate choice that produces a more sensitive, flick-responsive feel for technically minded riders. Medium concave gives it a comfortable middle ground between flat and deeply locked-in.</p><p><strong>Why this one</strong></p><ul><li>28mm width — narrower than standard pro boards for a sharper, more sensitive flip-trick response</li><li>Medium concave sits between flat and deep — locked in enough for tech tricks without the extreme cup of a deep-concave deck</li><li>Maple construction for real snap and feel</li><li>Blank deck with clean unfinished face — apply your own graphic or grip treatment</li><li>Double-kick shape for nose and tail versatility</li><li>From the WP brand — consistently shaped and finished across their blank range</li></ul><p><strong>Specifications</strong></p><table><tbody><tr><td><strong>Brand</strong></td><td>WP</td></tr><tr><td><strong>Width</strong></td><td>28mm</td></tr><tr><td><strong>Deck material</strong></td><td>Maple</td></tr><tr><td><strong>Concave</strong></td><td>Medium</td></tr><tr><td><strong>Shape</strong></td><td>Double kick</td></tr><tr><td><strong>Deck finish</strong></td><td>Blank / unfinished</td></tr><tr><td><strong>What's included</strong></td><td>Deck only (no trucks, wheels or grip)</td></tr></tbody></table><p><strong>Who it suits</strong></p><p>Technically focused riders who want the extra sensitivity of a narrower 28mm profile, and builders who want a WP blank as the base for a custom setup. Choose this over a 32mm deck if you already know you prefer a tighter, quicker-flicking board.</p><p><em>Hand-picked and quality-checked before dispatch. Free sticker sheet in every box, and 30-day returns if it is not right for you.</em></p>",
-   "vendor": "Fingerboard Lab",
-   "product_type": "Decks",
-   "handle": "wp-28mm-blank-deck-pro-maple-medium-concave-double-kick",
-   "created_at": "2026-08-07T15:00:00+02:00",
-   "updated_at": "2026-08-07T15:00:00+02:00",
-   "published_at": "2026-08-07T15:00:00+02:00",
-   "template_suffix": null,
-   "published_scope": "web",
-   "tags": "WP, 28mm, medium concave, maple, blank deck, double kick, narrow fingerboard, deck only",
-   "status": "active",
-   "seo_title": "WP 28mm Blank Fingerboard Deck — Medium Concave",
-   "seo_description": "WP 28mm blank maple fingerboard deck. Medium concave, double kick. Narrower than standard for a more flick-sensitive feel. Deck only, unfinished face.",
-   "variants": [
-    {
-     "id": 52930359165287,
-     "product_id": 10297129140581,
-     "title": "Default Title",
-     "price": "23.95",
-     "compare_at_price": null,
-     "position": 1,
-     "option1": "Default Title",
-     "inventory_policy": "continue",
-     "taxable": false,
-     "sku": "FL-10297129140581",
-     "requires_shipping": true,
-     "available": true,
-     "inventory_quantity": 8,
-     "weight": 0.15,
-     "weight_unit": "kg"
-    }
-   ],
-   "options": [
-    {
-     "id": 102971291405810,
-     "name": "Option",
-     "position": 1,
-     "values": [
-      "Default Title"
-     ]
-    }
-   ],
-   "images": [
-    {
-     "id": 1029712914058100,
-     "product_id": 10297129140581,
-     "position": 1,
-     "src": "/products/decks-1058117876030-1.jpg",
-     "width": 1000,
-     "height": 1000,
-     "alt": "WP 28mm Blank Deck — Pro Maple, Medium Concave, Double Kick — Fingerboard Lab"
-    }
-   ],
-   "image": {
-    "id": 1029712914058100,
-    "product_id": 10297129140581,
-    "position": 1,
-    "src": "/products/decks-1058117876030-1.jpg",
-    "width": 1000,
-    "height": 1000,
-    "alt": "WP 28mm Blank Deck — Pro Maple, Medium Concave, Double Kick — Fingerboard Lab"
    }
   },
   {
@@ -10391,28 +9929,10 @@
    ],
    "images": [
     {
-     "id": 1029712914058700,
-     "product_id": 10297129140587,
-     "position": 1,
-     "src": "/products/decks-848401873388-1.jpg",
-     "width": 855,
-     "height": 855,
-     "alt": "32mm / 34mm Colour-Laminated Maple Deck — Handmade — Pack of 2 — Fingerboard Lab"
-    },
-    {
-     "id": 1029712914058701,
-     "product_id": 10297129140587,
-     "position": 2,
-     "src": "https://cbu01.alicdn.com/img/ibank/O1CN01cbXnvg1KudqPhdhFn_!!4151531224-0-cib.jpg",
-     "width": 1000,
-     "height": 1000,
-     "alt": "32mm / 34mm Colour-Laminated Maple Deck — Handmade — Pack of 2 — Fingerboard Lab"
-    },
-    {
      "id": 1029712914058702,
      "product_id": 10297129140587,
-     "position": 3,
-     "src": "https://cbu01.alicdn.com/img/ibank/O1CN018PwuPu1KudmzXJvug_!!4151531224-0-cib.jpg",
+     "position": 1,
+     "src": "/products/primary-10297129140587.jpg",
      "width": 800,
      "height": 800,
      "alt": "32mm / 34mm Colour-Laminated Maple Deck — Handmade — Pack of 2 — Fingerboard Lab"
@@ -10420,7 +9940,7 @@
     {
      "id": 1029712914058703,
      "product_id": 10297129140587,
-     "position": 4,
+     "position": 2,
      "src": "https://cbu01.alicdn.com/img/ibank/O1CN01OMfPZ21Kudmv4YLEN_!!4151531224-0-cib.jpg",
      "width": 800,
      "height": 800,
@@ -10429,7 +9949,7 @@
     {
      "id": 1029712914058704,
      "product_id": 10297129140587,
-     "position": 5,
+     "position": 3,
      "src": "https://cbu01.alicdn.com/img/ibank/O1CN01hXAztE1KudmxJXOPH_!!4151531224-0-cib.jpg",
      "width": 800,
      "height": 800,
@@ -10437,12 +9957,12 @@
     }
    ],
    "image": {
-    "id": 1029712914058700,
+    "id": 1029712914058702,
     "product_id": 10297129140587,
     "position": 1,
-    "src": "/products/decks-848401873388-1.jpg",
-    "width": 855,
-    "height": 855,
+    "src": "/products/primary-10297129140587.jpg",
+    "width": 800,
+    "height": 800,
     "alt": "32mm / 34mm Colour-Laminated Maple Deck — Handmade — Pack of 2 — Fingerboard Lab"
    }
   },
@@ -10595,28 +10115,10 @@
    ],
    "images": [
     {
-     "id": 1029712914058000,
-     "product_id": 10297129140580,
-     "position": 1,
-     "src": "/products/decks-742106588857-1.jpg",
-     "width": 800,
-     "height": 800,
-     "alt": "34mm 5-Ply Northeast Maple Dyed Deck — Double Kick — Pack of 2 — Fingerboard Lab"
-    },
-    {
-     "id": 1029712914058001,
-     "product_id": 10297129140580,
-     "position": 2,
-     "src": "https://cbu01.alicdn.com/img/ibank/O1CN01Z9h1aZ22bG0AhFi3v_!!2216605437138-0-cib.jpg",
-     "width": 800,
-     "height": 800,
-     "alt": "34mm 5-Ply Northeast Maple Dyed Deck — Double Kick — Pack of 2 — Fingerboard Lab"
-    },
-    {
      "id": 1029712914058002,
      "product_id": 10297129140580,
-     "position": 3,
-     "src": "https://cbu01.alicdn.com/img/ibank/O1CN01vqMSE922bG0Dl1Qc9_!!2216605437138-0-cib.jpg",
+     "position": 1,
+     "src": "/products/primary-10297129140580.jpg",
      "width": 800,
      "height": 800,
      "alt": "34mm 5-Ply Northeast Maple Dyed Deck — Double Kick — Pack of 2 — Fingerboard Lab"
@@ -10624,7 +10126,7 @@
     {
      "id": 1029712914058003,
      "product_id": 10297129140580,
-     "position": 4,
+     "position": 2,
      "src": "https://cbu01.alicdn.com/img/ibank/O1CN01PRzHs022bG0ClEGZs_!!2216605437138-0-cib.jpg",
      "width": 800,
      "height": 800,
@@ -10633,7 +10135,7 @@
     {
      "id": 1029712914058004,
      "product_id": 10297129140580,
-     "position": 5,
+     "position": 3,
      "src": "https://cbu01.alicdn.com/img/ibank/O1CN01eTi54122bG0FqtCs5_!!2216605437138-0-cib.jpg",
      "width": 800,
      "height": 800,
@@ -10641,10 +10143,10 @@
     }
    ],
    "image": {
-    "id": 1029712914058000,
+    "id": 1029712914058002,
     "product_id": 10297129140580,
     "position": 1,
-    "src": "/products/decks-742106588857-1.jpg",
+    "src": "/products/primary-10297129140580.jpg",
     "width": 800,
     "height": 800,
     "alt": "34mm 5-Ply Northeast Maple Dyed Deck — Double Kick — Pack of 2 — Fingerboard Lab"
@@ -12873,28 +12375,10 @@
    ],
    "images": [
     {
-     "id": 1029712914057900,
-     "product_id": 10297129140579,
-     "position": 1,
-     "src": "/products/decks-798745961990-1.jpg",
-     "width": 800,
-     "height": 800,
-     "alt": "DSG Logo Deck — Laser-Etched, Deep Concave, Pro Maple — Fingerboard Lab"
-    },
-    {
-     "id": 1029712914057901,
-     "product_id": 10297129140579,
-     "position": 2,
-     "src": "https://img.alicdn.com/bao/uploaded/45603829/O1CN01KCWERa1e9jUggLtxr_!!45603829.jpg",
-     "width": 800,
-     "height": 800,
-     "alt": "DSG Logo Deck — Laser-Etched, Deep Concave, Pro Maple — Fingerboard Lab"
-    },
-    {
      "id": 1029712914057902,
      "product_id": 10297129140579,
-     "position": 3,
-     "src": "https://img.alicdn.com/bao/uploaded/45603829/O1CN01J3yAtA1e9jUkc7hI4_!!45603829.jpg",
+     "position": 1,
+     "src": "/products/primary-10297129140579.jpg",
      "width": 800,
      "height": 800,
      "alt": "DSG Logo Deck — Laser-Etched, Deep Concave, Pro Maple — Fingerboard Lab"
@@ -12902,7 +12386,7 @@
     {
      "id": 1029712914057903,
      "product_id": 10297129140579,
-     "position": 4,
+     "position": 2,
      "src": "https://img.alicdn.com/bao/uploaded/45603829/O1CN01KNtPlq1e9jUiv044X_!!45603829.jpg",
      "width": 800,
      "height": 800,
@@ -12911,7 +12395,7 @@
     {
      "id": 1029712914057904,
      "product_id": 10297129140579,
-     "position": 5,
+     "position": 3,
      "src": "https://img.alicdn.com/bao/uploaded/45603829/O1CN01YKDYmo1e9jUmWStbt_!!45603829.jpg",
      "width": 800,
      "height": 800,
@@ -12919,10 +12403,10 @@
     }
    ],
    "image": {
-    "id": 1029712914057900,
+    "id": 1029712914057902,
     "product_id": 10297129140579,
     "position": 1,
-    "src": "/products/decks-798745961990-1.jpg",
+    "src": "/products/primary-10297129140579.jpg",
     "width": 800,
     "height": 800,
     "alt": "DSG Logo Deck — Laser-Etched, Deep Concave, Pro Maple — Fingerboard Lab"
@@ -19269,56 +18753,20 @@
    ],
    "images": [
     {
-     "id": 1029712914061000,
-     "product_id": 10297129140610,
-     "position": 1,
-     "src": "/products/wheels-816136398685-1.jpg",
-     "width": 800,
-     "height": 800,
-     "alt": "DSG Fingerboard Wheels — Wide Tyre, Anti-Slip, No-Resistance — Fingerboard Lab"
-    },
-    {
-     "id": 1029712914061001,
-     "product_id": 10297129140610,
-     "position": 2,
-     "src": "https://img.alicdn.com/bao/uploaded/45603829/O1CN01ebrjEA1e9jVb8QkBa_!!45603829.jpg",
-     "width": 800,
-     "height": 800,
-     "alt": "DSG Fingerboard Wheels — Wide Tyre, Anti-Slip, No-Resistance — Fingerboard Lab"
-    },
-    {
      "id": 1029712914061002,
      "product_id": 10297129140610,
-     "position": 3,
-     "src": "https://img.alicdn.com/bao/uploaded/45603829/O1CN013xTybH1e9jVZ6wJmz_!!45603829.jpg",
-     "width": 800,
-     "height": 800,
-     "alt": "DSG Fingerboard Wheels — Wide Tyre, Anti-Slip, No-Resistance — Fingerboard Lab"
-    },
-    {
-     "id": 1029712914061003,
-     "product_id": 10297129140610,
-     "position": 4,
-     "src": "https://img.alicdn.com/bao/uploaded/45603829/O1CN0122fXyQ1e9jVYl7gYW_!!45603829.jpg",
-     "width": 800,
-     "height": 800,
-     "alt": "DSG Fingerboard Wheels — Wide Tyre, Anti-Slip, No-Resistance — Fingerboard Lab"
-    },
-    {
-     "id": 1029712914061004,
-     "product_id": 10297129140610,
-     "position": 5,
-     "src": "https://img.alicdn.com/bao/uploaded/45603829/O1CN01hfWjjo1e9jVYl6g9p_!!45603829.jpg",
+     "position": 1,
+     "src": "/products/primary-10297129140610.jpg",
      "width": 800,
      "height": 800,
      "alt": "DSG Fingerboard Wheels — Wide Tyre, Anti-Slip, No-Resistance — Fingerboard Lab"
     }
    ],
    "image": {
-    "id": 1029712914061000,
+    "id": 1029712914061002,
     "product_id": 10297129140610,
     "position": 1,
-    "src": "/products/wheels-816136398685-1.jpg",
+    "src": "/products/primary-10297129140610.jpg",
     "width": 800,
     "height": 800,
     "alt": "DSG Fingerboard Wheels — Wide Tyre, Anti-Slip, No-Resistance — Fingerboard Lab"
@@ -22030,18 +21478,9 @@
      "alt": "BM Race-Grade Fingerboard Wheels — Metal Lock, Quiet-Running — Fingerboard Lab"
     },
     {
-     "id": 1029712914060702,
-     "product_id": 10297129140607,
-     "position": 3,
-     "src": "https://img.alicdn.com/bao/uploaded/2208998319270/O1CN01Lhn0Pa2ILiU6EXRj2_!!2208998319270.jpg",
-     "width": 800,
-     "height": 800,
-     "alt": "BM Race-Grade Fingerboard Wheels — Metal Lock, Quiet-Running — Fingerboard Lab"
-    },
-    {
      "id": 1029712914060703,
      "product_id": 10297129140607,
-     "position": 4,
+     "position": 3,
      "src": "https://img.alicdn.com/bao/uploaded/2208998319270/O1CN015hyoGc2ILiU6Ec0bA_!!2208998319270.jpg",
      "width": 800,
      "height": 800,
@@ -22050,7 +21489,7 @@
     {
      "id": 1029712914060704,
      "product_id": 10297129140607,
-     "position": 5,
+     "position": 4,
      "src": "https://img.alicdn.com/bao/uploaded/2208998319270/O1CN018okWCd2ILiU6EdHdq_!!2208998319270.jpg",
      "width": 800,
      "height": 800,
@@ -23111,72 +22550,6 @@
     "variant_ids": [
      52930334261570
     ]
-   }
-  },
-  {
-   "id": 10297129140589,
-   "title": "Wide Thick Tapered PU Fingerboard Grip Pads — Pack of 5",
-   "body_html": "<p>These PU grip pads are wider and thicker than standard foam grip tape, with a tapered profile that accommodates the raised kick area without the pad bunching or lifting at the nose and tail. The thicker material gives a softer, more cushioned feel underfoot — noticeably different from thin foam or sandpaper grip.</p><p><strong>Why this one</strong></p><ul><li>Wide format — broader than standard grip pads, covering more of the deck surface for consistent grip across the full foot platform</li><li>Increased thickness — more material between finger and deck, creating a softer, more cushioned contact feel</li><li>Tapered profile — shaped to follow the deck's kick geometry rather than lying flat and bunching at the nose and tail</li><li>PU material construction — polyurethane grip provides resilience and wear resistance compared to basic foam alternatives</li><li>Pack of 5 — enough for multiple decks or repeated replacement across a single deck over its riding life</li></ul><p><strong>Specifications</strong></p><table><tbody><tr><td><strong>Material</strong></td><td>PU (polyurethane)</td></tr><tr><td><strong>Profile</strong></td><td>Tapered, wide and thick</td></tr><tr><td><strong>Type</strong></td><td>Fingerboard grip / anti-slip pad</td></tr><tr><td><strong>Pack size</strong></td><td>5 pads</td></tr></tbody></table><p><strong>Choosing your option</strong></p><p>Supplied as a pack of 5.</p><p><strong>Who it suits</strong></p><p>Riders who find standard thin grip tape does not give enough cushion, or whose grip lifts at the kick areas because it is not shaped to the deck profile. The tapered wide format suits those applying grip to decks with pronounced kicks where a flat-cut pad would not lie flat cleanly.</p><p><em>Hand-picked and quality-checked before dispatch. Free sticker sheet in every box, and 30-day returns if it is not right for you.</em></p>",
-   "vendor": "Fingerboard Lab",
-   "product_type": "Grip Tape",
-   "handle": "wide-thick-tapered-pu-fingerboard-grip-pads-pack-of-5",
-   "created_at": "2026-08-07T15:00:00+02:00",
-   "updated_at": "2026-08-07T15:00:00+02:00",
-   "published_at": "2026-08-07T15:00:00+02:00",
-   "template_suffix": null,
-   "published_scope": "web",
-   "tags": "PU grip pads, tapered grip, wide grip tape, thick grip tape, fingerboard grip, 5 pack, fingerboard accessories, anti-slip pad",
-   "status": "active",
-   "seo_title": "Wide Thick Tapered PU Fingerboard Grip Pads — Pack of 5",
-   "seo_description": "Wide thick tapered PU fingerboard grip pads — 5 per pack. More coverage, more cushion, tapered to follow deck kick geometry without bunching.",
-   "variants": [
-    {
-     "id": 52930359165296,
-     "product_id": 10297129140589,
-     "title": "Default Title",
-     "price": "23.95",
-     "compare_at_price": null,
-     "position": 1,
-     "option1": "Default Title",
-     "inventory_policy": "continue",
-     "taxable": false,
-     "sku": "FL-10297129140589",
-     "requires_shipping": true,
-     "available": true,
-     "inventory_quantity": 8,
-     "weight": 0.02,
-     "weight_unit": "kg"
-    }
-   ],
-   "options": [
-    {
-     "id": 102971291405890,
-     "name": "Option",
-     "position": 1,
-     "values": [
-      "Default Title"
-     ]
-    }
-   ],
-   "images": [
-    {
-     "id": 1029712914058900,
-     "product_id": 10297129140589,
-     "position": 1,
-     "src": "/products/grip-tape-3832587556076257652-1.jpg",
-     "width": 750,
-     "height": 696,
-     "alt": "Wide Thick Tapered PU Fingerboard Grip Pads — Pack of 5 — Fingerboard Lab"
-    }
-   ],
-   "image": {
-    "id": 1029712914058900,
-    "product_id": 10297129140589,
-    "position": 1,
-    "src": "/products/grip-tape-3832587556076257652-1.jpg",
-    "width": 750,
-    "height": 696,
-    "alt": "Wide Thick Tapered PU Fingerboard Grip Pads — Pack of 5 — Fingerboard Lab"
    }
   },
   {
@@ -26134,19 +25507,10 @@
    ],
    "images": [
     {
-     "id": 1029712914060300,
-     "product_id": 10297129140603,
-     "position": 1,
-     "src": "/products/tuning-hardware-778431561347-1.jpg",
-     "width": 800,
-     "height": 800,
-     "alt": "DSG Fingerboard Cross Screwdriver — Truck Maintenance Tool — Fingerboard Lab"
-    },
-    {
      "id": 1029712914060301,
      "product_id": 10297129140603,
-     "position": 2,
-     "src": "https://img.alicdn.com/bao/uploaded/45603829/O1CN01I0hprY1e9jThxK5qf_!!45603829.jpg",
+     "position": 1,
+     "src": "/products/primary-10297129140603.jpg",
      "width": 800,
      "height": 800,
      "alt": "DSG Fingerboard Cross Screwdriver — Truck Maintenance Tool — Fingerboard Lab"
@@ -26154,7 +25518,7 @@
     {
      "id": 1029712914060302,
      "product_id": 10297129140603,
-     "position": 3,
+     "position": 2,
      "src": "https://img.alicdn.com/bao/uploaded/45603829/O1CN01Gfa8s61e9jTivotwN_!!45603829.jpg",
      "width": 800,
      "height": 800,
@@ -26163,7 +25527,7 @@
     {
      "id": 1029712914060303,
      "product_id": 10297129140603,
-     "position": 4,
+     "position": 3,
      "src": "https://img.alicdn.com/bao/uploaded/45603829/O1CN01ZzD1qA1e9jTgcTQdE_!!45603829.jpg",
      "width": 800,
      "height": 800,
@@ -26172,7 +25536,7 @@
     {
      "id": 1029712914060304,
      "product_id": 10297129140603,
-     "position": 5,
+     "position": 4,
      "src": "https://img.alicdn.com/bao/uploaded/45603829/O1CN018IDP1U1e9jTcj2Bbi_!!45603829.jpg",
      "width": 800,
      "height": 800,
@@ -26180,10 +25544,10 @@
     }
    ],
    "image": {
-    "id": 1029712914060300,
+    "id": 1029712914060301,
     "product_id": 10297129140603,
     "position": 1,
-    "src": "/products/tuning-hardware-778431561347-1.jpg",
+    "src": "/products/primary-10297129140603.jpg",
     "width": 800,
     "height": 800,
     "alt": "DSG Fingerboard Cross Screwdriver — Truck Maintenance Tool — Fingerboard Lab"
@@ -27249,45 +26613,18 @@
    ],
    "images": [
     {
-     "id": 1029712914060500,
-     "product_id": 10297129140605,
-     "position": 1,
-     "src": "/products/tuning-hardware-931255346449-1.jpg",
-     "width": 1000,
-     "height": 1000,
-     "alt": "WP Fingerboard Cross Screwdriver — Truck Tool, Pack of 3 — Fingerboard Lab"
-    },
-    {
-     "id": 1029712914060501,
-     "product_id": 10297129140605,
-     "position": 2,
-     "src": "https://img.alicdn.com/bao/uploaded/2217982279826/O1CN01d8pMIa2MSMnmIrthw_!!2217982279826.jpg",
-     "width": 1000,
-     "height": 1000,
-     "alt": "WP Fingerboard Cross Screwdriver — Truck Tool, Pack of 3 — Fingerboard Lab"
-    },
-    {
      "id": 1029712914060502,
      "product_id": 10297129140605,
-     "position": 3,
-     "src": "https://img.alicdn.com/bao/uploaded/2217982279826/O1CN0147YSsm2MSMnmER2tF_!!2217982279826.jpg",
-     "width": 1000,
-     "height": 1000,
-     "alt": "WP Fingerboard Cross Screwdriver — Truck Tool, Pack of 3 — Fingerboard Lab"
-    },
-    {
-     "id": 1029712914060503,
-     "product_id": 10297129140605,
-     "position": 4,
-     "src": "https://img.alicdn.com/bao/uploaded/2217982279826/O1CN01XJ1pOl2MSMnnuzJ8r_!!2217982279826.jpg",
-     "width": 1000,
-     "height": 1000,
+     "position": 1,
+     "src": "/products/primary-10297129140605.jpg",
+     "width": 800,
+     "height": 800,
      "alt": "WP Fingerboard Cross Screwdriver — Truck Tool, Pack of 3 — Fingerboard Lab"
     },
     {
      "id": 1029712914060504,
      "product_id": 10297129140605,
-     "position": 5,
+     "position": 2,
      "src": "https://img.alicdn.com/bao/uploaded/2217982279826/O1CN01K6EbBt2MSMnmIqtLH_!!2217982279826.jpg",
      "width": 1000,
      "height": 1000,
@@ -27295,12 +26632,12 @@
     }
    ],
    "image": {
-    "id": 1029712914060500,
+    "id": 1029712914060502,
     "product_id": 10297129140605,
     "position": 1,
-    "src": "/products/tuning-hardware-931255346449-1.jpg",
-    "width": 1000,
-    "height": 1000,
+    "src": "/products/primary-10297129140605.jpg",
+    "width": 800,
+    "height": 800,
     "alt": "WP Fingerboard Cross Screwdriver — Truck Tool, Pack of 3 — Fingerboard Lab"
    }
   },
@@ -27690,18 +27027,9 @@
      "alt": "WP Fingerboard Spare Parts Kit — Lock Nuts and Pins, 5-Pack — Fingerboard Lab"
     },
     {
-     "id": 1029712914060403,
-     "product_id": 10297129140604,
-     "position": 4,
-     "src": "https://img.alicdn.com/bao/uploaded/2217982279826/O1CN01N7CL0R2MSMpTIIZKU_!!2217982279826.jpg",
-     "width": 1000,
-     "height": 1000,
-     "alt": "WP Fingerboard Spare Parts Kit — Lock Nuts and Pins, 5-Pack — Fingerboard Lab"
-    },
-    {
      "id": 1029712914060404,
      "product_id": 10297129140604,
-     "position": 5,
+     "position": 4,
      "src": "https://img.alicdn.com/bao/uploaded/2217982279826/O1CN01CyTkIT2MSMpRnnyzm_!!2217982279826.jpg",
      "width": 1000,
      "height": 1000,
@@ -30372,56 +29700,20 @@
    ],
    "images": [
     {
-     "id": 1029712914059600,
-     "product_id": 10297129140596,
-     "position": 1,
-     "src": "/products/park-kits-734299268868-1.jpg",
-     "width": 800,
-     "height": 800,
-     "alt": "Fingerboard Training Park — Obstacles and Accessories Combo — Fingerboard Lab"
-    },
-    {
-     "id": 1029712914059601,
-     "product_id": 10297129140596,
-     "position": 2,
-     "src": "https://img.alicdn.com/bao/uploaded/1731033354/O1CN01Fa4oGu1aeBH1Mq1kz_!!1731033354.jpg",
-     "width": 800,
-     "height": 800,
-     "alt": "Fingerboard Training Park — Obstacles and Accessories Combo — Fingerboard Lab"
-    },
-    {
-     "id": 1029712914059602,
-     "product_id": 10297129140596,
-     "position": 3,
-     "src": "https://img.alicdn.com/bao/uploaded/1731033354/O1CN01mSYNv71aeBH1VRgQD_!!1731033354.jpg",
-     "width": 800,
-     "height": 800,
-     "alt": "Fingerboard Training Park — Obstacles and Accessories Combo — Fingerboard Lab"
-    },
-    {
-     "id": 1029712914059603,
-     "product_id": 10297129140596,
-     "position": 4,
-     "src": "https://img.alicdn.com/bao/uploaded/1731033354/O1CN01KfZsu41aeBH2d7r2S_!!1731033354.jpg",
-     "width": 800,
-     "height": 800,
-     "alt": "Fingerboard Training Park — Obstacles and Accessories Combo — Fingerboard Lab"
-    },
-    {
      "id": 1029712914059604,
      "product_id": 10297129140596,
-     "position": 5,
-     "src": "https://img.alicdn.com/bao/uploaded/1731033354/O1CN01RD5SRA1aeBH2Z8C1a_!!1731033354.jpg",
+     "position": 1,
+     "src": "/products/primary-10297129140596.jpg",
      "width": 800,
      "height": 800,
      "alt": "Fingerboard Training Park — Obstacles and Accessories Combo — Fingerboard Lab"
     }
    ],
    "image": {
-    "id": 1029712914059600,
+    "id": 1029712914059604,
     "product_id": 10297129140596,
     "position": 1,
-    "src": "/products/park-kits-734299268868-1.jpg",
+    "src": "/products/primary-10297129140596.jpg",
     "width": 800,
     "height": 800,
     "alt": "Fingerboard Training Park — Obstacles and Accessories Combo — Fingerboard Lab"
@@ -30501,18 +29793,9 @@
      "alt": "Wide Deep-Concave Fingerboard Park Set with Stairs — Fingerboard Lab"
     },
     {
-     "id": 1029712914059403,
-     "product_id": 10297129140594,
-     "position": 4,
-     "src": "https://img.alicdn.com/bao/uploaded/3869120287/O1CN01LbOd971DzUl8LZzTV_!!3869120287.jpg",
-     "width": 800,
-     "height": 800,
-     "alt": "Wide Deep-Concave Fingerboard Park Set with Stairs — Fingerboard Lab"
-    },
-    {
      "id": 1029712914059404,
      "product_id": 10297129140594,
-     "position": 5,
+     "position": 4,
      "src": "https://img.alicdn.com/bao/uploaded/3869120287/O1CN01DTPgLt1DzUl7IShnt_!!3869120287.jpg",
      "width": 800,
      "height": 800,
@@ -30527,72 +29810,6 @@
     "width": 800,
     "height": 800,
     "alt": "Wide Deep-Concave Fingerboard Park Set with Stairs — Fingerboard Lab"
-   }
-  },
-  {
-   "id": 10297129140592,
-   "title": "Maple Fingerboard Park Setup with Bearing Wheels",
-   "body_html": "<p>A park terrain setup with a maple fingerboard and bearing wheels already included means you are not sourcing three separate things before your first session — deck, terrain and rolling components arrive together, pre-matched. The bearing wheels are the key detail: they roll with less resistance and more consistency than the open-axle wheels found on most entry setups.</p><p><strong>Why this one</strong></p><ul><li>Complete bundle — park terrain, maple deck and bearing wheels in one package, so nothing needs to be sourced separately before you can ride</li><li>Bearing wheels deliver smoother, more consistent rolling than unshielded alternatives — particularly noticeable on ramp lips and transitions</li><li>Maple deck construction provides the weight and stiffness that make flip tricks and grinds feel connected rather than floaty</li><li>Screws included — the hardware needed to assemble and tune the setup is already in the box</li><li>Specialist fingerboard park design with terrain scaled correctly for standard deck and truck proportions</li></ul><p><strong>Specifications</strong></p><table><tbody><tr><td><strong>Deck material</strong></td><td>Maple</td></tr><tr><td><strong>Wheels</strong></td><td>Bearing</td></tr><tr><td><strong>Hardware</strong></td><td>Screws included</td></tr><tr><td><strong>Pack size</strong></td><td>1 set</td></tr></tbody></table><p><strong>Who it suits</strong></p><p>Riders who want everything ready in one package rather than piecing together a setup component by component. The inclusion of bearing wheels makes this a better starting point than a basic bundle for anyone who wants to feel the difference quality rolling makes immediately.</p><p><em>Hand-picked and quality-checked before dispatch. Free sticker sheet in every box, and 30-day returns if it is not right for you.</em></p>",
-   "vendor": "Fingerboard Lab",
-   "product_type": "Park Kits & Sets",
-   "handle": "maple-fingerboard-park-setup-with-bearing-wheels",
-   "created_at": "2026-08-07T15:00:00+02:00",
-   "updated_at": "2026-08-07T15:00:00+02:00",
-   "published_at": "2026-08-07T15:00:00+02:00",
-   "template_suffix": null,
-   "published_scope": "web",
-   "tags": "fingerboard park set, maple deck, bearing wheels, complete setup, screws included, mini park, fingerboard bundle, terrain set",
-   "status": "active",
-   "seo_title": "Maple Fingerboard Park Setup with Bearing Wheels",
-   "seo_description": "Maple fingerboard and park terrain bundle with bearing wheels and screws included. Roll smoother and build lines from the first session.",
-   "variants": [
-    {
-     "id": 52930359165299,
-     "product_id": 10297129140592,
-     "title": "Default Title",
-     "price": "46.95",
-     "compare_at_price": null,
-     "position": 1,
-     "option1": "Default Title",
-     "inventory_policy": "continue",
-     "taxable": false,
-     "sku": "FL-10297129140592",
-     "requires_shipping": true,
-     "available": true,
-     "inventory_quantity": 8,
-     "weight": 0.8,
-     "weight_unit": "kg"
-    }
-   ],
-   "options": [
-    {
-     "id": 102971291405920,
-     "name": "Option",
-     "position": 1,
-     "values": [
-      "Default Title"
-     ]
-    }
-   ],
-   "images": [
-    {
-     "id": 1029712914059200,
-     "product_id": 10297129140592,
-     "position": 1,
-     "src": "/products/park-kits-3829623826761777579-1.jpg",
-     "width": 480,
-     "height": 480,
-     "alt": "Maple Fingerboard Park Setup with Bearing Wheels — Fingerboard Lab"
-    }
-   ],
-   "image": {
-    "id": 1029712914059200,
-    "product_id": 10297129140592,
-    "position": 1,
-    "src": "/products/park-kits-3829623826761777579-1.jpg",
-    "width": 480,
-    "height": 480,
-    "alt": "Maple Fingerboard Park Setup with Bearing Wheels — Fingerboard Lab"
    }
   },
   {
@@ -30717,36 +29934,9 @@
      "alt": "Alloy Fingerboard Scene Set — Modular Mini Park Combo — Fingerboard Lab"
     },
     {
-     "id": 1029712914059101,
-     "product_id": 10297129140591,
-     "position": 2,
-     "src": "https://img.alicdn.com/bao/uploaded/877620063/O1CN01oeHCkU1CKtlOM1IRG_!!877620063.jpg",
-     "width": 800,
-     "height": 800,
-     "alt": "Alloy Fingerboard Scene Set — Modular Mini Park Combo — Fingerboard Lab"
-    },
-    {
-     "id": 1029712914059102,
-     "product_id": 10297129140591,
-     "position": 3,
-     "src": "https://img.alicdn.com/bao/uploaded/877620063/O1CN01oXQ4pi1CKtlMO2s8R_!!877620063.jpg",
-     "width": 800,
-     "height": 800,
-     "alt": "Alloy Fingerboard Scene Set — Modular Mini Park Combo — Fingerboard Lab"
-    },
-    {
-     "id": 1029712914059103,
-     "product_id": 10297129140591,
-     "position": 4,
-     "src": "https://img.alicdn.com/bao/uploaded/877620063/O1CN01qeo7H11CKtlKdyBLt_!!877620063.jpg",
-     "width": 800,
-     "height": 800,
-     "alt": "Alloy Fingerboard Scene Set — Modular Mini Park Combo — Fingerboard Lab"
-    },
-    {
      "id": 1029712914059104,
      "product_id": 10297129140591,
-     "position": 5,
+     "position": 2,
      "src": "https://img.alicdn.com/bao/uploaded/877620063/O1CN01RvQytn1CKtkXirNue_!!877620063.jpg",
      "width": 800,
      "height": 800,
@@ -30761,138 +29951,6 @@
     "width": 800,
     "height": 800,
     "alt": "Alloy Fingerboard Scene Set — Modular Mini Park Combo — Fingerboard Lab"
-   }
-  },
-  {
-   "id": 10297129140597,
-   "title": "Professional Fingerboard Training Terrain — Beginner Park Set",
-   "body_html": "<p>Professional terrain geometry at a beginner entry point — the obstacles are sized and shaped correctly, which matters because learning technique on poorly proportioned terrain builds bad habits that you then have to unlearn. A properly scaled beginner park means the skills you develop here transfer directly to more advanced setups.</p><p><strong>Why this one</strong></p><ul><li>Professional obstacle proportions — terrain geometry that reflects real fingerboard park standards, not a scaled-down toy approximation</li><li>Beginner-accessible design — starts riders at a manageable level while building skills that remain relevant as their riding progresses</li><li>Mini scene format covers multiple terrain shapes in a single set for varied practice</li><li>Compact desktop footprint — full session experience on any flat surface</li><li>Designed as a children and general beginner introduction to structured fingerboard terrain</li></ul><p><strong>Specifications</strong></p><table><tbody><tr><td><strong>Format</strong></td><td>Beginner training park set</td></tr><tr><td><strong>Terrain</strong></td><td>Professional-scale obstacles</td></tr><tr><td><strong>Pack size</strong></td><td>1 set</td></tr></tbody></table><p><strong>Who it suits</strong></p><p>New riders — adults or younger players — who want their first structured fingerboard park to be proportioned correctly from the start. Good as a first park purchase before moving to a larger or more complex setup.</p><p><em>Hand-picked and quality-checked before dispatch. Free sticker sheet in every box, and 30-day returns if it is not right for you.</em></p>",
-   "vendor": "Fingerboard Lab",
-   "product_type": "Park Kits & Sets",
-   "handle": "professional-fingerboard-training-terrain-beginner-park-set",
-   "created_at": "2026-08-07T15:00:00+02:00",
-   "updated_at": "2026-08-07T15:00:00+02:00",
-   "published_at": "2026-08-07T15:00:00+02:00",
-   "template_suffix": null,
-   "published_scope": "web",
-   "tags": "beginner fingerboard park, professional terrain, training park, mini obstacles, desk park, entry level, fingerboard scene, starter kit",
-   "status": "active",
-   "seo_title": "Pro Fingerboard Training Terrain — Beginner Park Set",
-   "seo_description": "Professional-scale fingerboard beginner terrain. Correctly proportioned obstacles that teach real technique — a starter park that grows with your riding.",
-   "variants": [
-    {
-     "id": 52930359165304,
-     "product_id": 10297129140597,
-     "title": "Default Title",
-     "price": "47.95",
-     "compare_at_price": null,
-     "position": 1,
-     "option1": "Default Title",
-     "inventory_policy": "continue",
-     "taxable": false,
-     "sku": "FL-10297129140597",
-     "requires_shipping": true,
-     "available": true,
-     "inventory_quantity": 8,
-     "weight": 0.8,
-     "weight_unit": "kg"
-    }
-   ],
-   "options": [
-    {
-     "id": 102971291405970,
-     "name": "Option",
-     "position": 1,
-     "values": [
-      "Default Title"
-     ]
-    }
-   ],
-   "images": [
-    {
-     "id": 1029712914059700,
-     "product_id": 10297129140597,
-     "position": 1,
-     "src": "/products/park-kits-3722981072946987312-1.jpg",
-     "width": 800,
-     "height": 800,
-     "alt": "Professional Fingerboard Training Terrain — Beginner Park Set — Fingerboard Lab"
-    }
-   ],
-   "image": {
-    "id": 1029712914059700,
-    "product_id": 10297129140597,
-    "position": 1,
-    "src": "/products/park-kits-3722981072946987312-1.jpg",
-    "width": 800,
-    "height": 800,
-    "alt": "Professional Fingerboard Training Terrain — Beginner Park Set — Fingerboard Lab"
-   }
-  },
-  {
-   "id": 10297129140593,
-   "title": "Professional Maple Fingerboard Park Terrain — Entry-Level Setup",
-   "body_html": "<p>Described as professional-level terrain and entry-accessible at the same time — that combination points to a setup where the obstacle geometry is properly scaled and shaped, but the learning curve is gradual enough to build confidence rather than frustrate. Maple board construction means the deck itself behaves like a real fingerboard rather than a toy.</p><p><strong>Why this one</strong></p><ul><li>Professional terrain geometry — obstacle proportions and angles scaled to match the type of fingerboard park terrain used in serious setups</li><li>Entry-friendly design means the difficulty curve starts approachable — good for riders building fundamentals before moving to more technical terrain</li><li>Maple fingerboard deck delivers genuine weight and response rather than the floaty, disconnected feel of lighter plastic boards</li><li>Mini scale fits on any desk, shelf or table without a dedicated space</li><li>Designed as a complete mini fingerboard park setup in a single package</li></ul><p><strong>Specifications</strong></p><table><tbody><tr><td><strong>Deck material</strong></td><td>Maple</td></tr><tr><td><strong>Level</strong></td><td>Entry-level / professional terrain</td></tr><tr><td><strong>Pack size</strong></td><td>1 set</td></tr></tbody></table><p><strong>Who it suits</strong></p><p>Adult riders or older teens building their first serious fingerboard setup — the professional terrain geometry means skills developed here transfer to more advanced parks, while the entry-level framing means you are not overwhelmed from the start.</p><p><em>Hand-picked and quality-checked before dispatch. Free sticker sheet in every box, and 30-day returns if it is not right for you.</em></p>",
-   "vendor": "Fingerboard Lab",
-   "product_type": "Park Kits & Sets",
-   "handle": "professional-maple-fingerboard-park-terrain-entry-level-setup",
-   "created_at": "2026-08-07T15:00:00+02:00",
-   "updated_at": "2026-08-07T15:00:00+02:00",
-   "published_at": "2026-08-07T15:00:00+02:00",
-   "template_suffix": null,
-   "published_scope": "web",
-   "tags": "maple fingerboard, park terrain, entry level, professional obstacles, mini park, desk fingerboard, complete setup, fingerboard park",
-   "status": "active",
-   "seo_title": "Professional Maple Fingerboard Park Terrain — Entry Setup",
-   "seo_description": "Professional-scale fingerboard park terrain with a maple board — entry-accessible design that builds real skills without overwhelming beginners.",
-   "variants": [
-    {
-     "id": 52930359165300,
-     "product_id": 10297129140593,
-     "title": "Default Title",
-     "price": "52.95",
-     "compare_at_price": null,
-     "position": 1,
-     "option1": "Default Title",
-     "inventory_policy": "continue",
-     "taxable": false,
-     "sku": "FL-10297129140593",
-     "requires_shipping": true,
-     "available": true,
-     "inventory_quantity": 8,
-     "weight": 0.8,
-     "weight_unit": "kg"
-    }
-   ],
-   "options": [
-    {
-     "id": 102971291405930,
-     "name": "Option",
-     "position": 1,
-     "values": [
-      "Default Title"
-     ]
-    }
-   ],
-   "images": [
-    {
-     "id": 1029712914059300,
-     "product_id": 10297129140593,
-     "position": 1,
-     "src": "/products/park-kits-3820552540269969702-1.jpg",
-     "width": 800,
-     "height": 800,
-     "alt": "Professional Maple Fingerboard Park Terrain — Entry-Level Setup — Fingerboard Lab"
-    }
-   ],
-   "image": {
-    "id": 1029712914059300,
-    "product_id": 10297129140593,
-    "position": 1,
-    "src": "/products/park-kits-3820552540269969702-1.jpg",
-    "width": 800,
-    "height": 800,
-    "alt": "Professional Maple Fingerboard Park Terrain — Entry-Level Setup — Fingerboard Lab"
    }
   },
   {
@@ -30995,72 +30053,6 @@
     "width": 800,
     "height": 800,
     "alt": "Alloy Fingerboard Park Set — 4-in-1 Terrain Combo — Fingerboard Lab"
-   }
-  },
-  {
-   "id": 10297129140595,
-   "title": "Professional Fingerboard Park Obstacle Set",
-   "body_html": "<p>A creative, multi-obstacle fingerboard park set scaled for professional-level session work — this is for riders who have outgrown a single ledge and want a real park layout to explore. Multiple terrain pieces let you plan and connect runs rather than repeating isolated tricks.</p><p><strong>Why this one</strong></p><ul><li>Multi-obstacle creative park set — varied terrain shapes let you build full lines and connect tricks rather than working one obstacle at a time</li><li>Professional-level obstacle sizing and proportion — terrain designed to reward technically correct fingerboarding technique</li><li>Mini scale fits on a desk or table — a complete park session without needing a dedicated setup surface</li><li>Modular obstacle format lets you rearrange pieces for different park configurations</li><li>Purpose-built fingerboard terrain — each piece sized and shaped for standard fingerboard deck and truck proportions</li></ul><p><strong>Specifications</strong></p><table><tbody><tr><td><strong>Format</strong></td><td>Creative multi-obstacle park set</td></tr><tr><td><strong>Level</strong></td><td>Professional terrain</td></tr><tr><td><strong>Pack size</strong></td><td>1 set</td></tr></tbody></table><p><strong>Who it suits</strong></p><p>Riders who want a serious, varied park layout for real session work — not an ornamental piece. Best suited to those who have already built core fingerboard skills and want terrain that matches their progression.</p><p><em>Hand-picked and quality-checked before dispatch. Free sticker sheet in every box, and 30-day returns if it is not right for you.</em></p>",
-   "vendor": "Fingerboard Lab",
-   "product_type": "Park Kits & Sets",
-   "handle": "professional-fingerboard-park-obstacle-set",
-   "created_at": "2026-08-07T15:00:00+02:00",
-   "updated_at": "2026-08-07T15:00:00+02:00",
-   "published_at": "2026-08-07T15:00:00+02:00",
-   "template_suffix": null,
-   "published_scope": "web",
-   "tags": "fingerboard park, creative terrain, professional obstacles, multi-piece set, mini park, modular obstacles, fingerboard terrain, session setup",
-   "status": "active",
-   "seo_title": "Professional Fingerboard Park Obstacle Set — Mini Terrain",
-   "seo_description": "Creative multi-obstacle fingerboard park set at professional terrain scale. Modular pieces for varied layouts — plan and connect tricks on any surface.",
-   "variants": [
-    {
-     "id": 52930359165302,
-     "product_id": 10297129140595,
-     "title": "Default Title",
-     "price": "60.95",
-     "compare_at_price": null,
-     "position": 1,
-     "option1": "Default Title",
-     "inventory_policy": "continue",
-     "taxable": false,
-     "sku": "FL-10297129140595",
-     "requires_shipping": true,
-     "available": true,
-     "inventory_quantity": 8,
-     "weight": 0.8,
-     "weight_unit": "kg"
-    }
-   ],
-   "options": [
-    {
-     "id": 102971291405950,
-     "name": "Option",
-     "position": 1,
-     "values": [
-      "Default Title"
-     ]
-    }
-   ],
-   "images": [
-    {
-     "id": 1029712914059500,
-     "product_id": 10297129140595,
-     "position": 1,
-     "src": "/products/park-kits-3835214667463131453-1.jpg",
-     "width": 800,
-     "height": 800,
-     "alt": "Professional Fingerboard Park Obstacle Set — Fingerboard Lab"
-    }
-   ],
-   "image": {
-    "id": 1029712914059500,
-    "product_id": 10297129140595,
-    "position": 1,
-    "src": "/products/park-kits-3835214667463131453-1.jpg",
-    "width": 800,
-    "height": 800,
-    "alt": "Professional Fingerboard Park Obstacle Set — Fingerboard Lab"
    }
   },
   {
@@ -32711,56 +31703,20 @@
    ],
    "images": [
     {
-     "id": 1029712914056700,
-     "product_id": 10297129140567,
-     "position": 1,
-     "src": "/products/deck-building-658819490245-1.jpg",
-     "width": 800,
-     "height": 800,
-     "alt": "Maple Fingerboard Veneer Blanks 100×30mm — Pack of 2 — Fingerboard Lab"
-    },
-    {
-     "id": 1029712914056701,
-     "product_id": 10297129140567,
-     "position": 2,
-     "src": "https://cbu01.alicdn.com/img/ibank/O1CN019VEATM1KudTX0ClIC_!!4151531224-0-cib.jpg",
-     "width": 800,
-     "height": 800,
-     "alt": "Maple Fingerboard Veneer Blanks 100×30mm — Pack of 2 — Fingerboard Lab"
-    },
-    {
-     "id": 1029712914056702,
-     "product_id": 10297129140567,
-     "position": 3,
-     "src": "https://cbu01.alicdn.com/img/ibank/O1CN01sMXb361KudsZX8zXH_!!4151531224-0-cib.jpg",
-     "width": 676,
-     "height": 676,
-     "alt": "Maple Fingerboard Veneer Blanks 100×30mm — Pack of 2 — Fingerboard Lab"
-    },
-    {
-     "id": 1029712914056703,
-     "product_id": 10297129140567,
-     "position": 4,
-     "src": "https://cbu01.alicdn.com/img/ibank/O1CN01BmowmH1KudsZicvrG_!!4151531224-0-cib.jpg",
-     "width": 422,
-     "height": 422,
-     "alt": "Maple Fingerboard Veneer Blanks 100×30mm — Pack of 2 — Fingerboard Lab"
-    },
-    {
      "id": 1029712914056704,
      "product_id": 10297129140567,
-     "position": 5,
-     "src": "https://cbu01.alicdn.com/img/ibank/O1CN01lv8Ww01KudskqVRvP_!!4151531224-0-cib.jpg",
+     "position": 1,
+     "src": "/products/primary-10297129140567.jpg",
      "width": 800,
      "height": 800,
      "alt": "Maple Fingerboard Veneer Blanks 100×30mm — Pack of 2 — Fingerboard Lab"
     }
    ],
    "image": {
-    "id": 1029712914056700,
+    "id": 1029712914056704,
     "product_id": 10297129140567,
     "position": 1,
-    "src": "/products/deck-building-658819490245-1.jpg",
+    "src": "/products/primary-10297129140567.jpg",
     "width": 800,
     "height": 800,
     "alt": "Maple Fingerboard Veneer Blanks 100×30mm — Pack of 2 — Fingerboard Lab"
@@ -33026,56 +31982,20 @@
    ],
    "images": [
     {
-     "id": 1029712914056900,
-     "product_id": 10297129140569,
-     "position": 1,
-     "src": "/products/deck-building-674802188855-1.jpg",
-     "width": 800,
-     "height": 800,
-     "alt": "Northeast Maple Fingerboard Deck Blanks 32mm Wide — Pack of 2 — Fingerboard Lab"
-    },
-    {
-     "id": 1029712914056901,
-     "product_id": 10297129140569,
-     "position": 2,
-     "src": "https://cbu01.alicdn.com/img/ibank/O1CN01eWA67Q1KudsHFU44B_!!4151531224-0-cib.jpg",
-     "width": 736,
-     "height": 736,
-     "alt": "Northeast Maple Fingerboard Deck Blanks 32mm Wide — Pack of 2 — Fingerboard Lab"
-    },
-    {
-     "id": 1029712914056902,
-     "product_id": 10297129140569,
-     "position": 3,
-     "src": "https://cbu01.alicdn.com/img/ibank/O1CN018fJhpW1KudsFvC2NI_!!4151531224-0-cib.jpg",
-     "width": 790,
-     "height": 790,
-     "alt": "Northeast Maple Fingerboard Deck Blanks 32mm Wide — Pack of 2 — Fingerboard Lab"
-    },
-    {
-     "id": 1029712914056903,
-     "product_id": 10297129140569,
-     "position": 4,
-     "src": "https://cbu01.alicdn.com/img/ibank/O1CN01ofGdHE1KudsHA8lTE_!!4151531224-0-cib.jpg",
-     "width": 790,
-     "height": 790,
-     "alt": "Northeast Maple Fingerboard Deck Blanks 32mm Wide — Pack of 2 — Fingerboard Lab"
-    },
-    {
      "id": 1029712914056904,
      "product_id": 10297129140569,
-     "position": 5,
-     "src": "https://cbu01.alicdn.com/img/ibank/O1CN01jX480d1KudsjjsaFh_!!4151531224-0-cib.jpg",
+     "position": 1,
+     "src": "/products/primary-10297129140569.jpg",
      "width": 800,
      "height": 800,
      "alt": "Northeast Maple Fingerboard Deck Blanks 32mm Wide — Pack of 2 — Fingerboard Lab"
     }
    ],
    "image": {
-    "id": 1029712914056900,
+    "id": 1029712914056904,
     "product_id": 10297129140569,
     "position": 1,
-    "src": "/products/deck-building-674802188855-1.jpg",
+    "src": "/products/primary-10297129140569.jpg",
     "width": 800,
     "height": 800,
     "alt": "Northeast Maple Fingerboard Deck Blanks 32mm Wide — Pack of 2 — Fingerboard Lab"
@@ -34308,33 +33228,6 @@
      "width": 1000,
      "height": 1000,
      "alt": "Fingerboard Press Mold with Scribe — Style K — Fingerboard Lab"
-    },
-    {
-     "id": 1029712914057301,
-     "product_id": 10297129140573,
-     "position": 2,
-     "src": "https://img.alicdn.com/bao/uploaded/2212434416286/O1CN011iC4R71wJ2onB2SFB_!!2212434416286.jpg",
-     "width": 800,
-     "height": 800,
-     "alt": "Fingerboard Press Mold with Scribe — Style K — Fingerboard Lab"
-    },
-    {
-     "id": 1029712914057302,
-     "product_id": 10297129140573,
-     "position": 3,
-     "src": "https://img.alicdn.com/bao/uploaded/2212434416286/O1CN01VG9jZZ1wJ2omwlTHh_!!2212434416286.jpg",
-     "width": 1000,
-     "height": 1000,
-     "alt": "Fingerboard Press Mold with Scribe — Style K — Fingerboard Lab"
-    },
-    {
-     "id": 1029712914057303,
-     "product_id": 10297129140573,
-     "position": 4,
-     "src": "https://img.alicdn.com/bao/uploaded/2212434416286/O1CN01WEhcgR1wJ2on2vB5D_!!2212434416286.jpg",
-     "width": 1000,
-     "height": 1000,
-     "alt": "Fingerboard Press Mold with Scribe — Style K — Fingerboard Lab"
     }
    ],
    "image": {
@@ -34394,19 +33287,10 @@
    ],
    "images": [
     {
-     "id": 1029712914057400,
-     "product_id": 10297129140574,
-     "position": 1,
-     "src": "/products/deck-building-995729033639-1.jpg",
-     "width": 800,
-     "height": 800,
-     "alt": "Fingerboard Deck Press Mold — Style G — Fingerboard Lab"
-    },
-    {
      "id": 1029712914057401,
      "product_id": 10297129140574,
-     "position": 2,
-     "src": "https://img.alicdn.com/bao/uploaded/2216695396366/O1CN01GwDG0r1wtgSVymLO1_!!2216695396366.jpg",
+     "position": 1,
+     "src": "/products/primary-10297129140574.jpg",
      "width": 800,
      "height": 800,
      "alt": "Fingerboard Deck Press Mold — Style G — Fingerboard Lab"
@@ -34414,7 +33298,7 @@
     {
      "id": 1029712914057402,
      "product_id": 10297129140574,
-     "position": 3,
+     "position": 2,
      "src": "https://img.alicdn.com/bao/uploaded/2216695396366/O1CN01MbWYcd1wtgSbIKzGQ_!!2216695396366.jpg",
      "width": 800,
      "height": 800,
@@ -34423,7 +33307,7 @@
     {
      "id": 1029712914057403,
      "product_id": 10297129140574,
-     "position": 4,
+     "position": 3,
      "src": "https://img.alicdn.com/bao/uploaded/2216695396366/O1CN01gHdBJN1wtgSackXTR_!!2216695396366.jpg",
      "width": 800,
      "height": 800,
@@ -34431,10 +33315,10 @@
     }
    ],
    "image": {
-    "id": 1029712914057400,
+    "id": 1029712914057401,
     "product_id": 10297129140574,
     "position": 1,
-    "src": "/products/deck-building-995729033639-1.jpg",
+    "src": "/products/primary-10297129140574.jpg",
     "width": 800,
     "height": 800,
     "alt": "Fingerboard Deck Press Mold — Style G — Fingerboard Lab"
@@ -35813,108 +34697,6 @@
    }
   },
   {
-   "id": 10297129140601,
-   "title": "WP Fingerboard Drawstring Fabric Pouch — Dust Cover and Carry Bag",
-   "body_html": "<p>WP's fabric drawstring pouch keeps a fingerboard clean and protected between sessions without the bulk of a hard case — the dust-cover function matters more than it sounds when boards are stored on a shelf and accumulate grit in the bearings. Light enough to carry daily, compact enough to go anywhere.</p><p><strong>Why this one</strong></p><ul><li>Fabric drawstring design — quick to open and close, keeps the board secure without a rigid frame that adds bulk</li><li>Dust-cover function — seals the board away from surface grit and household dust between sessions, protecting bearings and grip tape</li><li>WP (Whitepolar) 2025 design — a current-season accessory from an active fingerboard brand</li><li>Portable carry format — light and compact enough to go in any bag or pocket alongside the board</li><li>Protects the deck graphics and finish from scratches when stored alongside other items</li></ul><p><strong>Specifications</strong></p><table><tbody><tr><td><strong>Brand</strong></td><td>WP (Whitepolar)</td></tr><tr><td><strong>Material</strong></td><td>Fabric</td></tr><tr><td><strong>Closure</strong></td><td>Drawstring</td></tr><tr><td><strong>Season</strong></td><td>2025</td></tr><tr><td><strong>Pack size</strong></td><td>1</td></tr></tbody></table><p><strong>Who it suits</strong></p><p>Riders who want a minimal, everyday carry and storage solution for a single fingerboard. The fabric pouch is the simpler, lighter alternative to the WP faux-leather clip pouch — choose this if portability and dust protection are the main needs rather than clip-on carry.</p><p><em>Hand-picked and quality-checked before dispatch. Free sticker sheet in every box, and 30-day returns if it is not right for you.</em></p>",
-   "vendor": "Fingerboard Lab",
-   "product_type": "Storage & Display",
-   "handle": "wp-fingerboard-drawstring-fabric-pouch-dust-cover-and-carry-bag",
-   "created_at": "2026-08-07T15:00:00+02:00",
-   "updated_at": "2026-08-07T15:00:00+02:00",
-   "published_at": "2026-08-07T15:00:00+02:00",
-   "template_suffix": null,
-   "published_scope": "web",
-   "tags": "WP pouch, Whitepolar, drawstring bag, fingerboard pouch, fabric bag, dust cover, fingerboard storage, carry pouch",
-   "status": "active",
-   "seo_title": "WP Fingerboard Drawstring Fabric Pouch — Dust Cover 2025",
-   "seo_description": "WP Whitepolar fingerboard drawstring fabric pouch — dust cover and carry bag. Light, compact and current-season design from an active fingerboard brand.",
-   "variants": [
-    {
-     "id": 52930359165308,
-     "product_id": 10297129140601,
-     "title": "Default Title",
-     "price": "25.95",
-     "compare_at_price": null,
-     "position": 1,
-     "option1": "Default Title",
-     "inventory_policy": "continue",
-     "taxable": false,
-     "sku": "FL-10297129140601",
-     "requires_shipping": true,
-     "available": true,
-     "inventory_quantity": 8,
-     "weight": 0.4,
-     "weight_unit": "kg"
-    }
-   ],
-   "options": [
-    {
-     "id": 102971291406010,
-     "name": "Option",
-     "position": 1,
-     "values": [
-      "Default Title"
-     ]
-    }
-   ],
-   "images": [
-    {
-     "id": 1029712914060100,
-     "product_id": 10297129140601,
-     "position": 1,
-     "src": "/products/storage-display-948858301305-1.jpg",
-     "width": 1000,
-     "height": 1000,
-     "alt": "WP Fingerboard Drawstring Fabric Pouch — Dust Cover and Carry Bag — Fingerboard Lab"
-    },
-    {
-     "id": 1029712914060101,
-     "product_id": 10297129140601,
-     "position": 2,
-     "src": "https://img.alicdn.com/bao/uploaded/2217982279826/O1CN01mgfpEx2MSMoRFfgIz_!!2217982279826.jpg",
-     "width": 1000,
-     "height": 1000,
-     "alt": "WP Fingerboard Drawstring Fabric Pouch — Dust Cover and Carry Bag — Fingerboard Lab"
-    },
-    {
-     "id": 1029712914060102,
-     "product_id": 10297129140601,
-     "position": 3,
-     "src": "https://img.alicdn.com/bao/uploaded/2217982279826/O1CN01e4AQkT2MSMoSZh4kP_!!2217982279826.jpg",
-     "width": 1000,
-     "height": 1000,
-     "alt": "WP Fingerboard Drawstring Fabric Pouch — Dust Cover and Carry Bag — Fingerboard Lab"
-    },
-    {
-     "id": 1029712914060103,
-     "product_id": 10297129140601,
-     "position": 4,
-     "src": "https://img.alicdn.com/bao/uploaded/2217982279826/O1CN014wLYx92MSMoTgJOtD_!!2217982279826.jpg",
-     "width": 1000,
-     "height": 1000,
-     "alt": "WP Fingerboard Drawstring Fabric Pouch — Dust Cover and Carry Bag — Fingerboard Lab"
-    },
-    {
-     "id": 1029712914060104,
-     "product_id": 10297129140601,
-     "position": 5,
-     "src": "https://img.alicdn.com/bao/uploaded/2217982279826/O1CN01DZ7CPp2MSMoTWY2K5_!!2217982279826.jpg",
-     "width": 1000,
-     "height": 1000,
-     "alt": "WP Fingerboard Drawstring Fabric Pouch — Dust Cover and Carry Bag — Fingerboard Lab"
-    }
-   ],
-   "image": {
-    "id": 1029712914060100,
-    "product_id": 10297129140601,
-    "position": 1,
-    "src": "/products/storage-display-948858301305-1.jpg",
-    "width": 1000,
-    "height": 1000,
-    "alt": "WP Fingerboard Drawstring Fabric Pouch — Dust Cover and Carry Bag — Fingerboard Lab"
-   }
-  },
-  {
    "id": 10297129140599,
    "title": "WP Fingerboard Hanging Pouch — Handmade Faux Leather with Clip",
    "body_html": "<p>A handmade faux-leather fingerboard pouch with a clip closure and hanging hook from WP is the kind of carry piece that treats your fingerboard as the equipment it is rather than an afterthought in a bag. The clip and hanging hook mean it can attach to a bag strap, backpack loop or hook on the wall — keeping the board accessible and protected wherever you are.</p><p><strong>Why this one</strong></p><ul><li>Handmade faux leather construction — a material and finish that holds its shape and resists scuffing better than fabric pouches</li><li>Clip and hanging hook closure — the board stays secured during movement and the whole pouch can clip to a bag exterior or hang from a hook when stored</li><li>WP (Whitepolar) original design — a fingerboard-brand accessory made for their own community rather than a repurposed general pouch</li><li>Portable format keeps the fingerboard and its components together during transit — no loose wheels or screws rolling around in a bag</li><li>Works as both daily carry and wall-hung display when not in active use</li></ul><p><strong>Specifications</strong></p><table><tbody><tr><td><strong>Brand</strong></td><td>WP (Whitepolar)</td></tr><tr><td><strong>Material</strong></td><td>Faux leather (handmade)</td></tr><tr><td><strong>Fastening</strong></td><td>Clip with hanging hook</td></tr><tr><td><strong>Pack size</strong></td><td>1</td></tr></tbody></table><p><strong>Who it suits</strong></p><p>Riders who want their fingerboard carried properly rather than loose in a backpack — and those who want a WP brand accessory to match a WP setup. The clip design makes this suitable for clipping to a bag exterior so the fingerboard is reachable without opening the main compartment.</p><p><em>Hand-picked and quality-checked before dispatch. Free sticker sheet in every box, and 30-day returns if it is not right for you.</em></p>",
@@ -35961,27 +34743,18 @@
    ],
    "images": [
     {
-     "id": 1029712914059900,
-     "product_id": 10297129140599,
-     "position": 1,
-     "src": "/products/storage-display-942807948191-1.jpg",
-     "width": 1000,
-     "height": 1000,
-     "alt": "WP Fingerboard Hanging Pouch — Handmade Faux Leather with Clip — Fingerboard Lab"
-    },
-    {
      "id": 1029712914059901,
      "product_id": 10297129140599,
-     "position": 2,
-     "src": "https://img.alicdn.com/bao/uploaded/2217982279826/O1CN01G3MMYV2MSMoAuS3Dn_!!2217982279826.jpg",
-     "width": 1000,
-     "height": 1000,
+     "position": 1,
+     "src": "/products/primary-10297129140599.jpg",
+     "width": 800,
+     "height": 800,
      "alt": "WP Fingerboard Hanging Pouch — Handmade Faux Leather with Clip — Fingerboard Lab"
     },
     {
      "id": 1029712914059902,
      "product_id": 10297129140599,
-     "position": 3,
+     "position": 2,
      "src": "https://img.alicdn.com/bao/uploaded/2217982279826/O1CN01e6FR6J2MSMo98xQ8u_!!2217982279826.jpg",
      "width": 1000,
      "height": 1000,
@@ -35990,7 +34763,7 @@
     {
      "id": 1029712914059903,
      "product_id": 10297129140599,
-     "position": 4,
+     "position": 3,
      "src": "https://img.alicdn.com/bao/uploaded/2217982279826/O1CN01k7iUzE2MSMo4E2Ins_!!2217982279826.jpg",
      "width": 1000,
      "height": 1000,
@@ -35999,7 +34772,7 @@
     {
      "id": 1029712914059904,
      "product_id": 10297129140599,
-     "position": 5,
+     "position": 4,
      "src": "https://img.alicdn.com/bao/uploaded/2217982279826/O1CN01CLBcc32MSMoAFQPSU_!!2217982279826.jpg",
      "width": 1000,
      "height": 1000,
@@ -36007,12 +34780,12 @@
     }
    ],
    "image": {
-    "id": 1029712914059900,
+    "id": 1029712914059901,
     "product_id": 10297129140599,
     "position": 1,
-    "src": "/products/storage-display-942807948191-1.jpg",
-    "width": 1000,
-    "height": 1000,
+    "src": "/products/primary-10297129140599.jpg",
+    "width": 800,
+    "height": 800,
     "alt": "WP Fingerboard Hanging Pouch — Handmade Faux Leather with Clip — Fingerboard Lab"
    }
   },
