@@ -1,20 +1,51 @@
-import { getAllSiteUrls } from "lib/site-urls";
-import { baseUrl } from "lib/utils";
+import {
+  getCollectionUrls,
+  getGuideUrls,
+  getProductUrls,
+  getStaticUrls,
+  type SiteUrl,
+} from "lib/site-urls";
 import { MetadataRoute } from "next";
 
-export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  const now = new Date().toISOString();
-  const urls = await getAllSiteUrls();
+/**
+ * Split into one sitemap per content type.
+ *
+ * Next emits /sitemap.xml as a sitemap index pointing at /sitemap/<id>.xml.
+ * Splitting is not about the 50k URL cap — it is so Search Console reports
+ * indexation per section, which makes "products are indexing but guides are
+ * not" visible instead of averaged away in one aggregate number.
+ */
+export async function generateSitemaps() {
+  return [
+    { id: "pages" },
+    { id: "collections" },
+    { id: "products" },
+    { id: "guides" },
+  ];
+}
 
-  return urls.map((url) => {
-    const isHome = url === baseUrl;
-    const isSearch = url === `${baseUrl}/search`;
-    const isProduct = url.includes("/product/");
-    return {
-      url,
-      lastModified: now,
-      changeFrequency: isHome || isSearch ? "daily" : "weekly",
-      priority: isHome ? 1 : isSearch ? 0.9 : isProduct ? 0.7 : 0.6,
-    };
-  });
+const LOADERS: Record<string, () => Promise<SiteUrl[]>> = {
+  pages: getStaticUrls,
+  collections: getCollectionUrls,
+  products: getProductUrls,
+  guides: getGuideUrls,
+};
+
+export default async function sitemap({
+  id,
+}: {
+  id: string;
+}): Promise<MetadataRoute.Sitemap> {
+  const load = LOADERS[id] ?? getStaticUrls;
+  const entries = await load();
+
+  return entries.map((e) => ({
+    url: e.url,
+    lastModified: new Date(e.lastModified),
+    changeFrequency: e.changeFrequency,
+    priority: e.priority,
+    // Image entries help product photography surface in Google Images, which
+    // is a real discovery channel for a visual product like this.
+    ...(e.images?.length ? { images: e.images.map((i) => i.url) } : {}),
+  }));
 }

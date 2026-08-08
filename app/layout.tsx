@@ -57,6 +57,21 @@ export const metadata = {
   // would be silently (and wrongly) inherited by any page that forgets to
   // set one, telling Google that page is a duplicate of the homepage.
   category: "shopping",
+  // Set these in Vercel once the custom domain is verified. Meta-tag
+  // verification is the fallback when DNS TXT is inconvenient; both can
+  // coexist safely.
+  verification: {
+    ...(process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION
+      ? { google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION }
+      : {}),
+    ...(process.env.NEXT_PUBLIC_BING_SITE_VERIFICATION
+      ? {
+          other: {
+            "msvalidate.01": process.env.NEXT_PUBLIC_BING_SITE_VERIFICATION,
+          },
+        }
+      : {}),
+  },
 };
 
 export default async function RootLayout({

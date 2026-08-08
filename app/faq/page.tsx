@@ -56,6 +56,9 @@ export default function FaqPage() {
       title="Frequently asked questions."
       intro="Everything you need to know before you buy. Still stuck? Reach us any time."
     >
+      <h2 className="mb-6 text-xl font-semibold text-[#f3f1ea]">
+        Fingerboard questions, answered
+      </h2>
       <FaqList items={FAQS} />
       <p className="mt-8 text-sm text-neutral-400">
         Looking for more detail? Explore the{" "}

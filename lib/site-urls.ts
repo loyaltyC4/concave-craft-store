@@ -1,34 +1,112 @@
 import { getCollections, getProducts } from "lib/shopify";
 import { baseUrl } from "lib/utils";
-import { GUIDES } from "lib/brand";
+import { allGuides } from "lib/all-guides";
 
-const STATIC_PATHS = [
-  "",
-  "/search",
-  "/guides",
-  "/glossary",
-  "/about",
-  "/contact",
-  "/shipping-returns",
-  "/faq",
-  "/privacy",
-  "/terms",
-];
+export type SiteUrl = {
+  url: string;
+  lastModified: string;
+  changeFrequency:
+    | "always"
+    | "hourly"
+    | "daily"
+    | "weekly"
+    | "monthly"
+    | "yearly"
+    | "never";
+  priority: number;
+  /** Product imagery, emitted as <image:image> entries in the sitemap. */
+  images?: { url: string; title?: string }[];
+};
 
-/** Every real, indexable URL on the site — the single source of truth shared
- * by the sitemap and the IndexNow submission trigger, so they never drift. */
-export async function getAllSiteUrls(): Promise<string[]> {
-  const [collections, products] = await Promise.all([
-    getCollections(),
-    getProducts({}),
-  ]);
-
-  const urls = [
-    ...STATIC_PATHS.map((p) => `${baseUrl}${p}`),
-    ...collections.filter((c) => c.handle).map((c) => `${baseUrl}${c.path}`),
-    ...products.map((p) => `${baseUrl}/product/${p.handle}`),
-    ...GUIDES.map((g) => `${baseUrl}/guides/${g.slug}`),
+/**
+ * Static pages, with priorities that reflect commercial value rather than a
+ * flat default. Legal pages are deliberately low but still indexable.
+ */
+const STATIC_PAGES: { path: string; priority: number; freq: SiteUrl["changeFrequency"] }[] =
+  [
+    { path: "", priority: 1.0, freq: "daily" },
+    { path: "/search", priority: 0.9, freq: "daily" },
+    { path: "/guides", priority: 0.8, freq: "weekly" },
+    { path: "/glossary", priority: 0.6, freq: "monthly" },
+    { path: "/about", priority: 0.5, freq: "monthly" },
+    { path: "/contact", priority: 0.4, freq: "yearly" },
+    { path: "/faq", priority: 0.5, freq: "monthly" },
+    { path: "/shipping-returns", priority: 0.4, freq: "monthly" },
+    { path: "/privacy", priority: 0.2, freq: "yearly" },
+    { path: "/terms", priority: 0.2, freq: "yearly" },
   ];
 
-  return urls;
+function abs(url: string): string {
+  return url.startsWith("http") ? url : `${baseUrl}${url}`;
+}
+
+/** Static pages. */
+export async function getStaticUrls(): Promise<SiteUrl[]> {
+  const now = new Date().toISOString();
+  return STATIC_PAGES.map((p) => ({
+    url: `${baseUrl}${p.path}`,
+    lastModified: now,
+    changeFrequency: p.freq,
+    priority: p.priority,
+  }));
+}
+
+/** Category pages — the highest-intent commercial URLs on the site. */
+export async function getCollectionUrls(): Promise<SiteUrl[]> {
+  const collections = await getCollections();
+  return collections
+    .filter((c) => c.handle)
+    .map((c) => ({
+      url: `${baseUrl}${c.path}`,
+      lastModified: c.updatedAt ?? new Date().toISOString(),
+      changeFrequency: "weekly" as const,
+      priority: 0.9,
+    }));
+}
+
+/**
+ * Product pages, each carrying its own real lastModified and its imagery.
+ *
+ * A sitemap that stamps every URL with "now" on each build teaches crawlers to
+ * ignore the field, so lastModified comes from the product record itself.
+ */
+export async function getProductUrls(): Promise<SiteUrl[]> {
+  const products = await getProducts({});
+  return products.map((p) => ({
+    url: `${baseUrl}/product/${p.handle}`,
+    lastModified: p.updatedAt ?? new Date().toISOString(),
+    changeFrequency: "weekly" as const,
+    priority: 0.8,
+    images: p.images.slice(0, 5).map((i) => ({
+      url: abs(i.url),
+      title: i.altText || p.title,
+    })),
+  }));
+}
+
+/** Editorial guides — the topical-authority layer. */
+export async function getGuideUrls(): Promise<SiteUrl[]> {
+  return allGuides.map((g) => ({
+    url: `${baseUrl}/guides/${g.slug}`,
+    lastModified: (g as { updatedAt?: string }).updatedAt ?? new Date().toISOString(),
+    changeFrequency: "monthly" as const,
+    priority: 0.7,
+  }));
+}
+
+/** Everything indexable, in one list. Shared by the sitemap and IndexNow so
+ *  the two can never drift apart. */
+export async function getAllSiteUrlEntries(): Promise<SiteUrl[]> {
+  const [s, c, p, g] = await Promise.all([
+    getStaticUrls(),
+    getCollectionUrls(),
+    getProductUrls(),
+    getGuideUrls(),
+  ]);
+  return [...s, ...c, ...p, ...g];
+}
+
+/** Plain URL strings (IndexNow payloads, internal checks). */
+export async function getAllSiteUrls(): Promise<string[]> {
+  return (await getAllSiteUrlEntries()).map((e) => e.url);
 }

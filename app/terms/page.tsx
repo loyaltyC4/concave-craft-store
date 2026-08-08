@@ -3,7 +3,8 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Terms of Service",
-  description: "The terms that apply when you shop with Fingerboard Lab.",
+  description:
+    "The terms that apply when you shop with Fingerboard Lab — ordering, pricing, shipping, our 30-day returns policy, warranties and liability.",
   alternates: { canonical: "/terms" },
 };
 
