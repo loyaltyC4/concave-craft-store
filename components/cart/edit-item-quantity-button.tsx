@@ -24,7 +24,8 @@ export function EditItemQuantityButton({
         type === "plus" ? "Increase item quantity" : "Reduce item quantity"
       }
       className={clsx(
-        "ease flex h-full min-w-[36px] max-w-[36px] flex-none items-center justify-center rounded-full p-2 transition-all duration-200 hover:opacity-80",
+        // 44x44 min per WCAG 2.5.5 (was 36x36 — mis-tap risk on mobile).
+        "ease flex h-11 min-w-11 flex-none items-center justify-center rounded-full p-2 transition-all duration-200 hover:opacity-80",
         { "ml-auto": type === "minus" },
       )}
     >
