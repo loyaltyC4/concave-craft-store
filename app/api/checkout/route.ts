@@ -106,8 +106,13 @@ export async function POST(req: NextRequest) {
       (variant.title && variant.title !== "Default Title"
         ? ` — ${variant.title}`
         : "");
-    const images = product.featuredImage?.url
-      ? [product.featuredImage.url]
+    // Stripe requires absolute HTTPS URLs in product_data.images. Product
+    // photography is stored as relative /products/*.jpg paths (decoded at
+    // build time from data/product-images/), so prefix with the site origin.
+    // Any URL that already looks absolute is passed through untouched.
+    const rawImg = product.featuredImage?.url;
+    const images = rawImg
+      ? [rawImg.startsWith("http") ? rawImg : `${baseUrl}${rawImg}`]
       : [];
     line_items.push({
       quantity: Math.max(1, Math.min(99, Number(l.quantity) || 1)),
