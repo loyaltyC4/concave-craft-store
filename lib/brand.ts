@@ -50,17 +50,23 @@ export const COLLECTIONS = [
 ] as const;
 
 // Banner image per collection (staged in /public/brand)
+// Editorial macro product photography, one per collection. Locked art
+// direction: matte OLED near-black background, single soft directional key
+// light with a restrained volt yellow-green rim highlight, real materials
+// (maple, brushed aluminum, urethane, foam grip). Feeds both the homepage
+// "Shop by category" grid and the category page banner. Previous version
+// mapped 10 handles onto 5 reused files — every tile now has its own image.
 export const COLLECTION_IMAGE: Record<string, string> = {
-  completes: "/brand/collection-completes.jpg",
-  decks: "/brand/collection-decks.jpg",
-  trucks: "/brand/collection-hardware.jpg",
-  wheels: "/brand/collection-hardware.jpg",
-  "grip-tape": "/brand/collection-hardware.jpg",
-  "tuning-hardware": "/brand/collection-hardware.jpg",
-  "ramps-obstacles": "/brand/collection-ramps.jpg",
-  "park-kits": "/brand/collection-ramps.jpg",
-  "deck-building": "/brand/collection-molds.jpg",
-  "storage-display": "/brand/collection-completes.jpg",
+  completes: "/brand/collections/completes.jpg",
+  decks: "/brand/collections/decks.jpg",
+  trucks: "/brand/collections/trucks.jpg",
+  wheels: "/brand/collections/wheels.jpg",
+  "grip-tape": "/brand/collections/grip-tape.jpg",
+  "tuning-hardware": "/brand/collections/tuning-hardware.jpg",
+  "ramps-obstacles": "/brand/collections/ramps-obstacles.jpg",
+  "park-kits": "/brand/collections/park-kits.jpg",
+  "deck-building": "/brand/collections/deck-building.jpg",
+  "storage-display": "/brand/collections/storage-display.jpg",
 };
 
 // Cornerstone guides (drives the /guides hub, nav, sitemap, and internal

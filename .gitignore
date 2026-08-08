@@ -41,3 +41,6 @@ next-env.d.ts
 
 # Decoded at build time from data/product-images/ by scripts/decode-product-images.mjs
 public/products/
+
+# Decoded at build time from data/category-images/ by scripts/decode-category-images.mjs
+public/brand/collections/

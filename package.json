@@ -7,7 +7,7 @@
     "prettier": "prettier --write --ignore-unknown .",
     "prettier:check": "prettier --check --ignore-unknown .",
     "test": "pnpm prettier:check",
-    "prebuild": "node scripts/decode-product-images.mjs"
+    "prebuild": "node scripts/decode-product-images.mjs && node scripts/decode-category-images.mjs"
   },
   "dependencies": {
     "@headlessui/react": "^2.2.0",
