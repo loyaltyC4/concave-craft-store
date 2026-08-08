@@ -42,10 +42,15 @@ export function ProductDescription({ product }: { product: Product }) {
 
   return (
     <div className="flex flex-col">
-      <h1 className="text-3xl font-semibold leading-tight md:text-4xl">
-        {product.title}
-      </h1>
-
+      {/*
+       * The H1 is rendered by the server page (app/product/[handle]/page.tsx)
+       * *outside* the Suspense boundary that wraps this client component.
+       * Reason: this component reads useSearchParams() to compute the
+       * currently-selected variant's price, which turns the whole subtree
+       * dynamic and pushes it into the flight payload. Left here, the H1
+       * would be missing from the initial HTML — a fatal on-page SEO gap
+       * on 154 product pages. Keep this component free of the H1.
+       */}
       <div className="mt-4 flex flex-wrap items-center gap-3">
         <span className="flex items-baseline gap-1.5 rounded-full bg-[#c5f23c] px-4 py-1.5 text-lg font-semibold text-black">
           {!selected && spansRange ? (

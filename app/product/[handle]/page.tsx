@@ -216,6 +216,16 @@ export default async function ProductPage(props: {
             </div>
           </div>
           <div className="basis-full lg:basis-2/5">
+            {/*
+             * H1 rendered here on the server so it lands in the initial
+             * static HTML — the ProductDescription below is a client
+             * component (useSearchParams for variant pricing) sitting
+             * inside a Suspense boundary, which would keep the H1 out of
+             * the crawled markup if it lived inside the client component.
+             */}
+            <h1 className="text-3xl font-semibold leading-tight md:text-4xl">
+              {product.title}
+            </h1>
             <Suspense fallback={null}>
               <ProductDescription product={product} />
             </Suspense>
