@@ -47,18 +47,22 @@ export function NewsletterForm({ source = "footer" }: { source?: string }) {
       onSubmit={handleSubmit}
       className="flex w-full max-w-sm items-center gap-2"
     >
+      {/*
+       * min-h-11 (44px) meets WCAG 2.5.5 minimum tap target on mobile.
+       * Previous py-2.5 gave ~40px which is technically under the floor.
+       */}
       <input
         type="email"
         value={email}
         onChange={(e) => setEmail(e.target.value)}
         placeholder="you@email.com"
         aria-label="Email address"
-        className="w-full rounded-full border border-white/15 bg-white/[0.03] px-4 py-2.5 text-sm text-[#f3f1ea] placeholder:text-neutral-500 focus:border-[#c5f23c]/60"
+        className="min-h-11 w-full rounded-full border border-white/15 bg-white/[0.03] px-4 text-sm text-[#f3f1ea] placeholder:text-neutral-500 focus:border-[#c5f23c]/60"
       />
       <button
         type="submit"
         disabled={submitting}
-        className="shrink-0 rounded-full bg-[#c5f23c] px-4 py-2.5 text-sm font-semibold text-black transition hover:brightness-110 disabled:opacity-60"
+        className="min-h-11 shrink-0 rounded-full bg-[#c5f23c] px-5 text-sm font-semibold text-black transition hover:brightness-110 disabled:opacity-60"
       >
         {submitting ? "…" : "Join"}
       </button>
