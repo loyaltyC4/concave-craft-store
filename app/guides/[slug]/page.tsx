@@ -7,9 +7,19 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 
+/**
+ * Prerender every published guide and refuse unknown slugs with a real 404.
+ *
+ * Without `dynamicParams = false`, Next served unknown /guides/<slug> URLs
+ * with HTTP 200 and the not-found body — a soft 404 that search engines
+ * count as a thin duplicate of the homepage instead of a missing page.
+ * The product route already had this guard; the guides route did not.
+ */
 export function generateStaticParams() {
   return allGuides.map((g) => ({ slug: g.slug }));
 }
+
+export const dynamicParams = false;
 
 export async function generateMetadata(props: {
   params: Promise<{ slug: string }>;
