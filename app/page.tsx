@@ -70,43 +70,11 @@ export default async function HomePage() {
     <div className="bg-[#0b0c0e] text-[#f3f1ea]">
       {/* HERO */}
       <section className="relative flex min-h-[86vh] items-center overflow-hidden">
-        <HeroInteractiveScene
-          hotspots={[
-            // Top-4 by GSC clicks over the last 28 days. Coordinates keyed to
-            // the right half of the hero (where object-right pushes the
-            // image subject). Tune once the actual composition is verified —
-            // the current /brand/hero.jpg composition should place these
-            // over park sets / obstacles / a complete deck.
-            {
-              x: 62,
-              y: 44,
-              title: "Alloy Park Set 4-in-1",
-              price: "$59.95",
-              href: "/product/alloy-fingerboard-park-set-4-in-1-terrain-combo",
-            },
-            {
-              x: 76,
-              y: 66,
-              title: "Brick Wall Obstacle",
-              price: "$24.95",
-              href: "/product/fingerboard-obstacles-brick-wall",
-            },
-            {
-              x: 84,
-              y: 32,
-              title: "DTZERO Pro Complete",
-              price: "$21.95",
-              href: "/product/dtzero-1-4-series-pro-fingerboard-complete-maple",
-            },
-            {
-              x: 70,
-              y: 80,
-              title: "Park Set with Stairs",
-              price: "$74.95",
-              href: "/product/wide-deep-concave-fingerboard-park-set-with-stairs",
-            },
-          ]}
-        >
+        {/* Hotspots intentionally disabled — the current /brand/hero.jpg is a
+            hand-and-deck close-up, not the park composition the pins were
+            keyed to. Re-add hotspots (via the `hotspots` prop) once the hero
+            image is a park scene where the pins can point at obstacles. */}
+        <HeroInteractiveScene>
           <Image
             src="/brand/hero.jpg"
             alt="A hand riding a precision fingerboard on a wooden desk"
