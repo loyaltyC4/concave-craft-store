@@ -2,6 +2,7 @@ import { guides as guidesBatch1, type Guide } from "./guides-data";
 import { guidesBatch2 } from "./guides-data-2";
 import { guidesBatch3 } from "./guides-data-3";
 import { guidesBatch4 } from "./guides-data-4";
+import { guidesBatch5 } from "./guides-data-5";
 
 export type { Guide, GuideSection, GuideTable, GuideFaq } from "./guides-data";
 
@@ -11,6 +12,7 @@ export const allGuides: Guide[] = [
   ...guidesBatch2,
   ...guidesBatch3,
   ...guidesBatch4,
+  ...guidesBatch5,
 ];
 
 export function getGuide(slug: string): Guide | undefined {
