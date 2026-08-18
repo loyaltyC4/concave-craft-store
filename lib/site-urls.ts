@@ -84,11 +84,18 @@ export async function getProductUrls(): Promise<SiteUrl[]> {
   }));
 }
 
-/** Editorial guides — the topical-authority layer. */
+/**
+ * Editorial guides — the topical-authority layer.
+ *
+ * The Guide type field is `updated` (an ISO date string), not `updatedAt`.
+ * The previous cast to `{ updatedAt?: string }` never resolved, so every
+ * guide got stamped with build time and the "don't teach crawlers to ignore
+ * lastModified" comment on getProductUrls quietly no longer applied here.
+ */
 export async function getGuideUrls(): Promise<SiteUrl[]> {
   return allGuides.map((g) => ({
     url: `${baseUrl}/guides/${g.slug}`,
-    lastModified: (g as { updatedAt?: string }).updatedAt ?? new Date().toISOString(),
+    lastModified: g.updated ?? new Date().toISOString(),
     changeFrequency: "monthly" as const,
     priority: 0.7,
   }));
