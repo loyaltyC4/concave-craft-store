@@ -5,7 +5,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Shipping & Returns",
   description:
-    "Fingerboard Lab shipping times, worldwide delivery, and our 30-day returns policy — return shipping paid by the customer.",
+    "Fingerboard Lab shipping times, worldwide delivery, and our photo-based 30-day returns policy — no return postage on most orders.",
   alternates: { canonical: "/shipping-returns" },
 };
 
@@ -14,13 +14,19 @@ export default function ShippingReturnsPage() {
     <PageShell
       eyebrow="Policies"
       title="Shipping & returns."
-      intro="Fast dispatch, worldwide delivery, and a no-drama 30-day return window. Return shipping is paid by the customer."
+      intro="Worldwide delivery, honest transit windows, and a no-drama 30-day return window."
     >
       <Section heading="Dispatch & delivery">
         <p>
-          Orders are packed and dispatched within 1–2 business days. Standard
-          shipping typically arrives in 3–8 business days; express in 1–3. Exact
-          transit time depends on your destination and is shown at checkout.
+          Most orders arrive in 12–25 business days depending on your
+          destination. Express delivery, where available, ships in 5–10
+          business days. Your specific estimate is shown at checkout.
+        </p>
+        <p>
+          Your order goes to our maker within 1–2 business days of purchase.
+          Because we work with a small maker network rather than warehousing
+          every board ourselves, most of the total time is the parcel in
+          transit to you rather than sitting on our shelf.
         </p>
         <p>
           We ship worldwide. Any import duties or taxes for international orders
@@ -37,36 +43,37 @@ export default function ShippingReturnsPage() {
       </Section>
       <Section heading="30-day returns">
         <p>
-          Not feeling your setup? Return unused items in their original
-          condition within 30 days of delivery for a refund or exchange. Email{" "}
+          Not feeling your setup? Email{" "}
           <a
             href={`mailto:${SUPPORT_EMAIL}`}
             className="text-[#c5f23c] hover:underline"
           >
             {SUPPORT_EMAIL}
           </a>{" "}
-          with your order number and we&apos;ll send return instructions.
+          within 30 days of delivery with your order number and a photo of
+          the item. In most cases we refund without asking for the item back —
+          international return postage on small items usually costs more than
+          the item itself, and we'd rather you get on with skating something
+          you actually want.
         </p>
         <p>
           <strong className="text-[#f3f1ea]">
-            Return shipping is paid by the customer.
+            No return postage required for most refunds.
           </strong>{" "}
-          Please use a tracked service and keep the tracking number — we
-          can&apos;t refund a return we never receive. Once the parcel lands
-          back with us and passes a condition check, your refund goes out to the
-          original payment method within 3 business days.
+          Refunds go to the original payment method within 3 business days of
+          the photo landing in our inbox.
         </p>
         <p>
-          If your item arrives damaged, defective, or is the wrong item, we
-          cover return shipping — send a photo to{" "}
+          For genuine faults — damage in transit, missing parts, wrong item —
+          send a photo to{" "}
           <a
             href={`mailto:${SUPPORT_EMAIL}`}
             className="text-[#c5f23c] hover:underline"
           >
             {SUPPORT_EMAIL}
           </a>{" "}
-          within 14 days of delivery and we&apos;ll sort a prepaid label or a
-          replacement, whichever you prefer.
+          within 14 days of delivery and we&apos;ll ship a replacement at no
+          cost.
         </p>
         <p>
           Custom-pressed decks and clearance items are final sale unless they

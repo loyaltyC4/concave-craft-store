@@ -33,11 +33,11 @@ const FAQS: Faq[] = [
   },
   {
     q: "Do you ship worldwide?",
-    a: "Yes, we ship worldwide. Orders are dispatched within 1–2 business days, with standard delivery typically 3–8 business days and express 1–3. Exact options and cost are shown at checkout.",
+    a: "Yes, we ship worldwide. Most orders arrive within 12–25 business days depending on destination; express delivery, where available, takes 5–10. Your order goes to our maker within 1–2 business days of purchase — most of the total time is the parcel in transit to you.",
   },
   {
     q: "What's your return policy?",
-    a: "Unused items in original condition can be returned within 30 days for a refund or exchange. Custom-pressed decks and clearance items are final sale unless faulty. Email us to start a return.",
+    a: "Return within 30 days by emailing us with your order number and a photo of the item — we refund most orders without asking for the item back. Custom-pressed decks and clearance items are final sale unless faulty.",
   },
   {
     q: "How do payments work?",

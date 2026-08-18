@@ -115,7 +115,13 @@ export default async function ProductPage(props: {
     "@type": "Product",
     name: product.title,
     description: product.description,
-    image: product.images.map((i) => i.url),
+    // JSON-LD image URLs must be absolute. A relative path yields an
+    // unresolvable primary-image field that Google Merchant Center rejects
+    // and that Rich Results Test flags as invalid. Supplier-hosted URLs
+    // (already absolute) pass through unchanged.
+    image: product.images.map((i) =>
+      i.url.startsWith("http") ? i.url : new URL(i.url, baseUrl).toString(),
+    ),
     sku: product.variants[0]?.sku || product.handle,
     brand: { "@type": "Brand", name: SITE_NAME },
     // Only present when real reviews exist — never fabricated.
@@ -128,18 +134,33 @@ export default async function ProductPage(props: {
           },
         }
       : {}),
-    offers: {
-      "@type": "AggregateOffer",
-      availability: product.availableForSale
-        ? "https://schema.org/InStock"
-        : "https://schema.org/OutOfStock",
-      priceCurrency: product.priceRange.minVariantPrice.currencyCode,
-      lowPrice: product.priceRange.minVariantPrice.amount,
-      highPrice: product.priceRange.maxVariantPrice.amount,
-      offerCount: product.variants.length || 1,
-      url: `${baseUrl}/product/${product.handle}`,
-      seller: { "@type": "Organization", name: SITE_NAME },
-    },
+    // Single-variant products emit Offer; multi-variant emit AggregateOffer.
+    // Merchant Center rejects AggregateOffer with offerCount:1 as invalid,
+    // which blocks the product from the Shopping feed entirely.
+    offers:
+      product.variants.length > 1
+        ? {
+            "@type": "AggregateOffer",
+            availability: product.availableForSale
+              ? "https://schema.org/InStock"
+              : "https://schema.org/OutOfStock",
+            priceCurrency: product.priceRange.minVariantPrice.currencyCode,
+            lowPrice: product.priceRange.minVariantPrice.amount,
+            highPrice: product.priceRange.maxVariantPrice.amount,
+            offerCount: product.variants.length,
+            url: `${baseUrl}/product/${product.handle}`,
+            seller: { "@type": "Organization", name: SITE_NAME },
+          }
+        : {
+            "@type": "Offer",
+            availability: product.availableForSale
+              ? "https://schema.org/InStock"
+              : "https://schema.org/OutOfStock",
+            priceCurrency: product.priceRange.minVariantPrice.currencyCode,
+            price: product.priceRange.minVariantPrice.amount,
+            url: `${baseUrl}/product/${product.handle}`,
+            seller: { "@type": "Organization", name: SITE_NAME },
+          },
   };
 
   const breadcrumbJsonLd = {
@@ -282,8 +303,8 @@ export default async function ProductPage(props: {
                     </div>
                   ) : null}
                   <div className="flex justify-between border-b border-white/10 py-2">
-                    <dt className="text-neutral-500">Dispatch</dt>
-                    <dd className="text-neutral-200">1–2 business days</dd>
+                    <dt className="text-neutral-500">Ships in</dt>
+                    <dd className="text-neutral-200">12–25 business days</dd>
                   </div>
                   <div className="flex justify-between border-b border-white/10 py-2">
                     <dt className="text-neutral-500">Returns</dt>
