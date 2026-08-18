@@ -24,9 +24,9 @@ export const guides: Guide[] = [
   {
     slug: "fingerboard-sizing-guide",
     title: "Fingerboard Sizing Guide: 32mm vs 34mm vs 36mm Decks Compared",
-    metaTitle: "Fingerboard Sizing: 32mm vs 34mm vs 36mm Decks",
+    metaTitle: "Fingerboard Sizes Explained: 32mm vs 34mm vs 36mm Chart",
     metaDescription:
-      "Compare fingerboard deck widths from 29mm to 36mm and find the right size for your hand, trick style, and setup goals, plus a quick sizing chart.",
+      "Fingerboard sizes 29mm to 36mm compared side-by-side, with a quick chart, hand-fit tips and which width to pick for the tricks you actually skate.",
     category: "Sizing",
     updated: "2026-07-20",
     readMinutes: 6,
@@ -134,9 +134,9 @@ export const guides: Guide[] = [
   {
     slug: "how-to-press-a-fingerboard-deck",
     title: "How to Press a Fingerboard Deck With a Mold",
-    metaTitle: "How to Press a Fingerboard Deck With a Mold",
+    metaTitle: "How to Press a Fingerboard Deck: Step-by-Step Mold Guide",
     metaDescription:
-      "Learn how to press a wooden fingerboard deck step by step: cutting plies, gluing, clamping in a mold, curing, shaping, and sealing for real pop.",
+      "Press your first fingerboard deck at home. Plies, glue, mold clamping, cure time and finishing - the beginner-friendly guide with the mistakes to avoid.",
     category: "Building",
     updated: "2026-07-20",
     readMinutes: 7,
@@ -214,9 +214,9 @@ export const guides: Guide[] = [
   {
     slug: "fingerboard-concave-explained",
     title: "Fingerboard Concave Explained: Low vs Medium vs High Concave",
-    metaTitle: "Fingerboard Concave: Low vs Medium vs High",
+    metaTitle: "Fingerboard Concave Explained: Low, Medium & High Guide",
     metaDescription:
-      "Understand fingerboard concave: the lengthwise curve across a deck's width, how low, medium, and high concave feel, and which suits your style.",
+      "What is fingerboard concave? Low, medium and high concave compared - the feel of each under your fingers and how to pick your first deck's curve.",
     category: "Building",
     updated: "2026-07-20",
     readMinutes: 6,
@@ -315,9 +315,9 @@ export const guides: Guide[] = [
   {
     slug: "how-to-choose-fingerboard-trucks",
     title: "How to Choose Fingerboard Trucks: Width, Bushings & Sizing",
-    metaTitle: "How to Choose Fingerboard Trucks: Sizing Guide",
+    metaTitle: "How to Choose Fingerboard Trucks: Single vs Double Axle",
     metaDescription:
-      "Learn how to choose fingerboard trucks: matching truck width to your deck, single vs double baseplates, bushing types, and kingpin styles explained.",
+      "Single axle or double axle fingerboard trucks? A plain-English comparison of truck styles, widths, bushings and kingpins - how to pick right first time.",
     category: "Buying",
     updated: "2026-07-20",
     readMinutes: 6,

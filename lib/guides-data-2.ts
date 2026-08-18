@@ -197,9 +197,9 @@ export const guidesBatch2: Guide[] = [
   {
     slug: "wooden-fingerboard-ramps-diy-park-guide",
     title: "Wooden Fingerboard Ramps: DIY & Buying Guide",
-    metaTitle: "Wooden Fingerboard Ramps: DIY & Buying Guide",
+    metaTitle: "How to Make Fingerboard Ramps: Wooden DIY Park Guide",
     metaDescription:
-      "Buying vs. building wooden fingerboard ramps: obstacle types, what makes a good desk setup, and basic DIY tips for stable, smooth parks on a budget.",
+      "Build a fingerboard park from wood: ramp templates, obstacle sizes, materials list and finish tips - with cheap and no-tools options for beginners.",
     category: "Buying",
     updated: "2026-07-23",
     readMinutes: 7,
@@ -308,9 +308,9 @@ export const guidesBatch2: Guide[] = [
   {
     slug: "fingerboard-grip-tape-guide",
     title: "Fingerboard Grip Tape Guide: Foam vs Sandpaper-Style",
-    metaTitle: "Fingerboard Grip Tape: Foam vs Sandpaper-Style Guide",
+    metaTitle: "Best Fingerboard Grip Tape: Foam vs Sandpaper Compared",
     metaDescription:
-      "Compare foam fingerboard grip tape vs sandpaper-style grip: feel, grip level, realism, cost, and how to cut and apply each type cleanly to your deck.",
+      "The best fingerboard grip tape for your setup: foam vs sandpaper-style compared, application tips and how to pick for feel, grip and cost.",
     category: "Buying",
     updated: "2026-07-23",
     readMinutes: 5,
@@ -388,9 +388,9 @@ export const guidesBatch2: Guide[] = [
   {
     slug: "how-to-tune-fingerboard-trucks",
     title: "How to Tune Fingerboard Trucks for Speed vs Stability",
-    metaTitle: "How to Tune Fingerboard Trucks: Speed vs Stability",
+    metaTitle: "How to Tune Fingerboard Trucks Step by Step",
     metaDescription:
-      "Adjust kingpin tightness and bushing durometer to balance fingerboard truck turning response against stability. Step-by-step incremental tuning guide.",
+      "Adjust fingerboard truck tightness and bushings the right way - a step-by-step tuning guide balancing speed against control, with per-setup examples.",
     category: "Tuning",
     updated: "2026-07-23",
     readMinutes: 6,
