@@ -22,7 +22,7 @@ export const guidesBatch3: Guide[] = [
     metaTitle: "Which Fingerboard Mold Should You Buy? Full Comparison",
     metaDescription:
       "Compare fingerboard molds by concave depth, kick height, piece count and material. A decision guide to picking the right press mold for how you actually skate.",
-    category: "Deck Building",
+    category: "Buying",
     readMinutes: 9,
     updated: "2026-08-18",
     heroSummary:
@@ -150,7 +150,7 @@ export const guidesBatch3: Guide[] = [
     metaTitle: "Fingerboard Bearings Guide: What Actually Matters",
     metaDescription:
       "Fingerboard bearings compared honestly: ABEC ratings are largely marketing at this scale. Learn what matters — fit, seals and cleanliness — and how to pick.",
-    category: "Hardware",
+    category: "Buying",
     readMinutes: 7,
     updated: "2026-08-18",
     heroSummary:
@@ -250,7 +250,7 @@ export const guidesBatch3: Guide[] = [
     metaTitle: "Fingerboard Wheel Durometer Explained (Soft vs Hard)",
     metaDescription:
       "Fingerboard wheel durometer decoded. The A-scale numbers (78A–101A), what soft, medium and hard wheels do differently, and which durometer suits how you skate.",
-    category: "Hardware",
+    category: "Tuning",
     readMinutes: 6,
     updated: "2026-08-18",
     heroSummary:
@@ -349,7 +349,7 @@ export const guidesBatch3: Guide[] = [
     metaTitle: "Fingerboard Foam Tape vs Standard Grip Tape",
     metaDescription:
       "Foam-style fingerboard tape (FBS-style pads) versus standard sandpaper-grip tape: what each does, when to use which, and how to apply either without air bubbles.",
-    category: "Grip",
+    category: "Tuning",
     readMinutes: 6,
     updated: "2026-08-18",
     heroSummary:
@@ -436,7 +436,7 @@ export const guidesBatch3: Guide[] = [
     metaTitle: "How to Build a DIY Fingerboard Bowl (Templates Inside)",
     metaDescription:
       "Build your own fingerboard bowl at home. Materials, tools, dimensions and step-by-step for a plywood or MDF mini-bowl, plus finish and coping options.",
-    category: "Ramps & Parks",
+    category: "Building",
     readMinutes: 8,
     updated: "2026-08-18",
     heroSummary:
@@ -535,7 +535,7 @@ export const guidesBatch3: Guide[] = [
     metaTitle: "Fingerboard Grind Rail: Setup, Wax and Positioning Guide",
     metaDescription:
       "How to set up a fingerboard grind rail so tricks actually work — height, wax, spacing from ramps and the two mistakes that make every rail feel wrong.",
-    category: "Ramps & Parks",
+    category: "Building",
     readMinutes: 5,
     updated: "2026-08-18",
     heroSummary:
@@ -617,7 +617,7 @@ export const guidesBatch3: Guide[] = [
     metaTitle: "Best Fingerboard Obstacles Compared (What to Buy First)",
     metaDescription:
       "A honest comparison of the main fingerboard obstacle types — ramps, rails, ledges, boxes, stairs and bowls — with what each one teaches and the order to buy them in.",
-    category: "Ramps & Parks",
+    category: "Buying",
     readMinutes: 7,
     updated: "2026-08-18",
     heroSummary:
@@ -714,7 +714,7 @@ export const guidesBatch3: Guide[] = [
     metaTitle: "How to Upgrade a Tech Deck (or When to Just Buy Real)",
     metaDescription:
       "A Tech Deck upgrade path: which parts to swap first for the biggest improvement, which upgrades aren't worth it, and when to stop upgrading and buy a real fingerboard.",
-    category: "Beginner",
+    category: "Buying",
     readMinutes: 6,
     updated: "2026-08-18",
     heroSummary:
@@ -817,7 +817,7 @@ export const guidesBatch3: Guide[] = [
     metaTitle: "Blank Fingerboard Decks: How to Choose, Paint and Seal",
     metaDescription:
       "A guide to blank fingerboard decks — why builders choose them over graphic decks, what to look for when buying, and how to paint and seal one that lasts.",
-    category: "Deck Building",
+    category: "Building",
     readMinutes: 7,
     updated: "2026-08-18",
     heroSummary:
