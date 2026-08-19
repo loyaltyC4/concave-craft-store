@@ -83,6 +83,13 @@ export default function ShippingReturnsPage() {
           cost.
         </p>
         <p>
+          For higher-value items over $100 — mostly deck-pressing molds and
+          pro park sets — we may ask you to return the item before completing
+          a change-of-mind refund. Faulty items still ship replacements at no
+          cost, no return required. This is a small guard against a rare kind
+          of fraud that would otherwise cost us the entire item value.
+        </p>
+        <p>
           Custom-pressed decks and clearance items are final sale unless they
           arrive faulty.
         </p>

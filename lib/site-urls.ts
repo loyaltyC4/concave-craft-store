@@ -32,6 +32,7 @@ const STATIC_PAGES: { path: string; priority: number; freq: SiteUrl["changeFrequ
     { path: "/contact", priority: 0.4, freq: "yearly" },
     { path: "/faq", priority: 0.5, freq: "monthly" },
     { path: "/shipping-returns", priority: 0.4, freq: "monthly" },
+    { path: "/returns", priority: 0.5, freq: "monthly" },
     { path: "/privacy", priority: 0.2, freq: "yearly" },
     { path: "/terms", priority: 0.2, freq: "yearly" },
   ];
