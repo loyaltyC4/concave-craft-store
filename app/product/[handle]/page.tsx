@@ -58,41 +58,68 @@ export async function generateMetadata(props: {
   };
 }
 
-const GUIDE_FOR_COLLECTION: Record<string, { label: string; href: string }> = {
-  completes: {
-    label: "New to it? Read the beginner buying guide",
-    href: "/guides/best-beginner-fingerboard-setup",
-  },
-  decks: {
-    label: "Not sure on width? Read the sizing guide",
-    href: "/guides/fingerboard-sizing-guide",
-  },
-  trucks: {
-    label: "How to choose the right trucks",
-    href: "/guides/how-to-choose-fingerboard-trucks",
-  },
-  wheels: {
-    label: "Keep them rolling: clean your bearings and wheels",
-    href: "/guides/how-to-clean-fingerboard-bearings-and-wheels",
-  },
-  "grip-tape": {
-    label: "Which grip tape should you use?",
-    href: "/guides/fingerboard-grip-tape-guide",
-  },
-  "tuning-hardware": {
-    label: "Dial in your setup: the bushings guide",
-    href: "/guides/fingerboard-bushings-guide",
-  },
-  "deck-building": {
-    label: "Learn how to press a deck with a mold",
-    href: "/guides/how-to-press-a-fingerboard-deck",
-  },
-  "ramps-obstacles": {
-    label: "Build your own park: the DIY ramp guide",
-    href: "/guides/wooden-fingerboard-ramps-diy-park-guide",
-  },
-  "park-kits": { label: "Explore all build guides", href: "/guides" },
-  "storage-display": { label: "Explore all build guides", href: "/guides" },
+type GuideLink = { label: string; href: string };
+
+/**
+ * Up to 3 guides per collection, product pages -> guides.
+ *
+ * Originally one guide per collection (the 14 launch guides). Expanded to
+ * surface the 27 guides added across the SEO content batches (P0/P1/P2),
+ * since a brand-new guide with zero internal links rarely gets crawled --
+ * this is the mechanism that gets Google to actually visit them. First
+ * entry per collection keeps the original hand-picked link; the rest pull
+ * from the newer batches, prioritised by what a shopper on that category
+ * actually wants to know next.
+ */
+const GUIDES_FOR_COLLECTION: Record<string, GuideLink[]> = {
+  completes: [
+    { label: "New to it? Read the beginner buying guide", href: "/guides/best-beginner-fingerboard-setup" },
+    { label: "Upgrading a Tech Deck instead? Read this first", href: "/guides/how-to-upgrade-your-tech-deck" },
+    { label: "Which deck shape should you ride?", href: "/guides/fingerboard-deck-shapes-compared" },
+  ],
+  decks: [
+    { label: "Not sure on width? Read the sizing guide", href: "/guides/fingerboard-sizing-guide" },
+    { label: "5-ply vs 7-ply decks compared", href: "/guides/5-ply-vs-7-ply-fingerboard-decks" },
+    { label: "Buying a blank deck to paint or press yourself?", href: "/guides/blank-fingerboard-decks-choosing-and-painting" },
+  ],
+  trucks: [
+    { label: "How to choose the right trucks", href: "/guides/how-to-choose-fingerboard-trucks" },
+    { label: "Base angles and kingpins explained", href: "/guides/fingerboard-truck-base-angles-and-kingpins" },
+    { label: "Trucks keep falling off? Fix it here", href: "/guides/fingerboard-trucks-falling-off-fix" },
+  ],
+  wheels: [
+    { label: "Keep them rolling: clean your bearings and wheels", href: "/guides/how-to-clean-fingerboard-bearings-and-wheels" },
+    { label: "Which bearings should you buy?", href: "/guides/which-fingerboard-bearings-to-buy" },
+    { label: "Wheel durometer explained: soft vs hard", href: "/guides/fingerboard-wheel-durometer-explained" },
+  ],
+  "grip-tape": [
+    { label: "Which grip tape should you use?", href: "/guides/fingerboard-grip-tape-guide" },
+    { label: "Foam tape vs standard grip tape", href: "/guides/fingerboard-foam-tape-guide" },
+  ],
+  "tuning-hardware": [
+    { label: "Dial in your setup: the bushings guide", href: "/guides/fingerboard-bushings-guide" },
+    { label: "How to tune your trucks step by step", href: "/guides/how-to-tune-fingerboard-trucks" },
+    { label: "Do you actually need riser pads?", href: "/guides/fingerboard-riser-pads-explained" },
+  ],
+  "deck-building": [
+    { label: "Learn how to press a deck with a mold", href: "/guides/how-to-press-a-fingerboard-deck" },
+    { label: "Which fingerboard mold should you buy?", href: "/guides/which-fingerboard-mold-to-buy" },
+    { label: "Assembling a fingerboard from parts", href: "/guides/how-to-assemble-a-fingerboard" },
+  ],
+  "ramps-obstacles": [
+    { label: "Build your own park: the DIY ramp guide", href: "/guides/wooden-fingerboard-ramps-diy-park-guide" },
+    { label: "Best fingerboard obstacles compared", href: "/guides/best-fingerboard-obstacles-compared" },
+    { label: "Setting up a grind rail (and waxing it right)", href: "/guides/fingerboard-grind-rail-setup-and-wax" },
+  ],
+  "park-kits": [
+    { label: "Best fingerboard obstacles compared", href: "/guides/best-fingerboard-obstacles-compared" },
+    { label: "How to build a fingerboard bowl", href: "/guides/how-to-build-a-fingerboard-bowl" },
+    { label: "Starting a local fingerboard meetup", href: "/guides/how-to-start-a-fingerboard-club" },
+  ],
+  "storage-display": [
+    { label: "Explore all build guides", href: "/guides" },
+    { label: "Filming your tricks for social", href: "/guides/how-to-film-fingerboard-tricks" },
+  ],
 };
 
 export default async function ProductPage(props: {
@@ -105,9 +132,9 @@ export default async function ProductPage(props: {
   const collectionHandle = await getProductCollection(product.handle);
   const collectionMeta = COLLECTIONS.find((c) => c.handle === collectionHandle);
   const related = await getRelatedProducts(product.handle);
-  const guideLink = collectionHandle
-    ? GUIDE_FOR_COLLECTION[collectionHandle]
-    : undefined;
+  const guideLinks = collectionHandle
+    ? (GUIDES_FOR_COLLECTION[collectionHandle] ?? [])
+    : [];
   const { reviews, average, count } = await getProductReviews(product.handle);
 
   const productJsonLd = {
@@ -250,14 +277,19 @@ export default async function ProductPage(props: {
             <Suspense fallback={null}>
               <ProductDescription product={product} />
             </Suspense>
-            {guideLink ? (
-              <Link
-                href={guideLink.href}
-                className="mt-6 flex items-center justify-between rounded-2xl border border-white/10 bg-white/[0.03] px-4 py-3 text-sm text-neutral-300 transition hover:border-[#c5f23c]/40 hover:text-[#c5f23c]"
-              >
-                {guideLink.label}
-                <span aria-hidden>→</span>
-              </Link>
+            {guideLinks.length > 0 ? (
+              <div className="mt-6 space-y-2">
+                {guideLinks.map((g) => (
+                  <Link
+                    key={g.href}
+                    href={g.href}
+                    className="flex items-center justify-between rounded-2xl border border-white/10 bg-white/[0.03] px-4 py-3 text-sm text-neutral-300 transition hover:border-[#c5f23c]/40 hover:text-[#c5f23c]"
+                  >
+                    {g.label}
+                    <span aria-hidden>→</span>
+                  </Link>
+                ))}
+              </div>
             ) : null}
           </div>
         </div>
