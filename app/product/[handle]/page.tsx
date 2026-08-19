@@ -304,7 +304,7 @@ export default async function ProductPage(props: {
                   ) : null}
                   <div className="flex justify-between border-b border-white/10 py-2">
                     <dt className="text-neutral-500">Ships in</dt>
-                    <dd className="text-neutral-200">12–25 business days</dd>
+                    <dd className="text-neutral-200">7–14 business days</dd>
                   </div>
                   <div className="flex justify-between border-b border-white/10 py-2">
                     <dt className="text-neutral-500">Returns</dt>

@@ -151,19 +151,19 @@ export async function POST(req: NextRequest) {
           fixed_amount: { amount: 0, currency: "usd" },
           display_name: "Free shipping",
           delivery_estimate: {
-            minimum: { unit: "business_day" as const, value: 3 },
-            maximum: { unit: "business_day" as const, value: 8 },
+            minimum: { unit: "business_day" as const, value: 7 },
+            maximum: { unit: "business_day" as const, value: 14 },
           },
         },
       }
     : {
         shipping_rate_data: {
           type: "fixed_amount" as const,
-          fixed_amount: { amount: 495, currency: "usd" },
+          fixed_amount: { amount: 1295, currency: "usd" },
           display_name: "Standard shipping",
           delivery_estimate: {
-            minimum: { unit: "business_day" as const, value: 3 },
-            maximum: { unit: "business_day" as const, value: 8 },
+            minimum: { unit: "business_day" as const, value: 7 },
+            maximum: { unit: "business_day" as const, value: 14 },
           },
         },
       };
@@ -176,20 +176,7 @@ export async function POST(req: NextRequest) {
       shipping_address_collection: {
         allowed_countries: [...ALLOWED_COUNTRIES] as any,
       },
-      shipping_options: [
-        standardShippingOption,
-        {
-          shipping_rate_data: {
-            type: "fixed_amount",
-            fixed_amount: { amount: 1295, currency: "usd" },
-            display_name: "Express shipping",
-            delivery_estimate: {
-              minimum: { unit: "business_day", value: 1 },
-              maximum: { unit: "business_day", value: 3 },
-            },
-          },
-        },
-      ],
+      shipping_options: [standardShippingOption],
       allow_promotion_codes: true,
       success_url: `${origin}/order/success?session_id={CHECKOUT_SESSION_ID}`,
       cancel_url: `${origin}/search`,

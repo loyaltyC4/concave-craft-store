@@ -33,7 +33,7 @@ const FAQS: Faq[] = [
   },
   {
     q: "Do you ship worldwide?",
-    a: "Yes, we ship worldwide. Most orders arrive within 12–25 business days depending on destination; express delivery, where available, takes 5–10. Your order goes to our maker within 1–2 business days of purchase — most of the total time is the parcel in transit to you.",
+    a: "Yes, we ship worldwide for a flat $12.95, free on orders over $150. Most orders arrive within 7–14 business days depending on destination. Your order goes to our maker within 1–2 business days of purchase — most of the total time is the parcel in transit to you.",
   },
   {
     q: "What's your return policy?",

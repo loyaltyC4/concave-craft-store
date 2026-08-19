@@ -23,7 +23,8 @@ export const SOCIALS = {
 };
 
 // Revenue mechanics
-export const FREE_SHIPPING_THRESHOLD = 50; // USD subtotal; must match app/api/checkout logic
+export const FREE_SHIPPING_THRESHOLD = 150; // USD subtotal; must match app/api/checkout logic
+export const SHIPPING_FEE_USD = 12.95; // flat shipping fee under the free-shipping threshold
 export const WELCOME_DISCOUNT_CODE = "LABFIRST10";
 export const WELCOME_DISCOUNT_LABEL = "10% off your first order";
 

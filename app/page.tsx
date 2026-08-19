@@ -48,6 +48,8 @@ export default async function HomePage() {
   const specs = [
     `${totalProducts} products in stock`,
     `Completes from ${entry(collectionProducts[0] ?? [])}`,
+    "$12.95 flat shipping worldwide",
+    "Free shipping over $150",
     "Deck molds & pressing supplies",
     "Free build guides",
     "Free sticker sheet",
@@ -136,9 +138,9 @@ export default async function HomePage() {
             <div className="mt-10 flex flex-wrap gap-2.5">
               {[
                 "Kits from $34.99",
-                "Free sticker sheet",
+                "$12.95 shipping · free over $150",
                 "30-day returns",
-                "Worldwide shipping",
+                "Free sticker sheet",
               ].map((c) => (
                 <span
                   key={c}

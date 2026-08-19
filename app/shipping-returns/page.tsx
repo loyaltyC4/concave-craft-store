@@ -18,15 +18,22 @@ export default function ShippingReturnsPage() {
     >
       <Section heading="Dispatch & delivery">
         <p>
-          Most orders arrive in 12–25 business days depending on your
-          destination. Express delivery, where available, ships in 5–10
-          business days. Your specific estimate is shown at checkout.
+          Most orders arrive in <strong className="text-[#f3f1ea]">7–14 business
+          days</strong> depending on your destination. Your specific estimate
+          is shown at checkout.
         </p>
         <p>
           Your order goes to our maker within 1–2 business days of purchase.
           Because we work with a small maker network rather than warehousing
           every board ourselves, most of the total time is the parcel in
           transit to you rather than sitting on our shelf.
+        </p>
+        <p>
+          Shipping is a flat{" "}
+          <strong className="text-[#f3f1ea]">$12.95</strong> worldwide, and{" "}
+          <strong className="text-[#f3f1ea]">free on orders over $150</strong>.
+          One rate to everywhere we ship — no surprise regional charges at
+          checkout.
         </p>
         <p>
           We ship worldwide. Any import duties or taxes for international orders
