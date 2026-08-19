@@ -31,6 +31,8 @@ export default async function OrderSuccessPage(props: {
   let currency = "usd";
   let items: { name: string; quantity: number; amount: number }[] = [];
   let paid = false;
+  let deliveryCountry: string | null = null;
+  let estimatedDeliveryDate: string | null = null;
 
   if (stripe && session_id) {
     try {
@@ -47,10 +49,34 @@ export default async function OrderSuccessPage(props: {
           quantity: li.quantity ?? 1,
           amount: li.amount_total ?? 0,
         })) ?? [];
+
+      // Google Customer Reviews opt-in needs the delivery country and an
+      // estimated delivery date. Country comes from wherever Stripe actually
+      // collected an address for this order — shipping first, billing as a
+      // fallback for the rare edge case Stripe returns one but not the other.
+      deliveryCountry =
+        session.shipping_details?.address?.country ??
+        session.customer_details?.address?.country ??
+        null;
+
+      // Estimated delivery = order date + midpoint of our published 7–14
+      // business day transit window (10 calendar days). This is a heuristic,
+      // not a tracked promise — Google only uses it to time the review
+      // request email, not to hold us to an exact date.
+      if (session.created) {
+        const estimate = new Date(session.created * 1000);
+        estimate.setDate(estimate.getDate() + 10);
+        estimatedDeliveryDate = estimate.toISOString().slice(0, 10);
+      }
     } catch {
       /* invalid/expired session id — show generic confirmation */
     }
   }
+
+  // Only render the opt-in for a genuinely completed order with enough data
+  // for Google to act on — a half-populated snippet is worse than none.
+  const showReviewsOptIn =
+    paid && !!session_id && !!email && !!deliveryCountry && !!estimatedDeliveryDate;
 
   return (
     <>
@@ -127,6 +153,41 @@ export default async function OrderSuccessPage(props: {
         </div>
       </div>
       <Footer />
+
+      {/*
+       * Google Customer Reviews opt-in. Renders only on a genuinely
+       * completed order — Google's own terms require this to appear
+       * post-purchase, not speculatively. `products` is intentionally
+       * omitted: we don't hold real GTINs for this catalogue yet (see the
+       * Merchant Center product-feed notes), and Google treats the field as
+       * optional — sending fabricated GTINs would be worse than omitting it.
+       */}
+      {showReviewsOptIn && (
+        <>
+          <script
+            src="https://apis.google.com/js/platform.js?onload=renderOptIn"
+            async
+            defer
+          />
+          <script
+            dangerouslySetInnerHTML={{
+              __html: `
+                window.renderOptIn = function() {
+                  window.gapi.load('surveyoptin', function() {
+                    window.gapi.surveyoptin.render({
+                      "merchant_id": 5841358463,
+                      "order_id": ${JSON.stringify(session_id)},
+                      "email": ${JSON.stringify(email)},
+                      "delivery_country": ${JSON.stringify(deliveryCountry)},
+                      "estimated_delivery_date": ${JSON.stringify(estimatedDeliveryDate)}
+                    });
+                  });
+                };
+              `,
+            }}
+          />
+        </>
+      )}
     </>
   );
 }
