@@ -287,7 +287,20 @@ export function staticGetCollectionProducts(handle: string): Product[] {
 
   // Explicit collection membership
   if (collectionMap[handle]) {
-    return productsForHandles(collectionMap[handle]);
+    const products = productsForHandles(collectionMap[handle]);
+
+    // For the Deck Building & Molds category, always render actual mold/press
+    // products first, preserving relative order within each group.
+    if (handle === "deck-building") {
+      const isMold = (p: Product) =>
+        /\b(mold|press)\b/i.test(p.title) ||
+        /\b(mold|press)\b/i.test(p.handle);
+      const molds = products.filter(isMold);
+      const rest = products.filter((p) => !isMold(p));
+      return [...molds, ...rest];
+    }
+
+    return products;
   }
 
   // Unknown handle -> everything (search "all")

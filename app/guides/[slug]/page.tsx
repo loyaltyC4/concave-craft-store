@@ -1,6 +1,8 @@
 import Footer from "components/layout/footer";
 import { FaqList } from "components/faq-list";
+import { GuideRelatedProducts } from "components/guide-related-products";
 import { getGuide, allGuides } from "lib/all-guides";
+import { getGuideProducts } from "lib/guide-products";
 import { SITE_NAME } from "lib/brand";
 import { baseUrl } from "lib/utils";
 import type { Metadata } from "next";
@@ -51,6 +53,11 @@ export default async function GuidePage(props: {
   const related = guide.related
     .map((s) => getGuide(s))
     .filter((g): g is NonNullable<typeof g> => Boolean(g));
+
+  // Products recommended for this specific guide
+  const guideProducts = getGuideProducts(slug);
+  // Split into mid-article (first 2) and end (all 4) for placement variety
+  const midProducts = guideProducts.slice(0, 2);
 
   const articleJsonLd = {
     "@context": "https://schema.org",
@@ -137,6 +144,13 @@ export default async function GuidePage(props: {
                   <p key={j}>{p}</p>
                 ))}
               </div>
+              {/* Mid-article CTA: inject after the first section if we have products */}
+              {i === 0 && midProducts.length > 0 && (
+                <GuideRelatedProducts
+                  products={midProducts}
+                  heading="Shop Related"
+                />
+              )}
             </section>
           ))}
         </div>
@@ -191,7 +205,15 @@ export default async function GuidePage(props: {
           </div>
         ) : null}
 
-        {/* CTA */}
+        {/* End-of-article product strip (all 4 products) */}
+        {guideProducts.length > 0 && (
+          <GuideRelatedProducts
+            products={guideProducts}
+            heading="Related Products"
+          />
+        )}
+
+        {/* Generic CTA */}
         <div className="mt-14 rounded-3xl border border-white/10 bg-gradient-to-br from-[#15171c] to-[#0b0c0e] p-8 text-center">
           <h2 className="text-2xl font-semibold">Ready to build?</h2>
           <p className="mt-2 text-neutral-400">
