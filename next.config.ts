@@ -32,6 +32,39 @@ export default {
         destination: "https://fingerboardlab.com/:path*",
         permanent: true,
       },
+
+      // ── SKU consolidation: Colour-Laminated Deck family ──────────────────
+      // Three separate single-variant products merged into one multi-variant
+      // product at /product/colour-laminated-maple-deck.
+      {
+        source: "/product/32mm-colour-laminated-maple-deck-rounded-edges-pack-of-3",
+        destination: "/product/colour-laminated-maple-deck",
+        permanent: true,
+      },
+      {
+        source: "/product/34mm-colour-laminated-maple-deck-rounded-edges-pack-of-2",
+        destination: "/product/colour-laminated-maple-deck",
+        permanent: true,
+      },
+      {
+        source: "/product/32mm-34mm-colour-laminated-maple-deck-handmade-pack-of-2",
+        destination: "/product/colour-laminated-maple-deck",
+        permanent: true,
+      },
+
+      // ── SKU consolidation: Obstacle Wall family ──────────────────────────
+      // Two separate single-variant products (Brick + Marble) merged into one
+      // product at /product/fingerboard-obstacles-wall with a Finish selector.
+      {
+        source: "/product/fingerboard-obstacles-brick-wall",
+        destination: "/product/fingerboard-obstacles-wall",
+        permanent: true,
+      },
+      {
+        source: "/product/fingerboard-obstacles-marble-wall",
+        destination: "/product/fingerboard-obstacles-wall",
+        permanent: true,
+      },
     ];
   },
   images: {
