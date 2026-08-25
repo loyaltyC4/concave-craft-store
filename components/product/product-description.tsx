@@ -74,9 +74,7 @@ export function ProductDescription({ product }: { product: Product }) {
         ) : null}
 
         {product.availableForSale ? (
-          <span className="text-sm text-neutral-400">
-            In stock · ships 1–2 days
-          </span>
+          <span className="text-sm text-neutral-400">In stock</span>
         ) : (
           <span className="text-sm text-red-400">Currently out of stock</span>
         )}

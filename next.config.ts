@@ -80,6 +80,52 @@ export default {
         destination: "/product/bm-x-team-collab-fingerboard-complete-pro-maple",
         permanent: true,
       },
+
+      // ── Misleading combo/kit/set listings removed (#fix/remove-misleading) ─
+      // Eight park-kit listings removed because the naming ("combo", "set",
+      // "kit") implied multiple items when the product is a single obstacle,
+      // or the description did not show what was included. 301 redirects
+      // consolidate any indexed URLs to the parent category.
+      {
+        source: "/product/fingerboard-training-park-obstacles-and-accessories-combo",
+        destination: "/search/park-kits",
+        permanent: true,
+      },
+      {
+        source: "/product/wide-deep-concave-fingerboard-park-set-with-stairs",
+        destination: "/search/park-kits",
+        permanent: true,
+      },
+      {
+        source: "/product/wooden-professional-finger-skateboard-diy-toy-skateboard-park-technology-parts-deck-special-effects-metal-bracket-bearings-wheel",
+        destination: "/search/park-kits",
+        permanent: true,
+      },
+      {
+        source: "/product/wooden-finger-skateparks-kits-fingerboards-display-rack-metal-alloy-bridge-plastic-finger-boarding-fingertip-toys-digital-deck",
+        destination: "/search/park-kits",
+        permanent: true,
+      },
+      {
+        source: "/product/professional-fingerboard-skatepark-set-with-ramps-obstacles-portable-fingerboard-ramp-for-finger-skateboard-training",
+        destination: "/search/park-kits",
+        permanent: true,
+      },
+      {
+        source: "/product/wooden-fingerboard-obstacle-course-mini-skate-park-set-with-ramps-rails-for-professional-practice",
+        destination: "/search/park-kits",
+        permanent: true,
+      },
+      {
+        source: "/product/professional-wooden-fingerboard-ramp-portable-finger-skatepark-obstacle-with-storage-box-mini-skateboard-training-ramp-for-skate",
+        destination: "/search/park-kits",
+        permanent: true,
+      },
+      {
+        source: "/product/tabletop-fingerboard-park-obstacle-set-miniature-wooden-skate-park-ramp-combo-for-tech-decks-desktop-toy-and-gift-for-teens",
+        destination: "/search/park-kits",
+        permanent: true,
+      },
     ];
   },
   images: {
