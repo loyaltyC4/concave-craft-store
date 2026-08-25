@@ -65,6 +65,21 @@ export default {
         destination: "/product/fingerboard-obstacles-wall",
         permanent: true,
       },
+
+      // ── SKU consolidation: BlackMarket Collab complete ───────────────────
+      // Two duplicate listings for the same physical product consolidated into
+      // the richer bm-x-team-collab handle (4 images vs 1). The short slug
+      // (missing -x-team-) was never a real product and has no redirect yet.
+      {
+        source: "/product/blackmarket-x-team-collab-fingerboard-complete-pro-maple",
+        destination: "/product/bm-x-team-collab-fingerboard-complete-pro-maple",
+        permanent: true,
+      },
+      {
+        source: "/product/blackmarket-collab-fingerboard-complete-pro-maple",
+        destination: "/product/bm-x-team-collab-fingerboard-complete-pro-maple",
+        permanent: true,
+      },
     ];
   },
   images: {
