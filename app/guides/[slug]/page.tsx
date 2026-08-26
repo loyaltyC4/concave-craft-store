@@ -3,7 +3,7 @@ import { FaqList } from "components/faq-list";
 import { GuideRelatedProducts } from "components/guide-related-products";
 import { getGuide, allGuides } from "lib/all-guides";
 import { getGuideProducts } from "lib/guide-products";
-import { SITE_NAME } from "lib/brand";
+import { SITE_NAME, VOLT } from "lib/brand";
 import { baseUrl } from "lib/utils";
 import type { Metadata } from "next";
 import Link from "next/link";
@@ -43,6 +43,16 @@ export async function generateMetadata(props: {
   };
 }
 
+/**
+ * Guides where the custom build page is a natural CTA.
+ * These are guides about blank/raw decks and deck materials — readers are
+ * already thinking about building a personalised deck.
+ */
+const CUSTOM_BUILD_CTA_GUIDES = new Set([
+  "blank-fingerboard-decks-choosing-and-painting",
+  "fingerboard-deck-materials-explained",
+]);
+
 export default async function GuidePage(props: {
   params: Promise<{ slug: string }>;
 }) {
@@ -58,6 +68,8 @@ export default async function GuidePage(props: {
   const guideProducts = getGuideProducts(slug);
   // Split into mid-article (first 2) and end (all 4) for placement variety
   const midProducts = guideProducts.slice(0, 2);
+
+  const showCustomBuildCta = CUSTOM_BUILD_CTA_GUIDES.has(slug);
 
   const articleJsonLd = {
     "@context": "https://schema.org",
@@ -211,6 +223,40 @@ export default async function GuidePage(props: {
             products={guideProducts}
             heading="Related Products"
           />
+        )}
+
+        {/* Custom build CTA — shown on deck material / blank deck guides */}
+        {showCustomBuildCta && (
+          <div className="mt-10 rounded-3xl border border-[#c5f23c]/30 bg-gradient-to-br from-[#15171c] to-[#0b0c0e] p-8">
+            <span
+              className="text-xs font-semibold uppercase tracking-[0.16em]"
+              style={{ color: VOLT }}
+            >
+              Custom builds
+            </span>
+            <h2 className="mt-3 text-2xl font-semibold">
+              Want your own graphic on a real maple deck?
+            </h2>
+            <p className="mt-2 text-neutral-400">
+              Skip the paint and upload your design instead. We press it by hand
+              — your artwork, your size, shipped in days. Starting at $89.
+            </p>
+            <div className="mt-5 flex flex-wrap gap-3">
+              <Link
+                href="/custom"
+                className="rounded-full px-6 py-3 text-sm font-semibold text-black transition hover:brightness-110"
+                style={{ background: VOLT }}
+              >
+                Start a custom build →
+              </Link>
+              <Link
+                href="/search/decks"
+                className="rounded-full border border-white/20 px-6 py-3 text-sm font-semibold transition hover:border-[#c5f23c] hover:text-[#c5f23c]"
+              >
+                Browse blank decks
+              </Link>
+            </div>
+          </div>
         )}
 
         {/* Generic CTA */}

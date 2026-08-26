@@ -27,6 +27,9 @@ const SHORT_LABEL: Record<string, string> = Object.fromEntries(
 export async function Navbar() {
   const collections = await getCollections();
   const links = [
+    // Custom Builds is a premium/high-margin service — placed first for
+    // maximum visibility, before the standard catalog collections.
+    { title: "Custom Builds", path: "/custom" },
     ...collections
       .filter((c) => c.handle)
       .map((c) => ({
@@ -71,7 +74,11 @@ export async function Navbar() {
               <Link
                 href={item.path}
                 prefetch={true}
-                className="whitespace-nowrap text-sm font-medium text-neutral-300 underline-offset-4 transition-colors hover:text-[#c5f23c]"
+                className={`whitespace-nowrap text-sm font-medium underline-offset-4 transition-colors hover:text-[#c5f23c] ${
+                  item.path === "/custom"
+                    ? "font-semibold text-[#c5f23c]"
+                    : "text-neutral-300"
+                }`}
               >
                 {item.title}
               </Link>
