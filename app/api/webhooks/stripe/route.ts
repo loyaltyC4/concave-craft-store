@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import Stripe from "stripe";
 import { getStripe } from "lib/stripe";
+import { getSupabase } from "lib/supabase";
 import {
   decrementInventory,
   recordOrder,
@@ -32,6 +33,47 @@ function extractItems(
       unitAmount: li.price?.unit_amount ?? 0,
     };
   });
+}
+
+/**
+ * If the completed session carries a custom_order_id in its metadata,
+ * update that custom_orders row to 'paid'. This runs alongside — and does
+ * not affect — the existing recordOrder / decrementInventory path for normal
+ * cart orders.
+ */
+async function handleCustomOrderPaid(
+  session: Stripe.Checkout.Session,
+): Promise<void> {
+  const customOrderId = session.metadata?.custom_order_id;
+  if (!customOrderId) return;
+
+  const supabase = getSupabase();
+  if (!supabase) {
+    console.warn(
+      "custom_orders status not updated: Supabase not configured.",
+    );
+    return;
+  }
+
+  const { error } = await supabase
+    .from("custom_orders")
+    .update({
+      status: "paid",
+      stripe_session_id: session.id,
+      updated_at: new Date().toISOString(),
+    })
+    .eq("id", customOrderId)
+    // Guard: only transition from pending_payment (idempotent on re-delivery)
+    .in("status", ["pending_payment"]);
+
+  if (error) {
+    console.error(
+      `Failed to mark custom_order ${customOrderId} as paid:`,
+      error,
+    );
+  } else {
+    console.log(`Custom order ${customOrderId} marked as paid.`);
+  }
 }
 
 export async function POST(req: NextRequest) {
@@ -85,6 +127,20 @@ export async function POST(req: NextRequest) {
       { status: 500 },
     );
   }
+
+  // --- Custom fingerboard build orders (non-exclusive with normal cart path) ---
+  await handleCustomOrderPaid(session);
+
+  // --- Normal cart order path ---
+  // Custom build sessions carry a custom_order_id but no product handle/sku
+  // metadata on line items, so recordOrder will still insert a fbl_orders row
+  // (with an empty items array after extractItems). That's acceptable; the
+  // meaningful record lives in custom_orders. If you'd prefer to skip
+  // fbl_orders insertion for custom builds, uncomment the early-return below.
+  //
+  // if (session.metadata?.custom_order_id) {
+  //   return NextResponse.json({ received: true, custom_order: true });
+  // }
 
   const items = extractItems(session.line_items);
   const shippingAddress =
