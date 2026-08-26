@@ -7,7 +7,10 @@ import {
   recordOrder,
   type OrderItemInput,
 } from "lib/orders";
-import { sendOrderConfirmationEmail } from "lib/email";
+import {
+  sendOrderConfirmationEmail,
+  sendCustomOrderOwnerNotification,
+} from "lib/email";
 
 export const dynamic = "force-dynamic";
 
@@ -37,9 +40,10 @@ function extractItems(
 
 /**
  * If the completed session carries a custom_order_id in its metadata,
- * update that custom_orders row to 'paid'. This runs alongside — and does
- * not affect — the existing recordOrder / decrementInventory path for normal
- * cart orders.
+ * update that custom_orders row to 'paid' and fire an owner notification
+ * email so the order can be manually fulfilled. This runs alongside — and
+ * does not affect — the existing recordOrder / decrementInventory path for
+ * normal cart orders.
  */
 async function handleCustomOrderPaid(
   session: Stripe.Checkout.Session,
@@ -55,7 +59,7 @@ async function handleCustomOrderPaid(
     return;
   }
 
-  const { error } = await supabase
+  const { data: updatedRow, error } = await supabase
     .from("custom_orders")
     .update({
       status: "paid",
@@ -64,15 +68,55 @@ async function handleCustomOrderPaid(
     })
     .eq("id", customOrderId)
     // Guard: only transition from pending_payment (idempotent on re-delivery)
-    .in("status", ["pending_payment"]);
+    .in("status", ["pending_payment"])
+    .select(
+      "id, customer_email, size, wood_upgrade, rush_production, quantity, notes, file_paths, design_help_requested, amount_total",
+    )
+    .single();
 
   if (error) {
     console.error(
       `Failed to mark custom_order ${customOrderId} as paid:`,
       error,
     );
-  } else {
-    console.log(`Custom order ${customOrderId} marked as paid.`);
+    // Do not return early — the row may already be paid (idempotent re-delivery).
+    // We still want to attempt the notification if possible, but without the
+    // fresh row data we cannot, so bail here.
+    return;
+  }
+
+  console.log(`Custom order ${customOrderId} marked as paid.`);
+
+  // --- Owner notification email ---
+  // Wrapped in its own try/catch: a failed email must never cause the webhook
+  // to return an error status (which would trigger Stripe retries and
+  // potentially double-charge or confuse the customer flow).
+  if (updatedRow) {
+    try {
+      await sendCustomOrderOwnerNotification(
+        {
+          orderId: updatedRow.id as string,
+          customerEmail: (updatedRow.customer_email as string) ?? session.customer_details?.email ?? "",
+          size: updatedRow.size as string,
+          woodUpgrade: Boolean(updatedRow.wood_upgrade),
+          rushProduction: Boolean(updatedRow.rush_production),
+          quantity: Number(updatedRow.quantity ?? 1),
+          notes: (updatedRow.notes as string | null) ?? null,
+          filePaths: Array.isArray(updatedRow.file_paths)
+            ? (updatedRow.file_paths as string[])
+            : [],
+          designHelpRequested: Boolean(updatedRow.design_help_requested),
+          amountTotal: Number(updatedRow.amount_total ?? session.amount_total ?? 0),
+        },
+        supabase,
+      );
+    } catch (notifyErr) {
+      // Intentionally swallowed — notification failure must not propagate.
+      console.error(
+        `[custom-order-notify] Unexpected error for order ${customOrderId}:`,
+        notifyErr,
+      );
+    }
   }
 }
 
