@@ -8,6 +8,7 @@ import { HeroVideo } from "components/hero-video";
 import { HeroInteractiveScene } from "components/hero-interactive-scene";
 import { NewsletterForm } from "components/newsletter-form";
 import { COLLECTIONS, COLLECTION_IMAGE, GUIDES, VOLT } from "lib/brand";
+import homepageData from "data/homepage.json";
 
 export const metadata = {
   title: "Fingerboard Lab — Completes, Decks, Molds, Ramps & Parts",
@@ -67,6 +68,8 @@ export default async function HomePage() {
     if (price <= 30) return "Great value";
     return undefined;
   }
+
+  const customPromo = homepageData.custom_build_promo;
 
   return (
     <div className="bg-[#0b0c0e] text-[#f3f1ea]">
@@ -224,6 +227,53 @@ export default async function HomePage() {
             </div>
           ))}
         </div>
+      </section>
+
+      {/* CUSTOM BUILD PROMO — premium upsell placement before category grid */}
+      <section className="mx-auto max-w-7xl px-6 py-10 md:px-12">
+        <Link
+          href={customPromo.cta_href}
+          className="group relative flex flex-col items-start justify-between gap-8 overflow-hidden rounded-3xl border border-[#c5f23c]/30 bg-gradient-to-br from-[#15171c] to-[#0b0c0e] p-8 transition hover:border-[#c5f23c]/60 md:flex-row md:items-center md:p-10"
+        >
+          {/* Subtle glow */}
+          <div
+            className="pointer-events-none absolute right-0 top-0 h-64 w-64 rounded-full opacity-10 blur-3xl"
+            style={{ background: VOLT }}
+          />
+          <div className="relative max-w-xl">
+            <span
+              className="text-xs font-semibold uppercase tracking-[0.18em]"
+              style={{ color: VOLT }}
+            >
+              {customPromo.subheading}
+            </span>
+            <h2 className="mt-3 text-2xl font-semibold md:text-4xl">
+              {customPromo.heading}
+            </h2>
+            <p className="mt-3 text-neutral-400 md:text-base">
+              {customPromo.body}
+            </p>
+            <div className="mt-5 flex flex-wrap gap-2">
+              {customPromo.badges.map((b) => (
+                <span
+                  key={b}
+                  className="rounded-full border border-white/10 bg-white/[0.03] px-3 py-1.5 text-[12px] font-medium text-neutral-300"
+                >
+                  {b}
+                </span>
+              ))}
+            </div>
+          </div>
+          <div className="relative shrink-0">
+            <span
+              className="inline-flex items-center gap-2 rounded-full px-6 py-3.5 text-sm font-semibold text-black transition group-hover:brightness-110"
+              style={{ background: VOLT }}
+            >
+              {customPromo.cta_label}
+              <span aria-hidden>→</span>
+            </span>
+          </div>
+        </Link>
       </section>
 
       {/* CATEGORY TILES */}
