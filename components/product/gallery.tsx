@@ -29,6 +29,15 @@ export function Gallery({
   const buttonClassName =
     "h-full px-6 transition-all ease-in-out hover:scale-110 hover:text-black dark:hover:text-white flex items-center justify-center";
 
+  const activeImageSrc = images[imageIndex]?.src as string;
+  // External images (supplier CDN like alicdn.com) cannot be optimised through
+  // Next.js image optimisation on Vercel's Hobby plan — that endpoint returns
+  // 402 Payment Required for remote URLs, causing broken-image placeholders.
+  // Skipping optimisation for external URLs serves them directly from the CDN,
+  // which returns the image correctly. Local /products/ files are still
+  // optimised as normal.
+  const isExternal = (src: string) => src.startsWith("https://");
+
   return (
     <form>
       <div className="relative aspect-square h-full max-h-[550px] w-full overflow-hidden">
@@ -38,7 +47,8 @@ export function Gallery({
             fill
             sizes="(min-width: 1024px) 66vw, 100vw"
             alt={images[imageIndex]?.altText as string}
-            src={images[imageIndex]?.src as string}
+            src={activeImageSrc}
+            unoptimized={isExternal(activeImageSrc)}
             priority={true}
           />
         )}
@@ -84,6 +94,7 @@ export function Gallery({
                     width={80}
                     height={80}
                     active={isActive}
+                    unoptimized={isExternal(image.src)}
                   />
                 </button>
               </li>
