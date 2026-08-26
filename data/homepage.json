@@ -24,5 +24,13 @@
   "alloy-fingerboard-park-set-4-in-1-terrain-combo",
   "wide-deep-concave-fingerboard-park-set-with-stairs",
   "diy-wooden-fingerboard-park-kit-assemble-yourself-halfpipe-bowl"
- ]
+ ],
+ "custom_build_promo": {
+  "heading": "Your graphic. Our hands.",
+  "subheading": "Custom Fingerboard Builds",
+  "body": "Upload your artwork — a logo, a photo, a sketch — and we press it by hand onto a real maple deck. Choose your width, add a hardwood upgrade, order up to 10 boards. One-of-a-kind, made to order.",
+  "cta_label": "Start your custom build",
+  "cta_href": "/custom",
+  "badges": ["From $89", "32 / 34 / 36mm", "2–3 day production", "Your design"]
+ }
 }

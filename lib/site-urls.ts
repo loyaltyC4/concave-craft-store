@@ -25,6 +25,9 @@ export type SiteUrl = {
 const STATIC_PAGES: { path: string; priority: number; freq: SiteUrl["changeFrequency"] }[] =
   [
     { path: "", priority: 1.0, freq: "daily" },
+    // Custom build page is a high-value conversion page — priority just below
+    // the homepage, above collection and guide pages.
+    { path: "/custom", priority: 0.95, freq: "monthly" },
     { path: "/search", priority: 0.9, freq: "daily" },
     { path: "/guides", priority: 0.8, freq: "weekly" },
     { path: "/glossary", priority: 0.6, freq: "monthly" },
