@@ -25,15 +25,74 @@ const serviceJsonLd = {
   name: "Custom Handmade Fingerboard",
   description:
     "A made-to-order fingerboard deck pressed by hand from real maple veneer with your own graphic or artwork. Choose 32mm, 34mm, or 36mm width, optional select hardwood upgrade, and optional rush 24-48h production.",
+  // Absolute URL required by Google Rich Results Test and Merchant Center.
+  // Uses the same hero.jpg already referenced in this page's openGraph.images.
+  // Constructed via template literal with baseUrl (same pattern as product pages
+  // that absolutise supplier-hosted image URLs with new URL(i.url, baseUrl)).
+  image: [`${baseUrl}/brand/hero.jpg`],
   brand: { "@type": "Brand", name: SITE_NAME },
   offers: {
     "@type": "Offer",
     priceCurrency: "USD",
     price: "89.00",
     priceValidUntil: "2027-12-31",
+    // validFrom resolves the advisory "Missing field validFrom"; set to the
+    // month the custom-build feature launched and this price was first published.
+    // Regular product pages omit this because their price is live from Shopify;
+    // on this static page with a fixed starting price it is meaningful.
+    validFrom: "2025-01-01",
     availability: "https://schema.org/InStock",
     url: `${baseUrl}/custom`,
     seller: { "@type": "Organization", name: SITE_NAME },
+    // Shipping: 2-3 business day production + 7-14 business day transit.
+    // Matches the "How it works" copy and FAQ on this page exactly.
+    // min 9 days = 2 production + 7 transit; max 17 days = 3 production + 14 transit.
+    shippingDetails: {
+      "@type": "OfferShippingDetails",
+      shippingRate: {
+        "@type": "MonetaryAmount",
+        value: "12.95",
+        currency: "USD",
+      },
+      shippingDestination: {
+        "@type": "DefinedRegion",
+        addressCountry: "US",
+      },
+      deliveryTime: {
+        "@type": "ShippingDeliveryTime",
+        handlingTime: {
+          "@type": "QuantitativeValue",
+          minValue: 2,
+          maxValue: 3,
+          unitCode: "DAY",
+        },
+        transitTime: {
+          "@type": "QuantitativeValue",
+          minValue: 7,
+          maxValue: 14,
+          unitCode: "DAY",
+        },
+      },
+    },
+    // Return policy: custom-pressed decks are final sale unless faulty.
+    // This is explicitly stated on /shipping-returns ("Custom-pressed decks
+    // and clearance items are final sale unless they arrive faulty"), in the
+    // trust section on this page, and in the FAQ below. Using
+    // MerchantReturnFiniteReturnWindow with merchantReturnDays:0 and
+    // returnFees:FreeReturn (photo-based, no postage needed per policy)
+    // accurately encodes the final-sale-except-fault policy.
+    // Do NOT use MerchantReturnNotPermitted here -- that blocks all fault
+    // claims too. merchantReturnDays:0 with a finite window correctly
+    // signals change-of-mind returns are not accepted.
+    hasMerchantReturnPolicy: {
+      "@type": "MerchantReturnPolicy",
+      applicableCountry: "US",
+      returnPolicyCategory:
+        "https://schema.org/MerchantReturnFiniteReturnWindow",
+      merchantReturnDays: 0,
+      returnMethod: "https://schema.org/ReturnByMail",
+      returnFees: "https://schema.org/FreeReturn",
+    },
   },
 };
 
