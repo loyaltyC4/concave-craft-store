@@ -1,1 +1,379 @@
-aW1wb3J0IHR5cGUgeyBNZXRhZGF0YSB9IGZyb20gIm5leHQiOwppbXBvcnQgRm9vdGVyIGZyb20gImNvbXBvbmVudHMvbGF5b3V0L2Zvb3RlciI7CmltcG9ydCB7IEN1c3RvbUJ1aWxkQ29uZmlndXJhdG9yIH0gZnJvbSAiLi9jb25maWd1cmF0b3IiOwppbXBvcnQgeyBTSVRFX05BTUUsIFZPTFQgfSBmcm9tICJsaWIvYnJhbmQiOwppbXBvcnQgeyBiYXNlVXJsIH0gZnJvbSAibGliL3V0aWxzIjsKaW1wb3J0IExpbmsgZnJvbSAibmV4dC9saW5rIjsKCmV4cG9ydCBjb25zdCBtZXRhZGF0YTogTWV0YWRhdGEgPSB7CiAgdGl0bGU6CiAgICAiQ3VzdG9tIEhhbmRtYWRlIEZpbmdlcmJvYXJkIOKAlCBQZXJzb25hbGl6ZWQgR3JhcGhpYywgTWFkZSB0byBPcmRlciB8IEZpbmdlcmJvYXJkIExhYiIsCiAgZGVzY3JpcHRpb246CiAgICAiRGVzaWduIHlvdXIgb3duIGN1c3RvbSBmaW5nZXJib2FyZCB3aXRoIHlvdXIgYXJ0d29yaywgbG9nbywgb3IgcGhvdG8uIEhhbmQtcHJlc3NlZCBtYXBsZSBkZWNrLCBwcm8gdHJ1Y2tzLCBiZWFyaW5nIHdoZWVscy4gU3RhcnRpbmcgYXQgJDg5LiBDdXN0b20gZmluZ2VyYm9hcmQsIHBlcnNvbmFsaXplZCBmaW5nZXJib2FyZCwgY3VzdG9tIHRlY2ggZGVjayBhbHRlcm5hdGl2ZS4iLAogIGFsdGVybmF0ZXM6IHsgY2Fub25pY2FsOiAiL2N1c3RvbSIgfSwKICBvcGVuR3JhcGg6IHsKICAgIHRpdGxlOiAiQ3VzdG9tIEhhbmRtYWRlIEZpbmdlcmJvYXJkIOKAlCBNYWRlIHRvIE9yZGVyIiwKICAgIGRlc2NyaXB0aW9uOgogICAgICAiVXBsb2FkIHlvdXIgZGVzaWduLCBjaG9vc2UgeW91ciBzcGVjcywgYW5kIHdlIHByZXNzIGl0IGJ5IGhhbmQuIFlvdXIgZ3JhcGhpYywgeW91ciBzaXplLCBzaGlwcGVkIGluIGRheXMuIiwKICAgIGltYWdlczogW3sgdXJsOiBgJHtiYXNlVXJsfS9icmFuZC9oZXJvLmpwZ2AsIHdpZHRoOiAxMjAwLCBoZWlnaHQ6IDYzMCB9XSwKICB9LAp9OwoKY29uc3Qgc2VydmljZUpzb25MZCA9IHsKICAiQGNvbnRleHQiOiAiaHR0cHM6Ly9zY2hlbWEub3JnIiwKICAiQHR5cGUiOiAiUHJvZHVjdCIsCiAgbmFtZTogIkN1c3RvbSBIYW5kbWFkZSBGaW5nZXJib2FyZCIsCiAgZGVzY3JpcHRpb246CiAgICAiQSBtYWRlLXRvLW9yZGVyIGZpbmdlcmJvYXJkIGRlY2sgcHJlc3NlZCBieSBoYW5kIGZyb20gcmVhbCBtYXBsZSB2ZW5lZXIgd2l0aCB5b3VyIG93biBncmFwaGljIG9yIGFydHdvcmsuIENob29zZSAzMm1tLCAzNG1tLCBvciAzNm1tIHdpZHRoLCBvcHRpb25hbCBzZWxlY3QgaGFyZHdvb2QgdXBncmFkZSwgYW5kIG9wdGlvbmFsIHJ1c2ggMjQtNDhoIHByb2R1Y3Rpb24uIiwKICAvLyBBYnNvbHV0ZSBVU0wgcmVxdWlyZWQgYnkgR29vZ2xlIFJpY2ggUmVzdWx0cyAtLSB1c2UgdGhlIHNhbWUgaGVyby5qcGcgYWxyZWFkeQogIC8vIHJlZmVyZW5jZWQgaW4gdGhpcyBwYWdlJ3Mgb3BlbkdyYXBoLmltYWdlcywgY29uc3RydWN0ZWQgdGhlIHNhbWUgd2F5IGFzCiAgLy8gcHJvZHVjdCBwYWdlcyBkbyAodmlhIGJhc2VVcmwgc28gaXQgcmVtYWlucyBlbnZpcm9ubWVudC1hd2FyZSkuCiAgaW1hZ2U6IFtgJHtiYXNlVXJsfS9icmFuZC9oZXJvLmpwZ2BdLAogIGJyYW5kOiB7ICJAdHlwZSI6ICJCcmFuZCIsIG5hbWU6IFNJVEVFX05BTUUgfSwKICBvZmZlcnM6IHsKICAgICJAdHlwZSI6ICJPZmZlciIsCiAgICBwcmljZUN1cnJlbmN5OiAiVVNEIiwKICAgIHByaWNlOiAiODkuMDAiLAogICAgcHJpY2VWYWxpZFVudGlsOiAiMjAyNy0xMi0zMSIsCiAgICAvLyB2YWxpZEZyb20gcmVzb2x2ZXMgdGhlIGFkdmlzb3J5ICJNaXNzaW5nIGZpZWxkIHZhbGlkRnJvbSI7IHNldCB0bwogICAgLy8gdGhlIG1vbnRoIHRoZSBjdXN0b20tYnVpbGQgZmVhdHVyZSBsYXVuY2hlZCBhbmQgdGhlIHByaWNlIHdhcwogICAgLy8gZmlyc3QgcHVibGlzaGVkLiBSZWd1bGFyIHByb2R1Y3QgcGFnZXMgZG9uJ3QgbmVlZCB0aGlzIGZpZWxkIGJlY2F1c2UKICAgIC8vIHRoZWlyIHByaWNlIGlzIGxpdmUgZnJvbSBTaG9waWZ5OyB0aGlzIHN0YXRpYyBwYWdlIGJlbmVmaXRzIGZyb20gaXQuCiAgICB2YWxpZEZyb206ICIyMDI1LTAxLTAxIiwKICAgIGF2YWlsYWJpbGl0eTogImh0dHBzOi8vc2NoZW1hLm9yZy9JblN0b2NrIiwKICAgIHVybDogYCR7YmFzZVVybH0vY3VzdG9tYCwKICAgIHNlbGxlcjogeyAiQHR5cGUiOiAiT3JnYW5pemF0aW9uIiwgbmFtZTogU0lURV9OQU1FIH0sCiAgICAvLyBTaGlwcGluZzogMi0zIGJ1c2luZXNzIGRheSBwcm9kdWN0aW9uICsgNy0xNCBidXNpbmVzcyBkYXkgdHJhbnNpdC4KICAgIC8vIFRoaXMgbWF0Y2hlcyB0aGUgIkhvdyBpdCB3b3JrcyIgY29weSBhbmQgRkFRIG9uIHRoaXMgcGFnZS4KICAgIC8vIFVzaW5nIG1pbkRheXMvbWF4RGF5cyBvZiB0aGUgdG90YWwgcHJvZHVjdGlvbiArIHRyYW5zaXQgd2luZG93CiAgICAvLyAoOSBkYXlzIG1pbiA9IDIgcHJvZCArIDcgdHJhbnNpdDsgMTcgZGF5cyBtYXggPSAzIHByb2QgKyAxNCB0cmFuc2l0KS4KICAgIHNoaXBwaW5nRGV0YWlsczogeyAiQHR5cGUiOiAiT2ZmZXJTaGlwcGluZ0RldGFpbHMiLAogICAgICBzaGlwcGluZ1JhdGU6IHsgIkB0eXBlIjogIk1vbmV0YXJ5QW1vdW50IiwgdmFsdWU6ICIxMi45NSIsIGN1cnJlbmN5OiAiVVNEIiB9LAogICAgICBzaGlwcGluZ0Rlc3RpbmF0aW9uOiB7ICJAdHlwZSI6ICJEZWZpbmVkUmVnaW9uIiwgYWRkcmVzc0NvdW50cnk6ICJVUyIgfSwKICAgICAgZGVsaXZlcnlUaW1lOiB7CiAgICAgICAgIkB0eXBlIjogIlNoaXBwaW5nRGVsaXZlcnlUaW1lIiwKICAgICAgICBoYW5kbGluZ1RpbWU6IHsgIkB0eXBlIjogIlF1YW50aXRhdGl2ZVZhbHVlIiwgbWluVmFsdWU6IDIsIG1heFZhbHVlOiAzLCB1bml0Q29kZTogIkRBWSIgfSwKICAgICAgICB0cmFuc2l0VGltZTogeyAiQHR5cGUiOiAiUXVhbnRpdGF0aXZlVmFsdWUiLCBtaW5WYWx1ZTogNywgbWF4VmFsdWU6IDE0LCB1bml0Q29kZTogIkRBWSIgfSwKICAgICAgfSwKICAgIH0sCiAgICAvLyBSZXR1cm4gcG9saWN5OiBjdXN0b20tcHJlc3NlZCBkZWNrcyBhcmUgZmluYWwgc2FsZSB1bmxlc3MgZmF1bHR5LgogICAgLy8gVGhpcyBpcyBleHBsaWNpdGx5IHN0YXRlZCBvbiAvYXBwL3NoaXBwaW5nLXJldHVybnMsIHRoZSB0cnVzdCBzZWN0aW9uCiAgICAvLyBvbiB0aGlzIHBhZ2UsIGFuZCB0aGUgRkFRIGJlbG93LiBVc2luZyBNZXJjaGFudFJldHVybkZpbmFsaXR5OiBGaW5hbFNhbGUKICAgIC8vIHJlZmxlY3RzIHRoZSBhY3R1YWwgcG9saWN5IGFjY3VyYXRlbHkuCiAgICBoYXNNZXJjaGFudFJldHVyblBvbGljeTogeyAiQHR5cGUiOiAiTWVyY2hhbnRSZXR1cm5Qb2xpY3kiLAogICAgICBhcHBsaWNhYmxlQ291bnRyeTogIlVTIiwKICAgICAgcmV0dXJuUG9saWN5Q2F0ZWdvcnk6ICJodHRwczovL3NjaGVtYS5vcmcvTWVyY2hhbnRSZXR1cm5GaW5pdGVSZXR1cm5XaW5kb3ciLAogICAgICBtZXJjaGFudFJldHVybkRheXM6IDAsCiAgICAgIHJldHVybk1ldGhvZDogImh0dHBzOi8vc2NoZW1hLm9yZy9SZXR1cm5CeU1haWwiLAogICAgICByZXR1cm5GZWVzOiAiaHR0cHM6Ly9zY2hlbWEub3JnL0ZyZWVSZXR1cm4iLAogICAgfSwKICB9LAp9OwoKY29uc3QgYnJlYWRjcnVtYkpzb25MZCA9IHsKICAiQGNvbnRleHQiOiAiaHR0cHM6Ly9zY2hlbWEub3JnIiwKICAiQHR5cGUiOiAiQnJlYWRjcnVtYkxpc3QiLAogIGl0ZW1MaXN0RWxlbWVudDogWwogICAgeyAiQHR5cGUiOiAiTGlzdEl0ZW0iLCBwb3NpdGlvbjogMSwgbmFtZTogIkhvbWUiLCBpdGVtOiBiYXNlVXJsIH0sCiAgICB7CiAgICAgICJAdHlwZSI6ICJMaXN0SXRlbSIsCiAgICAgIHBvc2l0aW9uOiAyLAogICAgICBuYW1lOiAiQ3VzdG9tIEZpbmdlcmJvYXJkIEJ1aWxkIiwKICAgICAgaXRlbTogYCR7YmFzZVVybH0vY3VzdG9tYCwKICAgIH0sCiAgXSwKfTsKCmV4cG9ydCBkZWZhdWx0IGZ1bmN0aW9uIEN1c3RvbUJ1aWxkUGFnZSgpIHsKICByZXR1cm4gKAogICAgPD4KICAgICAgPHNjcmlwdAogICAgICAgIHR5cGU9ImFwcGxpY2F0aW9uL2xkK2pzb24iCiAgICAgICAgZGFuZ2Vyb3VzbHlTZXRJbm5lckhUTUw9e3sgX19odG1sOiBKU09OLnN0cmluZ2lmeShzZXJ2aWNlSnNvbkxkKSB9fQogICAgICAvPgogICAgICA8c2NyaXB0CiAgICAgICAgdHlwZT0iYXBwbGljYXRpb24vbGQranNvbiIKICAgICAgICBkYW5nZXJvdXNseVNldElubmVySFRNTD17eyBfX2h0bWw6IEpTT04uc3RyaW5naWZ5KGJyZWFkY3J1bWJKc29uTGQpIH19CiAgICAgIC8+CgogICAgICA8ZGl2IGNsYXNzTmFtZT0iYmctWyMwYjBjMGVdIHRleHQtWyNmM2YxZWFdIj4KICAgICAgICB7LyogSEVSTyAqL30KICAgICAgICA8c2VjdGlvbiBjbGFzc05hbWU9InJlbGF0aXZlIG92ZXJmbG93LWhpZGRlbiBib3JkZXItYiBib3JkZXItd2hpdGUvMTAiPgogICAgICAgICAgPGRpdgogICAgICAgICAgICBjbGFzc05hbWU9ImFic29sdXRlIGluc2V0LTAgb3BhY2l0eS0yMCIKICAgICAgICAgICAgc3R5bGU9e3sKICAgICAgICAgICAgICBiYWNrZ3JvdW5kOgogICAgICAgICAgICAgICAgInJhZGlhbC1ncmFkaWVudChlbGxpcHNlIDgwJSA2MCUgYXQgNzAlIDUwJSwgI2M1ZjIzYzIyIDAlLCB0cmFuc3BhcmVudCA3MCUpIiwKICAgICAgICAgICAgfX0KICAgICAgICAgIC8+CiAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT0icmVsYXRpdmUgbXgtYXV0byBtYXgtdy03eGwgcHgtNiBweS0yMCBtZDpweC0xMiBtZDpweS0yOCI+CiAgICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPSJtYXgtdy0yeGwiPgogICAgICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPSJtYi02IGZsZXggaXRlbXMtY2VudGVyIGdhcC0zIj4KICAgICAgICAgICAgICAgIDxzcGFuIGNsYXNzTmFtZT0iaC1weCB3LTciIHN0eWxlPXt7IGJhY2tncm91bmQ6IFZPTFQgfX0gLz4KICAgICAgICAgICAgICAgIDxzcGFuCiAgICAgICAgICAgICAgICAgIGNsYXNzTmFtZT0idGV4dC14cyBmb250LXNlbWlib2xkIHVwcGVyY2FzZSB0cmFja2luZy1bMC4xOGVtXSIKICAgICAgICAgICAgICAgICAgc3R5bGU9e3sgY29sb3I6IFZPTFQgfX0KICAgICAgICAgICAgICAgID4KICAgICAgICAgICAgICAgICAgQ3VzdG9tIGJ1aWxkcwogICAgICAgICAgICAgICAgPC9zcGFuPgogICAgICAgICAgICAgIDwvZGl2PgogICAgICAgICAgICAgIDxoMSBjbGFzc05hbWU9InRleHQtNXhsIGZvbnQtc2VtaWJvbGQgbGVhZGluZy1bMS4wMl0gbWQ6dGV4dC03eGwiPgogICAgICAgICAgICAgICAgWW91ciBncmFwaGljLgogICAgICAgICAgICAgICAgPGJyIC8+CiAgICAgICAgICAgICAgICBPdXIgaGFuZHMuCiAgICAgICAgICAgICAgICA8YnIgLz4KICAgICAgICAgICAgICAgIDxzcGFuIHN0eWxlPXt7IGNvbG9yOiBWT0xUIH19Pk9uZSBib2FyZC48L3NwYW4+CiAgICAgICAgICAgICAgPC9oMT4KICAgICAgICAgICAgICA8cCBjbGFzc05hbWU9Im10LTYgbWF4LXctbGcgdGV4dC1iYXNlIHRleHQtbmV1dHJhbC0zMDAgbWQ6dGV4dC1sZyI+CiAgICAgICAgICAgICAgICBFdmVyeSBjdXN0b20gYm9hcmQgaXMgcHJlc3NlZCBieSBoYW5kIGZyb20gcmVhbCBtYXBsZSB2ZW5lZXIsIHRvCiAgICAgICAgICAgICAgICB5b3VyIGV4YWN0IHNpemUgYW5kIHNwZWMuIFVwbG9hZCB5b3VyIGFydHdvcmsg4oCUIGEgbG9nbywgYSBwaG90bywKICAgICAgICAgICAgICAgIGEgc2tldGNoIOKAlCBhbmQgd2UmYXBvcztsIGJ1aWxkIHNvbWV0aGluZyB0aGF0IGRvZXNuJmFwb3M7dAogICAgICAgICAgICAgICAgZXhpc3QgYW55d2hlcmUgZWxzZS4KICAgICAgICAgICAgICA8L3A+CiAgICAgICAgICAgICAgPGRpdiBjbGFzc05hbWU9Im10LTggZmxleCBmbGV4LXdyYXAgZ2FwLTMiPgogICAgICAgICAgICAgICAge1sKICAgICAgICAgICAgICAgICAgIkZyb20gJDg5IiwKICAgICAgICAgICAgICAgICAgIjMybW0gLyAzNG1tIC8gMzZtbSIsCiAgICAgICAgICAgICAgICAgICIy4oCTMyBkYXkgcHJvZHVjdGlvbiIsCiAgICAgICAgICAgICAgICAgICJVcCB0byAxMCBib2FyZHMiLAogICAgICAgICAgICAgICAgXS5tYXAoKGMpID0+ICgKICAgICAgICAgICAgICAgICAgPHNwYW4KICAgICAgICAgICAgICAgICAgICBrZXk9e2N9CiAgICAgICAgICAgICAgICAgICAgY2xhc3NOYW1lPSJyb3VuZGVkLWZ1bGwgYm9yZGVyIGJvcmRlci13aGl0ZS8xMCBiZy13aGl0ZS9bMC4wM10gcHgtMy41IHB5LTIgdGV4dC1bMTNweF0gdGV4dC1uZXV0cmFsLTMwMCIKICAgICAgICAgICAgICAgICAgPgogICAgICAgICAgICAgICAgICAgIHtjfQogICAgICAgICAgICAgICAgICA8L3NwYW4+CiAgICAgICAgICAgICAgICApKX0KICAgICAgICAgICAgICA8L2Rpdj4KICAgICAgICAgICAgPC9kaXY+CiAgICAgICAgICA8L2Rpdj4KICAgICAgICA8L3NlY3Rpb24+CgogICAgICAgIHsvKiBIT1cgSVQgV09SS1MgKi99CiAgICAgICAgPHNlY3Rpb24gY2xhc3NOYW1lPSJteC1hdXRvIG1heC13LTd4bCBweC02IHB5LTE2IG1kOnB4LTEyIG1kOnB5LTI0Ij4KICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPSJtYi0xMiI+CiAgICAgICAgICAgIDxzcGFuCiAgICAgICAgICAgICAgY2xhc3NOYW1lPSJ0ZXh0LXhzIGZvbnQtc2VtaWJvbGQgdXBwZXJjYXNlIHRyYWNraW5nLVswLjE4ZW1dIgogICAgICAgICAgICAgIHN0eWxlPXt7IGNvbG9yOiBWT0xUIH19CiAgICAgICAgICAgID4KICAgICAgICAgICAgICBUaGUgcHJvY2VzcwogICAgICAgICAgICA8L3NwYW4+CiAgICAgICAgICAgIDxoMiBjbGFzc05hbWU9Im10LTMgdGV4dC0zeGwgZm9udC1zZW1pYm9sZCBtZDp0ZXh0LTV4bCI+CiAgICAgICAgICAgICAgSG93IGl0IHdvcmtzLgogICAgICAgICAgICA8L2gyPgogICAgICAgICAgPC9kaXY+CiAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT0iZ3JpZCBnYXAtOCBtZDpncmlkLWNvbHMtNCI+CiAgICAgICAgICAgIHtbCiAgICAgICAgICAgICAgeyAKICAgICAgICAgICAgICAgIG46ICIwMSIsCiAgICAgICAgICAgICAgICB0aXRsZTogIkNob29zZSB5b3VyIHNwZWNzIiwKICAgICAgICAgICAgICAgIGJvZHk6ICJQaWNrIHlvdXIgZGVjayB3aWR0aCAoMzJtbSwgMzRtbSwgb3IgMzZtbSksIHdoZXRoZXIgeW91IHdhbnQgdGhlIHNlbGVjdCBoYXJkd29vZCB1cGdyYWRlLCBhbmQgaG93IG1hbnkgYm9hcmRzLiBNdWx0aS1ib2FyZCBvcmRlcnMgZ2V0IGEgZGlzY291bnQgYnVpbHQgaW4uIiwKICAgICAgICAgICAgICB9LAogICAgICAgICAgICAgIHsKICAgICAgICAgICAgICAgIG46ICIwMiIsCiAgICAgICAgICAgICAgICB0aXRsZTogIlVwbG9hZCB5b3VyIGRlc2lnbiIsCiAgICAgICAgICAgICAgICBib2R5OiAiRHJvcCBpbiB5b3VyIGFydHdvcmsg4oCUIFBORywgSlBHLCBTVkcsIFBERiwgQUksIG9yIEVQUyDigJQgdXAgdG8gMTAgZmlsZXMuIE5vdCByZWFkeSB3aXRoIGFydHdvcms/IENoZWNrIHRoZSBib3ggZm9yIGRlc2lnbiBoZWxwIGluc3RlYWQgYW5kIG91ciB0ZWFtIHdpbGwgcmVhY2ggb3V0LiIsCiAgICAgICAgICAgICAgfSwKICAgICAgICAgICAgICB7CiAgICAgICAgICAgICAgICBuOiAiMDMiLAogICAgICAgICAgICAgICAgdGl0bGU6ICJXZSBidWlsZCBpdCBieSBoYW5kIiwKICAgICAgICAgICAgICAgIGJvZHk6ICJPdXIgdGVhbSByZXZpZXdzIGV2ZXJ5IHVwbG9hZCBiZWZvcmUgc3RhcnRpbmcuIFN0YW5kYXJkIHByb2R1Y3Rpb24gaXMgMuKAkzMgYnVzaW5lc3MgZGF5cy4gUnVzaCBvcmRlcnMgKDI04oCTNDggaG91cnMpIGFyZSBhdmFpbGFibGUgZm9yIGFuIGFkZGl0aW9uYWwgJDI1LiIsCiAgICAgICAgICAgICAgfSwKICAgICAgICAgICAgICB7CiAgICAgICAgICAgICAgICBuOiAiMDQiLAogICAgICAgICAgICAgICAgdGl0bGU6ICJTaGlwcGVkIHRvIHlvdSIsCiAgICAgICAgICAgICAgICBib2R5OiAiWW91ciBib2FyZCBzaGlwcyB0cmFja2VkIHdvcmxkd2lkZS4gU3RhbmRhcmQgcHJvZHVjdGlvbiBwbHVzIHRyYW5zaXQgaXMgdHlwaWNhbGx5IDnigJMxNiBidXNpbmVzcyBkYXlzIHRvdGFsIGRlcGVuZGluZyBvbiB5b3VyIGxvY2F0aW9uLiBSdXNoIHByb2R1Y3Rpb24gY3V0cyB0aGUgcHJvZHVjdGlvbiBzaWRlIHRvIDHigJMyIGRheXMuIiwKICAgICAgICAgICAgICB9LAogICAgICAgICAgICBdLm1hcCgoc3RlcCkgPT4gKAogICAgICAgICAgICAgIDxkaXYga2V5PXtzdGVwLm59IGNsYXNzTmFtZT0iZmxleCBmbGV4LWNvbCI+CiAgICAgICAgICAgICAgICA8ZGl2CiAgICAgICAgICAgICAgICAgIGNsYXNzTmFtZT0ibWItNCB0ZXh0LTR4bCBmb250LXNlbWlib2xkIgogICAgICAgICAgICAgICAgICBzdHlsZT17eyBjb2xvcjogVk9MVCB9fQogICAgICAgICAgICAgICAgPgogICAgICAgICAgICAgICAgICB7c3RlcC5ufQogICAgICAgICAgICAgICAgPC9kaXY+CiAgICAgICAgICAgICAgICA8aDMgY2xhc3NOYW1lPSJtYi0yIHRleHQtbGcgZm9udC1zZW1pYm9sZCI+e3N0ZXAudGl0bGV9PC9oMz4KICAgICAgICAgICAgICAgIDxwIGNsYXNzTmFtZT0idGV4dC1zbSBsZWFkaW5nLXJlbGF4ZWQgdGV4dC1uZXV0cmFsLTQwMCI+CiAgICAgICAgICAgICAgICAgIHtzdGVwLmJvZHl9CiAgICAgICAgICAgICAgICA8L3A+CiAgICAgICAgICAgICAgPC9kaXY+CiAgICAgICAgICAgICkpfQogICAgICAgICAgPC9kaXY+CiAgICAgICAgPC9zZWN0aW9uPgoKICAgICAgICB7LyogQ09ORklHVVJBVE9SICovfQogICAgICAgIDxzZWN0aW9uCiAgICAgICAgICBpZD0iY29uZmlndXJhdG9yIgogICAgICAgICAgY2xhc3NOYW1lPSJib3JkZXIteSBib3JkZXItd2hpdGUvMTAgYmctWyMwZTEwMTNdIgogICAgICAgID4KICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPSJteC1hdXRvIG1heC13LTN4bCBweC02IHB5LTE2IG1kOnB4LTEyIG1kOnB5LTIwIj4KICAgICAgICAgICAgPGRpdiBjbGFzc05hbWU9Im1iLTEwIj4KICAgICAgICAgICAgICA8c3BhbgogICAgICAgICAgICAgICAgY2xhc3NOYW1lPSJ0ZXh0LXhzIGZvbnQtc2VtaWJvbGQgdXBwZXJjYXNlIHRyYWNraW5nLVswLjE4ZW1dIgogICAgICAgICAgICAgICAgc3R5bGU9e3sgY29sb3I6IFZPTFQgfX0KICAgICAgICAgICAgICA+CiAgICAgICAgICAgICAgICBCdWlsZCB5b3VycwogICAgICAgICAgICAgIDwvc3Bhbj4KICAgICAgICAgICAgICA8aDIgY2xhc3NOYW1lPSJtdC0zIHRleHQtM3hsIGZvbnQtc2VtaWJvbGQgbWQ6dGV4dC00eGwiPgogICAgICAgICAgICAgICAgQ29uZmlndXJlIHlvdXIgYnVpbGQuCiAgICAgICAgICAgICAgPC9oMj4KICAgICAgICAgICAgICA8cCBjbGFzc05hbWU9Im10LTMgdGV4dC1uZXV0cmFsLTQwMCI+CiAgICAgICAgICAgICAgICBGaWxsIGluIHRoZSBmb3JtIGJlbG93LCB1cGxvYWQgeW91ciBhcnR3b3JrIChvciByZXF1ZXN0IGRlc2lnbgogICAgICAgICAgICAgICAgaGVscCksIGFuZCB3ZSZhcG9zO2xsIHRha2UgaXQgZnJvbSB0aGVyZS4KICAgICAgICAgICAgICA8L3A+CiAgICAgICAgICAgIDwvZGl2PgogICAgICAgICAgICA8Q3VzdG9tQnVpbGRDb25maWd1cmF0b3IgLz4KCiAgICAgICAgICAgIHsvKiBEaXNjb3ZlcnkgbGlua3MgLS0gZ2lmdCBhbmQgYnJhbmRlZCBlbnRyeSBwb2ludHMgKi99CiAgICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPSJtdC0xMCBmbGV4IGZsZXgtd3JhcCBpdGVtcy1jZW50ZXIgZ2FwLXgtNiBnYXAteS0yIGJvcmRlci10IGJvcmRlci13aGl0ZS8xMCBwdC04IHRleHQtc20gdGV4dC1uZXV0cmFsLTUwMCI+CiAgICAgICAgICAgICAgPHNwYW4+TG9va2luZyBmb3Igc29tZXRoaW5nIHNwZWNpZmljPzwvc3Bhbj4KICAgICAgICAgICAgICA8TGluawogICAgICAgICAgICAgICAgaHJlZj0iL2N1c3RvbS9naWZ0cyIKICAgICAgICAgICAgICAgIGNsYXNzTmFtZT0idGV4dC1bI2M1ZjIzY10gaG92ZXI6dW5kZXJsaW5lIgogICAgICAgICAgICAgID4KICAgICAgICAgICAgICAgIEJ1eWluZyBhcyBhIGdpZnQg4oaSCiAgICAgICAgICAgICAgPC9MaW5rPgogICAgICAgICAgICAgIDxMaW5rCiAgICAgICAgICAgICAgICBocmVmPSIvY3VzdG9tL2JyYW5kZWQiCiAgICAgICAgICAgICAgICBjbGFzc05hbWU9InRleHQtWyNjNWYyM2NdIGhvdmVyOnVuZGVybGluZSIKICAgICAgICAgICAgICA+CiAgICAgICAgICAgICAgICBPcmRlcmluZyBmb3IgYSBicmFuZCBvciBldmVudCDihpIKICAgICAgICAgICAgICA8L0xpbms+CiAgICAgICAgICAgIDwvZGl2PgogICAgICAgICAgPC9kaXY+CiAgICAgICAgPC9zZWN0aW9uPgoKICAgICAgICB7LyogVFJVU1QgLyBSRUFTU1VSQU5DRSAqL30KICAgICAgICA8c2VjdGlvbiBjbGFzc05hbWU9Im14LWF1dG8gbWF4LXctN3hsIHB4LTYgcHktMTYgbWQ6cHgtMTIgbWQ6cHktMjQiPgogICAgICAgICAgPGRpdiBjbGFzc05hbWU9Im1iLTEwIj4KICAgICAgICAgICAgPHNwYW4KICAgICAgICAgICAgICBjbGFzc05hbWU9InRleHQteHMgZm9udC1zZW1pYm9sZCB1cHBlcmNhc2UgdHJhY2tpbmctWzAuMThlbV0iCiAgICAgICAgICAgICAgc3R5bGU9e3sgY29sb3I6IFZPTFQgfX0KICAgICAgICAgICAgPgogICAgICAgICAgICAgIE91ciBwcm9taXNlCiAgICAgICAgICAgIDwvc3Bhbj4KICAgICAgICAgICAgPGgyIGNsYXNzTmFtZT0ibXQtMyB0ZXh0LTN4bCBmb250LXNlbWlib2xkIG1kOnRleHQtNHhsIj4KICAgICAgICAgICAgICBCdWlsdCB3aXRoIGNhcmUsIGV2ZXJ5IHRpbWUuCiAgICAgICAgICAgIDwvaDI+CiAgICAgICAgICA8L2Rpdj4KICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPSJncmlkIGdhcC02IG1kOmdyaWQtY29scy0zIj4KICAgICAgICAgICAge1sKICAgICAgICAgICAgICB7CiAgICAgICAgICAgICAgICB0aXRsZTogIldlIHJldmlldyBldmVyeSBmaWxlIiwKICAgICAgICAgICAgICAgIGJvZHk6ICJPdXIgdGVhbSBsb29rcyBhdCBldmVyeSB1cGxvYWQgYmVmb3JlIHdlIHN0YXJ0IHByZXNzaW5nLiBJZiB5b3VyIGFydHdvcmsgbmVlZHMgYWRqdXN0aW5nIOKAlCByZXNvbHV0aW9uLCBibGVlZCwgY29sb3VyIG1vZGUg4oCUIHdlJ2xsIHJlYWNoIG91dCBieSBlbWFpbCBiZWZvcmUgY3V0dGluZyBhIHNpbmdsZSBzaGVldC4iLAogICAgICAgICAgICAgIH0sCiAgICAgICAgICAgICAgewogICAgICAgICAgICAgICAgdGl0bGU6ICJIYW5kLXByZXNzZWQgbWFwbGUgY29uc3RydWN0aW9uIiwKICAgICAgICAgICAgICAgIGJvZHk6ICJFdmVyeSBib2FyZCBpcyBwcmVzc2VkIGZyb20gcmVhbCBtYXBsZSB2ZW5lZXIgdXNpbmcgdGhlIHNhbWUgbW9sZHMgYW5kIHRlY2huaXF1ZSBhcyBwcm8tc3BlYyBibGFua3MuIE5vIGluamVjdGlvbi1tb3VsZGVkIHNob3J0Y3V0cy4gVGhlIHJlc3VsdCBoYXMgcmVhbCBjb25jYXZlLCByZWFsIGtpY2ssIGFuZCByaWRlcyBsaWtlIGl0IHNob3VsZC4iLAogICAgICAgICAgICAgIH0sCiAgICAgICAgICAgICAgewogICAgICAgICAgICAgICAgdGl0bGU6ICJDdXN0b20gb3JkZXJzIHBvbGljeSIsCiAgICAgICAgICAgICAgICBib2R5OiAiQmVjYXVzZSBlYWNoIGJvYXJkIGlzIGJ1aWx0IHRvIHlvdXIgc3BlY2lmaWNhdGlvbiwgY3VzdG9tIG9yZGVycyBhcmUgZmluYWwgc2FsZSB1bmxlc3MgdGhlIGl0ZW0gYXJyaXZlcyBmYXVsdHkg4oCUIGNvbnNpc3RlbnQgd2l0aCBvdXIgc3RhbmRhcmQgcmV0dXJucyBwb2xpY3kuIFdlJ2xsIGFsd2F5cyByZWFjaCBvdXQgYmVmb3JlIHN0YXJ0aW5nIGlmIHNvbWV0aGluZyBsb29rcyBvZmYuIiwKICAgICAgICAgICAgICB9LAogICAgICAgICAgICBdLm1hcCgoY2FyZCkgPT4gKAogICAgICAgICAgICAgIDxkaXYKICAgICAgICAgICAgICAgIGtleT17Y2FyZC50aXRsZX0KICAgICAgICAgICAgICAgIGNsYXNzTmFtZT0icm91bmRlZC0yeGwgYm9yZGVyIGJvcmRlci13aGl0ZS8xMCBiZy1bIzE1MTcxY10gcC02IgogICAgICAgICAgICAgID4KICAgICAgICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPSJtYi0zIGgtcHggdy04IiBzdHlsZT17eyBiYWNrZ3JvdW5kOiBWT0xUIH19IC8+CiAgICAgICAgICAgICAgICA8aDMgY2xhc3NOYW1lPSJtYi0yIHRleHQtYmFzZSBmb250LXNlbWlib2xkIj57Y2FyZC50aXRsZX08L2gzPgogICAgICAgICAgICAgICAgPHAgY2xhc3NOYW1lPSJ0ZXh0LXNtIGxlYWRpbmctcmVsYXhlZCB0ZXh0LW5ldXRyYWwtNDAwIj4KICAgICAgICAgICAgICAgICAge2NhcmQuYm9keX0KICAgICAgICAgICAgICAgIDwvcD4KICAgICAgICAgICAgICA8L2Rpdj4KICAgICAgICAgICAgKSl9CiAgICAgICAgICA8L2Rpdj4KICAgICAgICA8L3NlY3Rpb24+CgogICAgICAgIHsvKiBGQVEgKi99CiAgICAgICAgPHNlY3Rpb24gY2xhc3NOYW1lPSJib3JkZXItdCBib3JkZXItd2hpdGUvMTAgYmctWyMwZTEwMTNdIj4KICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPSJteC1hdXRvIG1heC13LTN4bCBweC02IHB5LTE2IG1kOnB4LTEyIG1kOnB5LTIwIj4KICAgICAgICAgICAgPGRpdiBjbGFzc05hbWU9Im1iLTEwIj4KICAgICAgICAgICAgICA8c3BhbgogICAgICAgICAgICAgICAgY2xhc3NOYW1lPSJ0ZXh0LXhzIGZvbnQtc2VtaWJvbGQgdXBwZXJjYXNlIHRyYWNraW5nLVswLjE4ZW1dIgogICAgICAgICAgICAgICAgc3R5bGU9e3sgY29sb3I6IFZPTFQgfX0KICAgICAgICAgICAgICA+CiAgICAgICAgICAgICAgICBRdWVzdGlvbnMKICAgICAgICAgICAgICA8L3NwYW4+CiAgICAgICAgICAgICAgPGgyIGNsYXNzTmFtZT0ibXQtMyB0ZXh0LTN4bCBmb250LXNlbWlib2xkIG1kOnRleHQtNHhsIj4KICAgICAgICAgICAgICAgIEZyZXF1ZW50bHkgYXNrZWQuCiAgICAgICAgICAgICAgPC9oMj4KICAgICAgICAgICAgPC9kaXY+CiAgICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPSJzcGFjZS15LTYiPgogICAgICAgICAgICAgIHtbCiAgICAgICAgICAgICAgICB7CiAgICAgICAgICAgICAgICAgIHE6ICJXaGF0IGZpbGUgZm9ybWF0cyBkbyB5b3UgYWNjZXB0PyIsCiAgICAgICAgICAgICAgICAgIGE6ICJKUEcsIFBORywgV2ViUCwgSEVJQy9IRUlGLCBQREYsIFNWRywgQUkgKElsbHVzdHJhdG9yKSwgYW5kIEVQUy4gTWF4aW11bSAxNSBNQiBwZXIgZmlsZSwgdXAgdG8gMTAgZmlsZXMgcGVyIG9yZGVyLiBGb3IgYmVzdCBwcmludCBxdWFsaXR5LCBzdWJtaXQgdmVjdG9yIGZpbGVzIChTVkcsIEFJLCBFUFMpIG9yIHJhc3RlciBmaWxlcyBhdCAzMDAgZHBpIG9yIGhpZ2hlciBhdCBmaW5hbCBwcmludCBzaXplLiIsCiAgICAgICAgICAgICAgICB9LAogICAgICAgICAgICAgICAgewogICAgICAgICAgICAgICAgICBxOiAiV2hhdCBpZiBteSBkZXNpZ24gaXNuJ3QgcHJpbnQtcmVhZHk/IiwKICAgICAgICAgICAgICAgICAgYTogIkRvbid0IHdvcnJ5IOKAlCBvdXIgdGVhbSByZXZpZXdzIGV2ZXJ5IGZpbGUgYmVmb3JlIHByZXNzaW5nIHN0YXJ0cy4gSWYgcmVzb2x1dGlvbiBpcyB0b28gbG93LCBvciBhIGNvbG91ciBtb2RlIG5lZWRzIGFkanVzdGluZywgd2UnbGwgZW1haWwgeW91IHdpdGggc3BlY2lmaWNzIGJlZm9yZSB0b3VjaGluZyB0aGUgdmVuZWVyLiBZb3UgY2FuIGFsc28gdGljayAnSSdkIGxpa2UgZGVzaWduIGhlbHAnIG9uIHRoZSBmb3JtIGFuZCBkZXNjcmliZSB3aGF0IHlvdSdyZSBnb2luZyBmb3IgaW5zdGVhZCBvZiB1cGxvYWRpbmcgYSBmaWxlLiIsCiAgICAgICAgICAgICAgICB9LAogICAgICAgICAgICAgICAgewogICAgICAgICAgICAgICAgICBxOiAiSG93IGxvbmcgZG9lcyBpdCB0YWtlPyIsCiAgICAgICAgICAgICAgICAgIGE6ICJTdGFuZGFyZCBwcm9kdWN0aW9uIGlzIDLigJMzIGJ1c2luZXNzIGRheXMgZnJvbSBvcmRlciBjb25maXJtYXRpb24uIFJ1c2ggcHJvZHVjdGlvbiAoYWRkICQyNSkgaXMgMjTigJM0OCBob3Vycy4gV29ybGR3aWRlIHNoaXBwaW5nIGlzIHRyYWNrZWQgYW5kIHR5cGljYWxseSBhZGRzIDfigJMxMyBidXNpbmVzcyBkYXlzIGRlcGVuZGluZyBvbiB5b3VyIGxvY2F0aW9uLiBXZSdsbCBzZW5kIGEgdHJhY2tpbmcgbGluayBhcyBzb29uIGFzIHlvdXIgYm9hcmQgc2hpcHMuIiwKICAgICAgICAgICAgICAgIH0sCiAgICAgICAgICAgICAgICB7CiAgICAgICAgICAgICAgICAgIHE6ICJXaGF0IGRlY2sgc2l6ZXMgYXJlIGF2YWlsYWJsZT8iLAogICAgICAgICAgICAgICAgICBhOiAiMzJtbSwgMzRtbSwgYW5kIDM2bW0gd2lkdGgg4oCUIHRoZSBzYW1lIHdpZHRocyBhcyBvdXIgc3RhbmRhcmQgY2F0YWxvZy4gQWxsIHRocmVlIHNpemVzIGdldCB0aGUgc2FtZSBxdWFsaXR5IG9mIGNvbnN0cnVjdGlvbi4gSWYgeW91J3JlIG5vdCBzdXJlIHdoaWNoIHNpemUgdG8gcGljaywgdGhlIDM0bW0gaXMgdGhlIG1vc3QgY29tbW9uIGFsbC1yb3VuZCB3aWR0aC4iLAogICAgICAgICAgICAgICAgfSwKICAgICAgICAgICAgICAgIHsKICAgICAgICAgICAgICAgICAgcTogIldoYXQgaXMgdGhlIFNlbGVjdCBIYXJkd29vZCBVcGdyYWRlPyIsCiAgICAgICAgICAgICAgICAgIGE6ICJUaGUgc3RhbmRhcmQgYnVpbGQgdXNlcyBvdXIgc3RvY2sgbWFwbGUgdmVuZWVyICh0aGUgc2FtZSBtYXRlcmlhbCBhcyBvdXIgY2F0YWxvZyBibGFua3MpLiBUaGUgU2VsZWN0IEhhcmR3b29kIFVwZ3JhZGUgdXNlcyBwcmVtaXVtLCBoYW5kLXNlbGVjdGVkIHZlbmVlciBzaGVldHMgd2l0aCB0aWdodGVyIGdyYWluIGFuZCBiZXR0ZXIgY29uc2lzdGVuY3kg4oCUIGl0IGNvc3RzICQxNSBtb3JlIGFuZCBpcyB3b3J0aCBpdCBpZiB5b3UncmUgYnVpbGRpbmcgc29tZXRoaW5nIGZvciBkaXNwbGF5IG9yIGFzIGEgZ2lmdC4iLAogICAgICAgICAgICAgICAgfSwKICAgICAgICAgICAgICAgIHsKICAgICAgICAgICAgICAgICAgcTogIkNhbiBJIG9yZGVyIG11bHRpcGxlIGJvYXJkcz8iLAogICAgICAgICAgICAgICAgICBhOiAiWWVzLCB1cCB0byAxMCBwZXIgb3JkZXIuIFRoZSBzZWNvbmQgYm9hcmQgaXMgMTAlIG9mZiBpdHMgb3duIHVuaXQgcHJpY2UsIGFuZCB0aGUgdGhpcmQgYW5kIGFib3ZlIGFyZSAxNSUgb2ZmIGVhY2guIFRoZSBsaXZlIHByaWNlIGNhbGN1bGF0b3IgaW4gdGhlIGZvcm0gc2hvd3MgdGhlIGV4YWN0IGJyZWFrZG93biBiZWZvcmUgeW91IGNoZWNrIG91dC4iLAogICAgICAgICAgICAgICAgfSwKICAgICAgICAgICAgICAgIHsKICAgICAgICAgICAgICAgICAgcTogIldoYXQgaXMgeW91ciByZXR1cm5zIHBvbGljeSBvbiBjdXN0b20gb3JkZXJzPyIsCiAgICAgICAgICAgICAgICAgIGE6ICJCZWNhdXNlIGV2ZXJ5IGN1c3RvbSBib2FyZCBpcyBwcmVzc2VkIHRvIHlvdXIgZXhhY3Qgc3BlYywgY3VzdG9tIG9yZGVycyBhcmUgZmluYWwgc2FsZSB1bmxlc3MgdGhlIGl0ZW0gYXJyaXZlcyBmYXVsdHkgb3IgaW5jb3JyZWN0LiBJZiBzb21ldGhpbmcgYXJyaXZlcyB3cm9uZywgZW1haWwgaGVsbG9AZmluZ2VyYm9hcmRsYWIuY29tIHdpdGggYSBwaG90byB3aXRoaW4gMTQgZGF5cyBhbmQgd2UnbGwgc29ydCBpdCDigJQgc2FtZSBhcyBvdXIgc3RhbmRhcmQgZmF1bHQgcHJvY2Vzcy4iLAogICAgICAgICAgICAgICAgfSwKICAgICAgICAgICAgICBdLm1hcCgoaXRlbSkgPT4gKAogICAgICAgICAgICAgICAgPGRpdgogICAgICAgICAgICAgICAgICBrZXk9e2l0ZW0ucX0KICAgICAgICAgICAgICAgICAgY2xhc3NOYW1lPSJyb3VuZGVkLTJ4bCBib3JkZXIgYm9yZGVyLXdoaXRlLzEwIGJnLVsjMTUxNzFjXSBwLTYiCiAgICAgICAgICAgICAgICA+CiAgICAgICAgICAgICAgICAgIDxoMyBjbGFzc05hbWU9Im1iLTIgZm9udC1zZW1pYm9sZCB0ZXh0LVsjZjNmMWVhXSI+CiAgICAgICAgICAgICAgICAgICAge2l0ZW0ucX0KICAgICAgICAgICAgICAgICAgPC9oMz4KICAgICAgICAgICAgICAgICAgPHAgY2xhc3NOYW1lPSJ0ZXh0LXNtIGxlYWRpbmctcmVsYXhlZCB0ZXh0LW5ldXRyYWwtNDAwIj4KICAgICAgICAgICAgICAgICAgICB7aXRlbS5hfQogICAgICAgICAgICAgICAgICA8L3A+CiAgICAgICAgICAgICAgICA8L2Rpdj4KICAgICAgICAgICAgICApKX0KICAgICAgICAgICAgPC9kaXY+CiAgICAgICAgICA8L2Rpdj4KICAgICAgICA8L3NlY3Rpb24+CiAgICAgIDwvZGl2PgoKICAgICAgPEZvb3RlciAvPgogICAgPC8+CiAgKTsKfQo=
+import type { Metadata } from "next";
+import Footer from "components/layout/footer";
+import { CustomBuildConfigurator } from "./configurator";
+import { SITE_NAME, VOLT } from "lib/brand";
+import { baseUrl } from "lib/utils";
+import Link from "next/link";
+
+export const metadata: Metadata = {
+  title:
+    "Custom Handmade Fingerboard — Personalized Graphic, Made to Order | Fingerboard Lab",
+  description:
+    "Design your own custom fingerboard with your artwork, logo, or photo. Hand-pressed maple deck, pro trucks, bearing wheels. Starting at $89. Custom fingerboard, personalized fingerboard, custom tech deck alternative.",
+  alternates: { canonical: "/custom" },
+  openGraph: {
+    title: "Custom Handmade Fingerboard — Made to Order",
+    description:
+      "Upload your design, choose your specs, and we press it by hand. Your graphic, your size, shipped in days.",
+    images: [{ url: `${baseUrl}/brand/hero.jpg`, width: 1200, height: 630 }],
+  },
+};
+
+const serviceJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Product",
+  name: "Custom Handmade Fingerboard",
+  description:
+    "A made-to-order fingerboard deck pressed by hand from real maple veneer with your own graphic or artwork. Choose 32mm, 34mm, or 36mm width, optional select hardwood upgrade, and optional rush 24-48h production.",
+  // Absolute URL required by Google Rich Results Test and Merchant Center.
+  // Uses the same hero.jpg already referenced in this page's openGraph.images.
+  // Constructed via template literal with baseUrl (same pattern as product pages
+  // that absolutise supplier-hosted image URLs with new URL(i.url, baseUrl)).
+  image: [`${baseUrl}/brand/hero.jpg`],
+  brand: { "@type": "Brand", name: SITE_NAME },
+  offers: {
+    "@type": "Offer",
+    priceCurrency: "USD",
+    price: "89.00",
+    priceValidUntil: "2027-12-31",
+    // validFrom resolves the advisory "Missing field validFrom"; set to the
+    // month the custom-build feature launched and this price was first published.
+    // Regular product pages omit this because their price is live from Shopify;
+    // on this static page with a fixed starting price it is meaningful.
+    validFrom: "2025-01-01",
+    availability: "https://schema.org/InStock",
+    url: `${baseUrl}/custom`,
+    seller: { "@type": "Organization", name: SITE_NAME },
+    // Shipping: 2-3 business day production + 7-14 business day transit.
+    // Matches the "How it works" copy and FAQ on this page exactly.
+    // min 9 days = 2 production + 7 transit; max 17 days = 3 production + 14 transit.
+    shippingDetails: {
+      "@type": "OfferShippingDetails",
+      shippingRate: {
+        "@type": "MonetaryAmount",
+        value: "12.95",
+        currency: "USD",
+      },
+      shippingDestination: {
+        "@type": "DefinedRegion",
+        addressCountry: "US",
+      },
+      deliveryTime: {
+        "@type": "ShippingDeliveryTime",
+        handlingTime: {
+          "@type": "QuantitativeValue",
+          minValue: 2,
+          maxValue: 3,
+          unitCode: "DAY",
+        },
+        transitTime: {
+          "@type": "QuantitativeValue",
+          minValue: 7,
+          maxValue: 14,
+          unitCode: "DAY",
+        },
+      },
+    },
+    // Return policy: custom-pressed decks are final sale unless faulty.
+    // This is explicitly stated on /shipping-returns ("Custom-pressed decks
+    // and clearance items are final sale unless they arrive faulty"), in the
+    // trust section on this page, and in the FAQ below. Using
+    // MerchantReturnFiniteReturnWindow with merchantReturnDays:0 and
+    // returnFees:FreeReturn (photo-based, no postage needed per policy)
+    // accurately encodes the final-sale-except-fault policy.
+    // Do NOT use MerchantReturnNotPermitted here -- that blocks all fault
+    // claims too. merchantReturnDays:0 with a finite window correctly
+    // signals change-of-mind returns are not accepted.
+    hasMerchantReturnPolicy: {
+      "@type": "MerchantReturnPolicy",
+      applicableCountry: "US",
+      returnPolicyCategory:
+        "https://schema.org/MerchantReturnFiniteReturnWindow",
+      merchantReturnDays: 0,
+      returnMethod: "https://schema.org/ReturnByMail",
+      returnFees: "https://schema.org/FreeReturn",
+    },
+  },
+};
+
+const breadcrumbJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: baseUrl },
+    {
+      "@type": "ListItem",
+      position: 2,
+      name: "Custom Fingerboard Build",
+      item: `${baseUrl}/custom`,
+    },
+  ],
+};
+
+export default function CustomBuildPage() {
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
+
+      <div className="bg-[#0b0c0e] text-[#f3f1ea]">
+        {/* HERO */}
+        <section className="relative overflow-hidden border-b border-white/10">
+          <div
+            className="absolute inset-0 opacity-20"
+            style={{
+              background:
+                "radial-gradient(ellipse 80% 60% at 70% 50%, #c5f23c22 0%, transparent 70%)",
+            }}
+          />
+          <div className="relative mx-auto max-w-7xl px-6 py-20 md:px-12 md:py-28">
+            <div className="max-w-2xl">
+              <div className="mb-6 flex items-center gap-3">
+                <span className="h-px w-7" style={{ background: VOLT }} />
+                <span
+                  className="text-xs font-semibold uppercase tracking-[0.18em]"
+                  style={{ color: VOLT }}
+                >
+                  Custom builds
+                </span>
+              </div>
+              <h1 className="text-5xl font-semibold leading-[1.02] md:text-7xl">
+                Your graphic.
+                <br />
+                Our hands.
+                <br />
+                <span style={{ color: VOLT }}>One board.</span>
+              </h1>
+              <p className="mt-6 max-w-lg text-base text-neutral-300 md:text-lg">
+                Every custom board is pressed by hand from real maple veneer, to
+                your exact size and spec. Upload your artwork — a logo, a photo,
+                a sketch — and we&apos;ll build something that doesn&apos;t
+                exist anywhere else.
+              </p>
+              <div className="mt-8 flex flex-wrap gap-3">
+                {[
+                  "From $89",
+                  "32mm / 34mm / 36mm",
+                  "2–3 day production",
+                  "Up to 10 boards",
+                ].map((c) => (
+                  <span
+                    key={c}
+                    className="rounded-full border border-white/10 bg-white/[0.03] px-3.5 py-2 text-[13px] text-neutral-300"
+                  >
+                    {c}
+                  </span>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* HOW IT WORKS */}
+        <section className="mx-auto max-w-7xl px-6 py-16 md:px-12 md:py-24">
+          <div className="mb-12">
+            <span
+              className="text-xs font-semibold uppercase tracking-[0.18em]"
+              style={{ color: VOLT }}
+            >
+              The process
+            </span>
+            <h2 className="mt-3 text-3xl font-semibold md:text-5xl">
+              How it works.
+            </h2>
+          </div>
+          <div className="grid gap-8 md:grid-cols-4">
+            {[
+              {
+                n: "01",
+                title: "Choose your specs",
+                body: "Pick your deck width (32mm, 34mm, or 36mm), whether you want the select hardwood upgrade, and how many boards. Multi-board orders get a discount built in.",
+              },
+              {
+                n: "02",
+                title: "Upload your design",
+                body: "Drop in your artwork — PNG, JPG, SVG, PDF, AI, or EPS — up to 10 files. Not ready with artwork? Check the box for design help instead and our team will reach out.",
+              },
+              {
+                n: "03",
+                title: "We build it by hand",
+                body: "Our team reviews every upload before starting. Standard production is 2–3 business days. Rush orders (24–48 hours) are available for an additional $25.",
+              },
+              {
+                n: "04",
+                title: "Shipped to you",
+                body: "Your board ships tracked worldwide. Standard production plus transit is typically 9–16 business days total depending on your location. Rush production cuts the production side to 1–2 days.",
+              },
+            ].map((step) => (
+              <div key={step.n} className="flex flex-col">
+                <div
+                  className="mb-4 text-4xl font-semibold"
+                  style={{ color: VOLT }}
+                >
+                  {step.n}
+                </div>
+                <h3 className="mb-2 text-lg font-semibold">{step.title}</h3>
+                <p className="text-sm leading-relaxed text-neutral-400">
+                  {step.body}
+                </p>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        {/* CONFIGURATOR */}
+        <section
+          id="configurator"
+          className="border-y border-white/10 bg-[#0e1013]"
+        >
+          <div className="mx-auto max-w-3xl px-6 py-16 md:px-12 md:py-20">
+            <div className="mb-10">
+              <span
+                className="text-xs font-semibold uppercase tracking-[0.18em]"
+                style={{ color: VOLT }}
+              >
+                Build yours
+              </span>
+              <h2 className="mt-3 text-3xl font-semibold md:text-4xl">
+                Configure your build.
+              </h2>
+              <p className="mt-3 text-neutral-400">
+                Fill in the form below, upload your artwork (or request design
+                help), and we&apos;ll take it from there.
+              </p>
+            </div>
+            <CustomBuildConfigurator />
+
+            {/* Discovery links — gift and branded entry points */}
+            <div className="mt-10 flex flex-wrap items-center gap-x-6 gap-y-2 border-t border-white/10 pt-8 text-sm text-neutral-500">
+              <span>Looking for something specific?</span>
+              <Link
+                href="/custom/gifts"
+                className="text-[#c5f23c] hover:underline"
+              >
+                Buying as a gift →
+              </Link>
+              <Link
+                href="/custom/branded"
+                className="text-[#c5f23c] hover:underline"
+              >
+                Ordering for a brand or event →
+              </Link>
+            </div>
+          </div>
+        </section>
+
+        {/* TRUST / REASSURANCE */}
+        <section className="mx-auto max-w-7xl px-6 py-16 md:px-12 md:py-24">
+          <div className="mb-10">
+            <span
+              className="text-xs font-semibold uppercase tracking-[0.18em]"
+              style={{ color: VOLT }}
+            >
+              Our promise
+            </span>
+            <h2 className="mt-3 text-3xl font-semibold md:text-4xl">
+              Built with care, every time.
+            </h2>
+          </div>
+          <div className="grid gap-6 md:grid-cols-3">
+            {[
+              {
+                title: "We review every file",
+                body: "Our team looks at every upload before we start pressing. If your artwork needs adjusting — resolution, bleed, colour mode — we'll reach out by email before cutting a single sheet.",
+              },
+              {
+                title: "Hand-pressed maple construction",
+                body: "Every board is pressed from real maple veneer using the same molds and technique as pro-spec blanks. No injection-moulded shortcuts. The result has real concave, real kick, and rides like it should.",
+              },
+              {
+                title: "Custom orders policy",
+                body: "Because each board is built to your specification, custom orders are final sale unless the item arrives faulty — consistent with our standard returns policy. We'll always reach out before starting if something looks off.",
+              },
+            ].map((card) => (
+              <div
+                key={card.title}
+                className="rounded-2xl border border-white/10 bg-[#15171c] p-6"
+              >
+                <div className="mb-3 h-px w-8" style={{ background: VOLT }} />
+                <h3 className="mb-2 text-base font-semibold">{card.title}</h3>
+                <p className="text-sm leading-relaxed text-neutral-400">
+                  {card.body}
+                </p>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        {/* FAQ */}
+        <section className="border-t border-white/10 bg-[#0e1013]">
+          <div className="mx-auto max-w-3xl px-6 py-16 md:px-12 md:py-20">
+            <div className="mb-10">
+              <span
+                className="text-xs font-semibold uppercase tracking-[0.18em]"
+                style={{ color: VOLT }}
+              >
+                Questions
+              </span>
+              <h2 className="mt-3 text-3xl font-semibold md:text-4xl">
+                Frequently asked.
+              </h2>
+            </div>
+            <div className="space-y-6">
+              {[
+                {
+                  q: "What file formats do you accept?",
+                  a: "JPG, PNG, WebP, HEIC/HEIF, PDF, SVG, AI (Illustrator), and EPS. Maximum 15 MB per file, up to 10 files per order. For best print quality, submit vector files (SVG, AI, EPS) or raster files at 300 dpi or higher at final print size.",
+                },
+                {
+                  q: "What if my design isn't print-ready?",
+                  a: "Don't worry — our team reviews every file before pressing starts. If resolution is too low, or a colour mode needs adjusting, we'll email you with specifics before touching the veneer. You can also tick 'I'd like design help' on the form and describe what you're going for instead of uploading a file.",
+                },
+                {
+                  q: "How long does it take?",
+                  a: "Standard production is 2–3 business days from order confirmation. Rush production (add $25) is 24–48 hours. Worldwide shipping is tracked and typically adds 7–13 business days depending on your location. We'll send a tracking link as soon as your board ships.",
+                },
+                {
+                  q: "What deck sizes are available?",
+                  a: "32mm, 34mm, and 36mm width — the same widths as our standard catalog. All three sizes get the same quality of construction. If you're not sure which size to pick, the 34mm is the most common all-round width.",
+                },
+                {
+                  q: "What is the Select Hardwood Upgrade?",
+                  a: "The standard build uses our stock maple veneer (the same material as our catalog blanks). The Select Hardwood Upgrade uses premium, hand-selected veneer sheets with tighter grain and better consistency — it costs $15 more and is worth it if you're building something for display or as a gift.",
+                },
+                {
+                  q: "Can I order multiple boards?",
+                  a: "Yes, up to 10 per order. The second board is 10% off its own unit price, and the third and above are 15% off each. The live price calculator in the form shows the exact breakdown before you check out.",
+                },
+                {
+                  q: "What is your returns policy on custom orders?",
+                  a: "Because every custom board is pressed to your exact spec, custom orders are final sale unless the item arrives faulty or incorrect. If something arrives wrong, email hello@fingerboardlab.com with a photo within 14 days and we'll sort it — same as our standard fault process.",
+                },
+              ].map((item) => (
+                <div
+                  key={item.q}
+                  className="rounded-2xl border border-white/10 bg-[#15171c] p-6"
+                >
+                  <h3 className="mb-2 font-semibold text-[#f3f1ea]">
+                    {item.q}
+                  </h3>
+                  <p className="text-sm leading-relaxed text-neutral-400">
+                    {item.a}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <Footer />
+    </>
+  );
+}
