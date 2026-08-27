@@ -5,8 +5,10 @@ import { ReactNode } from "react";
 import { Toaster } from "sonner";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
+import Script from "next/script";
 import "./globals.css";
 import { baseUrl } from "lib/utils";
+import { GA_MEASUREMENT_ID } from "lib/gtag";
 import {
   SITE_NAME,
   SITE_TAGLINE,
@@ -131,6 +133,29 @@ export default async function RootLayout({
         <Analytics />
         {/* Vercel Speed Insights: real-user Core Web Vitals (LCP, INP, CLS). */}
         <SpeedInsights />
+        {/*
+         * Google Analytics 4 (gtag.js). Only rendered when
+         * NEXT_PUBLIC_GA_MEASUREMENT_ID is set (production), so local dev and
+         * preview deploys don't send traffic into the real property.
+         * Ecommerce events (view_item, add_to_cart, begin_checkout, purchase)
+         * are fired from lib/gtag.ts call sites once this base tag has loaded.
+         */}
+        {GA_MEASUREMENT_ID && (
+          <>
+            <Script
+              src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
+              strategy="afterInteractive"
+            />
+            <Script id="ga4-init" strategy="afterInteractive">
+              {`
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+                gtag('config', '${GA_MEASUREMENT_ID}');
+              `}
+            </Script>
+          </>
+        )}
       </body>
     </html>
   );

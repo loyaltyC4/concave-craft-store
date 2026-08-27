@@ -4,6 +4,7 @@ import { ProductDescription } from "components/product/product-description";
 import Prose from "components/prose";
 import { ProductCard } from "components/product-card";
 import { ReviewsSection } from "components/product/reviews-section";
+import { ViewItemTracker } from "components/analytics/view-item-tracker";
 import { HIDDEN_PRODUCT_TAG } from "lib/constants";
 import { getProductReviews } from "lib/reviews";
 import {
@@ -223,6 +224,13 @@ export default async function ProductPage(props: {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
+      <ViewItemTracker
+        id={product.variants[0]?.sku || product.handle}
+        name={product.title}
+        price={Number(product.priceRange.minVariantPrice.amount)}
+        currency={product.priceRange.minVariantPrice.currencyCode}
+        category={collectionHandle || undefined}
       />
 
       <div className="mx-auto max-w-7xl px-4 py-8 md:px-8">

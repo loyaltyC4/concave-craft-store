@@ -6,6 +6,7 @@ import LoadingDots from "components/loading-dots";
 import Price from "components/price";
 import { DEFAULT_OPTION } from "lib/constants";
 import { FREE_SHIPPING_THRESHOLD } from "lib/brand";
+import { trackBeginCheckout } from "lib/gtag";
 import { createUrl } from "lib/utils";
 import Image from "next/image";
 import Link from "next/link";
@@ -42,6 +43,21 @@ export default function CartModal() {
 
   async function handleCheckout() {
     if (!cart || cart.lines.length === 0) return;
+
+    trackBeginCheckout(
+      cart.lines.map((l) => ({
+        item_id: l.merchandise.id,
+        item_name: l.merchandise.product.title,
+        price:
+          l.quantity > 0
+            ? Number(l.cost.totalAmount.amount) / l.quantity
+            : Number(l.cost.totalAmount.amount),
+        quantity: l.quantity,
+      })),
+      Number(cart.cost.totalAmount.amount),
+      cart.cost.totalAmount.currencyCode,
+    );
+
     setLoading(true);
     try {
       const res = await fetch("/api/checkout", {

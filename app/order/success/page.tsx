@@ -1,5 +1,6 @@
 import Footer from "components/layout/footer";
 import { ClearCartOnMount } from "components/cart/clear-cart-on-mount";
+import { PurchaseTracker } from "components/analytics/purchase-tracker";
 import { getStripe } from "lib/stripe";
 import { SITE_NAME } from "lib/brand";
 import Link from "next/link";
@@ -81,6 +82,14 @@ export default async function OrderSuccessPage(props: {
   return (
     <>
       <ClearCartOnMount />
+      {paid && session_id && total != null && (
+        <PurchaseTracker
+          transactionId={session_id}
+          value={total / 100}
+          currency={currency.toUpperCase()}
+          items={items}
+        />
+      )}
       <div className="mx-auto max-w-2xl px-6 py-24 md:py-32">
         <div className="rounded-3xl border border-white/10 bg-[#15171c] p-8 md:p-12">
           <div className="mb-6 flex h-14 w-14 items-center justify-center rounded-full bg-[#c5f23c] text-black">

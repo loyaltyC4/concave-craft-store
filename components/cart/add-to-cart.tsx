@@ -2,6 +2,7 @@
 
 import { PlusIcon } from "@heroicons/react/24/outline";
 import clsx from "clsx";
+import { trackAddToCart } from "lib/gtag";
 import { Product, ProductVariant } from "lib/shopify/types";
 import { useSearchParams } from "next/navigation";
 import { toast } from "sonner";
@@ -79,6 +80,19 @@ export function AddToCart({ product }: { product: Product }) {
       onClick={() => {
         if (!finalVariant) return;
         addCartItem(finalVariant, product);
+        trackAddToCart(
+          {
+            item_id: finalVariant.sku || finalVariant.id,
+            item_name:
+              product.title +
+              (finalVariant.title && finalVariant.title !== "Default Title"
+                ? ` — ${finalVariant.title}`
+                : ""),
+            price: Number(finalVariant.price.amount),
+            quantity: 1,
+          },
+          finalVariant.price.currencyCode,
+        );
         toast.success(`Added to cart`, {
           description: product.title,
         });
