@@ -42,10 +42,14 @@ button {
 html {
   color-scheme: dark;
   scroll-behavior: smooth;
+  /* Prevent horizontal scroll from off-canvas reveal animations on mobile */
+  overflow-x: clip;
 }
 
 body {
   font-family: var(--font-body);
+  /* Match html so the sticky mobile CTA can't push horizontal overflow */
+  overflow-x: clip;
 }
 
 h1,
@@ -75,9 +79,114 @@ h4 {
   animation: cc-float 6s ease-in-out infinite;
 }
 
+/* ===================================================================== *
+ * Landing-page motion utilities (added 2026-09-02 for the seamless
+ * scroll redesign). All effects respect prefers-reduced-motion.
+ * ===================================================================== */
+
+/*
+ * Sticky-transform hero. The media layer pins under the foreground copy
+ * for a short scroll distance, so the tagline slides past a still image
+ * (Oura-style pattern d). Implemented with pure position: sticky — no JS,
+ * no scroll library, no scroll-jack. Falls back to a normal scroll on
+ * browsers without sticky support (rare in 2026).
+ */
+.cc-hero-shell {
+  position: relative;
+}
+.cc-hero-media {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+}
+.cc-hero-foreground {
+  position: relative;
+  z-index: 2;
+  min-height: 86vh;
+  display: flex;
+  align-items: center;
+}
+/* Pull the sticky media back up under the foreground */
+.cc-hero-lift {
+  margin-top: -100vh;
+}
 @media (prefers-reduced-motion: reduce) {
-  .cc-marquee,
-  .cc-float {
-    animation: none;
+  .cc-hero-media {
+    position: absolute;
+    inset: 0;
+    height: 100%;
+  }
+  .cc-hero-lift {
+    margin-top: 0;
+  }
+}
+
+/*
+ * Mobile snap-scroll only between hero and first section. Applied to a
+ * dedicated wrapper that contains the hero and the first band; below that,
+ * normal free scroll resumes. Never applied to the whole page (that pattern
+ * traps users and kills conversion — see anti-patterns note above).
+ */
+@media (max-width: 767px) {
+  .cc-snap-lead {
+    scroll-snap-type: y mandatory;
+    scroll-snap-stop: always;
+  }
+  .cc-snap-lead > .cc-snap-item {
+    scroll-snap-align: start;
+  }
+}
+
+/*
+ * Horizontal category scroller (used desktop + mobile). CSS-only, no JS.
+ * Adds smooth momentum, snap targets and a hidden scrollbar. Individual
+ * items get scroll-snap-align via the .cc-hscroll-item class.
+ */
+.cc-hscroll {
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior-x: contain;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+}
+.cc-hscroll::-webkit-scrollbar {
+  display: none;
+}
+.cc-hscroll-item {
+  scroll-snap-align: start;
+}
+
+/*
+ * Editorial band — full-width alternating category feature (used for the
+ * three flagship categories on desktop). On desktop, alternating direction
+ * gives the eye a rhythmic zig-zag as it descends. On mobile, everything
+ * stacks vertically with the image above the copy.
+ */
+.cc-band {
+  position: relative;
+  overflow: hidden;
+}
+.cc-band-media {
+  position: relative;
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+  border-radius: 1.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+@media (min-width: 768px) {
+  .cc-band-media {
+    aspect-ratio: 4 / 3;
+  }
+}
+
+/*
+ * Nav shim — reserves the space the fixed nav consumes at the top of the
+ * viewport, only when the fixed variant is active. Keeps the hero visually
+ * beneath the transparent nav on load.
+ */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
   }
 }
