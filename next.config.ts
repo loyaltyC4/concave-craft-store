@@ -129,10 +129,52 @@ export default {
     ];
   },
   images: {
+    /**
+     * Disabled site-wide as of 2026-09-02.
+     *
+     * The Vercel Hobby plan's Image Optimization has a monthly cap on unique
+     * source images processed. This project exceeded it — confirmed by
+     * direct testing: any never-before-requested image URL (local OR
+     * remote, any width) returns 402 Payment Required from the
+     * /_next/image endpoint, while already-registered images keep working
+     * at any width. That makes breakage effectively random: whichever
+     * product photo, cart thumbnail, or category tile happens to be a
+     * "new" request once the cap is hit goes blank — including inside the
+     * cart drawer, which is directly in the checkout path.
+     *
+     * A previous partial fix (components/product/gallery.tsx) worked around
+     * this only for externally-hosted supplier-CDN images by setting
+     * `unoptimized` conditionally. That approach doesn't cover local
+     * /products/ and /brand/ files, which hit the exact same account-wide
+     * cap once quota ran out (verified: primary-10297129140579.jpg at
+     * w=128 returned 402 while a different product's image at w=3840
+     * succeeded — purely a function of which URLs had already been
+     * registered before the cap was reached, not local vs. remote).
+     *
+     * Disabling optimization globally removes the dependency on this quota
+     * entirely, for every current and future image on the site. The cost is
+     * losing automatic AVIF/WebP conversion and responsive resizing — but
+     * every local image already ships pre-compressed (see
+     * scripts/decode-*-images.mjs; category tiles run 80-120KB, product
+     * primaries are similarly sized), so the practical quality/performance
+     * loss is small next to a checkout-adjacent image randomly going blank.
+     *
+     * If Vercel Image Optimization quota becomes available again (plan
+     * upgrade, or next monthly reset) and per-image control is wanted back,
+     * remove this flag and re-apply the `unoptimized={isExternal(url)}`
+     * pattern already used in components/product/gallery.tsx,
+     * components/product-card.tsx, components/cart/modal.tsx, and
+     * components/cart/cart-cross-sell.tsx — but note that pattern alone is
+     * NOT sufficient while the account-wide quota is exhausted, since local
+     * images are equally exposed until the quota resets.
+     */
+    unoptimized: true,
     formats: ["image/avif", "image/webp"],
     // Product photography lives on the original supplier CDNs and is fetched
     // server-side by Next's image optimiser, then cached on the Vercel edge —
-    // the browser never requests these hosts directly.
+    // the browser never requests these hosts directly. Kept even with
+    // optimization disabled above: remotePatterns still governs which hosts
+    // next/image is allowed to render at all, unoptimized or not.
     remotePatterns: [
       {
         protocol: "https",
