@@ -204,6 +204,7 @@ export default async function CategoryPage(props: {
                 src={banner}
                 alt={`${collection.title} — ${SITE_NAME}`}
                 fill
+                unoptimized
                 sizes="100vw"
                 className="object-cover"
                 priority

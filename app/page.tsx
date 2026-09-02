@@ -185,9 +185,9 @@ export default async function HomePage() {
               <div className="mt-8 flex flex-wrap gap-2.5 md:mt-10">
                 {[
                   "Kits from $34.99",
-                  "$12.95 shipping · free over $150",
                   "30-day returns",
                   "Free sticker sheet",
+                  "Worldwide shipping",
                 ].map((c) => (
                   <span
                     key={c}
@@ -311,6 +311,7 @@ export default async function HomePage() {
                         src={COLLECTION_IMAGE[handle] ?? "/brand/hero.jpg"}
                         alt={c.title}
                         fill
+                        unoptimized
                         sizes="(min-width:768px) 55vw, 90vw"
                         className="object-cover transition-transform duration-[900ms] ease-out group-hover:scale-[1.03]"
                       />
@@ -392,6 +393,7 @@ export default async function HomePage() {
                     src={COLLECTION_IMAGE[c.handle] ?? "/brand/hero.jpg"}
                     alt={c.title}
                     fill
+                    unoptimized
                     sizes="(min-width:1024px) 22vw, (min-width:640px) 25vw, 50vw"
                     className="object-cover transition-transform duration-700 group-hover:scale-105"
                   />
