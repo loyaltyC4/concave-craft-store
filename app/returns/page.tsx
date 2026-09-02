@@ -6,7 +6,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Return Policy",
   description:
-    "Fingerboard Lab return policy: 30-day photo-based refunds, no return postage on most orders, and a fraud guard on high-value items over $100.",
+    "Fingerboard Lab return policy: 30-day returns, item must arrive back in original unused condition, buyer covers return shipping.",
   alternates: { canonical: "/returns" },
 };
 
@@ -15,11 +15,11 @@ export default function ReturnsPage() {
     <PageShell
       eyebrow="Policies"
       title="Return policy."
-      intro="Not feeling your setup? Here is exactly how a refund works, in plain language — designed to be honest, cheap for you, and hard for anyone to game."
+      intro="Not feeling your setup? Here is exactly how a refund works, in plain language."
     >
-      <Section heading="30-day photo-based refunds">
+      <Section heading="30-day returns — original condition required">
         <p>
-          You have 30 days from delivery to request a refund on any standard
+          You have 30 days from delivery to request a return on any standard
           item. Email{" "}
           <a
             href={`mailto:${SUPPORT_EMAIL}`}
@@ -27,16 +27,33 @@ export default function ReturnsPage() {
           >
             {SUPPORT_EMAIL}
           </a>{" "}
-          with your order number and a photo of the item. In most cases we
-          refund without asking for the item back — international return
-          postage on a small parcel usually costs more than the item itself.
+          with your order number to request a return authorization.
         </p>
         <p>
           <strong className="text-[#f3f1ea]">
-            No return postage required for most refunds.
+            The item must be shipped back to us in its original, unused
+            condition
           </strong>{" "}
+          — no signs of riding, assembly, or damage, and all original parts,
+          hardware, and packaging included — within 14 days of receiving your
+          return authorization. We inspect every item on arrival. If it
+          doesn&apos;t meet this standard, we&apos;ll either send it back to
+          you or issue a partial refund reflecting its condition, at our
+          discretion. This protects genuine customers and keeps prices honest
+          for everyone — it also means we can&apos;t accept a return that
+          shows up used, damaged, or incomplete.
+        </p>
+        <p>
+          <strong className="text-[#f3f1ea]">
+            Return shipping is the buyer&apos;s responsibility.
+          </strong>{" "}
+          Use a trackable shipping method — we can&apos;t refund a return
+          that never arrives, and we don&apos;t cover items lost in transit
+          back to us.
+        </p>
+        <p>
           Refunds go to your original payment method within 3 business days
-          of us receiving your email.
+          of us receiving and inspecting the returned item.
         </p>
       </Section>
 
@@ -50,18 +67,8 @@ export default function ReturnsPage() {
           >
             {SUPPORT_EMAIL}
           </a>{" "}
-          within 14 days of delivery. We ship a replacement at no cost. No
-          return required.
-        </p>
-      </Section>
-
-      <Section heading="Higher-value items ($100+)">
-        <p>
-          For change-of-mind refunds on items over $100 — mostly deck-pressing
-          molds and pro park sets — we may ask you to return the item before
-          completing the refund. This is a small guard against a rare kind of
-          fraud that would otherwise cost the whole item value. Genuine
-          faults still get free replacements with no return required.
+          within 14 days of delivery. We ship a replacement or refund at no
+          cost to you. No return required.
         </p>
       </Section>
 
@@ -86,14 +93,18 @@ export default function ReturnsPage() {
             within 30 days of delivery with your order number.
           </li>
           <li>
-            Attach a photo of the item (grip side and underside if possible).
-          </li>
-          <li>
-            Say briefly whether the item is faulty or just not what you
+            Say briefly whether the item is faulty/wrong or just not what you
             wanted — this decides which flow applies.
           </li>
           <li>
-            We reply within one business day with next steps.
+            For change-of-mind returns, we&apos;ll reply with a return
+            authorization and address. Ship the item back in its original
+            condition, in its original packaging where possible, using a
+            trackable method, within 14 days.
+          </li>
+          <li>
+            We inspect the item on arrival and process your refund within 3
+            business days if it meets the original-condition standard above.
           </li>
         </ol>
       </Section>

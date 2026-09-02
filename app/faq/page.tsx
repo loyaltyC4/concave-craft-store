@@ -37,7 +37,7 @@ const FAQS: Faq[] = [
   },
   {
     q: "What's your return policy?",
-    a: "Return within 30 days by emailing us with your order number and a photo of the item — we refund most orders without asking for the item back. Custom-pressed decks and clearance items are final sale unless faulty.",
+    a: "Return within 30 days by emailing us with your order number. The item must be shipped back in its original, unused condition — you cover return shipping — and we refund once we've inspected it. Faulty or wrong items get a free replacement, no return needed. Custom-pressed decks and clearance items are final sale unless faulty.",
   },
   {
     q: "How do payments work?",

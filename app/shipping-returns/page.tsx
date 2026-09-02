@@ -5,7 +5,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Shipping & Returns",
   description:
-    "Fingerboard Lab shipping times, worldwide delivery, and our photo-based 30-day returns policy — no return postage on most orders.",
+    "Fingerboard Lab shipping times, worldwide delivery, and our 30-day return policy — item must be returned in original condition, buyer covers return shipping.",
   alternates: { canonical: "/shipping-returns" },
 };
 
@@ -14,7 +14,7 @@ export default function ShippingReturnsPage() {
     <PageShell
       eyebrow="Policies"
       title="Shipping & returns."
-      intro="Worldwide delivery, honest transit windows, and a no-drama 30-day return window."
+      intro="Worldwide delivery, honest transit windows, and a clear, fair 30-day return policy."
     >
       <Section heading="Dispatch & delivery">
         <p>
@@ -57,37 +57,43 @@ export default function ShippingReturnsPage() {
           >
             {SUPPORT_EMAIL}
           </a>{" "}
-          within 30 days of delivery with your order number and a photo of
-          the item. In most cases we refund without asking for the item back —
-          international return postage on small items usually costs more than
-          the item itself, and we'd rather you get on with skating something
-          you actually want.
+          within 30 days of delivery with your order number to request a
+          return authorization.
         </p>
         <p>
           <strong className="text-[#f3f1ea]">
-            No return postage required for most refunds.
+            The item must be sent back to us in its original condition
           </strong>{" "}
-          Refunds go to the original payment method within 3 business days of
-          the photo landing in our inbox.
+          — unused, undamaged, with all original parts, hardware, and
+          packaging included — within 14 days of receiving your return
+          authorization. We inspect every return on arrival. Items that show
+          signs of use, riding, assembly, or missing parts will not be
+          refunded in full; we&apos;ll either return the item to you or issue
+          a partial refund reflecting its condition, at our discretion.
         </p>
         <p>
-          For genuine faults — damage in transit, missing parts, wrong item —
-          send a photo to{" "}
+          <strong className="text-[#f3f1ea]">
+            Return shipping is paid by the buyer.
+          </strong>{" "}
+          Use a trackable shipping method — we can&apos;t issue a refund for a
+          return that doesn&apos;t arrive, and we&apos;re not able to cover
+          the cost of items lost in transit back to us.
+        </p>
+        <p>
+          Once we&apos;ve received and inspected the item, refunds are issued
+          to your original payment method within 3 business days.
+        </p>
+        <p>
+          For genuine faults — damage in transit, missing parts, or the wrong
+          item shipped — send a photo to{" "}
           <a
             href={`mailto:${SUPPORT_EMAIL}`}
             className="text-[#c5f23c] hover:underline"
           >
             {SUPPORT_EMAIL}
           </a>{" "}
-          within 14 days of delivery and we&apos;ll ship a replacement at no
-          cost.
-        </p>
-        <p>
-          For higher-value items over $100 — mostly deck-pressing molds and
-          pro park sets — we may ask you to return the item before completing
-          a change-of-mind refund. Faulty items still ship replacements at no
-          cost, no return required. This is a small guard against a rare kind
-          of fraud that would otherwise cost us the entire item value.
+          within 14 days of delivery and we&apos;ll ship a replacement or
+          refund at no cost to you — no return required.
         </p>
         <p>
           Custom-pressed decks and clearance items are final sale unless they
