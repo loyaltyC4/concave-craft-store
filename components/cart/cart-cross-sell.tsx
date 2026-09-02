@@ -24,6 +24,13 @@ function fmt(amount: string, code: string) {
   }).format(parseFloat(amount));
 }
 
+// Same external-image guard as components/product-card.tsx and
+// components/product/gallery.tsx — supplier-CDN images 402 through
+// Vercel's Image Optimization once the account's monthly quota is used.
+function isExternal(src: string) {
+  return src.startsWith("https://");
+}
+
 export function CartCrossSell({
   excludeHandles,
 }: {
@@ -102,6 +109,7 @@ export function CartCrossSell({
                   src={item.image}
                   alt=""
                   fill
+                  unoptimized={isExternal(item.image)}
                   className="object-contain p-1"
                 />
               ) : null}

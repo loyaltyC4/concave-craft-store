@@ -21,6 +21,16 @@ import OpenCart from "./open-cart";
 
 type MerchandiseSearchParams = { [key: string]: string };
 
+// External images (supplier CDN like alicdn.com) 402 through Vercel's
+// Image Optimization endpoint once the account's monthly quota is used —
+// same issue already guarded against in components/product/gallery.tsx
+// and components/product-card.tsx. The cart drawer thumbnail was missing
+// this guard, which is worse than a category tile going blank: it sits
+// directly in the checkout path.
+function isExternal(src: string) {
+  return src.startsWith("https://");
+}
+
 export default function CartModal() {
   const { cart, updateCartItem } = useCart();
   const [isOpen, setIsOpen] = useState(false);
@@ -206,6 +216,10 @@ export default function CartModal() {
                                         item.merchandise.product.featuredImage
                                           .url
                                       }
+                                      unoptimized={isExternal(
+                                        item.merchandise.product.featuredImage
+                                          .url,
+                                      )}
                                     />
                                   ) : null}
                                 </div>

@@ -9,6 +9,20 @@ function fmt(amount: string, code: string) {
   }).format(parseFloat(amount));
 }
 
+// External images (supplier CDN like alicdn.com) cannot be optimised through
+// Next.js image optimisation on Vercel's Hobby plan — that endpoint returns
+// 402 Payment Required for remote URLs once the account's monthly image
+// quota is used, which showed up here as most product cards going blank.
+// components/product/gallery.tsx already carries this exact guard for the
+// product-page gallery; ProductCard (used on every grid/category/homepage
+// listing — i.e. most of the storefront) was missing it. Skipping
+// optimisation for external URLs serves them directly from the supplier CDN
+// instead, which always works. Local /products/ files are still optimised
+// as normal.
+function isExternal(src: string) {
+  return src.startsWith("https://");
+}
+
 export function ProductCard({
   product,
   badge,
@@ -37,6 +51,7 @@ export function ProductCard({
             fill
             sizes={sizes}
             priority={priority}
+            unoptimized={isExternal(img)}
             className="object-contain p-[9%] transition-transform duration-700 ease-out group-hover:scale-105"
           />
         ) : (
