@@ -41,13 +41,15 @@ export async function Navbar() {
 
   return (
     <header className="sticky top-0 z-50">
-      {/* Announcement bar */}
-      <div className="hidden bg-[#c5f23c] text-black sm:block">
-        <div className="mx-auto flex max-w-7xl items-center justify-center gap-8 px-6 py-1.5 text-[12px] font-semibold tracking-wide">
+      {/* Announcement bar — was black text on the volt-green fill; reported
+          unreadable, so flipped to the same dark-bg / bold-volt-text pairing
+          used everywhere else on the site instead of black-on-lime. */}
+      <div className="hidden bg-[#0b0c0e] border-b border-white/10 sm:block">
+        <div className="mx-auto flex max-w-7xl items-center justify-center gap-8 px-6 py-1.5 text-[12px] font-bold tracking-wide">
           {ANNOUNCEMENTS.map((a) => (
-            <span key={a} className="flex items-center gap-8">
+            <span key={a} className="flex items-center gap-8 text-[#c5f23c]">
               {a}
-              <span className="text-black/30">◆</span>
+              <span className="text-[#f3f1ea]/30">◆</span>
             </span>
           ))}
         </div>
