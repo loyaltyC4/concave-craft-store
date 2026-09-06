@@ -209,18 +209,22 @@ export default async function HomePage() {
       */}
       <span id={REVEAL_SENTINEL_ID} aria-hidden="true" />
 
-      {/* MARQUEE — kept from previous design; it's the store's "as seen in" moment */}
+      {/* MARQUEE — kept from previous design; it's the store's "as seen in" moment.
+          Was black text on the volt background — reported unreadable, so flipped
+          to the site's dark ink with bold volt-green text (the same
+          high-contrast pairing used for every other accent/label on the page)
+          instead of black-on-lime. */}
       <div
-        className="overflow-hidden border-y border-white/10"
-        style={{ background: VOLT }}
+        className="overflow-hidden border-y border-white/10 bg-[#0b0c0e]"
       >
         <div className="cc-marquee flex w-max gap-10 whitespace-nowrap py-3.5">
           {[...specs, ...specs].map((s, i) => (
             <span
               key={i}
-              className="flex items-center gap-10 text-[15px] font-semibold text-black"
+              className="flex items-center gap-10 text-[15px] font-bold"
+              style={{ color: VOLT }}
             >
-              {s} <span className="text-black/40">◆</span>
+              {s} <span style={{ color: "#f3f1ea", opacity: 0.35 }}>◆</span>
             </span>
           ))}
         </div>
