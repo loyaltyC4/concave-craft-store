@@ -1,6 +1,9 @@
 import Footer from "components/layout/footer";
 import { FaqList } from "components/faq-list";
-import { GuideRelatedProducts } from "components/guide-related-products";
+import {
+  GuideInlineBuy,
+  GuideRelatedProducts,
+} from "components/guide-related-products";
 import { getGuide, allGuides } from "lib/all-guides";
 import { getGuideProducts } from "lib/guide-products";
 import { SITE_NAME, VOLT } from "lib/brand";
@@ -64,10 +67,41 @@ export default async function GuidePage(props: {
     .map((s) => getGuide(s))
     .filter((g): g is NonNullable<typeof g> => Boolean(g));
 
-  // Products recommended for this specific guide
+  /*
+   * Products recommended for this specific guide, placed at three depths
+   * (reworked 2026-09-15).
+   *
+   * Before: a 2-up card grid immediately after section 1, then a 4-up grid
+   * at the very end of the article. Guides are ~60% of the site's search
+   * impressions and rank on page one, but convert under 1% — and only 18% of
+   * sessions ever fire a 90%-scroll event, so the end-of-article grid is
+   * invisible to most readers, while the two placements sat so close
+   * together that the whole middle of a 5-6 section article had no prompt at
+   * all.
+   *
+   * Now:
+   *   1. topProduct   — compact one-line bar under the answer summary, above
+   *                     the fold, where every reader (including the ~22% of
+   *                     traffic arriving from AI assistants) actually is.
+   *   2. midProducts  — 2-up grid at the article midpoint, using *different*
+   *                     products so it isn't a repeat of the bar.
+   *   3. guideProducts — full 4-up at the end, unchanged, as a summary.
+   */
   const guideProducts = getGuideProducts(slug);
-  // Split into mid-article (first 2) and end (all 4) for placement variety
-  const midProducts = guideProducts.slice(0, 2);
+  const topProduct = guideProducts[0];
+  const midProducts = guideProducts.slice(1, 3);
+
+  // Render the mid grid after this section index. Clamped so it never lands
+  // on the first section (too close to the top bar) or after the last one
+  // (that's what the end-of-article strip is for). -1 disables it, which is
+  // what happens on guides short enough that there's no real midpoint.
+  const midSectionIndex =
+    guide.sections.length >= 4
+      ? Math.min(
+          Math.floor(guide.sections.length / 2),
+          guide.sections.length - 2,
+        )
+      : -1;
 
   const showCustomBuildCta = CUSTOM_BUILD_CTA_GUIDES.has(slug);
 
@@ -147,6 +181,9 @@ export default async function GuidePage(props: {
           </p>
         </div>
 
+        {/* Above-the-fold commercial prompt — see note at topProduct. */}
+        {topProduct ? <GuideInlineBuy product={topProduct} /> : null}
+
         <div className="mt-10 space-y-10">
           {guide.sections.map((s, i) => (
             <section key={i}>
@@ -156,8 +193,9 @@ export default async function GuidePage(props: {
                   <p key={j}>{p}</p>
                 ))}
               </div>
-              {/* Mid-article CTA: inject after the first section if we have products */}
-              {i === 0 && midProducts.length > 0 && (
+              {/* Mid-article CTA at the article's midpoint, not after the
+                  first section — see the note at midSectionIndex. */}
+              {i === midSectionIndex && midProducts.length > 0 && (
                 <GuideRelatedProducts
                   products={midProducts}
                   heading="Shop Related"

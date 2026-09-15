@@ -69,8 +69,26 @@ export async function Navbar() {
          * defaults to its max-content size, so this <ul> could never shrink
          * below "every link at full width" and the browser widened the whole
          * nav (and page) to fit instead of wrapping or clipping.
+         *
+         * overflow-x-auto is the second half of that fix (added 2026-09-15).
+         * min-w-0 let the <ul> shrink, but every <li> is shrink-0 +
+         * whitespace-nowrap, so the content still overflowed its box — and
+         * because the box has no overflow rule, it painted *over* the
+         * ml-auto search/cart cluster to its right. At ~1280-1440px the
+         * search input visibly collided with the "Storage" and "Guides"
+         * links. Now the overflow scrolls instead of escaping. The scrollbar
+         * itself is hidden so it reads as an ordinary nav on the widths
+         * where everything already fits.
+         *
+         * The search input's breakpoint was also moved xl: -> 2xl: below,
+         * which is what actually buys the room back: with 10 collection
+         * links plus Custom Builds and Guides, the row needs ~1180px, and
+         * the 208px search field pushed that past the 1280px xl breakpoint.
          */}
-        <ul className="hidden min-w-0 flex-1 items-center gap-5 pl-4 md:flex">
+        <ul
+          className="hidden min-w-0 flex-1 items-center gap-5 overflow-x-auto pl-4 md:flex [&::-webkit-scrollbar]:hidden"
+          style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
+        >
           {links.map((item) => (
             <li key={item.title} className="shrink-0">
               <Link
@@ -89,7 +107,8 @@ export async function Navbar() {
         </ul>
 
         <div className="ml-auto flex flex-none items-center gap-3">
-          <div className="hidden w-52 xl:block">
+          {/* 2xl, not xl — see the note on the link <ul> above. */}
+          <div className="hidden w-52 2xl:block">
             <Suspense fallback={<SearchSkeleton />}>
               <Search />
             </Suspense>

@@ -10,6 +10,71 @@ function fmt(amount: string, code: string) {
 }
 
 /**
+ * Compact single-product bar for the very top of a guide, directly under the
+ * definitive-answer summary.
+ *
+ * Why this exists (added 2026-09-15): guides carry ~60% of the site's search
+ * impressions and rank on page one, but convert clicks at under 1%. The only
+ * commercial prompts on the page were a card grid after the first section and
+ * another at the very end — and 82% of sessions never scroll to a page
+ * bottom. Roughly a fifth of all traffic now arrives from AI assistants,
+ * which means a reader who lands on the answer box, gets their answer, and
+ * leaves without ever seeing a product.
+ *
+ * This is deliberately one product and one line rather than a second card
+ * grid: it sits inches below the answer, where a grid would read as an ad
+ * break and push the article itself below the fold.
+ */
+export function GuideInlineBuy({
+  product,
+  label = "The one most people buy",
+}: {
+  product: Product;
+  label?: string;
+}) {
+  const price = product.priceRange.minVariantPrice;
+  const img = product.featuredImage?.url;
+
+  return (
+    <Link
+      href={`/product/${product.handle}`}
+      prefetch
+      className="group mt-5 flex items-center gap-4 rounded-2xl border border-[#c5f23c]/25 bg-[#15171c] p-3.5 transition duration-300 hover:border-[#c5f23c]/60 sm:gap-5 sm:p-4"
+    >
+      <div className="relative h-16 w-16 shrink-0 overflow-hidden rounded-xl bg-white sm:h-20 sm:w-20">
+        {img ? (
+          <Image
+            src={img}
+            alt={product.featuredImage?.altText || product.title}
+            fill
+            sizes="80px"
+            className="object-contain p-[8%] transition-transform duration-500 group-hover:scale-105"
+          />
+        ) : null}
+      </div>
+
+      <div className="min-w-0 flex-1">
+        <span className="text-[10px] font-semibold uppercase tracking-[0.16em] text-[#c5f23c]">
+          {label}
+        </span>
+        <p className="mt-1 line-clamp-2 text-[14px] font-medium leading-snug text-[#f3f1ea]">
+          {product.title}
+        </p>
+      </div>
+
+      <div className="shrink-0 text-right">
+        <span className="block text-[15px] font-semibold text-[#f3f1ea]">
+          {fmt(price.amount, price.currencyCode)}
+        </span>
+        <span className="mt-0.5 block text-[12px] font-semibold text-[#c5f23c]">
+          View →
+        </span>
+      </div>
+    </Link>
+  );
+}
+
+/**
  * Horizontal strip of 2-4 product cards surfaced inside guide articles.
  * Matches the site's dark-panel / lime-accent design language.
  */

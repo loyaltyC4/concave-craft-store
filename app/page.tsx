@@ -4,7 +4,6 @@ import Image from "next/image";
 import Link from "next/link";
 import Footer from "components/layout/footer";
 import { ProductCard } from "components/product-card";
-import { HeroVideo } from "components/hero-video";
 import { NewsletterForm } from "components/newsletter-form";
 import { Reveal } from "components/reveal";
 import {
@@ -12,7 +11,16 @@ import {
   REVEAL_SENTINEL_ID,
   HIDE_SENTINEL_ID,
 } from "components/mobile-sticky-cta";
-import { COLLECTIONS, COLLECTION_IMAGE, GUIDES, VOLT } from "lib/brand";
+import {
+  COLLECTIONS,
+  COLLECTION_IMAGE,
+  FREE_SHIPPING_THRESHOLD,
+  GUIDES,
+  SHIPPING_FEE_USD,
+  VOLT,
+  WELCOME_DISCOUNT_CODE,
+  WELCOME_DISCOUNT_LABEL,
+} from "lib/brand";
 import homepageData from "data/homepage.json";
 
 export const metadata = {
@@ -76,7 +84,9 @@ export default async function HomePage() {
 
   const entry = (list: Product[]) =>
     list.length
-      ? `$${Math.min(...list.map(priceNum)).toFixed(2).replace(/\.00$/, "")}`
+      ? `$${Math.min(...list.map(priceNum))
+          .toFixed(2)
+          .replace(/\.00$/, "")}`
       : "";
 
   const specs = [
@@ -89,6 +99,69 @@ export default async function HomePage() {
     "Free sticker sheet",
     "30-day returns",
   ];
+
+  /*
+   * HERO LANES — the three states a visitor actually arrives in.
+   *
+   * Analytics context (Sept 2026): the homepage is only ~2% of the site's
+   * search impressions but has its best click-through rate, i.e. the people
+   * who land here are warm and just can't find their lane. 82% of sessions
+   * never fire a 90%-scroll event, so anything the hero doesn't say is
+   * effectively unsaid. Hence: self-identification above the fold rather
+   * than a mood video, and real prices/counts rather than adjectives.
+   *
+   * Every number below is derived from the catalogue, never hardcoded. The
+   * previous hero advertised "Kits from $34.99" while the cheapest park kit
+   * was $47.95 — that drift is exactly what these helpers prevent.
+   */
+  const listOf = (handle: string) => {
+    const i = COLLECTIONS.findIndex((c) => c.handle === handle);
+    return i === -1 ? [] : (collectionProducts[i] ?? []);
+  };
+  const money = (n: number) => `$${n.toFixed(2).replace(/\.00$/, "")}`;
+  const lowest = (...lists: Product[][]) => {
+    const all = lists.flat();
+    return all.length ? Math.min(...all.map(priceNum)) : 0;
+  };
+  const highest = (...lists: Product[][]) => {
+    const all = lists.flat();
+    return all.length ? Math.max(...all.map(priceNum)) : 0;
+  };
+
+  const HERO_LANES = [
+    {
+      href: "/search/completes",
+      image: COLLECTION_IMAGE["completes"]!,
+      alt: "Complete fingerboard setups on maple with alloy bearing trucks",
+      eyebrow: "Start riding today",
+      title: "Completes",
+      body: "Pressed maple, metal trucks, bearing wheels and grip already dialled in. Skate it out of the box.",
+      count: counts["completes"] ?? 0,
+      from: lowest(listOf("completes")),
+    },
+    {
+      href: "/search/ramps-obstacles",
+      image: COLLECTION_IMAGE["ramps-obstacles"]!,
+      alt: "Wooden fingerboard ramps, rails and ledges arranged as a park",
+      eyebrow: "Build a park",
+      title: "Ramps & kits",
+      body: "Modular wooden ramps, rails and ledges built for real lines rather than the shelf. Add a piece at a time.",
+      count: (counts["ramps-obstacles"] ?? 0) + (counts["park-kits"] ?? 0),
+      from: lowest(listOf("ramps-obstacles"), listOf("park-kits")),
+    },
+    {
+      href: "/search/deck-building",
+      image: COLLECTION_IMAGE["deck-building"]!,
+      alt: "Fingerboard press molds, maple veneer blanks and a marking scribe",
+      eyebrow: "Press your own",
+      title: "Molds & blanks",
+      body: "Concave molds, maple veneer, alignment pins and scribes — shallow to deep. The range almost nobody else stocks.",
+      count: counts["deck-building"] ?? 0,
+      from: lowest(listOf("deck-building")),
+    },
+  ];
+
+  const moldCeiling = highest(listOf("deck-building"));
 
   function pickBadge(p: Product, i: number): string | undefined {
     if (i === 0) return "Editor's pick";
@@ -112,92 +185,131 @@ export default async function HomePage() {
   return (
     <div className="bg-[#0b0c0e] text-[#f3f1ea]">
       {/*
-        HERO — Sticky-transform pattern (Oura d).
-        The hero media pins for one viewport of scroll while the foreground
-        copy scrolls past. On reduced-motion, the sticky collapses to a
-        conventional pinned hero (see .cc-hero-media rule in globals.css).
-        Mobile drops the 100vh commitment down to a shorter min-height so a
-        peek of the next section is visible above the fold — that peek is
-        the single biggest lift for reducing bounce on niche DTC mobile.
-      */}
-      <section className="cc-hero-shell">
-        <div className="cc-hero-media">
-          <Image
-            src="/brand/hero.jpg"
-            alt="A hand riding a precision fingerboard on a wooden desk"
-            fill
-            priority
-            sizes="100vw"
-            className="object-cover object-right"
-          />
-          <HeroVideo
-            src="/brand/hero-loop.mp4"
-            className="absolute inset-0 h-full w-full object-cover object-right"
-          />
-          <div
-            className="absolute inset-0"
-            style={{
-              background:
-                "linear-gradient(90deg,#0b0c0e 0%,rgba(11,12,14,.92) 34%,rgba(11,12,14,.5) 62%,rgba(11,12,14,.18) 100%)",
-            }}
-          />
-        </div>
+        HERO — self-identification, not browsing.
+        ("Direction A", shipped 2026-09-15. Replaces a sticky 86vh
+        background-video hero.)
 
-        <div className="cc-hero-foreground cc-hero-lift min-h-[70vh] md:min-h-[86vh]">
-          <div className="relative mx-auto w-full max-w-7xl px-6 py-16 md:px-12 md:py-20">
-            <Reveal direction="up" className="max-w-2xl">
-              <div className="mb-6 flex items-center gap-3">
-                <span className="h-px w-7" style={{ background: VOLT }} />
-                <span
-                  className="text-xs font-semibold uppercase tracking-[0.18em]"
-                  style={{ color: VOLT }}
-                >
-                  Build a park you can actually skate
-                </span>
-              </div>
-              <h1 className="text-[44px] font-semibold leading-[1.02] md:text-7xl">
-                Fingerboard <span style={{ color: VOLT }}>parks</span>,
-                <br />
-                ramps &amp; gear.
-              </h1>
-              <p className="mt-6 max-w-lg text-base text-neutral-300 md:text-lg">
-                Completes, decks, molds, park sets and parts — hand-picked,
-                honestly priced, and backed by free build guides.{" "}
-                <span className="text-[#f3f1ea]">
-                  {totalProducts} products, nothing filler.
-                </span>
-              </p>
-              <div className="mt-8 flex flex-wrap gap-3.5">
-                <Link
-                  href="/search/park-kits"
-                  className="rounded-full px-6 py-3.5 text-sm font-semibold text-black transition hover:brightness-110"
-                  style={{ background: VOLT }}
-                >
-                  Shop park kits
-                </Link>
-                <Link
-                  href="/search"
-                  className="rounded-full border border-white/20 px-6 py-3.5 text-sm font-semibold text-[#f3f1ea] transition hover:border-[#c5f23c] hover:text-[#c5f23c]"
-                >
-                  Explore the catalog →
-                </Link>
-              </div>
-              <div className="mt-8 flex flex-wrap gap-2.5 md:mt-10">
-                {[
-                  "Kits from $34.99",
-                  "30-day returns",
-                  "Free sticker sheet",
-                  "Worldwide shipping",
-                ].map((c) => (
+        What changed and why:
+        - The background video is gone. It was a dark, blurred macro loop of
+          a thumb on a board: no product was visible, so a first-time
+          visitor could not tell what this shop sells from the fold. An
+          e-commerce hero has one job and that was not it.
+        - Height roughly halved (content-height, ~60vh desktop, no 100vh
+          sticky pin). 82% of sessions never reached the bottom of the page,
+          so the old hero was a wall standing in front of 141 products.
+        - One decision, three answers. Visitors arrive wanting to ride / to
+          build a park / to press their own decks. Each lane is a real
+          photo, a real entry price and a live product count.
+        - Molds are surfaced for the first time. The site ranks for
+          "fingerboard mold", "fingerboard press", "blank fingerboard decks"
+          and "deep concave" — and stocks up to a ${moldCeiling} mold — yet
+          the old hero never mentioned any of it.
+        - The four trust claims used to appear three times on this page
+          (announcement bar, hero chips, marquee). The hero's copy is now a
+          single quiet line; the bar and marquee already carry the rest.
+
+        Deliberately NOT sticky: .cc-hero-shell / .cc-hero-media / .cc-hero-lift
+        in globals.css are still used elsewhere and are left untouched.
+      */}
+      <section className="relative overflow-hidden border-b border-white/10">
+        <div
+          aria-hidden="true"
+          className="pointer-events-none absolute inset-0"
+          style={{
+            background:
+              "radial-gradient(900px 400px at 10% -12%, rgba(197,242,60,.10), transparent 70%)",
+          }}
+        />
+
+        <div className="relative mx-auto w-full max-w-7xl px-6 py-12 md:px-12 md:py-16">
+          <Reveal direction="up">
+            <div className="mb-5 flex items-center gap-3">
+              <span className="h-px w-7" style={{ background: VOLT }} />
+              <span
+                className="text-[11px] font-semibold uppercase tracking-[0.18em] md:text-xs"
+                style={{ color: VOLT }}
+              >
+                {totalProducts} products · free build guides
+                {moldCeiling ? ` · molds to ${money(moldCeiling)}` : ""}
+              </span>
+            </div>
+
+            <h1 className="max-w-[18ch] text-[38px] font-semibold leading-[1.02] md:text-[60px]">
+              Where are you in your <span style={{ color: VOLT }}>build?</span>
+            </h1>
+
+            <p className="mt-5 max-w-xl text-base text-neutral-300 md:text-lg">
+              Ride it out of the box, build a park you can actually skate, or
+              press your own decks from raw maple. Pick the one that&apos;s you.
+            </p>
+          </Reveal>
+
+          <div className="mt-9 grid gap-4 md:mt-10 md:grid-cols-3">
+            {HERO_LANES.map((lane, i) => (
+              <Link
+                key={lane.href}
+                href={lane.href}
+                prefetch={true}
+                className="group flex flex-col overflow-hidden rounded-2xl border border-white/10 bg-[#15171c] transition duration-300 hover:-translate-y-1 hover:border-[#c5f23c]/40"
+              >
+                <div className="relative aspect-[4/3] overflow-hidden bg-[#0e1013]">
+                  <Image
+                    src={lane.image}
+                    alt={lane.alt}
+                    fill
+                    priority={i === 0}
+                    sizes="(min-width:768px) 33vw, 100vw"
+                    className="object-cover transition-transform duration-500 group-hover:scale-105"
+                  />
+                </div>
+                <div className="flex flex-1 flex-col p-5">
                   <span
-                    key={c}
-                    className="rounded-full border border-white/10 bg-white/[0.025] px-3.5 py-2 text-[13px] text-neutral-300"
+                    className="text-[10px] font-semibold uppercase tracking-[0.17em]"
+                    style={{ color: VOLT }}
                   >
-                    {c}
+                    {lane.eyebrow}
                   </span>
-                ))}
-              </div>
-            </Reveal>
+                  <h2 className="mt-2 text-xl font-semibold">{lane.title}</h2>
+                  <p className="mt-2 text-[13px] leading-relaxed text-neutral-400">
+                    {lane.body}
+                  </p>
+                  <div className="mt-4 flex items-center justify-between border-t border-white/10 pt-3.5">
+                    <span className="text-[13px] font-semibold text-[#f3f1ea]">
+                      From {money(lane.from)}
+                    </span>
+                    <span className="text-[12px] font-semibold text-[#c5f23c]">
+                      {lane.count} products →
+                    </span>
+                  </div>
+                </div>
+              </Link>
+            ))}
+          </div>
+
+          <div className="mt-8 flex flex-wrap items-center gap-x-6 gap-y-2 text-[13px] text-neutral-400">
+            <span>
+              <span className="font-semibold text-[#c5f23c]">
+                ${SHIPPING_FEE_USD}
+              </span>{" "}
+              flat worldwide
+            </span>
+            <span>
+              <span className="font-semibold text-[#c5f23c]">Free</span>{" "}
+              shipping over ${FREE_SHIPPING_THRESHOLD}
+            </span>
+            <span>
+              <span className="font-semibold text-[#c5f23c]">30-day</span>{" "}
+              returns
+            </span>
+            <span>
+              <span className="font-semibold text-[#c5f23c]">
+                {WELCOME_DISCOUNT_LABEL}
+              </span>{" "}
+              with{" "}
+              <code className="rounded bg-white/5 px-1.5 py-0.5 font-mono text-[12px] tracking-wide text-[#f3f1ea]">
+                {WELCOME_DISCOUNT_CODE}
+              </code>
+            </span>
           </div>
         </div>
       </section>
@@ -214,9 +326,7 @@ export default async function HomePage() {
           to the site's dark ink with bold volt-green text (the same
           high-contrast pairing used for every other accent/label on the page)
           instead of black-on-lime. */}
-      <div
-        className="overflow-hidden border-y border-white/10 bg-[#0b0c0e]"
-      >
+      <div className="overflow-hidden border-y border-white/10 bg-[#0b0c0e]">
         <div className="cc-marquee flex w-max gap-10 whitespace-nowrap py-3.5">
           {[...specs, ...specs].map((s, i) => (
             <span
@@ -233,7 +343,10 @@ export default async function HomePage() {
       {/* THIS WEEK'S PICKS — near top so the first product moment
           lands before we ask the user to make a category choice. */}
       <section className="mx-auto max-w-7xl px-6 pt-16 pb-8 md:px-12 md:pt-24">
-        <Reveal direction="up" className="mb-10 flex items-end justify-between gap-6">
+        <Reveal
+          direction="up"
+          className="mb-10 flex items-end justify-between gap-6"
+        >
           <div>
             <span
               className="text-xs font-semibold uppercase tracking-[0.18em]"
@@ -245,9 +358,8 @@ export default async function HomePage() {
               This week&apos;s picks.
             </h2>
             <p className="mt-3 max-w-md text-neutral-400">
-              Hand-picked from what just landed — press molds, collab
-              completes, race-grade wheels and park sets. One of each, low to
-              high.
+              Hand-picked from what just landed — press molds, collab completes,
+              race-grade wheels and park sets. One of each, low to high.
             </p>
           </div>
           <Link
@@ -288,8 +400,8 @@ export default async function HomePage() {
             Everything for the build.
           </h2>
           <p className="mt-3 text-neutral-400 md:text-base">
-            Start with a complete, add a ramp, or press your own from raw
-            maple. Three places to begin — pick where you are.
+            Start with a complete, add a ramp, or press your own from raw maple.
+            Three places to begin — pick where you are.
           </p>
         </Reveal>
 
@@ -300,7 +412,10 @@ export default async function HomePage() {
             const copy = BAND_COPY[handle];
             const flipRight = i % 2 === 1;
             return (
-              <div key={handle} className="cc-band grid items-center gap-8 md:grid-cols-12 md:gap-14">
+              <div
+                key={handle}
+                className="cc-band grid items-center gap-8 md:grid-cols-12 md:gap-14"
+              >
                 <Reveal
                   direction={flipRight ? "left" : "right"}
                   className={`md:col-span-7 ${flipRight ? "md:order-2" : ""}`}
@@ -335,7 +450,9 @@ export default async function HomePage() {
                   <h3 className="mt-3 text-3xl font-semibold leading-tight md:text-4xl">
                     {c.title}.
                   </h3>
-                  <p className="mt-4 text-neutral-400 md:text-base">{copy.body}</p>
+                  <p className="mt-4 text-neutral-400 md:text-base">
+                    {copy.body}
+                  </p>
                   <div className="mt-6 flex flex-wrap items-center gap-4">
                     <Link
                       href={`/search/${handle}`}
@@ -362,7 +479,10 @@ export default async function HomePage() {
       */}
       <section className="border-y border-white/10 bg-[#0e1013] py-14 md:py-20">
         <div className="mx-auto max-w-7xl px-6 md:px-12">
-          <Reveal direction="up" className="mb-10 flex items-end justify-between gap-6">
+          <Reveal
+            direction="up"
+            className="mb-10 flex items-end justify-between gap-6"
+          >
             <div>
               <span
                 className="text-xs font-semibold uppercase tracking-[0.18em]"
@@ -549,7 +669,10 @@ export default async function HomePage() {
       {proCompletes.length > 0 && (
         <section className="bg-[#0e1013]">
           <div className="mx-auto max-w-7xl px-6 py-20 md:px-12 md:py-24">
-            <Reveal direction="up" className="mb-10 flex items-end justify-between gap-6">
+            <Reveal
+              direction="up"
+              className="mb-10 flex items-end justify-between gap-6"
+            >
               <div>
                 <span
                   className="text-xs font-semibold uppercase tracking-[0.18em]"
@@ -562,8 +685,8 @@ export default async function HomePage() {
                 </h2>
                 <p className="mt-3 max-w-lg text-neutral-400">
                   Pro maple, real bearing wheels, and graphics that came from a
-                  collaboration rather than a catalogue. Built to be skated,
-                  and worth putting on a shelf when you are not.
+                  collaboration rather than a catalogue. Built to be skated, and
+                  worth putting on a shelf when you are not.
                 </p>
               </div>
               <Link
@@ -619,9 +742,9 @@ export default async function HomePage() {
               Set the scene.
             </h2>
             <p className="mt-4 text-neutral-300">
-              Modular ramps, rails, ledges and full park sets in wood and
-              alloy — built for real skating, not display. Rearrange them into
-              new lines and add a piece at a time.
+              Modular ramps, rails, ledges and full park sets in wood and alloy
+              — built for real skating, not display. Rearrange them into new
+              lines and add a piece at a time.
             </p>
             <Link
               href="/search/park-kits"
@@ -649,7 +772,10 @@ export default async function HomePage() {
 
       {/* GUIDES TEASER */}
       <section className="mx-auto max-w-7xl px-6 py-20 md:px-12 md:py-24">
-        <Reveal direction="up" className="mb-10 flex items-end justify-between gap-6">
+        <Reveal
+          direction="up"
+          className="mb-10 flex items-end justify-between gap-6"
+        >
           <div>
             <span
               className="text-xs font-semibold uppercase tracking-[0.18em]"
