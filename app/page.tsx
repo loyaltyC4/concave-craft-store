@@ -270,10 +270,14 @@ export default async function HomePage() {
                     {lane.eyebrow}
                   </span>
                   <h2 className="mt-2 text-xl font-semibold">{lane.title}</h2>
-                  <p className="mt-2 text-[13px] leading-relaxed text-neutral-400">
+                  <p className="mt-2 pb-4 text-[13px] leading-relaxed text-neutral-400">
                     {lane.body}
                   </p>
-                  <div className="mt-4 flex items-center justify-between border-t border-white/10 pt-3.5">
+                  {/* mt-auto, not mt-4: the three lanes have different body
+                      lengths (the molds copy runs to three lines at 1280px),
+                      so a fixed top margin left the third card's price row
+                      sitting ~20px below the other two. */}
+                  <div className="mt-auto flex items-center justify-between border-t border-white/10 pt-3.5">
                     <span className="text-[13px] font-semibold text-[#f3f1ea]">
                       From {money(lane.from)}
                     </span>
