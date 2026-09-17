@@ -104,9 +104,15 @@ export function ReviewsSection({
               </span>
             </div>
           ) : (
-            <p className="mt-2 text-sm text-neutral-400">
-              No reviews yet — be the first to share how it rides.
-            </p>
+            <div className="mt-2">
+              <p className="text-sm text-neutral-400">
+                No reviews yet — be the first to share how it rides.
+              </p>
+              <p className="mt-1 text-xs text-neutral-500">
+                Snapped a photo of your setup? Mention it in your review — real
+                builds help other riders choose.
+              </p>
+            </div>
           )}
         </div>
         <button

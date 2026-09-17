@@ -4,6 +4,7 @@ import { ProductDescription } from "components/product/product-description";
 import Prose from "components/prose";
 import { ProductCard } from "components/product-card";
 import { ReviewsSection } from "components/product/reviews-section";
+import { StickyAddToCart } from "components/product/sticky-add-to-cart";
 import { ViewItemTracker } from "components/analytics/view-item-tracker";
 import { HIDDEN_PRODUCT_TAG } from "lib/constants";
 import { getProductReviews } from "lib/reviews";
@@ -263,9 +264,19 @@ export default async function ProductPage(props: {
                 }
               >
                 <Gallery
-                  images={product.images.slice(0, 6).map((image: Image) => ({
+                  // Full image set, not a slice: capping at 6 dropped the
+                  // variant-mapped photos (they sit deeper in the list), which
+                  // is what produced the empty thumbnail slots on the page.
+                  images={product.images.map((image: Image) => ({
                     src: image.url,
                     altText: image.altText,
+                  }))}
+                  variants={product.variants.map((v) => ({
+                    id: v.id,
+                    selectedOptions: v.selectedOptions,
+                    image: v.image
+                      ? { src: v.image.url, altText: v.image.altText }
+                      : undefined,
                   }))}
                 />
               </Suspense>
@@ -387,6 +398,10 @@ export default async function ProductPage(props: {
           </div>
         )}
       </div>
+      {/* Mobile-only sticky add-to-cart; appears once the main CTA scrolls off. */}
+      <Suspense fallback={null}>
+        <StickyAddToCart product={product} />
+      </Suspense>
       <Footer />
     </>
   );
