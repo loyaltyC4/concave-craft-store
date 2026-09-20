@@ -108,6 +108,11 @@ export default async function RootLayout({
   return (
     <html lang="en" className={`dark ${GeistSans.variable}`}>
       <body className="bg-[#0b0c0e] text-[#f3f1ea] antialiased selection:bg-[#c5f23c] selection:text-black">
+        {/* Supplier CDN (alicdn.com) hotlink-blocks requests that carry a
+         * Referer header, returning 403 and leaving gallery/variant photos
+         * blank. Stripping the referrer on outbound requests fixes the images
+         * site-wide. No analytics impact (first-party GA is unaffected). */}
+        <meta name="referrer" content="no-referrer" />
         {/* Direction C display + body fonts (Fontshare); React hoists these to <head> */}
         <link rel="preconnect" href="https://api.fontshare.com" />
         <link
