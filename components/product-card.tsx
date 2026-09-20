@@ -43,6 +43,22 @@ export function ProductCard({
   const img = product.featuredImage?.url;
   const cycle = cycleImages && cycleImages.length > 1;
 
+  // Sale: the lowest compare-at across variants above the current price.
+  const sale = product.variants
+    .map((v) =>
+      v.compareAtPrice && parseFloat(v.compareAtPrice.amount) > parseFloat(v.price.amount)
+        ? { was: v.compareAtPrice, now: v.price }
+        : null,
+    )
+    .find(Boolean);
+  const salePct = sale
+    ? Math.round(
+        ((parseFloat(sale.was.amount) - parseFloat(sale.now.amount)) /
+          parseFloat(sale.was.amount)) *
+          100,
+      )
+    : 0;
+
   return (
     <Link
       href={`/product/${product.handle}`}
@@ -71,7 +87,11 @@ export function ProductCard({
             No image
           </div>
         )}
-        {badge ? (
+        {sale ? (
+          <span className="absolute left-3 top-3 z-10 rounded-md bg-[#c5f23c] px-2.5 py-1 text-[10px] font-bold uppercase tracking-wider text-black">
+            Save {salePct}%
+          </span>
+        ) : badge ? (
           <span className="absolute left-3 top-3 z-10 rounded-md bg-[#c5f23c] px-2.5 py-1 text-[10px] font-bold uppercase tracking-wider text-black">
             {badge}
           </span>
@@ -83,8 +103,15 @@ export function ProductCard({
         </h3>
         <div className="mt-auto flex items-baseline justify-between gap-3 pt-3">
           <span className="text-[13px] text-neutral-500">In stock</span>
-          <span className="shrink-0 font-semibold text-[#c5f23c]">
-            {fmt(price.amount, price.currencyCode)}
+          <span className="flex shrink-0 items-baseline gap-2">
+            {sale ? (
+              <span className="text-[12px] text-neutral-500 line-through">
+                {fmt(sale.was.amount, sale.was.currencyCode)}
+              </span>
+            ) : null}
+            <span className="font-semibold text-[#c5f23c]">
+              {fmt(price.amount, price.currencyCode)}
+            </span>
           </span>
         </div>
       </div>
