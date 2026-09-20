@@ -41,6 +41,9 @@ export type Collection = ShopifyCollection & {
 };
 
 export type Image = {
+  /** Stable identifier from the source catalog, used to resolve a variant's
+   *  featured image. Optional because some pipelines only carry url. */
+  id?: string;
   url: string;
   altText: string;
   width: number;
@@ -92,6 +95,12 @@ export type ProductVariant = {
    *  (e.g. a multipack priced below the same count bought as small packs). */
   compareAtPrice?: Money;
   sku?: string;
+  /** This variant's own photo. When present, the gallery swaps to it on
+   *  selection so the buyer sees the exact width/pack/type they picked. */
+  image?: Image;
+  /** Per-variant stock count, when the source catalog carries it. Drives the
+   *  per-option "In stock" line and low-stock nudges. */
+  inventoryQuantity?: number;
 };
 
 export type SEO = {

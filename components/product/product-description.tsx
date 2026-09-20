@@ -73,11 +73,33 @@ export function ProductDescription({ product }: { product: Product }) {
           </>
         ) : null}
 
-        {product.availableForSale ? (
-          <span className="text-sm text-neutral-400">In stock</span>
-        ) : (
-          <span className="text-sm text-red-400">Currently out of stock</span>
-        )}
+        {/*
+         * Per-variant stock: once a full variant is chosen, reflect THAT
+         * variant's availability and count rather than the product-level flag,
+         * so a buyer is never told "In stock" for a size that's actually out.
+         * Counts only render when the catalog carries a real number — no
+         * fabricated scarcity.
+         */}
+        {(() => {
+          const stockVariant = selected ?? (product.variants.length === 1 ? product.variants[0] : undefined);
+          const available = stockVariant
+            ? stockVariant.availableForSale
+            : product.availableForSale;
+          if (!available) {
+            return (
+              <span className="text-sm text-red-400">Currently out of stock</span>
+            );
+          }
+          const qty = stockVariant?.inventoryQuantity;
+          if (qty != null && qty <= 3) {
+            return (
+              <span className="text-sm text-amber-400">
+                Low stock: {qty} left
+              </span>
+            );
+          }
+          return <span className="text-sm text-neutral-400">In stock</span>;
+        })()}
       </div>
 
       {summary ? (

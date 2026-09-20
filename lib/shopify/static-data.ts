@@ -62,11 +62,21 @@ function restProductToProduct(p: any): Product {
   const maxPrice = prices.length ? Math.max(...prices) : 0;
 
   const images = (p.images ?? []).map((img: any) => ({
+    id: img.id != null ? String(img.id) : undefined,
     url: img.src as string,
     altText: (img.alt as string) || (p.title as string),
     width: (img.width as number) ?? 800,
     height: (img.height as number) ?? 800,
   }));
+
+  // Resolve each variant's featured image from the source catalog's image_id.
+  // 95% of multi-option variants already carry one; the link was simply being
+  // dropped here, which is why picking a variant never changed the photo.
+  const imageById = new Map<string, (typeof images)[number]>(
+    images
+      .filter((img: { id?: string }) => img.id != null)
+      .map((img: { id?: string } & any) => [img.id as string, img]),
+  );
 
   const variants = (p.variants ?? []).map((v: any) => {
     const selectedOptions = (
@@ -104,6 +114,14 @@ function restProductToProduct(p: any): Product {
           }
         : {}),
       sku: (v.sku as string) ?? "",
+      // Attach the variant's own photo when the source catalog maps one.
+      ...(v.image_id != null && imageById.has(String(v.image_id))
+        ? { image: imageById.get(String(v.image_id)) }
+        : {}),
+      // Surface per-variant stock for the per-option availability line.
+      ...(v.inventory_quantity != null
+        ? { inventoryQuantity: Number(v.inventory_quantity) }
+        : {}),
     };
   });
 
