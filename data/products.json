@@ -34221,22 +34221,9 @@
           "admin_graphql_api_id": "gid://shopify/MediaImage/1029713000000100"
         },
         {
-          "id": 1029713000000101,
-          "product_id": 10297130000001,
-          "position": 2,
-          "src": "https://cbu01.alicdn.com/img/ibank/O1CN01NTiKtT1VRI4WLBf7y_!!2211138472649-0-cib.jpg",
-          "width": 800,
-          "height": 800,
-          "alt": "Wooden fingerboard ramp and obstacle set",
-          "variant_ids": [],
-          "created_at": "2026-09-20T00:00:00+02:00",
-          "updated_at": "2026-09-20T00:00:00+02:00",
-          "admin_graphql_api_id": "gid://shopify/MediaImage/1029713000000101"
-        },
-        {
           "id": 1029713000000102,
           "product_id": 10297130000001,
-          "position": 3,
+          "position": 2,
           "src": "https://cbu01.alicdn.com/img/ibank/O1CN010cQttx1VRI4Rfmh6q_!!2211138472649-0-cib.jpg",
           "width": 800,
           "height": 800,
@@ -34249,7 +34236,7 @@
         {
           "id": 1029713000000103,
           "product_id": 10297130000001,
-          "position": 4,
+          "position": 3,
           "src": "https://cbu01.alicdn.com/img/ibank/O1CN01HbJwnM1VRI4WtzlZu_!!2211138472649-0-cib.jpg",
           "width": 800,
           "height": 800,
@@ -34262,7 +34249,7 @@
         {
           "id": 1029713000000104,
           "product_id": 10297130000001,
-          "position": 5,
+          "position": 4,
           "src": "https://cbu01.alicdn.com/img/ibank/O1CN01Xtm7ql1VRI4UD8Ctt_!!2211138472649-0-cib.jpg",
           "width": 800,
           "height": 800,
@@ -34275,7 +34262,7 @@
         {
           "id": 1029713000000105,
           "product_id": 10297130000001,
-          "position": 6,
+          "position": 5,
           "src": "https://cbu01.alicdn.com/img/ibank/O1CN01D8fgSq1VRI4VE4SsV_!!2211138472649-0-cib.jpg",
           "width": 800,
           "height": 800,
@@ -34288,7 +34275,7 @@
         {
           "id": 1029713000000106,
           "product_id": 10297130000001,
-          "position": 7,
+          "position": 6,
           "src": "https://cbu01.alicdn.com/img/ibank/O1CN01xOvFlJ1VRI4RfltGU_!!2211138472649-0-cib.jpg",
           "width": 800,
           "height": 800,
@@ -34303,7 +34290,7 @@
         {
           "id": 1029713000000107,
           "product_id": 10297130000001,
-          "position": 8,
+          "position": 7,
           "src": "https://cbu01.alicdn.com/img/ibank/O1CN011ikk5t1VRI4SFpGTZ_!!2211138472649-0-cib.jpg",
           "width": 800,
           "height": 800,
@@ -34318,7 +34305,7 @@
         {
           "id": 1029713000000108,
           "product_id": 10297130000001,
-          "position": 9,
+          "position": 8,
           "src": "https://cbu01.alicdn.com/img/ibank/O1CN01pkbEoa1VRI4YeKqHW_!!2211138472649-0-cib.jpg",
           "width": 800,
           "height": 800,
@@ -34333,7 +34320,7 @@
         {
           "id": 1029713000000109,
           "product_id": 10297130000001,
-          "position": 10,
+          "position": 9,
           "src": "https://cbu01.alicdn.com/img/ibank/O1CN01oesLLS1VRI4VE3BsU_!!2211138472649-0-cib.jpg",
           "width": 800,
           "height": 800,
@@ -34348,7 +34335,7 @@
         {
           "id": 1029713000000110,
           "product_id": 10297130000001,
-          "position": 11,
+          "position": 10,
           "src": "https://cbu01.alicdn.com/img/ibank/O1CN011Uuq4n1VRI4XGmLPv_!!2211138472649-0-cib.jpg",
           "width": 800,
           "height": 800,
@@ -34363,7 +34350,7 @@
         {
           "id": 1029713000000111,
           "product_id": 10297130000001,
-          "position": 12,
+          "position": 11,
           "src": "https://cbu01.alicdn.com/img/ibank/O1CN01nAz0NL1VRI4XGnHa2_!!2211138472649-0-cib.jpg",
           "width": 800,
           "height": 800,
@@ -34378,7 +34365,7 @@
         {
           "id": 1029713000000112,
           "product_id": 10297130000001,
-          "position": 13,
+          "position": 12,
           "src": "https://cbu01.alicdn.com/img/ibank/O1CN01gnM7pW1VRI79TZpbQ_!!2211138472649-0-cib.jpg",
           "width": 800,
           "height": 800,

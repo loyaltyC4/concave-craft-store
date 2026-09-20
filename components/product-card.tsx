@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { CardImageCycler } from "components/product/card-image-cycler";
 import type { Product } from "lib/shopify/types";
 
 function fmt(amount: string, code: string) {
@@ -26,16 +27,21 @@ function isExternal(src: string) {
 export function ProductCard({
   product,
   badge,
+  cycleImages,
   sizes = "(min-width:1040px) 25vw, (min-width:680px) 44vw, 80vw",
   priority = false,
 }: {
   product: Product;
   badge?: string;
+  /** When provided, the tile slowly crossfades through these images instead
+   *  of showing a single static photo. */
+  cycleImages?: { src: string; altText: string }[];
   sizes?: string;
   priority?: boolean;
 }) {
   const price = product.priceRange.minVariantPrice;
   const img = product.featuredImage?.url;
+  const cycle = cycleImages && cycleImages.length > 1;
 
   return (
     <Link
@@ -44,7 +50,13 @@ export function ProductCard({
       className="group flex h-full flex-col overflow-hidden rounded-2xl border border-white/10 bg-[#15171c] transition duration-300 hover:-translate-y-1.5 hover:border-white/25"
     >
       <div className="relative aspect-square overflow-hidden bg-white">
-        {img ? (
+        {cycle ? (
+          <CardImageCycler
+            images={cycleImages!}
+            sizes={sizes}
+            priority={priority}
+          />
+        ) : img ? (
           <Image
             src={img}
             alt={product.featuredImage?.altText || product.title}
@@ -60,7 +72,7 @@ export function ProductCard({
           </div>
         )}
         {badge ? (
-          <span className="absolute left-3 top-3 rounded-md bg-[#c5f23c] px-2.5 py-1 text-[10px] font-bold uppercase tracking-wider text-black">
+          <span className="absolute left-3 top-3 z-10 rounded-md bg-[#c5f23c] px-2.5 py-1 text-[10px] font-bold uppercase tracking-wider text-black">
             {badge}
           </span>
         ) : null}
