@@ -8,8 +8,9 @@ import MobileMenu from "./mobile-menu";
 import Search, { SearchSkeleton } from "./search";
 
 const ANNOUNCEMENTS = [
+  "Sale: collab completes up to 28% off",
+  "Completes now from $32.95",
   "Free sticker sheet in every box",
-  "Curated, not mass-listed",
   "Worldwide shipping",
   "30-day returns",
 ];
