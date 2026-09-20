@@ -74,8 +74,11 @@ export function AddToCart({ product }: { product: Product }) {
   );
 
   return (
-    <SubmitButton
-      availableForSale={availableForSale}
+    // Wrapper id lets the mobile StickyAddToCart bar find and replay the real
+    // button, keeping cart logic + analytics in one place.
+    <div id="product-add-to-cart">
+      <SubmitButton
+        availableForSale={availableForSale}
       selectedVariantId={selectedVariantId}
       onClick={() => {
         if (!finalVariant) return;
@@ -97,6 +100,7 @@ export function AddToCart({ product }: { product: Product }) {
           description: product.title,
         });
       }}
-    />
+      />
+    </div>
   );
 }
