@@ -97,7 +97,9 @@ export function VariantSelector({
                 updateOption(optionNameLowerCase, value);
               }}
               className={clsx(
-                "flex min-w-[48px] items-center justify-center rounded-full border px-3 py-1.5 text-sm transition",
+                // min-h-[44px] meets the mobile tap-target guideline; desktop
+                // keeps the same pill density via horizontal padding.
+                "flex min-h-[44px] min-w-[48px] items-center justify-center rounded-full border px-3.5 py-2 text-sm transition",
                 {
                   "border-[#c5f23c] bg-[#c5f23c] font-semibold text-black":
                     isActive,
