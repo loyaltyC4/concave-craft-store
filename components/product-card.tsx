@@ -43,14 +43,19 @@ export function ProductCard({
   const img = product.featuredImage?.url;
   const cycle = cycleImages && cycleImages.length > 1;
 
-  // Sale: the lowest compare-at across variants above the current price.
-  const sale = product.variants
-    .map((v) =>
-      v.compareAtPrice && parseFloat(v.compareAtPrice.amount) > parseFloat(v.price.amount)
-        ? { was: v.compareAtPrice, now: v.price }
-        : null,
-    )
-    .find(Boolean);
+  // Sale: show a was/now on the tile ONLY for the variant whose price equals
+  // the displayed (entry) price — otherwise a cheap single variant would borrow
+  // a bulk pack's compare-at and show an absurd "was" anchor (e.g. $199 -> $19).
+  const entryVariant = product.variants.find(
+    (v) => v.price.amount === price.amount,
+  );
+  const sale =
+    entryVariant &&
+    entryVariant.compareAtPrice &&
+    parseFloat(entryVariant.compareAtPrice.amount) >
+      parseFloat(entryVariant.price.amount)
+      ? { was: entryVariant.compareAtPrice, now: entryVariant.price }
+      : null;
   const salePct = sale
     ? Math.round(
         ((parseFloat(sale.was.amount) - parseFloat(sale.now.amount)) /
