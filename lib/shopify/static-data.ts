@@ -23,6 +23,7 @@ const collectionMap: Record<
 const homepagePicks: Record<string, string[]> = require("../../data/homepage.json");
 
 import type { Collection, Product } from "./types";
+import { proxiedImageUrl } from "lib/image-proxy";
 
 // ── Helpers ──────────────────────────────────────────────────────────────────
 
@@ -63,7 +64,7 @@ function restProductToProduct(p: any): Product {
 
   const images = (p.images ?? []).map((img: any) => ({
     id: img.id != null ? String(img.id) : undefined,
-    url: img.src as string,
+    url: proxiedImageUrl(img.src as string),
     altText: (img.alt as string) || (p.title as string),
     width: (img.width as number) ?? 800,
     height: (img.height as number) ?? 800,
