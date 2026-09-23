@@ -16,7 +16,7 @@ export async function generateMetadata() {
   return {
     title: pageTitle("Shop All Fingerboards, Decks & Parts"),
     description:
-      "Browse every fingerboard, deck, truck, wheel, mold, ramp and part in the Lab — 150+ hand-picked products with free build guides and 30-day returns.",
+      "Browse every fingerboard, deck, truck, wheel, mold, ramp and part in the Lab — 146 products with free build guides and 30-day returns.",
     // Every sort/filter/query combination collapses to one canonical URL —
     // otherwise each parameter combo is a thin near-duplicate page competing
     // with itself in the index.

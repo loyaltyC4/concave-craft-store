@@ -1,47 +1,91 @@
 import { PageShell, Section } from "components/page-shell";
 import Link from "next/link";
 import type { Metadata } from "next";
+import {
+  BUSINESS,
+  DELIVERY_MAX_DAYS,
+  DELIVERY_MIN_DAYS,
+  FREE_SHIPPING_THRESHOLD,
+  RETURN_WINDOW_DAYS,
+  SHIPPING_FEE_USD,
+  SUPPORT_EMAIL,
+} from "lib/brand";
 
 export const metadata: Metadata = {
-  title: "About Fingerboard Lab",
+  title: "About Fingerboard Lab — who we are and how we work",
   description:
-    "Fingerboard Lab is a curated fingerboard shop — park kits, ramps, obstacles and gear, hand-picked and honestly priced, with free build guides.",
+    "Fingerboard Lab is a small online fingerboard shop run from Melbourne, Australia. How we source products, where orders ship from, delivery times and how to reach us.",
   alternates: { canonical: "/about" },
 };
 
 export default function AboutPage() {
   return (
     <PageShell
-      eyebrow="The Lab"
-      title="Built for real fingerboarding."
-      intro="Fingerboard Lab exists for one reason: fingerboards that actually skate. Not the toy-aisle kind — real wood, real concave, real hardware, engineered to tolerances you can feel under two fingers."
+      eyebrow="About"
+      title="Who we are and how we work."
+      intro="Fingerboard Lab is a small online shop for fingerboarders, run from Melbourne, Australia. Here is exactly how the business works, so you know what you're buying and who you're buying from."
     >
-      <Section heading="Curated, not manufactured">
+      <Section heading="The business">
+        <ul className="list-disc space-y-1 pl-6 text-neutral-300">
+          <li>
+            Business name: <strong>{BUSINESS.legalName}</strong>
+            {BUSINESS.abn ? <> (ABN {BUSINESS.abn})</> : null}
+          </li>
+          <li>
+            Based in: {BUSINESS.locality} {BUSINESS.region}{" "}
+            {BUSINESS.postalCode}, {BUSINESS.country} (online only, no
+            walk-in store)
+          </li>
+          <li>
+            Contact:{" "}
+            <a
+              href={`mailto:${SUPPORT_EMAIL}`}
+              className="text-[#c5f23c] hover:underline"
+            >
+              {SUPPORT_EMAIL}
+            </a>
+            {BUSINESS.phone ? <> · {BUSINESS.phone}</> : null}
+          </li>
+          <li>Trading online since {BUSINESS.founded}</li>
+        </ul>
+      </Section>
+
+      <Section heading="Where our products come from">
+        <p>{BUSINESS.supplyModel}</p>
         <p>
-          We don&apos;t manufacture — we curate. Every product here is chosen, ordered and checked by us before it goes in the catalogue, and we tell you plainly what something is and what it isn&apos;t. No invented engineering claims, no fake spec sheets.
+          We choose what goes in the catalogue, write every product page and
+          build guide ourselves, and handle all customer service and returns
+          directly. We don&apos;t claim to make anything we don&apos;t make,
+          and where a product is a collaboration or a named brand, the product
+          page says so.
         </p>
       </Section>
-      <Section heading="For builders and skaters">
-        <p>
-          Some riders want a complete that&apos;s dialed out of the box. Others
-          want to press their own decks, tune their own bushings, and build a
-          setup that&apos;s unmistakably theirs. We stock for both — completes,
-          bare decks, molds, hardware, and the tools to put it all together.
-        </p>
-        <p>
-          And because most fingerboarding happens on a desk, a table, or the
-          edge of a bench, we build our ramps and obstacles to work anywhere you
-          set them down.
-        </p>
+
+      <Section heading="What to expect when you order">
+        <ul className="list-disc space-y-1 pl-6 text-neutral-300">
+          <li>All prices are in US dollars (USD), charged by Stripe.</li>
+          <li>
+            Shipping is ${SHIPPING_FEE_USD.toFixed(2)} USD flat, free on orders
+            over ${FREE_SHIPPING_THRESHOLD} USD.
+          </li>
+          <li>
+            Delivery takes {DELIVERY_MIN_DAYS}–{DELIVERY_MAX_DAYS} business
+            days, with a tracking link emailed when your order ships.
+          </li>
+          <li>
+            {RETURN_WINDOW_DAYS}-day returns — see the{" "}
+            <Link href="/returns" className="text-[#c5f23c] hover:underline">
+              return policy
+            </Link>{" "}
+            for the full terms.
+          </li>
+        </ul>
       </Section>
-      <Section heading="What every order includes">
+
+      <Section heading="Learn before you buy">
         <p>
-          Fast dispatch (1–2 business days), worldwide shipping, a free sticker
-          sheet in every box, and a 30-day return window if it&apos;s not right.
-          Questions before you buy? Our guides walk through sizing, concave,
-          trucks, and tuning in plain language.
-        </p>
-        <p>
+          Our free guides cover sizing, concave, trucks, bushings and deck
+          pressing in plain language.{" "}
           <Link href="/guides" className="text-[#c5f23c] hover:underline">
             Read the build guides →
           </Link>

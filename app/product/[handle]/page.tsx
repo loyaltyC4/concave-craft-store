@@ -1,4 +1,5 @@
 import Footer from "components/layout/footer";
+import { merchantReturnPolicy, offerShippingDetails } from "lib/shipping";
 import { Gallery } from "components/product/gallery";
 import { ProductDescription } from "components/product/product-description";
 import Prose from "components/prose";
@@ -179,6 +180,10 @@ export default async function ProductPage(props: {
             offerCount: product.variants.length,
             url: `${baseUrl}/product/${product.handle}`,
             seller: { "@type": "Organization", name: SITE_NAME },
+            shippingDetails: offerShippingDetails(
+              parseFloat(product.priceRange.minVariantPrice.amount),
+            ),
+            hasMerchantReturnPolicy: merchantReturnPolicy(),
           }
         : {
             "@type": "Offer",
@@ -189,6 +194,10 @@ export default async function ProductPage(props: {
             price: product.priceRange.minVariantPrice.amount,
             url: `${baseUrl}/product/${product.handle}`,
             seller: { "@type": "Organization", name: SITE_NAME },
+            shippingDetails: offerShippingDetails(
+              parseFloat(product.priceRange.minVariantPrice.amount),
+            ),
+            hasMerchantReturnPolicy: merchantReturnPolicy(),
           },
   };
 

@@ -18,7 +18,7 @@ function fmt(amount: string, code: string) {
   return new Intl.NumberFormat("en-US", {
     style: "currency",
     currency: code,
-  }).format(parseFloat(amount));
+  }).format(parseFloat(amount)) + (code === "USD" ? " USD" : "");
 }
 
 export default function Search() {

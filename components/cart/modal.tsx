@@ -5,7 +5,12 @@ import { XMarkIcon } from "@heroicons/react/24/outline";
 import LoadingDots from "components/loading-dots";
 import Price from "components/price";
 import { DEFAULT_OPTION } from "lib/constants";
-import { FREE_SHIPPING_THRESHOLD } from "lib/brand";
+import {
+  DELIVERY_MAX_DAYS,
+  DELIVERY_MIN_DAYS,
+  FREE_SHIPPING_THRESHOLD,
+  SHIPPING_FEE_USD,
+} from "lib/brand";
 import { trackBeginCheckout } from "lib/gtag";
 import { createUrl } from "lib/utils";
 import Image from "next/image";
@@ -285,9 +290,13 @@ export default function CartModal() {
                         {parseFloat(cart.cost.totalAmount.amount) >=
                         FREE_SHIPPING_THRESHOLD
                           ? "Free"
-                          : "Calculated at checkout"}
+                          : `$${SHIPPING_FEE_USD.toFixed(2)} USD`}
                       </p>
                     </div>
+                    <p className="mb-3 text-xs text-neutral-500">
+                      Delivery in {DELIVERY_MIN_DAYS}–{DELIVERY_MAX_DAYS} business
+                      days · all prices in USD
+                    </p>
                     <div className="mb-3 flex items-center justify-between border-b border-white/10 pb-2 text-base font-semibold text-[#f3f1ea]">
                       <p>Subtotal</p>
                       <Price

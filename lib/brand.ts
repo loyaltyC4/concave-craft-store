@@ -9,9 +9,27 @@ import { allGuides } from "lib/all-guides";
 
 export const SITE_NAME = "Fingerboard Lab";
 export const SITE_LEGAL_NAME = "Fingerboard Lab";
+
+// Business identity — shown in the footer, Contact and About pages and in
+// Organization JSON-LD. Must match Merchant Center → Business info exactly
+// (Google's Misrepresentation review cross-checks the two).
+// ABN / phone render only when set; never invent them.
+export const BUSINESS = {
+  legalName: "Fingerboard Lab",
+  abn: "", // e.g. "12 345 678 901" — fill in before requesting Merchant review
+  phone: "", // optional, e.g. "+61 4xx xxx xxx"
+  locality: "Southbank",
+  region: "VIC",
+  postalCode: "3006",
+  country: "Australia",
+  countryCode: "AU",
+  founded: 2026,
+  supplyModel:
+    "We are a small online shop run from Melbourne, Australia. We don't manufacture: every product comes from specialist fingerboard workshops and suppliers (mostly in China) and ships to you directly from them, which is why delivery takes 7–14 business days.",
+} as const;
 export const SITE_TAGLINE = "Fingerboard parks, ramps & gear";
 export const SITE_DESCRIPTION =
-  "Fingerboard Lab is a curated shop for fingerboard park kits, ramps, obstacles, completes and grip tape. Hand-picked gear, honest prices, and free build guides. Free sticker sheet in every box.";
+  "Fingerboard Lab is an online fingerboard shop run from Melbourne, Australia — park kits, ramps, obstacles, completes, deck molds and grip tape, with free build guides. Prices in USD, worldwide shipping.";
 export const SITE_URL = baseUrl;
 
 // Contact / social
@@ -23,8 +41,12 @@ export const SOCIALS = {
 };
 
 // Revenue mechanics
-export const FREE_SHIPPING_THRESHOLD = 150; // USD subtotal; must match app/api/checkout logic
+export const FREE_SHIPPING_THRESHOLD = 50; // USD subtotal; must match app/api/checkout logic + merchant feed
 export const SHIPPING_FEE_USD = 12.95; // flat shipping fee under the free-shipping threshold
+export const DELIVERY_MIN_DAYS = 7; // business days, order → door (supplier dispatch + transit)
+export const DELIVERY_MAX_DAYS = 14;
+export const HANDLING_DAYS = 2; // business days before the supplier dispatches
+export const RETURN_WINDOW_DAYS = 30;
 export const WELCOME_DISCOUNT_CODE = "LABFIRST10";
 export const WELCOME_DISCOUNT_LABEL = "10% off your first order";
 

@@ -3,56 +3,13 @@ import { getStripe } from "lib/stripe";
 import { staticGetVariant } from "lib/shopify/static-data";
 import { baseUrl } from "lib/utils";
 import { FREE_SHIPPING_THRESHOLD } from "lib/brand";
+import { SHIP_COUNTRIES } from "lib/shipping";
 
 export const dynamic = "force-dynamic";
 
 type IncomingLine = { merchandiseId?: string; quantity?: number };
 
-// Reasonable worldwide shipping set (ISO 3166-1 alpha-2).
-const ALLOWED_COUNTRIES = [
-  "US",
-  "CA",
-  "GB",
-  "IE",
-  "AU",
-  "NZ",
-  "DE",
-  "FR",
-  "ES",
-  "IT",
-  "NL",
-  "BE",
-  "AT",
-  "CH",
-  "SE",
-  "NO",
-  "DK",
-  "FI",
-  "PT",
-  "PL",
-  "CZ",
-  "SK",
-  "HU",
-  "RO",
-  "GR",
-  "LU",
-  "IS",
-  "JP",
-  "KR",
-  "SG",
-  "HK",
-  "MY",
-  "PH",
-  "TH",
-  "ZA",
-  "AE",
-  "SA",
-  "IL",
-  "MX",
-  "BR",
-  "CL",
-  "AR",
-] as const;
+const ALLOWED_COUNTRIES = SHIP_COUNTRIES;
 
 export async function POST(req: NextRequest) {
   const stripe = getStripe();

@@ -23,15 +23,16 @@ export default function ShippingReturnsPage() {
           is shown at checkout.
         </p>
         <p>
-          Your order goes to our maker within 1–2 business days of purchase.
-          Because we work with a small maker network rather than warehousing
-          every board ourselves, most of the total time is the parcel in
-          transit to you rather than sitting on our shelf.
+          Fingerboard Lab is run from Melbourne, Australia, but we don&apos;t
+          hold stock here. Your order is sent to our supplier workshop
+          (mostly in China) within 1–2 business days of purchase and ships to
+          you directly from there, so most of the total time is international
+          transit.
         </p>
         <p>
           Shipping is a flat{" "}
-          <strong className="text-[#f3f1ea]">$12.95</strong> worldwide, and{" "}
-          <strong className="text-[#f3f1ea]">free on orders over $150</strong>.
+          <strong className="text-[#f3f1ea]">$12.95 USD</strong> worldwide, and{" "}
+          <strong className="text-[#f3f1ea]">free on orders over $50 USD</strong>.
           One rate to everywhere we ship — no surprise regional charges at
           checkout.
         </p>
@@ -44,8 +45,7 @@ export default function ShippingReturnsPage() {
       <Section heading="Tracking">
         <p>
           You&apos;ll receive an order confirmation by email at checkout, and a
-          tracking link once your order ships. A free sticker sheet is included
-          in every box.
+          tracking link once your order ships.
         </p>
       </Section>
       <Section heading="30-day returns">

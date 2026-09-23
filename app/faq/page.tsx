@@ -33,7 +33,7 @@ const FAQS: Faq[] = [
   },
   {
     q: "Do you ship worldwide?",
-    a: "Yes, we ship worldwide for a flat $12.95, free on orders over $150. Most orders arrive within 7–14 business days depending on destination. Your order goes to our maker within 1–2 business days of purchase — most of the total time is the parcel in transit to you.",
+    a: "Yes, we ship worldwide for a flat $12.95, free on orders over $50 (all prices are in USD). Most orders arrive within 7–14 business days depending on destination. We are an online shop based in Melbourne, Australia; orders ship directly from our supplier workshops (mostly in China), so most of that time is international transit.",
   },
   {
     q: "What's your return policy?",
@@ -44,8 +44,12 @@ const FAQS: Faq[] = [
     a: "Checkout is handled securely by Stripe. We accept major cards and wallets like Apple Pay. Your full card details are never stored on our servers.",
   },
   {
-    q: "Is there a sticker in every order?",
-    a: "Always. Every box ships with a free Fingerboard Lab sticker sheet.",
+    q: "Who runs Fingerboard Lab and where do products ship from?",
+    a: "Fingerboard Lab is a small online shop run from Southbank, Melbourne (VIC 3006, Australia). We don't manufacture or warehouse stock: products are made by specialist fingerboard workshops and suppliers, mostly in China, and ship to you directly from them. Questions go to hello@fingerboardlab.com and are answered by us, usually within one business day.",
+  },
+  {
+    q: "What currency are prices in?",
+    a: "All prices on the site and at checkout are in US dollars (USD). Your bank converts the charge to your local currency.",
   },
 ];
 
