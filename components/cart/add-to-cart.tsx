@@ -7,6 +7,7 @@ import { Product, ProductVariant } from "lib/shopify/types";
 import { useSearchParams } from "next/navigation";
 import { toast } from "sonner";
 import { useCart } from "./cart-context";
+import { resolveVariant } from "lib/variant";
 
 function SubmitButton({
   availableForSale,
@@ -62,13 +63,8 @@ export function AddToCart({ product }: { product: Product }) {
   const { addCartItem } = useCart();
   const searchParams = useSearchParams();
 
-  const variant = variants.find((variant: ProductVariant) =>
-    variant.selectedOptions.every(
-      (option) => option.value === searchParams.get(option.name.toLowerCase()),
-    ),
-  );
-  const defaultVariantId = variants.length === 1 ? variants[0]?.id : undefined;
-  const selectedVariantId = variant?.id || defaultVariantId;
+  const variant = resolveVariant(variants, (k) => searchParams.get(k));
+  const selectedVariantId = variant?.id;
   const finalVariant = variants.find(
     (variant) => variant.id === selectedVariantId,
   );

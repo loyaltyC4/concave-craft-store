@@ -1,5 +1,5 @@
 import { PageShell, Section } from "components/page-shell";
-import { SUPPORT_EMAIL, SOCIALS } from "lib/brand";
+import { BUSINESS, SUPPORT_EMAIL, SOCIALS } from "lib/brand";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -25,6 +25,24 @@ export default function ContactPage() {
             {SUPPORT_EMAIL}
           </a>
         </p>
+      </Section>
+      <Section heading="Business details">
+        <ul className="list-disc space-y-1 pl-6 text-neutral-300">
+          <li>
+            {BUSINESS.legalName}
+            {BUSINESS.abn ? <> · ABN {BUSINESS.abn}</> : null}
+          </li>
+          <li>
+            {BUSINESS.locality} {BUSINESS.region} {BUSINESS.postalCode},{" "}
+            {BUSINESS.country} — online only, no walk-in store
+          </li>
+          {BUSINESS.phone ? <li>Phone: {BUSINESS.phone}</li> : null}
+          <li>
+            Orders ship directly from our supplier workshops (mostly in
+            China). Returns are sent to the address we give you in your return
+            authorization email.
+          </li>
+        </ul>
       </Section>
       <Section heading="Order help">
         <p>

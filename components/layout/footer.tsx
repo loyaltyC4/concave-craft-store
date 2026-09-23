@@ -4,6 +4,7 @@ import { NewsletterForm } from "components/newsletter-form";
 import {
   COLLECTIONS,
   GUIDES,
+  BUSINESS,
   SITE_NAME,
   SUPPORT_EMAIL,
   SOCIALS,
@@ -39,7 +40,7 @@ function Column({
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
-  const copyrightDate = 2023 + (currentYear > 2023 ? `-${currentYear}` : "");
+  const copyrightDate = BUSINESS.founded + (currentYear > BUSINESS.founded ? `-${currentYear}` : "");
 
   return (
     <footer className="border-t border-white/10 bg-[#0b0c0e] text-sm text-neutral-400">
@@ -47,9 +48,9 @@ export default function Footer() {
         <div className="col-span-2 md:col-span-2">
           <BrandLogo />
           <p className="mt-4 max-w-xs text-sm leading-relaxed text-neutral-500">
-            A curated fingerboard shop — park kits, ramps, obstacles,
-            completes and grip tape. Hand-picked gear, honest prices, free
-            build guides, and a sticker sheet in every box.
+            An online fingerboard shop run from Melbourne, Australia — park
+            kits, ramps, obstacles, completes, molds and grip tape. Prices in
+            USD, shipped worldwide from our supplier workshops.
           </p>
           <div className="mt-5 flex gap-3">
             {[
@@ -119,7 +120,13 @@ export default function Footer() {
       <div className="border-t border-white/10">
         <div className="mx-auto flex w-full max-w-7xl flex-col items-center gap-3 px-6 py-6 text-xs text-neutral-500 md:flex-row md:px-12">
           <p>
-            &copy; {copyrightDate} {SITE_NAME}. Built for real fingerboarding.
+            &copy; {copyrightDate} {BUSINESS.legalName}
+            {BUSINESS.abn ? ` · ABN ${BUSINESS.abn}` : ""} · {BUSINESS.locality}{" "}
+            {BUSINESS.region} {BUSINESS.postalCode}, {BUSINESS.country} ·{" "}
+            <a href={`mailto:${SUPPORT_EMAIL}`} className="hover:text-neutral-300">
+              {SUPPORT_EMAIL}
+            </a>
+            {BUSINESS.phone ? ` · ${BUSINESS.phone}` : ""} · All prices in USD
           </p>
           <p className="md:ml-6">
             Secure checkout by Stripe · Visa · Mastercard · Amex · Apple Pay

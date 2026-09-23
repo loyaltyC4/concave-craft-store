@@ -27,7 +27,8 @@ export default function ReturnsPage() {
           >
             {SUPPORT_EMAIL}
           </a>{" "}
-          with your order number to request a return authorization.
+          with your order number to request a return authorization. The authorization email
+          includes the exact address to send the item to.
         </p>
         <p>
           <strong className="text-[#f3f1ea]">

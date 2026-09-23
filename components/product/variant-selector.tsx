@@ -3,6 +3,7 @@
 import clsx from "clsx";
 import { ProductOption, ProductVariant } from "lib/shopify/types";
 import { useRouter, useSearchParams } from "next/navigation";
+import { optionValueIsActive } from "lib/variant";
 
 type Combination = {
   id: string;
@@ -62,6 +63,10 @@ export function VariantSelector({
           // Build the hypothetical params if this pill were selected,
           // then check whether any variant matching those params is in stock.
           const optionParams: Record<string, string> = {};
+          const fallback = variants.find((v) => v.availableForSale) ?? variants[0];
+          fallback?.selectedOptions.forEach(
+            (o) => (optionParams[o.name.toLowerCase()] = o.value),
+          );
           searchParams.forEach((v, k) => (optionParams[k] = v));
           optionParams[optionNameLowerCase] = value;
 
@@ -79,7 +84,9 @@ export function VariantSelector({
             ),
           );
 
-          const isActive = searchParams.get(optionNameLowerCase) === value;
+          const isActive = optionValueIsActive(option, value, variants, (k) =>
+            searchParams.get(k),
+          );
 
           return (
             <button

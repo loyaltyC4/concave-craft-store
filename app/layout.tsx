@@ -15,6 +15,8 @@ import {
   SITE_DESCRIPTION,
   SITE_LEGAL_NAME,
   SOCIALS,
+  SUPPORT_EMAIL,
+  BUSINESS,
 } from "lib/brand";
 
 export const metadata = {
@@ -91,6 +93,24 @@ export default async function RootLayout({
     logo: `${baseUrl}/brand/mark.png`,
     description: SITE_DESCRIPTION,
     sameAs: [SOCIALS.instagram, SOCIALS.youtube, SOCIALS.tiktok],
+    email: SUPPORT_EMAIL,
+    ...(BUSINESS.phone ? { telephone: BUSINESS.phone } : {}),
+    ...(BUSINESS.abn ? { taxID: `ABN ${BUSINESS.abn}` } : {}),
+    foundingDate: String(BUSINESS.founded),
+    address: {
+      "@type": "PostalAddress",
+      addressLocality: BUSINESS.locality,
+      addressRegion: BUSINESS.region,
+      postalCode: BUSINESS.postalCode,
+      addressCountry: BUSINESS.countryCode,
+    },
+    contactPoint: {
+      "@type": "ContactPoint",
+      contactType: "customer service",
+      email: SUPPORT_EMAIL,
+      areaServed: "Worldwide",
+      availableLanguage: "English",
+    },
   };
 
   const websiteJsonLd = {

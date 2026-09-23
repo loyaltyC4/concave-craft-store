@@ -21,7 +21,7 @@ function fmt(amount: string, code: string) {
   return new Intl.NumberFormat("en-US", {
     style: "currency",
     currency: code,
-  }).format(parseFloat(amount));
+  }).format(parseFloat(amount)) + (code === "USD" ? " USD" : "");
 }
 
 // Same external-image guard as components/product-card.tsx and

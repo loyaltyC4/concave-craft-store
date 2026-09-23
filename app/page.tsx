@@ -26,7 +26,7 @@ import homepageData from "data/homepage.json";
 export const metadata = {
   title: "Fingerboard Lab — Completes, Decks, Molds, Ramps & Parts",
   description:
-    "Pro fingerboard completes, decks, trucks, wheels, park kits and the deck-pressing molds almost nobody stocks. Hand-picked, free build guides, 30-day returns.",
+    "Pro fingerboard completes, decks, trucks, wheels, park kits and the deck-pressing molds almost nobody stocks. Free build guides, prices in USD, 30-day returns.",
   alternates: { canonical: "/" },
 };
 
@@ -90,13 +90,13 @@ export default async function HomePage() {
       : "";
 
   const specs = [
-    `${totalProducts} products in stock`,
+    `${totalProducts} products`,
     `Completes from ${entry(collectionProducts[0] ?? [])}`,
-    "$12.95 flat shipping worldwide",
-    "Free shipping over $150",
+    "$12.95 USD flat shipping worldwide",
+    `Free shipping over $${FREE_SHIPPING_THRESHOLD} USD`,
     "Deck molds & pressing supplies",
     "Free build guides",
-    "Free sticker sheet",
+    "Prices in USD",
     "30-day returns",
   ];
 
@@ -362,7 +362,7 @@ export default async function HomePage() {
               This week&apos;s picks.
             </h2>
             <p className="mt-3 max-w-md text-neutral-400">
-              Hand-picked from what just landed — press molds, collab completes,
+              Recent additions — press molds, collab completes,
               race-grade wheels and park sets. One of each, low to high.
             </p>
           </div>
@@ -852,9 +852,9 @@ export default async function HomePage() {
         <Reveal direction="up">
           <div className="grid grid-cols-2 overflow-hidden rounded-3xl border border-white/10 md:grid-cols-4">
             {[
-              [String(totalProducts), "hand-picked products"],
-              ["30 days", "easy returns"],
-              ["Worldwide", "fast dispatch"],
+              [String(totalProducts), "products"],
+              ["30 days", "returns window"],
+              ["7–14 days", "worldwide delivery"],
               ["Stripe", "encrypted checkout"],
             ].map(([big, lbl]) => (
               <div

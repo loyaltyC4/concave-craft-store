@@ -1,6 +1,7 @@
 "use client";
 
 import clsx from "clsx";
+import { resolveVariant } from "lib/variant";
 import Price from "components/price";
 import { Product, ProductVariant } from "lib/shopify/types";
 import { useSearchParams } from "next/navigation";
@@ -20,13 +21,10 @@ export function StickyAddToCart({ product }: { product: Product }) {
   const searchParams = useSearchParams();
   const [visible, setVisible] = useState(false);
 
-  const selected: ProductVariant | undefined =
-    product.variants.find((variant) =>
-      variant.selectedOptions.every(
-        (option) =>
-          option.value === searchParams.get(option.name.toLowerCase()),
-      ),
-    ) ?? (product.variants.length === 1 ? product.variants[0] : undefined);
+  const selected: ProductVariant | undefined = resolveVariant(
+    product.variants,
+    (k) => searchParams.get(k),
+  );
 
   // Show the bar only after the buyer scrolls past the main CTA. Driven by the
   // primary button's position, not a hard-coded pixel offset, so it tracks any
