@@ -28311,7 +28311,7 @@
           "admin_graphql_api_id": "gid://shopify/MediaImage/42858620387650",
           "width": 850,
           "height": 850,
-          "src": "https://cdn.shopify.com/s/files/1/0999/9987/5394/files/S78b24204d10f43bd9f4194bf3a5921e5K.webp?v=1776360255",
+          "src": "/products/10297100763458_0-ben2.jpg",
           "variant_ids": []
         },
         {
@@ -28448,7 +28448,7 @@
         "admin_graphql_api_id": "gid://shopify/MediaImage/42858620387650",
         "width": 850,
         "height": 850,
-        "src": "https://cdn.shopify.com/s/files/1/0999/9987/5394/files/S78b24204d10f43bd9f4194bf3a5921e5K.webp?v=1776360255",
+        "src": "/products/10297100763458_0-ben2.jpg",
         "variant_ids": []
       }
     },
