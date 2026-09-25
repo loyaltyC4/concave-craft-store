@@ -35241,18 +35241,9 @@
       ],
       "images": [
         {
-          "id": 920000000101001,
-          "product_id": 920000000101,
-          "position": 1,
-          "src": "https://img.alicdn.com/imgextra/i1/2217982279826/O1CN01nfSkYC2MSMt8PdcTm_!!2217982279826.jpg",
-          "width": 800,
-          "height": 800,
-          "alt": "WP Pro 5-Ply Maple Complete — TYLER — Fingerboard Lab"
-        },
-        {
           "id": 920000000101002,
           "product_id": 920000000101,
-          "position": 2,
+          "position": 1,
           "src": "https://img.alicdn.com/imgextra/i2/2217982279826/O1CN01ycI7UA2MSMt3grbJE_!!2217982279826.jpg",
           "width": 800,
           "height": 800,
@@ -35261,7 +35252,7 @@
         {
           "id": 920000000101003,
           "product_id": 920000000101,
-          "position": 3,
+          "position": 2,
           "src": "https://img.alicdn.com/imgextra/i4/2217982279826/O1CN01UfNxM42MSMt8GpqDt_!!2217982279826.jpg",
           "width": 800,
           "height": 800,
@@ -35270,18 +35261,27 @@
         {
           "id": 920000000101004,
           "product_id": 920000000101,
-          "position": 4,
+          "position": 3,
           "src": "https://img.alicdn.com/imgextra/i3/2217982279826/O1CN015aLNX22MSMt8BCc45_!!2217982279826.jpg",
+          "width": 800,
+          "height": 800,
+          "alt": "WP Pro 5-Ply Maple Complete — TYLER — Fingerboard Lab"
+        },
+        {
+          "id": 920000000101001,
+          "product_id": 920000000101,
+          "position": 4,
+          "src": "https://img.alicdn.com/imgextra/i1/2217982279826/O1CN01nfSkYC2MSMt8PdcTm_!!2217982279826.heic",
           "width": 800,
           "height": 800,
           "alt": "WP Pro 5-Ply Maple Complete — TYLER — Fingerboard Lab"
         }
       ],
       "image": {
-        "id": 920000000101001,
+        "id": 920000000101002,
         "product_id": 920000000101,
         "position": 1,
-        "src": "https://img.alicdn.com/imgextra/i1/2217982279826/O1CN01nfSkYC2MSMt8PdcTm_!!2217982279826.jpg",
+        "src": "https://img.alicdn.com/imgextra/i2/2217982279826/O1CN01ycI7UA2MSMt3grbJE_!!2217982279826.jpg",
         "width": 800,
         "height": 800,
         "alt": "WP Pro 5-Ply Maple Complete — TYLER — Fingerboard Lab"
