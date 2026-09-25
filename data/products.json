@@ -22086,7 +22086,7 @@
           "id": 1029712914060700,
           "product_id": 10297129140607,
           "position": 1,
-          "src": "/products/primary-10297129140607-be.jpg",
+          "src": "/products/primary-10297129140607-be2.jpg",
           "width": 800,
           "height": 800,
           "alt": "BM Race-Grade Fingerboard Wheels — Metal Lock, Quiet-Running — Fingerboard Lab"
@@ -22123,7 +22123,7 @@
         "id": 1029712914060700,
         "product_id": 10297129140607,
         "position": 1,
-        "src": "/products/primary-10297129140607-be.jpg",
+        "src": "/products/primary-10297129140607-be2.jpg",
         "width": 800,
         "height": 800,
         "alt": "BM Race-Grade Fingerboard Wheels — Metal Lock, Quiet-Running — Fingerboard Lab"
@@ -28111,7 +28111,7 @@
           "admin_graphql_api_id": "gid://shopify/MediaImage/42859135828290",
           "width": 2048,
           "height": 2048,
-          "src": "/products/primary-10297126715714-cleaned.jpg",
+          "src": "/products/primary-10297126715714-be2.jpg",
           "variant_ids": [
             52930321219906
           ]
@@ -28207,7 +28207,7 @@
         "admin_graphql_api_id": "gid://shopify/MediaImage/42859135828290",
         "width": 2048,
         "height": 2048,
-        "src": "/products/primary-10297126715714-cleaned.jpg",
+        "src": "/products/primary-10297126715714-be2.jpg",
         "variant_ids": [
           52930321219906
         ]
@@ -31852,72 +31852,6 @@
       }
     },
     {
-      "id": 10297129140577,
-      "title": "Fingerboard Deck Scribe — Marking Jig Only (Mold Not Included)",
-      "body_html": "<p>If you already own a mold but have been freehand-marking your blank outlines, this scribe is the single most impactful upgrade you can make to your pressing process: it gives every blank the same reference outline before cutting, which is where deck-to-deck shape variation actually originates. Sold individually — no mold included.</p><p><strong>Why this one</strong></p><ul><li>Dedicated scribe/marking jig for fingerboard blanks — transfers a consistent deck outline onto each blank so every cut starts from the same reference</li><li>Addresses the most common source of shape inconsistency in DIY deck pressing: freehand outline variation before the blank reaches the mold</li><li>Sold as a standalone tool — the mold is not included, making this ideal if you already have a mold but lack a scribe</li><li>Compact and reusable across unlimited blank marking sessions</li><li>Compatible with standard fingerboard blank dimensions — works alongside any mold in the store</li></ul><p><strong>Specifications</strong></p><table><tbody><tr><td><strong>Type</strong></td><td>Deck scribe / marking jig</td></tr><tr><td><strong>Mold included</strong></td><td>No</td></tr><tr><td><strong>Pack size</strong></td><td>1 scribe</td></tr></tbody></table><p><strong>Who it suits</strong></p><p>Builders who own a mold but have noticed that their deck outlines vary from press to press — or who want to add precision to their process before that variation becomes a problem. If you are buying a mold from the store that does not already include a scribe, this is the natural companion purchase. See our deck-pressing guide for how to use a scribe correctly.</p><p><em>Ships directly from our supplier workshop with tracking, arriving in 7–14 business days. Prices in USD; shipping is free on orders over $50. 30-day returns if it is not right for you.</em></p>",
-      "vendor": "Fingerboard Lab",
-      "product_type": "Deck Building & Molds",
-      "handle": "fingerboard-deck-scribe-marking-jig-only-mold-not-included",
-      "created_at": "2026-08-07T15:00:00+02:00",
-      "updated_at": "2026-08-07T15:00:00+02:00",
-      "published_at": "2026-08-07T15:00:00+02:00",
-      "template_suffix": null,
-      "published_scope": "web",
-      "tags": "fingerboard scribe, marking jig, deck outline tool, blank marking, deck building, press accessory, fingerboard DIY, consistency tool",
-      "status": "active",
-      "seo_title": "Fingerboard Deck Scribe / Marking Jig — Tool Only",
-      "seo_description": "Standalone fingerboard deck scribe for consistent blank marking. Works with any mold — adds the outline reference step that makes deck shapes reproducible.",
-      "variants": [
-        {
-          "id": 52930359165283,
-          "product_id": 10297129140577,
-          "title": "Default Title",
-          "price": "72.95",
-          "compare_at_price": null,
-          "position": 1,
-          "option1": "Default Title",
-          "inventory_policy": "continue",
-          "taxable": false,
-          "sku": "FL-10297129140577",
-          "requires_shipping": true,
-          "available": true,
-          "inventory_quantity": 8,
-          "weight": 1.0,
-          "weight_unit": "kg"
-        }
-      ],
-      "options": [
-        {
-          "id": 102971291405770,
-          "name": "Option",
-          "position": 1,
-          "values": [
-            "Default Title"
-          ]
-        }
-      ],
-      "images": [
-        {
-          "id": 1029712914057700,
-          "product_id": 10297129140577,
-          "position": 1,
-          "src": "/products/primary-10297129140577-be.jpg",
-          "width": 904,
-          "height": 904,
-          "alt": "Fingerboard Deck Scribe — Marking Jig Only (Mold Not Included) — Fingerboard Lab"
-        }
-      ],
-      "image": {
-        "id": 1029712914057700,
-        "product_id": 10297129140577,
-        "position": 1,
-        "src": "/products/primary-10297129140577-be.jpg",
-        "width": 904,
-        "height": 904,
-        "alt": "Fingerboard Deck Scribe — Marking Jig Only (Mold Not Included) — Fingerboard Lab"
-      }
-    },
-    {
       "id": 10297129140571,
       "title": "Fingerboard Press Mold 3-Piece Set with Scribe — Style A, 98×32mm",
       "body_html": "<p>At 98×32mm, Style A sits at the wider, more modern end of standard fingerboard sizing, and this three-piece set includes the scribe tool that most molds leave you to source separately — meaning you can mark your blank outlines precisely from day one rather than freehand cutting. The scribe is what turns a good press into a consistently shaped deck.</p><p><strong>Why this one</strong></p><ul><li>Three-piece set includes the press mold and a scribe/marking jig — the scribe lets you transfer the exact deck outline onto every blank before cutting, so shapes stay consistent across batches</li><li>98×32mm format reflects modern street and park deck proportions — wide enough for comfortable finger placement without going oversized</li><li>Mold shapes glued maple veneer plies into a deck with concave and kicks in a single clamping session</li><li>Style A designation is a specific concave and kick profile — meaning if you press more than one style you can identify and repeat this one reliably</li><li>No specialist woodworking equipment needed — clamping pressure is all the mold requires to do its job</li><li>Complete starting kit: add maple veneer blanks, wood glue and clamps and you have everything needed to press your first deck</li></ul><p><strong>Specifications</strong></p><table><tbody><tr><td><strong>Deck format</strong></td><td>98 × 32 mm</td></tr><tr><td><strong>Set contents</strong></td><td>3-piece (mold + scribe included)</td></tr><tr><td><strong>Style</strong></td><td>A</td></tr><tr><td><strong>Pack size</strong></td><td>1 set</td></tr></tbody></table><p><strong>Who it suits</strong></p><p>First-time deck builders who want a complete working kit without sourcing each component separately. The scribe is a meaningful inclusion — it removes one of the most common errors beginners make (inconsistent outline marking), making this set a more confident starting point than a bare mold. See our deck-pressing guide for the full process.</p><p><em>Ships directly from our supplier workshop with tracking, arriving in 7–14 business days. Prices in USD; shipping is free on orders over $50. 30-day returns if it is not right for you.</em></p>",
@@ -32219,7 +32153,7 @@
           "id": 1029712914057401,
           "product_id": 10297129140574,
           "position": 1,
-          "src": "/products/primary-10297129140574-cleaned.jpg",
+          "src": "/products/primary-10297129140574-be2.jpg",
           "width": 800,
           "height": 800,
           "alt": "Fingerboard Deck Press Mold — Style G — Fingerboard Lab"
@@ -32247,7 +32181,7 @@
         "id": 1029712914057401,
         "product_id": 10297129140574,
         "position": 1,
-        "src": "/products/primary-10297129140574-cleaned.jpg",
+        "src": "/products/primary-10297129140574-be2.jpg",
         "width": 800,
         "height": 800,
         "alt": "Fingerboard Deck Press Mold — Style G — Fingerboard Lab"
