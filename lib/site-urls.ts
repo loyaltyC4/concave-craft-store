@@ -1,6 +1,7 @@
 import { getCollections, getProducts } from "lib/shopify";
 import { baseUrl } from "lib/utils";
 import { allGuides } from "lib/all-guides";
+import { COUNTRY_PAGES } from "lib/country-pages-data";
 
 export type SiteUrl = {
   url: string;
@@ -105,16 +106,27 @@ export async function getGuideUrls(): Promise<SiteUrl[]> {
   }));
 }
 
+export async function getCountryUrls(): Promise<SiteUrl[]> {
+  const now = new Date().toISOString();
+  return COUNTRY_PAGES.map((c) => ({
+    url: `${baseUrl}/shipping/${c.slug}`,
+    lastModified: now,
+    changeFrequency: "monthly" as const,
+    priority: 0.6,
+  }));
+}
+
 /** Everything indexable, in one list. Shared by the sitemap and IndexNow so
  *  the two can never drift apart. */
 export async function getAllSiteUrlEntries(): Promise<SiteUrl[]> {
-  const [s, c, p, g] = await Promise.all([
+  const [s, c, p, g, cn] = await Promise.all([
     getStaticUrls(),
     getCollectionUrls(),
     getProductUrls(),
     getGuideUrls(),
+    getCountryUrls(),
   ]);
-  return [...s, ...c, ...p, ...g];
+  return [...s, ...c, ...p, ...g, ...cn];
 }
 
 /** Plain URL strings (IndexNow payloads, internal checks). */

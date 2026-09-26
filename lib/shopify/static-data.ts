@@ -24,6 +24,7 @@ const homepagePicks: Record<string, string[]> = require("../../data/homepage.jso
 
 import type { Collection, Product } from "./types";
 import { proxiedImageUrl } from "lib/image-proxy";
+import { isFlashSaleActive, isFlashSaleHandle, flashSalePrice } from "lib/flash-sale";
 
 // ── Helpers ──────────────────────────────────────────────────────────────────
 
@@ -56,8 +57,16 @@ function truncateForMeta(text: string, maxLength = 155): string {
 // ── Transformers ─────────────────────────────────────────────────────────────
 
 function restProductToProduct(p: any): Product {
+  // Evaluated per product render (cheap: two date comparisons), so a warm
+  // serverless instance still flips over exactly at the sale's start/end
+  // instant rather than only on cold start.
+  const onSaleProduct = isFlashSaleActive() && isFlashSaleHandle(p.handle as string);
+
   const prices = (p.variants ?? [])
-    .map((v: any) => parseFloat(v.price ?? "0"))
+    .map((v: any) => {
+      const raw = parseFloat(v.price ?? "0");
+      return onSaleProduct ? flashSalePrice(raw) : raw;
+    })
     .filter((n: number) => !isNaN(n));
   const minPrice = prices.length ? Math.min(...prices) : 0;
   const maxPrice = prices.length ? Math.max(...prices) : 0;
@@ -94,17 +103,25 @@ function restProductToProduct(p: any): Product {
       ] as (null | { name: string; value: string })[]
     ).filter((x): x is { name: string; value: string } => x !== null);
 
-    const compareAt = v.compare_at_price
+    const regularPrice = parseFloat((v.price as string) ?? "0");
+    const existingCompareAt = v.compare_at_price
       ? parseFloat(v.compare_at_price as string)
       : NaN;
-    const price = parseFloat((v.price as string) ?? "0");
+
+    // A real, dated flash sale overrides the catalog price while — and only
+    // while — it's actually running (see lib/flash-sale.ts). The "compare
+    // at" shown during the sale is the product's own real regular price, not
+    // an invented anchor, and the discount disappears automatically once
+    // `endsAt` passes: nothing here needs to be manually reverted.
+    const price = onSaleProduct ? flashSalePrice(regularPrice) : regularPrice;
+    const compareAt = onSaleProduct ? regularPrice : existingCompareAt;
 
     return {
       id: `gid://shopify/ProductVariant/${v.id as string}`,
       title: v.title as string,
       availableForSale: v.available !== false,
       selectedOptions,
-      price: { amount: (v.price as string) ?? "0.00", currencyCode: "USD" },
+      price: { amount: price.toFixed(2), currencyCode: "USD" },
       // Only surface a compare-at when it is genuinely higher than the price.
       ...(!isNaN(compareAt) && compareAt > price
         ? {

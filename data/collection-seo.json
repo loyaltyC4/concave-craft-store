@@ -442,5 +442,27 @@
         "a": "Quality fingerboard cases include foam or fabric padding that prevents rattling and protects the deck surface and trucks. Some have pre-cut foam inserts shaped to a specific format; others use flexible padding for different sizes. Check the product description for padding type if scratch protection is a priority."
       }
     ]
+  },
+  "sale": {
+    "h1": "End of Season Clearance — 20% Off, For a Limited Time",
+    "seo_title": "Fingerboard Clearance Sale — 20% Off Select Gear",
+    "meta_description": "A real, dated 20% clearance on ramps, trucks, wheels, park sets and storage — ends soon, then prices revert. No inflated anchor prices.",
+    "intro": "A genuine clearance sale on a handful of real catalog items, run for a fixed window. Every \"was\" price shown here is the item's actual regular price, not an anchor invented for the sale — when the countdown ends, prices simply go back to normal.",
+    "buying_guide": [
+      {
+        "heading": "Why these items, and why now",
+        "body": "This is a real, bounded clearance window on specific overstocked and slower-moving pieces across the catalog — not a permanent \"sale\" price dressed up as urgent. Once the countdown reaches zero, every item here returns to its regular price automatically."
+      }
+    ],
+    "faqs": [
+      {
+        "q": "Is this a real discount?",
+        "a": "Yes — the \"was\" price is the item's genuine regular catalog price, and the discount is only active for the dated window shown in the countdown. It is not an inflated price invented to make the sale look bigger."
+      },
+      {
+        "q": "What happens when the sale ends?",
+        "a": "Prices revert automatically to their regular amount. There's nothing to redeem or lose — if you buy during the window, you get the sale price; after it ends, the regular price applies going forward."
+      }
+    ]
   }
 }
