@@ -9,6 +9,7 @@ import {
   SUPPORT_EMAIL,
   SOCIALS,
 } from "lib/brand";
+import { COUNTRY_PAGES } from "lib/country-pages-data";
 
 function Column({
   title,
@@ -102,6 +103,14 @@ export default function Footer() {
             { label: "Contact", href: "/contact" },
             { label: "About", href: "/about" },
           ]}
+        />
+
+        <Column
+          title="Ships to"
+          links={COUNTRY_PAGES.map((c) => ({
+            label: c.name.replace(/^the /, ""),
+            href: `/shipping/${c.slug}`,
+          }))}
         />
 
         <div className="col-span-2 md:col-span-1">

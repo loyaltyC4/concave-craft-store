@@ -2,6 +2,8 @@ import CartModal from "components/cart/modal";
 import { BrandLogo } from "components/brand-logo";
 import { getCollections } from "lib/shopify";
 import { COLLECTIONS } from "lib/brand";
+import { isFlashSaleActive } from "lib/flash-sale";
+import { FlashSaleTicker } from "components/flash-sale-ticker";
 import Link from "next/link";
 import { Suspense } from "react";
 import MobileMenu from "./mobile-menu";
@@ -31,13 +33,18 @@ export async function Navbar() {
     // maximum visibility, before the standard catalog collections.
     { title: "Custom Builds", path: "/custom" },
     ...collections
-      .filter((c) => c.handle)
+      // "sale" is a real collection page (so it can be linked/indexed) but
+      // deliberately excluded from the persistent nav — it should only be
+      // prominent while lib/flash-sale.ts says a sale is actually running,
+      // not sit there as a stale link once it ends.
+      .filter((c) => c.handle && c.handle !== "sale")
       .map((c) => ({
         title: SHORT_LABEL[c.handle] ?? c.title,
         path: c.path,
       })),
     { title: "Guides", path: "/guides" },
   ];
+  const saleOn = isFlashSaleActive();
 
   return (
     <header className="sticky top-0 z-50">
@@ -46,6 +53,7 @@ export async function Navbar() {
           used everywhere else on the site instead of black-on-lime. */}
       <div className="hidden bg-[#0b0c0e] border-b border-white/10 sm:block">
         <div className="mx-auto flex max-w-7xl items-center justify-center gap-8 px-6 py-1.5 text-[12px] font-bold tracking-wide">
+          {saleOn && <FlashSaleTicker />}
           {ANNOUNCEMENTS.map((a) => (
             <span key={a} className="flex items-center gap-8 text-[#c5f23c]">
               {a}
