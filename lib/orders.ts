@@ -182,3 +182,130 @@ export async function getOrdersSummary(): Promise<{
     revenueCents: data.reduce((sum, o) => sum + (o.amount_total || 0), 0),
   };
 }
+
+// ---------------------------------------------------------------------------
+// Customer-facing order tracking ("Track my order")
+// ---------------------------------------------------------------------------
+
+export type TrackedOrder = Order & {
+  /** Short, human-typeable reference derived from the row id — shown in the
+   *  order-confirmation email so a customer can look their order up without
+   *  needing an account. Not a secret; combined with the email it only
+   *  narrows a lookup that's already scoped to that email address. */
+  orderCode: string;
+  shippingAddress: Stripe.Address | null;
+};
+
+const TRACKING_STATUS_COPY: Record<
+  string,
+  { label: string; detail: string }
+> = {
+  pending: {
+    label: "Payment received",
+    detail: "We're getting your order ready to send to the workshop.",
+  },
+  paid: {
+    label: "Payment received",
+    detail: "We're getting your order ready to send to the workshop.",
+  },
+  processing: {
+    label: "Preparing to ship",
+    detail: "Your order is being prepared at the supplier workshop.",
+  },
+  in_production: {
+    label: "In production",
+    detail: "Your order is being built at the supplier workshop.",
+  },
+  shipped: {
+    label: "Shipped",
+    detail: "Your order is on its way via EMS / local postal service.",
+  },
+  delivered: {
+    label: "Delivered",
+    detail: "This order has been delivered.",
+  },
+  cancelled: {
+    label: "Cancelled",
+    detail: "This order was cancelled.",
+  },
+};
+
+export function trackingStatusCopy(status: string | null | undefined) {
+  const key = (status || "").toLowerCase();
+  return (
+    TRACKING_STATUS_COPY[key] || {
+      label: status ? status.replace(/_/g, " ") : "Processing",
+      detail:
+        "We're on it — most orders arrive within 7–14 business days of dispatch.",
+    }
+  );
+}
+
+/** Derives the short order code shown to customers from a row id. */
+export function orderCodeFromId(id: string): string {
+  return id.replace(/-/g, "").slice(0, 8).toUpperCase();
+}
+
+/**
+ * Looks up orders for the "Track my order" page. Always scoped to an email
+ * address (so this can't be used to browse someone else's orders); an
+ * optional order code narrows further when a customer has more than one
+ * order on file. Returns at most 10 most-recent matches.
+ */
+export async function findOrdersForTracking(
+  email: string,
+  orderCode?: string,
+): Promise<TrackedOrder[]> {
+  const supabase = getSupabase();
+  if (!supabase) return [];
+
+  const normalizedEmail = email.trim().toLowerCase();
+  if (!normalizedEmail) return [];
+
+  const { data: orders, error } = await supabase
+    .from("fbl_orders")
+    .select(
+      "id,stripe_session_id,customer_email,customer_name,shipping_address,amount_total,currency,status,created_at",
+    )
+    .ilike("customer_email", normalizedEmail)
+    .order("created_at", { ascending: false })
+    .limit(10);
+
+  if (error || !orders || orders.length === 0) return [];
+
+  const code = orderCode?.trim().toLowerCase().replace(/[^a-z0-9]/g, "");
+  const matched = code
+    ? orders.filter((o) =>
+        orderCodeFromId(o.id as string).toLowerCase().startsWith(code),
+      )
+    : orders;
+
+  if (matched.length === 0) return [];
+
+  const orderIds = matched.map((o) => o.id);
+  const { data: items } = await supabase
+    .from("fbl_order_items")
+    .select("order_id,product_handle,title,quantity,unit_amount")
+    .in("order_id", orderIds);
+
+  return matched.map((o) => ({
+    id: o.id as string,
+    orderCode: orderCodeFromId(o.id as string),
+    stripeSessionId: o.stripe_session_id as string,
+    customerEmail: o.customer_email as string | null,
+    customerName: o.customer_name as string | null,
+    shippingAddress: (o.shipping_address as Stripe.Address | null) || null,
+    amountTotal: o.amount_total as number,
+    currency: o.currency as string,
+    status: o.status as string,
+    createdAt: o.created_at as string,
+    items: (items || [])
+      .filter((it) => it.order_id === o.id)
+      .map((it) => ({
+        title: it.title as string,
+        quantity: it.quantity as number,
+        unitAmount: it.unit_amount as number,
+        productHandle: it.product_handle as string | null,
+      })),
+  }));
+}
