@@ -98,6 +98,7 @@ export default function Footer() {
         <Column
           title="Support"
           links={[
+            { label: "Track your order", href: "/track" },
             { label: "Shipping & returns", href: "/shipping-returns" },
             { label: "FAQ", href: "/faq" },
             { label: "Contact", href: "/contact" },
