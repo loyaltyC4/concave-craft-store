@@ -17,6 +17,10 @@ export type MirrorItem = {
   item_category?: string;
 };
 
+// Re-exported so gtag.ts (which imports it for type-compat with its own
+// GtagItem) can keep a single import statement.
+export type PosthogItem = MirrorItem;
+
 export function mirrorToPosthog(
   event: "view_item" | "add_to_cart" | "begin_checkout" | "purchase",
   item: MirrorItem,
