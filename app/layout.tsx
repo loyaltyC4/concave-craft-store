@@ -175,48 +175,58 @@ export default async function RootLayout({
           />
         )}
         {/*
-         * PostHog loader (added 2026-10-08; two regressions fixed same day —
-         * see REGRESSION NOTES below).
+         * PostHog (added 2026-10-08; three regressions fixed same day —
+         * see REGRESSION NOTES).
          *
-         * Load posthog-js from the INGESTION host /static/array.js. array.js
-         * self-executes: when it loads it processes `posthog._q` in order,
-         * which is what actually performs init with the real key. The queue
-         * is filled synchronously by the inline bootstrap above, so by the
-         * time array.js runs, `init` with the key+config is already queued
-         * and is applied first — no manual re-init needed.
+         * Pattern: load array.js from the INGESTION host and call
+         * posthog.init() in the loader's onReady/onLoad — NOT a pre-queue
+         * bootstrap. The current SDK's array.js does NOT drain the legacy
+         * `posthog._q` shim queue (regression 3): a pre-queued init is
+         * silently ignored, config.token stays empty, and every capture
+         * goes nowhere. Init must be called from the SDK instance itself
+         * once the script has loaded. next/script's onLoad fires exactly
+         * once per page load, after array.js has executed, so init runs
+         * with the real SDK in scope.
          *
-         * REGRESSION NOTE 1 — loader URL: the first deploy pointed the
-         * <Script src> at the APP host array path
-         * (https://us.posthog.com/array/<key>/posthog.js). That 404s — the
-         * app host does not serve the JS bundle — so the library never
-         * loaded and nothing was captured. Correct: INGESTION host
-         * (https://us.i.posthog.com) + /static/array.js. Verified in a real
-         * browser on the live site.
+         * Events fired before init (pageview, mirrored ecommerce events
+         * from lib/posthog-mirror.ts) are buffered by posthog-js itself
+         * once capture() is shimmed — but to be safe the mirror module
+         * no-ops until window.posthog.config?.token is set.
          *
-         * REGRESSION NOTE 2 — no copy of the snippet is shipped here: the
-         * loader is a plain <Script src> and the queue-filling bootstrap is
-         * inline. Keep it that way. Also note config.token must end up
-         * non-empty after load; if it is empty, init was dropped and every
-         * capture goes nowhere (that's how you diagnose a silent failure).
+         * REGRESSION NOTE 1 — loader URL host: the APP host
+         * (us.posthog.com) does not serve the JS bundle:
+         *   WRONG: https://us.posthog.com/array/<key>/posthog.js  → 404
+         *   RIGHT: https://us.i.posthog.com/static/array.js       → 200
          *
-         * Same placement rule as the GA4 bootstrap: raw inline script ABOVE
-         * the external loader, executing during HTML parse before any React
-         * effect can fire a mirrored ecommerce event
-         * (lib/posthog-mirror.ts). Only rendered when NEXT_PUBLIC_POSTHOG_KEY
-         * is set, so dev/preview never send events to the real project.
-         * autocapture (click/change/submit) + session recording are ON.
+         * REGRESSION NOTE 2 — diagnosis trick: after load,
+         * window.posthog.config.token must be non-empty. Empty token =
+         * init never ran = silent no-op analytics. That is the single
+         * fastest check that PostHog is actually live on a page.
+         *
+         * REGRESSION NOTE 3 — the old pre-queue bootstrap
+         * (posthog._q.push(["init", ...]) style) is dead: the modern
+         * array.js ignores it. Do not reintroduce it.
+         *
+         * Only rendered when NEXT_PUBLIC_POSTHOG_KEY is set, so dev/preview
+         * never send events to the real project. autocapture
+         * (click/change/submit) + session recording are ON.
          */}
         {POSTHOG_KEY && (
-          <script
-            dangerouslySetInnerHTML={{
-              __html: `!function(t,e){var o,n;e.__posthog=e.posthog||{},e.posthog._i=e.posthog._i||{},e.posthog._i["${POSTHOG_KEY}"]||((o=e.posthog)._q=o._q||[],["init","capturePageViews","capture","identify","setPersonProperties","register","registerOnce","unregister","optOutCapturing","hasOptedOutCapturing","optInCapturing"].forEach((function(t){o[t]=function(){for(var e=arguments.length,n=Array(e),p=0;p<e;p++)n[p]=arguments[p];o._q.push([t].concat(n))}})),o._q.push(["init",["${POSTHOG_KEY}",{api_host:"${POSTHOG_API_HOST}",capture_pageview:!0,autocapture:{dom_event_allowlist:["click","change","submit"]},capture_performance:!1,persistence:"localStorage+cookie",session_recording:{maskAllInputs:!0}}]]))}(0,window);`,
-            }}
-          />
-        )}
-        {POSTHOG_KEY && (
           <Script
+            id="posthog-loader"
             src={`${POSTHOG_API_HOST}/static/array.js`}
             strategy="afterInteractive"
+            onLoad={() => {
+              window.posthog?.init(POSTHOG_KEY as string, {
+                api_host: POSTHOG_API_HOST,
+                ui_host: "https://us.posthog.com",
+                capture_pageview: true,
+                autocapture: { dom_event_allowlist: ["click", "change", "submit"] },
+                capture_performance: false,
+                persistence: "localStorage+cookie",
+                session_recording: { maskAllInputs: true },
+              });
+            }}
           />
         )}
         <script
