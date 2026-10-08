@@ -9,7 +9,7 @@ import Script from "next/script";
 import "./globals.css";
 import { baseUrl } from "lib/utils";
 import { GA_MEASUREMENT_ID } from "lib/gtag";
-import { POSTHOG_KEY, POSTHOG_HOST } from "lib/posthog";
+import { POSTHOG_KEY, POSTHOG_API_HOST } from "lib/posthog";
 import {
   SITE_NAME,
   SITE_TAGLINE,
@@ -175,27 +175,33 @@ export default async function RootLayout({
           />
         )}
         {/*
-         * PostHog snippet (added 2026-10-08). Same rule as the GA4 bootstrap
-         * above: raw inline script, executes during HTML parse, so the
-         * posthog queue + capture shim exist before any React effect fires
-         * a mirrored ecommerce event (lib/posthog-mirror.ts pushes onto this
-         * queue before posthog-js itself has loaded; the library replays the
-         * queue once loaded). Only rendered when NEXT_PUBLIC_POSTHOG_KEY is
-         * set, so dev/preview never send events to the real project.
-         * autocapture + session recording are ON (replay_canvas is left off;
-         * the store has no canvas worth capturing).
+         * PostHog snippet (added 2026-10-08, loader fixed same day).
+         *
+         * REGRESSION NOTE — the loader <Script> src must point at the
+         * PostHog INGESTION host, not the app host:
+         *   WRONG: https://us.posthog.com/array/<key>/posthog.js   → 404
+         *   RIGHT: https://us.i.posthog.com/static/array.js       → 200
+         * The first deploy used the wrong URL and silently captured nothing:
+         * the inline bootstrap queued events, but the library never loaded
+         * to drain the queue. Verified by fetching the URL from the live
+         * site in a real browser (404). Same rule as the GA4 bootstrap above:
+         * raw inline script, executes during HTML parse, before any React
+         * effect fires a mirrored ecommerce event (lib/posthog-mirror.ts).
+         * Only rendered when NEXT_PUBLIC_POSTHOG_KEY is set, so dev/preview
+         * never send events to the real project. autocapture (click/change/
+         * submit) + session recording are ON.
          */}
         {POSTHOG_KEY && (
           <script
             dangerouslySetInnerHTML={{
               __html: `
-!function(t,e){var o,n,p,r;e.__posthog=e.posthog||{},e.posthog._i=e.posthog._i||{},e.posthog._i["${POSTHOG_KEY}"]||((o=e.posthog)._q=o._q||[],["init","capturePageViews","capture","identify","setPersonProperties","register","registerOnce","unregister","optOutCapturing","hasOptedOutCapturing","optInCapturing"].forEach((function(t){o[t]=function(){for(var e=arguments.length,n=Array(e),p=0;p<e;p++)n[p]=arguments[p];o._q.push([t].concat(n))}})),o._q.push(["init",["${POSTHOG_KEY}",{api_host:"${POSTHOG_HOST}",capture_pageview:!0,autocapture:{dom_event_allowlist:["click","change","submit"]},capture_performance:!1,persistence:"localStorage+cookie",session_recording:{maskAllInputs:!0}}]]))}(0,window);`,
+!function(t,e){var o,n,p,r;e.__posthog=e.posthog||{},e.posthog._i=e.posthog._i||{},e.posthog._i["${POSTHOG_KEY}"]||((o=e.posthog)._q=o._q||[],["init","capturePageViews","capture","identify","setPersonProperties","register","registerOnce","unregister","optOutCapturing","hasOptedOutCapturing","optInCapturing"].forEach((function(t){o[t]=function(){for(var e=arguments.length,n=Array(e),p=0;p<e;p++)n[p]=arguments[p];o._q.push([t].concat(n))}})),o._q.push(["init",["${POSTHOG_KEY}",{api_host:"${POSTHOG_API_HOST}",capture_pageview:!0,autocapture:{dom_event_allowlist:["click","change","submit"]},capture_performance:!1,persistence:"localStorage+cookie",session_recording:{maskAllInputs:!0}}]]))}(0,window);`,
             }}
           />
         )}
         {POSTHOG_KEY && (
           <Script
-            src={`${POSTHOG_HOST}/array/${POSTHOG_KEY}/posthog.js`}
+            src={`${POSTHOG_API_HOST}/static/array.js`}
             strategy="afterInteractive"
           />
         )}
