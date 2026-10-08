@@ -9,6 +9,7 @@ import Script from "next/script";
 import "./globals.css";
 import { baseUrl } from "lib/utils";
 import { GA_MEASUREMENT_ID } from "lib/gtag";
+import { POSTHOG_KEY, POSTHOG_HOST } from "lib/posthog";
 import {
   SITE_NAME,
   SITE_TAGLINE,
@@ -171,6 +172,31 @@ export default async function RootLayout({
             dangerouslySetInnerHTML={{
               __html: `window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','${GA_MEASUREMENT_ID}');`,
             }}
+          />
+        )}
+        {/*
+         * PostHog snippet (added 2026-10-08). Same rule as the GA4 bootstrap
+         * above: raw inline script, executes during HTML parse, so the
+         * posthog queue + capture shim exist before any React effect fires
+         * a mirrored ecommerce event (lib/posthog-mirror.ts pushes onto this
+         * queue before posthog-js itself has loaded; the library replays the
+         * queue once loaded). Only rendered when NEXT_PUBLIC_POSTHOG_KEY is
+         * set, so dev/preview never send events to the real project.
+         * autocapture + session recording are ON (replay_canvas is left off;
+         * the store has no canvas worth capturing).
+         */}
+        {POSTHOG_KEY && (
+          <script
+            dangerouslySetInnerHTML={{
+              __html: `
+!function(t,e){var o,n,p,r;e.__posthog=e.posthog||{},e.posthog._i=e.posthog._i||{},e.posthog._i["${POSTHOG_KEY}"]||((o=e.posthog)._q=o._q||[],["init","capturePageViews","capture","identify","setPersonProperties","register","registerOnce","unregister","optOutCapturing","hasOptedOutCapturing","optInCapturing"].forEach((function(t){o[t]=function(){for(var e=arguments.length,n=Array(e),p=0;p<e;p++)n[p]=arguments[p];o._q.push([t].concat(n))}})),o._q.push(["init",["${POSTHOG_KEY}",{api_host:"${POSTHOG_HOST}",capture_pageview:!0,autocapture:{dom_event_allowlist:["click","change","submit"]},capture_performance:!1,persistence:"localStorage+cookie",session_recording:{maskAllInputs:!0}}]]))}(0,window);`,
+            }}
+          />
+        )}
+        {POSTHOG_KEY && (
+          <Script
+            src={`${POSTHOG_HOST}/array/${POSTHOG_KEY}/posthog.js`}
+            strategy="afterInteractive"
           />
         )}
         <script
