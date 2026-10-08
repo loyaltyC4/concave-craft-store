@@ -4,9 +4,20 @@
 // The posthog-js snippet loads in app/layout.tsx right after the GA4 bootstrap;
 // this module only exposes the typed capture helpers and event names, and adds
 // a tiny mirror of every GA4 ecommerce event so GA4 and PostHog always agree.
+//
+// Hosts (regression note, 2026-10-08):
+//   POSTHOG_HOST      — the APP host (us.posthog.com): used only for API/SQL and
+//                       links. NEVER use this as api_host for the JS snippet or
+//                       as the loader URL — the /array/<key>/posthog.js path on
+//                       the app host 404s and silently captures nothing.
+//   POSTHOG_API_HOST  — the INGESTION host (default https://us.i.posthog.com):
+//                       what the snippet's api_host AND the loader <Script src>
+//                       must use. Loader path: <ingestion>/static/array.js.
 
 export const POSTHOG_KEY = process.env.NEXT_PUBLIC_POSTHOG_KEY;
 export const POSTHOG_HOST = process.env.NEXT_PUBLIC_POSTHOG_HOST || "https://us.posthog.com";
+export const POSTHOG_API_HOST =
+  process.env.NEXT_PUBLIC_POSTHOG_API_HOST || "https://us.i.posthog.com";
 
 export type PosthogItem = {
   item_id: string;
