@@ -40,6 +40,8 @@
 // intercepting fetch / sendBeacon / XHR shows nothing either way. Use the
 // GA4 realtime report as the oracle.
 
+import { mirrorToPosthog, PosthogItem } from "lib/posthog-mirror";
+
 /**
  * Queues a gtag.js command, preserving the Arguments-object shape gtag.js
  * requires. Safe to call before gtag.js has finished loading.
@@ -84,6 +86,7 @@ export function trackViewItem(item: GtagItem, currency = "USD") {
     value: item.price ?? 0,
     items: [item],
   });
+  mirrorToPosthog("view_item", item, currency);
 }
 
 export function trackAddToCart(item: GtagItem, currency = "USD") {
@@ -92,6 +95,7 @@ export function trackAddToCart(item: GtagItem, currency = "USD") {
     value: (item.price ?? 0) * (item.quantity ?? 1),
     items: [item],
   });
+  mirrorToPosthog("add_to_cart", item, currency);
 }
 
 export function trackBeginCheckout(
@@ -100,6 +104,7 @@ export function trackBeginCheckout(
   currency = "USD",
 ) {
   gtagEvent("begin_checkout", { currency, value, items });
+  items.forEach((it) => mirrorToPosthog("begin_checkout", it, currency, value));
 }
 
 export function trackPurchase(params: {
@@ -116,4 +121,10 @@ export function trackPurchase(params: {
     ...(params.shipping != null ? { shipping: params.shipping } : {}),
     items: params.items,
   });
+  params.items.forEach((it) =>
+    mirrorToPosthog("purchase", it, params.currency, params.value, params.transactionId),
+  );
 }
+
+// Keep the posthog item type visible to TS consumers of this module.
+export type { PosthogItem };
