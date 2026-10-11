@@ -36728,8 +36728,8 @@
           "variant_ids": [
             185000000004
           ],
-          "created_at": "2026-10-11T19:15:00+02:00",
-          "updated_at": "2026-10-11T19:15:00+02:00"
+          "created_at": "2026-10-11T19:55:00+02:00",
+          "updated_at": "2026-10-11T19:55:00+02:00"
         },
         {
           "id": 92000300005,
@@ -36740,8 +36740,8 @@
           "height": 800,
           "alt": "Fingerboard Brick and Ladder Obstacle Set with Metal Rails - Fingerboard Lab",
           "variant_ids": [],
-          "created_at": "2026-10-11T19:15:00+02:00",
-          "updated_at": "2026-10-11T19:15:00+02:00"
+          "created_at": "2026-10-11T19:55:00+02:00",
+          "updated_at": "2026-10-11T19:55:00+02:00"
         },
         {
           "id": 92000300006,
@@ -36752,44 +36752,8 @@
           "height": 800,
           "alt": "Fingerboard Brick and Ladder Obstacle Set with Metal Rails - Fingerboard Lab",
           "variant_ids": [],
-          "created_at": "2026-10-11T19:15:00+02:00",
-          "updated_at": "2026-10-11T19:15:00+02:00"
-        },
-        {
-          "id": 92000300007,
-          "product_id": 92000000004,
-          "position": 4,
-          "src": "/products/92000000004-3.png",
-          "width": 800,
-          "height": 800,
-          "alt": "Fingerboard Brick and Ladder Obstacle Set with Metal Rails - Fingerboard Lab",
-          "variant_ids": [],
-          "created_at": "2026-10-11T19:15:00+02:00",
-          "updated_at": "2026-10-11T19:15:00+02:00"
-        },
-        {
-          "id": 92000300008,
-          "product_id": 92000000004,
-          "position": 5,
-          "src": "/products/92000000004-4.png",
-          "width": 800,
-          "height": 800,
-          "alt": "Fingerboard Brick and Ladder Obstacle Set with Metal Rails - Fingerboard Lab",
-          "variant_ids": [],
-          "created_at": "2026-10-11T19:15:00+02:00",
-          "updated_at": "2026-10-11T19:15:00+02:00"
-        },
-        {
-          "id": 92000300009,
-          "product_id": 92000000004,
-          "position": 6,
-          "src": "/products/92000000004-5.png",
-          "width": 800,
-          "height": 800,
-          "alt": "Fingerboard Brick and Ladder Obstacle Set with Metal Rails - Fingerboard Lab",
-          "variant_ids": [],
-          "created_at": "2026-10-11T19:15:00+02:00",
-          "updated_at": "2026-10-11T19:15:00+02:00"
+          "created_at": "2026-10-11T19:55:00+02:00",
+          "updated_at": "2026-10-11T19:55:00+02:00"
         }
       ],
       "image": {
@@ -36803,8 +36767,8 @@
         "variant_ids": [
           185000000004
         ],
-        "created_at": "2026-10-11T19:15:00+02:00",
-        "updated_at": "2026-10-11T19:15:00+02:00"
+        "created_at": "2026-10-11T19:55:00+02:00",
+        "updated_at": "2026-10-11T19:55:00+02:00"
       }
     },
     {
