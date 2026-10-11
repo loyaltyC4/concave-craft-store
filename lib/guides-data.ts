@@ -24,9 +24,9 @@ export const guides: Guide[] = [
   {
     slug: "fingerboard-sizing-guide",
     title: "Fingerboard Sizing Guide: 32mm vs 34mm vs 36mm Decks Compared",
-    metaTitle: "Fingerboard Sizing Guide: 29mm, 32mm, 34mm & 36mm Compared",
+    metaTitle: "Fingerboard Size Chart: 32mm vs 34mm vs 36mm Decks",
     metaDescription:
-      "Which fingerboard width? 29mm, 32mm, 34mm and 36mm decks compared by feel, flip speed and stability, with a truck sizing chart for each width.",
+      "32mm, 34mm or 36mm fingerboard? The width chart with what each size actually feels like, the truck size each deck needs, and how to pick for your hands.",
     category: "Sizing",
     updated: "2026-07-20",
     readMinutes: 6,
@@ -640,9 +640,9 @@ export const guides: Guide[] = [
   {
     slug: "best-beginner-fingerboard-setup",
     title: "Best Fingerboard Setup for Beginners: Complete Buying Guide",
-    metaTitle: "Best Beginner Fingerboard Setup: Buying Guide",
+    metaTitle: "Best Beginner Fingerboard Setup: Exact Parts & Cost",
     metaDescription:
-      "Not sure what to buy first? Here is the ideal beginner fingerboard setup: deck width, concave, bushings, and grip tape, plus complete vs build-it.",
+      "The beginner fingerboard setup that works: 32-34mm wooden complete, medium concave and bushings, foam grip tape. What to buy first and what a good one costs.",
     category: "Buying",
     updated: "2026-07-20",
     readMinutes: 7,

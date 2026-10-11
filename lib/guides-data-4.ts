@@ -215,9 +215,9 @@ export const guidesBatch4: Guide[] = [
   {
     slug: "fingerboard-deck-shapes-compared",
     title: "Fingerboard Deck Shapes Compared: Popsicle, Cruiser and Old-School",
-    metaTitle: "Fingerboard Deck Shapes: Popsicle vs Cruiser vs Old-School",
+    metaTitle: "Fingerboard Deck Shapes: Which Shape Should You Buy?",
     metaDescription:
-      "Fingerboard deck shapes compared: popsicle, cruiser and old-school. What each feels like, which tricks each does best, and which suits your style.",
+      "Popsicle, cruiser or old-school fingerboard deck? What each shape does best, which one beginners should buy first, and the mistakes to avoid before ordering.",
     category: "Buying",
     readMinutes: 6,
     updated: "2026-08-18",
