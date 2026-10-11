@@ -5,7 +5,7 @@ import { GridTileImage } from "components/grid/tile";
 import clsx from "clsx";
 import Image from "next/image";
 import { useRouter, useSearchParams } from "next/navigation";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 type GalleryImage = { src: string; altText: string };
 
@@ -25,6 +25,8 @@ export function Gallery({
   const router = useRouter();
   const searchParams = useSearchParams();
   const [zoomOpen, setZoomOpen] = useState(false);
+  const touchStartX = useRef<number | null>(null);
+  const swipedRef = useRef(false);
 
   // Resolve the currently-selected variant from the option query params, the
   // same way ProductDescription and AddToCart do, so all three stay in sync.
@@ -70,7 +72,7 @@ export function Gallery({
     imageIndex === 0 ? allImages.length - 1 : imageIndex - 1;
 
   const buttonClassName =
-    "h-full px-6 transition-all ease-in-out hover:scale-110 hover:text-black dark:hover:text-white flex items-center justify-center";
+    "h-full min-h-[44px] min-w-[44px] px-6 transition-all ease-in-out hover:scale-110 hover:text-black dark:hover:text-white flex items-center justify-center";
 
   const activeImage = allImages[imageIndex];
   const activeImageSrc = activeImage?.src as string;
@@ -102,7 +104,28 @@ export function Gallery({
         {activeImage && (
           <button
             type="button"
-            onClick={() => setZoomOpen(true)}
+            onTouchStart={(e) => {
+              touchStartX.current = e.touches[0]?.clientX ?? null;
+              swipedRef.current = false;
+            }}
+            onTouchEnd={(e) => {
+              const start = touchStartX.current;
+              const end = e.changedTouches[0]?.clientX;
+              touchStartX.current = null;
+              if (start == null || end == null || allImages.length < 2) return;
+              const dx = end - start;
+              if (Math.abs(dx) > 40) {
+                swipedRef.current = true;
+                updateImage((dx < 0 ? nextImageIndex : previousImageIndex).toString());
+              }
+            }}
+            onClick={() => {
+              if (swipedRef.current) {
+                swipedRef.current = false;
+                return;
+              }
+              setZoomOpen(true);
+            }}
             aria-label="Zoom product image"
             className="block h-full w-full cursor-zoom-in"
           >

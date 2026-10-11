@@ -146,7 +146,7 @@ function Chip({
       type="button"
       onClick={onClick}
       className={clsx(
-        "rounded-full border px-3 py-1 text-xs font-medium transition",
+        "inline-flex min-h-[44px] items-center rounded-full border px-3 py-1 text-xs font-medium transition",
         active
           ? "border-[#c5f23c] bg-[#c5f23c] text-black"
           : "border-white/15 bg-white/[0.03] text-neutral-300 hover:border-[#c5f23c]/50 hover:text-[#c5f23c]",

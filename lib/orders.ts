@@ -260,7 +260,8 @@ export async function findOrdersForTracking(
   if (!supabase) return [];
 
   const normalizedEmail = email.trim().toLowerCase();
-  if (!normalizedEmail) return [];
+  // Email alone must never reveal an order: the order code is required.
+  if (!normalizedEmail || !orderCode?.trim()) return [];
 
   const { data: orders, error } = await supabase
     .from("fbl_orders")

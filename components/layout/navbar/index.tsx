@@ -102,7 +102,7 @@ export async function Navbar() {
               <Link
                 href={item.path}
                 prefetch={true}
-                className={`whitespace-nowrap text-sm font-medium underline-offset-4 transition-colors hover:text-[#c5f23c] ${
+                className={`inline-flex min-h-[44px] items-center whitespace-nowrap text-sm font-medium underline-offset-4 transition-colors hover:text-[#c5f23c] ${
                   item.path === "/custom"
                     ? "font-semibold text-[#c5f23c]"
                     : "text-neutral-300"

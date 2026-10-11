@@ -44,7 +44,7 @@ export default async function TrackOrderPage(props: {
   let orders: TrackedOrder[] = [];
   let searched = false;
 
-  if (hasQuery && isSupabaseConfigured()) {
+  if (hasQuery && code?.trim() && isSupabaseConfigured()) {
     orders = await findOrdersForTracking(email as string, code);
     searched = true;
   }
@@ -57,8 +57,7 @@ export default async function TrackOrderPage(props: {
             Track your order
           </h1>
           <p className="mt-3 text-neutral-400">
-            Enter the email you ordered with. If you have the order code from
-            your confirmation email, add it to narrow the search.
+            Enter the email you ordered with. Both are needed: enter the order code from your confirmation email so only you can see your order.
           </p>
         </div>
 
@@ -88,13 +87,14 @@ export default async function TrackOrderPage(props: {
               htmlFor="code"
               className="block text-xs font-semibold uppercase tracking-[0.12em] text-neutral-500"
             >
-              Order code (optional)
+              Order code
             </label>
             <input
               id="code"
               name="code"
               type="text"
               defaultValue={code}
+              required
               placeholder="e.g. 4F2A9C1D"
               className="mt-2 w-full rounded-xl border border-white/10 bg-[#0b0c0e] px-4 py-3 text-sm uppercase text-[#f3f1ea] outline-none focus:border-[#c5f23c]"
             />

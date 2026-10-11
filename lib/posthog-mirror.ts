@@ -30,21 +30,34 @@ export function mirrorToPosthog(
 ) {
   if (typeof window === "undefined") return;
   if (!POSTHOG_KEY) return;
-  const ph = (window as { posthog?: { capture: (e: string, p?: Record<string, unknown>) => void } }).posthog;
-  if (!ph) return;
-  try {
-    ph.capture(event, {
-      site: "fingerboardlab",
-      item_id: item.item_id,
-      item_name: item.item_name,
-      price: item.price,
-      quantity: item.quantity,
-      item_category: item.item_category,
-      currency,
-      ...(value != null ? { value } : {}),
-      ...(transactionId != null ? { transaction_id: transactionId } : {}),
-    });
-  } catch {
-    // analytics must never break the store
-  }
+
+  const props = {
+    site: "fingerboardlab",
+    item_id: item.item_id,
+    item_name: item.item_name,
+    price: item.price,
+    quantity: item.quantity,
+    item_category: item.item_category,
+    currency,
+    ...(value != null ? { value } : {}),
+    ...(transactionId != null ? { transaction_id: transactionId } : {}),
+  };
+
+  // The PostHog script loads asynchronously. On the Stripe return page the
+  // purchase fires before it is ready, and the old code silently dropped it.
+  // Retry until PostHog can capture, for up to 20 seconds.
+  const startedAt = Date.now();
+  const attempt = () => {
+    const ph = (window as { posthog?: { capture?: (e: string, p?: Record<string, unknown>) => void } }).posthog;
+    if (ph && typeof ph.capture === "function") {
+      try {
+        ph.capture(event, props);
+      } catch {
+        // analytics must never break the store
+      }
+      return;
+    }
+    if (Date.now() - startedAt < 20000) window.setTimeout(attempt, 250);
+  };
+  attempt();
 }

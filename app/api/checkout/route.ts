@@ -56,6 +56,13 @@ export async function POST(req: NextRequest) {
     const found = staticGetVariant(l.merchandiseId);
     if (!found) continue;
     const { product, variant } = found;
+    // Never take payment for a sold-out variant.
+    if (!variant.availableForSale) {
+      return NextResponse.json(
+        { error: "sold_out", merchandiseId: l.merchandiseId },
+        { status: 409 },
+      );
+    }
     const unit_amount = Math.round(parseFloat(variant.price.amount) * 100);
     if (!unit_amount || unit_amount < 0) continue;
     const name =

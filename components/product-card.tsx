@@ -107,7 +107,7 @@ export function ProductCard({
           {product.title}
         </h3>
         <div className="mt-auto flex items-baseline justify-between gap-3 pt-3">
-          <span className="text-[13px] text-neutral-500">In stock</span>
+          <span className={product.availableForSale ? "text-[13px] text-neutral-500" : "text-[13px] font-medium text-red-400"}>{product.availableForSale ? "In stock" : "Sold out"}</span>
           <span className="flex shrink-0 items-baseline gap-2">
             {sale ? (
               <span className="text-[12px] text-neutral-500 line-through">

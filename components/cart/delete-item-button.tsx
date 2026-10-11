@@ -17,12 +17,13 @@ export function DeleteItemButton({
       type="button"
       onClick={() => optimisticUpdate(merchandiseId, "delete")}
       aria-label="Remove cart item"
-      // Visible dot is 24px but the tap target is 44x44 (WCAG 2.5.5)
-      // via a full-bleed pseudo-hit-area. Prevents mis-taps on mobile
-      // where a stray delete can wipe a whole line item.
-      className="relative flex h-[24px] w-[24px] items-center justify-center rounded-full bg-neutral-500 transition hover:bg-red-500 before:absolute before:inset-[-10px] before:content-['']"
+      // 44x44 real hit area (WCAG 2.5.5) so a stray tap cannot miss or
+      // accidentally delete a neighbouring line item.
+      className="group flex h-11 w-11 items-center justify-center rounded-full"
     >
-      <XMarkIcon className="mx-[1px] h-4 w-4 text-white" />
+      <span className="flex h-6 w-6 items-center justify-center rounded-full bg-neutral-500 transition group-hover:bg-red-500">
+        <XMarkIcon className="h-4 w-4 text-white" />
+      </span>
     </button>
   );
 }

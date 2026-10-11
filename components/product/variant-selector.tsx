@@ -1,5 +1,6 @@
 "use client";
 
+import { toast } from "sonner";
 import clsx from "clsx";
 import { ProductOption, ProductVariant } from "lib/shopify/types";
 import { useRouter, useSearchParams } from "next/navigation";
@@ -97,10 +98,12 @@ export function VariantSelector({
               key={value}
               aria-pressed={isActive}
               aria-disabled={!isAvailableForSale}
-              disabled={!isAvailableForSale}
               title={`${option.name} ${value}${!isAvailableForSale ? " (Out of Stock)" : ""}`}
               onClick={() => {
-                if (!isAvailableForSale) return;
+                if (!isAvailableForSale) {
+                  toast("That option is sold out. Pick another.");
+                  return;
+                }
                 updateOption(optionNameLowerCase, value);
               }}
               className={clsx(
