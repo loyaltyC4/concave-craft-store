@@ -10,6 +10,7 @@ import "./globals.css";
 import { baseUrl } from "lib/utils";
 import { GA_MEASUREMENT_ID } from "lib/gtag";
 import { POSTHOG_KEY, POSTHOG_API_HOST } from "lib/posthog";
+import { ProductClickTracker } from "components/analytics/product-click-tracker";
 import {
   SITE_NAME,
   SITE_TAGLINE,
@@ -227,6 +228,7 @@ export default async function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteJsonLd) }}
         />
         <CartProvider>
+          <ProductClickTracker />
           <Navbar />
           <main>
             {children}
