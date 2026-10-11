@@ -5,7 +5,7 @@ import { trackPurchase } from "lib/gtag";
 
 /**
  * Fires the GA4 purchase event once per completed Stripe session. Dedupes
- * via sessionStorage keyed on the Stripe session id so refreshing the order
+ * via localStorage keyed on the Stripe session id so refreshing the order
  * confirmation page (or the back button) never double-counts a sale.
  */
 export function PurchaseTracker({
@@ -22,10 +22,10 @@ export function PurchaseTracker({
   useEffect(() => {
     const dedupeKey = `fbl_ga4_purchase_${transactionId}`;
     try {
-      if (sessionStorage.getItem(dedupeKey)) return;
-      sessionStorage.setItem(dedupeKey, "1");
+      if (localStorage.getItem(dedupeKey)) return;
+      localStorage.setItem(dedupeKey, "1");
     } catch {
-      /* sessionStorage unavailable (private mode, etc.) — fire anyway;
+      /* localStorage unavailable (private mode, etc.) — fire anyway;
          worst case is a duplicate purchase event on a refresh. */
     }
 

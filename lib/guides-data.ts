@@ -24,9 +24,9 @@ export const guides: Guide[] = [
   {
     slug: "fingerboard-sizing-guide",
     title: "Fingerboard Sizing Guide: 32mm vs 34mm vs 36mm Decks Compared",
-    metaTitle: "Fingerboard Sizes Explained: 32mm vs 34mm vs 36mm Chart",
+    metaTitle: "Fingerboard Sizing Guide: 29mm, 32mm, 34mm & 36mm Compared",
     metaDescription:
-      "Fingerboard sizes 29mm to 36mm compared side-by-side, with a quick chart, hand-fit tips and which width to pick for the tricks you actually skate.",
+      "Which fingerboard width? 29mm, 32mm, 34mm and 36mm decks compared by feel, flip speed and stability, with a truck sizing chart for each width.",
     category: "Sizing",
     updated: "2026-07-20",
     readMinutes: 6,

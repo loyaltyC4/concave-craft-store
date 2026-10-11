@@ -243,7 +243,7 @@ export default async function ProductPage(props: {
         category={collectionHandle || undefined}
       />
 
-      <div className="mx-auto max-w-7xl px-4 py-8 md:px-8">
+      <div className="mx-auto max-w-7xl px-4 pb-28 pt-8 md:px-8 lg:pb-8">
         {/* Breadcrumb */}
         <nav className="mb-6 flex flex-wrap items-center gap-2 text-sm text-neutral-500">
           <Link href="/" className="hover:text-[#c5f23c]">

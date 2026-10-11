@@ -214,7 +214,7 @@ export default async function RootLayout({
         {POSTHOG_KEY && (
           <script
             dangerouslySetInnerHTML={{
-              __html: `(function(k,h){var s=document.createElement('script');s.src=h+'/static/array.js';s.async=true;s.onload=function(){try{window.posthog.init(k,{api_host:h,ui_host:'https://us.posthog.com',capture_pageview:true,autocapture:{dom_event_allowlist:['click','change','submit']},capture_performance:false,persistence:'localStorage+cookie',session_recording:{maskAllInputs:true}});}catch(e){}};document.head.appendChild(s);})('${POSTHOG_KEY}','${POSTHOG_API_HOST}');`,
+              __html: `(function(k,h){var s=document.createElement('script');s.src=h+'/static/array.js';s.async=true;s.onload=function(){try{window.posthog.init(k,{api_host:h,ui_host:'https://us.posthog.com',capture_pageview:'history_change',autocapture:{dom_event_allowlist:['click','change','submit']},capture_performance:false,persistence:'localStorage+cookie',session_recording:{maskAllInputs:true}});}catch(e){}};document.head.appendChild(s);})('${POSTHOG_KEY}','${POSTHOG_API_HOST}');`,
             }}
           />
         )}
