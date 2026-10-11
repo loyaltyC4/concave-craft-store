@@ -444,24 +444,36 @@
     ]
   },
   "sale": {
-    "h1": "End of Season Clearance — 20% Off, For a Limited Time",
-    "seo_title": "Fingerboard Clearance Sale — 20% Off Select Gear",
-    "meta_description": "A real, dated 20% clearance on ramps, trucks, wheels, park sets and storage — ends soon, then prices revert. No inflated anchor prices.",
-    "intro": "A genuine clearance sale on a handful of real catalog items, run for a fixed window. Every \"was\" price shown here is the item's actual regular price, not an anchor invented for the sale — when the countdown ends, prices simply go back to normal.",
+    "h1": "October Flash Sale — 15% Off Every Park Kit",
+    "seo_title": "Fingerboard Sale — 15% Off Park Kits (Ends Oct 18)",
+    "meta_description": "15% off every alloy and wooden fingerboard park kit through October 18. Real dated sale: prices revert automatically when it ends. Free shipping over $50.",
+    "intro": "Every park kit in the collection is 15% off through October 18 — the same real kits at their first real discount. Prices shown already include the sale; there is no code to enter. When the sale ends, prices revert automatically.",
     "buying_guide": [
       {
-        "heading": "Why these items, and why now",
-        "body": "This is a real, bounded clearance window on specific overstocked and slower-moving pieces across the catalog — not a permanent \"sale\" price dressed up as urgent. Once the countdown reaches zero, every item here returns to its regular price automatically."
+        "heading": "Which kit fits your desk",
+        "body": "The park set with stairs and rail is the all-rounder and the best first kit; the 4-in-1 venue set suits a rider who wants to rebuild different parks each session; the brick and ladder set is the largest and the closest thing to a full street plaza. All of them are CNC-shaped alloy or real wooden props sized for desk riding."
+      },
+      {
+        "heading": "Free shipping math",
+        "body": "Shipping is free on orders over $50. The park set at its sale price sits just under that line — pairing it with a deck upgrade or spare wheels crosses the threshold, so most single-riders save more by bundling than by hunting a bigger discount."
+      },
+      {
+        "heading": "When it ends",
+        "body": "The sale runs through October 18, 23:59 AEST. Prices revert automatically when it ends — nothing is extended quietly."
       }
     ],
     "faqs": [
       {
-        "q": "Is this a real discount?",
-        "a": "Yes — the \"was\" price is the item's genuine regular catalog price, and the discount is only active for the dated window shown in the countdown. It is not an inflated price invented to make the sale look bigger."
+        "q": "Do I need a coupon code?",
+        "a": "No — the 15% discount is already applied to the prices shown. Checkout charges the sale price directly."
       },
       {
-        "q": "What happens when the sale ends?",
-        "a": "Prices revert automatically to their regular amount. There's nothing to redeem or lose — if you buy during the window, you get the sale price; after it ends, the regular price applies going forward."
+        "q": "Is this a real discount?",
+        "a": "Yes. The 'was' price on each listing is the product's own regular catalog price from before the sale, not an inflated anchor. The sale is dated and ends on schedule."
+      },
+      {
+        "q": "What if I order two kits?",
+        "a": "Two kits almost always clear the $50 free-shipping threshold, so you save 15% on both and pay no shipping."
       }
     ]
   }
