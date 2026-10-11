@@ -16,18 +16,20 @@
  */
 
 export const FLASH_SALE = {
-  name: "End of Season Clearance",
+  name: "October Flash Sale",
   /** Short label used in the announcement bar / badges. */
-  shortLabel: "Clearance",
-  startsAt: "2026-09-26T00:00:00+10:00",
-  endsAt: "2026-10-03T23:59:59+10:00",
-  discountPct: 0.2,
+  shortLabel: "October Sale",
+  startsAt: "2026-10-11T18:00:00+10:00",
+  endsAt: "2026-10-18T23:59:59+10:00",
+  discountPct: 0.15,
   handles: [
-    "fingerboard-halfpipe-ramp-wooden-u-ramp-for-tech-deck-stunts-portable-desktop-railing-for-professional-practice-and-beginner",
-    "36mm-34mm-32mm-fingerboard-truck-professional-designed-for-finger-skateboard",
-    "professional-fingerboard-wheels-abec-7-bearings-for-mini-skateboard-finger-skate-board",
+    "alloy-fingerboard-park-set-kicker-stairs-rail",
+    "fingerboard-venue-set-4in1",
+    "alloy-fingerboard-venue-set-modular",
+    "fingerboard-brick-ladder-obstacle-set",
     "alloy-fingerboard-park-set-4-in-1-terrain-combo",
-    "professional-fingerboard-box-portable-aluminum-acrylic-finger-skateboard-storage-case-holds-6-fingerboards-compact-durable",
+    "alloy-mini-fingerboard-park-combo-set",
+    "alloy-fingerboard-scene-set-modular-mini-park-combo",
   ] as string[],
 } as const;
 
