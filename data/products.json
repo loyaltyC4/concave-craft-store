@@ -35952,26 +35952,26 @@
     },
     {
       "id": 92000000001,
-      "title": "Alloy Fingerboard Park Set — Kicker, Stairs & Rail",
-      "body_html": "<p>mpact alloy fingerboard park: bank, stair run with two rail options, plus a complete mini board, spare wheels and a tool. 14×14×7 cm — a desk-sized park that lives on a shelf.</p><ul><li>Alloy park pieces — bank, stair run and two rail lines that hold up to daily sessions</li><li>Complete mini board included (deck, trucks, wheels) plus spare wheels and a tool</li><li>12 park styles, 14×14×7 cm each — desk-sized, shelf-friendly</li></ul><p><strong>Specifications</strong></p><table><tbody><tr><td><strong>Material</strong></td><td>Alloy</td></tr><tr><td><strong>Size</strong></td><td>14×14×7 cm</td></tr><tr><td><strong>Board included</strong></td><td>Yes, complete setup</td></tr><tr><td><strong>Styles</strong></td><td>12</td></tr></tbody></table><p><em>Ships directly from our supplier workshop with tracking, arriving in 7–14 business days. Prices in USD; shipping is free on orders over $50. 30-day returns if it is not right for you.</em></p>",
+      "title": "Fingerboard Park Set with Stairs and Rail (Board Included)",
+      "body_html": "<p>A compact alloy fingerboard park: bank, stair run with two rail options, plus a complete mini board, spare wheels and a tool. 14 by 14 by 7 cm per piece, a desk-sized park that lives on a shelf.</p><ul><li><strong>Alloy park pieces</strong>: bank, stair run and two rail lines that hold up to daily sessions</li><li><strong>Complete mini board included</strong>: deck, trucks, wheels, plus spare wheels and a tool</li><li><strong>12 park styles</strong>: each piece 14x14x7 cm</li></ul><p><strong>Specifications</strong></p><table><tbody><tr><td><strong>Alloy park pieces</strong></td><td>bank, stair run and two rail lines that hold up to daily sessions</td></tr><tr><td><strong>Complete mini board included</strong></td><td>deck, trucks, wheels, plus spare wheels and a tool</td></tr><tr><td><strong>12 park styles</strong></td><td>each piece 14x14x7 cm</td></tr></tbody></table><p><em>Ships directly from our supplier workshop with tracking, arriving in 7-14 business days. Prices in USD; shipping is free on orders over $50. 30-day returns if it is not right for you.</em></p>",
       "vendor": "Fingerboard Lab",
       "product_type": "Ramps & Obstacles",
       "handle": "alloy-fingerboard-park-set-kicker-stairs-rail",
       "created_at": "2026-10-11T18:20:00+02:00",
-      "updated_at": "2026-10-11T18:20:00+02:00",
+      "updated_at": "2026-10-11T19:15:00+02:00",
       "published_at": "2026-10-11T18:20:00+02:00",
       "template_suffix": null,
       "published_scope": "web",
       "tags": "fingerboard park set, ramps, obstacles, alloy, finger skate, desktop park, scene props",
       "status": "active",
-      "seo_title": "Alloy Fingerboard Park Set — Kicker, Stairs & Rail",
-      "seo_description": "Board included, 12 park styles. mpact alloy fingerboard park: bank, stair run with two rail options, plus a complete mini board, spare wheels and a tool. 1",
+      "seo_title": "Fingerboard Park Set with Stairs and Rail (Board Included)",
+      "seo_description": "Alloy park pieces: A compact alloy fingerboard park: bank, stair run with two rail options, plus a complete mini board, spare wheels and a ",
       "variants": [
         {
           "id": 1013000000010,
           "product_id": 92000000001,
           "title": "Style A",
-          "price": "9.90",
+          "price": "49.90",
           "compare_at_price": null,
           "position": 1,
           "option1": "Style A",
@@ -35981,7 +35981,7 @@
           "requires_shipping": true,
           "available": true,
           "inventory_quantity": 50,
-          "weight": 0.35,
+          "weight": 0.4,
           "weight_unit": "kg",
           "image_id": 92000300001
         },
@@ -35989,7 +35989,7 @@
           "id": 1013000000011,
           "product_id": 92000000001,
           "title": "Style B",
-          "price": "9.90",
+          "price": "49.90",
           "compare_at_price": null,
           "position": 2,
           "option1": "Style B",
@@ -35999,7 +35999,7 @@
           "requires_shipping": true,
           "available": true,
           "inventory_quantity": 50,
-          "weight": 0.35,
+          "weight": 0.4,
           "weight_unit": "kg",
           "image_id": 92000300002
         },
@@ -36007,7 +36007,7 @@
           "id": 1013000000012,
           "product_id": 92000000001,
           "title": "Style C",
-          "price": "9.90",
+          "price": "49.90",
           "compare_at_price": null,
           "position": 3,
           "option1": "Style C",
@@ -36017,7 +36017,7 @@
           "requires_shipping": true,
           "available": true,
           "inventory_quantity": 50,
-          "weight": 0.35,
+          "weight": 0.4,
           "weight_unit": "kg",
           "image_id": 92000300003
         },
@@ -36025,7 +36025,7 @@
           "id": 1013000000013,
           "product_id": 92000000001,
           "title": "Style D",
-          "price": "9.90",
+          "price": "49.90",
           "compare_at_price": null,
           "position": 4,
           "option1": "Style D",
@@ -36035,7 +36035,7 @@
           "requires_shipping": true,
           "available": true,
           "inventory_quantity": 50,
-          "weight": 0.35,
+          "weight": 0.4,
           "weight_unit": "kg",
           "image_id": 92000300004
         },
@@ -36043,7 +36043,7 @@
           "id": 1013000000014,
           "product_id": 92000000001,
           "title": "Style E",
-          "price": "9.90",
+          "price": "49.90",
           "compare_at_price": null,
           "position": 5,
           "option1": "Style E",
@@ -36053,7 +36053,7 @@
           "requires_shipping": true,
           "available": true,
           "inventory_quantity": 50,
-          "weight": 0.35,
+          "weight": 0.4,
           "weight_unit": "kg",
           "image_id": 92000300005
         },
@@ -36061,7 +36061,7 @@
           "id": 1013000000015,
           "product_id": 92000000001,
           "title": "Style F",
-          "price": "9.90",
+          "price": "49.90",
           "compare_at_price": null,
           "position": 6,
           "option1": "Style F",
@@ -36071,45 +36071,45 @@
           "requires_shipping": true,
           "available": true,
           "inventory_quantity": 50,
-          "weight": 0.35,
+          "weight": 0.4,
           "weight_unit": "kg",
-          "image_id": 92000300001
+          "image_id": 92000300006
         },
         {
           "id": 1013000000016,
           "product_id": 92000000001,
-          "title": "Style A (不含board配件)",
-          "price": "9.90",
+          "title": "Style A full kit",
+          "price": "49.90",
           "compare_at_price": null,
           "position": 7,
-          "option1": "Style A (不含board配件)",
+          "option1": "Style A full kit",
           "inventory_policy": "continue",
           "taxable": false,
           "sku": "FL-1013000000016",
           "requires_shipping": true,
           "available": true,
           "inventory_quantity": 50,
-          "weight": 0.35,
+          "weight": 0.4,
           "weight_unit": "kg",
-          "image_id": 92000300002
+          "image_id": 92000300006
         },
         {
           "id": 1013000000017,
           "product_id": 92000000001,
-          "title": "Style B (不含board配件)",
-          "price": "9.90",
+          "title": "Style B full kit",
+          "price": "49.90",
           "compare_at_price": null,
           "position": 8,
-          "option1": "Style B (不含board配件)",
+          "option1": "Style B full kit",
           "inventory_policy": "continue",
           "taxable": false,
           "sku": "FL-1013000000017",
           "requires_shipping": true,
           "available": true,
           "inventory_quantity": 50,
-          "weight": 0.35,
+          "weight": 0.4,
           "weight_unit": "kg",
-          "image_id": 92000300003
+          "image_id": 92000300006
         }
       ],
       "options": [
@@ -36124,8 +36124,8 @@
             "Style D",
             "Style E",
             "Style F",
-            "Style A (不含board配件)",
-            "Style B (不含board配件)"
+            "Style A full kit",
+            "Style B full kit"
           ]
         }
       ],
@@ -36137,13 +36137,12 @@
           "src": "/products/92000000001-0.png",
           "width": 800,
           "height": 800,
-          "alt": "Alloy Fingerboard Park Set — Kicker, Stairs & Rail — Fingerboard Lab",
+          "alt": "Fingerboard Park Set with Stairs and Rail (Board Included) - Fingerboard Lab",
           "variant_ids": [
-            1013000000010,
-            1013000000015
+            1013000000010
           ],
-          "created_at": "2026-10-11T18:20:00+02:00",
-          "updated_at": "2026-10-11T18:20:00+02:00"
+          "created_at": "2026-10-11T19:15:00+02:00",
+          "updated_at": "2026-10-11T19:15:00+02:00"
         },
         {
           "id": 92000300002,
@@ -36152,13 +36151,12 @@
           "src": "/products/92000000001-1.png",
           "width": 800,
           "height": 800,
-          "alt": "Alloy Fingerboard Park Set — Kicker, Stairs & Rail — Fingerboard Lab",
+          "alt": "Fingerboard Park Set with Stairs and Rail (Board Included) - Fingerboard Lab",
           "variant_ids": [
-            1013000000011,
-            1013000000016
+            1013000000011
           ],
-          "created_at": "2026-10-11T18:20:00+02:00",
-          "updated_at": "2026-10-11T18:20:00+02:00"
+          "created_at": "2026-10-11T19:15:00+02:00",
+          "updated_at": "2026-10-11T19:15:00+02:00"
         },
         {
           "id": 92000300003,
@@ -36167,13 +36165,12 @@
           "src": "/products/92000000001-2.png",
           "width": 800,
           "height": 800,
-          "alt": "Alloy Fingerboard Park Set — Kicker, Stairs & Rail — Fingerboard Lab",
+          "alt": "Fingerboard Park Set with Stairs and Rail (Board Included) - Fingerboard Lab",
           "variant_ids": [
-            1013000000012,
-            1013000000017
+            1013000000012
           ],
-          "created_at": "2026-10-11T18:20:00+02:00",
-          "updated_at": "2026-10-11T18:20:00+02:00"
+          "created_at": "2026-10-11T19:15:00+02:00",
+          "updated_at": "2026-10-11T19:15:00+02:00"
         },
         {
           "id": 92000300004,
@@ -36182,12 +36179,12 @@
           "src": "/products/92000000001-3.png",
           "width": 800,
           "height": 800,
-          "alt": "Alloy Fingerboard Park Set — Kicker, Stairs & Rail — Fingerboard Lab",
+          "alt": "Fingerboard Park Set with Stairs and Rail (Board Included) - Fingerboard Lab",
           "variant_ids": [
             1013000000013
           ],
-          "created_at": "2026-10-11T18:20:00+02:00",
-          "updated_at": "2026-10-11T18:20:00+02:00"
+          "created_at": "2026-10-11T19:15:00+02:00",
+          "updated_at": "2026-10-11T19:15:00+02:00"
         },
         {
           "id": 92000300005,
@@ -36196,12 +36193,28 @@
           "src": "/products/92000000001-4.png",
           "width": 800,
           "height": 800,
-          "alt": "Alloy Fingerboard Park Set — Kicker, Stairs & Rail — Fingerboard Lab",
+          "alt": "Fingerboard Park Set with Stairs and Rail (Board Included) - Fingerboard Lab",
           "variant_ids": [
             1013000000014
           ],
-          "created_at": "2026-10-11T18:20:00+02:00",
-          "updated_at": "2026-10-11T18:20:00+02:00"
+          "created_at": "2026-10-11T19:15:00+02:00",
+          "updated_at": "2026-10-11T19:15:00+02:00"
+        },
+        {
+          "id": 92000300006,
+          "product_id": 92000000001,
+          "position": 6,
+          "src": "/products/92000000001-5.png",
+          "width": 800,
+          "height": 800,
+          "alt": "Fingerboard Park Set with Stairs and Rail (Board Included) - Fingerboard Lab",
+          "variant_ids": [
+            1013000000015,
+            1013000000016,
+            1013000000017
+          ],
+          "created_at": "2026-10-11T19:15:00+02:00",
+          "updated_at": "2026-10-11T19:15:00+02:00"
         }
       ],
       "image": {
@@ -36211,47 +36224,46 @@
         "src": "/products/92000000001-0.png",
         "width": 800,
         "height": 800,
-        "alt": "Alloy Fingerboard Park Set — Kicker, Stairs & Rail — Fingerboard Lab",
+        "alt": "Fingerboard Park Set with Stairs and Rail (Board Included) - Fingerboard Lab",
         "variant_ids": [
-          1013000000010,
-          1013000000015
+          1013000000010
         ],
-        "created_at": "2026-10-11T18:20:00+02:00",
-        "updated_at": "2026-10-11T18:20:00+02:00"
+        "created_at": "2026-10-11T19:15:00+02:00",
+        "updated_at": "2026-10-11T19:15:00+02:00"
       }
     },
     {
       "id": 92000000002,
-      "title": "Fingerboard Practice Set — Slope, Curved Ramp & Alloy Jump Bar",
-      "body_html": "<p>actice-focused scene set: gentle slope, curved ramp and a metal jump bar for ollies and transfers. Built for daily trick reps rather than display.</p><ul><li>Gentle slope, curved ramp and metal jump bar — built for ollie and transfer reps</li><li>Three layouts: Plaza Stairs, Mini Bowl or Big Bowl</li><li>Stable platform height suited to daily practice</li></ul><p><strong>Specifications</strong></p><table><tbody><tr><td><strong>Material</strong></td><td>Alloy with metal jump bar</td></tr><tr><td><strong>Layouts</strong></td><td>3 (Plaza Stairs, Mini Bowl, Big Bowl)</td></tr><tr><td><strong>Use</strong></td><td>Daily practice</td></tr></tbody></table><p><em>Ships directly from our supplier workshop with tracking, arriving in 7–14 business days. Prices in USD; shipping is free on orders over $50. 30-day returns if it is not right for you.</em></p>",
+      "title": "Fingerboard Practice Ramp Set with Alloy Jump Bar",
+      "body_html": "<p>A practice-focused set sold in three layouts: Stair Platform, Mini Bowl or Big Bowl, each with a metal jump bar for ollies and transfers. Built for daily trick reps rather than display.</p><ul><li><strong>Three layouts</strong>: Stair Platform, Mini Bowl or Big Bowl</li><li><strong>Metal jump bar</strong>: for ollies and transfers</li><li><strong>Stable platform height</strong>: suited to daily practice</li></ul><p><strong>Specifications</strong></p><table><tbody><tr><td><strong>Three layouts</strong></td><td>Stair Platform, Mini Bowl or Big Bowl</td></tr><tr><td><strong>Metal jump bar</strong></td><td>for ollies and transfers</td></tr><tr><td><strong>Stable platform height</strong></td><td>suited to daily practice</td></tr></tbody></table><p><em>Ships directly from our supplier workshop with tracking, arriving in 7-14 business days. Prices in USD; shipping is free on orders over $50. 30-day returns if it is not right for you.</em></p>",
       "vendor": "Fingerboard Lab",
       "product_type": "Park Kits & Sets",
       "handle": "fingerboard-practice-set-slope-curve-jump-bar",
       "created_at": "2026-10-11T18:20:00+02:00",
-      "updated_at": "2026-10-11T18:20:00+02:00",
+      "updated_at": "2026-10-11T19:15:00+02:00",
       "published_at": "2026-10-11T18:20:00+02:00",
       "template_suffix": null,
       "published_scope": "web",
       "tags": "fingerboard park set, ramps, obstacles, alloy, finger skate, desktop park, scene props",
       "status": "active",
-      "seo_title": "Fingerboard Practice Set — Slope, Curved Ramp & Alloy Jump Bar",
-      "seo_description": "Three park layouts with an alloy jump bar. actice-focused scene set: gentle slope, curved ramp and a metal jump bar for ollies and transfers. Built for dai",
+      "seo_title": "Fingerboard Practice Ramp Set with Alloy Jump Bar",
+      "seo_description": "Three layouts: A practice-focused set sold in three layouts: Stair Platform, Mini Bowl or Big Bowl, each with a metal jump bar for olli",
       "variants": [
         {
           "id": 1013000000020,
           "product_id": 92000000002,
-          "title": "Plaza Stairs",
-          "price": "34.90",
+          "title": "Stair Platform",
+          "price": "65.90",
           "compare_at_price": null,
           "position": 1,
-          "option1": "Plaza Stairs",
+          "option1": "Stair Platform",
           "inventory_policy": "continue",
           "taxable": false,
           "sku": "FL-1013000000020",
           "requires_shipping": true,
           "available": true,
           "inventory_quantity": 11,
-          "weight": 0.35,
+          "weight": 0.4,
           "weight_unit": "kg",
           "image_id": 92000300002
         },
@@ -36259,7 +36271,7 @@
           "id": 1013000000021,
           "product_id": 92000000002,
           "title": "Mini Bowl",
-          "price": "34.90",
+          "price": "65.90",
           "compare_at_price": null,
           "position": 2,
           "option1": "Mini Bowl",
@@ -36269,7 +36281,7 @@
           "requires_shipping": true,
           "available": true,
           "inventory_quantity": 50,
-          "weight": 0.35,
+          "weight": 0.4,
           "weight_unit": "kg",
           "image_id": 92000300003
         },
@@ -36277,7 +36289,7 @@
           "id": 1013000000022,
           "product_id": 92000000002,
           "title": "Big Bowl",
-          "price": "34.90",
+          "price": "65.90",
           "compare_at_price": null,
           "position": 3,
           "option1": "Big Bowl",
@@ -36287,7 +36299,7 @@
           "requires_shipping": true,
           "available": true,
           "inventory_quantity": 47,
-          "weight": 0.35,
+          "weight": 0.4,
           "weight_unit": "kg",
           "image_id": 92000300004
         }
@@ -36298,7 +36310,7 @@
           "name": "Style",
           "position": 1,
           "values": [
-            "Plaza Stairs",
+            "Stair Platform",
             "Mini Bowl",
             "Big Bowl"
           ]
@@ -36312,12 +36324,12 @@
           "src": "/products/92000000002-0.png",
           "width": 800,
           "height": 800,
-          "alt": "Fingerboard Practice Set — Slope, Curved Ramp & Alloy Jump Bar — Fingerboard Lab",
+          "alt": "Fingerboard Practice Ramp Set with Alloy Jump Bar - Fingerboard Lab",
           "variant_ids": [
             1013000000020
           ],
-          "created_at": "2026-10-11T18:20:00+02:00",
-          "updated_at": "2026-10-11T18:20:00+02:00"
+          "created_at": "2026-10-11T19:15:00+02:00",
+          "updated_at": "2026-10-11T19:15:00+02:00"
         },
         {
           "id": 92000300003,
@@ -36326,12 +36338,12 @@
           "src": "/products/92000000002-1.png",
           "width": 800,
           "height": 800,
-          "alt": "Fingerboard Practice Set — Slope, Curved Ramp & Alloy Jump Bar — Fingerboard Lab",
+          "alt": "Fingerboard Practice Ramp Set with Alloy Jump Bar - Fingerboard Lab",
           "variant_ids": [
             1013000000021
           ],
-          "created_at": "2026-10-11T18:20:00+02:00",
-          "updated_at": "2026-10-11T18:20:00+02:00"
+          "created_at": "2026-10-11T19:15:00+02:00",
+          "updated_at": "2026-10-11T19:15:00+02:00"
         },
         {
           "id": 92000300004,
@@ -36340,24 +36352,12 @@
           "src": "/products/92000000002-2.png",
           "width": 800,
           "height": 800,
-          "alt": "Fingerboard Practice Set — Slope, Curved Ramp & Alloy Jump Bar — Fingerboard Lab",
+          "alt": "Fingerboard Practice Ramp Set with Alloy Jump Bar - Fingerboard Lab",
           "variant_ids": [
             1013000000022
           ],
-          "created_at": "2026-10-11T18:20:00+02:00",
-          "updated_at": "2026-10-11T18:20:00+02:00"
-        },
-        {
-          "id": 92000300005,
-          "product_id": 92000000002,
-          "position": 4,
-          "src": "/products/92000000002-3.png",
-          "width": 800,
-          "height": 800,
-          "alt": "Fingerboard Practice Set — Slope, Curved Ramp & Alloy Jump Bar — Fingerboard Lab",
-          "variant_ids": [],
-          "created_at": "2026-10-11T18:20:00+02:00",
-          "updated_at": "2026-10-11T18:20:00+02:00"
+          "created_at": "2026-10-11T19:15:00+02:00",
+          "updated_at": "2026-10-11T19:15:00+02:00"
         }
       ],
       "image": {
@@ -36367,36 +36367,36 @@
         "src": "/products/92000000002-0.png",
         "width": 800,
         "height": 800,
-        "alt": "Fingerboard Practice Set — Slope, Curved Ramp & Alloy Jump Bar — Fingerboard Lab",
+        "alt": "Fingerboard Practice Ramp Set with Alloy Jump Bar - Fingerboard Lab",
         "variant_ids": [
           1013000000020
         ],
-        "created_at": "2026-10-11T18:20:00+02:00",
-        "updated_at": "2026-10-11T18:20:00+02:00"
+        "created_at": "2026-10-11T19:15:00+02:00",
+        "updated_at": "2026-10-11T19:15:00+02:00"
       }
     },
     {
       "id": 92000000003,
-      "title": "Alloy Fingerboard Venue Set — Modular Park Build",
-      "body_html": "<p>lar alloy venue pieces you can re-arrange into a new park every session. Choose board-count bundles (2 to 4 boards) or single-board grey variants.</p><ul><li>Modular alloy pieces — re-arrange into a new park every session</li><li>Board-count bundles: 2 or 3 boards, or single-board grey variants</li><li>Full kit option adds boards, screwdriver and extra wheels</li></ul><p><strong>Specifications</strong></p><table><tbody><tr><td><strong>Material</strong></td><td>Alloy</td></tr><tr><td><strong>Bundles</strong></td><td>2-4 boards or single-board grey</td></tr></tbody></table><p><em>Ships directly from our supplier workshop with tracking, arriving in 7–14 business days. Prices in USD; shipping is free on orders over $50. 30-day returns if it is not right for you.</em></p>",
+      "title": "Modular Fingerboard Park Set, Alloy Ramps (2 to 4 Boards)",
+      "body_html": "<p>Modular alloy venue pieces you can re-arrange into a new park every session. Choose board-count bundles (2 to 4 boards) or single-board grey variants.</p><ul><li><strong>Modular alloy pieces</strong>: re-arrange into a new park every session</li><li><strong>Board-count bundles</strong>: 2 or 3 boards, or single-board grey variants</li><li><strong>Full kit option</strong>: adds boards, screwdriver and extra wheels</li></ul><p><strong>Specifications</strong></p><table><tbody><tr><td><strong>Modular alloy pieces</strong></td><td>re-arrange into a new park every session</td></tr><tr><td><strong>Board-count bundles</strong></td><td>2 or 3 boards, or single-board grey variants</td></tr><tr><td><strong>Full kit option</strong></td><td>adds boards, screwdriver and extra wheels</td></tr></tbody></table><p><em>Ships directly from our supplier workshop with tracking, arriving in 7-14 business days. Prices in USD; shipping is free on orders over $50. 30-day returns if it is not right for you.</em></p>",
       "vendor": "Fingerboard Lab",
       "product_type": "Park Kits & Sets",
       "handle": "alloy-fingerboard-venue-set-modular",
       "created_at": "2026-10-11T18:20:00+02:00",
-      "updated_at": "2026-10-11T18:20:00+02:00",
+      "updated_at": "2026-10-11T19:15:00+02:00",
       "published_at": "2026-10-11T18:20:00+02:00",
       "template_suffix": null,
       "published_scope": "web",
       "tags": "fingerboard park set, ramps, obstacles, alloy, finger skate, desktop park, scene props",
       "status": "active",
-      "seo_title": "Alloy Fingerboard Venue Set — Modular Park Build",
-      "seo_description": "Modular alloy park, 2-4 board bundles. lar alloy venue pieces you can re-arrange into a new park every session. Choose board-count bundles (2 to 4 boards) ",
+      "seo_title": "Modular Fingerboard Park Set, Alloy Ramps (2 to 4 Boards)",
+      "seo_description": "Modular alloy pieces: Modular alloy venue pieces you can re-arrange into a new park every session. Choose board-count bundles (2 to 4 boards) ",
       "variants": [
         {
           "id": 1013000000030,
           "product_id": 92000000003,
           "title": "Style C (2 board)",
-          "price": "29.90",
+          "price": "63.90",
           "compare_at_price": null,
           "position": 1,
           "option1": "Style C (2 board)",
@@ -36406,7 +36406,7 @@
           "requires_shipping": true,
           "available": true,
           "inventory_quantity": 10,
-          "weight": 0.35,
+          "weight": 0.4,
           "weight_unit": "kg",
           "image_id": 92000300003
         },
@@ -36414,7 +36414,7 @@
           "id": 1013000000031,
           "product_id": 92000000003,
           "title": "Style A (3 board)",
-          "price": "29.90",
+          "price": "63.90",
           "compare_at_price": null,
           "position": 2,
           "option1": "Style A (3 board)",
@@ -36424,7 +36424,7 @@
           "requires_shipping": true,
           "available": true,
           "inventory_quantity": 10,
-          "weight": 0.35,
+          "weight": 0.4,
           "weight_unit": "kg",
           "image_id": 92000300004
         },
@@ -36432,7 +36432,7 @@
           "id": 1013000000032,
           "product_id": 92000000003,
           "title": "Style B (3 board)",
-          "price": "29.90",
+          "price": "63.90",
           "compare_at_price": null,
           "position": 3,
           "option1": "Style B (3 board)",
@@ -36442,7 +36442,7 @@
           "requires_shipping": true,
           "available": true,
           "inventory_quantity": 10,
-          "weight": 0.35,
+          "weight": 0.4,
           "weight_unit": "kg",
           "image_id": 92000300005
         },
@@ -36450,7 +36450,7 @@
           "id": 1013000000033,
           "product_id": 92000000003,
           "title": "Grey Style A (1 board)",
-          "price": "29.90",
+          "price": "63.90",
           "compare_at_price": null,
           "position": 4,
           "option1": "Grey Style A (1 board)",
@@ -36460,7 +36460,7 @@
           "requires_shipping": true,
           "available": true,
           "inventory_quantity": 10,
-          "weight": 0.35,
+          "weight": 0.4,
           "weight_unit": "kg",
           "image_id": 92000300006
         },
@@ -36468,7 +36468,7 @@
           "id": 1013000000034,
           "product_id": 92000000003,
           "title": "Grey Style B (1 board)",
-          "price": "29.90",
+          "price": "63.90",
           "compare_at_price": null,
           "position": 5,
           "option1": "Grey Style B (1 board)",
@@ -36478,7 +36478,7 @@
           "requires_shipping": true,
           "available": true,
           "inventory_quantity": 10,
-          "weight": 0.35,
+          "weight": 0.4,
           "weight_unit": "kg",
           "image_id": 92000300007
         },
@@ -36486,7 +36486,7 @@
           "id": 1013000000035,
           "product_id": 92000000003,
           "title": "Grey Style C (1 board)",
-          "price": "29.90",
+          "price": "63.90",
           "compare_at_price": null,
           "position": 6,
           "option1": "Grey Style C (1 board)",
@@ -36496,45 +36496,45 @@
           "requires_shipping": true,
           "available": true,
           "inventory_quantity": 10,
-          "weight": 0.35,
+          "weight": 0.4,
           "weight_unit": "kg",
           "image_id": 92000300008
         },
         {
           "id": 1013000000036,
           "product_id": 92000000003,
-          "title": "Style A (3 board, 两轮board, screwdriver, 轮滑鞋)",
-          "price": "29.90",
+          "title": "Style A full kit",
+          "price": "63.90",
           "compare_at_price": null,
           "position": 7,
-          "option1": "Style A (3 board, 两轮board, screwdriver, 轮滑鞋)",
+          "option1": "Style A full kit",
           "inventory_policy": "continue",
           "taxable": false,
           "sku": "FL-1013000000036",
           "requires_shipping": true,
           "available": true,
           "inventory_quantity": 10,
-          "weight": 0.35,
+          "weight": 0.4,
           "weight_unit": "kg",
-          "image_id": 92000300003
+          "image_id": 92000300009
         },
         {
           "id": 1013000000037,
           "product_id": 92000000003,
-          "title": "运动台 (3 board, 轮滑鞋2, 轮滑鞋2, 自行车, 冲浪板, screwdr)",
-          "price": "29.90",
+          "title": "Full kit",
+          "price": "63.90",
           "compare_at_price": null,
           "position": 8,
-          "option1": "运动台 (3 board, 轮滑鞋2, 轮滑鞋2, 自行车, 冲浪板, screwdr)",
+          "option1": "Full kit",
           "inventory_policy": "continue",
           "taxable": false,
           "sku": "FL-1013000000037",
           "requires_shipping": true,
           "available": true,
           "inventory_quantity": 10,
-          "weight": 0.35,
+          "weight": 0.4,
           "weight_unit": "kg",
-          "image_id": 92000300004
+          "image_id": 92000300009
         }
       ],
       "options": [
@@ -36549,8 +36549,8 @@
             "Grey Style A (1 board)",
             "Grey Style B (1 board)",
             "Grey Style C (1 board)",
-            "Style A (3 board, 两轮board, screwdriver, 轮滑鞋)",
-            "运动台 (3 board, 轮滑鞋2, 轮滑鞋2, 自行车, 冲浪板, screwdr)"
+            "Style A full kit",
+            "Full kit"
           ]
         }
       ],
@@ -36562,13 +36562,12 @@
           "src": "/products/92000000003-0.png",
           "width": 800,
           "height": 800,
-          "alt": "Alloy Fingerboard Venue Set — Modular Park Build — Fingerboard Lab",
+          "alt": "Modular Fingerboard Park Set, Alloy Ramps (2 to 4 Boards) - Fingerboard Lab",
           "variant_ids": [
-            1013000000030,
-            1013000000036
+            1013000000030
           ],
-          "created_at": "2026-10-11T18:20:00+02:00",
-          "updated_at": "2026-10-11T18:20:00+02:00"
+          "created_at": "2026-10-11T19:15:00+02:00",
+          "updated_at": "2026-10-11T19:15:00+02:00"
         },
         {
           "id": 92000300004,
@@ -36577,13 +36576,12 @@
           "src": "/products/92000000003-1.png",
           "width": 800,
           "height": 800,
-          "alt": "Alloy Fingerboard Venue Set — Modular Park Build — Fingerboard Lab",
+          "alt": "Modular Fingerboard Park Set, Alloy Ramps (2 to 4 Boards) - Fingerboard Lab",
           "variant_ids": [
-            1013000000031,
-            1013000000037
+            1013000000031
           ],
-          "created_at": "2026-10-11T18:20:00+02:00",
-          "updated_at": "2026-10-11T18:20:00+02:00"
+          "created_at": "2026-10-11T19:15:00+02:00",
+          "updated_at": "2026-10-11T19:15:00+02:00"
         },
         {
           "id": 92000300005,
@@ -36592,12 +36590,12 @@
           "src": "/products/92000000003-2.png",
           "width": 800,
           "height": 800,
-          "alt": "Alloy Fingerboard Venue Set — Modular Park Build — Fingerboard Lab",
+          "alt": "Modular Fingerboard Park Set, Alloy Ramps (2 to 4 Boards) - Fingerboard Lab",
           "variant_ids": [
             1013000000032
           ],
-          "created_at": "2026-10-11T18:20:00+02:00",
-          "updated_at": "2026-10-11T18:20:00+02:00"
+          "created_at": "2026-10-11T19:15:00+02:00",
+          "updated_at": "2026-10-11T19:15:00+02:00"
         },
         {
           "id": 92000300006,
@@ -36606,12 +36604,12 @@
           "src": "/products/92000000003-3.png",
           "width": 800,
           "height": 800,
-          "alt": "Alloy Fingerboard Venue Set — Modular Park Build — Fingerboard Lab",
+          "alt": "Modular Fingerboard Park Set, Alloy Ramps (2 to 4 Boards) - Fingerboard Lab",
           "variant_ids": [
             1013000000033
           ],
-          "created_at": "2026-10-11T18:20:00+02:00",
-          "updated_at": "2026-10-11T18:20:00+02:00"
+          "created_at": "2026-10-11T19:15:00+02:00",
+          "updated_at": "2026-10-11T19:15:00+02:00"
         },
         {
           "id": 92000300007,
@@ -36620,12 +36618,12 @@
           "src": "/products/92000000003-4.png",
           "width": 800,
           "height": 800,
-          "alt": "Alloy Fingerboard Venue Set — Modular Park Build — Fingerboard Lab",
+          "alt": "Modular Fingerboard Park Set, Alloy Ramps (2 to 4 Boards) - Fingerboard Lab",
           "variant_ids": [
             1013000000034
           ],
-          "created_at": "2026-10-11T18:20:00+02:00",
-          "updated_at": "2026-10-11T18:20:00+02:00"
+          "created_at": "2026-10-11T19:15:00+02:00",
+          "updated_at": "2026-10-11T19:15:00+02:00"
         },
         {
           "id": 92000300008,
@@ -36634,12 +36632,27 @@
           "src": "/products/92000000003-5.png",
           "width": 800,
           "height": 800,
-          "alt": "Alloy Fingerboard Venue Set — Modular Park Build — Fingerboard Lab",
+          "alt": "Modular Fingerboard Park Set, Alloy Ramps (2 to 4 Boards) - Fingerboard Lab",
           "variant_ids": [
             1013000000035
           ],
-          "created_at": "2026-10-11T18:20:00+02:00",
-          "updated_at": "2026-10-11T18:20:00+02:00"
+          "created_at": "2026-10-11T19:15:00+02:00",
+          "updated_at": "2026-10-11T19:15:00+02:00"
+        },
+        {
+          "id": 92000300009,
+          "product_id": 92000000003,
+          "position": 7,
+          "src": "/products/92000000003-6.png",
+          "width": 800,
+          "height": 800,
+          "alt": "Modular Fingerboard Park Set, Alloy Ramps (2 to 4 Boards) - Fingerboard Lab",
+          "variant_ids": [
+            1013000000036,
+            1013000000037
+          ],
+          "created_at": "2026-10-11T19:15:00+02:00",
+          "updated_at": "2026-10-11T19:15:00+02:00"
         }
       ],
       "image": {
@@ -36649,37 +36662,36 @@
         "src": "/products/92000000003-0.png",
         "width": 800,
         "height": 800,
-        "alt": "Alloy Fingerboard Venue Set — Modular Park Build — Fingerboard Lab",
+        "alt": "Modular Fingerboard Park Set, Alloy Ramps (2 to 4 Boards) - Fingerboard Lab",
         "variant_ids": [
-          1013000000030,
-          1013000000036
+          1013000000030
         ],
-        "created_at": "2026-10-11T18:20:00+02:00",
-        "updated_at": "2026-10-11T18:20:00+02:00"
+        "created_at": "2026-10-11T19:15:00+02:00",
+        "updated_at": "2026-10-11T19:15:00+02:00"
       }
     },
     {
       "id": 92000000004,
-      "title": "Fingerboard Brick & Ladder Obstacle Set — Rails Included",
-      "body_html": "<p>en brick, pole and stair props that stack into custom plazas, with metal rails for grinds. The largest set in the park collection — build a full street line.</p><ul><li>Wooden bricks, poles and stair props that stack into custom plazas</li><li>Metal rails included for grinds and slide tricks</li><li>The largest set in the park collection — a full street line on a desk</li></ul><p><strong>Specifications</strong></p><table><tbody><tr><td><strong>Material</strong></td><td>Wood props, metal rails</td></tr><tr><td><strong>Pieces</strong></td><td>Bricks, poles, stairs, rails</td></tr></tbody></table><p><em>Ships directly from our supplier workshop with tracking, arriving in 7–14 business days. Prices in USD; shipping is free on orders over $50. 30-day returns if it is not right for you.</em></p>",
+      "title": "Fingerboard Brick and Ladder Obstacle Set with Metal Rails",
+      "body_html": "<p>Wooden brick, pole and stair props that stack into custom plazas, with metal rails for grinds. The largest set in the park collection: build a full street line on a desk.</p><ul><li><strong>Wooden props</strong>: bricks, poles and stairs that stack into custom plazas</li><li><strong>Metal rails included</strong>: for grinds and slide tricks</li><li><strong>Largest set in the collection</strong>: a full street line on a desk</li></ul><p><strong>Specifications</strong></p><table><tbody><tr><td><strong>Wooden props</strong></td><td>bricks, poles and stairs that stack into custom plazas</td></tr><tr><td><strong>Metal rails included</strong></td><td>for grinds and slide tricks</td></tr><tr><td><strong>Largest set in the collection</strong></td><td>a full street line on a desk</td></tr></tbody></table><p><em>Ships directly from our supplier workshop with tracking, arriving in 7-14 business days. Prices in USD; shipping is free on orders over $50. 30-day returns if it is not right for you.</em></p>",
       "vendor": "Fingerboard Lab",
       "product_type": "Ramps & Obstacles",
       "handle": "fingerboard-brick-ladder-obstacle-set",
       "created_at": "2026-10-11T18:20:00+02:00",
-      "updated_at": "2026-10-11T18:20:00+02:00",
+      "updated_at": "2026-10-11T19:15:00+02:00",
       "published_at": "2026-10-11T18:20:00+02:00",
       "template_suffix": null,
       "published_scope": "web",
       "tags": "fingerboard park set, ramps, obstacles, alloy, finger skate, desktop park, scene props",
       "status": "active",
-      "seo_title": "Fingerboard Brick & Ladder Obstacle Set — Rails Included",
-      "seo_description": "Wooden bricks, poles, stairs and metal rails. en brick, pole and stair props that stack into custom plazas, with metal rails for grinds. The largest set in",
+      "seo_title": "Fingerboard Brick and Ladder Obstacle Set with Metal Rails",
+      "seo_description": "Wooden props: Wooden brick, pole and stair props that stack into custom plazas, with metal rails for grinds. The largest set in the pa",
       "variants": [
         {
           "id": 185000000004,
           "product_id": 92000000004,
           "title": "Default Title",
-          "price": "49.90",
+          "price": "86.90",
           "compare_at_price": null,
           "position": 1,
           "option1": "Default Title",
@@ -36689,7 +36701,7 @@
           "requires_shipping": true,
           "available": true,
           "inventory_quantity": 15,
-          "weight": 0.35,
+          "weight": 0.4,
           "weight_unit": "kg",
           "image_id": 92000300004
         }
@@ -36712,12 +36724,12 @@
           "src": "/products/92000000004-0.png",
           "width": 800,
           "height": 800,
-          "alt": "Fingerboard Brick & Ladder Obstacle Set — Rails Included — Fingerboard Lab",
+          "alt": "Fingerboard Brick and Ladder Obstacle Set with Metal Rails - Fingerboard Lab",
           "variant_ids": [
             185000000004
           ],
-          "created_at": "2026-10-11T18:20:00+02:00",
-          "updated_at": "2026-10-11T18:20:00+02:00"
+          "created_at": "2026-10-11T19:15:00+02:00",
+          "updated_at": "2026-10-11T19:15:00+02:00"
         },
         {
           "id": 92000300005,
@@ -36726,10 +36738,10 @@
           "src": "/products/92000000004-1.png",
           "width": 800,
           "height": 800,
-          "alt": "Fingerboard Brick & Ladder Obstacle Set — Rails Included — Fingerboard Lab",
+          "alt": "Fingerboard Brick and Ladder Obstacle Set with Metal Rails - Fingerboard Lab",
           "variant_ids": [],
-          "created_at": "2026-10-11T18:20:00+02:00",
-          "updated_at": "2026-10-11T18:20:00+02:00"
+          "created_at": "2026-10-11T19:15:00+02:00",
+          "updated_at": "2026-10-11T19:15:00+02:00"
         },
         {
           "id": 92000300006,
@@ -36738,10 +36750,10 @@
           "src": "/products/92000000004-2.png",
           "width": 800,
           "height": 800,
-          "alt": "Fingerboard Brick & Ladder Obstacle Set — Rails Included — Fingerboard Lab",
+          "alt": "Fingerboard Brick and Ladder Obstacle Set with Metal Rails - Fingerboard Lab",
           "variant_ids": [],
-          "created_at": "2026-10-11T18:20:00+02:00",
-          "updated_at": "2026-10-11T18:20:00+02:00"
+          "created_at": "2026-10-11T19:15:00+02:00",
+          "updated_at": "2026-10-11T19:15:00+02:00"
         },
         {
           "id": 92000300007,
@@ -36750,10 +36762,34 @@
           "src": "/products/92000000004-3.png",
           "width": 800,
           "height": 800,
-          "alt": "Fingerboard Brick & Ladder Obstacle Set — Rails Included — Fingerboard Lab",
+          "alt": "Fingerboard Brick and Ladder Obstacle Set with Metal Rails - Fingerboard Lab",
           "variant_ids": [],
-          "created_at": "2026-10-11T18:20:00+02:00",
-          "updated_at": "2026-10-11T18:20:00+02:00"
+          "created_at": "2026-10-11T19:15:00+02:00",
+          "updated_at": "2026-10-11T19:15:00+02:00"
+        },
+        {
+          "id": 92000300008,
+          "product_id": 92000000004,
+          "position": 5,
+          "src": "/products/92000000004-4.png",
+          "width": 800,
+          "height": 800,
+          "alt": "Fingerboard Brick and Ladder Obstacle Set with Metal Rails - Fingerboard Lab",
+          "variant_ids": [],
+          "created_at": "2026-10-11T19:15:00+02:00",
+          "updated_at": "2026-10-11T19:15:00+02:00"
+        },
+        {
+          "id": 92000300009,
+          "product_id": 92000000004,
+          "position": 6,
+          "src": "/products/92000000004-5.png",
+          "width": 800,
+          "height": 800,
+          "alt": "Fingerboard Brick and Ladder Obstacle Set with Metal Rails - Fingerboard Lab",
+          "variant_ids": [],
+          "created_at": "2026-10-11T19:15:00+02:00",
+          "updated_at": "2026-10-11T19:15:00+02:00"
         }
       ],
       "image": {
@@ -36763,281 +36799,36 @@
         "src": "/products/92000000004-0.png",
         "width": 800,
         "height": 800,
-        "alt": "Fingerboard Brick & Ladder Obstacle Set — Rails Included — Fingerboard Lab",
+        "alt": "Fingerboard Brick and Ladder Obstacle Set with Metal Rails - Fingerboard Lab",
         "variant_ids": [
           185000000004
         ],
-        "created_at": "2026-10-11T18:20:00+02:00",
-        "updated_at": "2026-10-11T18:20:00+02:00"
-      }
-    },
-    {
-      "id": 92000000005,
-      "title": "Fingerboard Scene Combo Set — Portable Alloy Park",
-      "body_html": "<p>rtable scene combo: alloy ramps and props that pack away into the box between sessions. Includes mini vehicles for scene display.</p><ul><li>Alloy ramps and props that pack into the box between sessions</li><li>Scene display pieces included — mini vehicles and signage</li><li>Several set variants to collect or combine</li></ul><p><strong>Specifications</strong></p><table><tbody><tr><td><strong>Material</strong></td><td>Alloy</td></tr><tr><td><strong>Storage</strong></td><td>Packs into original box</td></tr></tbody></table><p><em>Ships directly from our supplier workshop with tracking, arriving in 7–14 business days. Prices in USD; shipping is free on orders over $50. 30-day returns if it is not right for you.</em></p>",
-      "vendor": "Fingerboard Lab",
-      "product_type": "Park Kits & Sets",
-      "handle": "fingerboard-scene-combo-set-portable",
-      "created_at": "2026-10-11T18:20:00+02:00",
-      "updated_at": "2026-10-11T18:20:00+02:00",
-      "published_at": "2026-10-11T18:20:00+02:00",
-      "template_suffix": null,
-      "published_scope": "web",
-      "tags": "fingerboard park set, ramps, obstacles, alloy, finger skate, desktop park, scene props",
-      "status": "active",
-      "seo_title": "Fingerboard Scene Combo Set — Portable Alloy Park",
-      "seo_description": "Portable park, alloy props. rtable scene combo: alloy ramps and props that pack away into the box between sessions. Includes mini vehicles for scene displa",
-      "variants": [
-        {
-          "id": 1013000000050,
-          "product_id": 92000000005,
-          "title": "Set CDH-7",
-          "price": "19.90",
-          "compare_at_price": null,
-          "position": 1,
-          "option1": "Set CDH-7",
-          "inventory_policy": "continue",
-          "taxable": false,
-          "sku": "FL-1013000000050",
-          "requires_shipping": true,
-          "available": true,
-          "inventory_quantity": 50,
-          "weight": 0.35,
-          "weight_unit": "kg",
-          "image_id": 92000300005
-        },
-        {
-          "id": 1013000000051,
-          "product_id": 92000000005,
-          "title": "Set CDH-8",
-          "price": "19.90",
-          "compare_at_price": null,
-          "position": 2,
-          "option1": "Set CDH-8",
-          "inventory_policy": "continue",
-          "taxable": false,
-          "sku": "FL-1013000000051",
-          "requires_shipping": true,
-          "available": true,
-          "inventory_quantity": 50,
-          "weight": 0.35,
-          "weight_unit": "kg",
-          "image_id": 92000300006
-        },
-        {
-          "id": 1013000000052,
-          "product_id": 92000000005,
-          "title": "Set CDH-9",
-          "price": "19.90",
-          "compare_at_price": null,
-          "position": 3,
-          "option1": "Set CDH-9",
-          "inventory_policy": "continue",
-          "taxable": false,
-          "sku": "FL-1013000000052",
-          "requires_shipping": true,
-          "available": true,
-          "inventory_quantity": 50,
-          "weight": 0.35,
-          "weight_unit": "kg",
-          "image_id": 92000300007
-        },
-        {
-          "id": 1013000000053,
-          "product_id": 92000000005,
-          "title": "Set CDH-",
-          "price": "19.90",
-          "compare_at_price": null,
-          "position": 4,
-          "option1": "Set CDH-",
-          "inventory_policy": "continue",
-          "taxable": false,
-          "sku": "FL-1013000000053",
-          "requires_shipping": true,
-          "available": true,
-          "inventory_quantity": 47,
-          "weight": 0.35,
-          "weight_unit": "kg",
-          "image_id": 92000300005
-        },
-        {
-          "id": 1013000000054,
-          "product_id": 92000000005,
-          "title": "Set CDH-",
-          "price": "19.90",
-          "compare_at_price": null,
-          "position": 5,
-          "option1": "Set CDH-",
-          "inventory_policy": "continue",
-          "taxable": false,
-          "sku": "FL-1013000000054",
-          "requires_shipping": true,
-          "available": true,
-          "inventory_quantity": 47,
-          "weight": 0.35,
-          "weight_unit": "kg",
-          "image_id": 92000300006
-        },
-        {
-          "id": 1013000000055,
-          "product_id": 92000000005,
-          "title": "Set CDH-",
-          "price": "19.90",
-          "compare_at_price": null,
-          "position": 6,
-          "option1": "Set CDH-",
-          "inventory_policy": "continue",
-          "taxable": false,
-          "sku": "FL-1013000000055",
-          "requires_shipping": true,
-          "available": true,
-          "inventory_quantity": 50,
-          "weight": 0.35,
-          "weight_unit": "kg",
-          "image_id": 92000300007
-        },
-        {
-          "id": 1013000000056,
-          "product_id": 92000000005,
-          "title": "紫色CDH-S01A (紫)",
-          "price": "19.90",
-          "compare_at_price": null,
-          "position": 7,
-          "option1": "紫色CDH-S01A (紫)",
-          "inventory_policy": "continue",
-          "taxable": false,
-          "sku": "FL-1013000000056",
-          "requires_shipping": true,
-          "available": true,
-          "inventory_quantity": 50,
-          "weight": 0.35,
-          "weight_unit": "kg",
-          "image_id": 92000300005
-        },
-        {
-          "id": 1013000000057,
-          "product_id": 92000000005,
-          "title": "黄色CDH-S01A (黄)",
-          "price": "19.90",
-          "compare_at_price": null,
-          "position": 8,
-          "option1": "黄色CDH-S01A (黄)",
-          "inventory_policy": "continue",
-          "taxable": false,
-          "sku": "FL-1013000000057",
-          "requires_shipping": true,
-          "available": true,
-          "inventory_quantity": 50,
-          "weight": 0.35,
-          "weight_unit": "kg",
-          "image_id": 92000300006
-        }
-      ],
-      "options": [
-        {
-          "id": 920000000050,
-          "name": "Style",
-          "position": 1,
-          "values": [
-            "Set CDH-7",
-            "Set CDH-8",
-            "Set CDH-9",
-            "Set CDH-",
-            "Set CDH-",
-            "Set CDH-",
-            "紫色CDH-S01A (紫)",
-            "黄色CDH-S01A (黄)"
-          ]
-        }
-      ],
-      "images": [
-        {
-          "id": 92000300005,
-          "product_id": 92000000005,
-          "position": 1,
-          "src": "/products/92000000005-0.png",
-          "width": 800,
-          "height": 800,
-          "alt": "Fingerboard Scene Combo Set — Portable Alloy Park — Fingerboard Lab",
-          "variant_ids": [
-            1013000000050,
-            1013000000053,
-            1013000000056
-          ],
-          "created_at": "2026-10-11T18:20:00+02:00",
-          "updated_at": "2026-10-11T18:20:00+02:00"
-        },
-        {
-          "id": 92000300006,
-          "product_id": 92000000005,
-          "position": 2,
-          "src": "/products/92000000005-1.png",
-          "width": 800,
-          "height": 800,
-          "alt": "Fingerboard Scene Combo Set — Portable Alloy Park — Fingerboard Lab",
-          "variant_ids": [
-            1013000000051,
-            1013000000054,
-            1013000000057
-          ],
-          "created_at": "2026-10-11T18:20:00+02:00",
-          "updated_at": "2026-10-11T18:20:00+02:00"
-        },
-        {
-          "id": 92000300007,
-          "product_id": 92000000005,
-          "position": 3,
-          "src": "/products/92000000005-2.png",
-          "width": 800,
-          "height": 800,
-          "alt": "Fingerboard Scene Combo Set — Portable Alloy Park — Fingerboard Lab",
-          "variant_ids": [
-            1013000000052,
-            1013000000055
-          ],
-          "created_at": "2026-10-11T18:20:00+02:00",
-          "updated_at": "2026-10-11T18:20:00+02:00"
-        }
-      ],
-      "image": {
-        "id": 92000300005,
-        "product_id": 92000000005,
-        "position": 1,
-        "src": "/products/92000000005-0.png",
-        "width": 800,
-        "height": 800,
-        "alt": "Fingerboard Scene Combo Set — Portable Alloy Park — Fingerboard Lab",
-        "variant_ids": [
-          1013000000050,
-          1013000000053,
-          1013000000056
-        ],
-        "created_at": "2026-10-11T18:20:00+02:00",
-        "updated_at": "2026-10-11T18:20:00+02:00"
+        "created_at": "2026-10-11T19:15:00+02:00",
+        "updated_at": "2026-10-11T19:15:00+02:00"
       }
     },
     {
       "id": 92000000006,
-      "title": "4-in-1 Fingerboard Venue Set — Alloy Ramps, Board & Tools",
-      "body_html": "<p> re-combinable alloy park sections in one box, with a complete board (deck, 8 wheels, trucks), screwdriver, wrench and connector buttons. Styles A-D differ in park layout and deck art.</p><ul><li>Four re-combinable alloy park sections in one box</li><li>Complete board included: deck, 8 wheels, trucks, screwdriver and wrench</li><li>Connector buttons let you lock sections into any layout; styles A-D differ in park layout and deck art</li></ul><p><strong>Specifications</strong></p><table><tbody><tr><td><strong>Material</strong></td><td>Alloy sections</td></tr><tr><td><strong>Box size</strong></td><td>22×11.6×15 cm</td></tr><tr><td><strong>Board included</strong></td><td>Yes, with 8 wheels and tools</td></tr><tr><td><strong>Styles</strong></td><td>A-D</td></tr></tbody></table><p><em>Ships directly from our supplier workshop with tracking, arriving in 7–14 business days. Prices in USD; shipping is free on orders over $50. 30-day returns if it is not right for you.</em></p>",
+      "title": "4 in 1 Fingerboard Ramp Set with Board, Wheels and Tools",
+      "body_html": "<p>Four re-combinable alloy park sections in one box, with a complete board (deck, 8 wheels, trucks), screwdriver, wrench and connector buttons. Styles A to D differ in park layout and deck art.</p><ul><li><strong>Four park sections</strong>: re-combine them into any layout with connector buttons</li><li><strong>Complete board included</strong>: deck, 8 wheels, trucks, screwdriver and wrench</li><li><strong>Box 22 x 11.6 x 15 cm</strong>: board art and wheel colours vary by style</li></ul><p><strong>Specifications</strong></p><table><tbody><tr><td><strong>Four park sections</strong></td><td>re-combine them into any layout with connector buttons</td></tr><tr><td><strong>Complete board included</strong></td><td>deck, 8 wheels, trucks, screwdriver and wrench</td></tr><tr><td><strong>Box 22 x 11.6 x 15 cm</strong></td><td>board art and wheel colours vary by style</td></tr></tbody></table><p><em>Ships directly from our supplier workshop with tracking, arriving in 7-14 business days. Prices in USD; shipping is free on orders over $50. 30-day returns if it is not right for you.</em></p>",
       "vendor": "Fingerboard Lab",
       "product_type": "Park Kits & Sets",
       "handle": "fingerboard-venue-set-4in1",
       "created_at": "2026-10-11T18:20:00+02:00",
-      "updated_at": "2026-10-11T18:20:00+02:00",
+      "updated_at": "2026-10-11T19:15:00+02:00",
       "published_at": "2026-10-11T18:20:00+02:00",
       "template_suffix": null,
       "published_scope": "web",
       "tags": "fingerboard park set, ramps, obstacles, alloy, finger skate, desktop park, scene props",
       "status": "active",
-      "seo_title": "4-in-1 Fingerboard Venue Set — Alloy Ramps, Board & Tools",
-      "seo_description": "Board, 8 wheels and tools included; 4 styles.  re-combinable alloy park sections in one box, with a complete board (deck, 8 wheels, trucks), screwdriver, w",
+      "seo_title": "4 in 1 Fingerboard Ramp Set with Board, Wheels and Tools",
+      "seo_description": "Four park sections: Four re-combinable alloy park sections in one box, with a complete board (deck, 8 wheels, trucks), screwdriver, wrench a",
       "variants": [
         {
           "id": 1013000000060,
           "product_id": 92000000006,
           "title": "Style A (1 board, 8 wheels, 6 buttons)",
-          "price": "24.90",
+          "price": "56.90",
           "compare_at_price": null,
           "position": 1,
           "option1": "Style A (1 board, 8 wheels, 6 buttons)",
@@ -37047,7 +36838,7 @@
           "requires_shipping": true,
           "available": true,
           "inventory_quantity": 50,
-          "weight": 0.35,
+          "weight": 0.4,
           "weight_unit": "kg",
           "image_id": 92000300006
         },
@@ -37055,7 +36846,7 @@
           "id": 1013000000061,
           "product_id": 92000000006,
           "title": "Style B (1 board, 8 wheels, 6 buttons)",
-          "price": "24.90",
+          "price": "56.90",
           "compare_at_price": null,
           "position": 2,
           "option1": "Style B (1 board, 8 wheels, 6 buttons)",
@@ -37065,7 +36856,7 @@
           "requires_shipping": true,
           "available": true,
           "inventory_quantity": 50,
-          "weight": 0.35,
+          "weight": 0.4,
           "weight_unit": "kg",
           "image_id": 92000300007
         },
@@ -37073,7 +36864,7 @@
           "id": 1013000000062,
           "product_id": 92000000006,
           "title": "Style C (1 board, 8 wheels, 6 buttons)",
-          "price": "24.90",
+          "price": "56.90",
           "compare_at_price": null,
           "position": 3,
           "option1": "Style C (1 board, 8 wheels, 6 buttons)",
@@ -37083,15 +36874,15 @@
           "requires_shipping": true,
           "available": true,
           "inventory_quantity": 50,
-          "weight": 0.35,
+          "weight": 0.4,
           "weight_unit": "kg",
-          "image_id": 92000300006
+          "image_id": 92000300007
         },
         {
           "id": 1013000000063,
           "product_id": 92000000006,
           "title": "Style D (1 board, 8 wheels, 6 buttons)",
-          "price": "24.90",
+          "price": "56.90",
           "compare_at_price": null,
           "position": 4,
           "option1": "Style D (1 board, 8 wheels, 6 buttons)",
@@ -37101,7 +36892,7 @@
           "requires_shipping": true,
           "available": true,
           "inventory_quantity": 50,
-          "weight": 0.35,
+          "weight": 0.4,
           "weight_unit": "kg",
           "image_id": 92000300007
         },
@@ -37109,7 +36900,7 @@
           "id": 1013000000064,
           "product_id": 92000000006,
           "title": "Style E (1 board, 8 wheels, 6 buttons)",
-          "price": "24.90",
+          "price": "56.90",
           "compare_at_price": null,
           "position": 5,
           "option1": "Style E (1 board, 8 wheels, 6 buttons)",
@@ -37119,15 +36910,15 @@
           "requires_shipping": true,
           "available": true,
           "inventory_quantity": 50,
-          "weight": 0.35,
+          "weight": 0.4,
           "weight_unit": "kg",
-          "image_id": 92000300006
+          "image_id": 92000300007
         },
         {
           "id": 1013000000065,
           "product_id": 92000000006,
           "title": "Style F (1 board, 8 wheels, 6 buttons)",
-          "price": "24.90",
+          "price": "56.90",
           "compare_at_price": null,
           "position": 6,
           "option1": "Style F (1 board, 8 wheels, 6 buttons)",
@@ -37137,7 +36928,7 @@
           "requires_shipping": true,
           "available": true,
           "inventory_quantity": 50,
-          "weight": 0.35,
+          "weight": 0.4,
           "weight_unit": "kg",
           "image_id": 92000300007
         }
@@ -37165,14 +36956,12 @@
           "src": "/products/92000000006-0.png",
           "width": 800,
           "height": 800,
-          "alt": "4-in-1 Fingerboard Venue Set — Alloy Ramps, Board & Tools — Fingerboard Lab",
+          "alt": "4 in 1 Fingerboard Ramp Set with Board, Wheels and Tools - Fingerboard Lab",
           "variant_ids": [
-            1013000000060,
-            1013000000062,
-            1013000000064
+            1013000000060
           ],
-          "created_at": "2026-10-11T18:20:00+02:00",
-          "updated_at": "2026-10-11T18:20:00+02:00"
+          "created_at": "2026-10-11T19:15:00+02:00",
+          "updated_at": "2026-10-11T19:15:00+02:00"
         },
         {
           "id": 92000300007,
@@ -37181,14 +36970,16 @@
           "src": "/products/92000000006-1.png",
           "width": 800,
           "height": 800,
-          "alt": "4-in-1 Fingerboard Venue Set — Alloy Ramps, Board & Tools — Fingerboard Lab",
+          "alt": "4 in 1 Fingerboard Ramp Set with Board, Wheels and Tools - Fingerboard Lab",
           "variant_ids": [
             1013000000061,
+            1013000000062,
             1013000000063,
+            1013000000064,
             1013000000065
           ],
-          "created_at": "2026-10-11T18:20:00+02:00",
-          "updated_at": "2026-10-11T18:20:00+02:00"
+          "created_at": "2026-10-11T19:15:00+02:00",
+          "updated_at": "2026-10-11T19:15:00+02:00"
         }
       ],
       "image": {
@@ -37198,14 +36989,12 @@
         "src": "/products/92000000006-0.png",
         "width": 800,
         "height": 800,
-        "alt": "4-in-1 Fingerboard Venue Set — Alloy Ramps, Board & Tools — Fingerboard Lab",
+        "alt": "4 in 1 Fingerboard Ramp Set with Board, Wheels and Tools - Fingerboard Lab",
         "variant_ids": [
-          1013000000060,
-          1013000000062,
-          1013000000064
+          1013000000060
         ],
-        "created_at": "2026-10-11T18:20:00+02:00",
-        "updated_at": "2026-10-11T18:20:00+02:00"
+        "created_at": "2026-10-11T19:15:00+02:00",
+        "updated_at": "2026-10-11T19:15:00+02:00"
       }
     }
   ]
