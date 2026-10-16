@@ -24,9 +24,9 @@ import {
 import homepageData from "data/homepage.json";
 
 export const metadata = {
-  title: "Fingerboard Lab — Completes, Decks, Molds, Ramps & Parts",
+  title: "Fingerboard Trucks, Completes & Molds — Fingerboard Lab",
   description:
-    "Pro fingerboard completes, decks, trucks, wheels, park kits and the deck-pressing molds almost nobody stocks. Free build guides, prices in USD, 30-day returns.",
+    "Completes from $17.95, trucks and wheels, deck-pressing molds, ramps and park kits. Free build guides, free shipping over $50, 30-day returns.",
   alternates: { canonical: "/" },
 };
 
