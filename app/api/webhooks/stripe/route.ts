@@ -187,6 +187,34 @@ export async function POST(req: NextRequest) {
   // }
 
   const items = extractItems(session.line_items);
+
+  // --- Ground-truth purchase analytics (Stripe-confirmed). The client-side
+  // success-page capture can be missed; when both fire, analysis dedupes on
+  // order_id. Plain fetch to the PostHog capture API — no new dependency. ---
+  try {
+    const phKey = process.env.NEXT_PUBLIC_POSTHOG_KEY;
+    if (phKey && items.length > 0) {
+      const value = items.reduce((sum, li) => sum + ((li.unitAmount ?? 0) * li.quantity) / 100, 0);
+      const email = session.customer_details?.email || null;
+      const phHost = process.env.NEXT_PUBLIC_POSTHOG_HOST || "https://us.posthog.com";
+      await fetch(`${phHost}/capture/`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          api_key: phKey,
+          event: "purchase",
+          distinct_id: email || `stripe_${session.id}`,
+          properties: {
+            value,
+            currency: (session.currency || "aud").toUpperCase(),
+            order_id: session.id,
+            source: "stripe_webhook",
+            item_count: items.length,
+          },
+        }),
+      }).catch(() => {});
+    }
+  } catch {}
   const shippingAddress =
     (session as any).shipping_details?.address ??
     (session as any).collected_information?.shipping_details?.address ??

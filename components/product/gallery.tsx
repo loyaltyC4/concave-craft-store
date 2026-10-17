@@ -26,6 +26,7 @@ export function Gallery({
   const [zoomOpen, setZoomOpen] = useState(false);
   const touchStartX = useRef<number | null>(null);
   const swipedRef = useRef(false);
+  const touchTapAtRef = useRef<number | null>(null);
   // Local index wins between navigations. 2026-10-17: every gallery tap used
   // to do a Next.js router.replace('?image=N'), so a rapid thumb-swipe fired
   // a server round-trip per tap — the #1 mobile rage-click source in the
@@ -143,11 +144,21 @@ export function Gallery({
               if (Math.abs(dx) > 40) {
                 swipedRef.current = true;
                 updateImage(dx < 0 ? nextImageIndex : previousImageIndex);
+              } else {
+                // Touch tap without swipe — flag it so the click that follows
+                // on touch devices does NOT open the lightbox (mobile visitors
+                // tap the image expecting nothing; the surprise overlay was a
+                // measured rage source).
+                touchTapAtRef.current = Date.now();
               }
             }}
             onClick={() => {
               if (swipedRef.current) {
                 swipedRef.current = false;
+                return;
+              }
+              if (touchTapAtRef.current && Date.now() - touchTapAtRef.current < 700) {
+                touchTapAtRef.current = null;
                 return;
               }
               setZoomOpen(true);
