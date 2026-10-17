@@ -211,11 +211,21 @@ export default async function RootLayout({
          * NEXT_PUBLIC_POSTHOG_KEY is set, so dev/preview never send events
          * to the real project. autocapture (click/change/submit) + session
          * recording are ON.
+         *
+         * 2026-10-17 additions (friction report follow-ups):
+         *  - capture_dead_clicks: true — TOP-LEVEL option (NOT an autocapture
+         *    key; autocapture ignores it). Without it $deadclick never fires
+         *    and dead taps stay invisible.
+         *  - before_send scrubs query strings from /track URLs. The track
+         *    form used to GET ?email=…&code=…, leaking the customer's email
+         *    into PostHog via $current_url. Legacy/bookmarked URLs still hit
+         *    the site, so the SDK-side scrub is the safety net; the page
+         *    itself no longer puts an email in any URL.
          */}
         {POSTHOG_KEY && (
           <script
             dangerouslySetInnerHTML={{
-              __html: `(function(k,h){var s=document.createElement('script');s.src=h+'/static/array.js';s.async=true;s.onload=function(){try{window.posthog.init(k,{api_host:h,ui_host:'https://us.posthog.com',capture_pageview:'history_change',autocapture:{dom_event_allowlist:['click','change','submit']},capture_performance:false,persistence:'localStorage+cookie',session_recording:{maskAllInputs:true}});}catch(e){}};document.head.appendChild(s);})('${POSTHOG_KEY}','${POSTHOG_API_HOST}');`,
+              __html: `(function(k,h){var s=document.createElement('script');s.src=h+'/static/array.js';s.async=true;s.onload=function(){try{window.posthog.init(k,{api_host:h,ui_host:'https://us.posthog.com',capture_pageview:'history_change',autocapture:{dom_event_allowlist:['click','change','submit']},capture_dead_clicks:true,capture_performance:false,persistence:'localStorage+cookie',session_recording:{maskAllInputs:true},before_send:function(e){try{var p=e&&e.properties;if(p&&typeof p.$current_url==='string'&&p.$current_url.indexOf('/track')>-1){var i=p.$current_url.indexOf('?');if(i>-1){p.$current_url=p.$current_url.slice(0,i);if(typeof p.$raw_user_url==='string')p.$raw_user_url=p.$current_url;p.$pathname='/track';}}}catch(_){}return e;}});}catch(e){}};document.head.appendChild(s);})('${POSTHOG_KEY}','${POSTHOG_API_HOST}');`,
             }}
           />
         )}

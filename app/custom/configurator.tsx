@@ -1,6 +1,7 @@
 "use client";
 
 import { useCallback, useRef, useState } from "react";
+import { toast } from "sonner";
 
 // ─── Pricing (mirrors server-side logic in /api/custom-orders/create) ────────
 const BASE_PRICE = 89;
@@ -81,6 +82,23 @@ export function CustomBuildConfigurator() {
   // Submit state
   const [submitState, setSubmitState] = useState<SubmitState>("idle");
   const [submitError, setSubmitError] = useState<string | null>(null);
+
+  // 2026-10-17 friction fix: the quantity "+" gave no visible feedback, so a
+  // buyer tapped it 7+ times and rage-clicked (PostHog report). Every tap now
+  // pulses the counter; hitting the cap toasts instead of silently ignoring.
+  const [qtyPulse, setQtyPulse] = useState(false);
+  const pulseTimerRef = useRef<number | null>(null);
+  const bumpQuantity = (delta: number) => {
+    const next = Math.min(10, Math.max(1, quantity + delta));
+    if (next === quantity) {
+      if (delta > 0) toast("Max 10 per order", { description: `Quantity stays at ${quantity}.` });
+      return;
+    }
+    setQuantity(next);
+    setQtyPulse(true);
+    if (pulseTimerRef.current != null) window.clearTimeout(pulseTimerRef.current);
+    pulseTimerRef.current = window.setTimeout(() => setQtyPulse(false), 180);
+  };
 
   const fileInputRef = useRef<HTMLInputElement>(null);
 
@@ -321,24 +339,32 @@ export function CustomBuildConfigurator() {
         <div className="flex items-center gap-4">
           <button
             type="button"
-            onClick={() => setQuantity((q) => Math.max(1, q - 1))}
-            className="flex h-10 w-10 items-center justify-center rounded-lg border border-white/15 text-lg text-[#f3f1ea] transition hover:border-[#c5f23c] disabled:opacity-40"
+            aria-label="Decrease quantity"
+            onClick={() => bumpQuantity(-1)}
+            className="flex h-11 w-11 items-center justify-center rounded-lg border border-white/15 text-lg text-[#f3f1ea] transition hover:border-[#c5f23c] disabled:opacity-40"
             disabled={quantity <= 1}
           >
             −
           </button>
-          <span className="w-8 text-center text-lg font-semibold">
+          <span
+            aria-live="polite"
+            className={`inline-block w-8 text-center text-lg font-semibold transition-transform duration-150 ${
+              qtyPulse ? "scale-150 text-[#c5f23c]" : "scale-100"
+            }`}
+          >
             {quantity}
           </span>
           <button
             type="button"
-            onClick={() => setQuantity((q) => Math.min(10, q + 1))}
-            className="flex h-10 w-10 items-center justify-center rounded-lg border border-white/15 text-lg text-[#f3f1ea] transition hover:border-[#c5f23c] disabled:opacity-40"
-            disabled={quantity >= 10}
+            aria-label="Increase quantity"
+            onClick={() => bumpQuantity(1)}
+            className="flex h-11 w-11 items-center justify-center rounded-lg border border-white/15 text-lg text-[#f3f1ea] transition hover:border-[#c5f23c] active:scale-95"
           >
             +
           </button>
-          <span className="text-sm text-neutral-500">max 10 per order</span>
+          <span className="text-sm text-neutral-500">
+            max 10 · total <strong className="text-[#f3f1ea]">{fmt(total)}</strong>
+          </span>
         </div>
       </div>
 

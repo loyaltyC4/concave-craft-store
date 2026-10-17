@@ -91,6 +91,14 @@ async function FilteredGrid({
   return (
     <>
       <FilterBar facets={facets} />
+      {/* Result count while filters are active — the friction report's search
+          rage was partly users filtering blind (chip taps with no visible
+          effect until the grid reloaded). */}
+      {products.length !== unfiltered.length ? (
+        <p className="mb-4 text-xs font-semibold uppercase tracking-[0.12em] text-neutral-500">
+          Showing {products.length} of {unfiltered.length} products
+        </p>
+      ) : null}
       {products.length === 0 ? (
         <p className="py-3 text-lg text-neutral-400">
           {unfiltered.length === 0

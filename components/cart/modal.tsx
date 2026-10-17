@@ -164,13 +164,20 @@ export default function CartModal() {
                   </Link>
                 </div>
               ) : (
-                <div className="flex h-full flex-col justify-between overflow-hidden">
+                <div className="flex h-full flex-col overflow-hidden">
                   <div className="pt-4">
                     <FreeShippingBar
                       subtotal={parseFloat(cart.cost.totalAmount.amount)}
                     />
                   </div>
-                  <ul className="grow overflow-auto py-2">
+                  {/* 2026-10-17: cross-sell used to sit between the item list
+                      and the summary in a clipped flex column, pushing the
+                      "Secure checkout" button below the fold (friction
+                      report: only 2 of 7 add-to-cart sessions ever found
+                      it). Cross-sell now scrolls with the items; summary +
+                      CTA stay pinned to the bottom of the drawer. */}
+                  <div className="grow overflow-auto py-2">
+                    <ul>
                     {cart.lines
                       .sort((a, b) =>
                         a.merchandise.product.title.localeCompare(
@@ -276,14 +283,15 @@ export default function CartModal() {
                           </li>
                         );
                       })}
-                  </ul>
-                  <CartCrossSell
-                    excludeHandles={cart.lines.map(
-                      (l) => l.merchandise.product.handle,
-                    )}
-                  />
+                    </ul>
+                    <CartCrossSell
+                      excludeHandles={cart.lines.map(
+                        (l) => l.merchandise.product.handle,
+                      )}
+                    />
+                  </div>
 
-                  <div className="py-4 text-sm text-neutral-400">
+                  <div className="shrink-0 border-t border-white/10 py-4 text-sm text-neutral-400">
                     <div className="mb-3 flex items-center justify-between border-b border-white/10 pb-2">
                       <p>Shipping</p>
                       <p className="text-right text-neutral-300">
@@ -309,7 +317,7 @@ export default function CartModal() {
                   <button
                     onClick={handleCheckout}
                     disabled={loading}
-                    className="block w-full rounded-full bg-[#c5f23c] p-3.5 text-center text-sm font-semibold uppercase tracking-wide text-black transition hover:brightness-110 disabled:opacity-70"
+                    className="block min-h-[48px] w-full rounded-full bg-[#c5f23c] p-3.5 text-center text-base font-bold uppercase tracking-wide text-black shadow-[0_10px_30px_-10px_rgba(197,242,60,0.7)] transition hover:brightness-110 disabled:opacity-70"
                   >
                     {loading ? (
                       <LoadingDots className="bg-black" />

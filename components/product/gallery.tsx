@@ -4,7 +4,7 @@ import { ArrowLeftIcon, ArrowRightIcon } from "@heroicons/react/24/outline";
 import { GridTileImage } from "components/grid/tile";
 import clsx from "clsx";
 import Image from "next/image";
-import { useRouter, useSearchParams } from "next/navigation";
+import { useSearchParams } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
 
 type GalleryImage = { src: string; altText: string };
@@ -22,11 +22,17 @@ export function Gallery({
     image?: { src: string; altText: string };
   }[];
 }) {
-  const router = useRouter();
   const searchParams = useSearchParams();
   const [zoomOpen, setZoomOpen] = useState(false);
   const touchStartX = useRef<number | null>(null);
   const swipedRef = useRef(false);
+  // Local index wins between navigations. 2026-10-17: every gallery tap used
+  // to do a Next.js router.replace('?image=N'), so a rapid thumb-swipe fired
+  // a server round-trip per tap — the #1 mobile rage-click source in the
+  // PostHog friction report (8 of 12 rages on product pages). Taps now only
+  // flip local state; the URL is kept in sync via history.replaceState so
+  // ?image=N deep links (shared/bookmarked) still work, but with zero
+  // navigation and zero re-render churn.
 
   // Resolve the currently-selected variant from the option query params, the
   // same way ProductDescription and AddToCart do, so all three stay in sync.
@@ -55,15 +61,35 @@ export function Gallery({
   const paramIndex = searchParams.has("image")
     ? parseInt(searchParams.get("image")!)
     : 0;
+  const [localIndex, setLocalIndex] = useState<number | null>(null);
+
+  // A real navigation (variant swatch, back/forward) supersedes the local
+  // override — useSearchParams only changes identity on router navigations,
+  // not on our own history.replaceState, so this doesn't fight tap updates.
+  useEffect(() => {
+    setLocalIndex(null);
+  }, [searchParams]);
+
   const imageIndex =
     variantIndex >= 0
       ? variantIndex
-      : Math.min(Math.max(paramIndex, 0), allImages.length - 1);
+      : Math.min(
+          Math.max(localIndex ?? paramIndex, 0),
+          allImages.length - 1,
+        );
 
-  const updateImage = (index: string) => {
-    const params = new URLSearchParams(searchParams.toString());
-    params.set("image", index);
-    router.replace(`?${params.toString()}`, { scroll: false });
+  const updateImage = (index: number) => {
+    const bounded = Math.min(Math.max(index, 0), allImages.length - 1);
+    setLocalIndex(bounded);
+    // Silent URL sync for deep links — no navigation, no server round-trip.
+    if (typeof window === "undefined") return;
+    try {
+      const url = new URL(window.location.href);
+      url.searchParams.set("image", String(bounded));
+      window.history.replaceState(window.history.state, "", url.toString());
+    } catch {
+      // URL sync is best-effort; the visible image already changed.
+    }
   };
 
   const nextImageIndex =
@@ -116,7 +142,7 @@ export function Gallery({
               const dx = end - start;
               if (Math.abs(dx) > 40) {
                 swipedRef.current = true;
-                updateImage((dx < 0 ? nextImageIndex : previousImageIndex).toString());
+                updateImage(dx < 0 ? nextImageIndex : previousImageIndex);
               }
             }}
             onClick={() => {
@@ -145,7 +171,7 @@ export function Gallery({
           <div className="absolute bottom-[15%] flex w-full justify-center">
             <div className="mx-auto flex h-11 items-center rounded-full border border-white bg-neutral-50/80 text-neutral-500 backdrop-blur-sm dark:border-black dark:bg-neutral-900/80">
               <button
-                formAction={() => updateImage(previousImageIndex.toString())}
+                formAction={() => updateImage(previousImageIndex)}
                 aria-label="Previous product image"
                 className={buttonClassName}
               >
@@ -153,7 +179,7 @@ export function Gallery({
               </button>
               <div className="mx-1 h-6 w-px bg-neutral-500"></div>
               <button
-                formAction={() => updateImage(nextImageIndex.toString())}
+                formAction={() => updateImage(nextImageIndex)}
                 aria-label="Next product image"
                 className={buttonClassName}
               >
@@ -173,7 +199,7 @@ export function Gallery({
             return (
               <li key={image.src} className="h-20 w-20">
                 <button
-                  formAction={() => updateImage(fullIndex.toString())}
+                  formAction={() => updateImage(fullIndex)}
                   aria-label="Select product image"
                   className="h-full w-full"
                 >

@@ -53,6 +53,13 @@ async function Results({
         </p>
       ) : null}
       <FilterBar facets={facets} />
+      {/* Result count while filters are active (friction report: chip taps
+          felt dead because nothing visible changed until the grid landed). */}
+      {products.length !== unfiltered.length ? (
+        <p className="mb-4 text-xs font-semibold uppercase tracking-[0.12em] text-neutral-500">
+          Showing {products.length} of {unfiltered.length} products
+        </p>
+      ) : null}
       {products.length > 0 ? (
         <Grid className="grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
           <ProductGridItems products={products} />
