@@ -5,9 +5,9 @@ import { SITE_NAME, SUPPORT_EMAIL } from "lib/brand";
 import { baseUrl } from "lib/utils";
 
 export const metadata: Metadata = {
-  title: "Custom Branded Fingerboards for Brands & Events | Bulk Orders",
+  title: "Custom Branded Fingerboards for Events",
   description:
-    "Put your logo on real handmade maple fingerboard decks. Perfect branded merch for skate brands, coffee shops, record labels, streetwear, and trade show giveaways. Bulk discounts from 2+ boards.",
+    "Put your logo on real handmade maple fingerboard decks. Perfect branded merch for skate brands, coffee shops, record labels, streetwear",
   alternates: { canonical: "/custom/branded" },
   openGraph: {
     type: "website",

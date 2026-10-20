@@ -12,9 +12,9 @@ import {
 } from "lib/brand";
 
 export const metadata: Metadata = {
-  title: "About Fingerboard Lab — who we are and how we work",
+  title: "Who We Are and How We Work",
   description:
-    "Fingerboard Lab is a small online fingerboard shop run from Melbourne, Australia. How we source products, where orders ship from, delivery times and how to reach us.",
+    "Fingerboard Lab is a small online fingerboard shop run from Melbourne, Australia. How we source products, where orders ship from",
   alternates: { canonical: "/about" },
 };
 
