@@ -270,30 +270,51 @@
       "seo_description": "WP Bear Gummy edition fingerboard complete. Maple deck with shallow concave. Distinctive graphic design, ready to skate. From the WP fingerboard brand.",
       "variants": [
         {
-          "id": 52930359165264,
+          "id": 52930359165265,
           "product_id": 10297129140559,
-          "title": "Default Title",
+          "title": "Pink",
           "price": "21.95",
           "compare_at_price": null,
           "position": 1,
-          "option1": "Default Title",
+          "option1": "Pink",
           "inventory_policy": "continue",
           "taxable": false,
-          "sku": "FL-10297129140559",
+          "sku": "FL-10297129140559-PINK",
           "requires_shipping": true,
           "available": true,
           "inventory_quantity": 8,
           "weight": 0.07,
-          "weight_unit": "kg"
+          "weight_unit": "kg",
+          "image_id": 1029712914055903
+        },
+        {
+          "id": 52930359165266,
+          "product_id": 10297129140559,
+          "title": "Blue",
+          "price": "21.95",
+          "compare_at_price": null,
+          "position": 2,
+          "option1": "Blue",
+          "inventory_policy": "continue",
+          "taxable": false,
+          "sku": "FL-10297129140559-BLUE",
+          "requires_shipping": true,
+          "available": true,
+          "inventory_quantity": 8,
+          "weight": 0.07,
+          "weight_unit": "kg",
+          "image_id": 1029712914055903
         }
       ],
       "options": [
         {
-          "id": 102971291405590,
-          "name": "Option",
+          "id": 52930359165354,
+          "product_id": 10297129140559,
+          "name": "Colourway",
           "position": 1,
           "values": [
-            "Default Title"
+            "Pink",
+            "Blue"
           ]
         }
       ],
@@ -345,13 +366,13 @@
         }
       ],
       "image": {
-        "id": 1029712914055900,
+        "id": 1029712914055901,
         "product_id": 10297129140559,
-        "position": 1,
-        "src": "/products/primary-10297129140559-cleaned.jpg",
+        "position": 2,
+        "src": "https://img.alicdn.com/bao/uploaded/2217982279826/O1CN01jkSIWV2MSMoORKWTr_!!2217982279826.jpg",
         "width": 1000,
         "height": 1000,
-        "alt": "WP Bear Gummy Fingerboard Complete — Maple, Shallow Concave — Fingerboard Lab"
+        "alt": "Two pastel pink and blue wooden fingerboard completes with gummy bear quote graphics."
       }
     },
     {
@@ -520,99 +541,6 @@
         "width": 800,
         "height": 800,
         "alt": "Maple Fingerboard Complete — Bearing Wheels, Double Kick — 2-Pack — Fingerboard Lab"
-      }
-    },
-    {
-      "id": 10297129140554,
-      "title": "WP Dyed Series Fingerboard Complete — Handmade Maple",
-      "body_html": "<p>WP's Dyed Series is built for riders who want colour that goes all the way through the maple veneers, not just a graphic on top — the dye sits in the wood itself, so the look holds up as the board wears in. Handmade construction and shallow concave make this a considered step up from entry-level boards.</p><p><strong>Why this one</strong></p><ul><li>Dyed maple veneers — colour runs through the wood rather than sitting on a surface print</li><li>Shallow concave for a fast, flat feel suited to beginner technique and flowing street lines</li><li>Handmade construction for consistent shaping across the deck</li><li>Maple deck for the feel and snap plastic boards don't provide</li><li>From the WP brand — designed for entry-to-intermediate riders with style in mind</li><li>Complete setup ready to skate straight away</li></ul><p><strong>Specifications</strong></p><table><tbody><tr><td><strong>Brand</strong></td><td>WP</td></tr><tr><td><strong>Series</strong></td><td>Dyed</td></tr><tr><td><strong>Deck material</strong></td><td>Maple</td></tr><tr><td><strong>Deck finish</strong></td><td>Dyed colour</td></tr><tr><td><strong>Concave</strong></td><td>Shallow</td></tr><tr><td><strong>Construction</strong></td><td>Handmade</td></tr><tr><td><strong>What's included</strong></td><td>Complete fingerboard (assembled)</td></tr></tbody></table><p><strong>Who it suits</strong></p><p>Riders entering the real-maple fingerboard market who also care about how the board looks. WP's shallow concave makes this a comfortable starting point; choose a deeper concave option if you already know you prefer locked-in flip-trick feel.</p><p><em>Ships directly from our supplier workshop with tracking, arriving in 7–14 business days. Prices in USD; shipping is free on orders over $50. 30-day returns if it is not right for you.</em></p>",
-      "vendor": "Fingerboard Lab",
-      "product_type": "Complete Fingerboards",
-      "handle": "wp-dyed-series-fingerboard-complete-handmade-maple",
-      "created_at": "2026-08-07T15:00:00+02:00",
-      "updated_at": "2026-08-07T15:00:00+02:00",
-      "published_at": "2026-08-07T15:00:00+02:00",
-      "template_suffix": null,
-      "published_scope": "web",
-      "tags": "WP, dyed maple, shallow concave, handmade, maple, pro complete, colourway, fingerboard",
-      "status": "active",
-      "seo_title": "WP Dyed Series Fingerboard Complete — Handmade Maple",
-      "seo_description": "WP Dyed Series fingerboard complete. Handmade maple, through-dyed colour veneers and shallow concave. Entry-to-intermediate step up from toy boards.",
-      "variants": [
-        {
-          "id": 52930359165259,
-          "product_id": 10297129140554,
-          "title": "Default Title",
-          "price": "23.95",
-          "compare_at_price": null,
-          "position": 1,
-          "option1": "Default Title",
-          "inventory_policy": "continue",
-          "taxable": false,
-          "sku": "FL-10297129140554",
-          "requires_shipping": true,
-          "available": true,
-          "inventory_quantity": 8,
-          "weight": 0.07,
-          "weight_unit": "kg"
-        }
-      ],
-      "options": [
-        {
-          "id": 102971291405540,
-          "name": "Option",
-          "position": 1,
-          "values": [
-            "Default Title"
-          ]
-        }
-      ],
-      "images": [
-        {
-          "id": 1029712914055401,
-          "product_id": 10297129140554,
-          "position": 1,
-          "src": "/products/primary-10297129140554-cleaned.jpg",
-          "width": 800,
-          "height": 800,
-          "alt": "Stack of colorful wooden fingerboard decks with glossy finishes and engraved brand logos overlapping each other."
-        },
-        {
-          "id": 1029712914055402,
-          "product_id": 10297129140554,
-          "position": 2,
-          "src": "https://img.alicdn.com/bao/uploaded/2217982279826/O1CN01D004fk2MSMo3yIzbo_!!2217982279826.jpg",
-          "width": 999,
-          "height": 999,
-          "alt": "A stack of colorful wooden fingerboard decks resting next to a red ceramic cup on a fluted surface."
-        },
-        {
-          "id": 1029712914055403,
-          "product_id": 10297129140554,
-          "position": 3,
-          "src": "https://img.alicdn.com/bao/uploaded/2217982279826/O1CN01lN2MFb2MSMo4jxTz8_!!2217982279826.jpg",
-          "width": 1000,
-          "height": 1000,
-          "alt": "A person holding five brightly colored wooden fingerboard decks with custom laser-etched graphics."
-        },
-        {
-          "id": 1029712914055404,
-          "product_id": 10297129140554,
-          "position": 4,
-          "src": "https://img.alicdn.com/bao/uploaded/2217982279826/O1CN019gBvrp2MSMo53Gtgz_!!2217982279826.jpg",
-          "width": 1000,
-          "height": 1000,
-          "alt": "A teal stained wooden fingerboard deck with a graphic engraved logo, resting on a textured metallic silver surface."
-        }
-      ],
-      "image": {
-        "id": 1029712914055401,
-        "product_id": 10297129140554,
-        "position": 1,
-        "src": "/products/primary-10297129140554-cleaned.jpg",
-        "width": 800,
-        "height": 800,
-        "alt": "WP Dyed Series Fingerboard Complete — Handmade Maple — Fingerboard Lab"
       }
     },
     {
@@ -1895,311 +1823,6 @@
         "width": 800,
         "height": 800,
         "alt": "HAILEY 34mm Fingerboard Complete — Maple Grain Finish — Fingerboard Lab"
-      }
-    },
-    {
-      "id": 10297129140564,
-      "title": "DTzero 1.4 Series Pro Fingerboard Complete — Maple",
-      "body_html": "<p>DTzero's 1.4 series is a defined product line from their established fingerboard range — not a generic complete relabelled with a version number. Maple construction and a double-kick shape make this a serious starter or progression board for riders who want brand continuity as they develop.</p><p><strong>Why this one</strong></p><ul><li>DTzero 1.4 series — a named product line with a documented spec and shape</li><li>Maple deck construction for real fingerboard feel and snap</li><li>Double-kick geometry for nose and tail trick versatility</li><li>Positioned as a capable entry point into the DTzero range</li><li>Choose Complete Set (deck, trucks, wheels, bracket) or Deck Only if you already have hardware</li><li>Five colourways: Dtzero, Catfish Girl, Fairy Deer, Skull, Raw Wood graphics</li><li>From the DTzero brand — known within the domestic fingerboard scene for consistent quality</li></ul><p><strong>Specifications</strong></p><table><tbody><tr><td><strong>Brand</strong></td><td>DTzero</td></tr><tr><td><strong>Series</strong></td><td>1.4</td></tr><tr><td><strong>Deck material</strong></td><td>Maple</td></tr><tr><td><strong>Shape</strong></td><td>Double kick</td></tr><tr><td><strong>What's included</strong></td><td>Complete fingerboard (assembled)</td></tr></tbody></table><p><strong>Who it suits</strong></p><p>Riders looking to enter the DTzero ecosystem or build familiarity with the brand's shape and feel. The 1.4 series is aimed at newcomers to the pro fingerboard market who want a named brand rather than a generic board.</p><p><em>Ships directly from our supplier workshop with tracking, arriving in 7–14 business days. Prices in USD; shipping is free on orders over $50. 30-day returns if it is not right for you.</em></p>",
-      "vendor": "Fingerboard Lab",
-      "product_type": "Complete Fingerboards",
-      "handle": "dtzero-1-4-series-pro-fingerboard-complete-maple",
-      "created_at": "2026-08-07T15:00:00+02:00",
-      "updated_at": "2026-09-25T17:30:00+02:00",
-      "published_at": "2026-08-07T15:00:00+02:00",
-      "template_suffix": null,
-      "published_scope": "web",
-      "tags": "DTzero, 1.4 series, maple, double kick, pro complete, fingerboard, entry level, Bundle options, 5 colourways",
-      "status": "active",
-      "seo_title": "DTzero 1.4 Series Fingerboard Complete — Maple",
-      "seo_description": "DTzero 1.4 series fingerboard complete. Maple deck, double kick shape. Entry point into the DTzero range for riders moving into the pro fingerboard market.",
-      "variants": [
-        {
-          "id": 57732735190401,
-          "product_id": 10297129140564,
-          "title": "Complete Set (Deck + Trucks + Wheels) / Dtzero",
-          "price": "38.95",
-          "compare_at_price": null,
-          "position": 1,
-          "option1": "Complete Set (Deck + Trucks + Wheels)",
-          "option2": "Dtzero",
-          "inventory_policy": "continue",
-          "taxable": false,
-          "sku": "FL-57732735190401",
-          "requires_shipping": true,
-          "available": true,
-          "inventory_quantity": 69,
-          "weight": 0.07,
-          "weight_unit": "kg"
-        },
-        {
-          "id": 57732735190402,
-          "product_id": 10297129140564,
-          "title": "Complete Set (Deck + Trucks + Wheels) / Catfish Girl",
-          "price": "38.95",
-          "compare_at_price": null,
-          "position": 2,
-          "option1": "Complete Set (Deck + Trucks + Wheels)",
-          "option2": "Catfish Girl",
-          "inventory_policy": "continue",
-          "taxable": false,
-          "sku": "FL-57732735190402",
-          "requires_shipping": true,
-          "available": true,
-          "inventory_quantity": 200,
-          "weight": 0.07,
-          "weight_unit": "kg"
-        },
-        {
-          "id": 57732735190403,
-          "product_id": 10297129140564,
-          "title": "Complete Set (Deck + Trucks + Wheels) / Fairy Deer",
-          "price": "38.95",
-          "compare_at_price": null,
-          "position": 3,
-          "option1": "Complete Set (Deck + Trucks + Wheels)",
-          "option2": "Fairy Deer",
-          "inventory_policy": "continue",
-          "taxable": false,
-          "sku": "FL-57732735190403",
-          "requires_shipping": true,
-          "available": true,
-          "inventory_quantity": 200,
-          "weight": 0.07,
-          "weight_unit": "kg"
-        },
-        {
-          "id": 57732735190404,
-          "product_id": 10297129140564,
-          "title": "Complete Set (Deck + Trucks + Wheels) / Skull",
-          "price": "38.95",
-          "compare_at_price": null,
-          "position": 4,
-          "option1": "Complete Set (Deck + Trucks + Wheels)",
-          "option2": "Skull",
-          "inventory_policy": "deny",
-          "taxable": false,
-          "sku": "FL-57732735190404",
-          "requires_shipping": true,
-          "available": false,
-          "inventory_quantity": 0,
-          "weight": 0.07,
-          "weight_unit": "kg"
-        },
-        {
-          "id": 57732735190405,
-          "product_id": 10297129140564,
-          "title": "Complete Set (Deck + Trucks + Wheels) / Raw Wood",
-          "price": "38.95",
-          "compare_at_price": null,
-          "position": 5,
-          "option1": "Complete Set (Deck + Trucks + Wheels)",
-          "option2": "Raw Wood",
-          "inventory_policy": "continue",
-          "taxable": false,
-          "sku": "FL-57732735190405",
-          "requires_shipping": true,
-          "available": true,
-          "inventory_quantity": 188,
-          "weight": 0.07,
-          "weight_unit": "kg"
-        },
-        {
-          "id": 57732735190406,
-          "product_id": 10297129140564,
-          "title": "Deck Only / Dtzero",
-          "price": "29.95",
-          "compare_at_price": null,
-          "position": 6,
-          "option1": "Deck Only",
-          "option2": "Dtzero",
-          "inventory_policy": "continue",
-          "taxable": false,
-          "sku": "FL-57732735190406",
-          "requires_shipping": true,
-          "available": true,
-          "inventory_quantity": 200,
-          "weight": 0.04,
-          "weight_unit": "kg"
-        },
-        {
-          "id": 57732735190407,
-          "product_id": 10297129140564,
-          "title": "Deck Only / Catfish Girl",
-          "price": "29.95",
-          "compare_at_price": null,
-          "position": 7,
-          "option1": "Deck Only",
-          "option2": "Catfish Girl",
-          "inventory_policy": "continue",
-          "taxable": false,
-          "sku": "FL-57732735190407",
-          "requires_shipping": true,
-          "available": true,
-          "inventory_quantity": 200,
-          "weight": 0.04,
-          "weight_unit": "kg"
-        },
-        {
-          "id": 57732735190408,
-          "product_id": 10297129140564,
-          "title": "Deck Only / Fairy Deer",
-          "price": "29.95",
-          "compare_at_price": null,
-          "position": 8,
-          "option1": "Deck Only",
-          "option2": "Fairy Deer",
-          "inventory_policy": "continue",
-          "taxable": false,
-          "sku": "FL-57732735190408",
-          "requires_shipping": true,
-          "available": true,
-          "inventory_quantity": 200,
-          "weight": 0.04,
-          "weight_unit": "kg"
-        },
-        {
-          "id": 57732735190409,
-          "product_id": 10297129140564,
-          "title": "Deck Only / Skull",
-          "price": "29.95",
-          "compare_at_price": null,
-          "position": 9,
-          "option1": "Deck Only",
-          "option2": "Skull",
-          "inventory_policy": "deny",
-          "taxable": false,
-          "sku": "FL-57732735190409",
-          "requires_shipping": true,
-          "available": false,
-          "inventory_quantity": 0,
-          "weight": 0.04,
-          "weight_unit": "kg"
-        },
-        {
-          "id": 57732735190410,
-          "product_id": 10297129140564,
-          "title": "Deck Only / Raw Wood",
-          "price": "29.95",
-          "compare_at_price": null,
-          "position": 10,
-          "option1": "Deck Only",
-          "option2": "Raw Wood",
-          "inventory_policy": "continue",
-          "taxable": false,
-          "sku": "FL-57732735190410",
-          "requires_shipping": true,
-          "available": true,
-          "inventory_quantity": 200,
-          "weight": 0.04,
-          "weight_unit": "kg"
-        }
-      ],
-      "options": [
-        {
-          "id": 102971291405641,
-          "name": "Bundle",
-          "position": 1,
-          "values": [
-            "Complete Set (Deck + Trucks + Wheels)",
-            "Deck Only"
-          ]
-        },
-        {
-          "id": 102971291405642,
-          "name": "Colourway",
-          "position": 2,
-          "values": [
-            "Dtzero",
-            "Catfish Girl",
-            "Fairy Deer",
-            "Skull",
-            "Raw Wood"
-          ]
-        }
-      ],
-      "images": [
-        {
-          "id": 1029712914056400,
-          "product_id": 10297129140564,
-          "position": 1,
-          "src": "/products/primary-10297129140564-cleaned.jpg",
-          "width": 800,
-          "height": 800,
-          "alt": "Fingerboard building kit with red wooden veneer deck, griptape, red trucks, wheels, and hardware."
-        },
-        {
-          "id": 1029712914056407,
-          "product_id": 10297129140564,
-          "position": 2,
-          "src": "/products/gallery-577327351904-2.jpg",
-          "width": 675,
-          "height": 900,
-          "alt": "Red wooden fingerboard deck with embossed text pattern accompanied by trucks, wheels, and black grip tape."
-        },
-        {
-          "id": 1029712914056408,
-          "product_id": 10297129140564,
-          "position": 3,
-          "src": "/products/gallery-577327351904-3.jpg",
-          "width": 675,
-          "height": 900,
-          "alt": "Assembled fingerboard complete featuring a red patterned wooden deck, black trucks, and white wheels."
-        },
-        {
-          "id": 1029712914056401,
-          "product_id": 10297129140564,
-          "position": 4,
-          "src": "https://img.alicdn.com/bao/uploaded/406006991/O1CN01wlL0M421VvnrhPiE2_!!406006991.jpg",
-          "width": 800,
-          "height": 800,
-          "alt": "Fingerboard Lab fingerboard kit with a red branded graphic wooden deck, black foam grip, and black trucks."
-        },
-        {
-          "id": 1029712914056403,
-          "product_id": 10297129140564,
-          "position": 5,
-          "src": "https://img.alicdn.com/bao/uploaded/406006991/O1CN01KTNTl821VvnwOHiF4_!!406006991.jpg",
-          "width": 800,
-          "height": 800,
-          "alt": "Fingerboard Lab DTzero black and white skull graphic wooden fingerboard complete next to a matching branded box."
-        },
-        {
-          "id": 1029712914056404,
-          "product_id": 10297129140564,
-          "position": 6,
-          "src": "https://img.alicdn.com/bao/uploaded/406006991/O1CN01YDbXHs21VvnzIOawO_!!406006991.jpg",
-          "width": 800,
-          "height": 800,
-          "alt": "Red wooden fingerboard complete set in a black gift box with tools, wheels, and hardware parts."
-        },
-        {
-          "id": 1029712914056405,
-          "product_id": 10297129140564,
-          "position": 7,
-          "src": "/products/gallery-577327351904-4.jpg",
-          "width": 800,
-          "height": 800,
-          "alt": "Fingerboard Lab DT1.4 complete fingerboard kit with skull graphic deck and packaging."
-        },
-        {
-          "id": 1029712914056406,
-          "product_id": 10297129140564,
-          "position": 8,
-          "src": "/products/gallery-577327351904-5.jpg",
-          "width": 800,
-          "height": 800,
-          "alt": "Fingerboard Lab DT1.4 complete fingerboard kit with skull graphic deck and packaging."
-        }
-      ],
-      "image": {
-        "id": 1029712914056400,
-        "product_id": 10297129140564,
-        "position": 1,
-        "src": "/products/primary-10297129140564-cleaned.jpg",
-        "width": 800,
-        "height": 800,
-        "alt": "DTzero 1.4 Series Pro Fingerboard Complete — Maple — Fingerboard Lab"
       }
     },
     {
@@ -35628,27 +35251,9 @@
       ],
       "images": [
         {
-          "id": 920000000103001,
-          "product_id": 920000000103,
-          "position": 1,
-          "src": "https://img.alicdn.com/imgextra/i3/1952422867/O1CN01iKMBd21X38LPDzvTJ_!!1952422867.jpg",
-          "width": 800,
-          "height": 800,
-          "alt": "Wooden fingerboard deck with yellow cassette tape graphic finish being held by fingers."
-        },
-        {
-          "id": 920000000103002,
-          "product_id": 920000000103,
-          "position": 2,
-          "src": "https://img.alicdn.com/imgextra/i4/1952422867/O1CN01u7NQNR1X38LTMRdpH_!!1952422867.jpg",
-          "width": 800,
-          "height": 800,
-          "alt": "Two Fingerboard Lab custom fingerboard completes featuring vintage newspaper and bright yellow universe graphics."
-        },
-        {
           "id": 920000000103003,
           "product_id": 920000000103,
-          "position": 3,
+          "position": 1,
           "src": "https://img.alicdn.com/imgextra/i4/1952422867/O1CN01b6MGdz1X38II28L99_!!1952422867.jpg",
           "width": 800,
           "height": 800,
@@ -35657,7 +35262,7 @@
         {
           "id": 920000000103004,
           "product_id": 920000000103,
-          "position": 4,
+          "position": 2,
           "src": "https://img.alicdn.com/imgextra/i1/1952422867/O1CN017DTvhf1X38IFtNKBy_!!1952422867.jpg",
           "width": 800,
           "height": 800,
@@ -35665,13 +35270,13 @@
         }
       ],
       "image": {
-        "id": 920000000103001,
+        "id": 920000000103003,
         "product_id": 920000000103,
         "position": 1,
-        "src": "https://img.alicdn.com/imgextra/i3/1952422867/O1CN01iKMBd21X38LPDzvTJ_!!1952422867.jpg",
+        "src": "https://img.alicdn.com/imgextra/i4/1952422867/O1CN01b6MGdz1X38II28L99_!!1952422867.jpg",
         "width": 800,
         "height": 800,
-        "alt": "Martlet 32mm Pro Complete — Entry Wide Deck — Fingerboard Lab"
+        "alt": "Fingerboard set with cassette tape graphic deck, metal trucks, black wheels, and keychain."
       }
     },
     {
