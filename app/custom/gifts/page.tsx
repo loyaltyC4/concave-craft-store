@@ -5,9 +5,9 @@ import { SITE_NAME, SUPPORT_EMAIL } from "lib/brand";
 import { baseUrl } from "lib/utils";
 
 export const metadata: Metadata = {
-  title: "Personalized Fingerboard Gifts | Custom Decks for Every Occasion",
+  title: "Personalized Fingerboard Gifts",
   description:
-    "Give a one-of-a-kind fingerboard gift. Upload any photo, logo, or artwork and we hand-build a real wooden deck just for them — birthdays, holidays, and graduations.",
+    "Give a one-of-a-kind fingerboard gift. Upload any photo, logo, or artwork and we hand-build a real wooden deck just for them — birthdays, holidays",
   alternates: { canonical: "/custom/gifts" },
   openGraph: {
     type: "website",

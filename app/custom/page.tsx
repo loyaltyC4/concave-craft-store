@@ -7,9 +7,9 @@ import Link from "next/link";
 
 export const metadata: Metadata = {
   title:
-    "Custom Handmade Fingerboard — Personalized Graphic, Made to Order | Fingerboard Lab",
+    "Custom Fingerboards, Made to Order",
   description:
-    "Design your own custom fingerboard with your artwork, logo, or photo. Hand-pressed maple deck, pro trucks, bearing wheels. Starting at $89. Custom fingerboard, personalized fingerboard, custom tech deck alternative.",
+    "Design your own custom fingerboard with your artwork, logo, or photo. Hand-pressed maple deck, pro trucks, bearing wheels. Starting at $89.",
   alternates: { canonical: "/custom" },
   openGraph: {
     title: "Custom Handmade Fingerboard — Made to Order",
