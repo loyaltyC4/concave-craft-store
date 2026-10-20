@@ -1659,10 +1659,10 @@
           "id": 1029712914055801,
           "product_id": 10297129140558,
           "position": 1,
-          "src": "/products/primary-10297129140558-cleaned.jpg",
-          "width": 552,
-          "height": 736,
-          "alt": "Colorful wooden fingerboard decks featuring custom engraved text and glossy finish by Fingerboard Lab."
+          "src": "/products/primary-alf-colour-laminated-complete-flatlay.jpg",
+          "width": 900,
+          "height": 900,
+          "alt": "32mm colour-laminated maple fingerboard complete with trucks, wheels and grip tape laid out — Fingerboard Lab"
         },
         {
           "id": 1029712914055802,
@@ -1681,25 +1681,16 @@
           "width": 681,
           "height": 908,
           "alt": "Close-up of wooden fingerboard decks featuring branded graphic logos on bright glossy stained wood."
-        },
-        {
-          "id": 1029712914055804,
-          "product_id": 10297129140558,
-          "position": 4,
-          "src": "https://cbu01.alicdn.com/img/ibank/O1CN01Oer5vB1KudrAgdIOE_!!4151531224-0-cib.jpg",
-          "width": 600,
-          "height": 800,
-          "alt": "Purple wooden fingerboard complete kit with metallic silver trucks white wheels grip tape and tool."
         }
       ],
       "image": {
         "id": 1029712914055801,
         "product_id": 10297129140558,
         "position": 1,
-        "src": "/products/primary-10297129140558-cleaned.jpg",
-        "width": 552,
-        "height": 736,
-        "alt": "32mm Colour-Laminated Fingerboard Complete — Maple, Single Axle — Fingerboard Lab"
+        "src": "/products/primary-alf-colour-laminated-complete-flatlay.jpg",
+        "width": 900,
+        "height": 900,
+        "alt": "32mm colour-laminated maple fingerboard complete with trucks, wheels and grip tape laid out — Fingerboard Lab"
       }
     },
     {
@@ -22287,24 +22278,15 @@
           "id": 1029712914060700,
           "product_id": 10297129140607,
           "position": 1,
-          "src": "/products/primary-10297129140607-be2.jpg",
-          "width": 800,
-          "height": 800,
-          "alt": "Assorted colorful urethane fingerboard wheels featuring built-in metal bearings."
-        },
-        {
-          "id": 1029712914060701,
-          "product_id": 10297129140607,
-          "position": 2,
-          "src": "https://img.alicdn.com/bao/uploaded/2208998319270/O1CN01qekPVq2ILiU6fdAFa_!!2208998319270.jpg",
-          "width": 800,
-          "height": 800,
-          "alt": "Four bright green fingerboard wheels with metallic bearing centers displayed inside a black branded display case."
+          "src": "/products/primary-bm-race-wheels-display.jpg",
+          "width": 900,
+          "height": 900,
+          "alt": "BM race-grade fingerboard wheels in display frame — Fingerboard Lab"
         },
         {
           "id": 1029712914060703,
           "product_id": 10297129140607,
-          "position": 3,
+          "position": 2,
           "src": "https://img.alicdn.com/bao/uploaded/2208998319270/O1CN015hyoGc2ILiU6Ec0bA_!!2208998319270.jpg",
           "width": 800,
           "height": 800,
@@ -22313,7 +22295,7 @@
         {
           "id": 1029712914060704,
           "product_id": 10297129140607,
-          "position": 4,
+          "position": 3,
           "src": "https://img.alicdn.com/bao/uploaded/2208998319270/O1CN018okWCd2ILiU6EdHdq_!!2208998319270.jpg",
           "width": 800,
           "height": 800,
@@ -22324,10 +22306,10 @@
         "id": 1029712914060700,
         "product_id": 10297129140607,
         "position": 1,
-        "src": "/products/primary-10297129140607-be2.jpg",
-        "width": 800,
-        "height": 800,
-        "alt": "BM Race-Grade Fingerboard Wheels — Metal Lock, Quiet-Running — Fingerboard Lab"
+        "src": "/products/primary-bm-race-wheels-display.jpg",
+        "width": 900,
+        "height": 900,
+        "alt": "BM race-grade fingerboard wheels in display frame — Fingerboard Lab"
       }
     },
     {
@@ -35445,6 +35427,15 @@
           "id": 920000000101002,
           "product_id": 920000000101,
           "position": 1,
+          "src": "/products/primary-wp-pro-tyler-complete-lifestyle.jpg",
+          "width": 900,
+          "height": 900,
+          "alt": "WP Pro 5-ply maple TYLER fingerboard complete with packaging — Fingerboard Lab"
+        },
+        {
+          "id": 920000000101002,
+          "product_id": 920000000101,
+          "position": 2,
           "src": "https://img.alicdn.com/imgextra/i2/2217982279826/O1CN01ycI7UA2MSMt3grbJE_!!2217982279826.jpg",
           "width": 800,
           "height": 800,
@@ -35453,7 +35444,7 @@
         {
           "id": 920000000101003,
           "product_id": 920000000101,
-          "position": 2,
+          "position": 3,
           "src": "https://img.alicdn.com/imgextra/i4/2217982279826/O1CN01UfNxM42MSMt8GpqDt_!!2217982279826.jpg",
           "width": 800,
           "height": 800,
@@ -35462,30 +35453,21 @@
         {
           "id": 920000000101004,
           "product_id": 920000000101,
-          "position": 3,
+          "position": 4,
           "src": "https://img.alicdn.com/imgextra/i3/2217982279826/O1CN015aLNX22MSMt8BCc45_!!2217982279826.jpg",
           "width": 800,
           "height": 800,
           "alt": "Red complete fingerboard with white wheels and silver trucks resting on a turntable surface."
-        },
-        {
-          "id": 920000000101001,
-          "product_id": 920000000101,
-          "position": 4,
-          "src": "https://img.alicdn.com/imgextra/i1/2217982279826/O1CN01nfSkYC2MSMt8PdcTm_!!2217982279826.heic",
-          "width": 800,
-          "height": 800,
-          "alt": "WP Pro 5-Ply Maple Complete — TYLER — Fingerboard Lab"
         }
       ],
       "image": {
         "id": 920000000101002,
         "product_id": 920000000101,
         "position": 1,
-        "src": "https://img.alicdn.com/imgextra/i2/2217982279826/O1CN01ycI7UA2MSMt3grbJE_!!2217982279826.jpg",
-        "width": 800,
-        "height": 800,
-        "alt": "WP Pro 5-Ply Maple Complete — TYLER — Fingerboard Lab"
+        "src": "/products/primary-wp-pro-tyler-complete-lifestyle.jpg",
+        "width": 900,
+        "height": 900,
+        "alt": "WP Pro 5-ply maple TYLER fingerboard complete with packaging — Fingerboard Lab"
       }
     },
     {
@@ -35907,10 +35889,10 @@
           "id": 920000000105001,
           "product_id": 920000000105,
           "position": 1,
-          "src": "https://img.alicdn.com/imgextra/i4/2217982279826/O1CN01piJO6o2MSMlnINzpo_!!2217982279826.jpg",
-          "width": 800,
-          "height": 800,
-          "alt": "Multiple stacks of black fingerboard grip tape sheets with white backing on a textured wooden table."
+          "src": "/products/primary-wp-3m-grip-easyboost-clean.jpg",
+          "width": 900,
+          "height": 900,
+          "alt": "WP 3M Anti-Slip Grip Pad Easyboost series, black grip sheets — Fingerboard Lab"
         },
         {
           "id": 920000000105002,
@@ -35944,10 +35926,10 @@
         "id": 920000000105001,
         "product_id": 920000000105,
         "position": 1,
-        "src": "https://img.alicdn.com/imgextra/i4/2217982279826/O1CN01piJO6o2MSMlnINzpo_!!2217982279826.jpg",
-        "width": 800,
-        "height": 800,
-        "alt": "WP 3M Anti-Slip Grip Pad — Easyboost Series — Fingerboard Lab"
+        "src": "/products/primary-wp-3m-grip-easyboost-clean.jpg",
+        "width": 900,
+        "height": 900,
+        "alt": "WP 3M Anti-Slip Grip Pad Easyboost series, black grip sheets — Fingerboard Lab"
       }
     },
     {
