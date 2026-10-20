@@ -21,6 +21,17 @@ export default {
   async redirects() {
     return [
       {
+        // Deleted listings (2026-10-20): send old links to the completes collection, not a 404.
+        source: "/product/wp-dyed-series-fingerboard-complete-handmade-maple",
+        destination: "/search/completes",
+        permanent: true,
+      },
+      {
+        source: "/product/dtzero-1-4-series-pro-fingerboard-complete-maple",
+        destination: "/search/completes",
+        permanent: true,
+      },
+      {
         source: "/:path*",
         has: [{ type: "host", value: "www.fingerboardlab.com" }],
         destination: "https://fingerboardlab.com/:path*",
