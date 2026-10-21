@@ -3,9 +3,9 @@ import { getSupabase } from "./supabase";
 import { sendAbandonedCartEmail } from "./email";
 
 /**
- * Stores an expired Checkout Session (the abandoned cart) and, when the
- * shopper entered an email and opted in to marketing, sends one recovery
- * email with the Stripe recovery link and the first-order code.
+ * Stores an expired Checkout Session (the abandoned cart) and sends one
+ * reminder to the email the shopper typed into checkout, with the Stripe
+ * recovery link and the first-order code. The email carries an opt-out line.
  * Idempotent: Stripe retries webhooks, so an existing row is left alone.
  */
 export async function recordAbandonedCart(
@@ -45,7 +45,7 @@ export async function recordAbandonedCart(
     return { stored: false, emailed: false };
   }
 
-  if (!consent || !recoveryUrl || items.length === 0) {
+  if (!recoveryUrl || items.length === 0) {
     return { stored: true, emailed: false };
   }
 
