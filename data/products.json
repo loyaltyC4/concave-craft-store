@@ -320,27 +320,18 @@
       ],
       "images": [
         {
-          "id": 1029712914055900,
-          "product_id": 10297129140559,
-          "position": 1,
-          "src": "/products/primary-10297129140559-cleaned.jpg",
-          "width": 1000,
-          "height": 1000,
-          "alt": "Assembled wooden fingerboard complete with metallic trucks and a printed graphic next to a storage pouch."
-        },
-        {
           "id": 1029712914055901,
           "product_id": 10297129140559,
-          "position": 2,
-          "src": "https://img.alicdn.com/bao/uploaded/2217982279826/O1CN01jkSIWV2MSMoORKWTr_!!2217982279826.jpg",
+          "position": 1,
+          "src": "/products/primary-10297129140559-v2.jpg",
           "width": 1000,
           "height": 1000,
-          "alt": "Two pastel pink and blue wooden fingerboard completes with gummy bear quote graphics."
+          "alt": "Pink and blue WP Bear Gummy fingerboard completes, maple decks with shallow concave, on a white background"
         },
         {
           "id": 1029712914055902,
           "product_id": 10297129140559,
-          "position": 3,
+          "position": 2,
           "src": "https://img.alicdn.com/bao/uploaded/2217982279826/O1CN01M46sKk2MSMoQNsUn0_!!2217982279826.jpg",
           "width": 1000,
           "height": 1000,
@@ -349,7 +340,7 @@
         {
           "id": 1029712914055903,
           "product_id": 10297129140559,
-          "position": 4,
+          "position": 3,
           "src": "https://img.alicdn.com/bao/uploaded/2217982279826/O1CN01sn945h2MSMoPXDOVJ_!!2217982279826.jpg",
           "width": 1000,
           "height": 1000,
@@ -358,7 +349,7 @@
         {
           "id": 1029712914055904,
           "product_id": 10297129140559,
-          "position": 5,
+          "position": 4,
           "src": "https://img.alicdn.com/bao/uploaded/2217982279826/O1CN01gg4vRj2MSMoJa6rtz_!!2217982279826.jpg",
           "width": 1000,
           "height": 1000,
@@ -368,11 +359,11 @@
       "image": {
         "id": 1029712914055901,
         "product_id": 10297129140559,
-        "position": 2,
-        "src": "https://img.alicdn.com/bao/uploaded/2217982279826/O1CN01jkSIWV2MSMoORKWTr_!!2217982279826.jpg",
+        "position": 1,
+        "src": "/products/primary-10297129140559-v2.jpg",
         "width": 1000,
         "height": 1000,
-        "alt": "Two pastel pink and blue wooden fingerboard completes with gummy bear quote graphics."
+        "alt": "Pink and blue WP Bear Gummy fingerboard completes, maple decks with shallow concave, on a white background"
       }
     },
     {
