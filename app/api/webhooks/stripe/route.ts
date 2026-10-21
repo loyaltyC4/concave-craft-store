@@ -2,6 +2,7 @@ import { NextRequest, NextResponse } from "next/server";
 import Stripe from "stripe";
 import { getStripe } from "lib/stripe";
 import { getSupabase } from "lib/supabase";
+import { recordAbandonedCart, markCartRecovered } from "lib/abandoned";
 import {
   decrementInventory,
   recordOrder,
@@ -152,6 +153,20 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ error: "invalid_signature" }, { status: 400 });
   }
 
+  if (event.type === "checkout.session.expired") {
+    try {
+      const expired = await stripe.checkout.sessions.retrieve(
+        (event.data.object as Stripe.Checkout.Session).id,
+        { expand: ["line_items"] },
+      );
+      const r = await recordAbandonedCart(expired);
+      return NextResponse.json({ received: true, abandoned: r });
+    } catch (err) {
+      console.error("abandoned cart handling failed:", err);
+      return NextResponse.json({ received: true, abandoned: "error" });
+    }
+  }
+
   if (event.type !== "checkout.session.completed") {
     // Acknowledge everything else — we only act on completed checkouts.
     return NextResponse.json({ received: true });
@@ -171,6 +186,8 @@ export async function POST(req: NextRequest) {
       { status: 500 },
     );
   }
+
+  await markCartRecovered(session);
 
   // --- Custom fingerboard build orders (non-exclusive with normal cart path) ---
   await handleCustomOrderPaid(session);

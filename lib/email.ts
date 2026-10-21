@@ -1,4 +1,4 @@
-import { SITE_NAME, SUPPORT_EMAIL } from "./brand";
+import { SITE_NAME, SUPPORT_EMAIL, WELCOME_DISCOUNT_CODE } from "./brand";
 
 export function isResendConfigured(): boolean {
   return Boolean(process.env.RESEND_API_KEY);
@@ -91,6 +91,81 @@ export async function sendOrderConfirmationEmail(params: {
         bcc: adminEmail ? [adminEmail] : undefined,
         subject: `Your ${SITE_NAME} order is confirmed`,
         html: orderEmailHtml(params),
+      }),
+    });
+    return { sent: res.ok };
+  } catch {
+    return { sent: false };
+  }
+}
+
+// ---------------------------------------------------------------------------
+// Abandoned checkout recovery
+// ---------------------------------------------------------------------------
+
+function abandonedCartHtml(params: {
+  items: { title: string; quantity: number; unitAmount: number }[];
+  amountTotal: number;
+  currency: string;
+  recoveryUrl: string;
+}) {
+  const rows = params.items
+    .map(
+      (it) => `
+      <tr>
+        <td style="padding:10px 0;border-bottom:1px solid #23252b;color:#e8e8e8;font-size:14px;">
+          ${it.title} <span style="color:#8a8f98;">× ${it.quantity}</span>
+        </td>
+        <td style="padding:10px 0;border-bottom:1px solid #23252b;color:#e8e8e8;font-size:14px;text-align:right;">
+          ${money(it.unitAmount * it.quantity, params.currency)}
+        </td>
+      </tr>`,
+    )
+    .join("");
+
+  return `
+  <div style="background:#0b0c0e;padding:32px 0;font-family:Arial,Helvetica,sans-serif;">
+    <table role="presentation" width="100%" style="max-width:520px;margin:0 auto;background:#15171c;border-radius:16px;overflow:hidden;">
+      <tr><td style="padding:32px;">
+        <div style="width:36px;height:36px;border-radius:10px;background:#c5f23c;margin-bottom:16px;"></div>
+        <h1 style="color:#f3f1ea;font-size:22px;margin:0 0 8px;">Your setup is still in the cart.</h1>
+        <p style="color:#8a8f98;font-size:14px;margin:0 0 24px;">
+          You left before checking out. We saved everything. Use code <strong style="color:#c5f23c;">${WELCOME_DISCOUNT_CODE}</strong> at checkout for 10% off your first order.
+        </p>
+        <table role="presentation" width="100%">${rows}</table>
+        <p style="margin:28px 0 0;">
+          <a href="${params.recoveryUrl}" style="display:inline-block;background:#c5f23c;color:#0b0c0e;font-weight:bold;font-size:15px;padding:14px 26px;border-radius:10px;text-decoration:none;">Finish checkout</a>
+        </p>
+        <p style="color:#8a8f98;font-size:12px;margin-top:28px;">
+          ${SITE_NAME} · Questions? Reply to this email or contact ${SUPPORT_EMAIL}
+        </p>
+      </td></tr>
+    </table>
+  </div>`;
+}
+
+export async function sendAbandonedCartEmail(params: {
+  to: string;
+  items: { title: string; quantity: number; unitAmount: number }[];
+  amountTotal: number;
+  currency: string;
+  recoveryUrl: string;
+}): Promise<{ sent: boolean }> {
+  if (!isResendConfigured()) return { sent: false };
+  const from =
+    process.env.RESEND_FROM_EMAIL || "Fingerboard Lab <onboarding@resend.dev>";
+  try {
+    const res = await fetch("https://api.resend.com/emails", {
+      method: "POST",
+      headers: {
+        Authorization: `Bearer ${process.env.RESEND_API_KEY}`,
+        "content-type": "application/json",
+      },
+      body: JSON.stringify({
+        from,
+        to: [params.to],
+        subject: `Your ${SITE_NAME} cart is waiting (10% off inside)`,
+        html: abandonedCartHtml(params),
       }),
     });
     return { sent: res.ok };
