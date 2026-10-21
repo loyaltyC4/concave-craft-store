@@ -137,7 +137,7 @@ function abandonedCartHtml(params: {
           <a href="${params.recoveryUrl}" style="display:inline-block;background:#c5f23c;color:#0b0c0e;font-weight:bold;font-size:15px;padding:14px 26px;border-radius:10px;text-decoration:none;">Finish checkout</a>
         </p>
         <p style="color:#8a8f98;font-size:12px;margin-top:28px;">
-          ${SITE_NAME} · Questions? Reply to this email or contact ${SUPPORT_EMAIL}
+          ${SITE_NAME} · You got this because you started a checkout. Reply "stop" and we will not email again.
         </p>
       </td></tr>
     </table>

@@ -142,10 +142,10 @@ export async function POST(req: NextRequest) {
       },
       shipping_options: [standardShippingOption],
       allow_promotion_codes: true,
-      // Abandoned-cart recovery: expire after 1h (Stripe minimum is 30 min), keep
-      // a recovery link, and ask for marketing consent so we may email it.
+      // Abandoned-cart recovery: expire after 1h (Stripe minimum is 30 min) and keep
+      // a recovery link. consent_collection is not available for this Stripe
+      // account's country (it fails every session), so it must not be sent.
       expires_at: Math.floor(Date.now() / 1000) + 60 * 60,
-      consent_collection: { promotions: "auto" },
       after_expiration: { recovery: { enabled: true, allow_promotion_codes: true } },
       success_url: `${origin}/order/success?session_id={CHECKOUT_SESSION_ID}`,
       cancel_url: `${origin}/search`,
