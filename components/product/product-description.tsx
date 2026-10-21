@@ -97,6 +97,10 @@ export function ProductDescription({ product }: { product: Product }) {
               <span className="text-sm text-red-400">Currently out of stock</span>
             );
           }
+          const qty = Number((stockVariant as { inventoryQuantity?: number } | undefined)?.inventoryQuantity);
+          if (Number.isFinite(qty) && qty > 0 && qty <= 10) {
+            return <span className="text-sm font-medium text-amber-400">Only {qty} left in stock</span>;
+          }
           return <span className="text-sm text-neutral-400">In stock</span>;
         })()}
       </div>
