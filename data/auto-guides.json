@@ -1,5 +1,109 @@
 [
  {
+  "slug": "finger-board-rails-guide",
+  "title": "Finger Board Rails: Choose, Install & Maintain",
+  "metaTitle": "Finger Board Rails: Choose, Install & Maintain",
+  "metaDescription": "Find the right rail width, material, and installation tips to grind smoother and extend your fingerboard setup's life.",
+  "category": "Reference",
+  "updated": "2026-10-23",
+  "readMinutes": 4,
+  "heroSummary": "Find the right rail width, material, and installation tips to grind smoother and extend your fingerboard setup's life.",
+  "sections": [
+   {
+    "heading": "What are finger board rails and why use them?",
+    "body": [
+     "Finger board rails are the narrow bars that let a fingerboard slide or grind like a real skateboard. They replace the flat edge of a ledge and give a realistic feel. Most riders add them to park pieces, grind boxes, and manual stalls. The result is smoother tricks and more control.",
+     "Using rails also teaches balance and timing. The metal or plastic surface forces the rider to keep the board level, which improves overall technique. For beginners, plastic rails are forgiving. For seasoned players, metal rails provide the slickness needed for high‑speed grinds."
+    ]
+   },
+   {
+    "heading": "How to choose the right rail width and material?",
+    "body": [
+     "The most common deck width is between twenty‑nine and thirty‑six millimetres. Pick a rail that fits inside that range. A rail that is too wide will interfere with the deck's edges. A rail that is too narrow gives little surface to grind on.",
+     "Material matters. Metal rails, typically aluminium, stay flat after many grinds. They produce a bright, consistent sound that signals a good contact. Plastic rails are lighter and cheaper, but they can flex under heavy use. If you ride a lot of manuals, metal is the safer bet."
+    ]
+   },
+   {
+    "heading": "Pros and cons at a glance",
+    "body": [
+     "Metal wins on durability and sound. It also feels faster once you get used to the slick surface. Plastic wins on weight and price. It can be more forgiving when you miss a landing.",
+     "Consider the obstacle shape too. Straight rails work for ledges, while curved rails mimic quarter‑pipes. The curve radius should match the intended trick. A tighter radius suits quick slides; a larger radius feels more like a real ramp."
+    ]
+   },
+   {
+    "heading": "Installing rails on a fingerboard: step‑by‑step",
+    "body": [
+     "Installation is simple, but a few details matter.",
+     "- Gather a small screwdriver, a piece of double‑sided tape, and the rail.",
+     "- Clean the spot on the obstacle where the rail will sit. Dust stops the adhesive from bonding.",
+     "- Place the tape on the rail's underside. Press it firmly.",
+     "- Align the rail with the obstacle edge. Make sure the rail sits flush with the surface.",
+     "- Press down for a few seconds. The tape holds the rail in place for most casual play.",
+     "If you need a permanent fit, a tiny drop of super glue works, but it makes future swaps harder. Many players keep the tape method because it allows quick changes during practice sessions. A quick test grind right after mounting will reveal any wobble."
+    ]
+   },
+   {
+    "heading": "Waxing and maintaining rails for consistent grind",
+    "body": [
+     "Wax is optional but many riders swear by it. Wax adds a thin layer of friction that prevents the board from slipping too fast on metal. It also reduces squeaking.",
+     "To apply wax:",
+     "- Use a small piece of fingerboard‑size wax stick.",
+     "- Rub it along the rail length until a thin film appears.",
+     "- Wipe off excess with a soft cloth.",
+     "Check the rail after each session. Dust and oil from fingers build up and can make the rail feel sticky. A quick wipe restores the original feel.",
+     "Plastic rails usually stay dry. If they feel too slick, a light dusting of talc can add just enough grip without making the surface gummy."
+    ]
+   },
+   {
+    "heading": "Common mistakes and how to avoid them",
+    "body": [
+     "Using the wrong width. A rail wider than the deck catches on the deck's sidewalls, causing the board to flip. Measure your deck first.",
+     "Over‑applying wax. Too much wax makes the rail slippery, especially on plastic. A thin coat is enough.",
+     "Skipping the cleaning step. Adhesive fails if the surface is oily. A quick wipe with a lint‑free cloth prevents that.",
+     "Mounting on a curved obstacle with a straight rail. The mismatch creates gaps that stop the grind. Match the rail shape to the obstacle for smoother transitions."
+    ]
+   },
+   {
+    "heading": "When to upgrade or replace rails",
+    "body": [
+     "If you notice the rail wobbling or the surface wearing flat, it's time for a new one. Metal rails can develop scratches that change the grind feel. Plastic rails may crack after repeated impact.",
+     "Players who progress from basic tricks to advanced grinds often switch from plastic to metal. The added durability supports higher speeds and longer sessions.",
+     "For a custom setup, consider swapping rail lengths. Longer rails give more room for big tricks; shorter rails fit tight park pieces. The same deck can accommodate both by simply changing the rail.",
+     "Finally, keep an eye on the tape or glue. If it starts to peel, re‑secure the rail. A loose rail can snap off mid‑grind and ruin a trick."
+    ]
+   },
+   {
+    "heading": "Bottom line",
+    "body": [
+     "Finger board rails are essential for realistic grinding. Choose the width that matches your deck, pick metal for durability or plastic for affordability, and install with clean surfaces and light adhesive. Wax when you need extra grip, and replace rails once they wear. With the right rail, every grind feels smoother and every trick lands cleaner."
+    ]
+   }
+  ],
+  "faqs": [
+   {
+    "q": "What material is best for finger board rails?",
+    "a": "Metal offers the most consistent grind, while plastic is lighter and cheaper for beginners."
+   },
+   {
+    "q": "How wide should a rail be for a standard deck?",
+    "a": "Rails between twenty‑nine and thirty‑six millimetres match the common deck width range."
+   },
+   {
+    "q": "Do I need wax on finger board rails?",
+    "a": "Wax improves grip on metal rails, but many players prefer dry metal for a slick feel."
+   },
+   {
+    "q": "Can I replace rails on a completed fingerboard?",
+    "a": "Yes, most completes allow the rail to be removed and swapped without damaging the deck."
+   }
+  ],
+  "related": [
+   "complete-beginner-fingerboard-kit",
+   "best-fingerboard-park-kit-gifts",
+   "upgrading-from-tech-deck"
+  ]
+ },
+ {
   "slug": "36mm-fingerboard-guide",
   "title": "36mm Fingerboard Guide: Size, Setup & Buying Options",
   "metaTitle": "36mm Fingerboard Guide: Size, Setup & Buying Options",
