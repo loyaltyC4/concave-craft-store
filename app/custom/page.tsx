@@ -156,21 +156,22 @@ export default function CustomBuildPage() {
                 a sketch — and we&apos;ll build something that doesn&apos;t
                 exist anywhere else.
               </p>
-              <div className="mt-8 flex flex-wrap gap-3">
+              <ul className="mt-8 flex flex-wrap gap-x-6 gap-y-2 text-sm text-neutral-300">
                 {[
                   "From $89",
                   "32mm / 34mm / 36mm",
                   "2–3 day production",
                   "Up to 10 boards",
                 ].map((c) => (
-                  <span
-                    key={c}
-                    className="rounded-full border border-white/10 bg-white/[0.03] px-3.5 py-2 text-[13px] text-neutral-300"
-                  >
+                  <li key={c} className="flex items-center gap-2">
+                    <span
+                      aria-hidden
+                      className="h-1.5 w-1.5 rounded-full bg-[#c5f23c]"
+                    />
                     {c}
-                  </span>
+                  </li>
                 ))}
-              </div>
+              </ul>
             </div>
           </div>
         </section>
