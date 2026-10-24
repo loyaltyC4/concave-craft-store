@@ -223,9 +223,12 @@ export default async function CategoryPage(props: {
               <h1 className="text-2xl font-semibold text-white md:text-4xl">
                 {heading}
               </h1>
-              <p className="mt-2 text-xs font-semibold uppercase tracking-wide text-[#c5f23c]">
-                {all.length} products
-              </p>
+              <a
+                href="#products"
+                className="mt-2 inline-block text-xs font-semibold uppercase tracking-wide text-[#c5f23c] underline-offset-4 hover:underline"
+              >
+                {all.length} products ↓
+              </a>
             </div>
           </>
         ) : (
@@ -244,6 +247,7 @@ export default async function CategoryPage(props: {
         </p>
       ) : null}
 
+      <div id="products" className="scroll-mt-24" />
       <Suspense
         fallback={
           <Grid className="grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">

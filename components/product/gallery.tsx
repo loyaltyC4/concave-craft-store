@@ -1,14 +1,29 @@
 "use client";
 
-import { ArrowLeftIcon, ArrowRightIcon } from "@heroicons/react/24/outline";
+import {
+  ArrowLeftIcon,
+  ArrowRightIcon,
+  MagnifyingGlassPlusIcon,
+  XMarkIcon,
+} from "@heroicons/react/24/outline";
 import { GridTileImage } from "components/grid/tile";
 import clsx from "clsx";
 import Image from "next/image";
 import { useSearchParams } from "next/navigation";
-import { useEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 
 type GalleryImage = { src: string; altText: string };
 
+// 2026-10-24 PostHog friction fix. Measured on mobile product pages:
+//  - the arrows / thumbnails did nothing whenever a variant with its own photo
+//    was selected (the variant index always won over the shopper's choice),
+//  - tapping the photo did nothing on touch (an earlier fix suppressed the
+//    zoom), so shoppers rage-tapped the one thing they naturally tap,
+//  - the full-width strip that held the arrows sat on top of the lower part of
+//    the photo and swallowed taps meant for the image.
+// Now: any manual choice wins until the selected variant changes, a tap or
+// click opens a real full-screen viewer (swipe, arrows, visible Close button),
+// and only the arrow pill itself captures pointer events.
 export function Gallery({
   images,
   variants = [],
@@ -24,16 +39,9 @@ export function Gallery({
 }) {
   const searchParams = useSearchParams();
   const [zoomOpen, setZoomOpen] = useState(false);
+  const [manual, setManual] = useState<number | null>(null);
   const touchStartX = useRef<number | null>(null);
-  const swipedRef = useRef(false);
-  const touchTapAtRef = useRef<number | null>(null);
-  // Local index wins between navigations. 2026-10-17: every gallery tap used
-  // to do a Next.js router.replace('?image=N'), so a rapid thumb-swipe fired
-  // a server round-trip per tap — the #1 mobile rage-click source in the
-  // PostHog friction report (8 of 12 rages on product pages). Taps now only
-  // flip local state; the URL is kept in sync via history.replaceState so
-  // ?image=N deep links (shared/bookmarked) still work, but with zero
-  // navigation and zero re-render churn.
+  const swipedAt = useRef(0);
 
   // Resolve the currently-selected variant from the option query params, the
   // same way ProductDescription and AddToCart do, so all three stay in sync.
@@ -54,52 +62,36 @@ export function Gallery({
         ]
       : images;
 
-  // When a variant with its own photo is selected, that photo leads. Otherwise
-  // fall back to the manual ?image= index for arrow/thumbnail browsing.
   const variantIndex = variantSrc
     ? allImages.findIndex((i) => i.src === variantSrc)
     : -1;
+  // Old shared links may carry ?image=N; it is still read, no longer written.
   const paramIndex = searchParams.has("image")
-    ? parseInt(searchParams.get("image")!)
+    ? parseInt(searchParams.get("image")!, 10)
     : 0;
-  const [localIndex, setLocalIndex] = useState<number | null>(null);
 
-  // A real navigation (variant swatch, back/forward) supersedes the local
-  // override — useSearchParams only changes identity on router navigations,
-  // not on our own history.replaceState, so this doesn't fight tap updates.
+  // Picking a different variant is the only thing that discards the shopper's
+  // manual choice.
   useEffect(() => {
-    setLocalIndex(null);
-  }, [searchParams]);
+    setManual(null);
+  }, [variantSrc]);
 
-  const imageIndex =
-    variantIndex >= 0
-      ? variantIndex
-      : Math.min(
-          Math.max(localIndex ?? paramIndex, 0),
-          allImages.length - 1,
-        );
+  const count = allImages.length;
+  const raw = manual ?? (variantIndex >= 0 ? variantIndex : paramIndex);
+  const imageIndex = Math.min(
+    Math.max(Number.isFinite(raw) ? raw : 0, 0),
+    Math.max(count - 1, 0),
+  );
 
-  const updateImage = (index: number) => {
-    const bounded = Math.min(Math.max(index, 0), allImages.length - 1);
-    setLocalIndex(bounded);
-    // Silent URL sync for deep links — no navigation, no server round-trip.
-    if (typeof window === "undefined") return;
-    try {
-      const url = new URL(window.location.href);
-      url.searchParams.set("image", String(bounded));
-      window.history.replaceState(window.history.state, "", url.toString());
-    } catch {
-      // URL sync is best-effort; the visible image already changed.
-    }
-  };
-
-  const nextImageIndex =
-    imageIndex + 1 < allImages.length ? imageIndex + 1 : 0;
-  const previousImageIndex =
-    imageIndex === 0 ? allImages.length - 1 : imageIndex - 1;
-
-  const buttonClassName =
-    "h-full min-h-[44px] min-w-[44px] px-6 transition-all ease-in-out hover:scale-110 hover:text-black dark:hover:text-white flex items-center justify-center";
+  const go = useCallback(
+    (to: number) => {
+      if (count < 2) return;
+      setManual(((to % count) + count) % count);
+    },
+    [count],
+  );
+  const next = () => go(imageIndex + 1);
+  const prev = () => go(imageIndex - 1);
 
   const activeImage = allImages[imageIndex];
   const activeImageSrc = activeImage?.src as string;
@@ -107,64 +99,69 @@ export function Gallery({
   // External images (supplier CDN like alicdn.com) cannot be optimised through
   // Next.js image optimisation on Vercel's Hobby plan — that endpoint returns
   // 402 Payment Required for remote URLs, causing broken-image placeholders.
-  // Skipping optimisation for external URLs serves them directly from the CDN,
-  // which returns the image correctly. Local /products/ files are still
-  // optimised as normal.
+  // Skipping optimisation for external URLs serves them directly from the CDN.
   const isExternal = (src: string) => src.startsWith("https://");
 
   // Drop empty/placeholder slots so broken thumbnails never render.
   const thumbnails = allImages.filter((i) => Boolean(i.src));
 
-  // Close the lightbox on Escape.
+  // Viewer: Escape closes, arrow keys browse, the page behind stops scrolling.
   useEffect(() => {
     if (!zoomOpen) return;
     const onKey = (e: KeyboardEvent) => {
       if (e.key === "Escape") setZoomOpen(false);
+      if (e.key === "ArrowRight") go(imageIndex + 1);
+      if (e.key === "ArrowLeft") go(imageIndex - 1);
     };
+    const prevOverflow = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
     window.addEventListener("keydown", onKey);
-    return () => window.removeEventListener("keydown", onKey);
-  }, [zoomOpen]);
+    return () => {
+      window.removeEventListener("keydown", onKey);
+      document.body.style.overflow = prevOverflow;
+    };
+  }, [zoomOpen, go, imageIndex]);
+
+  const onTouchStart = (e: React.TouchEvent) => {
+    touchStartX.current = e.touches[0]?.clientX ?? null;
+  };
+  const onTouchEnd = (e: React.TouchEvent) => {
+    const start = touchStartX.current;
+    const end = e.changedTouches[0]?.clientX;
+    touchStartX.current = null;
+    if (start == null || end == null || count < 2) return;
+    const dx = end - start;
+    if (Math.abs(dx) > 40) {
+      swipedAt.current = Date.now();
+      go(dx < 0 ? imageIndex + 1 : imageIndex - 1);
+    }
+  };
+  // A swipe can still be followed by a synthetic click on some browsers.
+  const justSwiped = () => Date.now() - swipedAt.current < 400;
+
+  const pillButton =
+    "flex h-11 min-w-[44px] items-center justify-center px-4 transition hover:text-black active:scale-95 dark:hover:text-white";
 
   return (
-    <form>
+    <div>
       <div className="relative aspect-square h-full max-h-[550px] w-full overflow-hidden">
         {activeImage && (
-          <button
-            type="button"
-            onTouchStart={(e) => {
-              touchStartX.current = e.touches[0]?.clientX ?? null;
-              swipedRef.current = false;
-            }}
-            onTouchEnd={(e) => {
-              const start = touchStartX.current;
-              const end = e.changedTouches[0]?.clientX;
-              touchStartX.current = null;
-              if (start == null || end == null || allImages.length < 2) return;
-              const dx = end - start;
-              if (Math.abs(dx) > 40) {
-                swipedRef.current = true;
-                updateImage(dx < 0 ? nextImageIndex : previousImageIndex);
-              } else {
-                // Touch tap without swipe — flag it so the click that follows
-                // on touch devices does NOT open the lightbox (mobile visitors
-                // tap the image expecting nothing; the surprise overlay was a
-                // measured rage source).
-                touchTapAtRef.current = Date.now();
-              }
-            }}
+          <div
+            role="button"
+            tabIndex={0}
+            aria-label="Open full-size image"
+            onTouchStart={onTouchStart}
+            onTouchEnd={onTouchEnd}
             onClick={() => {
-              if (swipedRef.current) {
-                swipedRef.current = false;
-                return;
-              }
-              if (touchTapAtRef.current && Date.now() - touchTapAtRef.current < 700) {
-                touchTapAtRef.current = null;
-                return;
-              }
-              setZoomOpen(true);
+              if (!justSwiped()) setZoomOpen(true);
             }}
-            aria-label="Zoom product image"
-            className="block h-full w-full cursor-zoom-in"
+            onKeyDown={(e) => {
+              if (e.key === "Enter" || e.key === " ") {
+                e.preventDefault();
+                setZoomOpen(true);
+              }
+            }}
+            className="relative block h-full w-full cursor-zoom-in"
           >
             <Image
               className="h-full w-full object-contain"
@@ -175,24 +172,37 @@ export function Gallery({
               unoptimized={isExternal(activeImageSrc)}
               priority={true}
             />
-          </button>
+            <span
+              aria-hidden
+              className="pointer-events-none absolute right-3 top-3 flex h-9 w-9 items-center justify-center rounded-full bg-white/85 text-neutral-700 shadow-sm backdrop-blur-sm"
+            >
+              <MagnifyingGlassPlusIcon className="h-5 w-5" />
+            </span>
+          </div>
         )}
 
-        {allImages.length > 1 ? (
-          <div className="absolute bottom-[15%] flex w-full justify-center">
-            <div className="mx-auto flex h-11 items-center rounded-full border border-white bg-neutral-50/80 text-neutral-500 backdrop-blur-sm dark:border-black dark:bg-neutral-900/80">
+        {count > 1 ? (
+          <div className="pointer-events-none absolute inset-x-0 bottom-[6%] flex justify-center">
+            <div className="pointer-events-auto flex h-11 items-center rounded-full border border-white bg-neutral-50/85 text-neutral-600 shadow-sm backdrop-blur-sm dark:border-black dark:bg-neutral-900/80">
               <button
-                formAction={() => updateImage(previousImageIndex)}
+                type="button"
+                onClick={prev}
                 aria-label="Previous product image"
-                className={buttonClassName}
+                className={pillButton}
               >
                 <ArrowLeftIcon className="h-5" />
               </button>
-              <div className="mx-1 h-6 w-px bg-neutral-500"></div>
+              <span
+                aria-live="polite"
+                className="min-w-[3.25rem] text-center text-xs font-semibold tabular-nums"
+              >
+                {imageIndex + 1} / {count}
+              </span>
               <button
-                formAction={() => updateImage(nextImageIndex)}
+                type="button"
+                onClick={next}
                 aria-label="Next product image"
-                className={buttonClassName}
+                className={pillButton}
               >
                 <ArrowRightIcon className="h-5" />
               </button>
@@ -210,8 +220,10 @@ export function Gallery({
             return (
               <li key={image.src} className="h-20 w-20">
                 <button
-                  formAction={() => updateImage(fullIndex)}
-                  aria-label="Select product image"
+                  type="button"
+                  onClick={() => go(fullIndex)}
+                  aria-label={`Show product image ${fullIndex + 1}`}
+                  aria-current={isActive}
                   className="h-full w-full"
                 >
                   <GridTileImage
@@ -233,11 +245,31 @@ export function Gallery({
         <div
           role="dialog"
           aria-modal="true"
-          aria-label="Zoomed product image"
-          onClick={() => setZoomOpen(false)}
-          className="fixed inset-0 z-[70] flex cursor-zoom-out items-center justify-center bg-black/90 p-4"
+          aria-label="Product images"
+          onTouchStart={onTouchStart}
+          onTouchEnd={onTouchEnd}
+          onClick={() => {
+            if (!justSwiped()) setZoomOpen(false);
+          }}
+          className="fixed inset-0 z-[70] flex flex-col bg-black/95"
         >
-          <div className="relative h-full max-h-[90vh] w-full max-w-5xl">
+          <div
+            className="flex items-center justify-between px-4 py-3 text-white"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <span className="text-sm tabular-nums text-white/70">
+              {imageIndex + 1} / {count}
+            </span>
+            <button
+              type="button"
+              onClick={() => setZoomOpen(false)}
+              aria-label="Close image viewer"
+              className="flex h-11 w-11 items-center justify-center rounded-full bg-white/10 transition hover:bg-white/20"
+            >
+              <XMarkIcon className="h-6 w-6" />
+            </button>
+          </div>
+          <div className="relative mx-auto min-h-0 w-full max-w-5xl flex-1 p-4">
             <Image
               className="h-full w-full object-contain"
               fill
@@ -246,17 +278,41 @@ export function Gallery({
               src={activeImageSrc}
               unoptimized
             />
+            {count > 1 ? (
+              <>
+                <button
+                  type="button"
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    prev();
+                  }}
+                  aria-label="Previous product image"
+                  className={clsx(
+                    "absolute left-2 top-1/2 flex h-12 w-12 -translate-y-1/2 items-center justify-center",
+                    "rounded-full bg-white/10 text-white transition hover:bg-white/25 active:scale-95",
+                  )}
+                >
+                  <ArrowLeftIcon className="h-6 w-6" />
+                </button>
+                <button
+                  type="button"
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    next();
+                  }}
+                  aria-label="Next product image"
+                  className={clsx(
+                    "absolute right-2 top-1/2 flex h-12 w-12 -translate-y-1/2 items-center justify-center",
+                    "rounded-full bg-white/10 text-white transition hover:bg-white/25 active:scale-95",
+                  )}
+                >
+                  <ArrowRightIcon className="h-6 w-6" />
+                </button>
+              </>
+            ) : null}
           </div>
-          <span
-            className={clsx(
-              "absolute right-5 top-5 rounded-full border border-white/20",
-              "bg-white/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-wide text-white",
-            )}
-          >
-            Close
-          </span>
         </div>
       ) : null}
-    </form>
+    </div>
   );
 }

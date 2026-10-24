@@ -92,6 +92,7 @@ export function CustomBuildConfigurator() {
     const next = Math.min(10, Math.max(1, quantity + delta));
     if (next === quantity) {
       if (delta > 0) toast("Max 10 per order", { description: `Quantity stays at ${quantity}.` });
+      else toast("One board is the minimum", { description: "Use + to add more boards." });
       return;
     }
     setQuantity(next);
@@ -341,8 +342,8 @@ export function CustomBuildConfigurator() {
             type="button"
             aria-label="Decrease quantity"
             onClick={() => bumpQuantity(-1)}
-            className="flex h-11 w-11 items-center justify-center rounded-lg border border-white/15 text-lg text-[#f3f1ea] transition hover:border-[#c5f23c] disabled:opacity-40"
-            disabled={quantity <= 1}
+            className={`flex h-11 w-11 items-center justify-center rounded-lg border border-white/15 text-lg text-[#f3f1ea] transition hover:border-[#c5f23c] ${quantity <= 1 ? "opacity-40" : ""}`}
+            aria-disabled={quantity <= 1}
           >
             −
           </button>
