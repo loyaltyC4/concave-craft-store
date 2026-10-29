@@ -36538,6 +36538,987 @@
         "created_at": "2026-10-11T19:15:00+02:00",
         "updated_at": "2026-10-11T19:15:00+02:00"
       }
+    },
+    {
+      "id": 10297130000101,
+      "title": "DTzero Realistic Slope Brick Box — Fingerboard Obstacle",
+      "body_html": "<p>A scale-accurate slope box modelled on real brick-and-cement park furniture: an angled wooden face capped with individual brown coping bricks that grind like a real ledge. The DTzero logo sits on the side panel, and the whole unit is heavy enough to stay planted when you pop onto the coping.</p><p><strong>Why this one</strong></p><ul><li>DTzero brand prop from the same workshop behind the metal park bench and OME completes</li><li>Individual coping bricks along the top edge — a genuine grind surface, not a painted stripe</li><li>Angled slope face doubles as a launch ramp on one side and a bank on the other</li><li>Realistic brick detailing reads as a real park ledge on camera, ideal for filming clips</li></ul><p><strong>Specifications</strong></p><table><tbody><tr><td><strong>Brand</strong></td><td>DTzero</td></tr><tr><td><strong>Type</strong></td><td>Slope box / brick ledge obstacle</td></tr><tr><td><strong>Material</strong></td><td>Wood with brick-effect coping</td></tr><tr><td><strong>Scale</strong></td><td>Matched to 32–34mm fingerboards</td></tr></tbody></table><p><strong>Who it suits</strong></p><p>Riders building a realistic desk plaza who want a ledge that both grinds and launches, and filmers who need obstacles that read as real architecture rather than toys.</p><em>Ships directly from our supplier workshop with tracking, arriving in 7–14 business days. Prices in USD; shipping is free on orders over $50. 30-day returns if it is not right for you.</em>",
+      "handle": "dtzero-realistic-slope-brick-box-obstacle",
+      "created_at": "2026-10-29T22:40:00+02:00",
+      "updated_at": "2026-10-29T22:40:00+02:00",
+      "published_at": "2026-10-29T22:40:00+02:00",
+      "status": "active",
+      "published_scope": "web",
+      "template_suffix": null,
+      "tags": "DTzero, slope box, brick ledge, obstacle, coping, realistic scale, grind ledge",
+      "product_type": "Ramps & Obstacles",
+      "vendor": "Fingerboard Lab",
+      "variants": [
+        {
+          "id": 92000000010601,
+          "product_id": 10297130000101,
+          "title": "Default Title",
+          "price": "38.95",
+          "compare_at_price": null,
+          "position": 0,
+          "option1": "Default Title",
+          "inventory_policy": "continue",
+          "taxable": false,
+          "sku": "FL-10297130000101",
+          "requires_shipping": true,
+          "available": true,
+          "inventory_quantity": 10,
+          "weight": 0.6,
+          "weight_unit": "kg"
+        }
+      ],
+      "options": [
+        {
+          "id": 102971300001010,
+          "product_id": 10297130000101,
+          "name": "Option",
+          "position": 1,
+          "values": [
+            "Default Title"
+          ]
+        }
+      ],
+      "images": [
+        {
+          "id": 1029713000010102,
+          "product_id": 10297130000101,
+          "position": 1,
+          "src": "/products/primary-10297130000101-dtz.jpg",
+          "width": 800,
+          "height": 800,
+          "alt": "Wooden fingerboard slope brick box with brown coping bricks and circular DTzero logo."
+        },
+        {
+          "id": 1029713000010103,
+          "product_id": 10297130000101,
+          "position": 2,
+          "src": "https://gd3.alicdn.com/imgextra/i3/406006991/O1CN01p3XA5521VvUuUfqeH_!!406006991.jpg",
+          "width": 800,
+          "height": 800,
+          "alt": "Close-up of the slope brick box coping bricks and side panel on a wood desk."
+        },
+        {
+          "id": 1029713000010104,
+          "product_id": 10297130000101,
+          "position": 3,
+          "src": "https://gd3.alicdn.com/imgextra/i3/406006991/O1CN01DOPLHF21VvUnifFS6_!!406006991.jpg",
+          "width": 800,
+          "height": 800,
+          "alt": "Fingerboarder grinding the brick coping of the DTzero slope box obstacle."
+        },
+        {
+          "id": 1029713000010105,
+          "product_id": 10297130000101,
+          "position": 4,
+          "src": "https://gd2.alicdn.com/imgextra/i2/406006991/O1CN01zoSKOH21VvUq4UvGV_!!406006991.jpg",
+          "width": 800,
+          "height": 800,
+          "alt": "Side profile of the slope box showing the angled brick face and base."
+        },
+        {
+          "id": 1029713000010106,
+          "product_id": 10297130000101,
+          "position": 5,
+          "src": "https://gd2.alicdn.com/imgextra/i2/406006991/O1CN014bq8KJ21VvUmMzQg2_!!406006991.jpg",
+          "width": 800,
+          "height": 800,
+          "alt": "Scale view of the DTzero slope brick box next to a fingerboard deck."
+        }
+      ],
+      "image": {
+        "id": 1029713000010102,
+        "product_id": 10297130000101,
+        "position": 1,
+        "src": "/products/primary-10297130000101-dtz.jpg",
+        "width": 800,
+        "height": 800,
+        "alt": "Wooden fingerboard slope brick box with brown coping bricks and circular DTzero logo."
+      },
+      "seo_title": "DTzero Realistic Slope Brick Box Obstacle | Angled wooden slope box capped with real-feel brick coping. A grindable ledge and launch bank in one DTzero prop.",
+      "seo_description": "Wooden slope box with brick coping from DTzero — grind the ledge, hit the bank, film a realistic plaza clip."
+    },
+    {
+      "id": 10297130000102,
+      "title": "DTzero Chrome Fence Rail — Realistic Metal Obstacle",
+      "body_html": "<p>A polished-chrome fence barrier scaled for fingerboarding, cast in metal with two rectangular support feet. The reflective rail surface is the point: it catches light on camera exactly like the stainless fences at a real plaza, and it doubles as a round-stock rail for boardslides and lipslides.</p><p><strong>Why this one</strong></p><ul><li>Solid metal construction with a mirror-chrome finish — no plastic wobble under your board</li><li>Two recessed feet hold the rail dead flat on a desk or park setup</li><li>Engraved DTzero detailing at the base, matching the metal park bench from the same series</li><li>Foreign-trade surplus stock: the same unit DTzero supplies to overseas distributors</li></ul><p><strong>Specifications</strong></p><table><tbody><tr><td><strong>Brand</strong></td><td>DTzero</td></tr><tr><td><strong>Type</strong></td><td>Fence / rail barrier obstacle</td></tr><tr><td><strong>Material</strong></td><td>Polished cast metal</td></tr><tr><td><strong>Scale</strong></td><td>Matched to 32–34mm fingerboards</td></tr></tbody></table><p><strong>Who it suits</strong></p><p>Fingerboarders and filmers who want their setup to read like a real street spot — pair it with the DTzero park benches for a believable plaza line.</p><em>Ships directly from our supplier workshop with tracking, arriving in 7–14 business days. Prices in USD; shipping is free on orders over $50. 30-day returns if it is not right for you.</em>",
+      "handle": "dtzero-chrome-fence-rail-poles-obstacle",
+      "created_at": "2026-10-29T22:40:00+02:00",
+      "updated_at": "2026-10-29T22:40:00+02:00",
+      "published_at": "2026-10-29T22:40:00+02:00",
+      "status": "active",
+      "published_scope": "web",
+      "template_suffix": null,
+      "tags": "DTzero, fence rail, chrome, metal obstacle, round rail, realistic scale, surplus",
+      "product_type": "Ramps & Obstacles",
+      "vendor": "Fingerboard Lab",
+      "variants": [
+        {
+          "id": 92000000010602,
+          "product_id": 10297130000102,
+          "title": "Default Title",
+          "price": "52.95",
+          "compare_at_price": null,
+          "position": 0,
+          "option1": "Default Title",
+          "inventory_policy": "continue",
+          "taxable": false,
+          "sku": "FL-10297130000102",
+          "requires_shipping": true,
+          "available": true,
+          "inventory_quantity": 10,
+          "weight": 0.7,
+          "weight_unit": "kg"
+        }
+      ],
+      "options": [
+        {
+          "id": 102971300001020,
+          "product_id": 10297130000102,
+          "name": "Option",
+          "position": 1,
+          "values": [
+            "Default Title"
+          ]
+        }
+      ],
+      "images": [
+        {
+          "id": 1029713000010202,
+          "product_id": 10297130000102,
+          "position": 1,
+          "src": "/products/primary-10297130000102-dtz.jpg",
+          "width": 800,
+          "height": 800,
+          "alt": "Polished chrome fingerboard fence rail on two rectangular metal feet."
+        },
+        {
+          "id": 1029713000010203,
+          "product_id": 10297130000102,
+          "position": 2,
+          "src": "https://img.alicdn.com/imgextra/i3/406006991/O1CN019WKhQM21VvqfK0V2d_!!406006991.jpg",
+          "width": 800,
+          "height": 800,
+          "alt": "Close-up of the chrome fence rail poles with DTzero engraving at the base."
+        },
+        {
+          "id": 1029713000010204,
+          "product_id": 10297130000102,
+          "position": 3,
+          "src": "https://img.alicdn.com/imgextra/i2/406006991/O1CN01n5MSYf21VvqfK0lgG_!!406006991.jpg",
+          "width": 800,
+          "height": 800,
+          "alt": "DTzero chrome fence obstacle in a real skate spot scene with a fingerboard."
+        }
+      ],
+      "image": {
+        "id": 1029713000010202,
+        "product_id": 10297130000102,
+        "position": 1,
+        "src": "/products/primary-10297130000102-dtz.jpg",
+        "width": 800,
+        "height": 800,
+        "alt": "Polished chrome fingerboard fence rail on two rectangular metal feet."
+      },
+      "seo_title": "DTzero Chrome Fence Rail Poles Obstacle | Polished metal fence barrier with flat-set feet — a round-stock rail that mirrors real plaza architecture.",
+      "seo_description": "Cast-metal chrome fence rail from DTzero. Grind the round top, film the reflection, build a real plaza line."
+    },
+    {
+      "id": 10297130000103,
+      "title": "DTzero Park Arc Bench — Curved Metal Fingerboard Obstacle",
+      "body_html": "<p>The curved sibling of our DTzero metal park bench: three parallel slats sweeping into an arc, lifted on thin metal legs. Curved benches are the classic plaza feature — the arc launches manuals slightly off-line, which is exactly the detail that makes bench lines look real on camera.</p><p><strong>Why this one</strong></p><ul><li>Three-slat curved seat gives a genuine transition surface, not a flat block</li><li>Die-cast metal with a dark grey painted finish, detailed down to the leg joints</li><li>Thin realistic legs keep the silhouette honest at fingerboard scale</li><li>Sits flat and stable for grinds, manuals and nose-slide lines along the arc</li></ul><p><strong>Specifications</strong></p><table><tbody><tr><td><strong>Brand</strong></td><td>DTzero</td></tr><tr><td><strong>Type</strong></td><td>Arc bench obstacle</td></tr><tr><td><strong>Material</strong></td><td>Painted die-cast metal</td></tr><tr><td><strong>Scale</strong></td><td>Matched to 32–34mm fingerboards</td></tr></tbody></table><p><strong>Who it suits</strong></p><p>Riders collecting the DTzero realistic-props series — the arc bench, flat bench and fence rail together build a complete believable plaza on one desk.</p><em>Ships directly from our supplier workshop with tracking, arriving in 7–14 business days. Prices in USD; shipping is free on orders over $50. 30-day returns if it is not right for you.</em>",
+      "handle": "dtzero-park-arc-bench-fingerboard-obstacle",
+      "created_at": "2026-10-29T22:40:00+02:00",
+      "updated_at": "2026-10-29T22:40:00+02:00",
+      "published_at": "2026-10-29T22:40:00+02:00",
+      "status": "active",
+      "published_scope": "web",
+      "template_suffix": null,
+      "tags": "DTzero, arc bench, park bench, metal obstacle, realistic scale, curved ledge, plaza",
+      "product_type": "Ramps & Obstacles",
+      "vendor": "Fingerboard Lab",
+      "variants": [
+        {
+          "id": 92000000010603,
+          "product_id": 10297130000103,
+          "title": "Default Title",
+          "price": "59.95",
+          "compare_at_price": null,
+          "position": 0,
+          "option1": "Default Title",
+          "inventory_policy": "continue",
+          "taxable": false,
+          "sku": "FL-10297130000103",
+          "requires_shipping": true,
+          "available": true,
+          "inventory_quantity": 10,
+          "weight": 0.7,
+          "weight_unit": "kg"
+        }
+      ],
+      "options": [
+        {
+          "id": 102971300001030,
+          "product_id": 10297130000103,
+          "name": "Option",
+          "position": 1,
+          "values": [
+            "Default Title"
+          ]
+        }
+      ],
+      "images": [
+        {
+          "id": 1029713000010302,
+          "product_id": 10297130000103,
+          "position": 1,
+          "src": "/products/primary-10297130000103-dtz.jpg",
+          "width": 800,
+          "height": 800,
+          "alt": "Dark grey curved park arc bench obstacle with three slats and thin metal legs."
+        },
+        {
+          "id": 1029713000010303,
+          "product_id": 10297130000103,
+          "position": 2,
+          "src": "https://img.alicdn.com/imgextra/i2/406006991/O1CN017lVB6621Vvr7A2tBT_!!406006991.jpg",
+          "width": 800,
+          "height": 800,
+          "alt": "Side elevation of the DTzero arc bench showing its curved seat profile."
+        }
+      ],
+      "image": {
+        "id": 1029713000010302,
+        "product_id": 10297130000103,
+        "position": 1,
+        "src": "/products/primary-10297130000103-dtz.jpg",
+        "width": 800,
+        "height": 800,
+        "alt": "Dark grey curved park arc bench obstacle with three slats and thin metal legs."
+      },
+      "seo_title": "DTzero Park Arc Bench Fingerboard Obstacle | Curved three-slat metal bench on thin legs — the plaza classic for manuals, grinds and realistic clips.",
+      "seo_description": "Cast-metal curved bench from DTzero. Three slats, thin legs, real plaza silhouette for desk lines."
+    },
+    {
+      "id": 10297130000104,
+      "title": "DTzero Eclipse Handmade Fingerboard — Pro Deck or Complete",
+      "body_html": "<p>The Eclipse is DTzero's hand-laid pro model: a 2mm-thick pressed deck with monochrome eclipse artwork shipped in a gothic display box with tuning parts. Buy it as a bare deck to build on your own trucks, or as a complete with DTzero's tuned metal trucks and white wheels already set up.</p><p><strong>Why this one</strong></p><ul><li>Handmade pressed deck — real ply lines, hand-cut kicks, not a die-cut blank</li><li>Choose 32mm for technical flip tricks or 34mm for a more stable platform</li><li>Complete option arrives tuned and ready: metal trucks, white wheels, grip applied</li><li>Includes DTzero's spare-part and tuning kit in the display box</li></ul><p><strong>Specifications</strong></p><table><tbody><tr><td><strong>Brand</strong></td><td>DTzero</td></tr><tr><td><strong>Deck</strong></td><td>Handmade pressed maple, 2mm</td></tr><tr><td><strong>Widths</strong></td><td>32×96mm or 34×96mm</td></tr><tr><td><strong>Formats</strong></td><td>Bare deck or tuned complete</td></tr></tbody></table><p><strong>Who it suits</strong></p><p>Riders who want a collectable pro-model deck they can display in its box or skate hard — and who appreciate handmade kicks at a price die-cut boards can't match.</p><em>Ships directly from our supplier workshop with tracking, arriving in 7–14 business days. Prices in USD; shipping is free on orders over $50. 30-day returns if it is not right for you.</em>",
+      "handle": "dtzero-eclipse-handmade-fingerboard-deck-complete",
+      "created_at": "2026-10-29T22:40:00+02:00",
+      "updated_at": "2026-10-29T22:40:00+02:00",
+      "published_at": "2026-10-29T22:40:00+02:00",
+      "status": "active",
+      "published_scope": "web",
+      "template_suffix": null,
+      "tags": "DTzero, eclipse, handmade deck, pro model, complete, 32mm, 34mm, pressed deck",
+      "product_type": "Decks",
+      "vendor": "Fingerboard Lab",
+      "variants": [
+        {
+          "id": 92000000010604,
+          "product_id": 10297130000104,
+          "title": "Complete / 32mm",
+          "price": "104.95",
+          "compare_at_price": null,
+          "position": 1,
+          "option1": "Complete",
+          "option2": "32mm",
+          "inventory_policy": "continue",
+          "taxable": false,
+          "sku": "FL-10297130000104-C32",
+          "requires_shipping": true,
+          "available": true,
+          "inventory_quantity": 1,
+          "weight": 0.09,
+          "weight_unit": "kg",
+          "image_id": 1029713000010407
+        },
+        {
+          "id": 92000000010605,
+          "product_id": 10297130000104,
+          "title": "Deck only / 32mm",
+          "price": "64.95",
+          "compare_at_price": null,
+          "position": 2,
+          "option1": "Deck only",
+          "option2": "32mm",
+          "inventory_policy": "continue",
+          "taxable": false,
+          "sku": "FL-10297130000104-D32",
+          "requires_shipping": true,
+          "available": true,
+          "inventory_quantity": 4,
+          "weight": 0.03,
+          "weight_unit": "kg",
+          "image_id": 1029713000010408
+        },
+        {
+          "id": 92000000010606,
+          "product_id": 10297130000104,
+          "title": "Complete / 34mm",
+          "price": "104.95",
+          "compare_at_price": null,
+          "position": 3,
+          "option1": "Complete",
+          "option2": "34mm",
+          "inventory_policy": "continue",
+          "taxable": false,
+          "sku": "FL-10297130000104-C34",
+          "requires_shipping": true,
+          "available": false,
+          "inventory_quantity": 0,
+          "weight": 0.09,
+          "weight_unit": "kg",
+          "image_id": 1029713000010407
+        },
+        {
+          "id": 92000000010607,
+          "product_id": 10297130000104,
+          "title": "Deck only / 34mm",
+          "price": "64.95",
+          "compare_at_price": null,
+          "position": 4,
+          "option1": "Deck only",
+          "option2": "34mm",
+          "inventory_policy": "continue",
+          "taxable": false,
+          "sku": "FL-10297130000104-D34",
+          "requires_shipping": true,
+          "available": true,
+          "inventory_quantity": 1,
+          "weight": 0.03,
+          "weight_unit": "kg",
+          "image_id": 1029713000010408
+        }
+      ],
+      "options": [
+        {
+          "id": 102971300001040,
+          "product_id": 10297130000104,
+          "name": "Format",
+          "position": 1,
+          "values": [
+            "Deck only",
+            "Complete"
+          ]
+        },
+        {
+          "id": 102971300001041,
+          "product_id": 10297130000104,
+          "name": "Width",
+          "position": 2,
+          "values": [
+            "32mm",
+            "34mm"
+          ]
+        }
+      ],
+      "images": [
+        {
+          "id": 1029713000010402,
+          "product_id": 10297130000104,
+          "position": 1,
+          "src": "/products/primary-10297130000104-dtz.jpg",
+          "width": 800,
+          "height": 800,
+          "alt": "DTzero Eclipse handmade fingerboard kit laid out with its gothic box, deck and tuning parts."
+        },
+        {
+          "id": 1029713000010403,
+          "product_id": 10297130000104,
+          "position": 2,
+          "src": "https://img.alicdn.com/imgextra/i3/406006991/O1CN01KhvajI21Vw10rBqah_!!406006991.jpg",
+          "width": 800,
+          "height": 800,
+          "alt": "Eclipse deck bottom graphic with eclipse artwork in black and white."
+        },
+        {
+          "id": 1029713000010404,
+          "product_id": 10297130000104,
+          "position": 3,
+          "src": "https://img.alicdn.com/imgextra/i4/406006991/O1CN01Xsm6MB21Vw11x8NQt_!!406006991.jpg",
+          "width": 800,
+          "height": 800,
+          "alt": "Close-up of the Eclipse deck's ply lines and hand-cut edges."
+        },
+        {
+          "id": 1029713000010405,
+          "product_id": 10297130000104,
+          "position": 4,
+          "src": "https://img.alicdn.com/imgextra/i3/406006991/O1CN01LsWJ6821Vw11xAvOu_!!406006991.jpg",
+          "width": 800,
+          "height": 800,
+          "alt": "Eclipse complete assembled with black trucks and white wheels."
+        },
+        {
+          "id": 1029713000010406,
+          "product_id": 10297130000104,
+          "position": 5,
+          "src": "https://img.alicdn.com/imgextra/i3/406006991/O1CN01hJUyph21Vw12E0g92_!!406006991.jpg",
+          "width": 800,
+          "height": 800,
+          "alt": "Top view of the Eclipse deck showing grip tape and concave."
+        },
+        {
+          "id": 1029713000010407,
+          "product_id": 10297130000104,
+          "position": 6,
+          "src": "https://img.alicdn.com/i2/406006991/O1CN01P9D6vd21Vw12E2tJd_!!406006991.jpg",
+          "width": 800,
+          "height": 800,
+          "alt": "Complete kit option: Eclipse deck, trucks, wheels and tuning parts in the display box."
+        },
+        {
+          "id": 1029713000010408,
+          "product_id": 10297130000104,
+          "position": 7,
+          "src": "https://img.alicdn.com/i3/406006991/O1CN01LsWJ6821Vw11xAvOu_!!406006991.jpg",
+          "width": 800,
+          "height": 800,
+          "alt": "Deck-only option: bare Eclipse maple deck without trucks or wheels."
+        }
+      ],
+      "image": {
+        "id": 1029713000010402,
+        "product_id": 10297130000104,
+        "position": 1,
+        "src": "/products/primary-10297130000104-dtz.jpg",
+        "width": 800,
+        "height": 800,
+        "alt": "DTzero Eclipse handmade fingerboard kit laid out with its gothic box, deck and tuning parts."
+      },
+      "seo_title": "DTzero Eclipse Handmade Fingerboard — Deck or Complete | Hand-laid 2mm pressed deck with eclipse artwork in 32mm and 34mm, as a bare deck or tuned complete.",
+      "seo_description": "Handmade DTzero Eclipse deck in 32/34mm — bare for builders or complete with tuned trucks and white wheels."
+    },
+    {
+      "id": 10297130000105,
+      "title": "DTzero Pro Handmade Complete — Colour-Matched Graphic Series",
+      "body_html": "<p>DTzero's top domestic specification: hand-laid decks where the graphic colour runs through the whole setup — blue, pink, red or black alien artwork matched to wheels and accents. This is the complete the brand builds for its own team riders in China, tuned out of the box.</p><p><strong>Why this one</strong></p><ul><li>Handmade pressed deck with colour-matched alien series graphics</li><li>Top-spec DTzero metal trucks and bearing wheels — the brand's best-feeling setup</li><li>Choose 32×97mm for flips or 34×96mm for stability; every colour comes in both widths</li><li>Each colourway is its own SKU — the product photo for the variant you pick is the board you get</li></ul><p><strong>Specifications</strong></p><table><tbody><tr><td><strong>Brand</strong></td><td>DTzero</td></tr><tr><td><strong>Spec</strong></td><td>Top domestic specification, handmade</td></tr><tr><td><strong>Colourways</strong></td><td>Blue, Pink, Red, Black (matching graphics)</td></tr><tr><td><strong>Widths</strong></td><td>32×97mm or 34×96mm</td></tr></tbody></table><p><strong>Who it suits</strong></p><p>Riders stepping up from entry completes who want a handmade deck with a coherent look — and collectors who want all four colours lined up on the shelf.</p><em>Ships directly from our supplier workshop with tracking, arriving in 7–14 business days. Prices in USD; shipping is free on orders over $50. 30-day returns if it is not right for you.</em>",
+      "handle": "dtzero-pro-handmade-complete-colour-series",
+      "created_at": "2026-10-29T22:40:00+02:00",
+      "updated_at": "2026-10-29T22:40:00+02:00",
+      "published_at": "2026-10-29T22:40:00+02:00",
+      "status": "active",
+      "published_scope": "web",
+      "template_suffix": null,
+      "tags": "DTzero, handmade complete, pro spec, colour series, alien graphic, 32mm, 34mm, bearing wheels",
+      "product_type": "Complete Fingerboards",
+      "vendor": "Fingerboard Lab",
+      "variants": [
+        {
+          "id": 92000000010608,
+          "product_id": 10297130000105,
+          "title": "Blue / 32mm",
+          "price": "94.95",
+          "compare_at_price": null,
+          "position": 1,
+          "option1": "Blue",
+          "option2": "32mm",
+          "inventory_policy": "continue",
+          "taxable": false,
+          "sku": "FL-10297130000105-BLU-32",
+          "requires_shipping": true,
+          "available": true,
+          "inventory_quantity": 8,
+          "weight": 0.09,
+          "weight_unit": "kg",
+          "image_id": 1029713000010505
+        },
+        {
+          "id": 92000000010609,
+          "product_id": 10297130000105,
+          "title": "Blue / 34mm",
+          "price": "94.95",
+          "compare_at_price": null,
+          "position": 2,
+          "option1": "Blue",
+          "option2": "34mm",
+          "inventory_policy": "continue",
+          "taxable": false,
+          "sku": "FL-10297130000105-BLU-34",
+          "requires_shipping": true,
+          "available": true,
+          "inventory_quantity": 8,
+          "weight": 0.09,
+          "weight_unit": "kg",
+          "image_id": 1029713000010506
+        },
+        {
+          "id": 92000000010610,
+          "product_id": 10297130000105,
+          "title": "Pink / 32mm",
+          "price": "94.95",
+          "compare_at_price": null,
+          "position": 3,
+          "option1": "Pink",
+          "option2": "32mm",
+          "inventory_policy": "continue",
+          "taxable": false,
+          "sku": "FL-10297130000105-PIN-32",
+          "requires_shipping": true,
+          "available": true,
+          "inventory_quantity": 8,
+          "weight": 0.09,
+          "weight_unit": "kg",
+          "image_id": 1029713000010507
+        },
+        {
+          "id": 92000000010611,
+          "product_id": 10297130000105,
+          "title": "Pink / 34mm",
+          "price": "94.95",
+          "compare_at_price": null,
+          "position": 4,
+          "option1": "Pink",
+          "option2": "34mm",
+          "inventory_policy": "continue",
+          "taxable": false,
+          "sku": "FL-10297130000105-PIN-34",
+          "requires_shipping": true,
+          "available": true,
+          "inventory_quantity": 8,
+          "weight": 0.09,
+          "weight_unit": "kg",
+          "image_id": 1029713000010508
+        },
+        {
+          "id": 92000000010612,
+          "product_id": 10297130000105,
+          "title": "Red / 32mm",
+          "price": "94.95",
+          "compare_at_price": null,
+          "position": 5,
+          "option1": "Red",
+          "option2": "32mm",
+          "inventory_policy": "continue",
+          "taxable": false,
+          "sku": "FL-10297130000105-RED-32",
+          "requires_shipping": true,
+          "available": true,
+          "inventory_quantity": 8,
+          "weight": 0.09,
+          "weight_unit": "kg",
+          "image_id": 1029713000010509
+        },
+        {
+          "id": 92000000010613,
+          "product_id": 10297130000105,
+          "title": "Red / 34mm",
+          "price": "94.95",
+          "compare_at_price": null,
+          "position": 6,
+          "option1": "Red",
+          "option2": "34mm",
+          "inventory_policy": "continue",
+          "taxable": false,
+          "sku": "FL-10297130000105-RED-34",
+          "requires_shipping": true,
+          "available": true,
+          "inventory_quantity": 8,
+          "weight": 0.09,
+          "weight_unit": "kg",
+          "image_id": 1029713000010510
+        },
+        {
+          "id": 92000000010614,
+          "product_id": 10297130000105,
+          "title": "Black / 32mm",
+          "price": "94.95",
+          "compare_at_price": null,
+          "position": 7,
+          "option1": "Black",
+          "option2": "32mm",
+          "inventory_policy": "continue",
+          "taxable": false,
+          "sku": "FL-10297130000105-BLA-32",
+          "requires_shipping": true,
+          "available": true,
+          "inventory_quantity": 8,
+          "weight": 0.09,
+          "weight_unit": "kg",
+          "image_id": 1029713000010511
+        },
+        {
+          "id": 92000000010615,
+          "product_id": 10297130000105,
+          "title": "Black / 34mm",
+          "price": "94.95",
+          "compare_at_price": null,
+          "position": 8,
+          "option1": "Black",
+          "option2": "34mm",
+          "inventory_policy": "continue",
+          "taxable": false,
+          "sku": "FL-10297130000105-BLA-34",
+          "requires_shipping": true,
+          "available": true,
+          "inventory_quantity": 8,
+          "weight": 0.09,
+          "weight_unit": "kg",
+          "image_id": 1029713000010512
+        }
+      ],
+      "options": [
+        {
+          "id": 102971300001050,
+          "product_id": 10297130000105,
+          "name": "Colour",
+          "position": 1,
+          "values": [
+            "Blue",
+            "Pink",
+            "Red",
+            "Black"
+          ]
+        },
+        {
+          "id": 102971300001051,
+          "product_id": 10297130000105,
+          "name": "Width",
+          "position": 2,
+          "values": [
+            "32mm",
+            "34mm"
+          ]
+        }
+      ],
+      "images": [
+        {
+          "id": 1029713000010502,
+          "product_id": 10297130000105,
+          "position": 1,
+          "src": "/products/primary-10297130000105-dtz.jpg",
+          "width": 800,
+          "height": 800,
+          "alt": "DTzero colour-matched handmade complete with alien deck graphic and white wheels."
+        },
+        {
+          "id": 1029713000010503,
+          "product_id": 10297130000105,
+          "position": 2,
+          "src": "https://img.alicdn.com/imgextra/i3/406006991/O1CN018kdeWW21VvxhGMwT5_!!406006991.jpg",
+          "width": 800,
+          "height": 800,
+          "alt": "Full DTzero colour series lineup showing blue, pink, red and black completes."
+        },
+        {
+          "id": 1029713000010504,
+          "product_id": 10297130000105,
+          "position": 3,
+          "src": "https://img.alicdn.com/imgextra/i4/406006991/O1CN019ei7wE21VvxhKTFqG~crop,70,0,860,860~_!!406006991.jpg",
+          "width": 800,
+          "height": 800,
+          "alt": "Detail of the colour-matched alien deck graphic between plies."
+        },
+        {
+          "id": 1029713000010505,
+          "product_id": 10297130000105,
+          "position": 4,
+          "src": "http://img.alicdn.com/imgextra/i4/406006991/O1CN01Ndmeq521Vvxgn8e94_!!406006991.jpg",
+          "width": 800,
+          "height": 800,
+          "alt": "Blue 32mm DTzero complete with matching alien graphic and white wheels."
+        },
+        {
+          "id": 1029713000010506,
+          "product_id": 10297130000105,
+          "position": 5,
+          "src": "http://img.alicdn.com/imgextra/i4/406006991/O1CN01Ndmeq521Vvxgn8e94_!!406006991.jpg",
+          "width": 800,
+          "height": 800,
+          "alt": "Blue 34mm DTzero complete with matching alien graphic and white wheels."
+        },
+        {
+          "id": 1029713000010507,
+          "product_id": 10297130000105,
+          "position": 6,
+          "src": "http://img.alicdn.com/imgextra/i2/406006991/O1CN01Mxw4FC21VvxiPuWcr_!!406006991.jpg",
+          "width": 800,
+          "height": 800,
+          "alt": "Pink 32mm DTzero complete with matching alien graphic and white wheels."
+        },
+        {
+          "id": 1029713000010508,
+          "product_id": 10297130000105,
+          "position": 7,
+          "src": "http://img.alicdn.com/imgextra/i2/406006991/O1CN01Mxw4FC21VvxiPuWcr_!!406006991.jpg",
+          "width": 800,
+          "height": 800,
+          "alt": "Pink 34mm DTzero complete with matching alien graphic and white wheels."
+        },
+        {
+          "id": 1029713000010509,
+          "product_id": 10297130000105,
+          "position": 8,
+          "src": "http://img.alicdn.com/imgextra/i4/406006991/O1CN016DwzjT21VvxjL26AY_!!406006991.jpg",
+          "width": 800,
+          "height": 800,
+          "alt": "Red 32mm DTzero complete with matching alien graphic and white wheels."
+        },
+        {
+          "id": 1029713000010510,
+          "product_id": 10297130000105,
+          "position": 9,
+          "src": "http://img.alicdn.com/imgextra/i4/406006991/O1CN016DwzjT21VvxjL26AY_!!406006991.jpg",
+          "width": 800,
+          "height": 800,
+          "alt": "Red 34mm DTzero complete with matching alien graphic and white wheels."
+        },
+        {
+          "id": 1029713000010511,
+          "product_id": 10297130000105,
+          "position": 10,
+          "src": "http://img.alicdn.com/imgextra/i4/406006991/O1CN019ei7wE21VvxhKTFqG_!!406006991.jpg",
+          "width": 800,
+          "height": 800,
+          "alt": "Black 32mm DTzero complete with matching alien graphic and white wheels."
+        },
+        {
+          "id": 1029713000010512,
+          "product_id": 10297130000105,
+          "position": 11,
+          "src": "http://img.alicdn.com/imgextra/i4/406006991/O1CN019ei7wE21VvxhKTFqG_!!406006991.jpg",
+          "width": 800,
+          "height": 800,
+          "alt": "Black 34mm DTzero complete with matching alien graphic and white wheels."
+        }
+      ],
+      "image": {
+        "id": 1029713000010502,
+        "product_id": 10297130000105,
+        "position": 1,
+        "src": "/products/primary-10297130000105-dtz.jpg",
+        "width": 800,
+        "height": 800,
+        "alt": "DTzero colour-matched handmade complete with alien deck graphic and white wheels."
+      },
+      "seo_title": "DTzero Pro Handmade Complete Colour Series | Handmade decks in blue, pink, red or black alien graphics, 32mm or 34mm, tuned and ready out of the box.",
+      "seo_description": "DTzero's top-spec handmade complete. Four colour-matched graphics, two widths, tuned trucks and white wheels."
+    },
+    {
+      "id": 10297130000106,
+      "title": "DTzero OME Surplus Completes — Logo, Anime & Monster Graphics",
+      "body_html": "<p>Overseas OME surplus: complete DTzero fingerboards originally produced for export orders, released in small batches at surplus pricing. Three deck graphics are available — bold logo lettering, an anime girl illustration, and a red monster face on tie-dye — each riding on black trucks and white wheels.</p><p><strong>Why this one</strong></p><ul><li>Export-surplus stock: full DTzero completes at a price below the made-to-order range</li><li>Three distinct graphics, each linked to its own photo — pick the exact deck you want</li><li>Standard kit ships ready to skate; Premium kit adds DTzero's spare wheels and tuning parts</li><li>Same workshop quality control as the Eclipse and colour-series boards</li></ul><p><strong>Specifications</strong></p><table><tbody><tr><td><strong>Brand</strong></td><td>DTzero</td></tr><tr><td><strong>Series</strong></td><td>OME foreign-trade surplus</td></tr><tr><td><strong>Graphics</strong></td><td>Logo lettering / Anime girl / Monster face</td></tr><tr><td><strong>Kits</strong></td><td>Standard (ready to skate) or Premium (spares + tuning)</td></tr></tbody></table><p><strong>Who it suits</strong></p><p>Riders who want a genuine DTzero complete without the handmade price, and collectors chasing graphics that sell out when each surplus batch clears.</p><em>Ships directly from our supplier workshop with tracking, arriving in 7–14 business days. Prices in USD; shipping is free on orders over $50. 30-day returns if it is not right for you.</em>",
+      "handle": "dtzero-ome-surplus-complete-fingerboard-series",
+      "created_at": "2026-10-29T22:40:00+02:00",
+      "updated_at": "2026-10-29T22:40:00+02:00",
+      "published_at": "2026-10-29T22:40:00+02:00",
+      "status": "active",
+      "published_scope": "web",
+      "template_suffix": null,
+      "tags": "DTzero, OME, surplus, complete, logo deck, anime deck, monster deck, export stock",
+      "product_type": "Complete Fingerboards",
+      "vendor": "Fingerboard Lab",
+      "variants": [
+        {
+          "id": 92000000010616,
+          "product_id": 10297130000106,
+          "title": "Logo lettering / Standard",
+          "price": "39.95",
+          "compare_at_price": null,
+          "position": 1,
+          "option1": "Logo lettering",
+          "option2": "Standard",
+          "inventory_policy": "continue",
+          "taxable": false,
+          "sku": "FL-10297130000106-LOG-STA",
+          "requires_shipping": true,
+          "available": true,
+          "inventory_quantity": 8,
+          "weight": 0.08,
+          "weight_unit": "kg",
+          "image_id": 1029713000010602
+        },
+        {
+          "id": 92000000010617,
+          "product_id": 10297130000106,
+          "title": "Logo lettering / Premium",
+          "price": "55.95",
+          "compare_at_price": null,
+          "position": 2,
+          "option1": "Logo lettering",
+          "option2": "Premium",
+          "inventory_policy": "continue",
+          "taxable": false,
+          "sku": "FL-10297130000106-LOG-PRE",
+          "requires_shipping": true,
+          "available": true,
+          "inventory_quantity": 8,
+          "weight": 0.08,
+          "weight_unit": "kg",
+          "image_id": 1029713000010602
+        },
+        {
+          "id": 92000000010618,
+          "product_id": 10297130000106,
+          "title": "Anime girl / Standard",
+          "price": "39.95",
+          "compare_at_price": null,
+          "position": 3,
+          "option1": "Anime girl",
+          "option2": "Standard",
+          "inventory_policy": "continue",
+          "taxable": false,
+          "sku": "FL-10297130000106-ANI-STA",
+          "requires_shipping": true,
+          "available": true,
+          "inventory_quantity": 8,
+          "weight": 0.08,
+          "weight_unit": "kg",
+          "image_id": 1029713000010603
+        },
+        {
+          "id": 92000000010619,
+          "product_id": 10297130000106,
+          "title": "Anime girl / Premium",
+          "price": "55.95",
+          "compare_at_price": null,
+          "position": 4,
+          "option1": "Anime girl",
+          "option2": "Premium",
+          "inventory_policy": "continue",
+          "taxable": false,
+          "sku": "FL-10297130000106-ANI-PRE",
+          "requires_shipping": true,
+          "available": true,
+          "inventory_quantity": 8,
+          "weight": 0.08,
+          "weight_unit": "kg",
+          "image_id": 1029713000010603
+        },
+        {
+          "id": 92000000010620,
+          "product_id": 10297130000106,
+          "title": "Monster face / Standard",
+          "price": "39.95",
+          "compare_at_price": null,
+          "position": 5,
+          "option1": "Monster face",
+          "option2": "Standard",
+          "inventory_policy": "continue",
+          "taxable": false,
+          "sku": "FL-10297130000106-MON-STA",
+          "requires_shipping": true,
+          "available": true,
+          "inventory_quantity": 8,
+          "weight": 0.08,
+          "weight_unit": "kg",
+          "image_id": 1029713000010604
+        },
+        {
+          "id": 92000000010621,
+          "product_id": 10297130000106,
+          "title": "Monster face / Premium",
+          "price": "55.95",
+          "compare_at_price": null,
+          "position": 6,
+          "option1": "Monster face",
+          "option2": "Premium",
+          "inventory_policy": "continue",
+          "taxable": false,
+          "sku": "FL-10297130000106-MON-PRE",
+          "requires_shipping": true,
+          "available": true,
+          "inventory_quantity": 8,
+          "weight": 0.08,
+          "weight_unit": "kg",
+          "image_id": 1029713000010604
+        }
+      ],
+      "options": [
+        {
+          "id": 102971300001060,
+          "product_id": 10297130000106,
+          "name": "Graphic",
+          "position": 1,
+          "values": [
+            "Logo lettering",
+            "Anime girl",
+            "Monster face"
+          ]
+        },
+        {
+          "id": 102971300001061,
+          "product_id": 10297130000106,
+          "name": "Kit",
+          "position": 2,
+          "values": [
+            "Standard",
+            "Premium"
+          ]
+        }
+      ],
+      "images": [
+        {
+          "id": 1029713000010602,
+          "product_id": 10297130000106,
+          "position": 1,
+          "src": "/products/primary-10297130000106-dtz.jpg",
+          "width": 800,
+          "height": 800,
+          "alt": "DTzero OME surplus complete with bold logo-lettering deck graphic and white wheels."
+        },
+        {
+          "id": 1029713000010602,
+          "product_id": 10297130000106,
+          "position": 2,
+          "src": "https://img.alicdn.com/imgextra/i3/406006991/O1CN01bnjhm421VvzKZldWR_!!406006991.jpg",
+          "width": 800,
+          "height": 800,
+          "alt": "Logo lettering OME complete: black and white deck with bold red lettering."
+        },
+        {
+          "id": 1029713000010603,
+          "product_id": 10297130000106,
+          "position": 3,
+          "src": "https://img.alicdn.com/imgextra/i3/406006991/O1CN01Oh2y7n21VvzJ8shYJ_!!406006991.jpg",
+          "width": 800,
+          "height": 800,
+          "alt": "Anime girl OME complete: illustrated character deck on yellow and red stripes."
+        },
+        {
+          "id": 1029713000010604,
+          "product_id": 10297130000106,
+          "position": 4,
+          "src": "https://img.alicdn.com/imgextra/i3/406006991/O1CN01lTfwmQ21VvzJkzIyF_!!406006991.jpg",
+          "width": 800,
+          "height": 800,
+          "alt": "Monster face OME complete: red cartoon monster graphic on a tie-dye deck."
+        },
+        {
+          "id": 1029713000010606,
+          "product_id": 10297130000106,
+          "position": 5,
+          "src": "https://img.alicdn.com/imgextra/i4/406006991/O1CN01yd4mVh21VvzJer6ep_!!406006991.jpg",
+          "width": 800,
+          "height": 800,
+          "alt": "OME complete kit contents: deck, trucks, wheels and grip laid out."
+        },
+        {
+          "id": 1029713000010607,
+          "product_id": 10297130000106,
+          "position": 6,
+          "src": "https://img.alicdn.com/imgextra/i2/406006991/O1CN01XjAb0D21VvzLOJyUZ_!!406006991.jpg",
+          "width": 800,
+          "height": 800,
+          "alt": "Rear view of the OME deck showing the overseas surplus print."
+        }
+      ],
+      "image": {
+        "id": 1029713000010602,
+        "product_id": 10297130000106,
+        "position": 1,
+        "src": "/products/primary-10297130000106-dtz.jpg",
+        "width": 800,
+        "height": 800,
+        "alt": "DTzero OME surplus complete with bold logo-lettering deck graphic and white wheels."
+      },
+      "seo_title": "DTzero OME Surplus Completes — Logo, Anime & Monster | Export-surplus DTzero completes in three graphics, Standard or Premium kit, at surplus pricing.",
+      "seo_description": "Surplus export DTzero completes in three deck graphics. Standard or Premium kit — while the batch lasts."
     }
   ]
 }
