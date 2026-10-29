@@ -1,5 +1,96 @@
 [
  {
+  "slug": "26mm-trucks-fingerboard-guide",
+  "title": "26mm Trucks: Fit, Setup, and Pros for Fingerboarders",
+  "metaTitle": "26mm Trucks: Fit, Setup, and Pros for Fingerboarders",
+  "metaDescription": "Discover why 26mm trucks deliver tighter turns, which decks pair best, and how to set them up for peak fingerboard performance.",
+  "category": "Sizing",
+  "updated": "2026-10-29",
+  "readMinutes": 4,
+  "heroSummary": "Discover why 26mm trucks deliver tighter turns, which decks pair best, and how to set them up for peak fingerboard performance.",
+  "sections": [
+   {
+    "heading": "What are 26mm trucks and why pick them?",
+    "body": [
+     "26mm trucks are the narrowest standard option for fingerboards. They sit under decks on the smaller side. They give a tighter feel. The axle spacing is reduced, so the board pivots quicker. Riders who love quick flicks and tight carves gravitate to this width. It isn't a novelty; it fills a real niche.",
+     "Because the axle is closer together, the board responds almost instantly to a finger's push. That immediacy can feel exhilarating, especially on technical street lines. The trade‑off is a bit more bite. The board can feel twitchy if the setup isn't dialed in."
+    ]
+   },
+   {
+    "heading": "How do 26mm trucks compare to the common 29‑36 mm range?",
+    "body": [
+     "The market mostly offers trucks between 29 mm and 36 mm. Those widths suit most decks and provide a balanced turn. Narrower trucks, like the 26 mm size, cut that balance. They create a sharper turning radius. Wider trucks smooth out the turn and add stability. Choose narrow for bite. Choose wide for stability.",
+     "In practice, a rider switching from a 32 mm truck to a 26 mm truck will notice the board respond faster to input. The opposite switch feels slower, more forgiving. Both setups have their place. The key is matching the truck to the board size and riding style.",
+     "Think of it as a spectrum. One end snaps into direction; the other rolls along. Your preference determines where you land on that line."
+    ]
+   },
+   {
+    "heading": "Which deck sizes pair best with 26mm trucks?",
+    "body": [
+     "Typical fingerboard decks run between 94 mm and 100 mm in length. Decks at the lower end of that span work best with 26 mm trucks. The narrower axle aligns with the deck's width, keeping the wheels under the deck's sweet spot. If the deck is longer or has a wider nose, the axle may sit too far inside the deck, causing over‑steer.",
+     "For a solid match, look for decks that feel snug when the trucks are mounted. The wheel‑to‑wheel spacing should sit roughly under the deck's middle area. When the board feels loose, try a slightly wider truck or adjust the bushings.",
+     "Another tip: press the deck against the truck base. If the deck slides easily, the fit may be too narrow. Adding a thin strip of grip tape under the truck can add friction and improve stability."
+    ]
+   },
+   {
+    "heading": "How to set up and tune 26mm trucks for optimal performance",
+    "body": [
+     "Mount the trucks on the deck using the standard four‑bolt pattern. Align the kingpin so the base angle matches the deck's concave. Tighten the axle nuts just enough to eliminate play, but not so tight that the wheels grind.",
+     "Next, check the bushing compression. Because the truck is narrow, the board will bite harder. If the turn feels too aggressive, swap the stock bushings for a softer set. A softer durometer softens the response without sacrificing the quick flick you expect from a 26 mm setup.",
+     "Finally, test the wheel clearance. Narrow trucks often leave a small gap between the wheel and deck edge. If the gap is too large, the wheel may wobble on impact. Adjust the axle height or add a thin riser pad to bring the wheel closer to the deck.",
+     "Fine‑tuning is an iterative process. Make one change, ride a few tricks, then decide if you need another tweak. Small adjustments can have a big impact on feel."
+    ]
+   },
+   {
+    "heading": "Common issues with 26mm trucks and how to fix them",
+    "body": [
+     "Excessive wobble on landing. The narrow axle can make the board feel unstable after a big pop. Remedy: install a thin riser pad under the deck or use a slightly softer bushing. This adds a bit of flex and dampens the wobble.",
+     "Trucks falling off the deck after heavy use. The reduced width means the mounting holes see more torque. Reinforce the mounting area with a thin strip of grip tape under the truck base. It adds friction and keeps the bolts from loosening.",
+     "Limited wheel bite on larger wheels. Because the axle sits closer to the deck's center, the wheels may not contact the deck edge fully. Choose wheels that are proportionally smaller, or adjust the axle height with a small washer.",
+     "When any of these symptoms appear, address the most obvious cause first. Often a single fix resolves multiple issues."
+    ]
+   },
+   {
+    "heading": "When to choose a simpler, cheaper option",
+    "body": [
+     "If you're just starting out, a standard 30 mm truck offers a forgiving ride. It's easier to learn balance and basic tricks. The wider base hides small mounting errors and gives a smoother turn. For beginners, the extra bite of a 26 mm truck can be frustrating.",
+     "When you progress to technical street tricks, the 26 mm width shines. The quick turn response helps with flip tricks and tight rail slides. The trade‑off is a steeper learning curve. Decide based on where you are in your fingerboarding journey.",
+     "In my experience, the narrowest trucks are the most expressive. They let you push the board's limits, but they demand precise setup.",
+     "In my experience, the narrowest trucks are the most expressive. They let you push the board's limits, but they demand precise setup."
+    ]
+   },
+   {
+    "heading": "Bottom line: is a 26mm truck right for you?",
+    "body": [
+     "If you ride decks on the shorter side, crave a sharp turn, and are comfortable fine‑tuning bushings, the 26 mm truck is a solid choice. It delivers the bite that many riders chase. If you prefer a smoother, more stable ride, stick with the common 29‑36 mm range. The decision boils down to deck size, skill level, and personal feel."
+    ]
+   }
+  ],
+  "faqs": [
+   {
+    "q": "Are 26mm trucks compatible with most fingerboard decks?",
+    "a": "They work best with decks on the shorter end of the typical length range. Wider decks may feel over‑steered."
+   },
+   {
+    "q": "How does truck width affect turning radius?",
+    "a": "Narrower trucks produce a sharper turning radius, while wider trucks give a smoother, more stable turn."
+   },
+   {
+    "q": "Can I use 26mm trucks on a deck designed for 30mm trucks?",
+    "a": "You can, but the deck will overhang the axle, leading to a looser feel and potential wobble."
+   },
+   {
+    "q": "Do I need different bushings for 26mm trucks?",
+    "a": "Standard bushings work, but softer durometer can tame the extra bite that narrow trucks provide."
+   }
+  ],
+  "related": [
+   "fingerboard-deck-materials-explained",
+   "how-to-clean-fingerboard-bearings-and-wheels",
+   "wooden-fingerboard-ramps-diy-park-guide"
+  ]
+ },
+ {
   "slug": "fingerboard-wheelbase-explained",
   "title": "Fingerboard Wheelbase: Pop, Stability, and Control",
   "metaTitle": "Fingerboard Wheelbase: Pop, Stability, and Control",
