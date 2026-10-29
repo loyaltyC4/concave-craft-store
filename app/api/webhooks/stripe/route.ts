@@ -2,6 +2,7 @@ import { NextRequest, NextResponse } from "next/server";
 import Stripe from "stripe";
 import { getStripe } from "lib/stripe";
 import { getSupabase } from "lib/supabase";
+import { staticGetProduct } from "lib/shopify/static-data";
 import { recordAbandonedCart, markCartRecovered } from "lib/abandoned";
 import {
   decrementInventory,
@@ -265,16 +266,52 @@ export async function POST(req: NextRequest) {
 
   if (result.isNew) {
     await decrementInventory(items);
+
+    // Customer-facing order number: prefer the Stripe receipt number (what the
+    // buyer sees on their card receipt), else the /track order id prefix.
+    let orderNumber = result.orderId.slice(0, 8).toUpperCase();
+    if (typeof session.payment_intent === "string") {
+      try {
+        const charges = await stripe.charges.list({
+          payment_intent: session.payment_intent,
+          limit: 1,
+        });
+        const rn = charges.data?.[0]?.receipt_number;
+        if (rn) orderNumber = rn;
+      } catch (err) {
+        console.warn("receipt_number lookup failed:", err);
+      }
+    }
+
+    // Best-effort product images for the email (static catalog, never blocks).
+    const itemsWithEmailData = items.map((it) => {
+      let image: string | null = null;
+      if (it.productHandle) {
+        try {
+          const product = staticGetProduct(it.productHandle);
+          image =
+            (product as { images?: { url?: string }[] } | undefined)?.images?.[0]
+              ?.url ?? null;
+        } catch {
+          image = null;
+        }
+      }
+      return { ...it, image };
+    });
+
     await sendOrderConfirmationEmail({
       to: session.customer_details?.email || null,
       orderId: result.orderId,
-      items: items.map((it) => ({
-        title: it.title,
-        quantity: it.quantity,
-        unitAmount: it.unitAmount,
-      })),
+      orderNumber,
+      customerName: session.customer_details?.name || null,
+      items: itemsWithEmailData,
+      amountSubtotal: session.amount_subtotal ?? null,
+      amountShipping: session.total_details?.amount_shipping ?? null,
       amountTotal: session.amount_total ?? 0,
       currency: session.currency || "usd",
+      shippingAddress:
+        (shippingAddress as Record<string, string | null | undefined> | null) ??
+        null,
     });
   }
 

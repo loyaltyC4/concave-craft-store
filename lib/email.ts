@@ -11,92 +11,404 @@ function money(cents: number, currency: string) {
   }).format(cents / 100);
 }
 
-function orderEmailHtml(params: {
-  orderId: string;
-  items: { title: string; quantity: number; unitAmount: number }[];
-  amountTotal: number;
-  currency: string;
-}) {
-  const rows = params.items
-    .map(
-      (it) => `
-      <tr>
-        <td style="padding:10px 0;border-bottom:1px solid #23252b;color:#e8e8e8;font-size:14px;">
-          ${it.title} <span style="color:#8a8f98;">× ${it.quantity}</span>
-        </td>
-        <td style="padding:10px 0;border-bottom:1px solid #23252b;color:#e8e8e8;font-size:14px;text-align:right;">
-          ${money(it.unitAmount * it.quantity, params.currency)}
-        </td>
-      </tr>`,
-    )
-    .join("");
+// ---------------------------------------------------------------------------
+// Bird transactional sending — us1 workspace, orders@fingerboardlab.com
+// (Bird is the verified FBL sender; Resend was never wired up for this store.)
+// ---------------------------------------------------------------------------
 
-  return `
-  <div style="background:#0b0c0e;padding:32px 0;font-family:Arial,Helvetica,sans-serif;">
-    <table role="presentation" width="100%" style="max-width:520px;margin:0 auto;background:#15171c;border-radius:16px;overflow:hidden;">
-      <tr><td style="padding:32px;">
-        <div style="width:36px;height:36px;border-radius:10px;background:#c5f23c;margin-bottom:16px;"></div>
-        <h1 style="color:#f3f1ea;font-size:22px;margin:0 0 8px;">Order confirmed. Grip it and rip it.</h1>
-        <p style="color:#8a8f98;font-size:14px;margin:0 0 24px;">
-          Order ${params.orderId.slice(0, 8).toUpperCase()} — we're on it. Ships within 1–2 business days.
-        </p>
-        <table role="presentation" width="100%">${rows}</table>
-        <table role="presentation" width="100%" style="margin-top:12px;">
-          <tr>
-            <td style="color:#f3f1ea;font-weight:bold;font-size:15px;">Total</td>
-            <td style="color:#c5f23c;font-weight:bold;font-size:15px;text-align:right;">
-              ${money(params.amountTotal, params.currency)}
-            </td>
-          </tr>
-        </table>
-        <p style="color:#8a8f98;font-size:12px;margin-top:28px;">
-          ${SITE_NAME} · Questions? Reply to this email or contact ${SUPPORT_EMAIL}
-        </p>
-      </td></tr>
-    </table>
-  </div>`;
+const BIRD_API_BASE = process.env.BIRD_API_BASE || "https://us1.platform.bird.com";
+const DEFAULT_FROM_NAME = "Fingerboard Lab";
+
+/** Owner copy of every order email. Override with ADMIN_NOTIFICATION_EMAIL. */
+const OWNER_BCC_FALLBACK = "slyvesterchiko1@gmail.com";
+
+function birdFrom(): { email: string; name: string } {
+  const raw = process.env.ORDER_FROM_EMAIL || "orders@fingerboardlab.com";
+  const m = /^(.*?)<([^>]+)>\s*$/.exec(raw);
+  if (m)
+    return {
+      name: m[1]?.trim() || DEFAULT_FROM_NAME,
+      email: m[2]?.trim() || raw,
+    };
+  return { name: DEFAULT_FROM_NAME, email: raw };
 }
 
-/**
- * Sends a branded order-confirmation email via Resend. No-ops (returns
- * { sent: false }) when RESEND_API_KEY isn't set — this is an enhancement
- * layer, never a blocker: orders are recorded and viewable in /admin/orders
- * regardless of whether email is configured. Also bcc's the store owner so
- * there's a real notification channel with zero extra setup once one key
- * is added.
- */
-export async function sendOrderConfirmationEmail(params: {
-  to: string | null;
-  orderId: string;
-  items: { title: string; quantity: number; unitAmount: number }[];
-  amountTotal: number;
-  currency: string;
-}): Promise<{ sent: boolean }> {
-  if (!isResendConfigured() || !params.to) return { sent: false };
-
-  const from =
-    process.env.RESEND_FROM_EMAIL || "Fingerboard Lab <onboarding@resend.dev>";
-  const adminEmail = process.env.ADMIN_NOTIFICATION_EMAIL || SUPPORT_EMAIL;
-
+async function birdSend(params: {
+  to: string;
+  toName?: string | null;
+  bcc?: string | null;
+  subject: string;
+  html: string;
+  text: string;
+}): Promise<{ sent: boolean; id?: string }> {
+  const key = process.env.BIRD_API_KEY;
+  if (!key || !params.to) return { sent: false };
+  const from = birdFrom();
   try {
-    const res = await fetch("https://api.resend.com/emails", {
+    const res = await fetch(`${BIRD_API_BASE}/v1/email/messages`, {
       method: "POST",
       headers: {
-        Authorization: `Bearer ${process.env.RESEND_API_KEY}`,
+        Authorization: `Bearer ${key}`,
         "content-type": "application/json",
       },
       body: JSON.stringify({
         from,
-        to: [params.to],
-        bcc: adminEmail ? [adminEmail] : undefined,
-        subject: `Your ${SITE_NAME} order is confirmed`,
-        html: orderEmailHtml(params),
+        to: [
+          params.toName
+            ? { email: params.to, name: params.toName }
+            : { email: params.to },
+        ],
+        bcc: params.bcc ? [{ email: params.bcc }] : undefined,
+        subject: params.subject,
+        html: params.html,
+        text: params.text,
+        category: "transactional",
+        track_opens: false,
+        track_clicks: false,
       }),
     });
-    return { sent: res.ok };
-  } catch {
+    if (!res.ok) {
+      const body = await res.text().catch(() => "");
+      console.error(`[bird-send] Bird returned ${res.status}:`, body.slice(0, 300));
+      return { sent: false };
+    }
+    const data = (await res.json().catch(() => null)) as { id?: string } | null;
+    return { sent: true, id: data?.id };
+  } catch (err) {
+    console.error("[bird-send] fetch failed:", err);
     return { sent: false };
   }
+}
+
+function escapeHtml(s: string): string {
+  return s
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;");
+}
+
+function orderDateLabel(d = new Date()): string {
+  return new Intl.DateTimeFormat("en-US", {
+    month: "short",
+    day: "numeric",
+    year: "numeric",
+    timeZone: "UTC",
+  }).format(d);
+}
+
+type OrderEmailItem = {
+  title: string;
+  quantity: number;
+  unitAmount: number;
+  image?: string | null;
+};
+
+type BrandedOrderParams = {
+  orderNumber: string;
+  orderDate: string;
+  firstName: string;
+  items: OrderEmailItem[];
+  amountSubtotal: number;
+  amountShipping: number;
+  amountTotal: number;
+  currency: string;
+  shippingAddress: Record<string, string | null | undefined> | null;
+  trackUrl: string;
+};
+
+/**
+ * The branded dark order-confirmation template (matches the hand-sent
+ * confirmation format used for the first FBL order).
+ */
+function brandedOrderEmailHtml(p: BrandedOrderParams): string {
+  const accent = "#c8ff3d";
+  const itemRows = p.items
+    .map((it) => {
+      const thumb = it.image
+        ? `<img src="${escapeHtml(it.image)}" alt="${escapeHtml(it.title)}" width="64" height="64" style="width:64px; height:64px; object-fit:cover; background:#ffffff; border:1px solid #262626; border-radius:8px; display:block;">`
+        : `<div style="width:64px; height:64px; background:#10140a; border:1px solid #2a3a15; border-radius:8px; text-align:center; line-height:64px; color:${accent}; font-size:20px; font-weight:800;">&#9670;</div>`;
+      return `
+          <tr>
+            <td style="padding:20px 24px;">
+              <table role="presentation" width="100%">
+                <tr>
+                  <td width="72" style="vertical-align:top;">${thumb}</td>
+                  <td style="vertical-align:top; padding-left:14px;">
+                    <div style="color:#fff; font-size:15px; font-weight:700;">${escapeHtml(it.title)}</div>
+                    <div class="muted" style="font-size:13px; margin-top:3px;">Qty ${it.quantity}</div>
+                  </td>
+                  <td style="vertical-align:top; text-align:right; color:#fff; font-size:15px; font-weight:700;">
+                    ${money(it.unitAmount * it.quantity, p.currency)}
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+          <tr><td style="border-top:1px solid #262626;"></td></tr>`;
+    })
+    .join("");
+
+  const a = p.shippingAddress || {};
+  const addrStreet = [a.line1, a.line2].filter(Boolean).map((v) => escapeHtml(String(v))).join("<br>");
+  const addrCity = [a.city, a.state, a.postal_code].filter(Boolean).map((v) => escapeHtml(String(v))).join(", ");
+  const addrCountry = a.country ? escapeHtml(String(a.country)) : "";
+  const hasAddress = Boolean(addrStreet || addrCity);
+  const shippingLabel = p.amountShipping > 0 ? money(p.amountShipping, p.currency) : "Free";
+
+  return `
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>${SITE_NAME} — Order Confirmation</title>
+  <style>
+    body { margin:0; padding:0; background:#0a0a0a; font-family: 'Inter', Arial, sans-serif; }
+    .wrapper { max-width: 640px; margin: 0 auto; background:#0e0e0e; }
+    .accent { color:${accent}; }
+    a { color:${accent}; text-decoration:none; }
+    .label { font-size:11px; letter-spacing:.12em; text-transform:uppercase; color:${accent}; font-weight:700; }
+    .muted { color:#8a8a8a; }
+    table { border-collapse: collapse; width:100%; }
+    @media (max-width: 480px) {
+      .px { padding-left:20px !important; padding-right:20px !important; }
+    }
+  </style>
+  </head>
+  <body>
+  <div class="wrapper">
+
+    <table role="presentation" width="100%">
+      <tr><td style="background:#000; padding:10px 32px; text-align:center;">
+        <span style="color:${accent}; font-size:11px; letter-spacing:.08em; text-transform:uppercase; font-weight:700;">Order confirmed &nbsp;&#9670;&nbsp; Thanks for building with us</span>
+      </td></tr>
+    </table>
+
+    <table role="presentation" width="100%">
+      <tr>
+        <td class="px" style="padding:28px 32px 0 32px;">
+          <table role="presentation" width="100%">
+            <tr>
+              <td style="vertical-align:middle;">
+                <span style="font-size:20px; font-weight:800; color:#ffffff;">Fingerboard<span class="accent">Lab</span></span>
+              </td>
+              <td style="text-align:right; vertical-align:middle;">
+                <span class="label">#${escapeHtml(p.orderNumber)}</span>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+
+    <table role="presentation" width="100%">
+      <tr>
+        <td class="px" style="padding:36px 32px 8px 32px;">
+          <div class="label" style="margin-bottom:10px;">&#8212; Order confirmed</div>
+          <h1 style="margin:0; font-size:34px; line-height:1.15; color:#ffffff; font-weight:800;">
+            You're building<br><span class="accent">something good.</span>
+          </h1>
+          <p class="muted" style="font-size:15px; line-height:1.6; margin-top:16px;">
+            Hey ${escapeHtml(p.firstName)}, thanks for the order &#8212; here's everything you need. We'll
+            email you again the moment it ships, with tracking.
+          </p>
+        </td>
+      </tr>
+    </table>
+
+    <table role="presentation" width="100%">
+      <tr>
+        <td class="px" style="padding:20px 32px 0 32px;">
+          <table role="presentation" width="100%" style="background:#161616; border:1px solid #262626; border-radius:12px; overflow:hidden;">
+            <tr>
+              <td style="padding:20px 24px;">
+                <table role="presentation" width="100%">
+                  <tr>
+                    <td class="label">Order number</td>
+                    <td class="label" style="text-align:right;">Order date</td>
+                  </tr>
+                  <tr>
+                    <td style="color:#fff; font-size:15px; padding-top:4px; font-weight:700;">#${escapeHtml(p.orderNumber)}</td>
+                    <td style="color:#fff; font-size:15px; padding-top:4px; text-align:right;">${escapeHtml(p.orderDate)}</td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+            <tr><td style="border-top:1px solid #262626;"></td></tr>
+            ${itemRows}
+            <tr>
+              <td style="padding:20px 24px;">
+                <table role="presentation" width="100%" style="font-size:13px;">
+                  <tr>
+                    <td class="muted" style="padding:4px 0;">Subtotal</td>
+                    <td class="muted" style="padding:4px 0; text-align:right;">${money(p.amountSubtotal, p.currency)}</td>
+                  </tr>
+                  <tr>
+                    <td class="muted" style="padding:4px 0;">Shipping</td>
+                    <td class="muted" style="padding:4px 0; text-align:right;">${shippingLabel}</td>
+                  </tr>
+                  <tr>
+                    <td style="padding-top:10px; color:#fff; font-weight:800; font-size:16px;">Total</td>
+                    <td style="padding-top:10px; color:${accent}; font-weight:800; font-size:16px; text-align:right;">${money(p.amountTotal, p.currency)}</td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+
+    <table role="presentation" width="100%">
+      <tr>
+        <td class="px" style="padding:20px 32px 0 32px;">
+          <table role="presentation" width="100%" style="background:#10140a; border:1px solid #2a3a15; border-radius:12px;">
+            <tr>
+              <td style="padding:18px 22px;">
+                <div class="label">Shipping status</div>
+                <div style="color:#fff; font-size:15px; font-weight:700; margin-top:6px;">Preparing to ship</div>
+                <div class="muted" style="font-size:13px; margin-top:4px;">Ships within 1&#8211;2 business days from our workshop. Tracking number follows as soon as it's on its way.</div>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+
+    ${
+      hasAddress
+        ? `
+    <table role="presentation" width="100%">
+      <tr>
+        <td class="px" style="padding:24px 32px 0 32px;">
+          <div class="label" style="margin-bottom:8px;">Shipping to</div>
+          <div style="color:#fff; font-size:14px; line-height:1.6;">
+            ${addrStreet ? addrStreet + "<br>" : ""}${addrCity ? addrCity + "<br>" : ""}${addrCountry}
+          </div>
+        </td>
+      </tr>
+    </table>`
+        : ""
+    }
+
+    <table role="presentation" width="100%">
+      <tr>
+        <td class="px" style="padding:32px 32px 8px 32px; text-align:center;">
+          <a href="${escapeHtml(p.trackUrl)}" style="display:inline-block; background:${accent}; color:#0a0a0a; font-weight:800; font-size:14px; letter-spacing:.02em; padding:14px 28px; border-radius:8px;">
+            Track your order &#8594;
+          </a>
+        </td>
+      </tr>
+    </table>
+
+    <table role="presentation" width="100%">
+      <tr>
+        <td class="px" style="padding:36px 32px 32px 32px; border-top:1px solid #1d1d1d; margin-top:20px;">
+          <p class="muted" style="font-size:12px; line-height:1.7; margin:0;">
+            Questions about this order? Just reply to this email &#8212; a real person reads every one.<br>
+            30-day returns, no drama. Worldwide shipping.
+          </p>
+          <p style="margin-top:16px; font-size:12px;">
+            <span style="color:#fff; font-weight:700;">Fingerboard<span class="accent">Lab</span></span>
+            <span class="muted"> &#8212; fingerboardlab.com</span>
+          </p>
+        </td>
+      </tr>
+    </table>
+
+  </div>
+  </body>
+  </html>`;
+}
+
+function brandedOrderEmailText(p: BrandedOrderParams): string {
+  const a = p.shippingAddress || {};
+  const addr = [a.line1, a.line2, a.city, a.state, a.postal_code, a.country]
+    .filter(Boolean)
+    .join(", ");
+  const shippingLabel = p.amountShipping > 0 ? money(p.amountShipping, p.currency) : "Free";
+  const items = p.items
+    .map((it) => `- ${it.title} x${it.quantity} — ${money(it.unitAmount * it.quantity, p.currency)}`)
+    .join("\n");
+  return [
+    `Hi ${p.firstName},`,
+    ``,
+    `Order confirmed — thanks for building with us!`,
+    ``,
+    `Order #${p.orderNumber} (placed ${p.orderDate})`,
+    items,
+    `Shipping: ${shippingLabel}`,
+    `Total: ${money(p.amountTotal, p.currency)}`,
+    addr ? `` : null,
+    addr ? `Shipping to: ${addr}` : null,
+    ``,
+    `Status: Preparing to ship. Ships within 1–2 business days; tracking follows as soon as it's on its way.`,
+    ``,
+    `Track your order: ${p.trackUrl}`,
+    ``,
+    `Questions about this order? Just reply to this email — a real person reads every one.`,
+    `${SITE_NAME} — fingerboardlab.com`,
+  ]
+    .filter((line) => line !== null)
+    .join("\n");
+}
+
+/**
+ * Sends the branded order-confirmation email via Bird (orders@fingerboardlab.com)
+ * to the customer, with a BCC copy to the store owner so every order is
+ * visible in the owner's inbox. No-ops (returns { sent: false }) when
+ * BIRD_API_KEY isn't set or there is no recipient — orders are still recorded
+ * and viewable in /admin/orders regardless.
+ */
+export async function sendOrderConfirmationEmail(params: {
+  to: string | null;
+  orderId: string;
+  items: OrderEmailItem[];
+  amountSubtotal?: number | null;
+  amountShipping?: number | null;
+  amountTotal: number;
+  currency: string;
+  customerName?: string | null;
+  shippingAddress?: Record<string, string | null | undefined> | null;
+  orderNumber?: string;
+  bcc?: string | null;
+}): Promise<{ sent: boolean }> {
+  if (!params.to) return { sent: false };
+
+  const orderNumber =
+    params.orderNumber || params.orderId.slice(0, 8).toUpperCase();
+  const firstName =
+    (params.customerName || params.to).trim().split(/\s+/)[0] || "there";
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://fingerboardlab.com";
+  const trackUrl = `${siteUrl}/track?email=${encodeURIComponent(params.to)}`;
+  const bcc =
+    params.bcc !== undefined
+      ? params.bcc
+      : process.env.ADMIN_NOTIFICATION_EMAIL || OWNER_BCC_FALLBACK;
+
+  const shared: BrandedOrderParams = {
+    orderNumber,
+    orderDate: orderDateLabel(),
+    firstName,
+    items: params.items,
+    amountSubtotal:
+      params.amountSubtotal ??
+      params.amountTotal - (params.amountShipping ?? 0),
+    amountShipping: params.amountShipping ?? 0,
+    amountTotal: params.amountTotal,
+    currency: params.currency,
+    shippingAddress: params.shippingAddress ?? null,
+    trackUrl,
+  };
+
+  return birdSend({
+    to: params.to,
+    bcc: bcc || null,
+    subject: `Your ${SITE_NAME} order is confirmed (#${orderNumber})`,
+    html: brandedOrderEmailHtml(shared),
+    text: brandedOrderEmailText(shared),
+  });
 }
 
 // ---------------------------------------------------------------------------
@@ -286,9 +598,9 @@ export async function sendCustomOrderOwnerNotification(
   const recipientEmail =
     process.env.ADMIN_NOTIFICATION_EMAIL || SUPPORT_EMAIL || null;
 
-  if (!isResendConfigured()) {
+  if (!process.env.BIRD_API_KEY) {
     console.warn(
-      "[custom-order-notify] Skipped: RESEND_API_KEY not set.",
+      "[custom-order-notify] Skipped: BIRD_API_KEY not set.",
     );
     return { sent: false };
   }
@@ -325,38 +637,19 @@ export async function sendCustomOrderOwnerNotification(
     }
   }
 
-  const from =
-    process.env.RESEND_FROM_EMAIL || "Fingerboard Lab <onboarding@resend.dev>";
-
   const shortId = params.orderId.slice(0, 8).toUpperCase();
 
-  try {
-    const res = await fetch("https://api.resend.com/emails", {
-      method: "POST",
-      headers: {
-        Authorization: `Bearer ${process.env.RESEND_API_KEY}`,
-        "content-type": "application/json",
-      },
-      body: JSON.stringify({
-        from,
-        to: [recipientEmail],
-        subject: `[Action needed] New custom build order ${shortId}`,
-        html: customOrderOwnerEmailHtml({ ...params, signedUrls }),
-      }),
-    });
-
-    if (!res.ok) {
-      const body = await res.text().catch(() => "");
-      console.error(
-        `[custom-order-notify] Resend returned ${res.status}:`,
-        body,
-      );
-      return { sent: false };
-    }
-
-    return { sent: true };
-  } catch (err) {
-    console.error("[custom-order-notify] fetch failed:", err);
-    return { sent: false };
+  const result = await birdSend({
+    to: recipientEmail,
+    subject: `[Action needed] New custom build order ${shortId}`,
+    html: customOrderOwnerEmailHtml({ ...params, signedUrls }),
+    text: `New custom build order ${shortId} from ${params.customerEmail} — total ${money(
+      params.amountTotal,
+      "usd",
+    )}. Open /admin/orders to fulfil.`,
+  });
+  if (!result.sent) {
+    console.error("[custom-order-notify] Bird send failed");
   }
+  return { sent: result.sent };
 }
