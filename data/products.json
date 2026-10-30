@@ -37519,6 +37519,796 @@
       },
       "seo_title": "DTzero OME Surplus Completes — 3 Graphics, 2 Kits",
       "seo_description": "Surplus export DTzero completes in three deck graphics. Standard or Premium kit — while the batch lasts."
+    },
+    {
+      "id": 10297130000111,
+      "title": "SDR Transforming Marble Box — Modular Fingerboard Park",
+      "body_html": "<p>The piece that made SDR's marble park famous: a stone-composite box that reconfigures. Closed, it is a planter-style plaza box; open the marble lids and reseat them on the bamboo base and it becomes an arch ramp, a jump platform or an angled ledge — one unit, a whole plaza of shapes. Speckled marble tops sit on a natural bamboo-wood base, with the SDR logo tiled into the stone faces.</p><p><strong>Why this one</strong></p><ul><li>Transforming design — the same unit works as a closed box, arch ramp and angled ledge</li><li>Speckled marble-look stone composite tops with genuine bamboo-wood base</li><li>Scaled to fingerboard plazas at roughly 250×60×45mm per box</li><li>Dual-colour option is made to order in your colour pairing from the same workshop</li></ul><p><strong>Specifications</strong></p><table><tbody><tr><td><strong>Brand</strong></td><td>SDR</td></tr><tr><td><strong>Type</strong></td><td>Transforming modular box / ramp</td></tr><tr><td><strong>Material</strong></td><td>Stone composite, bamboo base</td></tr><tr><td><strong>Finishes</strong></td><td>Marble ice white, milky white, light beige; dual-colour custom</td></tr></tbody></table><p><strong>Who it suits</strong></p><p>Fingerboarders building the viral marble-plaza aesthetic and filmers who want one prop that can be reconfigured between shots into a completely different obstacle.</p><em>Ships directly from our supplier workshop with tracking, arriving in 7–14 business days. Prices in USD; shipping is free on orders over $50. 30-day returns if it is not right for you.</em>",
+      "handle": "sdr-transforming-marble-box-modular-park",
+      "created_at": "2026-10-31T11:45:00+02:00",
+      "updated_at": "2026-10-31T11:45:00+02:00",
+      "published_at": "2026-10-31T11:45:00+02:00",
+      "status": "active",
+      "published_scope": "web",
+      "template_suffix": null,
+      "tags": "SDR, transforming box, marble box, modular park, arch ramp, obstacle, bamboo, internet famous, plaza",
+      "product_type": "Ramps & Obstacles",
+      "vendor": "Fingerboard Lab",
+      "variants": [
+        {
+          "id": 92000000010701,
+          "product_id": 10297130000111,
+          "title": "Marble — Ice White",
+          "price": "63.95",
+          "compare_at_price": null,
+          "position": 1,
+          "option1": "Marble — Ice White",
+          "inventory_policy": "continue",
+          "taxable": false,
+          "sku": "FL-10297130000111-ICE",
+          "requires_shipping": true,
+          "available": true,
+          "inventory_quantity": 10,
+          "weight": 0.9,
+          "weight_unit": "kg",
+          "image_id": 1029713000011106
+        },
+        {
+          "id": 92000000010702,
+          "product_id": 10297130000111,
+          "title": "Marble — Milky White",
+          "price": "63.95",
+          "compare_at_price": null,
+          "position": 2,
+          "option1": "Marble — Milky White",
+          "inventory_policy": "continue",
+          "taxable": false,
+          "sku": "FL-10297130000111-MILK",
+          "requires_shipping": true,
+          "available": true,
+          "inventory_quantity": 6,
+          "weight": 0.9,
+          "weight_unit": "kg",
+          "image_id": 1029713000011107
+        },
+        {
+          "id": 92000000010703,
+          "product_id": 10297130000111,
+          "title": "Marble — Light Beige",
+          "price": "63.95",
+          "compare_at_price": null,
+          "position": 3,
+          "option1": "Marble — Light Beige",
+          "inventory_policy": "continue",
+          "taxable": false,
+          "sku": "FL-10297130000111-BEIGE",
+          "requires_shipping": true,
+          "available": false,
+          "inventory_quantity": 0,
+          "weight": 0.9,
+          "weight_unit": "kg",
+          "image_id": 1029713000011108
+        },
+        {
+          "id": 92000000010704,
+          "product_id": 10297130000111,
+          "title": "Dual-Colour (made to order)",
+          "price": "89.95",
+          "compare_at_price": null,
+          "position": 4,
+          "option1": "Dual-Colour (made to order)",
+          "inventory_policy": "continue",
+          "taxable": false,
+          "sku": "FL-10297130000111-DUAL",
+          "requires_shipping": true,
+          "available": true,
+          "inventory_quantity": 8,
+          "weight": 0.9,
+          "weight_unit": "kg"
+        }
+      ],
+      "options": [
+        {
+          "id": 102971300001110,
+          "product_id": 10297130000111,
+          "name": "Finish",
+          "position": 1,
+          "values": [
+            "Marble — Ice White",
+            "Marble — Milky White",
+            "Marble — Light Beige",
+            "Dual-Colour (made to order)"
+          ]
+        }
+      ],
+      "images": [
+        {
+          "id": 1029713000011102,
+          "product_id": 10297130000111,
+          "position": 1,
+          "src": "/products/primary-10297130000111-sdr.jpg",
+          "width": 800,
+          "height": 800,
+          "alt": "SDR transforming marble box shown closed and reconfigured into an arch ramp."
+        },
+        {
+          "id": 1029713000011103,
+          "product_id": 10297130000111,
+          "position": 2,
+          "src": "https://img.alicdn.com/imgextra/i1/1745118232/O1CN010MnEeP2AgJEN4T2yl_!!1745118232.jpg",
+          "width": 800,
+          "height": 800,
+          "alt": "Transforming box disassembled: bamboo bases, marble tiles and lids."
+        },
+        {
+          "id": 1029713000011104,
+          "product_id": 10297130000111,
+          "position": 3,
+          "src": "https://img.alicdn.com/imgextra/i1/1745118232/O1CN01Peyj3p2AgJDDiDfud_!!1745118232.jpg",
+          "width": 800,
+          "height": 800,
+          "alt": "Three box configurations: arch ramp, angled box and closed box."
+        },
+        {
+          "id": 1029713000011105,
+          "product_id": 10297130000111,
+          "position": 4,
+          "src": "https://img.alicdn.com/imgextra/i1/1745118232/O1CN0122WN6j2AgJDFM6pIZ_!!1745118232.jpg",
+          "width": 800,
+          "height": 800,
+          "alt": "Marble box used as a planter-style prop with plants inside."
+        },
+        {
+          "id": 1029713000011106,
+          "product_id": 10297130000111,
+          "position": 5,
+          "src": "http://img.alicdn.com/imgextra/i1/1745118232/O1CN013Dtl5b2AgJD2x5I8Y_!!1745118232.jpg",
+          "width": 800,
+          "height": 800,
+          "alt": "Ice-white marble SKU configured as an arched ramp on a bamboo base."
+        },
+        {
+          "id": 1029713000011107,
+          "product_id": 10297130000111,
+          "position": 6,
+          "src": "http://img.alicdn.com/imgextra/i2/1745118232/O1CN01Y5pjTF2AgJDIjXZWI_!!1745118232.jpg",
+          "width": 800,
+          "height": 800,
+          "alt": "Milky-white marble SKU in the open box configuration."
+        },
+        {
+          "id": 1029713000011108,
+          "product_id": 10297130000111,
+          "position": 7,
+          "src": "http://img.alicdn.com/imgextra/i3/1745118232/O1CN01SEooFF2AgJDC0BOac_!!1745118232.jpg",
+          "width": 800,
+          "height": 800,
+          "alt": "Light-beige marble SKU configured as a closed box."
+        }
+      ],
+      "image": {
+        "id": 1029713000011102,
+        "product_id": 10297130000111,
+        "position": 1,
+        "src": "/products/primary-10297130000111-sdr.jpg",
+        "width": 800,
+        "height": 800,
+        "alt": "SDR transforming marble box shown closed and reconfigured into an arch ramp."
+      },
+      "seo_title": "SDR Transforming Marble Box — Modular Park",
+      "seo_description": "SDR's viral transforming marble box: closed planter box, arch ramp or angled ledge in one unit. Ice white, milky or beige marble."
+    },
+    {
+      "id": 10297130000112,
+      "title": "SDR Marble Mini Half-U — Fingerboard Ramp",
+      "body_html": "<p>A mini half-pipe in speckled ice-white marble composite — the centrepiece transition of the SDR marble plaza. Concave enough to pump for speed on a desk line, small enough to pair with the brick box and ledge strips. The upgraded version adds a stepped rear base that doubles as a stair set on the back side.</p><p><strong>Why this one</strong></p><ul><li>True half-U transition profile in stone composite — solid, zero flex, dead quiet on impact</li><li>Standard model: flat rear, pure transition; Upgraded model: stepped rear base adds a stair line</li><li>Speckled marble finish with SDR logo on the face</li><li>Matches the whole SDR marble-park range for one coherent plaza build</li></ul><p><strong>Specifications</strong></p><table><tbody><tr><td><strong>Brand</strong></td><td>SDR</td></tr><tr><td><strong>Type</strong></td><td>Mini half-U transition ramp</td></tr><tr><td><strong>Material</strong></td><td>Speckled stone composite</td></tr><tr><td><strong>Versions</strong></td><td>Standard (flat rear) / Upgraded (stepped rear)</td></tr></tbody></table><p><strong>Who it suits</strong></p><p>Riders who want a pumpable transition without a full halfpipe footprint, and marble-plaza builders completing the SDR set.</p><em>Ships directly from our supplier workshop with tracking, arriving in 7–14 business days. Prices in USD; shipping is free on orders over $50. 30-day returns if it is not right for you.</em>",
+      "handle": "sdr-marble-mini-half-u-ramp",
+      "created_at": "2026-10-31T11:45:00+02:00",
+      "updated_at": "2026-10-31T11:45:00+02:00",
+      "published_at": "2026-10-31T11:45:00+02:00",
+      "status": "active",
+      "published_scope": "web",
+      "template_suffix": null,
+      "tags": "SDR, mini half-U, half pipe, marble ramp, transition, obstacle, plaza, stone composite",
+      "product_type": "Ramps & Obstacles",
+      "vendor": "Fingerboard Lab",
+      "variants": [
+        {
+          "id": 92000000010705,
+          "product_id": 10297130000112,
+          "title": "Standard",
+          "price": "41.95",
+          "compare_at_price": null,
+          "position": 1,
+          "option1": "Standard",
+          "inventory_policy": "continue",
+          "taxable": false,
+          "sku": "FL-10297130000112-STD",
+          "requires_shipping": true,
+          "available": true,
+          "inventory_quantity": 4,
+          "weight": 0.8,
+          "weight_unit": "kg",
+          "image_id": 1029713000011206
+        },
+        {
+          "id": 92000000010706,
+          "product_id": 10297130000112,
+          "title": "Upgraded (stepped rear)",
+          "price": "48.95",
+          "compare_at_price": null,
+          "position": 2,
+          "option1": "Upgraded (stepped rear)",
+          "inventory_policy": "continue",
+          "taxable": false,
+          "sku": "FL-10297130000112-UPG",
+          "requires_shipping": true,
+          "available": true,
+          "inventory_quantity": 4,
+          "weight": 0.8,
+          "weight_unit": "kg",
+          "image_id": 1029713000011207
+        }
+      ],
+      "options": [
+        {
+          "id": 102971300001120,
+          "product_id": 10297130000112,
+          "name": "Version",
+          "position": 1,
+          "values": [
+            "Standard",
+            "Upgraded (stepped rear)"
+          ]
+        }
+      ],
+      "images": [
+        {
+          "id": 1029713000011202,
+          "product_id": 10297130000112,
+          "position": 1,
+          "src": "/products/primary-10297130000112-sdr.jpg",
+          "width": 800,
+          "height": 800,
+          "alt": "SDR marble mini half-U ramps, standard and upgraded side by side."
+        },
+        {
+          "id": 1029713000011203,
+          "product_id": 10297130000112,
+          "position": 2,
+          "src": "https://img.alicdn.com/imgextra/i4/1745118232/O1CN01iQRhK32AgJCtyNCo3_!!1745118232.jpg",
+          "width": 800,
+          "height": 800,
+          "alt": "Standard and upgraded half-U ramps from the front, showing the concave transition."
+        },
+        {
+          "id": 1029713000011204,
+          "product_id": 10297130000112,
+          "position": 3,
+          "src": "https://img.alicdn.com/imgextra/i3/1745118232/O1CN013q0V3i2AgJCvpfLcM_!!1745118232.jpg",
+          "width": 800,
+          "height": 800,
+          "alt": "Profile view contrasting the flat back with the upgraded stepped rear base."
+        },
+        {
+          "id": 1029713000011205,
+          "product_id": 10297130000112,
+          "position": 4,
+          "src": "https://img.alicdn.com/imgextra/i4/1745118232/O1CN01la2n7y2AgJCphRQ7E_!!1745118232.jpg",
+          "width": 800,
+          "height": 800,
+          "alt": "Fingerboarder riding the mini half-U transition in a plaza scene."
+        },
+        {
+          "id": 1029713000011206,
+          "product_id": 10297130000112,
+          "position": 5,
+          "src": "https://img.alicdn.com/imgextra/i3/1745118232/O1CN01ZkxvHV2AgJCqixWdJ_!!1745118232.jpg",
+          "width": 800,
+          "height": 800,
+          "alt": "Standard mini half-U: ice-white marble with flat rear base."
+        },
+        {
+          "id": 1029713000011207,
+          "product_id": 10297130000112,
+          "position": 6,
+          "src": "https://img.alicdn.com/imgextra/i4/1745118232/O1CN01PODXTd2AgJHogpHPt_!!1745118232.jpg",
+          "width": 800,
+          "height": 800,
+          "alt": "Upgraded mini half-U in beige marble with stepped rear base."
+        }
+      ],
+      "image": {
+        "id": 1029713000011202,
+        "product_id": 10297130000112,
+        "position": 1,
+        "src": "/products/primary-10297130000112-sdr.jpg",
+        "width": 800,
+        "height": 800,
+        "alt": "SDR marble mini half-U ramps, standard and upgraded side by side."
+      },
+      "seo_title": "SDR Marble Mini Half-U Fingerboard Ramp",
+      "seo_description": "Mini half-pipe transition in speckled marble composite. Standard or upgraded with stepped rear stair base, from SDR."
+    },
+    {
+      "id": 10297130000113,
+      "title": "SDR Marble Ledge Strips — Fingerboard Rails",
+      "body_html": "<p>The simplest piece of the SDR marble park and the one you will use most: a 20×3×2cm stone-composite ledge strip. Grind it, manual it, line several up into a plaza, or use one as the rail between two boxes. Three grades: the simple strip with square edges, the regular strip, and the upgraded strip with bevelled edges that slides like a waxed curb.</p><p><strong>Why this one</strong></p><ul><li>20cm length — long enough for real grind lines on a desk</li><li>Stone composite with a speckled marble face in every grade</li><li>Upgraded strip's bevelled edges give smoother slide entry on tricks</li><li>Start with one, add more to build multi-ledge lines — they tile cleanly</li></ul><p><strong>Specifications</strong></p><table><tbody><tr><td><strong>Brand</strong></td><td>SDR</td></tr><tr><td><strong>Type</strong></td><td>Ledge strip / manual pad</td></tr><tr><td><strong>Size</strong></td><td>20 × 3 × 2cm (upgraded 3cm profile)</td></tr><tr><td><strong>Grades</strong></td><td>Simple / Regular / Upgraded (bevelled)</td></tr></tbody></table><p><strong>Who it suits</strong></p><p>Every marble-plaza build — the strips are the connective tissue between boxes, ramps and benches.</p><em>Ships directly from our supplier workshop with tracking, arriving in 7–14 business days. Prices in USD; shipping is free on orders over $50. 30-day returns if it is not right for you.</em>",
+      "handle": "sdr-marble-ledge-strips",
+      "created_at": "2026-10-31T11:45:00+02:00",
+      "updated_at": "2026-10-31T11:45:00+02:00",
+      "published_at": "2026-10-31T11:45:00+02:00",
+      "status": "active",
+      "published_scope": "web",
+      "template_suffix": null,
+      "tags": "SDR, marble strip, ledge, rail, manual pad, grind, obstacle, plaza, stone composite",
+      "product_type": "Ramps & Obstacles",
+      "vendor": "Fingerboard Lab",
+      "variants": [
+        {
+          "id": 92000000010707,
+          "product_id": 10297130000113,
+          "title": "Simple — Ice White",
+          "price": "12.95",
+          "compare_at_price": null,
+          "position": 1,
+          "option1": "Simple — Ice White",
+          "inventory_policy": "continue",
+          "taxable": false,
+          "sku": "FL-10297130000113-SIM",
+          "requires_shipping": true,
+          "available": true,
+          "inventory_quantity": 10,
+          "weight": 0.4,
+          "weight_unit": "kg",
+          "image_id": 1029713000011306
+        },
+        {
+          "id": 92000000010708,
+          "product_id": 10297130000113,
+          "title": "Regular — Yellow Marble",
+          "price": "15.95",
+          "compare_at_price": null,
+          "position": 2,
+          "option1": "Regular — Yellow Marble",
+          "inventory_policy": "continue",
+          "taxable": false,
+          "sku": "FL-10297130000113-REG",
+          "requires_shipping": true,
+          "available": true,
+          "inventory_quantity": 10,
+          "weight": 0.4,
+          "weight_unit": "kg",
+          "image_id": 1029713000011307
+        },
+        {
+          "id": 92000000010709,
+          "product_id": 10297130000113,
+          "title": "Upgraded — Yellow Marble, bevelled",
+          "price": "19.95",
+          "compare_at_price": null,
+          "position": 3,
+          "option1": "Upgraded — Yellow Marble, bevelled",
+          "inventory_policy": "continue",
+          "taxable": false,
+          "sku": "FL-10297130000113-UPG",
+          "requires_shipping": true,
+          "available": true,
+          "inventory_quantity": 10,
+          "weight": 0.4,
+          "weight_unit": "kg",
+          "image_id": 1029713000011308
+        }
+      ],
+      "options": [
+        {
+          "id": 102971300001130,
+          "product_id": 10297130000113,
+          "name": "Grade",
+          "position": 1,
+          "values": [
+            "Simple — Ice White",
+            "Regular — Yellow Marble",
+            "Upgraded — Yellow Marble, bevelled"
+          ]
+        }
+      ],
+      "images": [
+        {
+          "id": 1029713000011302,
+          "product_id": 10297130000113,
+          "position": 1,
+          "src": "/products/primary-10297130000113-sdr.jpg",
+          "width": 800,
+          "height": 800,
+          "alt": "SDR marble ledge strips in grey and ice-white speckled finishes."
+        },
+        {
+          "id": 1029713000011303,
+          "product_id": 10297130000113,
+          "position": 2,
+          "src": "https://img.alicdn.com/bao/uploaded/i1/1745118232/O1CN01zE1icg2AgJMiFOIWU_!!1745118232.jpg",
+          "width": 800,
+          "height": 800,
+          "alt": "Ledge strips lined up showing the 20cm length and 3cm profile."
+        },
+        {
+          "id": 1029713000011304,
+          "product_id": 10297130000113,
+          "position": 3,
+          "src": "https://img.alicdn.com/bao/uploaded/i4/1745118232/O1CN01ghFjrb2AgJMi9Qb2d_!!1745118232.jpg",
+          "width": 800,
+          "height": 800,
+          "alt": "Fingerboard boardsliding a marble ledge strip."
+        },
+        {
+          "id": 1029713000011305,
+          "product_id": 10297130000113,
+          "position": 4,
+          "src": "https://img.alicdn.com/bao/uploaded/i4/1745118232/O1CN01fZWBOb2AgJMeVpn3g_!!1745118232.jpg",
+          "width": 800,
+          "height": 800,
+          "alt": "Bevelled edges of the upgraded strip catching the light."
+        },
+        {
+          "id": 1029713000011306,
+          "product_id": 10297130000113,
+          "position": 5,
+          "src": "https://img.alicdn.com/bao/uploaded/i4/1745118232/O1CN01Jw101l2AgJMjUiAr7_!!1745118232.jpg",
+          "width": 800,
+          "height": 800,
+          "alt": "Simple strip in ice-white marble with square edges, 20x3x2cm."
+        },
+        {
+          "id": 1029713000011307,
+          "product_id": 10297130000113,
+          "position": 6,
+          "src": "https://img.alicdn.com/bao/uploaded/i3/1745118232/O1CN01xPM76D2AgJMhgZVq0_!!1745118232.jpg",
+          "width": 800,
+          "height": 800,
+          "alt": "Regular strip in yellow marble, 20cm ledge."
+        },
+        {
+          "id": 1029713000011308,
+          "product_id": 10297130000113,
+          "position": 7,
+          "src": "https://img.alicdn.com/bao/uploaded/i2/1745118232/O1CN01zGdVQa2AgJMj2FLLS_!!1745118232.jpg",
+          "width": 800,
+          "height": 800,
+          "alt": "Upgraded strip in yellow marble with bevelled edges."
+        }
+      ],
+      "image": {
+        "id": 1029713000011302,
+        "product_id": 10297130000113,
+        "position": 1,
+        "src": "/products/primary-10297130000113-sdr.jpg",
+        "width": 800,
+        "height": 800,
+        "alt": "SDR marble ledge strips in grey and ice-white speckled finishes."
+      },
+      "seo_title": "SDR Marble Ledge Strips — Fingerboard Rails",
+      "seo_description": "20cm marble-composite ledge strips in three grades — simple, regular and bevelled-upgraded. The backbone of the SDR plaza."
+    },
+    {
+      "id": 10297130000114,
+      "title": "SDR Marble Brick Box — Fingerboard Obstacle",
+      "body_html": "<p>A stone-composite box capped with a row of white square tiles — SDR's marble take on the classic brick ledge. The tile edge is the grind surface: crisp, consistent and satisfyingly loud on a boardslide. The upgraded version refines the body proportions and tile seating for a cleaner finish.</p><p><strong>Why this one</strong></p><ul><li>White tile coping row along the full top edge — a real grind surface, not paint</li><li>Grey speckled marble-look body with the SDR logo on the side</li><li>Heavy enough to stay planted during lines; no sliding mid-grind</li><li>Upgraded version refines body shape and tile fit</li></ul><p><strong>Specifications</strong></p><table><tbody><tr><td><strong>Brand</strong></td><td>SDR</td></tr><tr><td><strong>Type</strong></td><td>Brick box / ledge obstacle</td></tr><tr><td><strong>Material</strong></td><td>Stone composite with tile coping</td></tr><tr><td><strong>Versions</strong></td><td>Standard / Upgraded</td></tr></tbody></table><p><strong>Who it suits</strong></p><p>Riders who want the marble-plaza look with a genuinely grindable edge — pairs with the half-U and ledge strips for a complete plaza.</p><em>Ships directly from our supplier workshop with tracking, arriving in 7–14 business days. Prices in USD; shipping is free on orders over $50. 30-day returns if it is not right for you.</em>",
+      "handle": "sdr-marble-brick-box-obstacle",
+      "created_at": "2026-10-31T11:45:00+02:00",
+      "updated_at": "2026-10-31T11:45:00+02:00",
+      "published_at": "2026-10-31T11:45:00+02:00",
+      "status": "active",
+      "published_scope": "web",
+      "template_suffix": null,
+      "tags": "SDR, brick box, marble box, ledge, tile coping, grind, obstacle, plaza",
+      "product_type": "Ramps & Obstacles",
+      "vendor": "Fingerboard Lab",
+      "variants": [
+        {
+          "id": 92000000010710,
+          "product_id": 10297130000114,
+          "title": "Standard",
+          "price": "34.95",
+          "compare_at_price": null,
+          "position": 1,
+          "option1": "Standard",
+          "inventory_policy": "continue",
+          "taxable": false,
+          "sku": "FL-10297130000114-STD",
+          "requires_shipping": true,
+          "available": true,
+          "inventory_quantity": 10,
+          "weight": 0.8,
+          "weight_unit": "kg",
+          "image_id": 1029713000011406
+        },
+        {
+          "id": 92000000010711,
+          "product_id": 10297130000114,
+          "title": "Upgraded",
+          "price": "45.95",
+          "compare_at_price": null,
+          "position": 2,
+          "option1": "Upgraded",
+          "inventory_policy": "continue",
+          "taxable": false,
+          "sku": "FL-10297130000114-UPG",
+          "requires_shipping": true,
+          "available": true,
+          "inventory_quantity": 8,
+          "weight": 0.8,
+          "weight_unit": "kg",
+          "image_id": 1029713000011407
+        }
+      ],
+      "options": [
+        {
+          "id": 102971300001140,
+          "product_id": 10297130000114,
+          "name": "Version",
+          "position": 1,
+          "values": [
+            "Standard",
+            "Upgraded"
+          ]
+        }
+      ],
+      "images": [
+        {
+          "id": 1029713000011402,
+          "product_id": 10297130000114,
+          "position": 1,
+          "src": "/products/primary-10297130000114-sdr.jpg",
+          "width": 800,
+          "height": 800,
+          "alt": "SDR marble brick box obstacles with white tile coping along the top edge."
+        },
+        {
+          "id": 1029713000011403,
+          "product_id": 10297130000114,
+          "position": 2,
+          "src": "https://img.alicdn.com/bao/uploaded/i4/1745118232/O1CN015ufQnm2AgJMiOcsmY_!!1745118232.jpg",
+          "width": 800,
+          "height": 800,
+          "alt": "Single brick box from a higher angle showing the tile row and SDR logo."
+        },
+        {
+          "id": 1029713000011406,
+          "product_id": 10297130000114,
+          "position": 5,
+          "src": "https://img.alicdn.com/bao/uploaded/i1/1745118232/O1CN01z4N2vq2AgJSlZXDQx_!!1745118232.jpg",
+          "width": 800,
+          "height": 800,
+          "alt": "Standard brick box: speckled stone body with white tile coping."
+        },
+        {
+          "id": 1029713000011407,
+          "product_id": 10297130000114,
+          "position": 6,
+          "src": "https://img.alicdn.com/bao/uploaded/i4/1745118232/O1CN01wjPdaF2AgJNRExY8E_!!1745118232.jpg",
+          "width": 800,
+          "height": 800,
+          "alt": "Upgraded brick box with refined body proportions and tile seating."
+        }
+      ],
+      "image": {
+        "id": 1029713000011402,
+        "product_id": 10297130000114,
+        "position": 1,
+        "src": "/products/primary-10297130000114-sdr.jpg",
+        "width": 800,
+        "height": 800,
+        "alt": "SDR marble brick box obstacles with white tile coping along the top edge."
+      },
+      "seo_title": "SDR Marble Brick Box Fingerboard Obstacle",
+      "seo_description": "Stone-composite box with white tile coping — a grindable brick ledge in speckled marble. Standard or upgraded."
+    },
+    {
+      "id": 10297130000115,
+      "title": "SDR Marble Dining Table — Fingerboard Venue Prop",
+      "body_html": "<p>The quiet star of the SDR marble plaza: a dining table and matching bench in stone composite on light wooden legs. Skate the tabletop as a manual pad, grind the bench edge, or set it as the centrepiece venue prop that makes the whole plaza read like a real park.</p><p><strong>Why this one</strong></p><ul><li>Table and bench as a set — two obstacles that also dress the scene</li><li>Smooth off-white marble-look tops with the SDR logo at the corner</li><li>Wooden legs keep the silhouette realistic at fingerboard scale</li><li>Flat, stable tops that hold a line without wobble</li></ul><p><strong>Specifications</strong></p><table><tbody><tr><td><strong>Brand</strong></td><td>SDR</td></tr><tr><td><strong>Type</strong></td><td>Dining table + bench venue prop</td></tr><tr><td><strong>Material</strong></td><td>Stone composite top, wooden legs</td></tr></tbody></table><p><strong>Who it suits</strong></p><p>Filmers and plaza builders who want their setups to look like lived-in public spaces, not just ramp stacks.</p><em>Ships directly from our supplier workshop with tracking, arriving in 7–14 business days. Prices in USD; shipping is free on orders over $50. 30-day returns if it is not right for you.</em>",
+      "handle": "sdr-marble-dining-table-box",
+      "created_at": "2026-10-31T11:45:00+02:00",
+      "updated_at": "2026-10-31T11:45:00+02:00",
+      "published_at": "2026-10-31T11:45:00+02:00",
+      "status": "active",
+      "published_scope": "web",
+      "template_suffix": null,
+      "tags": "SDR, dining table, marble table, venue prop, bench, manual pad, plaza, obstacle",
+      "product_type": "Ramps & Obstacles",
+      "vendor": "Fingerboard Lab",
+      "variants": [
+        {
+          "id": 92000000010712,
+          "product_id": 10297130000115,
+          "title": "Default Title",
+          "price": "34.95",
+          "compare_at_price": null,
+          "position": 1,
+          "option1": "Default Title",
+          "inventory_policy": "continue",
+          "taxable": false,
+          "sku": "FL-10297130000115",
+          "requires_shipping": true,
+          "available": true,
+          "inventory_quantity": 10,
+          "weight": 0.8,
+          "weight_unit": "kg"
+        }
+      ],
+      "options": [
+        {
+          "id": 102971300001150,
+          "product_id": 10297130000115,
+          "name": "Option",
+          "position": 1,
+          "values": [
+            "Default Title"
+          ]
+        }
+      ],
+      "images": [
+        {
+          "id": 1029713000011502,
+          "product_id": 10297130000115,
+          "position": 1,
+          "src": "/products/primary-10297130000115-sdr.jpg",
+          "width": 800,
+          "height": 800,
+          "alt": "SDR marble dining table and bench set with wooden legs."
+        },
+        {
+          "id": 1029713000011503,
+          "product_id": 10297130000115,
+          "position": 2,
+          "src": "https://img.alicdn.com/imgextra/i3/1745118232/O1CN01lEWWTk2AgJSjvAmHP_!!1745118232.jpg",
+          "width": 800,
+          "height": 800,
+          "alt": "Dining table set from an angle showing the marble top and bench."
+        },
+        {
+          "id": 1029713000011504,
+          "product_id": 10297130000115,
+          "position": 3,
+          "src": "https://img.alicdn.com/imgextra/i1/1745118232/O1CN01JYMKFA2AgJMjBW4kT_!!1745118232.jpg",
+          "width": 800,
+          "height": 800,
+          "alt": "Fingerboard line across the dining table prop."
+        },
+        {
+          "id": 1029713000011505,
+          "product_id": 10297130000115,
+          "position": 4,
+          "src": "https://img.alicdn.com/imgextra/i3/1745118232/O1CN017dGcbf2AgJMiUm4Jx_!!1745118232.jpg",
+          "width": 800,
+          "height": 800,
+          "alt": "Table and bench separated into individual obstacles."
+        },
+        {
+          "id": 1029713000011506,
+          "product_id": 10297130000115,
+          "position": 5,
+          "src": "https://img.alicdn.com/imgextra/i3/1745118232/O1CN01nYJXjf2AgJMkeHE6A_!!1745118232.jpg",
+          "width": 800,
+          "height": 800,
+          "alt": "Close-up of the SDR logo corner and marble grain."
+        }
+      ],
+      "image": {
+        "id": 1029713000011502,
+        "product_id": 10297130000115,
+        "position": 1,
+        "src": "/products/primary-10297130000115-sdr.jpg",
+        "width": 800,
+        "height": 800,
+        "alt": "SDR marble dining table and bench set with wooden legs."
+      },
+      "seo_title": "SDR Marble Dining Table Fingerboard Prop",
+      "seo_description": "Marble-look dining table and bench set on wooden legs — manual pad, bench grind and scene-dressing prop in one."
+    },
+    {
+      "id": 10297130000116,
+      "title": "SDR Marble Obstacle Barrier Box",
+      "body_html": "<p>SDR's marble road barrier — the angled-top obstacle that turns any flat plaza into a street spot. Light grey speckled stone composite, solid and dead flat underfoot, with an angled face that launches cleanly and lands predictably. The piece the brand built its viral marble-park videos around.</p><p><strong>Why this one</strong></p><ul><li>Angled barrier face doubles as launch ramp and hip</li><li>Stone composite body — heavy, silent, zero slide on impact</li><li>Speckled grey-white marble finish with SDR branding</li><li>Designed to pair with the transforming box and half-U for the full plaza</li></ul><p><strong>Specifications</strong></p><table><tbody><tr><td><strong>Brand</strong></td><td>SDR</td></tr><tr><td><strong>Type</strong></td><td>Barrier / angled obstacle</td></tr><tr><td><strong>Material</strong></td><td>Speckled stone composite</td></tr></tbody></table><p><strong>Who it suits</strong></p><p>Street-oriented riders who want launch-able architecture in the marble-plaza aesthetic.</p><em>Ships directly from our supplier workshop with tracking, arriving in 7–14 business days. Prices in USD; shipping is free on orders over $50. 30-day returns if it is not right for you.</em>",
+      "handle": "sdr-marble-obstacle-barrier-box",
+      "created_at": "2026-10-31T11:45:00+02:00",
+      "updated_at": "2026-10-31T11:45:00+02:00",
+      "published_at": "2026-10-31T11:45:00+02:00",
+      "status": "active",
+      "published_scope": "web",
+      "template_suffix": null,
+      "tags": "SDR, marble barrier, obstacle, jump platform, ramp, plaza, street spot, stone composite",
+      "product_type": "Ramps & Obstacles",
+      "vendor": "Fingerboard Lab",
+      "variants": [
+        {
+          "id": 92000000010713,
+          "product_id": 10297130000116,
+          "title": "Default Title",
+          "price": "38.95",
+          "compare_at_price": null,
+          "position": 1,
+          "option1": "Default Title",
+          "inventory_policy": "continue",
+          "taxable": false,
+          "sku": "FL-10297130000116",
+          "requires_shipping": true,
+          "available": true,
+          "inventory_quantity": 10,
+          "weight": 0.7,
+          "weight_unit": "kg"
+        }
+      ],
+      "options": [
+        {
+          "id": 102971300001160,
+          "product_id": 10297130000116,
+          "name": "Option",
+          "position": 1,
+          "values": [
+            "Default Title"
+          ]
+        }
+      ],
+      "images": [
+        {
+          "id": 1029713000011602,
+          "product_id": 10297130000116,
+          "position": 1,
+          "src": "/products/primary-10297130000116-sdr.jpg",
+          "width": 800,
+          "height": 800,
+          "alt": "SDR marble obstacle barrier with angled top in light grey speckled stone."
+        },
+        {
+          "id": 1029713000011603,
+          "product_id": 10297130000116,
+          "position": 2,
+          "src": "https://img.alicdn.com/imgextra/i1/1745118232/O1CN01phLpdd2AgJNJH8Zeu_!!1745118232.jpg",
+          "width": 800,
+          "height": 800,
+          "alt": "Barrier obstacle from the side showing the angled profile."
+        },
+        {
+          "id": 1029713000011604,
+          "product_id": 10297130000116,
+          "position": 3,
+          "src": "https://img.alicdn.com/imgextra/i3/1745118232/O1CN01X2vHkQ2AgJNJCZkAR_!!1745118232.jpg",
+          "width": 800,
+          "height": 800,
+          "alt": "Fingerboard airing over the marble barrier."
+        },
+        {
+          "id": 1029713000011605,
+          "product_id": 10297130000116,
+          "position": 4,
+          "src": "https://img.alicdn.com/imgextra/i4/1745118232/O1CN01JevZOz2AgJNLPTM7U_!!1745118232.jpg",
+          "width": 800,
+          "height": 800,
+          "alt": "Barrier combined with other SDR marble pieces in a plaza."
+        },
+        {
+          "id": 1029713000011606,
+          "product_id": 10297130000116,
+          "position": 5,
+          "src": "https://img.alicdn.com/imgextra/i4/1745118232/O1CN01ZeC0v22AgJNLdMcsx_!!1745118232.jpg",
+          "width": 800,
+          "height": 800,
+          "alt": "Close-up of the speckled stone surface and SDR branding."
+        }
+      ],
+      "image": {
+        "id": 1029713000011602,
+        "product_id": 10297130000116,
+        "position": 1,
+        "src": "/products/primary-10297130000116-sdr.jpg",
+        "width": 800,
+        "height": 800,
+        "alt": "SDR marble obstacle barrier with angled top in light grey speckled stone."
+      },
+      "seo_title": "SDR Marble Obstacle Barrier Box",
+      "seo_description": "Angled marble-composite barrier from SDR — launch ramp, hip and street-spot architecture for the marble plaza."
     }
   ]
 }
