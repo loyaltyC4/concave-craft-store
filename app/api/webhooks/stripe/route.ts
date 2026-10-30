@@ -11,6 +11,7 @@ import {
 } from "lib/orders";
 import {
   sendOrderConfirmationEmail,
+  sendOwnerOrderAlert,
   sendCustomOrderOwnerNotification,
 } from "lib/email";
 
@@ -307,6 +308,20 @@ export async function POST(req: NextRequest) {
       items: itemsWithEmailData,
       amountSubtotal: session.amount_subtotal ?? null,
       amountShipping: session.total_details?.amount_shipping ?? null,
+      amountTotal: session.amount_total ?? 0,
+      currency: session.currency || "usd",
+      shippingAddress:
+        (shippingAddress as Record<string, string | null | undefined> | null) ??
+        null,
+    });
+
+    // Owner notification: direct, plain, spam-proof — who ordered what.
+    await sendOwnerOrderAlert({
+      orderId: result.orderId,
+      orderNumber,
+      customerName: session.customer_details?.name || null,
+      customerEmail: session.customer_details?.email || null,
+      items,
       amountTotal: session.amount_total ?? 0,
       currency: session.currency || "usd",
       shippingAddress:

@@ -382,10 +382,10 @@ export async function sendOrderConfirmationEmail(params: {
     (params.customerName || params.to).trim().split(/\s+/)[0] || "there";
   const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://fingerboardlab.com";
   const trackUrl = `${siteUrl}/track?email=${encodeURIComponent(params.to)}`;
-  const bcc =
-    params.bcc !== undefined
-      ? params.bcc
-      : process.env.ADMIN_NOTIFICATION_EMAIL || OWNER_BCC_FALLBACK;
+  // The owner is notified via sendOwnerOrderAlert (a direct, plain-text-first
+  // email) instead of a BCC on the branded customer email — BCCs from a new
+  // sender get spam-tabbed by Gmail; a direct [ORDER] alert does not.
+  const bcc = params.bcc ?? null;
 
   const shared: BrandedOrderParams = {
     orderNumber,
@@ -652,4 +652,83 @@ export async function sendCustomOrderOwnerNotification(
     console.error("[custom-order-notify] Bird send failed");
   }
   return { sent: result.sent };
+}
+
+
+/**
+ * Direct owner alert for every paid order. Deliberately plain and
+ * text-forward (no big images, transactional subject) so it survives Gmail's
+ * spam filters. Subject reads: [ORDER] #receipt — name — total.
+ */
+export async function sendOwnerOrderAlert(params: {
+  orderId: string;
+  orderNumber: string;
+  customerName: string | null;
+  customerEmail: string | null;
+  items: { title: string; quantity: number; unitAmount: number }[];
+  amountTotal: number;
+  currency: string;
+  shippingAddress?: Record<string, string | null | undefined> | null;
+}): Promise<{ sent: boolean }> {
+  const owner = process.env.ADMIN_NOTIFICATION_EMAIL || OWNER_BCC_FALLBACK;
+  if (!owner) return { sent: false };
+
+  const total = money(params.amountTotal, params.currency);
+  const name = params.customerName || params.customerEmail || "Unknown buyer";
+  const rows = params.items
+    .map(
+      (it) =>
+        `<li style="margin:0 0 6px;">${escapeHtml(it.title)} &times; ${it.quantity} &mdash; ${money(
+          it.unitAmount * it.quantity,
+          params.currency,
+        )}</li>`,
+    )
+    .join("");
+  const a = params.shippingAddress || {};
+  const addr = [a.line1, a.line2, a.city, a.state, a.postal_code, a.country]
+    .filter(Boolean)
+    .join(", ");
+  const itemLines = params.items
+    .map((it) => `- ${it.title} x${it.quantity} — ${money(it.unitAmount * it.quantity, params.currency)}`)
+    .join("\n");
+
+  const html = `
+  <div style="background:#0a0a0a;padding:24px 0;font-family:Arial,Helvetica,sans-serif;">
+    <table role="presentation" width="100%" style="max-width:560px;margin:0 auto;background:#15171c;border-radius:12px;overflow:hidden;">
+      <tr><td style="padding:24px;">
+        <p style="margin:0 0 4px;color:#8a8f98;font-size:12px;letter-spacing:.08em;text-transform:uppercase;">New Fingerboard Lab order</p>
+        <h1 style="margin:0 0 16px;color:#f3f1ea;font-size:20px;">#${escapeHtml(params.orderNumber)} &mdash; ${total}</h1>
+        <p style="margin:0 0 2px;color:#8a8f98;font-size:12px;">Customer</p>
+        <p style="margin:0 0 16px;color:#e8e8e8;font-size:14px;">${escapeHtml(name)}${params.customerEmail ? ` &lt;${escapeHtml(params.customerEmail)}&gt;` : ""}</p>
+        <p style="margin:0 0 6px;color:#8a8f98;font-size:12px;">Items</p>
+        <ul style="margin:0 0 16px;padding-left:18px;color:#e8e8e8;font-size:14px;">${rows}</ul>
+        <p style="margin:0 0 2px;color:#8a8f98;font-size:12px;">Total paid</p>
+        <p style="margin:0 0 16px;color:#c5f23c;font-size:16px;font-weight:bold;">${total}</p>
+        ${addr ? `<p style="margin:0 0 2px;color:#8a8f98;font-size:12px;">Ship to</p><p style="margin:0 0 16px;color:#e8e8e8;font-size:14px;">${escapeHtml(addr)}</p>` : ""}
+        <p style="margin:24px 0 0;color:#8a8f98;font-size:12px;">Order ID ${escapeHtml(params.orderId)} &middot; <a href="https://fingerboardlab.com/admin/orders" style="color:#c5f23c;">Open /admin/orders</a></p>
+      </td></tr>
+    </table>
+  </div>`;
+
+  const text = [
+    `New Fingerboard Lab order #${params.orderNumber} — ${total}`,
+    ``,
+    `Customer: ${name}${params.customerEmail ? ` <${params.customerEmail}>` : ""}`,
+    `Items:`,
+    itemLines,
+    `Total paid: ${total}`,
+    addr ? `Ship to: ${addr}` : null,
+    ``,
+    `Order ID: ${params.orderId}`,
+    `Manage: https://fingerboardlab.com/admin/orders`,
+  ]
+    .filter((line) => line !== null)
+    .join("\n");
+
+  return birdSend({
+    to: owner,
+    subject: `[ORDER] #${params.orderNumber} — ${name} — ${total}`,
+    html,
+    text,
+  });
 }
