@@ -1,5 +1,92 @@
 [
  {
+  "slug": "fidget-board-guide",
+  "title": "Fidget Board Guide: What It Is, How to Choose, Use & Care",
+  "metaTitle": "Fidget Board Guide: What It Is, How to Choose, Use & Care",
+  "metaDescription": "Learn exactly what a fidget board is, pick the right size, use it for focus, and keep it performing with simple maintenance tips.",
+  "category": "Reference",
+  "updated": "2026-10-30",
+  "readMinutes": 4,
+  "heroSummary": "Learn exactly what a fidget board is, pick the right size, use it for focus, and keep it performing with simple maintenance tips.",
+  "sections": [
+   {
+    "heading": "What is a fidget board?",
+    "body": [
+     "A fidget board is a miniature skateboard designed for finger play. It mimics the feel of a full‑size board but fits on a desk or tabletop. The core components are a wooden deck, two trucks, and a set of wheels with bearings. Riders use their fingers to push, flip, and grind, turning idle moments into focused practice.",
+     "Because the board is small, the learning curve is shallow. You can practice ollies and kickflips without the risk of falling. The tactile motion also helps channel nervous energy, making it a popular tool for students and office workers."
+    ]
+   },
+   {
+    "heading": "How to choose the right size and shape?",
+    "body": [
+     "The first decision is deck dimensions. Most decks measure ninety‑four to one‑hundred millimetres in length. Widths commonly range from twenty‑nine to thirty‑six millimetres. A wider deck gives a stable platform for beginners, while a narrower deck feels quicker for advanced tricks.",
+     "Next, consider the deck profile. A modest concave adds finger grip and improves pop for ollies. Flat decks feel smoother but can slip when you try a flip. Choose a profile that matches your comfort level.",
+     "Truck width should align with the deck. A truck that matches the deck's width provides balanced turning. If the truck is too narrow, the board will feel loose; too wide and the wheels may rub the deck edges.",
+     "Finally, think about material. Most decks are made from plywood layers. The number of plies affects flex. More plies mean a stiffer board, which translates to a snappier response. Fewer plies give a softer feel, which some users prefer for relaxed sessions."
+    ]
+   },
+   {
+    "heading": "How to use a fidget board for focus and stress relief?",
+    "body": [
+     "Start by placing the board on a stable surface. Position your index and middle fingers on the front trucks and your thumb on the tail. Push gently with your fingers to roll the board forward. The rhythm of the motion can become a meditative beat.",
+     "Practice basic tricks to keep your mind engaged. An ollie involves snapping the tail down while pulling the front up. A kickflip adds a flick of the thumb to spin the board. Repeating these moves builds muscle memory and distracts from distracting thoughts.",
+     "Use the board during short breaks. A minute of finger‑rolling can reset your attention span. The tactile feedback also releases dopamine, which helps reduce anxiety.",
+     "If you prefer a less aggressive approach, simply roll the board back and forth while reading or listening to a lecture. The subtle motion keeps your hands busy without pulling focus from the primary task."
+    ]
+   },
+   {
+    "heading": "How to maintain and clean your fidget board?",
+    "body": [
+     "Regular maintenance extends the life of every component. Start with the wheels and bearings. After a few weeks of regular use, remove the wheels and spin the bearings in a clean container of isopropyl alcohol. Dry them thoroughly before re‑installing.",
+     "The deck benefits from a quick wipe down. Use a soft cloth and a mild soap solution to remove dust and finger oils. Avoid soaking the deck, as excess moisture can warp the wood.",
+     "Grip tape accumulates debris over time. Peel back a corner and scrape off any grit with a credit‑card edge. If the tape loses its stick, replace it with a fresh strip.",
+     "Check the trucks for looseness. Tighten the kingpin nut just enough to eliminate wobble but still allow smooth turning. Over‑tightening can strip the threads and make the board feel stiff."
+    ]
+   },
+   {
+    "heading": "How to customize a fidget board?",
+    "body": [
+     "Customization lets you express personality and fine‑tune performance. Start with deck graphics. Simple stickers or paint can turn a plain board into a conversation piece.",
+     "Swap out grip tape for different colors or textures. Some riders prefer a coarse surface for extra pop, while others like a smoother feel for fluid slides.",
+     "Trucks come in various base angles. A steeper angle gives sharper turns; a shallower angle feels more stable. Experiment with a different angle if you want a new ride feel.",
+     "Riser pads sit between the deck and trucks. Adding a thin pad raises the board slightly, reducing wheel bite on tight tricks. Too much lift can make the board feel unstable, so start with a minimal pad.",
+     "Finally, consider wheel hardness. Softer wheels roll smoother on rough surfaces, while harder wheels slide easier for slides and manuals. Choose a hardness that matches your typical terrain."
+    ]
+   },
+   {
+    "heading": "When is a fidget board the right tool for you?",
+    "body": [
+     "If you spend long hours at a desk, a fidget board offers a quiet, portable outlet for excess energy. It also serves as a low‑impact way to practice fingerboard tricks without a full skate setup. For students, the board can become a study aid that improves concentration during short breaks.",
+     "Conversely, if you need a visual focus tool, a simple stress ball might be enough. The fidget board requires a flat surface and a bit of space. Weigh the trade‑off: the board provides kinetic learning, the ball provides pure tactile distraction.",
+     "The fidget board bridges the gap between play and productivity. Choose dimensions that fit your hand size, keep it clean, and experiment with small tweaks. The result is a personal pocket‑size skateboard that sharpens focus and satisfies the urge to move."
+    ]
+   }
+  ],
+  "faqs": [
+   {
+    "q": "What size fidget board should a beginner start with?",
+    "a": "A deck between ninety‑four and one‑hundred millimetres long and thirty‑one to thirty‑four millimetres wide works for most new riders."
+   },
+   {
+    "q": "Can a fidget board replace a traditional stress ball?",
+    "a": "Yes, the tactile feedback of wheels and trucks gives a more engaging outlet for nervous energy."
+   },
+   {
+    "q": "How often should I clean the bearings?",
+    "a": "Clean them after a few weeks of regular use or whenever they feel gritty."
+   },
+   {
+    "q": "Is grip tape necessary on a fidget board?",
+    "a": "Grip tape adds consistent traction; most riders find it essential for reliable tricks."
+   }
+  ],
+  "related": [
+   "fingerboard-deck-materials-explained",
+   "how-to-clean-fingerboard-bearings-and-wheels",
+   "wooden-fingerboard-ramps-diy-park-guide"
+  ]
+ },
+ {
   "slug": "26mm-trucks-fingerboard-guide",
   "title": "26mm Trucks: Fit, Setup, and Pros for Fingerboarders",
   "metaTitle": "26mm Trucks: Fit, Setup, and Pros for Fingerboarders",
