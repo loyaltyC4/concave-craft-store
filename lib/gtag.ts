@@ -80,12 +80,39 @@ export function gtagEvent(name: string, params: Record<string, unknown> = {}) {
   pushGtagCommand("event", name, params);
 }
 
+export const META_PIXEL_ID = process.env.NEXT_PUBLIC_META_PIXEL_ID;
+
+/** Meta Pixel standard event. No-op until the pixel snippet in app/layout.tsx has loaded. */
+function fbqTrack(
+  event: "ViewContent" | "AddToCart" | "InitiateCheckout" | "Purchase",
+  items: GtagItem[],
+  value: number,
+  currency: string,
+  eventId?: string,
+) {
+  if (typeof window === "undefined" || !META_PIXEL_ID) return;
+  const fbq = (window as unknown as { fbq?: (...a: unknown[]) => void }).fbq;
+  fbq?.(
+    "track",
+    event,
+    {
+      value,
+      currency,
+      content_ids: items.map((i) => i.item_id),
+      content_type: "product",
+      num_items: items.reduce((n, i) => n + (i.quantity ?? 1), 0),
+    },
+    eventId ? { eventID: eventId } : undefined,
+  );
+}
+
 export function trackViewItem(item: GtagItem, currency = "USD") {
   gtagEvent("view_item", {
     currency,
     value: item.price ?? 0,
     items: [item],
   });
+  fbqTrack("ViewContent", [item], item.price ?? 0, currency);
   mirrorToPosthog("view_item", item, currency);
 }
 
@@ -95,6 +122,7 @@ export function trackAddToCart(item: GtagItem, currency = "USD") {
     value: (item.price ?? 0) * (item.quantity ?? 1),
     items: [item],
   });
+  fbqTrack("AddToCart", [item], (item.price ?? 0) * (item.quantity ?? 1), currency);
   mirrorToPosthog("add_to_cart", item, currency);
 }
 
@@ -104,6 +132,7 @@ export function trackBeginCheckout(
   currency = "USD",
 ) {
   gtagEvent("begin_checkout", { currency, value, items });
+  fbqTrack("InitiateCheckout", items, value, currency);
   items.forEach((it) => mirrorToPosthog("begin_checkout", it, currency, value));
 }
 
@@ -121,6 +150,7 @@ export function trackPurchase(params: {
     ...(params.shipping != null ? { shipping: params.shipping } : {}),
     items: params.items,
   });
+  fbqTrack("Purchase", params.items, params.value, params.currency, params.transactionId);
   params.items.forEach((it) =>
     mirrorToPosthog("purchase", it, params.currency, params.value, params.transactionId),
   );
