@@ -8,7 +8,7 @@ import { SpeedInsights } from "@vercel/speed-insights/next";
 import Script from "next/script";
 import "./globals.css";
 import { baseUrl } from "lib/utils";
-import { GA_MEASUREMENT_ID, META_PIXEL_ID } from "lib/gtag";
+import { GA_MEASUREMENT_ID, GOOGLE_ADS_ID, META_PIXEL_ID } from "lib/gtag";
 import { POSTHOG_KEY, POSTHOG_API_HOST } from "lib/posthog";
 import { ProductClickTracker } from "components/analytics/product-click-tracker";
 import {
@@ -178,7 +178,7 @@ export default async function RootLayout({
         {GA_MEASUREMENT_ID && (
           <script
             dangerouslySetInnerHTML={{
-              __html: `window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','${GA_MEASUREMENT_ID}');`,
+              __html: `window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','${GA_MEASUREMENT_ID}');gtag('config','${GOOGLE_ADS_ID}');`,
             }}
           />
         )}

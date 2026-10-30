@@ -59,6 +59,11 @@ function pushGtagCommand(...args: unknown[]) {
 
 export const GA_MEASUREMENT_ID = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID;
 
+// Google Ads account 951-273-1803 ("Fingerboard Lab purchase (site)" conversion action).
+// Public IDs, safe to ship. Configured in the same inline gtag bootstrap as GA4 in layout.tsx.
+export const GOOGLE_ADS_ID = "AW-18455667239";
+const GOOGLE_ADS_PURCHASE_LABEL = "c824CPa6_a4dEKfErOBE";
+
 declare global {
   interface Window {
     gtag?: (...args: unknown[]) => void;
@@ -150,6 +155,14 @@ export function trackPurchase(params: {
     ...(params.shipping != null ? { shipping: params.shipping } : {}),
     items: params.items,
   });
+  if (GA_MEASUREMENT_ID) {
+    pushGtagCommand("event", "conversion", {
+      send_to: `${GOOGLE_ADS_ID}/${GOOGLE_ADS_PURCHASE_LABEL}`,
+      value: params.value,
+      currency: params.currency,
+      transaction_id: params.transactionId,
+    });
+  }
   fbqTrack("Purchase", params.items, params.value, params.currency, params.transactionId);
   params.items.forEach((it) =>
     mirrorToPosthog("purchase", it, params.currency, params.value, params.transactionId),
