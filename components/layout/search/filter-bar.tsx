@@ -1,6 +1,7 @@
 "use client";
 
 import { useRouter, useSearchParams } from "next/navigation";
+import { useOptimistic, useTransition } from "react";
 import clsx from "clsx";
 import {
   HardwareType,
@@ -27,13 +28,18 @@ const PRICE_ORDER: PriceBucket[] = ["under30", "30to60", "60to100", "over100"];
 
 export function FilterBar({ facets }: { facets: Facets }) {
   const router = useRouter();
-  const searchParams = useSearchParams();
+  const realParams = useSearchParams();
+  // Chips flip the moment they are tapped; the filtered grid follows when the server render lands.
+  // Before this, a tap waited on that round trip with no visible change (PostHog rage clicks).
+  const [isPending, startTransition] = useTransition();
+  const [searchParams, setOptimisticParams] = useOptimistic(realParams.toString(), (_: string, next: string) => next);
+  const params = new URLSearchParams(searchParams);
 
-  const activeWidths = (searchParams.get("width")?.split(",").filter(Boolean) ??
+  const activeWidths = (params.get("width")?.split(",").filter(Boolean) ??
     []) as WidthBucket[];
-  const activeTypes = (searchParams.get("type")?.split(",").filter(Boolean) ??
+  const activeTypes = (params.get("type")?.split(",").filter(Boolean) ??
     []) as HardwareType[];
-  const activePrices = (searchParams.get("price")?.split(",").filter(Boolean) ??
+  const activePrices = (params.get("price")?.split(",").filter(Boolean) ??
     []) as PriceBucket[];
 
   const hasActive =
@@ -41,19 +47,26 @@ export function FilterBar({ facets }: { facets: Facets }) {
     activeTypes.length > 0 ||
     activePrices.length > 0;
 
+  function navigate(next: URLSearchParams) {
+    startTransition(() => {
+      setOptimisticParams(next.toString());
+      router.replace(`?${next.toString()}`, { scroll: false });
+    });
+  }
+
   function setParam(key: string, values: string[]) {
-    const params = new URLSearchParams(searchParams.toString());
-    if (values.length) params.set(key, values.join(","));
-    else params.delete(key);
-    router.replace(`?${params.toString()}`, { scroll: false });
+    const next = new URLSearchParams(searchParams);
+    if (values.length) next.set(key, values.join(","));
+    else next.delete(key);
+    navigate(next);
   }
 
   function clearAll() {
-    const params = new URLSearchParams(searchParams.toString());
-    params.delete("width");
-    params.delete("type");
-    params.delete("price");
-    router.replace(`?${params.toString()}`, { scroll: false });
+    const next = new URLSearchParams(searchParams);
+    next.delete("width");
+    next.delete("type");
+    next.delete("price");
+    navigate(next);
   }
 
   const showWidths = facets.widths.length > 0;
@@ -63,7 +76,13 @@ export function FilterBar({ facets }: { facets: Facets }) {
   if (!showWidths && !showTypes && !showPrices) return null;
 
   return (
-    <div className="mb-6 flex flex-wrap items-center gap-x-6 gap-y-3 border-b border-white/10 pb-5">
+    <div
+      aria-busy={isPending}
+      className={clsx(
+        "mb-6 flex flex-wrap items-center gap-x-6 gap-y-3 border-b border-white/10 pb-5 transition-opacity",
+        isPending && "opacity-80",
+      )}
+    >
       {showWidths && (
         <FilterGroup label="Width">
           {WIDTH_ORDER.filter((w) => facets.widths.includes(w)).map((w) => (

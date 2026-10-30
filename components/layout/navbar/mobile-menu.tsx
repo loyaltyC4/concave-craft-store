@@ -82,13 +82,16 @@ export default function MobileMenu({ menu }: { menu: Menu[] }) {
                   <ul className="flex w-full flex-col divide-y divide-white/10">
                     {menu.map((item: Menu) => (
                       <li
-                        className="py-3 text-lg font-medium text-neutral-200 transition-colors hover:text-[#c5f23c]"
+                        className="text-lg font-medium text-neutral-200 transition-colors hover:text-[#c5f23c]"
                         key={item.title}
                       >
+                        {/* The link fills the row: taps on the row padding used to land on the
+                            <li> and do nothing (PostHog dead clicks, Oct 2026). */}
                         <Link
                           href={item.path}
                           prefetch={true}
                           onClick={closeMobileMenu}
+                          className="block py-3"
                         >
                           {item.title}
                         </Link>

@@ -33,19 +33,25 @@ function isExternal(src: string) {
 
 export function CartCrossSell({
   excludeHandles,
+  gap = 0,
+  shippingFee,
 }: {
   excludeHandles: string[];
+  /** Dollars still needed for free shipping; 0 once unlocked. */
+  gap?: number;
+  shippingFee?: number;
 }) {
   const { addCartItem } = useCart();
   const [items, setItems] = useState<Suggestion[]>([]);
 
   useEffect(() => {
-    fetch(`/api/cart-suggestions?exclude=${excludeHandles.join(",")}`)
+    const gapParam = gap > 0 ? `&gap=${gap.toFixed(2)}` : "";
+    fetch(`/api/cart-suggestions?exclude=${excludeHandles.join(",")}${gapParam}`)
       .then((r) => r.json())
       .then((d) => setItems(d.results || []))
       .catch(() => setItems([]));
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [excludeHandles.join(",")]);
+  }, [excludeHandles.join(","), gap.toFixed(2)]);
 
   if (items.length === 0) return null;
 
@@ -94,9 +100,18 @@ export function CartCrossSell({
 
   return (
     <div className="mb-4 border-t border-white/10 pt-4">
-      <p className="mb-3 text-xs font-semibold uppercase tracking-[0.14em] text-neutral-500">
-        Build essentials
-      </p>
+      {gap > 0 ? (
+        <p className="mb-3 text-xs font-semibold text-neutral-300">
+          Add one of these and shipping is free
+          {shippingFee ? (
+            <span className="text-[#c5f23c]"> (saves ${shippingFee.toFixed(2)})</span>
+          ) : null}
+        </p>
+      ) : (
+        <p className="mb-3 text-xs font-semibold uppercase tracking-[0.14em] text-neutral-500">
+          Build essentials
+        </p>
+      )}
       <div className="space-y-2">
         {items.map((item) => (
           <div

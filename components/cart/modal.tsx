@@ -288,6 +288,12 @@ export default function CartModal() {
                       excludeHandles={cart.lines.map(
                         (l) => l.merchandise.product.handle,
                       )}
+                      gap={Math.max(
+                        0,
+                        FREE_SHIPPING_THRESHOLD -
+                          parseFloat(cart.cost.totalAmount.amount),
+                      )}
+                      shippingFee={SHIPPING_FEE_USD}
                     />
                   </div>
 
