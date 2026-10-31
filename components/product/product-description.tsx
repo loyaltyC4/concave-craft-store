@@ -10,6 +10,7 @@ import {
   DELIVERY_MAX_DAYS,
   DELIVERY_MIN_DAYS,
   FREE_SHIPPING_THRESHOLD,
+  isFreeShipping,
   RETURN_WINDOW_DAYS,
   SHIPPING_FEE_USD,
 } from "lib/brand";
@@ -133,11 +134,11 @@ export function ProductDescription({ product }: { product: Product }) {
       <div className="mt-4 rounded-2xl border border-white/10 bg-white/[0.03] px-4 py-3 text-sm text-neutral-300">
         <p>
           <strong className="text-[#f3f1ea]">
-            {parseFloat(shown.amount) >= FREE_SHIPPING_THRESHOLD
+            {isFreeShipping(parseFloat(shown.amount))
               ? "Free shipping"
               : `$${SHIPPING_FEE_USD.toFixed(2)} USD shipping`}
           </strong>
-          {parseFloat(shown.amount) >= FREE_SHIPPING_THRESHOLD
+          {isFreeShipping(parseFloat(shown.amount))
             ? " on this item"
             : ` · free on orders over $${FREE_SHIPPING_THRESHOLD} USD`}
         </p>

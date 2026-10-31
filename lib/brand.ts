@@ -43,6 +43,22 @@ export const SOCIALS = {
 // Revenue mechanics
 export const FREE_SHIPPING_THRESHOLD = 50; // USD subtotal; must match app/api/checkout logic + merchant feed
 export const SHIPPING_FEE_USD = 12.95; // flat shipping fee under the free-shipping threshold
+
+/**
+ * One rule for the whole store: shipping is free only when the USD subtotal
+ * is OVER the threshold. Exactly $50.00 pays the flat fee. Checkout, the cart,
+ * the product page, the cart bar and the Merchant Center table all use these
+ * helpers, so the rule can't drift between them.
+ */
+export function isFreeShipping(subtotalUsd: number): boolean {
+  return subtotalUsd > FREE_SHIPPING_THRESHOLD;
+}
+
+/** Dollars still needed to unlock free shipping; 0 once it is unlocked. */
+export function amountToFreeShipping(subtotalUsd: number): number {
+  if (isFreeShipping(subtotalUsd)) return 0;
+  return Math.max(0.01, Math.round((FREE_SHIPPING_THRESHOLD + 0.01 - subtotalUsd) * 100) / 100);
+}
 export const DELIVERY_MIN_DAYS = 7; // business days, order → door (supplier dispatch + transit)
 export const DELIVERY_MAX_DAYS = 14;
 export const HANDLING_DAYS = 2; // business days before the supplier dispatches

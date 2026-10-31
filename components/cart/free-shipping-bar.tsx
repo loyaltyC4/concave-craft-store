@@ -1,9 +1,9 @@
-import { FREE_SHIPPING_THRESHOLD } from "lib/brand";
+import { FREE_SHIPPING_THRESHOLD, amountToFreeShipping, isFreeShipping } from "lib/brand";
 
 export function FreeShippingBar({ subtotal }: { subtotal: number }) {
-  const remaining = FREE_SHIPPING_THRESHOLD - subtotal;
+  const remaining = amountToFreeShipping(subtotal);
   const pct = Math.min(100, (subtotal / FREE_SHIPPING_THRESHOLD) * 100);
-  const unlocked = remaining <= 0;
+  const unlocked = isFreeShipping(subtotal);
 
   return (
     <div className="mb-4 rounded-2xl border border-white/10 bg-white/[0.03] p-3.5">

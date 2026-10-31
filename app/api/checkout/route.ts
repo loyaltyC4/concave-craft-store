@@ -2,7 +2,7 @@ import { NextRequest, NextResponse } from "next/server";
 import { getStripe } from "lib/stripe";
 import { staticGetVariant } from "lib/shopify/static-data";
 import { baseUrl } from "lib/utils";
-import { FREE_SHIPPING_THRESHOLD } from "lib/brand";
+import { isFreeShipping } from "lib/brand";
 import { SHIP_COUNTRIES } from "lib/shipping";
 
 export const dynamic = "force-dynamic";
@@ -144,8 +144,7 @@ export async function POST(req: NextRequest) {
     (sum, li) => sum + li.price_data.unit_amount * li.quantity,
     0,
   );
-  const qualifiesForFreeShipping =
-    subtotalCents >= FREE_SHIPPING_THRESHOLD * 100;
+  const qualifiesForFreeShipping = isFreeShipping(subtotalCents / 100);
 
   const standardShippingOption = qualifiesForFreeShipping
     ? {

@@ -1,10 +1,10 @@
 import {
   DELIVERY_MAX_DAYS,
   DELIVERY_MIN_DAYS,
-  FREE_SHIPPING_THRESHOLD,
   HANDLING_DAYS,
   RETURN_WINDOW_DAYS,
   SHIPPING_FEE_USD,
+  isFreeShipping,
 } from "lib/brand";
 
 /** Every country Stripe checkout accepts a shipping address for. */
@@ -24,7 +24,7 @@ export const LISTING_COUNTRIES = SHIP_COUNTRIES.filter((c) => c !== "KR");
 
 /** Shipping cost (USD) for a single item at this price. */
 export function itemShippingUsd(priceUsd: number): number {
-  return priceUsd >= FREE_SHIPPING_THRESHOLD ? 0 : SHIPPING_FEE_USD;
+  return isFreeShipping(priceUsd) ? 0 : SHIPPING_FEE_USD;
 }
 
 /** schema.org OfferShippingDetails for Product JSON-LD. */

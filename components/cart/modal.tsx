@@ -8,7 +8,8 @@ import { DEFAULT_OPTION } from "lib/constants";
 import {
   DELIVERY_MAX_DAYS,
   DELIVERY_MIN_DAYS,
-  FREE_SHIPPING_THRESHOLD,
+  amountToFreeShipping,
+  isFreeShipping,
   SHIPPING_FEE_USD,
 } from "lib/brand";
 import { trackBeginCheckout } from "lib/gtag";
@@ -301,10 +302,8 @@ export default function CartModal() {
                       excludeHandles={cart.lines.map(
                         (l) => l.merchandise.product.handle,
                       )}
-                      gap={Math.max(
-                        0,
-                        FREE_SHIPPING_THRESHOLD -
-                          parseFloat(cart.cost.totalAmount.amount),
+                      gap={amountToFreeShipping(
+                        parseFloat(cart.cost.totalAmount.amount),
                       )}
                       shippingFee={SHIPPING_FEE_USD}
                     />
@@ -314,8 +313,9 @@ export default function CartModal() {
                     <div className="mb-3 flex items-center justify-between border-b border-white/10 pb-2">
                       <p>Shipping</p>
                       <p className="text-right text-neutral-300">
-                        {parseFloat(cart.cost.totalAmount.amount) >=
-                        FREE_SHIPPING_THRESHOLD
+                        {isFreeShipping(
+                          parseFloat(cart.cost.totalAmount.amount),
+                        )
                           ? "Free"
                           : `$${SHIPPING_FEE_USD.toFixed(2)} USD`}
                       </p>
