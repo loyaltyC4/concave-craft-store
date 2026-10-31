@@ -27,7 +27,7 @@ export default {
       },
       {
         source: "/product/toy-finger-skateboards-hobbies-novelty-anti-stress-sensory-fingerboard-toys-mini-funny-gift-for-kids-boy-2025-new-toy",
-        destination: "/product/anti-stress-fidget-fingerboard-11-graphics",
+        destination: "/product/mini-plastic-fingerboard-fidget",
         permanent: true,
       },
       {
@@ -108,6 +108,16 @@ export default {
       {
         source: "/product/maple-fingerboard-complete-bearing-wheels-double-kick-2-pack",
         destination: "/search/completes",
+        permanent: true,
+      },
+      {
+        source: "/product/2025-new-toy-finger-skateboards-hobbies-novelty-anti-stress-sensory-fingerboard-toys-mini-funny-gift-for-kids-boy",
+        destination: "/product/mini-plastic-fingerboard-fidget",
+        permanent: true,
+      },
+      {
+        source: "/product/anti-stress-fidget-fingerboard-11-graphics",
+        destination: "/product/mini-plastic-fingerboard-fidget",
         permanent: true,
       },
       {
