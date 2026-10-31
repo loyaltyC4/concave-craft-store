@@ -37876,10 +37876,10 @@
     {
       "id": 10297130000114,
       "title": "SDR Marble Brick Box — Fingerboard Obstacle",
-      "body_html": "<p>A stone-composite box capped with a row of white square tiles — SDR's marble take on the classic brick ledge. The tile edge is the grind surface: crisp, consistent and satisfyingly loud on a boardslide. The upgraded version refines the body proportions and tile seating for a cleaner finish.</p><p><strong>Why this one</strong></p><ul><li>White tile coping row along the full top edge — a real grind surface, not paint</li><li>Grey speckled marble-look body with the SDR logo on the side</li><li>Heavy enough to stay planted during lines; no sliding mid-grind</li><li>Upgraded version refines body shape and tile fit</li></ul><p><strong>Specifications</strong></p><table><tbody><tr><td><strong>Brand</strong></td><td>SDR</td></tr><tr><td><strong>Type</strong></td><td>Brick box / ledge obstacle</td></tr><tr><td><strong>Material</strong></td><td>Stone composite with tile coping</td></tr><tr><td><strong>Versions</strong></td><td>Standard / Upgraded</td></tr></tbody></table><p><strong>Who it suits</strong></p><p>Riders who want the marble-plaza look with a genuinely grindable edge — pairs with the half-U and ledge strips for a complete plaza.</p><em>Ships directly from our supplier workshop with tracking, arriving in 7–14 business days. Prices in USD; shipping is free on orders over $50. 30-day returns if it is not right for you.</em>",
+      "body_html": "<p>A stone-composite box capped with a row of white square tiles — SDR's marble take on the classic brick ledge. The tile edge is the grind surface: crisp, consistent and satisfyingly loud on a boardslide. The upgraded version refines the body proportions and tile seating for a cleaner finish.</p><p><strong>Why this one</strong></p><ul><li>White tile coping row along the full top edge — a real grind surface, not paint</li><li>Grey speckled marble-look body with the SDR logo on the side</li><li>Heavy enough to stay planted during lines; no sliding mid-grind</li><li>Upgraded version refines body shape and tile fit</li></ul><p><strong>Specifications</strong></p><table><tbody><tr><td><strong>Brand</strong></td><td>SDR</td></tr><tr><td><strong>Type</strong></td><td>Brick box / ledge obstacle</td></tr><tr><td><strong>Material</strong></td><td>Stone composite with tile coping</td></tr><tr><td><strong>Size</strong></td><td>20 × 6 × 4 cm</td></tr><tr><td><strong>Versions</strong></td><td>Standard / Upgraded</td></tr></tbody></table><p><strong>Who it suits</strong></p><p>Riders who want the marble-plaza look with a genuinely grindable edge — pairs with the half-U and ledge strips for a complete plaza.</p><em>Ships directly from our supplier workshop with tracking, arriving in 7–14 business days. Prices in USD; shipping is free on orders over $50. 30-day returns if it is not right for you.</em>",
       "handle": "sdr-marble-brick-box-obstacle",
       "created_at": "2026-10-31T11:45:00+02:00",
-      "updated_at": "2026-10-31T11:45:00+02:00",
+      "updated_at": "2026-10-31T17:05:00+02:00",
       "published_at": "2026-10-31T11:45:00+02:00",
       "status": "active",
       "published_scope": "web",
@@ -38192,6 +38192,82 @@
       },
       "seo_title": "SDR Marble Obstacle Barrier Box",
       "seo_description": "Angled marble-composite barrier from SDR — launch ramp, hip and street-spot architecture for the marble plaza."
+    },
+    {
+      "id": 10297130000121,
+      "title": "HAILEY Razor Maple Fingerboard Complete",
+      "body_html": "<p>HAILEY's RAZOR pro build: a pressed maple double-kick deck under the egg-style Razor graphic, shipped as a full setup on gold bearing trucks with white wheels. Truck and wheel colours are selectable at checkout — note your pick in the order comments and the workshop builds it that way.</p><p><strong>Why this one</strong></p><ul><li>Pressed maple deck with double kicks — real pop for flip tricks, not a printed blank</li><li>Bearing trucks and white wheels fitted; truck/wheel colours selectable at checkout</li><li>The step up from HAILEY's grain-finish complete we also stock — stiffer deck, sharper graphic</li><li>Beginner-friendly wide shape that experienced riders still enjoy for tech lines</li></ul><p><strong>Specifications</strong></p><table><tbody><tr><td><strong>Brand</strong></td><td>HAILEY</td></tr><tr><td><strong>Deck</strong></td><td>Pressed maple, double kick, wide shape</td></tr><tr><td><strong>Setup</strong></td><td>Bearing trucks, white wheels, grip applied</td></tr><tr><td><strong>Custom</strong></td><td>Truck &amp; wheel colours selectable at checkout</td></tr></tbody></table><p><strong>Who it suits</strong></p><p>Riders who want a ready-to-skate maple complete with a personality graphic and the option to colour-match their setup.</p><em>Ships directly from our supplier workshop with tracking, arriving in 7–14 business days. Prices in USD; shipping is free on orders over $50. 30-day returns if it is not right for you.</em>",
+      "handle": "hailey-razor-maple-fingerboard-complete",
+      "created_at": "2026-10-31T17:05:00+02:00",
+      "updated_at": "2026-10-31T17:05:00+02:00",
+      "published_at": "2026-10-31T17:05:00+02:00",
+      "status": "active",
+      "published_scope": "web",
+      "template_suffix": null,
+      "tags": "HAILEY, razor, maple complete, bearing trucks, double kick, wide board, pro fingerboard",
+      "product_type": "Complete Fingerboards",
+      "vendor": "Fingerboard Lab",
+      "variants": [
+        {
+          "id": 92000000010801,
+          "product_id": 10297130000121,
+          "title": "Default Title",
+          "price": "73.95",
+          "compare_at_price": null,
+          "position": 1,
+          "option1": "Default Title",
+          "inventory_policy": "continue",
+          "taxable": false,
+          "sku": "FL-10297130000121",
+          "requires_shipping": true,
+          "available": true,
+          "inventory_quantity": 5,
+          "weight": 0.09,
+          "weight_unit": "kg"
+        }
+      ],
+      "options": [
+        {
+          "id": 102971300001210,
+          "product_id": 10297130000121,
+          "name": "Option",
+          "position": 1,
+          "values": [
+            "Default Title"
+          ]
+        }
+      ],
+      "images": [
+        {
+          "id": 1029713000012102,
+          "product_id": 10297130000121,
+          "position": 1,
+          "src": "/products/primary-10297130000121-nb.jpg",
+          "width": 800,
+          "height": 800,
+          "alt": "Top-down view of the HAILEY Razor deck graphic in yellow with egg-style artwork."
+        },
+        {
+          "id": 1029713000012103,
+          "product_id": 10297130000121,
+          "position": 2,
+          "src": "/products/gallery-799102393704_pic3.jpg",
+          "width": 800,
+          "height": 800,
+          "alt": "Razor deck disassembled with gold bearing trucks and white wheels."
+        }
+      ],
+      "image": {
+        "id": 1029713000012102,
+        "product_id": 10297130000121,
+        "position": 1,
+        "src": "/products/primary-10297130000121-nb.jpg",
+        "width": 800,
+        "height": 800,
+        "alt": "Top-down view of the HAILEY Razor deck graphic in yellow with egg-style artwork."
+      },
+      "seo_title": "HAILEY Razor Maple Fingerboard Complete",
+      "seo_description": "HAILEY RAZOR maple double-kick complete on bearing trucks — truck and wheel colours selectable at checkout."
     }
   ]
 }
