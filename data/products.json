@@ -5675,47 +5675,124 @@
     },
     {
       "id": 10297128845634,
-      "title": "34mm Complete Fingerboard — Pro Maple Deck (Random Colourway)",
+      "title": "34mm Complete Fingerboard — Pro Maple Deck, 5 Colourways",
       "body_html": "<p>A pro-grade maple deck at an accessible entry point — this 34mm complete ships fully assembled with trucks, wheels, and all hardware, so there is nothing to configure before the first session. The maple construction gives a surface grip and flex character that plastic boards simply do not offer.</p><p><strong>What you actually get</strong></p><p>You receive <strong>one</strong> complete fingerboard. The deck graphic ships in a <strong>random colourway</strong> picked from the lineup shown in the photos (purple, magenta, teal, orange, navy) — every colour is the identical build, deck shape and price, but you cannot choose which one arrives. If a specific colour matters to you, message us before ordering and we'll confirm what's currently in stock rather than guess.</p><p><strong>Why this one</strong></p><ul><li>Pro maple deck — real maple wood construction, the same material used across the serious fingerboard market, not a plastic substitute.</li><li>Ready to skate — arrives fully assembled, no setup or sourcing of extra parts required.</li><li>34mm standard width — the most widely used fingerboard width, suits beginners and experienced riders equally.</li><li>Complete hardware package — trucks, wheels, and all fasteners included in one box.</li><li>Clean starting point — a serious setup at a price that makes it an easy first step into quality fingerboarding.</li></ul><p><strong>Specifications</strong></p><table><tbody><tr><td><strong>Width</strong></td><td>34mm</td></tr><tr><td><strong>Deck material</strong></td><td>Maple (pro spec)</td></tr><tr><td><strong>Quantity</strong></td><td>1 complete fingerboard</td></tr><tr><td><strong>Colour</strong></td><td>Random — one of 5 shown, buyer's choice not available</td></tr><tr><td><strong>What's included</strong></td><td>Deck, trucks, wheels, hardware</td></tr><tr><td><strong>Best surface</strong></td><td>Smooth desk, table, or fingerboard park</td></tr></tbody></table><p><strong>Who it suits</strong></p><p>The straightforward choice for a first real fingerboard or as a gift for a skater teenager or adult who is ready to move past toy-grade boards. Happy to be surprised by which of the five colourways shows up.</p><p><em>Ships directly from our supplier workshop with tracking, arriving in 7–14 business days. Prices in USD; shipping is free on orders over $50. 30-day returns if it is not right for you.</em></p>",
       "vendor": "Fingerboard Lab",
       "product_type": "Complete Fingerboards",
-      "handle": "34mm-colorful-wood-fingerboard-complete-pro-maple-deck-tech-deck-trucks-for-adults-tricks-gifts-for-skater-teens-boys",
+      "handle": "34mm-pro-maple-complete-5-colourways",
       "created_at": "2026-04-16T06:52:59+02:00",
-      "updated_at": "2026-08-07T10:00:00+02:00",
+      "updated_at": "2026-11-01T03:30:00+02:00",
       "published_at": "2026-04-16T09:24:11+02:00",
       "template_suffix": null,
       "published_scope": "web",
       "tags": "34mm, Pro maple deck, Complete setup, Beginner, Gift, Maple",
       "status": "active",
-      "seo_title": "34mm Complete Fingerboard — Pro Maple Deck, Random Colourway",
-      "seo_description": "34mm maple complete fingerboard, fully assembled with trucks and wheels. Ships in a random colourway from 5 shown — colour cannot be chosen.",
+      "seo_title": "34mm Pro Maple Complete — 5 Colourways",
+      "seo_description": "34mm pro maple completes in five photo-linked colourways — purple, plum, teal, orange and navy.",
       "variants": [
         {
-          "id": 52930358083906,
+          "id": 92000000011101,
           "product_id": 10297128845634,
-          "title": "Default Title",
+          "title": "Purple",
           "price": "37.95",
           "compare_at_price": null,
           "position": 1,
+          "option1": "Purple",
           "inventory_policy": "continue",
           "taxable": false,
-          "sku": "FL-52930358083906",
-          "grams": 0,
-          "weight": 0.0,
-          "weight_unit": "kg",
+          "sku": "FL-10297128845634-PURP",
           "requires_shipping": true,
           "available": true,
-          "inventory_quantity": 10,
-          "option1": "Default Title"
+          "inventory_quantity": 8,
+          "weight": 0.08,
+          "weight_unit": "kg",
+          "image_id": 52024832328002
+        },
+        {
+          "id": 92000000011102,
+          "product_id": 10297128845634,
+          "title": "Deep Plum",
+          "price": "37.95",
+          "compare_at_price": null,
+          "position": 2,
+          "option1": "Deep Plum",
+          "inventory_policy": "continue",
+          "taxable": false,
+          "sku": "FL-10297128845634-DEEP",
+          "requires_shipping": true,
+          "available": true,
+          "inventory_quantity": 8,
+          "weight": 0.08,
+          "weight_unit": "kg",
+          "image_id": 52024832360770
+        },
+        {
+          "id": 92000000011103,
+          "product_id": 10297128845634,
+          "title": "Teal",
+          "price": "37.95",
+          "compare_at_price": null,
+          "position": 3,
+          "option1": "Teal",
+          "inventory_policy": "continue",
+          "taxable": false,
+          "sku": "FL-10297128845634-TEAL",
+          "requires_shipping": true,
+          "available": true,
+          "inventory_quantity": 8,
+          "weight": 0.08,
+          "weight_unit": "kg",
+          "image_id": 52024832393538
+        },
+        {
+          "id": 92000000011104,
+          "product_id": 10297128845634,
+          "title": "Orange",
+          "price": "37.95",
+          "compare_at_price": null,
+          "position": 4,
+          "option1": "Orange",
+          "inventory_policy": "continue",
+          "taxable": false,
+          "sku": "FL-10297128845634-ORAN",
+          "requires_shipping": true,
+          "available": true,
+          "inventory_quantity": 8,
+          "weight": 0.08,
+          "weight_unit": "kg",
+          "image_id": 52024832426306
+        },
+        {
+          "id": 92000000011105,
+          "product_id": 10297128845634,
+          "title": "Navy",
+          "price": "37.95",
+          "compare_at_price": null,
+          "position": 5,
+          "option1": "Navy",
+          "inventory_policy": "continue",
+          "taxable": false,
+          "sku": "FL-10297128845634-NAVY",
+          "requires_shipping": true,
+          "available": true,
+          "inventory_quantity": 8,
+          "weight": 0.08,
+          "weight_unit": "kg",
+          "image_id": 52024832459074
         }
       ],
       "options": [
         {
-          "id": 12875969593666,
+          "id": 102971288456340,
+          "product_id": 10297128845634,
           "name": "Colourway",
           "position": 1,
           "values": [
-            "Default Title"
+            "Purple",
+            "Deep Plum",
+            "Teal",
+            "Orange",
+            "Navy"
           ]
         }
       ],
@@ -5886,7 +5963,7 @@
       "product_type": "Complete Fingerboards",
       "handle": "32mm-fingerboard-set-12-constellations-professional-finger-skateboard",
       "created_at": "2026-04-16T06:52:55+02:00",
-      "updated_at": "2026-08-07T10:00:00+02:00",
+      "updated_at": "2026-11-01T03:30:00+02:00",
       "published_at": "2026-04-16T09:47:12+02:00",
       "template_suffix": null,
       "published_scope": "web",
@@ -6147,9 +6224,18 @@
       ],
       "images": [
         {
+          "id": 1029712858349040,
+          "product_id": 10297128583490,
+          "position": 1,
+          "src": "/products/primary-10297128845701-collage.jpg",
+          "width": 800,
+          "height": 800,
+          "alt": "All twelve constellation graphics — Pisces through Capricorn."
+        },
+        {
           "id": 52024829935938,
           "alt": "Blue wooden fingerboard deck displaying a mystical woman graphic surrounded by pink flowers and stars.",
-          "position": 1,
+          "position": 2,
           "product_id": 10297128583490,
           "created_at": "2026-04-16T06:52:57+02:00",
           "updated_at": "2026-04-16T19:23:07+02:00",
@@ -6164,7 +6250,7 @@
         {
           "id": 52024829968706,
           "alt": "Fingerboard assembly kit with purple skeleton graphic deck trucks wheels screws and yellow tool.",
-          "position": 2,
+          "position": 3,
           "product_id": 10297128583490,
           "created_at": "2026-04-16T06:52:57+02:00",
           "updated_at": "2026-04-16T19:23:07+02:00",
@@ -6179,7 +6265,7 @@
         {
           "id": 52024830001474,
           "alt": "Fingerboard complete setup kit featuring a skeleton graphic deck, trucks, white wheels, and a tool.",
-          "position": 3,
+          "position": 4,
           "product_id": 10297128583490,
           "created_at": "2026-04-16T06:52:57+02:00",
           "updated_at": "2026-04-16T19:23:08+02:00",
@@ -6194,7 +6280,7 @@
         {
           "id": 52024830034242,
           "alt": "Complete fingerboard kit featuring a wooden deck with a ram skull graphic, metal trucks, white wheels, and tools.",
-          "position": 4,
+          "position": 5,
           "product_id": 10297128583490,
           "created_at": "2026-04-16T06:52:57+02:00",
           "updated_at": "2026-04-16T19:23:07+02:00",
@@ -6209,7 +6295,7 @@
         {
           "id": 52024830067010,
           "alt": "Fingerboard deck complete kit featuring a vibrant lion graphic wooden board, trucks, white wheels, and tools.",
-          "position": 5,
+          "position": 6,
           "product_id": 10297128583490,
           "created_at": "2026-04-16T06:52:57+02:00",
           "updated_at": "2026-04-16T19:23:07+02:00",
@@ -6224,7 +6310,7 @@
         {
           "id": 52024830099778,
           "alt": "Fingerboard deck features a colorful scorpion graphic on a glossy wooden base with white wheels and metal trucks.",
-          "position": 6,
+          "position": 7,
           "product_id": 10297128583490,
           "created_at": "2026-04-16T06:52:57+02:00",
           "updated_at": "2026-04-16T19:26:14+02:00",
@@ -6239,7 +6325,7 @@
         {
           "id": 52024830132546,
           "alt": "Fingerboard deck featuring a detailed centaur archer illustration alongside silver trucks and white wheels.",
-          "position": 7,
+          "position": 8,
           "product_id": 10297128583490,
           "created_at": "2026-04-16T06:52:57+02:00",
           "updated_at": "2026-04-16T19:23:07+02:00",
@@ -6254,7 +6340,7 @@
         {
           "id": 52024830165314,
           "alt": "Fingerboard complete set with a wooden cosmic creature deck, silver trucks, and white wheels.",
-          "position": 8,
+          "position": 9,
           "product_id": 10297128583490,
           "created_at": "2026-04-16T06:52:57+02:00",
           "updated_at": "2026-04-16T19:26:15+02:00",
@@ -6269,7 +6355,7 @@
         {
           "id": 52024830198082,
           "alt": "Fingerboard Lab complete set featuring a blue koi fish graphic wooden deck, white wheels, and trucks.",
-          "position": 9,
+          "position": 10,
           "product_id": 10297128583490,
           "created_at": "2026-04-16T06:52:57+02:00",
           "updated_at": "2026-04-16T19:23:07+02:00",
@@ -6284,7 +6370,7 @@
         {
           "id": 52024830230850,
           "alt": "Fingerboard complete set featuring a wooden deck with a horned skull graphic, metal trucks, wheels, and tools.",
-          "position": 10,
+          "position": 11,
           "product_id": 10297128583490,
           "created_at": "2026-04-16T06:52:57+02:00",
           "updated_at": "2026-04-16T19:23:08+02:00",
@@ -6299,7 +6385,7 @@
         {
           "id": 52024830263618,
           "alt": "Fingerboard builder kit with purple angel graphic wooden deck, trucks, white wheels, and tools.",
-          "position": 11,
+          "position": 12,
           "product_id": 10297128583490,
           "created_at": "2026-04-16T06:52:57+02:00",
           "updated_at": "2026-04-16T19:23:07+02:00",
@@ -6314,7 +6400,7 @@
         {
           "id": 52024830296386,
           "alt": "A complete fingerboard kit featuring a wooden deck with a creepy red monster graphic, metal trucks, and white wheels.",
-          "position": 12,
+          "position": 13,
           "product_id": 10297128583490,
           "created_at": "2026-04-16T06:52:57+02:00",
           "updated_at": "2026-04-16T19:23:07+02:00",
@@ -6328,19 +6414,13 @@
         }
       ],
       "image": {
-        "id": 52024829935938,
-        "alt": "32mm Fingerboard Set 12 constellations Professional Finger Skateboard - Concave Craft",
-        "position": 1,
+        "id": 1029712858349040,
         "product_id": 10297128583490,
-        "created_at": "2026-04-16T06:52:57+02:00",
-        "updated_at": "2026-04-16T19:23:07+02:00",
-        "admin_graphql_api_id": "gid://shopify/MediaImage/42859170234690",
-        "width": 2048,
-        "height": 2048,
-        "src": "https://cdn.shopify.com/s/files/1/0999/9987/5394/files/S1a655d891483459ab539701240dfbe37d.webp?v=1776360187",
-        "variant_ids": [
-          52930336391490
-        ]
+        "position": 1,
+        "src": "/products/primary-10297128845701-collage.jpg",
+        "width": 800,
+        "height": 800,
+        "alt": "All twelve constellation graphics — Pisces through Capricorn."
       }
     },
     {
@@ -7439,189 +7519,6 @@
         "src": "https://cdn.shopify.com/s/files/1/0999/9987/5394/files/Sfa6313dea18f464ca328feac71ac2b4fH.webp?v=1776359905",
         "variant_ids": [
           52930337440066
-        ]
-      }
-    },
-    {
-      "id": 10297128124738,
-      "title": "34mm Complete Fingerboard — Upgraded CNC Setup",
-      "body_html": "<p>This setup distinguishes itself with an upgraded single axle truck specification alongside CNC-machined wheels — two components that directly affect how a board handles under repeated technical use. Four graphic-named colourways (Beach, SOL, Cat, Girl) keep the visual side personal.</p><p><strong>Why this one</strong></p><ul><li>Upgraded single axle trucks — improved geometry over standard truck specs for better response and consistent grind lock-in.</li><li>CNC-machined wheels — machined to a precise diameter for even spin and reduced wobble, a clear step above moulded plastic wheels.</li><li>34mm deck width — standard pro width, well-suited to technical tricks and street-style fingerboarding.</li><li>Four distinct colourways — Beach, SOL, Cat, and Girl themes offer a playful but considered visual range.</li><li>Complete setup — deck, upgraded trucks, CNC wheels, and hardware all included.</li></ul><p><strong>Specifications</strong></p><table><tbody><tr><td><strong>Width</strong></td><td>34mm</td></tr><tr><td><strong>Trucks</strong></td><td>Upgraded single axle</td></tr><tr><td><strong>Wheels</strong></td><td>CNC machined</td></tr><tr><td><strong>Colourways</strong></td><td>4 (Beach, SOL, Cat, Girl)</td></tr><tr><td><strong>What's included</strong></td><td>Deck, trucks, wheels, hardware</td></tr><tr><td><strong>Best surface</strong></td><td>Smooth desk, table, or fingerboard park</td></tr></tbody></table><p><strong>Who it suits</strong></p><p>The upgrade spec positions this above the standard CNC setups in the range — the right pick for a rider who has tried a standard complete and wants a noticeable improvement in truck and wheel quality without moving to a custom build.</p><p><em>Ships directly from our supplier workshop with tracking, arriving in 7–14 business days. Prices in USD; shipping is free on orders over $50. 30-day returns if it is not right for you.</em></p>",
-      "vendor": "Fingerboard Lab",
-      "product_type": "Complete Fingerboards",
-      "handle": "new-34mm-fingerboard-set-professional-wooden-deck-upgraded-single-axle-truck-cnc-wheels-complete-mini-finger-skateboard",
-      "created_at": "2026-04-16T06:51:15+02:00",
-      "updated_at": "2026-08-07T10:00:00+02:00",
-      "published_at": "2026-04-16T09:47:53+02:00",
-      "template_suffix": null,
-      "published_scope": "web",
-      "tags": "34mm, CNC wheels, Upgraded trucks, Single axle, Complete setup, 4 colourways",
-      "status": "active",
-      "seo_title": "34mm Upgraded Complete Fingerboard — CNC Wheels & Pro Trucks",
-      "seo_description": "34mm complete fingerboard with upgraded single axle trucks and CNC-machined wheels. 4 graphic colourways. A step above standard CNC setups.",
-      "variants": [
-        {
-          "id": 52930330820930,
-          "product_id": 10297128124738,
-          "title": "Beach",
-          "price": "38.95",
-          "compare_at_price": null,
-          "position": 1,
-          "inventory_policy": "continue",
-          "taxable": false,
-          "sku": "FL-52930330820930",
-          "grams": 60,
-          "weight": 0.06,
-          "weight_unit": "kg",
-          "requires_shipping": true,
-          "available": true,
-          "inventory_quantity": 1012,
-          "option1": "Beach",
-          "image_id": 52024818237762
-        },
-        {
-          "id": 52930330853698,
-          "product_id": 10297128124738,
-          "title": "Sol",
-          "price": "38.95",
-          "compare_at_price": null,
-          "position": 2,
-          "inventory_policy": "continue",
-          "taxable": false,
-          "sku": "FL-52930330853698",
-          "grams": 60,
-          "weight": 0.06,
-          "weight_unit": "kg",
-          "requires_shipping": true,
-          "available": true,
-          "inventory_quantity": 1082,
-          "option1": "Sol",
-          "image_id": 52024818172226
-        },
-        {
-          "id": 52930330886466,
-          "product_id": 10297128124738,
-          "title": "Cat",
-          "price": "38.95",
-          "compare_at_price": null,
-          "position": 3,
-          "inventory_policy": "continue",
-          "taxable": false,
-          "sku": "FL-52930330886466",
-          "grams": 60,
-          "weight": 0.06,
-          "weight_unit": "kg",
-          "requires_shipping": true,
-          "available": true,
-          "inventory_quantity": 1082,
-          "option1": "Cat",
-          "image_id": 52024818270530
-        },
-        {
-          "id": 52930330919234,
-          "product_id": 10297128124738,
-          "title": "Girl",
-          "price": "38.95",
-          "compare_at_price": null,
-          "position": 4,
-          "inventory_policy": "continue",
-          "taxable": false,
-          "sku": "FL-52930330919234",
-          "grams": 60,
-          "weight": 0.06,
-          "weight_unit": "kg",
-          "requires_shipping": true,
-          "available": true,
-          "inventory_quantity": 1024,
-          "option1": "Girl",
-          "image_id": null
-        }
-      ],
-      "options": [
-        {
-          "id": 12875968577858,
-          "name": "Colourway",
-          "position": 1,
-          "values": [
-            "Beach",
-            "Sol",
-            "Cat",
-            "Girl"
-          ]
-        }
-      ],
-      "images": [
-        {
-          "id": 52024818172226,
-          "alt": "Fingerboard complete set with a white deck featuring a Statue of Liberty graphic, metal trucks, wheels, and grip tape.",
-          "position": 1,
-          "product_id": 10297128124738,
-          "created_at": "2026-04-16T06:51:17+02:00",
-          "updated_at": "2026-04-16T19:18:30+02:00",
-          "admin_graphql_api_id": "gid://shopify/MediaImage/42859158470978",
-          "width": 2000,
-          "height": 2000,
-          "src": "https://cdn.shopify.com/s/files/1/0999/9987/5394/files/S85ceb00cb56c46719a753989e7178554s.webp?v=1776315079",
-          "variant_ids": [
-            52930330853698
-          ]
-        },
-        {
-          "id": 52024818204994,
-          "alt": "Polished silver metal fingerboard trucks with mounting hardware and bushings.",
-          "position": 2,
-          "product_id": 10297128124738,
-          "created_at": "2026-04-16T06:51:17+02:00",
-          "updated_at": "2026-04-16T19:18:30+02:00",
-          "admin_graphql_api_id": "gid://shopify/MediaImage/42859158503746",
-          "width": 2000,
-          "height": 2000,
-          "src": "https://cdn.shopify.com/s/files/1/0999/9987/5394/files/S7e64464d2e0c4bd7b8f74db6a9d71f8eh_73e1e1af-b3dc-4077-bd54-251f2be7de65.webp?v=1776315079",
-          "variant_ids": []
-        },
-        {
-          "id": 52024818237762,
-          "alt": "Complete fingerboard set with black graphic deck, metal trucks, white wheels, grip tape, and tool.",
-          "position": 3,
-          "product_id": 10297128124738,
-          "created_at": "2026-04-16T06:51:17+02:00",
-          "updated_at": "2026-04-16T19:18:30+02:00",
-          "admin_graphql_api_id": "gid://shopify/MediaImage/42859158536514",
-          "width": 2000,
-          "height": 2000,
-          "src": "https://cdn.shopify.com/s/files/1/0999/9987/5394/files/Sec1ad7f23f404ae892741d225cb4ba432.webp?v=1776315079",
-          "variant_ids": [
-            52930330820930
-          ]
-        },
-        {
-          "id": 52024818270530,
-          "alt": "Complete fingerboard setup featuring a cat graphic deck, metallic silver trucks, white wheels, and grip tape.",
-          "position": 4,
-          "product_id": 10297128124738,
-          "created_at": "2026-04-16T06:51:17+02:00",
-          "updated_at": "2026-04-16T19:18:30+02:00",
-          "admin_graphql_api_id": "gid://shopify/MediaImage/42859158569282",
-          "width": 2000,
-          "height": 2000,
-          "src": "https://cdn.shopify.com/s/files/1/0999/9987/5394/files/Sc88a9cde8d484eb998581fe2f57e41c0r.webp?v=1776315079",
-          "variant_ids": [
-            52930330886466
-          ]
-        }
-      ],
-      "image": {
-        "id": 52024818172226,
-        "alt": "New 34mm Fingerboard Set Professional Wooden Deck Upgraded Single Axle Truck CNC Wheels Complete Mini Finger Skateboard - Concave Craft",
-        "position": 1,
-        "product_id": 10297128124738,
-        "created_at": "2026-04-16T06:51:17+02:00",
-        "updated_at": "2026-04-16T19:18:30+02:00",
-        "admin_graphql_api_id": "gid://shopify/MediaImage/42859158470978",
-        "width": 2000,
-        "height": 2000,
-        "src": "https://cdn.shopify.com/s/files/1/0999/9987/5394/files/S85ceb00cb56c46719a753989e7178554s.webp?v=1776315079",
-        "variant_ids": [
-          52930330853698
         ]
       }
     },
@@ -37758,7 +37655,7 @@
       "body_html": "<p>HAILEY's RAZOR pro build: a pressed maple double-kick deck under the egg-style Razor graphic, shipped as a full setup on gold bearing trucks with white wheels. Truck and wheel colours are selectable at checkout — note your pick in the order comments and the workshop builds it that way.</p><p><strong>Why this one</strong></p><ul><li>Pressed maple deck with double kicks — real pop for flip tricks, not a printed blank</li><li>Bearing trucks and white wheels fitted; truck/wheel colours selectable at checkout</li><li>The step up from HAILEY's grain-finish complete we also stock — stiffer deck, sharper graphic</li><li>Beginner-friendly wide shape that experienced riders still enjoy for tech lines</li></ul><p><strong>Specifications</strong></p><table><tbody><tr><td><strong>Brand</strong></td><td>HAILEY</td></tr><tr><td><strong>Deck</strong></td><td>Pressed maple, double kick, wide shape</td></tr><tr><td><strong>Setup</strong></td><td>Bearing trucks, white wheels, grip applied</td></tr><tr><td><strong>Custom</strong></td><td>Truck &amp; wheel colours selectable at checkout</td></tr></tbody></table><p><strong>Who it suits</strong></p><p>Riders who want a ready-to-skate maple complete with a personality graphic and the option to colour-match their setup.</p><em>Ships directly from our supplier workshop with tracking, arriving in 7–14 business days. Prices in USD; shipping is free on orders over $50. 30-day returns if it is not right for you.</em>",
       "handle": "hailey-razor-maple-fingerboard-complete",
       "created_at": "2026-10-31T17:05:00+02:00",
-      "updated_at": "2026-10-31T18:20:00+02:00",
+      "updated_at": "2026-11-01T03:30:00+02:00",
       "published_at": "2026-10-31T17:05:00+02:00",
       "status": "active",
       "published_scope": "web",
@@ -37798,22 +37695,22 @@
       ],
       "images": [
         {
-          "id": 1029713000012109,
-          "product_id": 10297130000121,
-          "position": 1,
-          "src": "/products/gallery-799102393704_main.jpg",
-          "width": 800,
-          "height": 800,
-          "alt": "HAILEY Razor complete fingerboards in yellow and orange egg-style graphics."
-        },
-        {
           "id": 1029713000012102,
           "product_id": 10297130000121,
-          "position": 2,
+          "position": 1,
           "src": "/products/primary-10297130000121-nb.jpg",
           "width": 800,
           "height": 800,
           "alt": "Top-down view of the HAILEY Razor deck graphic in yellow with egg-style artwork."
+        },
+        {
+          "id": 1029713000012109,
+          "product_id": 10297130000121,
+          "position": 2,
+          "src": "/products/gallery-799102393704_main.jpg",
+          "width": 800,
+          "height": 800,
+          "alt": "HAILEY Razor complete fingerboards in yellow and orange egg-style graphics."
         },
         {
           "id": 1029713000012103,
@@ -37826,13 +37723,13 @@
         }
       ],
       "image": {
-        "id": 1029713000012109,
+        "id": 1029713000012102,
         "product_id": 10297130000121,
         "position": 1,
-        "src": "/products/gallery-799102393704_main.jpg",
+        "src": "/products/primary-10297130000121-nb.jpg",
         "width": 800,
         "height": 800,
-        "alt": "HAILEY Razor complete fingerboards in yellow and orange egg-style graphics."
+        "alt": "Top-down view of the HAILEY Razor deck graphic in yellow with egg-style artwork."
       },
       "seo_title": "HAILEY Razor Maple Fingerboard Complete",
       "seo_description": "HAILEY RAZOR maple double-kick complete on bearing trucks — truck and wheel colours selectable at checkout."
@@ -38996,7 +38893,7 @@
       "body_html": "<p>Antionce's Berlin series maple complete: a wide pro shape in green or black, built on your choice of double-axis trucks (the stable, carvy option) or single-axis trucks (the tech-flip option). Four combinations, each photo-linked at the picker.</p><p><strong>Why this one</strong></p><ul><li>Maple pro deck in two colourways — green or black</li><li>Choose double-axis trucks for stability or single-axis for flip tech</li><li>Complete arrives assembled and ready to ride</li><li>Every truck/colour combination has its own photo</li></ul><p><strong>Specifications</strong></p><table><tbody><tr><td><strong>Brand</strong></td><td>Antionce</td></tr><tr><td><strong>Series</strong></td><td>Berlin</td></tr><tr><td><strong>Colours</strong></td><td>Green / Black</td></tr><tr><td><strong>Trucks</strong></td><td>Double-axis or single-axis</td></tr></tbody></table><p><strong>Who it suits</strong></p><p>Riders choosing their first tuned complete who want the truck decision made explicit, not hidden.</p><em>Ships directly from our supplier workshop with tracking, arriving in 7–14 business days. Prices in USD; shipping is free on orders over $50. 30-day returns if it is not right for you.</em>",
       "handle": "antionce-berlin-fingerboard-complete",
       "created_at": "2026-10-31T20:30:00+02:00",
-      "updated_at": "2026-10-31T20:30:00+02:00",
+      "updated_at": "2026-11-01T03:30:00+02:00",
       "published_at": "2026-10-31T20:30:00+02:00",
       "status": "active",
       "published_scope": "web",
@@ -39106,22 +39003,22 @@
       ],
       "images": [
         {
-          "id": 1029713000013502,
-          "product_id": 10297130000135,
-          "position": 1,
-          "src": "/products/primary-10297130000135-nb.jpg",
-          "width": 800,
-          "height": 800,
-          "alt": "Antionce Berlin maple complete with green deck graphic."
-        },
-        {
           "id": 1029713000013503,
           "product_id": 10297130000135,
-          "position": 2,
+          "position": 1,
           "src": "/products/gallery-872337110905_prop1627207_36207677992.jpg",
           "width": 800,
           "height": 800,
           "alt": "Berlin complete in green on double-axis trucks."
+        },
+        {
+          "id": 1029713000013502,
+          "product_id": 10297130000135,
+          "position": 2,
+          "src": "/products/primary-10297130000135-nb.jpg",
+          "width": 800,
+          "height": 800,
+          "alt": "Antionce Berlin maple complete with green deck graphic."
         },
         {
           "id": 1029713000013504,
@@ -39161,13 +39058,13 @@
         }
       ],
       "image": {
-        "id": 1029713000013502,
+        "id": 1029713000013503,
         "product_id": 10297130000135,
         "position": 1,
-        "src": "/products/primary-10297130000135-nb.jpg",
+        "src": "/products/gallery-872337110905_prop1627207_36207677992.jpg",
         "width": 800,
         "height": 800,
-        "alt": "Antionce Berlin maple complete with green deck graphic."
+        "alt": "Berlin complete in green on double-axis trucks."
       },
       "seo_title": "Antionce Berlin Fingerboard Complete",
       "seo_description": "Antionce Berlin maple completes in green or black on double-axis or single-axis trucks — four photo-linked builds."
@@ -40622,6 +40519,274 @@
       },
       "seo_title": "Eureka 3.0 Street Complete — Cat & Fish",
       "seo_description": "34mm 5-ply maple complete on Eureka 3.0 trucks with street-shape wheels — Cat & Fish graphic."
+    },
+    {
+      "id": 10297130000161,
+      "title": "34mm CNC Setup Complete — Beach",
+      "body_html": "<p>A 34mm wooden-deck complete on the upgraded single-axle trucks with CNC-machined wheels, wearing the Beach graphic. The tuned-roll setup at the accessible price point.</p><p><strong>Why this one</strong></p><ul><li>Upgraded single-axle trucks — tighter turns than stock castings</li><li>CNC-machined wheels for a consistently true roll</li><li>Wooden deck with the Beach graphic</li></ul><em>Ships directly from our supplier workshop with tracking, arriving in 7–14 business days. Prices in USD; shipping is free on orders over $50. 30-day returns if it is not right for you.</em>",
+      "handle": "34mm-cnc-setup-complete-beach",
+      "created_at": "2026-11-01T03:30:00+02:00",
+      "updated_at": "2026-11-01T03:30:00+02:00",
+      "published_at": "2026-11-01T03:30:00+02:00",
+      "status": "active",
+      "published_scope": "web",
+      "template_suffix": null,
+      "tags": "cnc wheels, single axle, maple complete, beach",
+      "product_type": "Complete Fingerboards",
+      "vendor": "Fingerboard Lab",
+      "variants": [
+        {
+          "id": 92000000011106,
+          "product_id": 10297130000161,
+          "title": "Default Title",
+          "price": "38.95",
+          "compare_at_price": null,
+          "position": 1,
+          "option1": "Default Title",
+          "inventory_policy": "continue",
+          "taxable": false,
+          "sku": "FL-10297130000161",
+          "requires_shipping": true,
+          "available": true,
+          "inventory_quantity": 8,
+          "weight": 0.08,
+          "weight_unit": "kg"
+        }
+      ],
+      "options": [
+        {
+          "id": 102971300001610,
+          "product_id": 10297130000161,
+          "name": "Graphic",
+          "position": 1,
+          "values": [
+            "Default Title"
+          ]
+        }
+      ],
+      "images": [
+        {
+          "id": 1029713000016102,
+          "product_id": 10297130000161,
+          "position": 1,
+          "src": "https://cdn.shopify.com/s/files/1/0999/9987/5394/files/S85ceb00cb56c46719a753989e7178554s.webp?v=1776315079",
+          "width": 800,
+          "height": 800,
+          "alt": "34mm upgraded CNC setup complete with the Beach graphic."
+        }
+      ],
+      "image": {
+        "id": 1029713000016102,
+        "product_id": 10297130000161,
+        "position": 1,
+        "src": "https://cdn.shopify.com/s/files/1/0999/9987/5394/files/S85ceb00cb56c46719a753989e7178554s.webp?v=1776315079",
+        "width": 800,
+        "height": 800,
+        "alt": "34mm upgraded CNC setup complete with the Beach graphic."
+      },
+      "seo_title": "34mm CNC Setup Complete — Beach",
+      "seo_description": "34mm complete on upgraded single-axle trucks and CNC wheels — Beach graphic."
+    },
+    {
+      "id": 10297130000162,
+      "title": "34mm CNC Setup Complete — Sol",
+      "body_html": "<p>A 34mm wooden-deck complete on the upgraded single-axle trucks with CNC-machined wheels, wearing the Sol graphic. The tuned-roll setup at the accessible price point.</p><p><strong>Why this one</strong></p><ul><li>Upgraded single-axle trucks — tighter turns than stock castings</li><li>CNC-machined wheels for a consistently true roll</li><li>Wooden deck with the Sol graphic</li></ul><em>Ships directly from our supplier workshop with tracking, arriving in 7–14 business days. Prices in USD; shipping is free on orders over $50. 30-day returns if it is not right for you.</em>",
+      "handle": "34mm-cnc-setup-complete-sol",
+      "created_at": "2026-11-01T03:30:00+02:00",
+      "updated_at": "2026-11-01T03:30:00+02:00",
+      "published_at": "2026-11-01T03:30:00+02:00",
+      "status": "active",
+      "published_scope": "web",
+      "template_suffix": null,
+      "tags": "cnc wheels, single axle, maple complete, sol",
+      "product_type": "Complete Fingerboards",
+      "vendor": "Fingerboard Lab",
+      "variants": [
+        {
+          "id": 92000000011107,
+          "product_id": 10297130000162,
+          "title": "Default Title",
+          "price": "38.95",
+          "compare_at_price": null,
+          "position": 1,
+          "option1": "Default Title",
+          "inventory_policy": "continue",
+          "taxable": false,
+          "sku": "FL-10297130000162",
+          "requires_shipping": true,
+          "available": true,
+          "inventory_quantity": 8,
+          "weight": 0.08,
+          "weight_unit": "kg"
+        }
+      ],
+      "options": [
+        {
+          "id": 102971300001620,
+          "product_id": 10297130000162,
+          "name": "Graphic",
+          "position": 1,
+          "values": [
+            "Default Title"
+          ]
+        }
+      ],
+      "images": [
+        {
+          "id": 1029713000016202,
+          "product_id": 10297130000162,
+          "position": 1,
+          "src": "https://cdn.shopify.com/s/files/1/0999/9987/5394/files/S7e64464d2e0c4bd7b8f74db6a9d71f8eh_73e1e1af-b3dc-4077-bd54-251f2be7de65.webp?v=1776315079",
+          "width": 800,
+          "height": 800,
+          "alt": "34mm upgraded CNC setup complete with the Sol graphic."
+        }
+      ],
+      "image": {
+        "id": 1029713000016202,
+        "product_id": 10297130000162,
+        "position": 1,
+        "src": "https://cdn.shopify.com/s/files/1/0999/9987/5394/files/S7e64464d2e0c4bd7b8f74db6a9d71f8eh_73e1e1af-b3dc-4077-bd54-251f2be7de65.webp?v=1776315079",
+        "width": 800,
+        "height": 800,
+        "alt": "34mm upgraded CNC setup complete with the Sol graphic."
+      },
+      "seo_title": "34mm CNC Setup Complete — Sol",
+      "seo_description": "34mm complete on upgraded single-axle trucks and CNC wheels — Sol graphic."
+    },
+    {
+      "id": 10297130000163,
+      "title": "34mm CNC Setup Complete — Cat",
+      "body_html": "<p>A 34mm wooden-deck complete on the upgraded single-axle trucks with CNC-machined wheels, wearing the Cat graphic. The tuned-roll setup at the accessible price point.</p><p><strong>Why this one</strong></p><ul><li>Upgraded single-axle trucks — tighter turns than stock castings</li><li>CNC-machined wheels for a consistently true roll</li><li>Wooden deck with the Cat graphic</li></ul><em>Ships directly from our supplier workshop with tracking, arriving in 7–14 business days. Prices in USD; shipping is free on orders over $50. 30-day returns if it is not right for you.</em>",
+      "handle": "34mm-cnc-setup-complete-cat",
+      "created_at": "2026-11-01T03:30:00+02:00",
+      "updated_at": "2026-11-01T03:30:00+02:00",
+      "published_at": "2026-11-01T03:30:00+02:00",
+      "status": "active",
+      "published_scope": "web",
+      "template_suffix": null,
+      "tags": "cnc wheels, single axle, maple complete, cat",
+      "product_type": "Complete Fingerboards",
+      "vendor": "Fingerboard Lab",
+      "variants": [
+        {
+          "id": 92000000011108,
+          "product_id": 10297130000163,
+          "title": "Default Title",
+          "price": "38.95",
+          "compare_at_price": null,
+          "position": 1,
+          "option1": "Default Title",
+          "inventory_policy": "continue",
+          "taxable": false,
+          "sku": "FL-10297130000163",
+          "requires_shipping": true,
+          "available": true,
+          "inventory_quantity": 8,
+          "weight": 0.08,
+          "weight_unit": "kg"
+        }
+      ],
+      "options": [
+        {
+          "id": 102971300001630,
+          "product_id": 10297130000163,
+          "name": "Graphic",
+          "position": 1,
+          "values": [
+            "Default Title"
+          ]
+        }
+      ],
+      "images": [
+        {
+          "id": 1029713000016302,
+          "product_id": 10297130000163,
+          "position": 1,
+          "src": "https://cdn.shopify.com/s/files/1/0999/9987/5394/files/Sec1ad7f23f404ae892741d225cb4ba432.webp?v=1776315079",
+          "width": 800,
+          "height": 800,
+          "alt": "34mm upgraded CNC setup complete with the Cat graphic."
+        }
+      ],
+      "image": {
+        "id": 1029713000016302,
+        "product_id": 10297130000163,
+        "position": 1,
+        "src": "https://cdn.shopify.com/s/files/1/0999/9987/5394/files/Sec1ad7f23f404ae892741d225cb4ba432.webp?v=1776315079",
+        "width": 800,
+        "height": 800,
+        "alt": "34mm upgraded CNC setup complete with the Cat graphic."
+      },
+      "seo_title": "34mm CNC Setup Complete — Cat",
+      "seo_description": "34mm complete on upgraded single-axle trucks and CNC wheels — Cat graphic."
+    },
+    {
+      "id": 10297130000164,
+      "title": "34mm CNC Setup Complete — Girl",
+      "body_html": "<p>A 34mm wooden-deck complete on the upgraded single-axle trucks with CNC-machined wheels, wearing the Girl graphic. The tuned-roll setup at the accessible price point.</p><p><strong>Why this one</strong></p><ul><li>Upgraded single-axle trucks — tighter turns than stock castings</li><li>CNC-machined wheels for a consistently true roll</li><li>Wooden deck with the Girl graphic</li></ul><em>Ships directly from our supplier workshop with tracking, arriving in 7–14 business days. Prices in USD; shipping is free on orders over $50. 30-day returns if it is not right for you.</em>",
+      "handle": "34mm-cnc-setup-complete-girl",
+      "created_at": "2026-11-01T03:30:00+02:00",
+      "updated_at": "2026-11-01T03:30:00+02:00",
+      "published_at": "2026-11-01T03:30:00+02:00",
+      "status": "active",
+      "published_scope": "web",
+      "template_suffix": null,
+      "tags": "cnc wheels, single axle, maple complete, girl",
+      "product_type": "Complete Fingerboards",
+      "vendor": "Fingerboard Lab",
+      "variants": [
+        {
+          "id": 92000000011109,
+          "product_id": 10297130000164,
+          "title": "Default Title",
+          "price": "38.95",
+          "compare_at_price": null,
+          "position": 1,
+          "option1": "Default Title",
+          "inventory_policy": "continue",
+          "taxable": false,
+          "sku": "FL-10297130000164",
+          "requires_shipping": true,
+          "available": true,
+          "inventory_quantity": 8,
+          "weight": 0.08,
+          "weight_unit": "kg"
+        }
+      ],
+      "options": [
+        {
+          "id": 102971300001640,
+          "product_id": 10297130000164,
+          "name": "Graphic",
+          "position": 1,
+          "values": [
+            "Default Title"
+          ]
+        }
+      ],
+      "images": [
+        {
+          "id": 1029713000016402,
+          "product_id": 10297130000164,
+          "position": 1,
+          "src": "https://cdn.shopify.com/s/files/1/0999/9987/5394/files/Sc88a9cde8d484eb998581fe2f57e41c0r.webp?v=1776315079",
+          "width": 800,
+          "height": 800,
+          "alt": "34mm upgraded CNC setup complete with the Girl graphic."
+        }
+      ],
+      "image": {
+        "id": 1029713000016402,
+        "product_id": 10297130000164,
+        "position": 1,
+        "src": "https://cdn.shopify.com/s/files/1/0999/9987/5394/files/Sc88a9cde8d484eb998581fe2f57e41c0r.webp?v=1776315079",
+        "width": 800,
+        "height": 800,
+        "alt": "34mm upgraded CNC setup complete with the Girl graphic."
+      },
+      "seo_title": "34mm CNC Setup Complete — Girl",
+      "seo_description": "34mm complete on upgraded single-axle trucks and CNC wheels — Girl graphic."
     }
   ]
 }

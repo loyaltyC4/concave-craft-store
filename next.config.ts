@@ -51,6 +51,16 @@ export default {
         permanent: true,
       },
       {
+        source: "/product/34mm-colorful-wood-fingerboard-complete-pro-maple-deck-tech-deck-trucks-for-adults-tricks-gifts-for-skater-teens-boys",
+        destination: "/product/34mm-pro-maple-complete-5-colourways",
+        permanent: true,
+      },
+      {
+        source: "/product/new-34mm-fingerboard-set-professional-wooden-deck-upgraded-single-axle-truck-cnc-wheels-complete-mini-finger-skateboard",
+        destination: "/search/completes",
+        permanent: true,
+      },
+      {
         // Deleted listings (2026-10-20): send old links to the completes collection, not a 404.
         source: "/product/wp-dyed-series-fingerboard-complete-handmade-maple",
         destination: "/search/completes",
