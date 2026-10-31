@@ -21,6 +21,36 @@ export default {
   async redirects() {
     return [
       {
+        source: "/product/5-ply-maple-fingerboard-complete-with-bearing-wheels",
+        destination: "/search/completes",
+        permanent: true,
+      },
+      {
+        source: "/product/toy-finger-skateboards-hobbies-novelty-anti-stress-sensory-fingerboard-toys-mini-funny-gift-for-kids-boy-2025-new-toy",
+        destination: "/product/anti-stress-fidget-fingerboard-11-graphics",
+        permanent: true,
+      },
+      {
+        source: "/product/deep-concave-fingerboard-complete-double-kick-turtle-theme",
+        destination: "/search/completes",
+        permanent: true,
+      },
+      {
+        source: "/product/hailey-34mm-fingerboard-complete-maple-grain-finish",
+        destination: "/product/hailey-razor-maple-fingerboard-complete",
+        permanent: true,
+      },
+      {
+        source: "/product/puzzle-toy-professional-mini-finger-skateboard-fingerboard-hobbies-novelty-anti-stress-sensory-toy-funny-gift-for-boy-kids-adult",
+        destination: "/product/novelty-graphics-fingerboard-complete",
+        permanent: true,
+      },
+      {
+        source: "/product/34mm-premium-fingerboard-set-with-eureka-3-0-trucks-new-street-shape-wheels",
+        destination: "/search/completes",
+        permanent: true,
+      },
+      {
         // Deleted listings (2026-10-20): send old links to the completes collection, not a 404.
         source: "/product/wp-dyed-series-fingerboard-complete-handmade-maple",
         destination: "/search/completes",
