@@ -3048,7 +3048,7 @@
       "product_type": "Complete Fingerboards",
       "handle": "29mm-wooden-fingerboard-set-with-pro-deck-metal-truck-bearing-wheels",
       "created_at": "2026-04-16T06:52:56+02:00",
-      "updated_at": "2026-11-01T01:30:00+02:00",
+      "updated_at": "2026-11-01T15:00:00+02:00",
       "published_at": "2026-04-16T09:47:11+02:00",
       "template_suffix": null,
       "published_scope": "web",
@@ -3269,9 +3269,18 @@
       ],
       "images": [
         {
+          "id": 1029712864902670,
+          "product_id": 10297128649026,
+          "position": 1,
+          "src": "/products/primary-10297128649026-collage.jpg",
+          "width": 800,
+          "height": 800,
+          "alt": "Ten 29mm animal-graphic completes: bear, panda, snail, hamster, cat, goose, sheep, pig, dog and bunny."
+        },
+        {
           "id": 52024830755138,
           "alt": "Ten wooden fingerboard decks featuring glossy cartoon animal graphics in assorted bright pastel colors.",
-          "position": 1,
+          "position": 2,
           "product_id": 10297128649026,
           "created_at": "2026-04-16T06:52:58+02:00",
           "updated_at": "2026-04-16T19:23:13+02:00",
@@ -3284,7 +3293,7 @@
         {
           "id": 52024830722370,
           "alt": "Green graphic wooden fingerboard deck with bulldog design alongside metal trucks, wheels, tape, and screws.",
-          "position": 2,
+          "position": 3,
           "product_id": 10297128649026,
           "created_at": "2026-04-16T06:52:58+02:00",
           "updated_at": "2026-04-16T19:23:13+02:00",
@@ -3299,7 +3308,7 @@
         {
           "id": 52024830787906,
           "alt": "Two raw cast metal fingerboard trucks featuring distressed grey finish and purple polyurethane bushings.",
-          "position": 3,
+          "position": 4,
           "product_id": 10297128649026,
           "created_at": "2026-04-16T06:52:58+02:00",
           "updated_at": "2026-04-16T19:23:11+02:00",
@@ -3312,7 +3321,7 @@
         {
           "id": 52024830820674,
           "alt": "Fingerboard Lab solid white plastic fingerboard wheels featuring smooth finish and inner bearings.",
-          "position": 4,
+          "position": 5,
           "product_id": 10297128649026,
           "created_at": "2026-04-16T06:52:58+02:00",
           "updated_at": "2026-04-16T19:23:13+02:00",
@@ -3325,7 +3334,7 @@
         {
           "id": 52024830853442,
           "alt": "Fingerboard complete set featuring a red panda graphic deck, metal trucks with purple bushings, and white wheels.",
-          "position": 5,
+          "position": 6,
           "product_id": 10297128649026,
           "created_at": "2026-04-16T06:52:58+02:00",
           "updated_at": "2026-04-16T19:23:14+02:00",
@@ -3340,7 +3349,7 @@
         {
           "id": 52024830886210,
           "alt": "Fingerboard complete featuring a cute cat illustration graphic, silver metal trucks, and white wheels on grip tape.",
-          "position": 6,
+          "position": 7,
           "product_id": 10297128649026,
           "created_at": "2026-04-16T06:52:58+02:00",
           "updated_at": "2026-04-16T19:24:09+02:00",
@@ -3355,7 +3364,7 @@
         {
           "id": 52024830918978,
           "alt": "Blue cartoon sheep graphic wooden fingerboard deck complete set with metal trucks, wheels, and grip tape.",
-          "position": 7,
+          "position": 8,
           "product_id": 10297128649026,
           "created_at": "2026-04-16T06:52:58+02:00",
           "updated_at": "2026-04-16T19:23:13+02:00",
@@ -3370,7 +3379,7 @@
         {
           "id": 52024830951746,
           "alt": "Fingerboard lab complete set featuring a pink pig graphic wooden deck, silver trucks, and white wheels.",
-          "position": 8,
+          "position": 9,
           "product_id": 10297128649026,
           "created_at": "2026-04-16T06:52:58+02:00",
           "updated_at": "2026-04-16T19:23:13+02:00",
@@ -3385,7 +3394,7 @@
         {
           "id": 52024830984514,
           "alt": "Fingerboard complete kit with a purple wooden deck featuring a cute rabbit playing guitar graphic, trucks, and wheels.",
-          "position": 9,
+          "position": 10,
           "product_id": 10297128649026,
           "created_at": "2026-04-16T06:52:58+02:00",
           "updated_at": "2026-04-16T19:23:13+02:00",
@@ -3400,7 +3409,7 @@
         {
           "id": 52024831017282,
           "alt": "DIY wooden fingerboard complete kit featuring a cute bear with balloons graphic and metal trucks.",
-          "position": 10,
+          "position": 11,
           "product_id": 10297128649026,
           "created_at": "2026-04-16T06:52:58+02:00",
           "updated_at": "2026-04-16T19:24:09+02:00",
@@ -3415,7 +3424,7 @@
         {
           "id": 52024831050050,
           "alt": "Fingerboard deck in yellow with snail and gift graphics, accompanied by silver metal trucks and white plastic wheels.",
-          "position": 11,
+          "position": 12,
           "product_id": 10297128649026,
           "created_at": "2026-04-16T06:52:58+02:00",
           "updated_at": "2026-04-16T19:23:13+02:00",
@@ -3430,7 +3439,7 @@
         {
           "id": 52024831082818,
           "alt": "Complete pink fingerboard set featuring a cute hamster graphic, black grip tape, silver trucks, and hardware.",
-          "position": 12,
+          "position": 13,
           "product_id": 10297128649026,
           "created_at": "2026-04-16T06:52:58+02:00",
           "updated_at": "2026-04-16T19:24:09+02:00",
@@ -3445,7 +3454,7 @@
         {
           "id": 52024831115586,
           "alt": "Fingerboard deck in yellow wood with a chef goose graphic, metal trucks, and black grip tape.",
-          "position": 13,
+          "position": 14,
           "product_id": 10297128649026,
           "created_at": "2026-04-16T06:52:58+02:00",
           "updated_at": "2026-04-16T19:23:13+02:00",
@@ -3459,17 +3468,13 @@
         }
       ],
       "image": {
-        "id": 52024830755138,
-        "alt": "Ten wooden fingerboard decks featuring glossy cartoon animal graphics in assorted bright pastel colors.",
-        "position": 1,
+        "id": 1029712864902670,
         "product_id": 10297128649026,
-        "created_at": "2026-04-16T06:52:58+02:00",
-        "updated_at": "2026-04-16T19:23:13+02:00",
-        "admin_graphql_api_id": "gid://shopify/MediaImage/42859171053890",
-        "width": 2048,
-        "height": 2048,
-        "src": "https://cdn.shopify.com/s/files/1/0999/9987/5394/files/S0ba909d093494be8a77242dc3a4734b2K.webp?v=1776360193",
-        "variant_ids": []
+        "position": 1,
+        "src": "/products/primary-10297128649026-collage.jpg",
+        "width": 800,
+        "height": 800,
+        "alt": "Ten 29mm animal-graphic completes: bear, panda, snail, hamster, cat, goose, sheep, pig, dog and bunny."
       }
     },
     {
