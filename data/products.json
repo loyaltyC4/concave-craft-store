@@ -39884,6 +39884,1400 @@
       },
       "seo_title": "34mm CNC Setup Complete — Statue of Liberty",
       "seo_description": "34mm complete on upgraded single-axle trucks and CNC wheels — statue of liberty graphic."
+    },
+    {
+      "id": 10297130000171,
+      "title": "WP Flanuer 32mm Complete — Double Concave",
+      "body_html": "<p>The Flanuer is WP's beginner-friendly 32mm double-concave deck — the shape that makes learning kickflips easier because both ends kick together. Buy the bare deck, or the self-assembly kit with trucks and wheels.</p><p><strong>Why this one</strong></p><ul><li>32mm double-concave deck — the beginner's flip-friendly shape</li><li>Genuine maple construction from the WHITEPOLAR workshop</li><li>Deck-only or self-assembly kit with trucks and wheels</li><li>Personalised graphics you won't see on mass-market boards</li></ul><p><strong>Specifications</strong></p><table><tbody><tr><td><strong>Brand</strong></td><td>WP (WhitePolar)</td></tr><tr><td><strong>Deck</strong></td><td>Maple, 32 × 100mm, double concave</td></tr><tr><td><strong>Options</strong></td><td>Deck only / self-assembly kit</td></tr></tbody></table><em>Ships directly from our supplier workshop with tracking, arriving in 7–14 business days. Prices in USD; shipping is free on orders over $50. 30-day returns if it is not right for you.</em>",
+      "handle": "wp-flanuer-32mm-complete-double-concave",
+      "created_at": "2026-11-01T19:00:00+02:00",
+      "updated_at": "2026-11-01T19:00:00+02:00",
+      "published_at": "2026-11-01T19:00:00+02:00",
+      "status": "active",
+      "published_scope": "web",
+      "template_suffix": null,
+      "tags": "WP, flanuer, 32mm, double concave, maple, deck, complete, beginner",
+      "product_type": "Complete Fingerboards",
+      "vendor": "Fingerboard Lab",
+      "variants": [
+        {
+          "id": 92000000011401,
+          "product_id": 10297130000171,
+          "title": "Deck only — 32mm",
+          "price": "10.95",
+          "compare_at_price": null,
+          "position": 1,
+          "option1": "Deck only — 32mm",
+          "inventory_policy": "continue",
+          "taxable": false,
+          "sku": "FL-10297130000171-01",
+          "requires_shipping": true,
+          "available": true,
+          "inventory_quantity": 10,
+          "weight": 0.08,
+          "weight_unit": "kg",
+          "image_id": 1029713000017103
+        },
+        {
+          "id": 92000000011402,
+          "product_id": 10297130000171,
+          "title": "Self-assembly kit (trucks + wheels)",
+          "price": "22.95",
+          "compare_at_price": null,
+          "position": 2,
+          "option1": "Self-assembly kit (trucks + wheels)",
+          "inventory_policy": "continue",
+          "taxable": false,
+          "sku": "FL-10297130000171-02",
+          "requires_shipping": true,
+          "available": false,
+          "inventory_quantity": 0,
+          "weight": 0.08,
+          "weight_unit": "kg"
+        }
+      ],
+      "options": [
+        {
+          "id": 102971300001710,
+          "product_id": 10297130000171,
+          "name": "Kit",
+          "position": 1,
+          "values": [
+            "Deck only — 32mm",
+            "Self-assembly kit (trucks + wheels)"
+          ]
+        }
+      ],
+      "images": [
+        {
+          "id": 1029713000017102,
+          "product_id": 10297130000171,
+          "position": 1,
+          "src": "/products/primary-10297130000171-b5.jpg",
+          "width": 800,
+          "height": 800,
+          "alt": "WP Flanuer 32mm double-concave maple deck with graphics."
+        },
+        {
+          "id": 1029713000017103,
+          "product_id": 10297130000171,
+          "position": 2,
+          "src": "/products/gallery-984479346357-40915476881.jpg",
+          "width": 800,
+          "height": 800,
+          "alt": "Flanuer 32mm bare deck."
+        }
+      ],
+      "image": {
+        "id": 1029713000017102,
+        "product_id": 10297130000171,
+        "position": 1,
+        "src": "/products/primary-10297130000171-b5.jpg",
+        "width": 800,
+        "height": 800,
+        "alt": "WP Flanuer 32mm double-concave maple deck with graphics."
+      },
+      "seo_title": "WP Flanuer 32mm Complete — Double Concave",
+      "seo_description": "WP Flanuer 32mm double-concave maple deck — bare deck or self-assembly kit with trucks and wheels."
+    },
+    {
+      "id": 10297130000172,
+      "title": "WP Five-Layer Maple Mini Complete — Six Graphics",
+      "body_html": "<p>Six graphic mini completes on five-layer maple from WHITEPOLAR: three beginner 28mm decks and three upgraded 34mm builds on single-axis trucks. One product, six personalities.</p><p><strong>Why this one</strong></p><ul><li>Five-layer maple decks — real pop at mini scale</li><li>Beginner 28mm set: Statue, Iceberg, Pasture</li><li>Upgraded 34mm set on single-axis trucks: Sunset Park, Heart Smiley, King of Beasts</li><li>Every graphic linked to its own photo</li></ul><p><strong>Specifications</strong></p><table><tbody><tr><td><strong>Brand</strong></td><td>WP (WhitePolar)</td></tr><tr><td><strong>Deck</strong></td><td>Five-layer maple</td></tr><tr><td><strong>Widths</strong></td><td>28mm beginner / 34mm upgraded</td></tr><tr><td><strong>Graphics</strong></td><td>Statue / Iceberg / Sunset Park / Heart Smiley / King of Beasts / Pasture</td></tr></tbody></table><em>Ships directly from our supplier workshop with tracking, arriving in 7–14 business days. Prices in USD; shipping is free on orders over $50. 30-day returns if it is not right for you.</em>",
+      "handle": "wp-five-layer-maple-mini-complete-six-graphics",
+      "created_at": "2026-11-01T19:00:00+02:00",
+      "updated_at": "2026-11-01T19:00:00+02:00",
+      "published_at": "2026-11-01T19:00:00+02:00",
+      "status": "active",
+      "published_scope": "web",
+      "template_suffix": null,
+      "tags": "WP, five layer maple, mini complete, 28mm, 34mm, graphics, beginner",
+      "product_type": "Complete Fingerboards",
+      "vendor": "Fingerboard Lab",
+      "variants": [
+        {
+          "id": 92000000011403,
+          "product_id": 10297130000172,
+          "title": "Statue — 28mm",
+          "price": "13.95",
+          "compare_at_price": null,
+          "position": 1,
+          "option1": "Statue — 28mm",
+          "inventory_policy": "continue",
+          "taxable": false,
+          "sku": "FL-10297130000172-01",
+          "requires_shipping": true,
+          "available": true,
+          "inventory_quantity": 10,
+          "weight": 0.08,
+          "weight_unit": "kg",
+          "image_id": 1029713000017203
+        },
+        {
+          "id": 92000000011404,
+          "product_id": 10297130000172,
+          "title": "Iceberg — 28mm",
+          "price": "14.95",
+          "compare_at_price": null,
+          "position": 2,
+          "option1": "Iceberg — 28mm",
+          "inventory_policy": "continue",
+          "taxable": false,
+          "sku": "FL-10297130000172-02",
+          "requires_shipping": true,
+          "available": true,
+          "inventory_quantity": 7,
+          "weight": 0.08,
+          "weight_unit": "kg"
+        },
+        {
+          "id": 92000000011405,
+          "product_id": 10297130000172,
+          "title": "Sunset Park — 34mm",
+          "price": "25.95",
+          "compare_at_price": null,
+          "position": 3,
+          "option1": "Sunset Park — 34mm",
+          "inventory_policy": "continue",
+          "taxable": false,
+          "sku": "FL-10297130000172-03",
+          "requires_shipping": true,
+          "available": true,
+          "inventory_quantity": 5,
+          "weight": 0.08,
+          "weight_unit": "kg",
+          "image_id": 1029713000017204
+        },
+        {
+          "id": 92000000011406,
+          "product_id": 10297130000172,
+          "title": "Heart Smiley — 34mm",
+          "price": "25.95",
+          "compare_at_price": null,
+          "position": 4,
+          "option1": "Heart Smiley — 34mm",
+          "inventory_policy": "continue",
+          "taxable": false,
+          "sku": "FL-10297130000172-04",
+          "requires_shipping": true,
+          "available": true,
+          "inventory_quantity": 10,
+          "weight": 0.08,
+          "weight_unit": "kg",
+          "image_id": 1029713000017205
+        },
+        {
+          "id": 92000000011407,
+          "product_id": 10297130000172,
+          "title": "King of Beasts — 34mm",
+          "price": "25.95",
+          "compare_at_price": null,
+          "position": 5,
+          "option1": "King of Beasts — 34mm",
+          "inventory_policy": "continue",
+          "taxable": false,
+          "sku": "FL-10297130000172-05",
+          "requires_shipping": true,
+          "available": true,
+          "inventory_quantity": 8,
+          "weight": 0.08,
+          "weight_unit": "kg",
+          "image_id": 1029713000017206
+        },
+        {
+          "id": 92000000011408,
+          "product_id": 10297130000172,
+          "title": "Pasture — 34mm",
+          "price": "23.95",
+          "compare_at_price": null,
+          "position": 6,
+          "option1": "Pasture — 34mm",
+          "inventory_policy": "continue",
+          "taxable": false,
+          "sku": "FL-10297130000172-06",
+          "requires_shipping": true,
+          "available": true,
+          "inventory_quantity": 10,
+          "weight": 0.08,
+          "weight_unit": "kg"
+        }
+      ],
+      "options": [
+        {
+          "id": 102971300001720,
+          "product_id": 10297130000172,
+          "name": "Graphic",
+          "position": 1,
+          "values": [
+            "Statue — 28mm",
+            "Iceberg — 28mm",
+            "Sunset Park — 34mm",
+            "Heart Smiley — 34mm",
+            "King of Beasts — 34mm",
+            "Pasture — 34mm"
+          ]
+        }
+      ],
+      "images": [
+        {
+          "id": 1029713000017202,
+          "product_id": 10297130000172,
+          "position": 1,
+          "src": "/products/primary-10297130000172-b5.jpg",
+          "width": 800,
+          "height": 800,
+          "alt": "WP five-layer maple mini completes with assorted graphic decks."
+        },
+        {
+          "id": 1029713000017203,
+          "product_id": 10297130000172,
+          "position": 2,
+          "src": "/products/gallery-849543365839-35028430190.jpg",
+          "width": 800,
+          "height": 800,
+          "alt": "Statue graphic 28mm maple complete."
+        },
+        {
+          "id": 1029713000017204,
+          "product_id": 10297130000172,
+          "position": 3,
+          "src": "/products/gallery-849543365839-35028430192.jpg",
+          "width": 800,
+          "height": 800,
+          "alt": "Sunset Park graphic 34mm complete on single-axis trucks."
+        },
+        {
+          "id": 1029713000017205,
+          "product_id": 10297130000172,
+          "position": 4,
+          "src": "/products/gallery-849543365839-35028430193.jpg",
+          "width": 800,
+          "height": 800,
+          "alt": "Heart Smiley graphic 34mm complete."
+        },
+        {
+          "id": 1029713000017206,
+          "product_id": 10297130000172,
+          "position": 5,
+          "src": "/products/gallery-849543365839-35028430194.jpg",
+          "width": 800,
+          "height": 800,
+          "alt": "King of Beasts graphic 34mm complete."
+        }
+      ],
+      "image": {
+        "id": 1029713000017202,
+        "product_id": 10297130000172,
+        "position": 1,
+        "src": "/products/primary-10297130000172-b5.jpg",
+        "width": 800,
+        "height": 800,
+        "alt": "WP five-layer maple mini completes with assorted graphic decks."
+      },
+      "seo_title": "WP Five-Layer Maple Mini Complete — Six Graphics",
+      "seo_description": "Six WP five-layer maple mini completes — 28mm beginners and 34mm single-axis builds, photo-linked."
+    },
+    {
+      "id": 10297130000173,
+      "title": "WP Magic Girl 32mm Deck — Shallow Concave",
+      "body_html": "<p>Magic Girl on WP's shallow-concave 32mm maple deck — the flatter profile that some riders prefer for technical, low-pop lines. Take it as a bare deck or built up with trucks and wheels.</p><p><strong>Why this one</strong></p><ul><li>Shallow concave — the flat-feel preference for tech lines</li><li>Genuine maple, 32 × 100mm</li><li>Deck only, or with a truck-and-wheel set</li><li>The Magic Girl graphic across the full deck</li></ul><p><strong>Specifications</strong></p><table><tbody><tr><td><strong>Brand</strong></td><td>WP (WhitePolar)</td></tr><tr><td><strong>Deck</strong></td><td>Maple, 32 × 100mm, shallow concave</td></tr><tr><td><strong>Options</strong></td><td>Deck only / deck + trucks & wheels</td></tr></tbody></table><em>Ships directly from our supplier workshop with tracking, arriving in 7–14 business days. Prices in USD; shipping is free on orders over $50. 30-day returns if it is not right for you.</em>",
+      "handle": "wp-magic-girl-32mm-deck-shallow-concave",
+      "created_at": "2026-11-01T19:00:00+02:00",
+      "updated_at": "2026-11-01T19:00:00+02:00",
+      "published_at": "2026-11-01T19:00:00+02:00",
+      "status": "active",
+      "published_scope": "web",
+      "template_suffix": null,
+      "tags": "WP, magic girl, 32mm, shallow concave, maple, deck, complete",
+      "product_type": "Complete Fingerboards",
+      "vendor": "Fingerboard Lab",
+      "variants": [
+        {
+          "id": 92000000011409,
+          "product_id": 10297130000173,
+          "title": "Deck only — 32mm",
+          "price": "11.95",
+          "compare_at_price": null,
+          "position": 1,
+          "option1": "Deck only — 32mm",
+          "inventory_policy": "continue",
+          "taxable": false,
+          "sku": "FL-10297130000173-01",
+          "requires_shipping": true,
+          "available": true,
+          "inventory_quantity": 8,
+          "weight": 0.08,
+          "weight_unit": "kg"
+        },
+        {
+          "id": 92000000011410,
+          "product_id": 10297130000173,
+          "title": "Deck + trucks & wheels",
+          "price": "23.95",
+          "compare_at_price": null,
+          "position": 2,
+          "option1": "Deck + trucks & wheels",
+          "inventory_policy": "continue",
+          "taxable": false,
+          "sku": "FL-10297130000173-02",
+          "requires_shipping": true,
+          "available": true,
+          "inventory_quantity": 7,
+          "weight": 0.08,
+          "weight_unit": "kg"
+        }
+      ],
+      "options": [
+        {
+          "id": 102971300001730,
+          "product_id": 10297130000173,
+          "name": "Kit",
+          "position": 1,
+          "values": [
+            "Deck only — 32mm",
+            "Deck + trucks & wheels"
+          ]
+        }
+      ],
+      "images": [
+        {
+          "id": 1029713000017302,
+          "product_id": 10297130000173,
+          "position": 1,
+          "src": "/products/primary-10297130000173-b5.jpg",
+          "width": 800,
+          "height": 800,
+          "alt": "WP Magic Girl 32mm shallow-concave maple deck."
+        }
+      ],
+      "image": {
+        "id": 1029713000017302,
+        "product_id": 10297130000173,
+        "position": 1,
+        "src": "/products/primary-10297130000173-b5.jpg",
+        "width": 800,
+        "height": 800,
+        "alt": "WP Magic Girl 32mm shallow-concave maple deck."
+      },
+      "seo_title": "WP Magic Girl 32mm Deck — Shallow Concave",
+      "seo_description": "WP Magic Girl 32mm shallow-concave maple deck — bare deck or with trucks and wheels fitted."
+    },
+    {
+      "id": 10297130000174,
+      "title": "WP Porcelain Series 32mm Deck — Eight Glazes",
+      "body_html": "<p>The Porcelain series: dyed-maple 32mm decks in eight glaze colours, on WP's mid-concave competition shape. Pick the glaze; the deck is the same proven platform underneath.</p><p><strong>Why this one</strong></p><ul><li>Eight dyed-maple glaze colours — Nightfall, Turquoise, Forbidden City, Meadow, Coffee, Citrus, Cinnabar, Amber</li><li>Mid-concave competition shape, 32 × 100mm</li><li>Dyed through the plies, not painted on top</li><li>B-grade raw wood option at a lower price</li></ul><p><strong>Specifications</strong></p><table><tbody><tr><td><strong>Brand</strong></td><td>WP (WhitePolar)</td></tr><tr><td><strong>Deck</strong></td><td>Dyed maple, 32 × 100mm, mid concave</td></tr><tr><td><strong>Glazes</strong></td><td>Eight colours + raw wood B-grade</td></tr></tbody></table><em>Ships directly from our supplier workshop with tracking, arriving in 7–14 business days. Prices in USD; shipping is free on orders over $50. 30-day returns if it is not right for you.</em>",
+      "handle": "wp-porcelain-series-32mm-deck-eight-glazes",
+      "created_at": "2026-11-01T19:00:00+02:00",
+      "updated_at": "2026-11-01T19:00:00+02:00",
+      "published_at": "2026-11-01T19:00:00+02:00",
+      "status": "active",
+      "published_scope": "web",
+      "template_suffix": null,
+      "tags": "WP, porcelain series, dyed maple, 32mm, deck, competition concave",
+      "product_type": "Complete Fingerboards",
+      "vendor": "Fingerboard Lab",
+      "variants": [
+        {
+          "id": 92000000011411,
+          "product_id": 10297130000174,
+          "title": "Nightfall",
+          "price": "9.95",
+          "compare_at_price": null,
+          "position": 1,
+          "option1": "Nightfall",
+          "inventory_policy": "continue",
+          "taxable": false,
+          "sku": "FL-10297130000174-01",
+          "requires_shipping": true,
+          "available": true,
+          "inventory_quantity": 5,
+          "weight": 0.08,
+          "weight_unit": "kg",
+          "image_id": 1029713000017403
+        },
+        {
+          "id": 92000000011412,
+          "product_id": 10297130000174,
+          "title": "Turquoise",
+          "price": "9.95",
+          "compare_at_price": null,
+          "position": 2,
+          "option1": "Turquoise",
+          "inventory_policy": "continue",
+          "taxable": false,
+          "sku": "FL-10297130000174-02",
+          "requires_shipping": true,
+          "available": true,
+          "inventory_quantity": 6,
+          "weight": 0.08,
+          "weight_unit": "kg",
+          "image_id": 1029713000017404
+        },
+        {
+          "id": 92000000011413,
+          "product_id": 10297130000174,
+          "title": "Forbidden City",
+          "price": "9.95",
+          "compare_at_price": null,
+          "position": 3,
+          "option1": "Forbidden City",
+          "inventory_policy": "continue",
+          "taxable": false,
+          "sku": "FL-10297130000174-03",
+          "requires_shipping": true,
+          "available": true,
+          "inventory_quantity": 9,
+          "weight": 0.08,
+          "weight_unit": "kg",
+          "image_id": 1029713000017405
+        },
+        {
+          "id": 92000000011414,
+          "product_id": 10297130000174,
+          "title": "Meadow",
+          "price": "9.95",
+          "compare_at_price": null,
+          "position": 4,
+          "option1": "Meadow",
+          "inventory_policy": "continue",
+          "taxable": false,
+          "sku": "FL-10297130000174-04",
+          "requires_shipping": true,
+          "available": false,
+          "inventory_quantity": 0,
+          "weight": 0.08,
+          "weight_unit": "kg",
+          "image_id": 1029713000017406
+        },
+        {
+          "id": 92000000011415,
+          "product_id": 10297130000174,
+          "title": "Coffee",
+          "price": "9.95",
+          "compare_at_price": null,
+          "position": 5,
+          "option1": "Coffee",
+          "inventory_policy": "continue",
+          "taxable": false,
+          "sku": "FL-10297130000174-05",
+          "requires_shipping": true,
+          "available": true,
+          "inventory_quantity": 10,
+          "weight": 0.08,
+          "weight_unit": "kg",
+          "image_id": 1029713000017407
+        },
+        {
+          "id": 92000000011416,
+          "product_id": 10297130000174,
+          "title": "Citrus",
+          "price": "9.95",
+          "compare_at_price": null,
+          "position": 6,
+          "option1": "Citrus",
+          "inventory_policy": "continue",
+          "taxable": false,
+          "sku": "FL-10297130000174-06",
+          "requires_shipping": true,
+          "available": true,
+          "inventory_quantity": 10,
+          "weight": 0.08,
+          "weight_unit": "kg",
+          "image_id": 1029713000017408
+        },
+        {
+          "id": 92000000011417,
+          "product_id": 10297130000174,
+          "title": "Cinnabar",
+          "price": "9.95",
+          "compare_at_price": null,
+          "position": 7,
+          "option1": "Cinnabar",
+          "inventory_policy": "continue",
+          "taxable": false,
+          "sku": "FL-10297130000174-07",
+          "requires_shipping": true,
+          "available": true,
+          "inventory_quantity": 8,
+          "weight": 0.08,
+          "weight_unit": "kg",
+          "image_id": 1029713000017409
+        },
+        {
+          "id": 92000000011418,
+          "product_id": 10297130000174,
+          "title": "Amber",
+          "price": "9.95",
+          "compare_at_price": null,
+          "position": 8,
+          "option1": "Amber",
+          "inventory_policy": "continue",
+          "taxable": false,
+          "sku": "FL-10297130000174-08",
+          "requires_shipping": true,
+          "available": true,
+          "inventory_quantity": 6,
+          "weight": 0.08,
+          "weight_unit": "kg",
+          "image_id": 1029713000017410
+        },
+        {
+          "id": 92000000011419,
+          "product_id": 10297130000174,
+          "title": "Raw Wood — B-grade",
+          "price": "7.45",
+          "compare_at_price": null,
+          "position": 9,
+          "option1": "Raw Wood — B-grade",
+          "inventory_policy": "continue",
+          "taxable": false,
+          "sku": "FL-10297130000174-09",
+          "requires_shipping": true,
+          "available": true,
+          "inventory_quantity": 5,
+          "weight": 0.08,
+          "weight_unit": "kg",
+          "image_id": 1029713000017411
+        }
+      ],
+      "options": [
+        {
+          "id": 102971300001740,
+          "product_id": 10297130000174,
+          "name": "Glaze",
+          "position": 1,
+          "values": [
+            "Nightfall",
+            "Turquoise",
+            "Forbidden City",
+            "Meadow",
+            "Coffee",
+            "Citrus",
+            "Cinnabar",
+            "Amber",
+            "Raw Wood — B-grade"
+          ]
+        }
+      ],
+      "images": [
+        {
+          "id": 1029713000017402,
+          "product_id": 10297130000174,
+          "position": 1,
+          "src": "/products/primary-10297130000174-b5.jpg",
+          "width": 800,
+          "height": 800,
+          "alt": "WP Porcelain series 32mm dyed maple decks in assorted glaze colours."
+        },
+        {
+          "id": 1029713000017403,
+          "product_id": 10297130000174,
+          "position": 2,
+          "src": "/products/gallery-1016311510167-42425871501.jpg",
+          "width": 800,
+          "height": 800,
+          "alt": "Nightfall glaze dyed-maple 32mm deck."
+        },
+        {
+          "id": 1029713000017404,
+          "product_id": 10297130000174,
+          "position": 3,
+          "src": "/products/gallery-1016311510167-42425871502.jpg",
+          "width": 800,
+          "height": 800,
+          "alt": "Turquoise glaze deck."
+        },
+        {
+          "id": 1029713000017405,
+          "product_id": 10297130000174,
+          "position": 4,
+          "src": "/products/gallery-1016311510167-42425871503.jpg",
+          "width": 800,
+          "height": 800,
+          "alt": "Forbidden City glaze deck."
+        },
+        {
+          "id": 1029713000017406,
+          "product_id": 10297130000174,
+          "position": 5,
+          "src": "/products/gallery-1016311510167-42425871504.jpg",
+          "width": 800,
+          "height": 800,
+          "alt": "Meadow glaze deck."
+        },
+        {
+          "id": 1029713000017407,
+          "product_id": 10297130000174,
+          "position": 6,
+          "src": "/products/gallery-1016311510167-42425871505.jpg",
+          "width": 800,
+          "height": 800,
+          "alt": "Coffee glaze deck."
+        },
+        {
+          "id": 1029713000017408,
+          "product_id": 10297130000174,
+          "position": 7,
+          "src": "/products/gallery-1016311510167-42425871506.jpg",
+          "width": 800,
+          "height": 800,
+          "alt": "Citrus glaze deck."
+        },
+        {
+          "id": 1029713000017409,
+          "product_id": 10297130000174,
+          "position": 8,
+          "src": "/products/gallery-1016311510167-42425871507.jpg",
+          "width": 800,
+          "height": 800,
+          "alt": "Cinnabar glaze deck."
+        },
+        {
+          "id": 1029713000017410,
+          "product_id": 10297130000174,
+          "position": 9,
+          "src": "/products/gallery-1016311510167-42425871508.jpg",
+          "width": 800,
+          "height": 800,
+          "alt": "Amber glaze deck."
+        },
+        {
+          "id": 1029713000017411,
+          "product_id": 10297130000174,
+          "position": 10,
+          "src": "/products/gallery-1016311510167-45026576513.jpg",
+          "width": 800,
+          "height": 800,
+          "alt": "Raw wood B-grade 32mm deck."
+        }
+      ],
+      "image": {
+        "id": 1029713000017402,
+        "product_id": 10297130000174,
+        "position": 1,
+        "src": "/products/primary-10297130000174-b5.jpg",
+        "width": 800,
+        "height": 800,
+        "alt": "WP Porcelain series 32mm dyed maple decks in assorted glaze colours."
+      },
+      "seo_title": "WP Porcelain Series 32mm Deck — Eight Glazes",
+      "seo_description": "WP Porcelain series dyed-maple 32mm decks in eight glazes on the mid-concave competition shape."
+    },
+    {
+      "id": 10297130000175,
+      "title": "WP Pop Art 30mm Complete — Five-Ply Maple",
+      "body_html": "<p>Pop Art on WP's five-ply maple 30mm build — shallow concave, bearing wheels, and a transparent display box with stickers included.</p><p><strong>Why this one</strong></p><ul><li>Complete and ready to ride out of the box</li><li>Genuine maple deck with bearing wheels</li><li>Display or gift box included</li><li>Photo-linked — what you see is the board</li></ul><p><strong>Specifications</strong></p><table><tbody><tr><td><strong>Deck</strong></td><td>Maple</td></tr><tr><td><strong>Setup</strong></td><td>Trucks + bearing wheels fitted</td></tr><tr><td><strong>Packaging</strong></td><td>Display/gift box</td></tr></tbody></table><em>Ships directly from our supplier workshop with tracking, arriving in 7–14 business days. Prices in USD; shipping is free on orders over $50. 30-day returns if it is not right for you.</em>",
+      "handle": "wp-pop-art-30mm-complete-five-ply",
+      "created_at": "2026-11-01T19:00:00+02:00",
+      "updated_at": "2026-11-01T19:00:00+02:00",
+      "published_at": "2026-11-01T19:00:00+02:00",
+      "status": "active",
+      "published_scope": "web",
+      "template_suffix": null,
+      "tags": "WP, pop art, 30mm, five-ply maple, complete",
+      "product_type": "Complete Fingerboards",
+      "vendor": "Fingerboard Lab",
+      "variants": [
+        {
+          "id": 92000000011420,
+          "product_id": 10297130000175,
+          "title": "Default Title",
+          "price": "18.95",
+          "compare_at_price": null,
+          "position": 1,
+          "option1": "Default Title",
+          "inventory_policy": "continue",
+          "taxable": false,
+          "sku": "FL-10297130000175-01",
+          "requires_shipping": true,
+          "available": true,
+          "inventory_quantity": 10,
+          "weight": 0.08,
+          "weight_unit": "kg"
+        }
+      ],
+      "options": [
+        {
+          "id": 102971300001750,
+          "product_id": 10297130000175,
+          "name": "Option",
+          "position": 1,
+          "values": [
+            "Default Title"
+          ]
+        }
+      ],
+      "images": [
+        {
+          "id": 1029713000017502,
+          "product_id": 10297130000175,
+          "position": 1,
+          "src": "/products/primary-10297130000175-b5.jpg",
+          "width": 800,
+          "height": 800,
+          "alt": "Pop Art graphic five-ply maple complete in its display box."
+        }
+      ],
+      "image": {
+        "id": 1029713000017502,
+        "product_id": 10297130000175,
+        "position": 1,
+        "src": "/products/primary-10297130000175-b5.jpg",
+        "width": 800,
+        "height": 800,
+        "alt": "Pop Art graphic five-ply maple complete in its display box."
+      },
+      "seo_title": "WP Pop Art 30mm Complete — Five-Ply Maple",
+      "seo_description": "WP Pop Art 30mm Complete — Five-Ply Maple — ready-to-ride maple fingerboard from Fingerboard Lab."
+    },
+    {
+      "id": 10297130000176,
+      "title": "WP Final Match 30mm Complete — Five-Ply Maple",
+      "body_html": "<p>The Final Match graphic on the same five-ply maple 30mm platform — matt-finish deck, bearing wheels, display box and stickers.</p><p><strong>Why this one</strong></p><ul><li>Complete and ready to ride out of the box</li><li>Genuine maple deck with bearing wheels</li><li>Display or gift box included</li><li>Photo-linked — what you see is the board</li></ul><p><strong>Specifications</strong></p><table><tbody><tr><td><strong>Deck</strong></td><td>Maple</td></tr><tr><td><strong>Setup</strong></td><td>Trucks + bearing wheels fitted</td></tr><tr><td><strong>Packaging</strong></td><td>Display/gift box</td></tr></tbody></table><em>Ships directly from our supplier workshop with tracking, arriving in 7–14 business days. Prices in USD; shipping is free on orders over $50. 30-day returns if it is not right for you.</em>",
+      "handle": "wp-final-match-30mm-complete-five-ply",
+      "created_at": "2026-11-01T19:00:00+02:00",
+      "updated_at": "2026-11-01T19:00:00+02:00",
+      "published_at": "2026-11-01T19:00:00+02:00",
+      "status": "active",
+      "published_scope": "web",
+      "template_suffix": null,
+      "tags": "WP, final match, 30mm, five-ply maple, complete",
+      "product_type": "Complete Fingerboards",
+      "vendor": "Fingerboard Lab",
+      "variants": [
+        {
+          "id": 92000000011421,
+          "product_id": 10297130000176,
+          "title": "Default Title",
+          "price": "19.95",
+          "compare_at_price": null,
+          "position": 1,
+          "option1": "Default Title",
+          "inventory_policy": "continue",
+          "taxable": false,
+          "sku": "FL-10297130000176-01",
+          "requires_shipping": true,
+          "available": true,
+          "inventory_quantity": 10,
+          "weight": 0.08,
+          "weight_unit": "kg"
+        }
+      ],
+      "options": [
+        {
+          "id": 102971300001760,
+          "product_id": 10297130000176,
+          "name": "Option",
+          "position": 1,
+          "values": [
+            "Default Title"
+          ]
+        }
+      ],
+      "images": [
+        {
+          "id": 1029713000017602,
+          "product_id": 10297130000176,
+          "position": 1,
+          "src": "/products/primary-10297130000176-b5.jpg",
+          "width": 800,
+          "height": 800,
+          "alt": "Final Match graphic five-ply maple complete in its display box."
+        }
+      ],
+      "image": {
+        "id": 1029713000017602,
+        "product_id": 10297130000176,
+        "position": 1,
+        "src": "/products/primary-10297130000176-b5.jpg",
+        "width": 800,
+        "height": 800,
+        "alt": "Final Match graphic five-ply maple complete in its display box."
+      },
+      "seo_title": "WP Final Match 30mm Complete — Five-Ply Maple",
+      "seo_description": "WP Final Match 30mm Complete — Five-Ply Maple — ready-to-ride maple fingerboard from Fingerboard Lab."
+    },
+    {
+      "id": 10297130000177,
+      "title": "WP Cthulhu 28mm Complete — Shallow Concave",
+      "body_html": "<p>Cthulhu on WP's compact 28 × 98mm shallow-concave maple deck — a presentation-box complete with a graphic that stands out on any shelf.</p><p><strong>Why this one</strong></p><ul><li>Complete and ready to ride out of the box</li><li>Genuine maple deck with bearing wheels</li><li>Display or gift box included</li><li>Photo-linked — what you see is the board</li></ul><p><strong>Specifications</strong></p><table><tbody><tr><td><strong>Deck</strong></td><td>Maple</td></tr><tr><td><strong>Setup</strong></td><td>Trucks + bearing wheels fitted</td></tr><tr><td><strong>Packaging</strong></td><td>Display/gift box</td></tr></tbody></table><em>Ships directly from our supplier workshop with tracking, arriving in 7–14 business days. Prices in USD; shipping is free on orders over $50. 30-day returns if it is not right for you.</em>",
+      "handle": "wp-cthulhu-28mm-complete-shallow-concave",
+      "created_at": "2026-11-01T19:00:00+02:00",
+      "updated_at": "2026-11-01T19:00:00+02:00",
+      "published_at": "2026-11-01T19:00:00+02:00",
+      "status": "active",
+      "published_scope": "web",
+      "template_suffix": null,
+      "tags": "WP, cthulhu, 28mm, shallow concave, complete",
+      "product_type": "Complete Fingerboards",
+      "vendor": "Fingerboard Lab",
+      "variants": [
+        {
+          "id": 92000000011422,
+          "product_id": 10297130000177,
+          "title": "Default Title",
+          "price": "17.95",
+          "compare_at_price": null,
+          "position": 1,
+          "option1": "Default Title",
+          "inventory_policy": "continue",
+          "taxable": false,
+          "sku": "FL-10297130000177-01",
+          "requires_shipping": true,
+          "available": true,
+          "inventory_quantity": 10,
+          "weight": 0.08,
+          "weight_unit": "kg"
+        }
+      ],
+      "options": [
+        {
+          "id": 102971300001770,
+          "product_id": 10297130000177,
+          "name": "Option",
+          "position": 1,
+          "values": [
+            "Default Title"
+          ]
+        }
+      ],
+      "images": [
+        {
+          "id": 1029713000017702,
+          "product_id": 10297130000177,
+          "position": 1,
+          "src": "/products/primary-10297130000177-b5.jpg",
+          "width": 800,
+          "height": 800,
+          "alt": "Cthulhu graphic shallow-concave maple complete in a gift box."
+        }
+      ],
+      "image": {
+        "id": 1029713000017702,
+        "product_id": 10297130000177,
+        "position": 1,
+        "src": "/products/primary-10297130000177-b5.jpg",
+        "width": 800,
+        "height": 800,
+        "alt": "Cthulhu graphic shallow-concave maple complete in a gift box."
+      },
+      "seo_title": "WP Cthulhu 28mm Complete — Shallow Concave",
+      "seo_description": "WP Cthulhu 28mm Complete — Shallow Concave — ready-to-ride maple fingerboard from Fingerboard Lab."
+    },
+    {
+      "id": 10297130000178,
+      "title": "Panda 10cm Double-Kick Fingerboard — Kids' Starter",
+      "body_html": "<p>A 10cm panda-graphic double-kick board built for younger riders and first-timers — grip tape applied, white wheels fitted, ready out of the box.</p><p><strong>Why this one</strong></p><ul><li>Complete and ready to ride out of the box</li><li>Genuine maple deck with bearing wheels</li><li>Display or gift box included</li><li>Photo-linked — what you see is the board</li></ul><p><strong>Specifications</strong></p><table><tbody><tr><td><strong>Deck</strong></td><td>Maple</td></tr><tr><td><strong>Setup</strong></td><td>Trucks + bearing wheels fitted</td></tr><tr><td><strong>Packaging</strong></td><td>Display/gift box</td></tr></tbody></table><em>Ships directly from our supplier workshop with tracking, arriving in 7–14 business days. Prices in USD; shipping is free on orders over $50. 30-day returns if it is not right for you.</em>",
+      "handle": "panda-10cm-double-kick-fingerboard-starter",
+      "created_at": "2026-11-01T19:00:00+02:00",
+      "updated_at": "2026-11-01T19:00:00+02:00",
+      "published_at": "2026-11-01T19:00:00+02:00",
+      "status": "active",
+      "published_scope": "web",
+      "template_suffix": null,
+      "tags": "panda, 10cm, double kick, starter, kids, fingerboard",
+      "product_type": "Complete Fingerboards",
+      "vendor": "Fingerboard Lab",
+      "variants": [
+        {
+          "id": 92000000011423,
+          "product_id": 10297130000178,
+          "title": "Default Title",
+          "price": "15.95",
+          "compare_at_price": null,
+          "position": 1,
+          "option1": "Default Title",
+          "inventory_policy": "continue",
+          "taxable": false,
+          "sku": "FL-10297130000178-01",
+          "requires_shipping": true,
+          "available": true,
+          "inventory_quantity": 10,
+          "weight": 0.08,
+          "weight_unit": "kg"
+        }
+      ],
+      "options": [
+        {
+          "id": 102971300001780,
+          "product_id": 10297130000178,
+          "name": "Option",
+          "position": 1,
+          "values": [
+            "Default Title"
+          ]
+        }
+      ],
+      "images": [
+        {
+          "id": 1029713000017802,
+          "product_id": 10297130000178,
+          "position": 1,
+          "src": "/products/primary-10297130000178-b5.jpg",
+          "width": 800,
+          "height": 800,
+          "alt": "Panda graphic double-kick fingerboard with white wheels and grip tape."
+        }
+      ],
+      "image": {
+        "id": 1029713000017802,
+        "product_id": 10297130000178,
+        "position": 1,
+        "src": "/products/primary-10297130000178-b5.jpg",
+        "width": 800,
+        "height": 800,
+        "alt": "Panda graphic double-kick fingerboard with white wheels and grip tape."
+      },
+      "seo_title": "Panda 10cm Double-Kick Fingerboard — Kids' Starter",
+      "seo_description": "Panda 10cm Double-Kick Fingerboard — Kids' Starter — ready-to-ride maple fingerboard from Fingerboard Lab."
+    },
+    {
+      "id": 10297130000179,
+      "title": "HAILEY FB1 34mm Complete — Mickey Graphic",
+      "body_html": "<p>The FB1 is HAILEY's 34 × 96mm Mickey-graphic series, offered three ways: bare deck, on double-axis trucks, or on single-axis trucks for the sharper tech setup.</p><p><strong>Why this one</strong></p><ul><li>Bare deck, double-axis kit or single-axis kit</li><li>34 × 96mm maple deck — the stable wide platform</li><li>Mickey graphic across the deck</li><li>Upgrade the trucks without changing the board you like</li></ul><p><strong>Specifications</strong></p><table><tbody><tr><td><strong>Brand</strong></td><td>HAILEY</td></tr><tr><td><strong>Series</strong></td><td>FB1</td></tr><tr><td><strong>Deck</strong></td><td>Maple, 34 × 96mm</td></tr><tr><td><strong>Options</strong></td><td>Deck / double-axis kit / single-axis kit</td></tr></tbody></table><em>Ships directly from our supplier workshop with tracking, arriving in 7–14 business days. Prices in USD; shipping is free on orders over $50. 30-day returns if it is not right for you.</em>",
+      "handle": "hailey-fb1-34mm-complete-mickey",
+      "created_at": "2026-11-01T19:00:00+02:00",
+      "updated_at": "2026-11-01T19:00:00+02:00",
+      "published_at": "2026-11-01T19:00:00+02:00",
+      "status": "active",
+      "published_scope": "web",
+      "template_suffix": null,
+      "tags": "HAILEY, FB1, 34mm, mickey, maple, deck, complete, single axis, double axis",
+      "product_type": "Complete Fingerboards",
+      "vendor": "Fingerboard Lab",
+      "variants": [
+        {
+          "id": 92000000011424,
+          "product_id": 10297130000179,
+          "title": "Deck only",
+          "price": "18.95",
+          "compare_at_price": null,
+          "position": 1,
+          "option1": "Deck only",
+          "inventory_policy": "continue",
+          "taxable": false,
+          "sku": "FL-10297130000179-01",
+          "requires_shipping": true,
+          "available": true,
+          "inventory_quantity": 10,
+          "weight": 0.08,
+          "weight_unit": "kg",
+          "image_id": 1029713000017903
+        },
+        {
+          "id": 92000000011425,
+          "product_id": 10297130000179,
+          "title": "Double-axis kit",
+          "price": "35.95",
+          "compare_at_price": null,
+          "position": 2,
+          "option1": "Double-axis kit",
+          "inventory_policy": "continue",
+          "taxable": false,
+          "sku": "FL-10297130000179-02",
+          "requires_shipping": true,
+          "available": true,
+          "inventory_quantity": 10,
+          "weight": 0.08,
+          "weight_unit": "kg",
+          "image_id": 1029713000017904
+        },
+        {
+          "id": 92000000011426,
+          "product_id": 10297130000179,
+          "title": "Single-axis kit",
+          "price": "58.95",
+          "compare_at_price": null,
+          "position": 3,
+          "option1": "Single-axis kit",
+          "inventory_policy": "continue",
+          "taxable": false,
+          "sku": "FL-10297130000179-03",
+          "requires_shipping": true,
+          "available": true,
+          "inventory_quantity": 10,
+          "weight": 0.08,
+          "weight_unit": "kg",
+          "image_id": 1029713000017905
+        }
+      ],
+      "options": [
+        {
+          "id": 102971300001790,
+          "product_id": 10297130000179,
+          "name": "Kit",
+          "position": 1,
+          "values": [
+            "Deck only",
+            "Double-axis kit",
+            "Single-axis kit"
+          ]
+        }
+      ],
+      "images": [
+        {
+          "id": 1029713000017902,
+          "product_id": 10297130000179,
+          "position": 1,
+          "src": "/products/primary-10297130000179-b5.jpg",
+          "width": 800,
+          "height": 800,
+          "alt": "HAILEY FB1 34mm Mickey-graphic maple deck and complete."
+        },
+        {
+          "id": 1029713000017903,
+          "product_id": 10297130000179,
+          "position": 2,
+          "src": "/products/gallery-835311716862-34187791097.jpg",
+          "width": 800,
+          "height": 800,
+          "alt": "Mickey FB1 bare 34mm deck."
+        },
+        {
+          "id": 1029713000017904,
+          "product_id": 10297130000179,
+          "position": 3,
+          "src": "/products/gallery-835311716862-34187791098.jpg",
+          "width": 800,
+          "height": 800,
+          "alt": "Mickey FB1 on double-axis trucks."
+        },
+        {
+          "id": 1029713000017905,
+          "product_id": 10297130000179,
+          "position": 4,
+          "src": "/products/gallery-835311716862-34187791099.jpg",
+          "width": 800,
+          "height": 800,
+          "alt": "Mickey FB1 on single-axis trucks."
+        }
+      ],
+      "image": {
+        "id": 1029713000017902,
+        "product_id": 10297130000179,
+        "position": 1,
+        "src": "/products/primary-10297130000179-b5.jpg",
+        "width": 800,
+        "height": 800,
+        "alt": "HAILEY FB1 34mm Mickey-graphic maple deck and complete."
+      },
+      "seo_title": "HAILEY FB1 34mm Complete — Mickey Graphic",
+      "seo_description": "HAILEY FB1 34mm Mickey-graphic maple deck — bare, on double-axis trucks or single-axis trucks."
+    },
+    {
+      "id": 10297130000180,
+      "title": "HAILEY FB2 34mm Complete — Whale Yellow",
+      "body_html": "<p>The FB2 Whale in yellow: Canadian maple 34mm deck with the whale graphic, trucks and wheels fitted — truck and wheel colours selectable when you order.</p><p><strong>Why this one</strong></p><ul><li>Canadian maple 34mm deck in the whale yellow colourway</li><li>Complete setup with trucks and bearing wheels</li><li>Truck and wheel colours selectable at checkout</li><li>Birthday/gift-ready presentation</li></ul><p><strong>Specifications</strong></p><table><tbody><tr><td><strong>Brand</strong></td><td>HAILEY</td></tr><tr><td><strong>Series</strong></td><td>FB2</td></tr><tr><td><strong>Deck</strong></td><td>Canadian maple, 34mm</td></tr><tr><td><strong>Colourway</strong></td><td>Whale Yellow</td></tr></tbody></table><em>Ships directly from our supplier workshop with tracking, arriving in 7–14 business days. Prices in USD; shipping is free on orders over $50. 30-day returns if it is not right for you.</em>",
+      "handle": "hailey-fb2-34mm-complete-whale-yellow",
+      "created_at": "2026-11-01T19:00:00+02:00",
+      "updated_at": "2026-11-01T19:00:00+02:00",
+      "published_at": "2026-11-01T19:00:00+02:00",
+      "status": "active",
+      "published_scope": "web",
+      "template_suffix": null,
+      "tags": "HAILEY, FB2, whale, yellow, 34mm, canadian maple, complete",
+      "product_type": "Complete Fingerboards",
+      "vendor": "Fingerboard Lab",
+      "variants": [
+        {
+          "id": 92000000011427,
+          "product_id": 10297130000180,
+          "title": "Default Title",
+          "price": "41.95",
+          "compare_at_price": null,
+          "position": 1,
+          "option1": "Default Title",
+          "inventory_policy": "continue",
+          "taxable": false,
+          "sku": "FL-10297130000180-01",
+          "requires_shipping": true,
+          "available": true,
+          "inventory_quantity": 10,
+          "weight": 0.08,
+          "weight_unit": "kg",
+          "image_id": 1029713000018003
+        }
+      ],
+      "options": [
+        {
+          "id": 102971300001800,
+          "product_id": 10297130000180,
+          "name": "Option",
+          "position": 1,
+          "values": [
+            "Default Title"
+          ]
+        }
+      ],
+      "images": [
+        {
+          "id": 1029713000018002,
+          "product_id": 10297130000180,
+          "position": 1,
+          "src": "/products/primary-10297130000180-b5.jpg",
+          "width": 800,
+          "height": 800,
+          "alt": "HAILEY FB2 whale-graphic yellow 34mm maple complete."
+        },
+        {
+          "id": 1029713000018003,
+          "product_id": 10297130000180,
+          "position": 2,
+          "src": "/products/gallery-799437984111-32640347385.jpg",
+          "width": 800,
+          "height": 800,
+          "alt": "HAILEY FB2 whale yellow complete."
+        }
+      ],
+      "image": {
+        "id": 1029713000018002,
+        "product_id": 10297130000180,
+        "position": 1,
+        "src": "/products/primary-10297130000180-b5.jpg",
+        "width": 800,
+        "height": 800,
+        "alt": "HAILEY FB2 whale-graphic yellow 34mm maple complete."
+      },
+      "seo_title": "HAILEY FB2 34mm Complete — Whale Yellow",
+      "seo_description": "HAILEY FB2 whale-graphic 34mm Canadian maple complete — trucks and wheels fitted, colours selectable."
+    },
+    {
+      "id": 10297130000181,
+      "title": "Antionce 34mm Complete — Cute Series",
+      "body_html": "<p>Antionce's Canadian maple 34mm complete with the Cute graphic — available as the standard build or the premium build with the upgraded hardware set.</p><p><strong>Why this one</strong></p><ul><li>Canadian maple 34mm deck with the Cute graphic</li><li>Standard or premium hardware build</li><li>Ready to ride out of the box</li><li>Same workshop maple as the Berlin series</li></ul><p><strong>Specifications</strong></p><table><tbody><tr><td><strong>Brand</strong></td><td>Antionce</td></tr><tr><td><strong>Deck</strong></td><td>Canadian maple, 34mm</td></tr><tr><td><strong>Builds</strong></td><td>Standard / Premium</td></tr></tbody></table><em>Ships directly from our supplier workshop with tracking, arriving in 7–14 business days. Prices in USD; shipping is free on orders over $50. 30-day returns if it is not right for you.</em>",
+      "handle": "antionce-34mm-complete-cute-series",
+      "created_at": "2026-11-01T19:00:00+02:00",
+      "updated_at": "2026-11-01T19:00:00+02:00",
+      "published_at": "2026-11-01T19:00:00+02:00",
+      "status": "active",
+      "published_scope": "web",
+      "template_suffix": null,
+      "tags": "antionce, canadian maple, 34mm, cute, complete, standard, premium",
+      "product_type": "Complete Fingerboards",
+      "vendor": "Fingerboard Lab",
+      "variants": [
+        {
+          "id": 92000000011428,
+          "product_id": 10297130000181,
+          "title": "Standard",
+          "price": "35.95",
+          "compare_at_price": null,
+          "position": 1,
+          "option1": "Standard",
+          "inventory_policy": "continue",
+          "taxable": false,
+          "sku": "FL-10297130000181-01",
+          "requires_shipping": true,
+          "available": true,
+          "inventory_quantity": 6,
+          "weight": 0.08,
+          "weight_unit": "kg",
+          "image_id": 1029713000018103
+        },
+        {
+          "id": 92000000011429,
+          "product_id": 10297130000181,
+          "title": "Premium",
+          "price": "55.95",
+          "compare_at_price": null,
+          "position": 2,
+          "option1": "Premium",
+          "inventory_policy": "continue",
+          "taxable": false,
+          "sku": "FL-10297130000181-02",
+          "requires_shipping": true,
+          "available": true,
+          "inventory_quantity": 10,
+          "weight": 0.08,
+          "weight_unit": "kg",
+          "image_id": 1029713000018104
+        }
+      ],
+      "options": [
+        {
+          "id": 102971300001810,
+          "product_id": 10297130000181,
+          "name": "Build",
+          "position": 1,
+          "values": [
+            "Standard",
+            "Premium"
+          ]
+        }
+      ],
+      "images": [
+        {
+          "id": 1029713000018102,
+          "product_id": 10297130000181,
+          "position": 1,
+          "src": "/products/primary-10297130000181-b5.jpg",
+          "width": 800,
+          "height": 800,
+          "alt": "Antionce Canadian maple 34mm complete with cute graphic."
+        },
+        {
+          "id": 1029713000018103,
+          "product_id": 10297130000181,
+          "position": 2,
+          "src": "/products/gallery-808643865443-33093957862.jpg",
+          "width": 800,
+          "height": 800,
+          "alt": "Antionce cute complete, standard build."
+        },
+        {
+          "id": 1029713000018104,
+          "product_id": 10297130000181,
+          "position": 3,
+          "src": "/products/gallery-808643865443-33093957863.jpg",
+          "width": 800,
+          "height": 800,
+          "alt": "Antionce cute complete, premium build."
+        }
+      ],
+      "image": {
+        "id": 1029713000018102,
+        "product_id": 10297130000181,
+        "position": 1,
+        "src": "/products/primary-10297130000181-b5.jpg",
+        "width": 800,
+        "height": 800,
+        "alt": "Antionce Canadian maple 34mm complete with cute graphic."
+      },
+      "seo_title": "Antionce 34mm Complete — Cute Series",
+      "seo_description": "Antionce 34mm Canadian maple complete in the Cute graphic — standard or premium hardware build."
+    },
+    {
+      "id": 10297130000182,
+      "title": "HAILEY FB3 34mm Deck — Deep Concave",
+      "body_html": "<p>The FB3 is HAILEY's deep-concave 34mm maple deck — the locked-in shape for technical flip tricks. Bare deck, standard kit or premium kit.</p><p><strong>Why this one</strong></p><ul><li>Deep concave — maximum finger lock for flip tricks</li><li>34mm maple deck</li><li>Deck only, standard kit or premium kit</li><li>HAILEY's newest deck shape</li></ul><p><strong>Specifications</strong></p><table><tbody><tr><td><strong>Brand</strong></td><td>HAILEY</td></tr><tr><td><strong>Series</strong></td><td>FB3</td></tr><tr><td><strong>Deck</strong></td><td>Maple, 34mm, deep concave</td></tr><tr><td><strong>Options</strong></td><td>Deck / standard kit / premium kit</td></tr></tbody></table><em>Ships directly from our supplier workshop with tracking, arriving in 7–14 business days. Prices in USD; shipping is free on orders over $50. 30-day returns if it is not right for you.</em>",
+      "handle": "hailey-fb3-34mm-deck-deep-concave",
+      "created_at": "2026-11-01T19:00:00+02:00",
+      "updated_at": "2026-11-01T19:00:00+02:00",
+      "published_at": "2026-11-01T19:00:00+02:00",
+      "status": "active",
+      "published_scope": "web",
+      "template_suffix": null,
+      "tags": "HAILEY, FB3, 34mm, deep concave, maple, deck, complete, premium",
+      "product_type": "Complete Fingerboards",
+      "vendor": "Fingerboard Lab",
+      "variants": [
+        {
+          "id": 92000000011430,
+          "product_id": 10297130000182,
+          "title": "Deck only",
+          "price": "29.95",
+          "compare_at_price": null,
+          "position": 1,
+          "option1": "Deck only",
+          "inventory_policy": "continue",
+          "taxable": false,
+          "sku": "FL-10297130000182-01",
+          "requires_shipping": true,
+          "available": true,
+          "inventory_quantity": 10,
+          "weight": 0.08,
+          "weight_unit": "kg",
+          "image_id": 1029713000018203
+        },
+        {
+          "id": 92000000011431,
+          "product_id": 10297130000182,
+          "title": "Standard kit",
+          "price": "40.95",
+          "compare_at_price": null,
+          "position": 2,
+          "option1": "Standard kit",
+          "inventory_policy": "continue",
+          "taxable": false,
+          "sku": "FL-10297130000182-02",
+          "requires_shipping": true,
+          "available": true,
+          "inventory_quantity": 10,
+          "weight": 0.08,
+          "weight_unit": "kg",
+          "image_id": 1029713000018204
+        },
+        {
+          "id": 92000000011432,
+          "product_id": 10297130000182,
+          "title": "Premium kit",
+          "price": "58.95",
+          "compare_at_price": null,
+          "position": 3,
+          "option1": "Premium kit",
+          "inventory_policy": "continue",
+          "taxable": false,
+          "sku": "FL-10297130000182-03",
+          "requires_shipping": true,
+          "available": true,
+          "inventory_quantity": 10,
+          "weight": 0.08,
+          "weight_unit": "kg",
+          "image_id": 1029713000018205
+        }
+      ],
+      "options": [
+        {
+          "id": 102971300001820,
+          "product_id": 10297130000182,
+          "name": "Kit",
+          "position": 1,
+          "values": [
+            "Deck only",
+            "Standard kit",
+            "Premium kit"
+          ]
+        }
+      ],
+      "images": [
+        {
+          "id": 1029713000018202,
+          "product_id": 10297130000182,
+          "position": 1,
+          "src": "/products/primary-10297130000182-b5.jpg",
+          "width": 800,
+          "height": 800,
+          "alt": "HAILEY FB3 deep-concave maple deck."
+        },
+        {
+          "id": 1029713000018203,
+          "product_id": 10297130000182,
+          "position": 2,
+          "src": "/products/gallery-811409473006-33288281.jpg",
+          "width": 800,
+          "height": 800,
+          "alt": "FB3 bare 34mm deck."
+        },
+        {
+          "id": 1029713000018204,
+          "product_id": 10297130000182,
+          "position": 3,
+          "src": "/products/gallery-811409473006-7262882.jpg",
+          "width": 800,
+          "height": 800,
+          "alt": "FB3 standard kit with trucks and wheels."
+        },
+        {
+          "id": 1029713000018205,
+          "product_id": 10297130000182,
+          "position": 4,
+          "src": "/products/gallery-811409473006-9751351.jpg",
+          "width": 800,
+          "height": 800,
+          "alt": "FB3 premium kit with upgraded hardware."
+        }
+      ],
+      "image": {
+        "id": 1029713000018202,
+        "product_id": 10297130000182,
+        "position": 1,
+        "src": "/products/primary-10297130000182-b5.jpg",
+        "width": 800,
+        "height": 800,
+        "alt": "HAILEY FB3 deep-concave maple deck."
+      },
+      "seo_title": "HAILEY FB3 34mm Deck — Deep Concave",
+      "seo_description": "HAILEY FB3 deep-concave 34mm maple deck — bare, standard kit or premium kit."
     }
   ]
 }
