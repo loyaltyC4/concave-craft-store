@@ -37934,7 +37934,7 @@
       "body_html": "<p>HAILEY's RAZOR pro build: a pressed maple double-kick deck under the egg-style Razor graphic, shipped as a full setup on gold bearing trucks with white wheels. Truck and wheel colours are selectable at checkout — note your pick in the order comments and the workshop builds it that way.</p><p><strong>Why this one</strong></p><ul><li>Pressed maple deck with double kicks — real pop for flip tricks, not a printed blank</li><li>Bearing trucks and white wheels fitted; truck/wheel colours selectable at checkout</li><li>The step up from HAILEY's grain-finish complete we also stock — stiffer deck, sharper graphic</li><li>Beginner-friendly wide shape that experienced riders still enjoy for tech lines</li></ul><p><strong>Specifications</strong></p><table><tbody><tr><td><strong>Brand</strong></td><td>HAILEY</td></tr><tr><td><strong>Deck</strong></td><td>Pressed maple, double kick, wide shape</td></tr><tr><td><strong>Setup</strong></td><td>Bearing trucks, white wheels, grip applied</td></tr><tr><td><strong>Custom</strong></td><td>Truck &amp; wheel colours selectable at checkout</td></tr></tbody></table><p><strong>Who it suits</strong></p><p>Riders who want a ready-to-skate maple complete with a personality graphic and the option to colour-match their setup.</p><em>Ships directly from our supplier workshop with tracking, arriving in 7–14 business days. Prices in USD; shipping is free on orders over $50. 30-day returns if it is not right for you.</em>",
       "handle": "hailey-razor-maple-fingerboard-complete",
       "created_at": "2026-10-31T17:05:00+02:00",
-      "updated_at": "2026-10-31T17:05:00+02:00",
+      "updated_at": "2026-10-31T18:20:00+02:00",
       "published_at": "2026-10-31T17:05:00+02:00",
       "status": "active",
       "published_scope": "web",
@@ -37974,9 +37974,18 @@
       ],
       "images": [
         {
-          "id": 1029713000012102,
+          "id": 1029713000012109,
           "product_id": 10297130000121,
           "position": 1,
+          "src": "/products/gallery-799102393704_main.jpg",
+          "width": 800,
+          "height": 800,
+          "alt": "HAILEY Razor complete fingerboards in yellow and orange egg-style graphics."
+        },
+        {
+          "id": 1029713000012102,
+          "product_id": 10297130000121,
+          "position": 2,
           "src": "/products/primary-10297130000121-nb.jpg",
           "width": 800,
           "height": 800,
@@ -37985,7 +37994,7 @@
         {
           "id": 1029713000012103,
           "product_id": 10297130000121,
-          "position": 2,
+          "position": 3,
           "src": "/products/gallery-799102393704_pic3.jpg",
           "width": 800,
           "height": 800,
@@ -37993,16 +38002,421 @@
         }
       ],
       "image": {
-        "id": 1029713000012102,
+        "id": 1029713000012109,
         "product_id": 10297130000121,
         "position": 1,
-        "src": "/products/primary-10297130000121-nb.jpg",
+        "src": "/products/gallery-799102393704_main.jpg",
         "width": 800,
         "height": 800,
-        "alt": "Top-down view of the HAILEY Razor deck graphic in yellow with egg-style artwork."
+        "alt": "HAILEY Razor complete fingerboards in yellow and orange egg-style graphics."
       },
       "seo_title": "HAILEY Razor Maple Fingerboard Complete",
       "seo_description": "HAILEY RAZOR maple double-kick complete on bearing trucks — truck and wheel colours selectable at checkout."
+    },
+    {
+      "id": 10297130000122,
+      "title": "HAILEY PORK Series Fingerboard Complete",
+      "body_html": "<p>The PORK series is HAILEY's fun line: full pro-level completes wearing cartoon pork graphics. Four colourways — Black PORK, Yellow PORK, Pink PORK and the HALEY signature — each on 34mm decks with double-axis trucks, photo-linked at the variant picker.</p><p><strong>Why this one</strong></p><ul><li>Full completes on 34mm decks with double-axis trucks — proper turning, real stability</li><li>Four loud colourways; each picker option is linked to that board's photo</li><li>Same workshop quality as HAILEY's RAZOR pro build in a softer price band</li><li>A favourite first 'real' fingerboard that stays fun to ride</li></ul><p><strong>Specifications</strong></p><table><tbody><tr><td><strong>Brand</strong></td><td>HAILEY</td></tr><tr><td><strong>Series</strong></td><td>PORK</td></tr><tr><td><strong>Width</strong></td><td>34mm, double-axis trucks</td></tr><tr><td><strong>Colourways</strong></td><td>Black / Yellow / Pink PORK, HALEY signature</td></tr></tbody></table><p><strong>Who it suits</strong></p><p>Riders who want a pro-spec complete that doesn't take itself too seriously — and gift buyers after a board with personality.</p><em>Ships directly from our supplier workshop with tracking, arriving in 7–14 business days. Prices in USD; shipping is free on orders over $50. 30-day returns if it is not right for you.</em>",
+      "handle": "hailey-pork-series-fingerboard-complete",
+      "created_at": "2026-10-31T18:20:00+02:00",
+      "updated_at": "2026-10-31T18:20:00+02:00",
+      "published_at": "2026-10-31T18:20:00+02:00",
+      "status": "active",
+      "published_scope": "web",
+      "template_suffix": null,
+      "tags": "HAILEY, pork series, complete, 34mm, double axis trucks, colourway, cartoon graphic",
+      "product_type": "Complete Fingerboards",
+      "vendor": "Fingerboard Lab",
+      "variants": [
+        {
+          "id": 92000000010802,
+          "product_id": 10297130000122,
+          "title": "Black PORK",
+          "price": "40.95",
+          "compare_at_price": null,
+          "position": 1,
+          "option1": "Black PORK",
+          "inventory_policy": "continue",
+          "taxable": false,
+          "sku": "FL-10297130000122-BLACK",
+          "requires_shipping": true,
+          "available": true,
+          "inventory_quantity": 10,
+          "weight": 0.08,
+          "weight_unit": "kg",
+          "image_id": 1029713000012205
+        },
+        {
+          "id": 92000000010803,
+          "product_id": 10297130000122,
+          "title": "Yellow PORK",
+          "price": "40.95",
+          "compare_at_price": null,
+          "position": 2,
+          "option1": "Yellow PORK",
+          "inventory_policy": "continue",
+          "taxable": false,
+          "sku": "FL-10297130000122-YELLOW",
+          "requires_shipping": true,
+          "available": true,
+          "inventory_quantity": 10,
+          "weight": 0.08,
+          "weight_unit": "kg",
+          "image_id": 1029713000012202
+        },
+        {
+          "id": 92000000010804,
+          "product_id": 10297130000122,
+          "title": "Pink PORK",
+          "price": "40.95",
+          "compare_at_price": null,
+          "position": 3,
+          "option1": "Pink PORK",
+          "inventory_policy": "continue",
+          "taxable": false,
+          "sku": "FL-10297130000122-PINK",
+          "requires_shipping": true,
+          "available": true,
+          "inventory_quantity": 10,
+          "weight": 0.08,
+          "weight_unit": "kg",
+          "image_id": 1029713000012203
+        },
+        {
+          "id": 92000000010805,
+          "product_id": 10297130000122,
+          "title": "HALEY",
+          "price": "40.95",
+          "compare_at_price": null,
+          "position": 4,
+          "option1": "HALEY",
+          "inventory_policy": "continue",
+          "taxable": false,
+          "sku": "FL-10297130000122-HALEY",
+          "requires_shipping": true,
+          "available": true,
+          "inventory_quantity": 10,
+          "weight": 0.08,
+          "weight_unit": "kg",
+          "image_id": 1029713000012204
+        }
+      ],
+      "options": [
+        {
+          "id": 102971300001220,
+          "product_id": 10297130000122,
+          "name": "Colourway",
+          "position": 1,
+          "values": [
+            "Black PORK",
+            "Yellow PORK",
+            "Pink PORK",
+            "HALEY"
+          ]
+        }
+      ],
+      "images": [
+        {
+          "id": 1029713000012202,
+          "product_id": 10297130000122,
+          "position": 1,
+          "src": "/products/primary-10297130000122-nb.jpg",
+          "width": 800,
+          "height": 800,
+          "alt": "HAILEY PORK series completes in black and yellow with cartoon pork graphics."
+        },
+        {
+          "id": 1029713000012203,
+          "product_id": 10297130000122,
+          "position": 2,
+          "src": "/products/gallery-920585629102_prop1627207_38228366094.jpg",
+          "width": 800,
+          "height": 800,
+          "alt": "Pink PORK complete with pig graphic and blue backdrop."
+        },
+        {
+          "id": 1029713000012204,
+          "product_id": 10297130000122,
+          "position": 3,
+          "src": "/products/gallery-920585629102_prop1627207_38228366095.jpg",
+          "width": 800,
+          "height": 800,
+          "alt": "HALEY signature PORK series complete."
+        },
+        {
+          "id": 1029713000012205,
+          "product_id": 10297130000122,
+          "position": 4,
+          "src": "/products/gallery-920585629102_prop1627207_38228366092.jpg",
+          "width": 800,
+          "height": 800,
+          "alt": "Black PORK kit laid out: deck, grip, trucks, wheels and tools."
+        },
+        {
+          "id": 1029713000012206,
+          "product_id": 10297130000122,
+          "position": 5,
+          "src": "/products/gallery-920585629102_pic1.jpg",
+          "width": 800,
+          "height": 800,
+          "alt": "Three PORK colourways lined up: pink, yellow and more."
+        },
+        {
+          "id": 1029713000012207,
+          "product_id": 10297130000122,
+          "position": 6,
+          "src": "/products/gallery-920585629102_pic2.jpg",
+          "width": 800,
+          "height": 800,
+          "alt": "Three PORK completes showing the graphic differences."
+        },
+        {
+          "id": 1029713000012208,
+          "product_id": 10297130000122,
+          "position": 7,
+          "src": "/products/gallery-920585629102_pic4.jpg",
+          "width": 800,
+          "height": 800,
+          "alt": "Three PORK decks held in hand for scale."
+        }
+      ],
+      "image": {
+        "id": 1029713000012202,
+        "product_id": 10297130000122,
+        "position": 1,
+        "src": "/products/primary-10297130000122-nb.jpg",
+        "width": 800,
+        "height": 800,
+        "alt": "HAILEY PORK series completes in black and yellow with cartoon pork graphics."
+      },
+      "seo_title": "HAILEY PORK Series Fingerboard Complete",
+      "seo_description": "HAILEY PORK series completes in black, yellow, pink and the HALEY signature — 34mm decks on double-axis trucks."
+    },
+    {
+      "id": 10297130000123,
+      "title": "Martlet 34mm Maple Complete — Six Graphics",
+      "body_html": "<p>Martlet's 34mm Canadian maple wide deck with single-axis PU trucks, offered in all six current graphics: Pickle, Bottled Rose, Lucky Rabbits, Cat &amp; Taiyaki, Moonlit Deer and Spirits. Each variant is linked to its own photo — the board in the picture is the board in the box.</p><p><strong>Why this one</strong></p><ul><li>Canadian maple 97×34mm wide deck — the stable platform from Martlet's current line</li><li>Single-axis PU trucks tuned for smooth carves at fingerboard scale</li><li>Six graphics with photo-linked variants; wheel colours swappable on request (note at checkout)</li><li>Same brand as our 32mm entry complete — this is the wide-deck step up</li></ul><p><strong>Specifications</strong></p><table><tbody><tr><td><strong>Brand</strong></td><td>Martlet</td></tr><tr><td><strong>Deck</strong></td><td>Canadian maple, 97 × 34mm, wide shape</td></tr><tr><td><strong>Trucks</strong></td><td>32mm conical single-axis PU</td></tr><tr><td><strong>Graphics</strong></td><td>Pickle / Bottled Rose / Lucky Rabbits / Cat &amp; Taiyaki / Moonlit Deer / Spirits</td></tr></tbody></table><p><strong>Who it suits</strong></p><p>Riders graduating from an entry board who want artwork with character on a wider, more stable deck.</p><em>Ships directly from our supplier workshop with tracking, arriving in 7–14 business days. Prices in USD; shipping is free on orders over $50. 30-day returns if it is not right for you.</em>",
+      "handle": "martlet-34mm-maple-complete-six-graphics",
+      "created_at": "2026-10-31T18:20:00+02:00",
+      "updated_at": "2026-10-31T18:20:00+02:00",
+      "published_at": "2026-10-31T18:20:00+02:00",
+      "status": "active",
+      "published_scope": "web",
+      "template_suffix": null,
+      "tags": "Martlet, 34mm, canadian maple, wide deck, single axis trucks, graphics, complete",
+      "product_type": "Complete Fingerboards",
+      "vendor": "Fingerboard Lab",
+      "variants": [
+        {
+          "id": 92000000010806,
+          "product_id": 10297130000123,
+          "title": "Pickle",
+          "price": "34.95",
+          "compare_at_price": null,
+          "position": 1,
+          "option1": "Pickle",
+          "inventory_policy": "continue",
+          "taxable": false,
+          "sku": "FL-10297130000123-PICKLE",
+          "requires_shipping": true,
+          "available": true,
+          "inventory_quantity": 10,
+          "weight": 0.08,
+          "weight_unit": "kg",
+          "image_id": 1029713000012303
+        },
+        {
+          "id": 92000000010807,
+          "product_id": 10297130000123,
+          "title": "Bottled Rose",
+          "price": "34.95",
+          "compare_at_price": null,
+          "position": 2,
+          "option1": "Bottled Rose",
+          "inventory_policy": "continue",
+          "taxable": false,
+          "sku": "FL-10297130000123-BOTTLED",
+          "requires_shipping": true,
+          "available": true,
+          "inventory_quantity": 10,
+          "weight": 0.08,
+          "weight_unit": "kg",
+          "image_id": 1029713000012304
+        },
+        {
+          "id": 92000000010808,
+          "product_id": 10297130000123,
+          "title": "Lucky Rabbits",
+          "price": "34.95",
+          "compare_at_price": null,
+          "position": 3,
+          "option1": "Lucky Rabbits",
+          "inventory_policy": "continue",
+          "taxable": false,
+          "sku": "FL-10297130000123-LUCKY",
+          "requires_shipping": true,
+          "available": true,
+          "inventory_quantity": 10,
+          "weight": 0.08,
+          "weight_unit": "kg",
+          "image_id": 1029713000012305
+        },
+        {
+          "id": 92000000010809,
+          "product_id": 10297130000123,
+          "title": "Cat & Taiyaki",
+          "price": "34.95",
+          "compare_at_price": null,
+          "position": 4,
+          "option1": "Cat & Taiyaki",
+          "inventory_policy": "continue",
+          "taxable": false,
+          "sku": "FL-10297130000123-CAT",
+          "requires_shipping": true,
+          "available": true,
+          "inventory_quantity": 10,
+          "weight": 0.08,
+          "weight_unit": "kg",
+          "image_id": 1029713000012306
+        },
+        {
+          "id": 92000000010810,
+          "product_id": 10297130000123,
+          "title": "Moonlit Deer",
+          "price": "34.95",
+          "compare_at_price": null,
+          "position": 5,
+          "option1": "Moonlit Deer",
+          "inventory_policy": "continue",
+          "taxable": false,
+          "sku": "FL-10297130000123-MOONLIT",
+          "requires_shipping": true,
+          "available": true,
+          "inventory_quantity": 10,
+          "weight": 0.08,
+          "weight_unit": "kg",
+          "image_id": 1029713000012307
+        },
+        {
+          "id": 92000000010811,
+          "product_id": 10297130000123,
+          "title": "Spirits",
+          "price": "34.95",
+          "compare_at_price": null,
+          "position": 6,
+          "option1": "Spirits",
+          "inventory_policy": "continue",
+          "taxable": false,
+          "sku": "FL-10297130000123-SPIRITS",
+          "requires_shipping": true,
+          "available": true,
+          "inventory_quantity": 10,
+          "weight": 0.08,
+          "weight_unit": "kg",
+          "image_id": 1029713000012308
+        }
+      ],
+      "options": [
+        {
+          "id": 102971300001230,
+          "product_id": 10297130000123,
+          "name": "Graphic",
+          "position": 1,
+          "values": [
+            "Pickle",
+            "Bottled Rose",
+            "Lucky Rabbits",
+            "Cat & Taiyaki",
+            "Moonlit Deer",
+            "Spirits"
+          ]
+        }
+      ],
+      "images": [
+        {
+          "id": 1029713000012302,
+          "product_id": 10297130000123,
+          "position": 1,
+          "src": "/products/primary-10297130000123-nb.jpg",
+          "width": 800,
+          "height": 800,
+          "alt": "Martlet 34mm maple complete with the pickle-character deck graphic and white wheels."
+        },
+        {
+          "id": 1029713000012303,
+          "product_id": 10297130000123,
+          "position": 2,
+          "src": "/products/gallery-710405181776_prop1627207_12927571.jpg",
+          "width": 800,
+          "height": 800,
+          "alt": "Pickle graphic Martlet 34mm complete with white wheels."
+        },
+        {
+          "id": 1029713000012304,
+          "product_id": 10297130000123,
+          "position": 3,
+          "src": "/products/gallery-710405181776_prop1627207_16909142.jpg",
+          "width": 800,
+          "height": 800,
+          "alt": "Bottled Rose graphic Martlet 34mm complete with translucent wheels."
+        },
+        {
+          "id": 1029713000012305,
+          "product_id": 10297130000123,
+          "position": 4,
+          "src": "/products/gallery-710405181776_prop1627207_21347425485.jpg",
+          "width": 800,
+          "height": 800,
+          "alt": "Lucky Rabbits graphic Martlet 34mm complete with yellow wheels."
+        },
+        {
+          "id": 1029713000012306,
+          "product_id": 10297130000123,
+          "position": 5,
+          "src": "/products/gallery-710405181776_prop1627207_49901812.jpg",
+          "width": 800,
+          "height": 800,
+          "alt": "Cat & Taiyaki graphic Martlet 34mm complete with yellow wheels."
+        },
+        {
+          "id": 1029713000012307,
+          "product_id": 10297130000123,
+          "position": 6,
+          "src": "/products/gallery-710405181776_prop1627207_934488985.jpg",
+          "width": 800,
+          "height": 800,
+          "alt": "Moonlit Deer graphic Martlet 34mm complete with clear wheels."
+        },
+        {
+          "id": 1029713000012308,
+          "product_id": 10297130000123,
+          "position": 7,
+          "src": "/products/gallery-710405181776_prop1627207_18445574.jpg",
+          "width": 800,
+          "height": 800,
+          "alt": "Spirits graphic Martlet 34mm complete with black wheels."
+        },
+        {
+          "id": 1029713000012309,
+          "product_id": 10297130000123,
+          "position": 8,
+          "src": "/products/gallery-710405181776_pic3.jpg",
+          "width": 800,
+          "height": 800,
+          "alt": "Cat & Taiyaki deck in detail with yellow wheels."
+        }
+      ],
+      "image": {
+        "id": 1029713000012302,
+        "product_id": 10297130000123,
+        "position": 1,
+        "src": "/products/primary-10297130000123-nb.jpg",
+        "width": 800,
+        "height": 800,
+        "alt": "Martlet 34mm maple complete with the pickle-character deck graphic and white wheels."
+      },
+      "seo_title": "Martlet 34mm Maple Complete — Six Graphics",
+      "seo_description": "Martlet 34mm Canadian maple completes in six photo-linked graphics — Pickle, Rose, Rabbits, Cat, Deer, Spirits."
     }
   ]
 }
