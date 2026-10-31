@@ -214,8 +214,16 @@ const variantIndex = new Map<
   { product: Product; variant: Product["variants"][number] }
 >();
 for (const p of allProducts) {
-  for (const v of p.variants)
+  for (const v of p.variants) {
+    // A reused variant id makes checkout charge for the wrong product, so
+    // fail the build instead of silently letting the last listing win.
+    const clash = variantIndex.get(v.id);
+    if (clash)
+      throw new Error(
+        `Duplicate variant id ${v.id} in ${clash.product.handle} and ${p.handle}`,
+      );
     variantIndex.set(v.id, { product: p, variant: v });
+  }
 }
 
 export function staticGetVariant(id: string) {
