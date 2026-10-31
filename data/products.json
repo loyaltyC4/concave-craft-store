@@ -30432,12 +30432,12 @@
     {
       "id": 10297129140570,
       "title": "Fingerboard Deck Press Mold with Metal Alignment Pins",
-      "body_html": "<p>The metal alignment pins are the detail that separates this mold from cheaper alternatives: they locate the top and bottom mold halves in exactly the same position every single press, so your concave shape is reproduced faithfully rather than shifting slightly each time. For anyone who has pressed a few decks on a mold without pins and wondered why two boards from the same session feel different, this is the fix.</p><p><strong>Why this one</strong></p><ul><li>Metal alignment pins register the mold halves positionally — every press lands in the same geometry, removing the most common source of inconsistency for builders</li><li>Designed as a fingerboard-specific press form to shape glued maple plies into a deck with concave and kicks in a single clamping session</li><li>Solid mold construction built to handle repeated clamping pressure across many pressing sessions</li><li>No woodworking machinery required — glue your veneer plies, load the mold, apply clamp pressure, and release once cured</li><li>Works with standard maple veneer blanks available separately in the store</li></ul><p><strong>Specifications</strong></p><table><tbody><tr><td><strong>Type</strong></td><td>Fingerboard deck press mold</td></tr><tr><td><strong>Alignment</strong></td><td>Metal pins</td></tr><tr><td><strong>Pack size</strong></td><td>1 mold</td></tr></tbody></table><p><strong>Who it suits</strong></p><p>Builders who are pressing multiple decks and want each one to come out the same shape. The alignment pins make this a better starting point than an unregistered mold if consistency matters to you — whether you are building for yourself or for others. Read our deck-pressing guide before your first press if this is your first mold.</p><p><em>Ships directly from our supplier workshop with tracking, arriving in 7–14 business days. Prices in USD; shipping is free on orders over $50. 30-day returns if it is not right for you.</em></p>",
+      "body_html": "<p>The metal alignment pins are the detail that separates this mold from cheaper alternatives: they locate the top and bottom mold halves in exactly the same position every single press, so your concave shape is reproduced faithfully rather than shifting slightly each time. For anyone who has pressed a few decks on a mold without pins and wondered why two boards from the same session feel different, this is the fix.</p><p><strong>Why this one</strong></p><ul><li>Metal alignment pins register the mold halves positionally — every press lands in the same geometry, removing the most common source of inconsistency for builders</li><li>Designed as a fingerboard-specific press form to shape glued maple plies into a deck with concave and kicks in a single clamping session</li><li>Solid mold construction built to handle repeated clamping pressure across many pressing sessions</li><li>No woodworking machinery required — glue your veneer plies, load the mold, apply clamp pressure, and release once cured</li><li>Works with standard maple veneer blanks available separately in the store</li></ul><p><strong>Specifications</strong></p><table><tbody><tr><td><strong>Type</strong></td><td>Fingerboard deck press mold</td></tr><tr><td><strong>Alignment</strong></td><td>Metal pins</td></tr><tr><td><strong>Pack size</strong></td><td>1 mold</td></tr><tr><td><strong>Kits</strong></td><td>Mold + 33/34/36mm scribe, or all three scribes</td></tr></tbody></table><p><strong>Who it suits</strong></p><p>Builders who are pressing multiple decks and want each one to come out the same shape. The alignment pins make this a better starting point than an unregistered mold if consistency matters to you — whether you are building for yourself or for others. Read our deck-pressing guide before your first press if this is your first mold.</p><p><em>Ships directly from our supplier workshop with tracking, arriving in 7–14 business days. Prices in USD; shipping is free on orders over $50. 30-day returns if it is not right for you.</em></p>",
       "vendor": "Fingerboard Lab",
       "product_type": "Deck Building & Molds",
       "handle": "fingerboard-deck-press-mold-with-metal-alignment-pins",
       "created_at": "2026-08-07T15:00:00+02:00",
-      "updated_at": "2026-08-07T15:00:00+02:00",
+      "updated_at": "2026-11-01T16:30:00+02:00",
       "published_at": "2026-08-07T15:00:00+02:00",
       "template_suffix": null,
       "published_scope": "web",
@@ -30447,30 +30447,89 @@
       "seo_description": "Fingerboard press mold with metal alignment pins for consistent concave reproduction. Shapes glued maple plies into a deck — no machinery required.",
       "variants": [
         {
-          "id": 52930359165275,
+          "id": 92000000011301,
           "product_id": 10297129140570,
-          "title": "Default Title",
+          "title": "Mold + 33mm scribe",
           "price": "104.95",
           "compare_at_price": null,
           "position": 1,
-          "option1": "Default Title",
+          "option1": "Mold + 33mm scribe",
           "inventory_policy": "continue",
           "taxable": false,
-          "sku": "FL-10297129140570",
+          "sku": "FL-10297129140570-02",
           "requires_shipping": true,
           "available": true,
           "inventory_quantity": 8,
-          "weight": 1.0,
-          "weight_unit": "kg"
+          "weight": 0.5,
+          "weight_unit": "kg",
+          "image_id": 1029712914057080
+        },
+        {
+          "id": 92000000011302,
+          "product_id": 10297129140570,
+          "title": "Mold + 34mm scribe",
+          "price": "104.95",
+          "compare_at_price": null,
+          "position": 2,
+          "option1": "Mold + 34mm scribe",
+          "inventory_policy": "continue",
+          "taxable": false,
+          "sku": "FL-10297129140570-03",
+          "requires_shipping": true,
+          "available": true,
+          "inventory_quantity": 8,
+          "weight": 0.5,
+          "weight_unit": "kg",
+          "image_id": 1029712914057081
+        },
+        {
+          "id": 92000000011303,
+          "product_id": 10297129140570,
+          "title": "Mold + 36mm scribe",
+          "price": "104.95",
+          "compare_at_price": null,
+          "position": 3,
+          "option1": "Mold + 36mm scribe",
+          "inventory_policy": "continue",
+          "taxable": false,
+          "sku": "FL-10297129140570-04",
+          "requires_shipping": true,
+          "available": true,
+          "inventory_quantity": 8,
+          "weight": 0.5,
+          "weight_unit": "kg",
+          "image_id": 1029712914057082
+        },
+        {
+          "id": 92000000011304,
+          "product_id": 10297129140570,
+          "title": "Mold + all three scribes",
+          "price": "169.95",
+          "compare_at_price": null,
+          "position": 4,
+          "option1": "Mold + all three scribes",
+          "inventory_policy": "continue",
+          "taxable": false,
+          "sku": "FL-10297129140570-05",
+          "requires_shipping": true,
+          "available": true,
+          "inventory_quantity": 8,
+          "weight": 0.5,
+          "weight_unit": "kg",
+          "image_id": 1029712914057083
         }
       ],
       "options": [
         {
           "id": 102971291405700,
-          "name": "Option",
+          "product_id": 10297129140570,
+          "name": "Kit",
           "position": 1,
           "values": [
-            "Default Title"
+            "Mold + 33mm scribe",
+            "Mold + 34mm scribe",
+            "Mold + 36mm scribe",
+            "Mold + all three scribes"
           ]
         }
       ],
@@ -30510,6 +30569,42 @@
           "width": 1000,
           "height": 689,
           "alt": "Bright green plastic fingerboard mold press holding a wooden deck with a red Baker logo graphic."
+        },
+        {
+          "id": 1029712914057080,
+          "product_id": 10297129140570,
+          "position": 5,
+          "src": "/products/gallery-10297129140570-sku-23528923302.jpg",
+          "width": 800,
+          "height": 800,
+          "alt": "Mold + 33mm scribe — press mold with metal alignment pins."
+        },
+        {
+          "id": 1029712914057081,
+          "product_id": 10297129140570,
+          "position": 6,
+          "src": "/products/gallery-10297129140570-sku-23528923303.jpg",
+          "width": 800,
+          "height": 800,
+          "alt": "Mold + 34mm scribe — press mold with metal alignment pins."
+        },
+        {
+          "id": 1029712914057082,
+          "product_id": 10297129140570,
+          "position": 7,
+          "src": "/products/gallery-10297129140570-sku-23528923304.jpg",
+          "width": 800,
+          "height": 800,
+          "alt": "Mold + 36mm scribe — press mold with metal alignment pins."
+        },
+        {
+          "id": 1029712914057083,
+          "product_id": 10297129140570,
+          "position": 8,
+          "src": "/products/gallery-10297129140570-sku-23528923305.jpg",
+          "width": 800,
+          "height": 800,
+          "alt": "Mold + all three scribes — press mold with metal alignment pins."
         }
       ],
       "image": {
@@ -30519,7 +30614,7 @@
         "src": "/products/primary-10297129140570-cleaned.jpg",
         "width": 1000,
         "height": 750,
-        "alt": "Fingerboard Deck Press Mold with Metal Alignment Pins — Fingerboard Lab"
+        "alt": "Blue plastic fingerboard mold press components with engraved text and alignment pins."
       }
     },
     {
@@ -31196,7 +31291,7 @@
       "product_type": "Deck Building & Molds",
       "handle": "bh25-high-concave-fingerboard-mold-diy-construction",
       "created_at": "2026-04-05T12:44:06+02:00",
-      "updated_at": "2026-08-07T10:00:00+02:00",
+      "updated_at": "2026-11-01T16:30:00+02:00",
       "published_at": "2026-04-05T12:44:06+02:00",
       "template_suffix": null,
       "published_scope": "web",
@@ -31209,7 +31304,7 @@
           "id": 52930357887298,
           "product_id": 10286631321922,
           "title": "Default Title",
-          "price": "139.95",
+          "price": "181.25",
           "compare_at_price": null,
           "position": 1,
           "inventory_policy": "continue",
@@ -31873,7 +31968,7 @@
       "product_type": "Deck Building & Molds",
       "handle": "bh25-pro-metal-concave-fingerboard-mold",
       "created_at": "2026-03-23T22:18:52+02:00",
-      "updated_at": "2026-08-07T10:00:00+02:00",
+      "updated_at": "2026-11-01T16:30:00+02:00",
       "published_at": "2026-03-23T22:18:56+02:00",
       "template_suffix": null,
       "published_scope": "web",
@@ -31886,7 +31981,7 @@
           "id": 52930357854530,
           "product_id": 10276300128578,
           "title": "Default Title",
-          "price": "199.00",
+          "price": "286.25",
           "compare_at_price": null,
           "position": 1,
           "inventory_policy": "continue",
