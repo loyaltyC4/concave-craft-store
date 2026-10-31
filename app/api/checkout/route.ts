@@ -7,7 +7,14 @@ import { SHIP_COUNTRIES } from "lib/shipping";
 
 export const dynamic = "force-dynamic";
 
-type IncomingLine = { merchandiseId?: string; quantity?: number };
+type IncomingLine = {
+  merchandiseId?: string;
+  quantity?: number;
+  // What the shopper's saved cart shows. Carts live in localStorage, so a
+  // listing can be repriced or deleted after it was added.
+  price?: string | number;
+  handle?: string;
+};
 
 const ALLOWED_COUNTRIES = SHIP_COUNTRIES;
 
@@ -51,10 +58,19 @@ export async function POST(req: NextRequest) {
     };
   }[] = [];
 
+  // Lines whose listing no longer exists, and lines whose price changed since
+  // they were added. Either way the shopper must see it before paying, never
+  // a silently different total on the Stripe page.
+  const removed: string[] = [];
+  const changed: { merchandiseId: string; price: string }[] = [];
+
   for (const l of lines) {
     if (!l.merchandiseId) continue;
     const found = staticGetVariant(l.merchandiseId);
-    if (!found) continue;
+    if (!found || (l.handle && found.product.handle !== l.handle)) {
+      removed.push(l.merchandiseId);
+      continue;
+    }
     const { product, variant } = found;
     // Never take payment for a sold-out variant.
     if (!variant.availableForSale) {
@@ -65,6 +81,15 @@ export async function POST(req: NextRequest) {
     }
     const unit_amount = Math.round(parseFloat(variant.price.amount) * 100);
     if (!unit_amount || unit_amount < 0) continue;
+    if (
+      l.price != null &&
+      Math.round(parseFloat(String(l.price)) * 100) !== unit_amount
+    ) {
+      changed.push({
+        merchandiseId: l.merchandiseId,
+        price: variant.price.amount,
+      });
+    }
     const name =
       product.title +
       (variant.title && variant.title !== "Default Title"
@@ -90,6 +115,20 @@ export async function POST(req: NextRequest) {
         },
       },
     });
+  }
+
+  if (removed.length || changed.length) {
+    return NextResponse.json(
+      {
+        error: "cart_changed",
+        removed,
+        changed,
+        message: removed.length
+          ? "An item in your cart is no longer available, so we removed it. Please review your cart."
+          : "A price in your cart has changed. Please review the new total.",
+      },
+      { status: 409 },
+    );
   }
 
   if (!line_items.length) {

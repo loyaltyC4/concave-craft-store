@@ -27,12 +27,25 @@ type CartAction =
       payload: { variant: ProductVariant; product: Product };
     }
   | { type: "SET_CART"; payload: Cart }
+  | {
+      type: "RECONCILE";
+      payload: {
+        removed: string[];
+        changed: { merchandiseId: string; price: string }[];
+      };
+    }
   | { type: "CLEAR" };
 
 type CartContextType = {
   cart: Cart;
   addCartItem: (variant: ProductVariant, product: Product) => void;
   updateCartItem: (merchandiseId: string, updateType: UpdateType) => void;
+  // Applies the server's view of a stale saved cart: drops lines that no
+  // longer exist and reprices lines whose price changed.
+  reconcileCart: (
+    removed: string[],
+    changed: { merchandiseId: string; price: string }[],
+  ) => void;
   clearCart: () => void;
 };
 
@@ -145,6 +158,34 @@ function cartReducer(state: Cart, action: CartAction): Cart {
       return action.payload;
     case "CLEAR":
       return createEmptyCart();
+    case "RECONCILE": {
+      const { removed, changed } = action.payload;
+      const updatedLines = currentCart.lines
+        .filter((item) => !removed.includes(item.merchandise.id))
+        .map((item) => {
+          const c = changed.find((x) => x.merchandiseId === item.merchandise.id);
+          if (!c) return item;
+          return {
+            ...item,
+            cost: {
+              totalAmount: {
+                ...item.cost.totalAmount,
+                amount: calculateItemCost(item.quantity, c.price),
+              },
+            },
+          };
+        });
+
+      if (updatedLines.length === 0) {
+        return createEmptyCart();
+      }
+
+      return {
+        ...currentCart,
+        ...updateCartTotals(updatedLines),
+        lines: updatedLines,
+      };
+    }
     case "UPDATE_ITEM": {
       const { merchandiseId, updateType } = action.payload;
       const updatedLines = currentCart.lines
@@ -230,11 +271,18 @@ export function CartProvider({ children }: { children: React.ReactNode }) {
       dispatch({ type: "UPDATE_ITEM", payload: { merchandiseId, updateType } }),
     [],
   );
+  const reconcileCart = useCallback(
+    (
+      removed: string[],
+      changed: { merchandiseId: string; price: string }[],
+    ) => dispatch({ type: "RECONCILE", payload: { removed, changed } }),
+    [],
+  );
   const clearCart = useCallback(() => dispatch({ type: "CLEAR" }), []);
 
   const value = useMemo(
-    () => ({ cart, addCartItem, updateCartItem, clearCart }),
-    [cart, addCartItem, updateCartItem, clearCart],
+    () => ({ cart, addCartItem, updateCartItem, reconcileCart, clearCart }),
+    [cart, addCartItem, updateCartItem, reconcileCart, clearCart],
   );
 
   return <CartContext.Provider value={value}>{children}</CartContext.Provider>;

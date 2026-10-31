@@ -37,7 +37,7 @@ function isExternal(src: string) {
 }
 
 export default function CartModal() {
-  const { cart, updateCartItem } = useCart();
+  const { cart, updateCartItem, reconcileCart } = useCart();
   const [isOpen, setIsOpen] = useState(false);
   const [loading, setLoading] = useState(false);
   const quantityRef = useRef(cart?.totalQuantity);
@@ -82,6 +82,11 @@ export default function CartModal() {
           lines: cart.lines.map((l) => ({
             merchandiseId: l.merchandise.id,
             quantity: l.quantity,
+            handle: l.merchandise.product.handle,
+            price:
+              l.quantity > 0
+                ? (Number(l.cost.totalAmount.amount) / l.quantity).toFixed(2)
+                : l.cost.totalAmount.amount,
           })),
         }),
       });
@@ -90,7 +95,15 @@ export default function CartModal() {
         window.location.href = data.url;
         return;
       }
-      if (res.status === 503) {
+      if (res.status === 409 && data?.error === "cart_changed") {
+        reconcileCart(data.removed ?? [], data.changed ?? []);
+        toast.error("Your cart was updated", { description: data.message });
+      } else if (res.status === 409 && data?.error === "sold_out") {
+        reconcileCart([data.merchandiseId], []);
+        toast.error("An item just sold out", {
+          description: "We removed it from your cart. Please review your cart.",
+        });
+      } else if (res.status === 503) {
         toast.error("Checkout isn't live yet", {
           description:
             "Add your Stripe key to enable card payments (see setup notes).",
