@@ -81,6 +81,31 @@ export default {
         permanent: true,
       },
       {
+        source: "/product/34mm-cnc-setup-complete-sol",
+        destination: "/search/completes",
+        permanent: true,
+      },
+      {
+        source: "/product/maple-alloy-fingerboard-complete-bearing-trucks-2-pack",
+        destination: "/search/completes",
+        permanent: true,
+      },
+      {
+        source: "/product/32mm-fingerboard-complete-deep-concave-alloy-trucks-bearings",
+        destination: "/search/completes",
+        permanent: true,
+      },
+      {
+        source: "/product/34mm-cnc-setup-complete-beach",
+        destination: "/product/34mm-cnc-setup-complete-beach-skeleton",
+        permanent: true,
+      },
+      {
+        source: "/product/34mm-cnc-setup-complete-girl",
+        destination: "/product/34mm-cnc-setup-complete-statue-of-liberty",
+        permanent: true,
+      },
+      {
         // Deleted listings (2026-10-20): send old links to the completes collection, not a 404.
         source: "/product/wp-dyed-series-fingerboard-complete-handmade-maple",
         destination: "/search/completes",
