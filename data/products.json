@@ -36835,7 +36835,7 @@
           "inventory_quantity": 1,
           "weight": 0.09,
           "weight_unit": "kg",
-          "image_id": 1029713000010407
+          "image_id": 1029713000010408
         },
         {
           "id": 92000000010605,
@@ -36854,7 +36854,7 @@
           "inventory_quantity": 4,
           "weight": 0.03,
           "weight_unit": "kg",
-          "image_id": 1029713000010402
+          "image_id": 1029713000010405
         },
         {
           "id": 92000000010606,
@@ -36873,7 +36873,7 @@
           "inventory_quantity": 0,
           "weight": 0.09,
           "weight_unit": "kg",
-          "image_id": 1029713000010407
+          "image_id": 1029713000010408
         },
         {
           "id": 92000000010607,
@@ -36892,7 +36892,7 @@
           "inventory_quantity": 1,
           "weight": 0.03,
           "weight_unit": "kg",
-          "image_id": 1029713000010402
+          "image_id": 1029713000010405
         }
       ],
       "options": [
@@ -36919,59 +36919,32 @@
       ],
       "images": [
         {
-          "id": 1029713000010402,
+          "id": 1029713000010405,
           "product_id": 10297130000104,
           "position": 1,
-          "src": "/products/primary-10297130000104-dtz.jpg",
-          "width": 800,
-          "height": 800,
-          "alt": "DTzero Eclipse handmade fingerboard kit laid out with its gothic box, deck and tuning parts."
-        },
-        {
-          "id": 1029713000010403,
-          "product_id": 10297130000104,
-          "position": 2,
-          "src": "/products/gallery-1014928883971_pic1.jpg",
-          "width": 800,
-          "height": 800,
-          "alt": "Eclipse deck bottom graphic with eclipse artwork in black and white."
-        },
-        {
-          "id": 1029713000010404,
-          "product_id": 10297130000104,
-          "position": 3,
-          "src": "/products/gallery-1014928883971_pic2.jpg",
-          "width": 800,
-          "height": 800,
-          "alt": "Close-up of the Eclipse deck's ply lines and hand-cut edges."
-        },
-        {
-          "id": 1029713000010406,
-          "product_id": 10297130000104,
-          "position": 4,
           "src": "/products/gallery-1014928883971_pic4.jpg",
           "width": 800,
           "height": 800,
-          "alt": "Top view of the Eclipse deck showing grip tape and concave."
+          "alt": "Eclipse complete assembled, showing the gothic deck graphic with black trucks and white wheels."
         },
         {
-          "id": 1029713000010407,
+          "id": 1029713000010408,
           "product_id": 10297130000104,
-          "position": 5,
-          "src": "/products/gallery-1014928883971_prop584138739_20520.jpg",
+          "position": 2,
+          "src": "/products/gallery-1014928883971_d7.jpg",
           "width": 800,
           "height": 800,
           "alt": "Complete kit option: Eclipse deck, trucks, wheels and tuning parts in the display box."
         }
       ],
       "image": {
-        "id": 1029713000010402,
+        "id": 1029713000010405,
         "product_id": 10297130000104,
         "position": 1,
-        "src": "/products/primary-10297130000104-dtz.jpg",
+        "src": "/products/gallery-1014928883971_pic4.jpg",
         "width": 800,
         "height": 800,
-        "alt": "DTzero Eclipse handmade fingerboard kit laid out with its gothic box, deck and tuning parts."
+        "alt": "Eclipse complete assembled, showing the gothic deck graphic with black trucks and white wheels."
       },
       "seo_title": "DTzero Eclipse Handmade Fingerboard — Deck or Complete",
       "seo_description": "Handmade DTzero Eclipse deck in 32/34mm — bare for builders or complete with tuned trucks and white wheels."
@@ -37324,7 +37297,7 @@
           "inventory_quantity": 8,
           "weight": 0.08,
           "weight_unit": "kg",
-          "image_id": 1029713000010602
+          "image_id": 1029713000010603
         },
         {
           "id": 92000000010619,
@@ -37343,7 +37316,7 @@
           "inventory_quantity": 8,
           "weight": 0.08,
           "weight_unit": "kg",
-          "image_id": 1029713000010602
+          "image_id": 1029713000010603
         },
         {
           "id": 92000000010620,
@@ -37362,7 +37335,7 @@
           "inventory_quantity": 8,
           "weight": 0.08,
           "weight_unit": "kg",
-          "image_id": 1029713000010602
+          "image_id": 1029713000010604
         },
         {
           "id": 92000000010621,
@@ -37381,7 +37354,7 @@
           "inventory_quantity": 8,
           "weight": 0.08,
           "weight_unit": "kg",
-          "image_id": 1029713000010602
+          "image_id": 1029713000010604
         }
       ],
       "options": [
@@ -37692,27 +37665,9 @@
       ],
       "images": [
         {
-          "id": 1029713000011202,
-          "product_id": 10297130000112,
-          "position": 1,
-          "src": "/products/primary-10297130000112-sdr.jpg",
-          "width": 800,
-          "height": 800,
-          "alt": "SDR marble mini half-U ramps, standard and upgraded side by side."
-        },
-        {
-          "id": 1029713000011203,
-          "product_id": 10297130000112,
-          "position": 2,
-          "src": "/products/gallery-691939984441_pic1.jpg",
-          "width": 800,
-          "height": 800,
-          "alt": "Standard and upgraded half-U ramps from the front, showing the concave transition."
-        },
-        {
           "id": 1029713000011204,
           "product_id": 10297130000112,
-          "position": 3,
+          "position": 1,
           "src": "/products/gallery-691939984441_pic2.jpg",
           "width": 800,
           "height": 800,
@@ -37721,7 +37676,7 @@
         {
           "id": 1029713000011205,
           "product_id": 10297130000112,
-          "position": 4,
+          "position": 2,
           "src": "/products/gallery-691939984441_pic3.jpg",
           "width": 800,
           "height": 800,
@@ -37730,7 +37685,7 @@
         {
           "id": 1029713000011206,
           "product_id": 10297130000112,
-          "position": 5,
+          "position": 3,
           "src": "/products/gallery-691939984441_prop1627207_22817993698.jpg",
           "width": 800,
           "height": 800,
@@ -37739,7 +37694,7 @@
         {
           "id": 1029713000011207,
           "product_id": 10297130000112,
-          "position": 6,
+          "position": 4,
           "src": "/products/gallery-691939984441_prop1627207_27010076564.jpg",
           "width": 800,
           "height": 800,
@@ -37747,13 +37702,13 @@
         }
       ],
       "image": {
-        "id": 1029713000011202,
+        "id": 1029713000011204,
         "product_id": 10297130000112,
         "position": 1,
-        "src": "/products/primary-10297130000112-sdr.jpg",
+        "src": "/products/gallery-691939984441_pic2.jpg",
         "width": 800,
         "height": 800,
-        "alt": "SDR marble mini half-U ramps, standard and upgraded side by side."
+        "alt": "Profile view contrasting the flat back with the upgraded stepped rear base."
       },
       "seo_title": "SDR Marble Mini Half-U Fingerboard Ramp",
       "seo_description": "Mini half-pipe transition in speckled marble composite. Standard or upgraded with stepped rear stair base, from SDR."
