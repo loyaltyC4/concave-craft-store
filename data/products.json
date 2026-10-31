@@ -181,108 +181,6 @@
       }
     },
     {
-      "id": 10297129140557,
-      "title": "Maple Fingerboard Complete — Bearing Wheels, Double Kick — 2-Pack",
-      "body_html": "<p>Two complete maple fingerboards with bearing wheels in a single pack — both built with double-kick geometry and ready to skate. Having a spare board changes how you skate; lend one, keep one set up differently, or simply have a backup when you need it.</p><p><strong>Why this one</strong></p><ul><li>Pack of 2 complete fingerboards — both fully assembled and ready to skate</li><li>Bearing wheels on each board for real spin and lasting performance</li><li>Maple deck construction on both — not plastic, not foam</li><li>Double-kick shape on each board for full trick access</li><li>Compact and proportioned for desk use and active skating alike</li><li>Useful as a gift pairing or for two riders sharing a setup</li></ul><p><strong>Specifications</strong></p><table><tbody><tr><td><strong>Pack size</strong></td><td>2 complete fingerboards</td></tr><tr><td><strong>Deck material</strong></td><td>Maple</td></tr><tr><td><strong>Wheels</strong></td><td>Bearing wheels</td></tr><tr><td><strong>Shape</strong></td><td>Double kick</td></tr><tr><td><strong>What's included</strong></td><td>2 complete assembled fingerboards</td></tr></tbody></table><p><strong>Choosing your option</strong></p><p>Supplied as a pack of 2.</p><p><strong>Who it suits</strong></p><p>Riders wanting a second board, two friends splitting a purchase, or anyone looking for a gift set. The bearing wheels and maple construction mean both boards in the pack are actually worth skating.</p><p><em>Ships directly from our supplier workshop with tracking, arriving in 7–14 business days. Prices in USD; shipping is free on orders over $50. 30-day returns if it is not right for you.</em></p>",
-      "vendor": "Fingerboard Lab",
-      "product_type": "Complete Fingerboards",
-      "handle": "maple-fingerboard-complete-bearing-wheels-double-kick-2-pack",
-      "created_at": "2026-08-07T15:00:00+02:00",
-      "updated_at": "2026-08-07T15:00:00+02:00",
-      "published_at": "2026-08-07T15:00:00+02:00",
-      "template_suffix": null,
-      "published_scope": "web",
-      "tags": "pack of 2, maple, bearing wheels, double kick, pro complete, fingerboard set, gift set",
-      "status": "active",
-      "seo_title": "Maple Fingerboard Complete Pack of 2 — Bearing Wheels",
-      "seo_description": "Pack of 2 maple fingerboard completes, each with bearing wheels and double kick shape. Both fully assembled. Real maple construction on both boards.",
-      "variants": [
-        {
-          "id": 52930359165262,
-          "product_id": 10297129140557,
-          "title": "Default Title",
-          "price": "23.95",
-          "compare_at_price": null,
-          "position": 1,
-          "option1": "Default Title",
-          "inventory_policy": "continue",
-          "taxable": false,
-          "sku": "FL-10297129140557",
-          "requires_shipping": true,
-          "available": true,
-          "inventory_quantity": 8,
-          "weight": 0.07,
-          "weight_unit": "kg"
-        }
-      ],
-      "options": [
-        {
-          "id": 102971291405570,
-          "name": "Option",
-          "position": 1,
-          "values": [
-            "Default Title"
-          ]
-        }
-      ],
-      "images": [
-        {
-          "id": 1029712914055700,
-          "product_id": 10297129140557,
-          "position": 1,
-          "src": "/products/primary-10297129140557-cleaned.jpg",
-          "width": 800,
-          "height": 800,
-          "alt": "Complete yellow fingerboard featuring a smiley face graphic and black griptape shown from top and bottom views."
-        },
-        {
-          "id": 1029712914055701,
-          "product_id": 10297129140557,
-          "position": 2,
-          "src": "https://img.alicdn.com/bao/uploaded/3978649757/O1CN01PWlX0f2LwlKdNtOaT_!!3978649757.jpg",
-          "width": 800,
-          "height": 800,
-          "alt": "Natural wooden fingerboard decks with matte black grip tape and metal trucks with black wheels sitting on display blocks."
-        },
-        {
-          "id": 1029712914055702,
-          "product_id": 10297129140557,
-          "position": 3,
-          "src": "https://img.alicdn.com/bao/uploaded/3978649757/O1CN01YPmyd22LwlKZSjX8l_!!3978649757.jpg",
-          "width": 800,
-          "height": 800,
-          "alt": "Three assembled fingerboard completes with black top veneers, silver metal trucks, and black wheels floating against a dark backgr"
-        },
-        {
-          "id": 1029712914055703,
-          "product_id": 10297129140557,
-          "position": 4,
-          "src": "https://img.alicdn.com/bao/uploaded/3978649757/O1CN01AKtmVC2LwlKZUXJBm_!!3978649757.jpg",
-          "width": 800,
-          "height": 800,
-          "alt": "Yellow wooden fingerboard complete featuring a blue Cold Skateboard graphic and silver trucks."
-        },
-        {
-          "id": 1029712914055704,
-          "product_id": 10297129140557,
-          "position": 5,
-          "src": "https://img.alicdn.com/bao/uploaded/3978649757/O1CN01mMmHeU2LwlKZPK04u_!!3978649757.png",
-          "width": 1000,
-          "height": 1000,
-          "alt": "Yellow complete fingerboard with a black smiley face graphic and smooth wooden finish."
-        }
-      ],
-      "image": {
-        "id": 1029712914055700,
-        "product_id": 10297129140557,
-        "position": 1,
-        "src": "/products/primary-10297129140557-cleaned.jpg",
-        "width": 800,
-        "height": 800,
-        "alt": "Maple Fingerboard Complete — Bearing Wheels, Double Kick — 2-Pack — Fingerboard Lab"
-      }
-    },
-    {
       "id": 10297101091138,
       "title": "Anti-Stress Fidget Fingerboard — 11 Graphics",
       "body_html": "<p>Compact, light, and genuinely satisfying to hold — this desktop fidget piece has the form of a fingerboard with smooth rolling wheels and a surface that begs to be flipped. It is not a technical setup, but for idle hands at a desk or a curious first encounter with the hobby, it is exactly what it needs to be.</p><p><strong>Why this one</strong></p><ul><li>Smooth rolling wheels — the roll and flip action gives a satisfying tactile feedback without requiring any fingerboarding skill.</li><li>Desktop-friendly size — lightweight and compact enough to keep in a desk drawer or bag without a second thought.</li><li>Entry-level curiosity piece — a low-commitment way to explore what fingerboarding feels like before investing in a full setup.</li><li>Great desk companion — suited to anyone who keeps their hands busy while thinking or on a call.</li></ul><p><strong>Specifications</strong></p><table><tbody><tr><td><strong>Type</strong></td><td>Sensory / fidget toy</td></tr><tr><td><strong>Wheels</strong></td><td>Smooth rolling</td></tr><tr><td><strong>Best for</strong></td><td>Desk use, stress relief, casual play</td></tr></tbody></table><p><strong>Who it suits</strong></p><p>The straightforward gift pick for someone who fidgets, a curiosity piece for a young person interested in skateboarding, or a desk accessory for anyone who likes having something tactile to hand. Not intended for technical tricks.</p><p><em>Ships directly from our supplier workshop with tracking, arriving in 7–14 business days. Prices in USD; shipping is free on orders over $50. 30-day returns if it is not right for you.</em></p>",
@@ -859,7 +757,7 @@
       "product_type": "Complete Fingerboards",
       "handle": "2025-new-toy-finger-skateboards-hobbies-novelty-anti-stress-sensory-fingerboard-toys-mini-funny-gift-for-kids-boy",
       "created_at": "2026-04-16T04:39:37+02:00",
-      "updated_at": "2026-08-07T10:00:00+02:00",
+      "updated_at": "2026-11-01T12:00:00+02:00",
       "published_at": "2026-04-16T09:47:08+02:00",
       "template_suffix": null,
       "published_scope": "web",
@@ -1100,9 +998,18 @@
       ],
       "images": [
         {
+          "id": 1029710086176260,
+          "product_id": 10297100861762,
+          "position": 1,
+          "src": "/products/primary-10297100861762-collage.jpg",
+          "width": 800,
+          "height": 800,
+          "alt": "All eleven Mini Plastic fidget fingerboard colourways."
+        },
+        {
           "id": 52024134435138,
           "alt": "Yellow fingerboard complete with black grip tape and a quirky smiley face graphic on its wooden deck.",
-          "position": 1,
+          "position": 2,
           "product_id": 10297100861762,
           "created_at": "2026-04-16T04:39:39+02:00",
           "updated_at": "2026-04-16T19:24:15+02:00",
@@ -1115,7 +1022,7 @@
         {
           "id": 52024134467906,
           "alt": "Fingerboard complete skateboard featuring a wizard graphic and packaging box.",
-          "position": 2,
+          "position": 3,
           "product_id": 10297100861762,
           "created_at": "2026-04-16T04:39:39+02:00",
           "updated_at": "2026-04-16T19:25:12+02:00",
@@ -1128,7 +1035,7 @@
         {
           "id": 52024134500674,
           "alt": "Complete yellow fingerboard featuring a car graphic alongside retail packaging boxes and a tool.",
-          "position": 3,
+          "position": 4,
           "product_id": 10297100861762,
           "created_at": "2026-04-16T04:39:39+02:00",
           "updated_at": "2026-04-16T19:24:16+02:00",
@@ -1141,7 +1048,7 @@
         {
           "id": 52024134533442,
           "alt": "Complete fingerboard skateboard set featuring a colorful graffiti deck, yellow wheels, and retail box.",
-          "position": 4,
+          "position": 5,
           "product_id": 10297100861762,
           "created_at": "2026-04-16T04:39:39+02:00",
           "updated_at": "2026-04-16T19:25:12+02:00",
@@ -1156,7 +1063,7 @@
         {
           "id": 52024134566210,
           "alt": "A complete Baker Riley Hawk graphic fingerboard with retail packaging box and a yellow skate tool.",
-          "position": 5,
+          "position": 6,
           "product_id": 10297100861762,
           "created_at": "2026-04-16T04:39:39+02:00",
           "updated_at": "2026-04-16T19:24:15+02:00",
@@ -1171,7 +1078,7 @@
         {
           "id": 52024134598978,
           "alt": "Complete fingerboard skateboard with red and yellow graphic deck, metal trucks, and packaging box.",
-          "position": 6,
+          "position": 7,
           "product_id": 10297100861762,
           "created_at": "2026-04-16T04:39:39+02:00",
           "updated_at": "2026-04-16T19:24:15+02:00",
@@ -1186,7 +1093,7 @@
         {
           "id": 52024134631746,
           "alt": "Fully assembled abstract art fingerboard set displayed upright with its matching box and extra deck.",
-          "position": 7,
+          "position": 8,
           "product_id": 10297100861762,
           "created_at": "2026-04-16T04:39:39+02:00",
           "updated_at": "2026-04-16T19:24:15+02:00",
@@ -1201,7 +1108,7 @@
         {
           "id": 52024134664514,
           "alt": "Complete fingerboard with wizard graphic deck, retail box, and extra natural wood deck with black grip tape.",
-          "position": 8,
+          "position": 9,
           "product_id": 10297100861762,
           "created_at": "2026-04-16T04:39:39+02:00",
           "updated_at": "2026-04-16T19:24:15+02:00",
@@ -1216,7 +1123,7 @@
         {
           "id": 52024134697282,
           "alt": "Fingerboard complete set with green graphic deck, clear display box, and yellow tool.",
-          "position": 9,
+          "position": 10,
           "product_id": 10297100861762,
           "created_at": "2026-04-16T04:39:39+02:00",
           "updated_at": "2026-04-16T19:24:15+02:00",
@@ -1231,7 +1138,7 @@
         {
           "id": 52024134730050,
           "alt": "Fingerboard Lab complete wooden fingerboard featuring a distressed blue graphic deck and silver trucks.",
-          "position": 10,
+          "position": 11,
           "product_id": 10297100861762,
           "created_at": "2026-04-16T04:39:39+02:00",
           "updated_at": "2026-04-16T19:25:12+02:00",
@@ -1246,7 +1153,7 @@
         {
           "id": 52024134762818,
           "alt": "Yellow complete fingerboard with a smiley face graphic alongside its retail box and tool.",
-          "position": 11,
+          "position": 12,
           "product_id": 10297100861762,
           "created_at": "2026-04-16T04:39:39+02:00",
           "updated_at": "2026-04-16T19:24:15+02:00",
@@ -1261,7 +1168,7 @@
         {
           "id": 52024134795586,
           "alt": "Complete yellow fingerboard with Cold Fresh jeep graphics, shown next to its retail display box and assembly tool.",
-          "position": 12,
+          "position": 13,
           "product_id": 10297100861762,
           "created_at": "2026-04-16T04:39:39+02:00",
           "updated_at": "2026-04-16T19:24:16+02:00",
@@ -1276,7 +1183,7 @@
         {
           "id": 52024134828354,
           "alt": "Two assembled wooden fingerboards in packaging boxes with a spare truck and assembly tool.",
-          "position": 13,
+          "position": 14,
           "product_id": 10297100861762,
           "created_at": "2026-04-16T04:39:39+02:00",
           "updated_at": "2026-04-16T19:25:12+02:00",
@@ -1291,7 +1198,7 @@
         {
           "id": 52024134861122,
           "alt": "Complete fingerboard set with colorful retro artwork, matching box packaging, yellow wheels, and black grip tape.",
-          "position": 14,
+          "position": 15,
           "product_id": 10297100861762,
           "created_at": "2026-04-16T04:39:39+02:00",
           "updated_at": "2026-04-16T19:24:16+02:00",
@@ -1305,17 +1212,13 @@
         }
       ],
       "image": {
-        "id": 52024134435138,
-        "alt": "2025 New Toy Finger Skateboards Hobbies Novelty Anti Stress Sensory Fingerboard Toys Mini Funny Gift For Kids Boy - Concave Craft",
-        "position": 1,
+        "id": 1029710086176260,
         "product_id": 10297100861762,
-        "created_at": "2026-04-16T04:39:39+02:00",
-        "updated_at": "2026-04-16T19:24:15+02:00",
-        "admin_graphql_api_id": "gid://shopify/MediaImage/42858622681410",
+        "position": 1,
+        "src": "/products/primary-10297100861762-collage.jpg",
         "width": 800,
         "height": 800,
-        "src": "/products/primary-10297100861762-cleaned.jpg",
-        "variant_ids": []
+        "alt": "All eleven Mini Plastic fidget fingerboard colourways."
       }
     },
     {
@@ -6041,7 +5944,7 @@
       "product_type": "Complete Fingerboards",
       "handle": "34mm-complete-fingerboard-handmade-deck-single-axle-truck-cnc-bearing-wheels",
       "created_at": "2026-04-16T06:51:17+02:00",
-      "updated_at": "2026-08-07T10:00:00+02:00",
+      "updated_at": "2026-11-01T12:00:00+02:00",
       "published_at": "2026-04-16T09:24:09+02:00",
       "template_suffix": null,
       "published_scope": "web",
@@ -6051,31 +5954,260 @@
       "seo_description": "34mm complete fingerboard with CNC-machined wheels and single axle trucks. Smoother, more consistent roll than standard cast wheels.",
       "variants": [
         {
-          "id": 52930358116674,
+          "id": 92000000011201,
           "product_id": 10297128255810,
-          "title": "Default Title",
+          "title": "Pink Wood Grain",
           "price": "38.95",
           "compare_at_price": null,
           "position": 1,
+          "option1": "Pink Wood Grain",
           "inventory_policy": "continue",
           "taxable": false,
-          "sku": "FL-52930358116674",
-          "grams": 0,
-          "weight": 0.0,
-          "weight_unit": "kg",
+          "sku": "FL-10297128255810-PINK0",
           "requires_shipping": true,
           "available": true,
-          "inventory_quantity": 10,
-          "option1": "Default Title"
+          "inventory_quantity": 8,
+          "weight": 0.08,
+          "weight_unit": "kg",
+          "image_id": 52024820564290
+        },
+        {
+          "id": 92000000011202,
+          "product_id": 10297128255810,
+          "title": "Red Wood Grain",
+          "price": "38.95",
+          "compare_at_price": null,
+          "position": 2,
+          "option1": "Red Wood Grain",
+          "inventory_policy": "continue",
+          "taxable": false,
+          "sku": "FL-10297128255810-RED1",
+          "requires_shipping": true,
+          "available": true,
+          "inventory_quantity": 8,
+          "weight": 0.08,
+          "weight_unit": "kg",
+          "image_id": 52024820597058
+        },
+        {
+          "id": 92000000011203,
+          "product_id": 10297128255810,
+          "title": "Burl Wood Grain",
+          "price": "38.95",
+          "compare_at_price": null,
+          "position": 3,
+          "option1": "Burl Wood Grain",
+          "inventory_policy": "continue",
+          "taxable": false,
+          "sku": "FL-10297128255810-BURL2",
+          "requires_shipping": true,
+          "available": true,
+          "inventory_quantity": 8,
+          "weight": 0.08,
+          "weight_unit": "kg",
+          "image_id": 52024820629826
+        },
+        {
+          "id": 92000000011204,
+          "product_id": 10297128255810,
+          "title": "Pale Bamboo Grain",
+          "price": "38.95",
+          "compare_at_price": null,
+          "position": 4,
+          "option1": "Pale Bamboo Grain",
+          "inventory_policy": "continue",
+          "taxable": false,
+          "sku": "FL-10297128255810-PALE3",
+          "requires_shipping": true,
+          "available": true,
+          "inventory_quantity": 8,
+          "weight": 0.08,
+          "weight_unit": "kg",
+          "image_id": 52024820662594
+        },
+        {
+          "id": 92000000011205,
+          "product_id": 10297128255810,
+          "title": "Light Birch Blank",
+          "price": "38.95",
+          "compare_at_price": null,
+          "position": 5,
+          "option1": "Light Birch Blank",
+          "inventory_policy": "continue",
+          "taxable": false,
+          "sku": "FL-10297128255810-LIGH4",
+          "requires_shipping": true,
+          "available": true,
+          "inventory_quantity": 8,
+          "weight": 0.08,
+          "weight_unit": "kg",
+          "image_id": 52024820695362
+        },
+        {
+          "id": 92000000011206,
+          "product_id": 10297128255810,
+          "title": "Green Wood Grain",
+          "price": "38.95",
+          "compare_at_price": null,
+          "position": 6,
+          "option1": "Green Wood Grain",
+          "inventory_policy": "continue",
+          "taxable": false,
+          "sku": "FL-10297128255810-GREE5",
+          "requires_shipping": true,
+          "available": true,
+          "inventory_quantity": 8,
+          "weight": 0.08,
+          "weight_unit": "kg",
+          "image_id": 52024820728130
+        },
+        {
+          "id": 92000000011207,
+          "product_id": 10297128255810,
+          "title": "Yellow Solid",
+          "price": "38.95",
+          "compare_at_price": null,
+          "position": 7,
+          "option1": "Yellow Solid",
+          "inventory_policy": "continue",
+          "taxable": false,
+          "sku": "FL-10297128255810-YELL6",
+          "requires_shipping": true,
+          "available": true,
+          "inventory_quantity": 8,
+          "weight": 0.08,
+          "weight_unit": "kg",
+          "image_id": 52024820760898
+        },
+        {
+          "id": 92000000011208,
+          "product_id": 10297128255810,
+          "title": "Purple Solid",
+          "price": "38.95",
+          "compare_at_price": null,
+          "position": 8,
+          "option1": "Purple Solid",
+          "inventory_policy": "continue",
+          "taxable": false,
+          "sku": "FL-10297128255810-PURP7",
+          "requires_shipping": true,
+          "available": true,
+          "inventory_quantity": 8,
+          "weight": 0.08,
+          "weight_unit": "kg",
+          "image_id": 52024820793666
+        },
+        {
+          "id": 92000000011209,
+          "product_id": 10297128255810,
+          "title": "Blue Solid",
+          "price": "38.95",
+          "compare_at_price": null,
+          "position": 9,
+          "option1": "Blue Solid",
+          "inventory_policy": "continue",
+          "taxable": false,
+          "sku": "FL-10297128255810-BLUE8",
+          "requires_shipping": true,
+          "available": true,
+          "inventory_quantity": 8,
+          "weight": 0.08,
+          "weight_unit": "kg",
+          "image_id": 52024820826434
+        },
+        {
+          "id": 92000000011210,
+          "product_id": 10297128255810,
+          "title": "Classic Oak Blank",
+          "price": "38.95",
+          "compare_at_price": null,
+          "position": 10,
+          "option1": "Classic Oak Blank",
+          "inventory_policy": "continue",
+          "taxable": false,
+          "sku": "FL-10297128255810-CLAS9",
+          "requires_shipping": true,
+          "available": true,
+          "inventory_quantity": 8,
+          "weight": 0.08,
+          "weight_unit": "kg",
+          "image_id": 52024820859202
+        },
+        {
+          "id": 92000000011211,
+          "product_id": 10297128255810,
+          "title": "Golden Teak",
+          "price": "38.95",
+          "compare_at_price": null,
+          "position": 11,
+          "option1": "Golden Teak",
+          "inventory_policy": "continue",
+          "taxable": false,
+          "sku": "FL-10297128255810-GOLD10",
+          "requires_shipping": true,
+          "available": true,
+          "inventory_quantity": 8,
+          "weight": 0.08,
+          "weight_unit": "kg",
+          "image_id": 52024820891970
+        },
+        {
+          "id": 92000000011212,
+          "product_id": 10297128255810,
+          "title": "Zebrawood Natural",
+          "price": "38.95",
+          "compare_at_price": null,
+          "position": 12,
+          "option1": "Zebrawood Natural",
+          "inventory_policy": "continue",
+          "taxable": false,
+          "sku": "FL-10297128255810-ZEBR11",
+          "requires_shipping": true,
+          "available": true,
+          "inventory_quantity": 8,
+          "weight": 0.08,
+          "weight_unit": "kg",
+          "image_id": 52024820924738
+        },
+        {
+          "id": 92000000011213,
+          "product_id": 10297128255810,
+          "title": "Orange Wood Deck",
+          "price": "38.95",
+          "compare_at_price": null,
+          "position": 13,
+          "option1": "Orange Wood Deck",
+          "inventory_policy": "continue",
+          "taxable": false,
+          "sku": "FL-10297128255810-ORAN12",
+          "requires_shipping": true,
+          "available": true,
+          "inventory_quantity": 8,
+          "weight": 0.08,
+          "weight_unit": "kg",
+          "image_id": 52024820957506
         }
       ],
       "options": [
         {
-          "id": 12875968774466,
+          "id": 102971282558100,
+          "product_id": 10297128255810,
           "name": "Colourway",
           "position": 1,
           "values": [
-            "Default Title"
+            "Pink Wood Grain",
+            "Red Wood Grain",
+            "Burl Wood Grain",
+            "Pale Bamboo Grain",
+            "Light Birch Blank",
+            "Green Wood Grain",
+            "Yellow Solid",
+            "Purple Solid",
+            "Blue Solid",
+            "Classic Oak Blank",
+            "Golden Teak",
+            "Zebrawood Natural",
+            "Orange Wood Deck"
           ]
         }
       ],
@@ -6160,7 +6292,7 @@
         },
         {
           "id": 52024820564290,
-          "alt": "Fingerboard assembly kit featuring a pink wooden deck, pink trucks, pink wheels, and black griptape.",
+          "alt": "Pink Wood Grain deck on the 34mm CNC-wheel complete.",
           "position": 7,
           "product_id": 10297128255810,
           "created_at": "2026-04-16T06:51:19+02:00",
@@ -6173,7 +6305,7 @@
         },
         {
           "id": 52024820597058,
-          "alt": "Red wooden fingerboard deck assembly kit complete with matching trucks, wheels, tape, and hardware.",
+          "alt": "Red Wood Grain deck on the 34mm CNC-wheel complete.",
           "position": 8,
           "product_id": 10297128255810,
           "created_at": "2026-04-16T06:51:19+02:00",
@@ -6186,7 +6318,7 @@
         },
         {
           "id": 52024820629826,
-          "alt": "Unassembled wooden fingerboard kit featuring a burled wood deck, gold trucks, white wheels, and black grip tape.",
+          "alt": "Burl Wood Grain deck on the 34mm CNC-wheel complete.",
           "position": 9,
           "product_id": 10297128255810,
           "created_at": "2026-04-16T06:51:19+02:00",
@@ -6199,7 +6331,7 @@
         },
         {
           "id": 52024820662594,
-          "alt": "Unassembled wooden fingerboard kit featuring a natural wood grain deck, silver trucks, wheels, tape, and screws.",
+          "alt": "Pale Bamboo Grain deck on the 34mm CNC-wheel complete.",
           "position": 10,
           "product_id": 10297128255810,
           "created_at": "2026-04-16T06:51:19+02:00",
@@ -6212,7 +6344,7 @@
         },
         {
           "id": 52024820695362,
-          "alt": "Fingerboard complete set with a natural wood grain deck, silver metal trucks, white wheels, and black grip tape.",
+          "alt": "Light Birch Blank deck on the 34mm CNC-wheel complete.",
           "position": 11,
           "product_id": 10297128255810,
           "created_at": "2026-04-16T06:51:19+02:00",
@@ -6225,7 +6357,7 @@
         },
         {
           "id": 52024820728130,
-          "alt": "Unassembled green wooden fingerboard kit with trucks, green wheels, screws, and black grip tape.",
+          "alt": "Green Wood Grain deck on the 34mm CNC-wheel complete.",
           "position": 12,
           "product_id": 10297128255810,
           "created_at": "2026-04-16T06:51:19+02:00",
@@ -6238,7 +6370,7 @@
         },
         {
           "id": 52024820760898,
-          "alt": "Yellow wooden fingerboard complete kit including deck, matching trucks, yellow wheels, grip tape, and tool.",
+          "alt": "Yellow Solid deck on the 34mm CNC-wheel complete.",
           "position": 13,
           "product_id": 10297128255810,
           "created_at": "2026-04-16T06:51:19+02:00",
@@ -6251,7 +6383,7 @@
         },
         {
           "id": 52024820793666,
-          "alt": "Solid purple wooden fingerboard complete set with matching purple trucks, white wheels, and grip tape.",
+          "alt": "Purple Solid deck on the 34mm CNC-wheel complete.",
           "position": 14,
           "product_id": 10297128255810,
           "created_at": "2026-04-16T06:51:19+02:00",
@@ -6264,7 +6396,7 @@
         },
         {
           "id": 52024820826434,
-          "alt": "Blue wooden fingerboard complete kit with deck, matching trucks, blue wheels, grip tape, and assembly tools.",
+          "alt": "Blue Solid deck on the 34mm CNC-wheel complete.",
           "position": 15,
           "product_id": 10297128255810,
           "created_at": "2026-04-16T06:51:19+02:00",
@@ -6277,7 +6409,7 @@
         },
         {
           "id": 52024820859202,
-          "alt": "Fingerboard building kit with a natural wood deck, silver trucks, white wheels, and grip tape.",
+          "alt": "Classic Oak Blank deck on the 34mm CNC-wheel complete.",
           "position": 16,
           "product_id": 10297128255810,
           "created_at": "2026-04-16T06:51:19+02:00",
@@ -6290,7 +6422,7 @@
         },
         {
           "id": 52024820891970,
-          "alt": "Fingerboard Lab complete set featuring a natural wood grain deck, silver metal trucks, white wheels, and black grip tape.",
+          "alt": "Golden Teak deck on the 34mm CNC-wheel complete.",
           "position": 17,
           "product_id": 10297128255810,
           "created_at": "2026-04-16T06:51:19+02:00",
@@ -6303,7 +6435,7 @@
         },
         {
           "id": 52024820924738,
-          "alt": "Fingerboard complete kit with natural wood grain deck, metal trucks, white wheels, and grip tape.",
+          "alt": "Zebrawood Natural deck on the 34mm CNC-wheel complete.",
           "position": 18,
           "product_id": 10297128255810,
           "created_at": "2026-04-16T06:51:19+02:00",
@@ -6316,7 +6448,7 @@
         },
         {
           "id": 52024820957506,
-          "alt": "Orange solid wood fingerboard complete kit with gold trucks, white wheels, black tape, and hardware.",
+          "alt": "Orange Wood Deck deck on the 34mm CNC-wheel complete.",
           "position": 19,
           "product_id": 10297128255810,
           "created_at": "2026-04-16T06:51:19+02:00",
@@ -39028,7 +39160,7 @@
       "body_html": "<p>A 5-ply maple complete with a deep concave and double kicks, wearing the Demon Mask graphic. Deep concave locks your fingers in for flip tricks; the double kicks pop from either end.</p><p><strong>Why this one</strong></p><ul><li>Deep concave profile — the flick-friendly shape for treflips and hardflips</li><li>Double kicks at both ends for switch play</li><li>The Demon Mask graphic, photo-linked</li></ul><em>Ships directly from our supplier workshop with tracking, arriving in 7–14 business days. Prices in USD; shipping is free on orders over $50. 30-day returns if it is not right for you.</em>",
       "handle": "deep-concave-complete-demon-mask",
       "created_at": "2026-11-01T01:30:00+02:00",
-      "updated_at": "2026-11-01T01:30:00+02:00",
+      "updated_at": "2026-11-01T12:00:00+02:00",
       "published_at": "2026-11-01T01:30:00+02:00",
       "status": "active",
       "published_scope": "web",
@@ -39075,15 +39207,6 @@
           "width": 800,
           "height": 800,
           "alt": "Deep-concave double-kick complete with the Demon Mask graphic."
-        },
-        {
-          "id": 1029713000014203,
-          "product_id": 10297130000142,
-          "position": 2,
-          "src": "https://img.alicdn.com/bao/uploaded/44053358/O1CN014lG7Js1ag10hbqDrT_!!44053358.jpg",
-          "width": 800,
-          "height": 800,
-          "alt": "Red demon-mask deck with ornate horns."
         }
       ],
       "image": {

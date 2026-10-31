@@ -106,6 +106,11 @@ export default {
         permanent: true,
       },
       {
+        source: "/product/maple-fingerboard-complete-bearing-wheels-double-kick-2-pack",
+        destination: "/search/completes",
+        permanent: true,
+      },
+      {
         // Deleted listings (2026-10-20): send old links to the completes collection, not a 404.
         source: "/product/wp-dyed-series-fingerboard-complete-handmade-maple",
         destination: "/search/completes",
