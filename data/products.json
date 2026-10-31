@@ -2324,7 +2324,7 @@
           "admin_graphql_api_id": "gid://shopify/MediaImage/42858625171778",
           "width": 800,
           "height": 800,
-          "src": "https://cdn.shopify.com/s/files/1/0999/9987/5394/files/Sa541e39faa60433c9fd9b36c31a63d4bT.webp?v=1776360318",
+          "src": "/product-photos/fl-natmaple-clean.jpg",
           "variant_ids": [
             52930010775874
           ]
@@ -2339,7 +2339,7 @@
           "admin_graphql_api_id": "gid://shopify/MediaImage/42858625204546",
           "width": 800,
           "height": 800,
-          "src": "https://cdn.shopify.com/s/files/1/0999/9987/5394/files/S417720567aa2441fa879d7870ca6e036c.webp?v=1776360318",
+          "src": "/product-photos/fl-partyscene-clean.jpg",
           "variant_ids": [
             52930010906946
           ]
@@ -3684,7 +3684,7 @@
         "src": "/products/completes-625126599897-1.jpg",
         "width": 800,
         "height": 800,
-        "alt": "翻 Team 3.5 Series Pro Complete — 5-Ply Maple, Dual Concave — Fingerboard Lab"
+        "alt": "Team 3.5 Series Pro Complete — 5-Ply Maple, Dual Concave — Fingerboard Lab"
       }
     },
     {
@@ -3750,7 +3750,7 @@
         "src": "/products/primary-10297129140552-cleaned.jpg",
         "width": 800,
         "height": 800,
-        "alt": "SK8CRIME x 翻 Team Collab Fingerboard — Maple, Shallow Concave — Fingerboard Lab"
+        "alt": "SK8CRIME x Team Collab Fingerboard — Maple, Shallow Concave — Fingerboard Lab"
       }
     },
     {
@@ -6731,7 +6731,7 @@
           "available": true,
           "inventory_quantity": 6,
           "option1": "Purple",
-          "image_id": 52024834654530
+          "image_id": null
         },
         {
           "id": 52930338554178,
@@ -6788,7 +6788,7 @@
           "available": true,
           "inventory_quantity": 6,
           "option1": "Navy — Gold Trucks",
-          "image_id": 52024834523458
+          "image_id": null
         },
         {
           "id": 52930338652482,
@@ -6845,7 +6845,7 @@
           "available": true,
           "inventory_quantity": 6,
           "option1": "Green",
-          "image_id": 52024834621762
+          "image_id": null
         }
       ],
       "options": [
@@ -6946,19 +6946,6 @@
           "variant_ids": []
         },
         {
-          "id": 52024834425154,
-          "alt": "Green fingerboard complete housed in a protective metal storage case with a clear viewing window.",
-          "position": 7,
-          "product_id": 10297129075010,
-          "created_at": "2026-04-16T06:53:04+02:00",
-          "updated_at": "2026-04-16T19:18:07+02:00",
-          "admin_graphql_api_id": "gid://shopify/MediaImage/42859174723906",
-          "width": 850,
-          "height": 850,
-          "src": "https://cdn.shopify.com/s/files/1/0999/9987/5394/files/S478cb6f90c9f4b85a675013eb6b98dd1r.webp?v=1776359887",
-          "variant_ids": []
-        },
-        {
           "id": 52024834457922,
           "alt": "A fully assembled purple EBM fingerboard deck displayed inside a silver metal and glass storage case.",
           "position": 8,
@@ -6983,21 +6970,6 @@
           "height": 850,
           "src": "https://cdn.shopify.com/s/files/1/0999/9987/5394/files/S491a931cbc92463298b17bee970e7637J.webp?v=1776359960",
           "variant_ids": []
-        },
-        {
-          "id": 52024834523458,
-          "alt": "Fingerboard Lab assembled complete fingerboard with purple EBM logo deck inside a silver metal storage and display case.",
-          "position": 10,
-          "product_id": 10297129075010,
-          "created_at": "2026-04-16T06:53:04+02:00",
-          "updated_at": "2026-04-16T19:18:07+02:00",
-          "admin_graphql_api_id": "gid://shopify/MediaImage/42859174822210",
-          "width": 850,
-          "height": 850,
-          "src": "https://cdn.shopify.com/s/files/1/0999/9987/5394/files/S09db4701538d46d68c71e778ef17923bd.webp?v=1776359887",
-          "variant_ids": [
-            52930338619714
-          ]
         },
         {
           "id": 52024834556226,
@@ -7027,36 +6999,6 @@
           "src": "https://cdn.shopify.com/s/files/1/0999/9987/5394/files/Sd36c1cdc92f74952ae44a86101b0615cu.webp?v=1776359887",
           "variant_ids": [
             52930338685250
-          ]
-        },
-        {
-          "id": 52024834621762,
-          "alt": "A glossy green fingerboard deck with EBM graphics in a silver metal display storage case.",
-          "position": 13,
-          "product_id": 10297129075010,
-          "created_at": "2026-04-16T06:53:04+02:00",
-          "updated_at": "2026-04-16T19:18:07+02:00",
-          "admin_graphql_api_id": "gid://shopify/MediaImage/42859174920514",
-          "width": 850,
-          "height": 850,
-          "src": "https://cdn.shopify.com/s/files/1/0999/9987/5394/files/S3237070e46ff4348a9be9bd5f1deef11i.webp?v=1776359887",
-          "variant_ids": [
-            52930338718018
-          ]
-        },
-        {
-          "id": 52024834654530,
-          "alt": "Glossy purple complete fingerboard with red wheels resting securely inside a metal display case.",
-          "position": 14,
-          "product_id": 10297129075010,
-          "created_at": "2026-04-16T06:53:04+02:00",
-          "updated_at": "2026-04-16T19:18:07+02:00",
-          "admin_graphql_api_id": "gid://shopify/MediaImage/42859174953282",
-          "width": 850,
-          "height": 850,
-          "src": "https://cdn.shopify.com/s/files/1/0999/9987/5394/files/Sf380438bce9f4f0889f14111eea3f6f7q.webp?v=1776359887",
-          "variant_ids": [
-            52930338521410
           ]
         },
         {
@@ -7125,7 +7067,7 @@
           "available": true,
           "inventory_quantity": 18,
           "option1": "Dragon — Black Trucks",
-          "image_id": 52024831410498
+          "image_id": null
         },
         {
           "id": 52930337407298,
@@ -7144,7 +7086,7 @@
           "available": true,
           "inventory_quantity": 18,
           "option1": "Dragon — Silver Trucks",
-          "image_id": 52024831377730
+          "image_id": null
         },
         {
           "id": 52930337440066,
@@ -7280,36 +7222,6 @@
       ],
       "images": [
         {
-          "id": 52024831377730,
-          "alt": "Purple dragon graphic wooden fingerboard deck with grip tape, silver trucks, and white wheels assembly kit.",
-          "position": 1,
-          "product_id": 10297128714562,
-          "created_at": "2026-04-16T06:52:59+02:00",
-          "updated_at": "2026-04-16T19:18:25+02:00",
-          "admin_graphql_api_id": "gid://shopify/MediaImage/42859171676482",
-          "width": 800,
-          "height": 800,
-          "src": "https://cdn.shopify.com/s/files/1/0999/9987/5394/files/S2e5e935c397a46be991c9e20ce0eaa00E.webp?v=1776359905",
-          "variant_ids": [
-            52930337407298
-          ]
-        },
-        {
-          "id": 52024831410498,
-          "alt": "Fingerboard complete kit with a purple dragon graphic wooden deck, black trucks, wheels, and tools.",
-          "position": 2,
-          "product_id": 10297128714562,
-          "created_at": "2026-04-16T06:52:59+02:00",
-          "updated_at": "2026-04-16T19:18:25+02:00",
-          "admin_graphql_api_id": "gid://shopify/MediaImage/42859171709250",
-          "width": 800,
-          "height": 800,
-          "src": "https://cdn.shopify.com/s/files/1/0999/9987/5394/files/S3dd8e5d0ee93452ab36142e05dbd701cO.webp?v=1776359905",
-          "variant_ids": [
-            52930337374530
-          ]
-        },
-        {
           "id": 52024831443266,
           "alt": "A fingerboard deck featuring a matte black finish with red rose and skull graphics, displayed with trucks, wheels, grip tape, and",
           "position": 3,
@@ -7401,18 +7313,18 @@
         }
       ],
       "image": {
-        "id": 52024831377730,
-        "alt": "Pro Fingerboard Set Wooden Deck Professional Single Axle Trucks CNC Wheels for Finger Skateboard - Concave Craft",
-        "position": 1,
+        "id": 52024831443266,
+        "alt": "A fingerboard deck featuring a matte black finish with red rose and skull graphics, displayed with trucks, wheels, grip tape, and",
+        "position": 3,
         "product_id": 10297128714562,
         "created_at": "2026-04-16T06:52:59+02:00",
         "updated_at": "2026-04-16T19:18:25+02:00",
-        "admin_graphql_api_id": "gid://shopify/MediaImage/42859171676482",
+        "admin_graphql_api_id": "gid://shopify/MediaImage/42859171742018",
         "width": 800,
         "height": 800,
-        "src": "https://cdn.shopify.com/s/files/1/0999/9987/5394/files/S2e5e935c397a46be991c9e20ce0eaa00E.webp?v=1776359905",
+        "src": "https://cdn.shopify.com/s/files/1/0999/9987/5394/files/Sfa6313dea18f464ca328feac71ac2b4fH.webp?v=1776359905",
         "variant_ids": [
-          52930337407298
+          52930337440066
         ]
       }
     },
@@ -7507,7 +7419,7 @@
           "available": true,
           "inventory_quantity": 1024,
           "option1": "Girl",
-          "image_id": 52024818303298
+          "image_id": null
         }
       ],
       "options": [
@@ -7580,21 +7492,6 @@
           "src": "https://cdn.shopify.com/s/files/1/0999/9987/5394/files/Sc88a9cde8d484eb998581fe2f57e41c0r.webp?v=1776315079",
           "variant_ids": [
             52930330886466
-          ]
-        },
-        {
-          "id": 52024818303298,
-          "alt": "Fingerboard complete set with red wooden deck, anime graphic, silver trucks, wheels, and tape.",
-          "position": 5,
-          "product_id": 10297128124738,
-          "created_at": "2026-04-16T06:51:17+02:00",
-          "updated_at": "2026-04-16T19:18:30+02:00",
-          "admin_graphql_api_id": "gid://shopify/MediaImage/42859158602050",
-          "width": 2000,
-          "height": 2000,
-          "src": "https://cdn.shopify.com/s/files/1/0999/9987/5394/files/S8b1012a19a0d4dd69f403f4d794ff5faF.webp?v=1776315078",
-          "variant_ids": [
-            52930330919234
           ]
         }
       ],
@@ -7781,7 +7678,7 @@
           "available": true,
           "inventory_quantity": 1068,
           "option1": "Pinup Girl",
-          "image_id": 52024818106690
+          "image_id": null
         }
       ],
       "options": [
@@ -7942,21 +7839,6 @@
           "src": "https://cdn.shopify.com/s/files/1/0999/9987/5394/files/S8bc99ad5951f43a7b51c525195499132y.webp?v=1776360194",
           "variant_ids": [
             52930330755394
-          ]
-        },
-        {
-          "id": 52024818106690,
-          "alt": "Fingerboard Lab complete fingerboard kit featuring a deck with vintage retro woman portrait graphic, trucks, white wheels, and too",
-          "position": 11,
-          "product_id": 10297128091970,
-          "created_at": "2026-04-16T06:51:16+02:00",
-          "updated_at": "2026-04-16T19:23:14+02:00",
-          "admin_graphql_api_id": "gid://shopify/MediaImage/42859158405442",
-          "width": 2048,
-          "height": 2048,
-          "src": "https://cdn.shopify.com/s/files/1/0999/9987/5394/files/S0a43e9e326da4398989c34d1b7301dc8O.webp?v=1776360194",
-          "variant_ids": [
-            52930330788162
           ]
         },
         {
@@ -8175,7 +8057,7 @@
           "available": true,
           "inventory_quantity": 997,
           "option1": "Lady",
-          "image_id": 52024817516866
+          "image_id": null
         },
         {
           "id": 52930330034498,
@@ -8564,21 +8446,6 @@
           "src": "https://cdn.shopify.com/s/files/1/0999/9987/5394/files/Sdb56c9fba94b4c31838485369a7c1fe8C.webp?v=1776360325",
           "variant_ids": [
             52930329936194
-          ]
-        },
-        {
-          "id": 52024817516866,
-          "alt": "Custom fingerboard complete kit featuring anime bunny graphic wooden deck, metal trucks, and grip tape.",
-          "position": 18,
-          "product_id": 10297128026434,
-          "created_at": "2026-04-16T06:51:15+02:00",
-          "updated_at": "2026-04-16T19:24:15+02:00",
-          "admin_graphql_api_id": "gid://shopify/MediaImage/42859157815618",
-          "width": 2048,
-          "height": 2048,
-          "src": "https://cdn.shopify.com/s/files/1/0999/9987/5394/files/Sfc47131ea4ef465d9f4ede8d10b363bfK.webp?v=1776360255",
-          "variant_ids": [
-            52930330001730
           ]
         }
       ],
@@ -10723,7 +10590,7 @@
           "available": true,
           "inventory_quantity": 19,
           "option1": "Lady",
-          "image_id": 52024809161026
+          "image_id": null
         },
         {
           "id": 52930327806274,
@@ -11100,21 +10967,6 @@
           "src": "https://cdn.shopify.com/s/files/1/0999/9987/5394/files/S0152dbec2ffc40f4bcc414e87b1b8315r.webp?v=1776360318",
           "variant_ids": [
             52930327478594
-          ]
-        },
-        {
-          "id": 52024809161026,
-          "alt": "Fingerboard Lab glossy wooden fingerboard deck featuring an anime bunny girl graphic with holographic background.",
-          "position": 19,
-          "product_id": 10297127764290,
-          "created_at": "2026-04-16T06:49:26+02:00",
-          "updated_at": "2026-04-16T19:26:13+02:00",
-          "admin_graphql_api_id": "gid://shopify/MediaImage/42859149459778",
-          "width": 2048,
-          "height": 2048,
-          "src": "https://cdn.shopify.com/s/files/1/0999/9987/5394/files/Sa68757790402402791e0440094a0b32eL.webp?v=1776360373",
-          "variant_ids": [
-            52930327773506
           ]
         },
         {
@@ -11929,7 +11781,7 @@
           "available": true,
           "inventory_quantity": 6,
           "option1": "Girl",
-          "image_id": 52024808472898
+          "image_id": null
         },
         {
           "id": 52930327413058,
@@ -12072,21 +11924,6 @@
           ]
         },
         {
-          "id": 52024808472898,
-          "alt": "Red wooden fingerboard deck featuring a glossy finish and a black anime character graphic.",
-          "position": 9,
-          "product_id": 10297127731522,
-          "created_at": "2026-04-16T06:49:25+02:00",
-          "updated_at": "2026-04-16T19:20:06+02:00",
-          "admin_graphql_api_id": "gid://shopify/MediaImage/42859148771650",
-          "width": 2000,
-          "height": 2000,
-          "src": "https://cdn.shopify.com/s/files/1/0999/9987/5394/files/Sf2ee266e3ad248ca8c6f6f26c1db48734.webp?v=1776314967",
-          "variant_ids": [
-            52930327380290
-          ]
-        },
-        {
           "id": 52024808505666,
           "alt": "A white wooden fingerboard deck with a glossy finish features a graphic of a black cat with yellow eyes.",
           "position": 10,
@@ -12222,7 +12059,7 @@
           "available": true,
           "inventory_quantity": 1000,
           "option1": "Girl",
-          "image_id": 52024806998338
+          "image_id": null
         },
         {
           "id": 52930326528322,
@@ -12358,21 +12195,6 @@
           "src": "https://cdn.shopify.com/s/files/1/0999/9987/5394/files/S7147b2af5a2b4598ad79656a67ea0dedH.webp?v=1776360318",
           "variant_ids": [
             52930326462786
-          ]
-        },
-        {
-          "id": 52024806998338,
-          "alt": "Wooden fingerboard decks featuring a vintage portrait and natural wood grain.",
-          "position": 4,
-          "product_id": 10297127600450,
-          "created_at": "2026-04-16T06:49:23+02:00",
-          "updated_at": "2026-04-16T19:25:18+02:00",
-          "admin_graphql_api_id": "gid://shopify/MediaImage/42859147297090",
-          "width": 2048,
-          "height": 2048,
-          "src": "https://cdn.shopify.com/s/files/1/0999/9987/5394/files/Sc8872c3240894234bdba1ba9f25c81afI.webp?v=1776360318",
-          "variant_ids": [
-            52930326495554
           ]
         },
         {
@@ -12627,7 +12449,7 @@
         "src": "/products/primary-10297129140553-cleaned.jpg",
         "width": 800,
         "height": 800,
-        "alt": "翻 Team Heritage Reissue Deck — 5-Ply Maple, Shallow Concave — Fingerboard Lab"
+        "alt": "Team Heritage Reissue Deck — 5-Ply Maple, Shallow Concave — Fingerboard Lab"
       }
     },
     {
@@ -30243,15 +30065,6 @@
           "width": 800,
           "height": 800,
           "alt": "Set of six black plastic fingerboard skatepark ramps and obstacles including stairs and quarter pipes."
-        },
-        {
-          "id": 1029712914059104,
-          "product_id": 10297129140591,
-          "position": 2,
-          "src": "https://img.alicdn.com/bao/uploaded/877620063/O1CN01RvQytn1CKtkXirNue_!!877620063.jpg",
-          "width": 800,
-          "height": 800,
-          "alt": "Large black plastic 6-in-1 modular fingerboard skatepark ramp set with stairs, rails, and a complete toy skateboard."
         }
       ],
       "image": {
@@ -34483,32 +34296,6 @@
           "admin_graphql_api_id": "gid://shopify/MediaImage/1029713000000202"
         },
         {
-          "id": 1029713000000203,
-          "product_id": 10297130000002,
-          "position": 4,
-          "src": "https://cbu01.alicdn.com/img/ibank/O1CN01EdsRkG1KudRShNOuz_!!4151531224-0-cib.jpg",
-          "width": 800,
-          "height": 800,
-          "alt": "Multiple metal fingerboard skate tools arranged in a geometric star shape with colored plastic handle grips.",
-          "variant_ids": [],
-          "created_at": "2026-09-20T00:00:00+02:00",
-          "updated_at": "2026-09-20T00:00:00+02:00",
-          "admin_graphql_api_id": "gid://shopify/MediaImage/1029713000000203"
-        },
-        {
-          "id": 1029713000000204,
-          "product_id": 10297130000002,
-          "position": 5,
-          "src": "https://cbu01.alicdn.com/img/ibank/O1CN01Zy8ydG1Kudr7FliQP_!!4151531224-0-cib.jpg",
-          "width": 800,
-          "height": 800,
-          "alt": "A black plastic T-tool for fingerboards with a knurled metal shaft and screwdriver insert.",
-          "variant_ids": [],
-          "created_at": "2026-09-20T00:00:00+02:00",
-          "updated_at": "2026-09-20T00:00:00+02:00",
-          "admin_graphql_api_id": "gid://shopify/MediaImage/1029713000000204"
-        },
-        {
           "id": 1029713000000205,
           "product_id": 10297130000002,
           "position": 6,
@@ -35038,24 +34825,6 @@
       ],
       "images": [
         {
-          "id": 920000000101002,
-          "product_id": 920000000101,
-          "position": 1,
-          "src": "/products/primary-wp-pro-tyler-complete-lifestyle.jpg",
-          "width": 900,
-          "height": 900,
-          "alt": "WP Pro 5-ply maple TYLER fingerboard complete with packaging — Fingerboard Lab"
-        },
-        {
-          "id": 920000000101002,
-          "product_id": 920000000101,
-          "position": 2,
-          "src": "https://img.alicdn.com/imgextra/i2/2217982279826/O1CN01ycI7UA2MSMt3grbJE_!!2217982279826.jpg",
-          "width": 800,
-          "height": 800,
-          "alt": "Red complete fingerboard with graphic bottom sitting next to a black turntable tonearm."
-        },
-        {
           "id": 920000000101003,
           "product_id": 920000000101,
           "position": 3,
@@ -35075,13 +34844,13 @@
         }
       ],
       "image": {
-        "id": 920000000101002,
+        "id": 920000000101003,
         "product_id": 920000000101,
-        "position": 1,
-        "src": "/products/primary-wp-pro-tyler-complete-lifestyle.jpg",
-        "width": 900,
-        "height": 900,
-        "alt": "WP Pro 5-ply maple TYLER fingerboard complete with packaging — Fingerboard Lab"
+        "position": 3,
+        "src": "https://img.alicdn.com/imgextra/i4/2217982279826/O1CN01UfNxM42MSMt8GpqDt_!!2217982279826.jpg",
+        "width": 800,
+        "height": 800,
+        "alt": "Red wooden fingerboard complete with silver metal trucks and white plastic wheels on a surface."
       }
     },
     {
@@ -35116,7 +34885,8 @@
           "available": true,
           "inventory_quantity": 14,
           "weight": 0.15,
-          "weight_unit": "kg"
+          "weight_unit": "kg",
+          "image_id": 920000000102002
         },
         {
           "id": 92000000010202,
@@ -35133,7 +34903,8 @@
           "available": true,
           "inventory_quantity": 14,
           "weight": 0.15,
-          "weight_unit": "kg"
+          "weight_unit": "kg",
+          "image_id": 920000000102001
         }
       ],
       "options": [
@@ -35174,15 +34945,6 @@
           "width": 800,
           "height": 800,
           "alt": "Five black fingerboard decks with colorful skull graphics and White Polar logo lined up on a wooden table."
-        },
-        {
-          "id": 920000000102004,
-          "product_id": 920000000102,
-          "position": 4,
-          "src": "https://img.alicdn.com/imgextra/i1/2217982279826/O1CN01VWKWvr2MSMrjmQZcV_!!2217982279826.jpg",
-          "width": 800,
-          "height": 800,
-          "alt": "White Polar fingerboard wooden decks with skull graphics next to a branded cardboard box."
         }
       ],
       "image": {
@@ -35360,33 +35122,6 @@
           "width": 800,
           "height": 800,
           "alt": "Black plastic fingerboard skate ramp obstacles collection featuring modular quarter pipes and funboxes with mini boards."
-        },
-        {
-          "id": 920000000104002,
-          "product_id": 920000000104,
-          "position": 2,
-          "src": "https://img.alicdn.com/imgextra/i1/403903810/O1CN01B3kBJa1e11q2r0Koz_!!403903810.jpg",
-          "width": 800,
-          "height": 800,
-          "alt": "Black plastic fingerboard ramp and obstacle set with smooth matte finish for finger skateboard tricks."
-        },
-        {
-          "id": 920000000104003,
-          "product_id": 920000000104,
-          "position": 3,
-          "src": "https://img.alicdn.com/imgextra/i1/403903810/O1CN01e4tOh31e11puu780U_!!403903810.jpg",
-          "width": 800,
-          "height": 800,
-          "alt": "Alloy Mini Fingerboard Park Combo Set — Fingerboard Lab"
-        },
-        {
-          "id": 920000000104004,
-          "product_id": 920000000104,
-          "position": 4,
-          "src": "https://img.alicdn.com/imgextra/i4/403903810/O1CN01ThW7AM1e11pxu6cU2_!!403903810.jpg",
-          "width": 800,
-          "height": 800,
-          "alt": "Alloy Mini Fingerboard Park Combo Set — Fingerboard Lab"
         }
       ],
       "image": {

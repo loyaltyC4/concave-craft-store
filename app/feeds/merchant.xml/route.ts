@@ -77,6 +77,7 @@ export async function GET() {
           `<g:availability>${v.availableForSale ? "in_stock" : "out_of_stock"}</g:availability>`,
           `<g:price>${price.toFixed(2)} USD</g:price>`,
           `<g:condition>new</g:condition>`,
+          `<g:brand>${esc("Fingerboard Lab")}</g:brand>`,
           `<g:identifier_exists>no</g:identifier_exists>`,
           `<g:mpn>${esc(v.sku || `FL-${numericId}`)}</g:mpn>`,
           productType ? `<g:product_type>${esc(productType)}</g:product_type>` : "",
