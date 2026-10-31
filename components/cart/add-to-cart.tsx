@@ -74,7 +74,11 @@ export function AddToCart({ product }: { product: Product }) {
     // button, keeping cart logic + analytics in one place.
     <div id="product-add-to-cart">
       <SubmitButton
-        availableForSale={availableForSale}
+        // A product can be in stock while one option (colour, size) is sold
+        // out, so check the variant the shopper picked, not just the product.
+        availableForSale={
+          availableForSale && (finalVariant?.availableForSale ?? true)
+        }
       selectedVariantId={selectedVariantId}
       onClick={() => {
         if (!finalVariant) return;
