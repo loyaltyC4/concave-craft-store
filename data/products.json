@@ -6602,7 +6602,7 @@
       "product_type": "Complete Fingerboards",
       "handle": "professional-wooden-fingerboard-skate-set-with-aluminum-case-mini-finger-skateboard-toy-for-kids-collectors-cool-gift-for",
       "created_at": "2026-04-16T06:53:03+02:00",
-      "updated_at": "2026-08-07T10:00:00+02:00",
+      "updated_at": "2026-11-01T07:00:00+02:00",
       "published_at": "2026-04-16T09:48:05+02:00",
       "template_suffix": null,
       "published_scope": "web",
@@ -6629,25 +6629,6 @@
           "inventory_quantity": 6,
           "option1": "Purple",
           "image_id": null
-        },
-        {
-          "id": 52930338554178,
-          "product_id": 10297129075010,
-          "title": "Black — Gold Trucks",
-          "price": "74.95",
-          "compare_at_price": null,
-          "position": 2,
-          "inventory_policy": "continue",
-          "taxable": false,
-          "sku": "FL-52930338554178",
-          "grams": 240,
-          "weight": 0.24,
-          "weight_unit": "kg",
-          "requires_shipping": true,
-          "available": true,
-          "inventory_quantity": 86,
-          "option1": "Black — Gold Trucks",
-          "image_id": 52024834228546
         },
         {
           "id": 52930338586946,
@@ -6723,7 +6704,7 @@
           "available": true,
           "inventory_quantity": 6,
           "option1": "Blue",
-          "image_id": 52024834588994
+          "image_id": 1029712907501050
         },
         {
           "id": 52930338718018,
@@ -6763,19 +6744,13 @@
       ],
       "images": [
         {
-          "id": 52024834228546,
-          "alt": "Fingerboard complete set neatly stored inside a protective silver metallic display case with foam lining.",
-          "position": 1,
+          "id": 1029712907501050,
           "product_id": 10297129075010,
-          "created_at": "2026-04-16T06:53:04+02:00",
-          "updated_at": "2026-04-16T19:18:07+02:00",
-          "admin_graphql_api_id": "gid://shopify/MediaImage/42859174527298",
-          "width": 850,
-          "height": 850,
-          "src": "/products/primary-10297129075010-cleaned.jpg",
-          "variant_ids": [
-            52930338554178
-          ]
+          "position": 1,
+          "src": "/products/primary-10297129075010-bria2.jpg",
+          "width": 800,
+          "height": 800,
+          "alt": "Blue deck in its aluminium case, plus the complete setup."
         },
         {
           "id": 52024834261314,
@@ -6845,7 +6820,7 @@
         {
           "id": 52024834457922,
           "alt": "A fully assembled purple EBM fingerboard deck displayed inside a silver metal and glass storage case.",
-          "position": 8,
+          "position": 7,
           "product_id": 10297129075010,
           "created_at": "2026-04-16T06:53:04+02:00",
           "updated_at": "2026-04-16T19:18:07+02:00",
@@ -6858,7 +6833,7 @@
         {
           "id": 52024834490690,
           "alt": "Silver metal storage case for fingerboards featuring reinforced corners and a latch closure.",
-          "position": 9,
+          "position": 8,
           "product_id": 10297129075010,
           "created_at": "2026-04-16T06:53:04+02:00",
           "updated_at": "2026-04-16T19:19:20+02:00",
@@ -6871,7 +6846,7 @@
         {
           "id": 52024834556226,
           "alt": "Fingerboard Lab EBM complete fingerboard secured inside a metallic display case with foam lining.",
-          "position": 11,
+          "position": 9,
           "product_id": 10297129075010,
           "created_at": "2026-04-16T06:53:04+02:00",
           "updated_at": "2026-04-16T19:19:20+02:00",
@@ -6884,24 +6859,9 @@
           ]
         },
         {
-          "id": 52024834588994,
-          "alt": "A blue glossy fingerboard deck with white EBM logo inside a silver metal storage case with black foam lining.",
-          "position": 12,
-          "product_id": 10297129075010,
-          "created_at": "2026-04-16T06:53:04+02:00",
-          "updated_at": "2026-04-16T19:18:07+02:00",
-          "admin_graphql_api_id": "gid://shopify/MediaImage/42859174887746",
-          "width": 850,
-          "height": 850,
-          "src": "https://cdn.shopify.com/s/files/1/0999/9987/5394/files/Sd36c1cdc92f74952ae44a86101b0615cu.webp?v=1776359887",
-          "variant_ids": [
-            52930338685250
-          ]
-        },
-        {
           "id": 52024834687298,
           "alt": "Orange fingerboard complete with white logo graphic and yellow wheels stored in a metal display case.",
-          "position": 15,
+          "position": 10,
           "product_id": 10297129075010,
           "created_at": "2026-04-16T06:53:04+02:00",
           "updated_at": "2026-04-16T19:18:07+02:00",
@@ -6915,19 +6875,13 @@
         }
       ],
       "image": {
-        "id": 52024834228546,
-        "alt": "Professional Wooden Fingerboard Skate Set with Aluminum Case Mini Finger Skateboard Toy for Kids & Collectors Cool Gift for - Concave Craft",
-        "position": 1,
+        "id": 1029712907501050,
         "product_id": 10297129075010,
-        "created_at": "2026-04-16T06:53:04+02:00",
-        "updated_at": "2026-04-16T19:18:07+02:00",
-        "admin_graphql_api_id": "gid://shopify/MediaImage/42859174527298",
-        "width": 850,
-        "height": 850,
-        "src": "/products/primary-10297129075010-cleaned.jpg",
-        "variant_ids": [
-          52930338554178
-        ]
+        "position": 1,
+        "src": "/products/primary-10297129075010-bria2.jpg",
+        "width": 800,
+        "height": 800,
+        "alt": "Blue deck in its aluminium case, plus the complete setup."
       }
     },
     {
@@ -6938,7 +6892,7 @@
       "product_type": "Complete Fingerboards",
       "handle": "pro-fingerboard-set-wooden-deck-professional-single-axle-trucks-cnc-wheels-for-finger-skateboard",
       "created_at": "2026-04-16T06:52:57+02:00",
-      "updated_at": "2026-08-07T10:00:00+02:00",
+      "updated_at": "2026-11-01T07:00:00+02:00",
       "published_at": "2026-04-16T09:47:56+02:00",
       "template_suffix": null,
       "published_scope": "web",
@@ -7002,7 +6956,7 @@
           "available": true,
           "inventory_quantity": 19,
           "option1": "Rose Skulls — Silver Trucks",
-          "image_id": 52024831443266
+          "image_id": null
         },
         {
           "id": 52930337472834,
@@ -7021,7 +6975,7 @@
           "available": true,
           "inventory_quantity": 19,
           "option1": "Monsters — Silver Trucks",
-          "image_id": 52024831476034
+          "image_id": 1029712871456250
         },
         {
           "id": 52930337505602,
@@ -7040,7 +6994,7 @@
           "available": true,
           "inventory_quantity": 19,
           "option1": "Rose Skulls — Black Trucks",
-          "image_id": 52024831508802
+          "image_id": 1029712871456251
         },
         {
           "id": 52930337538370,
@@ -7059,7 +7013,7 @@
           "available": true,
           "inventory_quantity": 19,
           "option1": "Monsters — Black Trucks",
-          "image_id": 52024831541570
+          "image_id": 1029712871456252
         },
         {
           "id": 52930337571138,
@@ -7078,7 +7032,7 @@
           "available": true,
           "inventory_quantity": 19,
           "option1": "DJ Elephant — Black Trucks",
-          "image_id": 52024831574338
+          "image_id": 1029712871456253
         },
         {
           "id": 52930337603906,
@@ -7097,7 +7051,7 @@
           "available": true,
           "inventory_quantity": 18,
           "option1": "DJ Elephant — Silver Trucks",
-          "image_id": 52024831607106
+          "image_id": 1029712871456254
         }
       ],
       "options": [
@@ -7119,110 +7073,59 @@
       ],
       "images": [
         {
-          "id": 52024831443266,
-          "alt": "A fingerboard deck featuring a matte black finish with red rose and skull graphics, displayed with trucks, wheels, grip tape, and",
+          "id": 1029712871456250,
+          "product_id": 10297128714562,
+          "position": 1,
+          "src": "/products/primary-10297128714562-bria2.jpg",
+          "width": 800,
+          "height": 800,
+          "alt": "Monsters-graphic complete kit laid out: deck, grip, trucks and wheels."
+        },
+        {
+          "id": 1029712871456251,
+          "product_id": 10297128714562,
+          "position": 2,
+          "src": "/products/gallery-10297128714562-bria-p8_3.jpg",
+          "width": 800,
+          "height": 800,
+          "alt": "Rose Skulls kit with skull-graphic deck."
+        },
+        {
+          "id": 1029712871456252,
+          "product_id": 10297128714562,
           "position": 3,
-          "product_id": 10297128714562,
-          "created_at": "2026-04-16T06:52:59+02:00",
-          "updated_at": "2026-04-16T19:18:25+02:00",
-          "admin_graphql_api_id": "gid://shopify/MediaImage/42859171742018",
+          "src": "/products/gallery-10297128714562-bria-p8_4.jpg",
           "width": 800,
           "height": 800,
-          "src": "https://cdn.shopify.com/s/files/1/0999/9987/5394/files/Sfa6313dea18f464ca328feac71ac2b4fH.webp?v=1776359905",
-          "variant_ids": [
-            52930337440066
-          ]
+          "alt": "Monsters kit with deck and hardware laid out."
         },
         {
-          "id": 52024831476034,
-          "alt": "A complete fingerboard kit featuring a graphic wooden deck, metal trucks, white wheels, grip tape, and tool.",
+          "id": 1029712871456253,
+          "product_id": 10297128714562,
           "position": 4,
-          "product_id": 10297128714562,
-          "created_at": "2026-04-16T06:52:59+02:00",
-          "updated_at": "2026-04-16T19:18:25+02:00",
-          "admin_graphql_api_id": "gid://shopify/MediaImage/42859171774786",
+          "src": "/products/gallery-10297128714562-bria-p8_5.jpg",
           "width": 800,
           "height": 800,
-          "src": "https://cdn.shopify.com/s/files/1/0999/9987/5394/files/S0c87aa47655d491bb3699e42b0e5edf0v.webp?v=1776359905",
-          "variant_ids": [
-            52930337472834
-          ]
+          "alt": "DJ Elephant kit with deck, trucks and wheels."
         },
         {
-          "id": 52024831508802,
-          "alt": "Fingerboard complete kit featuring a skull and rose graphic wooden deck, black foam grip tape, trucks, and wheels.",
+          "id": 1029712871456254,
+          "product_id": 10297128714562,
           "position": 5,
-          "product_id": 10297128714562,
-          "created_at": "2026-04-16T06:52:59+02:00",
-          "updated_at": "2026-04-16T19:18:25+02:00",
-          "admin_graphql_api_id": "gid://shopify/MediaImage/42859171807554",
+          "src": "/products/gallery-10297128714562-bria-p8_6.jpg",
           "width": 800,
           "height": 800,
-          "src": "https://cdn.shopify.com/s/files/1/0999/9987/5394/files/S6875194a593548468dbf27eca49ddab8T.webp?v=1776359905",
-          "variant_ids": [
-            52930337505602
-          ]
-        },
-        {
-          "id": 52024831541570,
-          "alt": "Fingerboard Lab complete anti-once graphic wooden fingerboard set with black trucks, wheels, tape, and tool.",
-          "position": 6,
-          "product_id": 10297128714562,
-          "created_at": "2026-04-16T06:52:59+02:00",
-          "updated_at": "2026-04-16T19:18:25+02:00",
-          "admin_graphql_api_id": "gid://shopify/MediaImage/42859171840322",
-          "width": 800,
-          "height": 800,
-          "src": "https://cdn.shopify.com/s/files/1/0999/9987/5394/files/S21c29860540245b79cd3eceaa44027372.webp?v=1776359905",
-          "variant_ids": [
-            52930337538370
-          ]
-        },
-        {
-          "id": 52024831574338,
-          "alt": "Fingerboard complete set with a colorful graphic wooden deck, black trucks, wheels, tape, and a tool.",
-          "position": 7,
-          "product_id": 10297128714562,
-          "created_at": "2026-04-16T06:52:59+02:00",
-          "updated_at": "2026-04-16T19:18:24+02:00",
-          "admin_graphql_api_id": "gid://shopify/MediaImage/42859171873090",
-          "width": 800,
-          "height": 800,
-          "src": "https://cdn.shopify.com/s/files/1/0999/9987/5394/files/Sdf702969a7e44268bbe9297f8f7d014dU.webp?v=1776359904",
-          "variant_ids": [
-            52930337571138
-          ]
-        },
-        {
-          "id": 52024831607106,
-          "alt": "Fingerboard assembly kit including a graphic deck, metal trucks, wheels, tape, and tool.",
-          "position": 8,
-          "product_id": 10297128714562,
-          "created_at": "2026-04-16T06:52:59+02:00",
-          "updated_at": "2026-04-16T19:18:25+02:00",
-          "admin_graphql_api_id": "gid://shopify/MediaImage/42859171905858",
-          "width": 800,
-          "height": 800,
-          "src": "https://cdn.shopify.com/s/files/1/0999/9987/5394/files/S36637d10e11a4ff2bd587701742c4e46R.webp?v=1776359905",
-          "variant_ids": [
-            52930337603906
-          ]
+          "alt": "Complete kit components laid out neatly."
         }
       ],
       "image": {
-        "id": 52024831443266,
-        "alt": "A fingerboard deck featuring a matte black finish with red rose and skull graphics, displayed with trucks, wheels, grip tape, and",
-        "position": 3,
+        "id": 1029712871456250,
         "product_id": 10297128714562,
-        "created_at": "2026-04-16T06:52:59+02:00",
-        "updated_at": "2026-04-16T19:18:25+02:00",
-        "admin_graphql_api_id": "gid://shopify/MediaImage/42859171742018",
+        "position": 1,
+        "src": "/products/primary-10297128714562-bria2.jpg",
         "width": 800,
         "height": 800,
-        "src": "https://cdn.shopify.com/s/files/1/0999/9987/5394/files/Sfa6313dea18f464ca328feac71ac2b4fH.webp?v=1776359905",
-        "variant_ids": [
-          52930337440066
-        ]
+        "alt": "Monsters-graphic complete kit laid out: deck, grip, trucks and wheels."
       }
     },
     {
