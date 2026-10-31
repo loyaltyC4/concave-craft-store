@@ -4,6 +4,7 @@ import {
 } from "lib/shopify/static-data";
 import { COLLECTIONS, SITE_NAME } from "lib/brand";
 import { baseUrl } from "lib/utils";
+import { FLASH_SALE, isFlashSaleActive, isFlashSaleHandle } from "lib/flash-sale";
 
 /**
  * Google Merchant Center product feed, generated from the same catalog the
@@ -45,6 +46,7 @@ export async function GET() {
     const description = (p.description || p.title).slice(0, 4900);
     const extraImages = p.images.slice(1, 11).map((i) => abs(i.url));
     const multi = p.variants.length > 1;
+    const onSale = isFlashSaleActive() && isFlashSaleHandle(p.handle);
 
     for (const v of p.variants) {
       const price = parseFloat(v.price.amount);
@@ -75,7 +77,16 @@ export async function GET() {
           `<g:image_link>${esc(image)}</g:image_link>`,
           ...extraImages.map((u) => `<g:additional_image_link>${esc(u)}</g:additional_image_link>`),
           `<g:availability>${v.availableForSale ? "in_stock" : "out_of_stock"}</g:availability>`,
-          `<g:price>${price.toFixed(2)} USD</g:price>`,
+          // During a dated sale, send the regular price plus a sale price
+          // with its window, so Shopping shows the markdown and Google drops
+          // it on time even if this feed is cached.
+          ...(onSale && v.compareAtPrice
+            ? [
+                `<g:price>${parseFloat(v.compareAtPrice.amount).toFixed(2)} USD</g:price>`,
+                `<g:sale_price>${price.toFixed(2)} USD</g:sale_price>`,
+                `<g:sale_price_effective_date>${FLASH_SALE.startsAt}/${FLASH_SALE.endsAt}</g:sale_price_effective_date>`,
+              ]
+            : [`<g:price>${price.toFixed(2)} USD</g:price>`]),
           `<g:condition>new</g:condition>`,
           `<g:brand>${esc("Fingerboard Lab")}</g:brand>`,
           `<g:identifier_exists>no</g:identifier_exists>`,

@@ -75,7 +75,11 @@ export function ProductDescription({ product }: { product: Product }) {
               />
             </span>
             <span className="rounded-full border border-[#c5f23c]/40 bg-[#c5f23c]/10 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-[#c5f23c]">
-              Save {saving}%
+              {/* Rule of 100: under $100 a percentage reads bigger, from
+                  $100 up the dollar amount does. */}
+              {parseFloat(compareAt.amount) >= 100
+                ? `Save $${Math.round(parseFloat(compareAt.amount) - parseFloat(shown.amount))}`
+                : `Save ${saving}%`}
             </span>
           </>
         ) : null}

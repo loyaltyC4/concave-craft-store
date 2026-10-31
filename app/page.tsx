@@ -23,6 +23,11 @@ import {
 } from "lib/brand";
 import homepageData from "data/homepage.json";
 
+// Prices depend on lib/flash-sale.ts, which switches on the real clock.
+// Rebuild this page every 5 minutes so a sale starts and ends on time
+// instead of staying frozen at whatever price was live at deploy.
+export const revalidate = 300;
+
 export const metadata = {
   title: "Fingerboard Trucks, Completes & Molds — Fingerboard Lab",
   description:

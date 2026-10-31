@@ -48,6 +48,13 @@ export async function Navbar() {
 
   return (
     <header className="sticky top-0 z-50">
+      {/* The announcement bar below is hidden on phones, where most visitors
+          are, so a running sale gets its own one-line strip there. */}
+      {saleOn && (
+        <div className="flex justify-center border-b border-white/10 bg-[#0b0c0e] px-4 py-1.5 text-center text-[12px] font-bold tracking-wide sm:hidden">
+          <FlashSaleTicker />
+        </div>
+      )}
       {/* Announcement bar — was black text on the volt-green fill; reported
           unreadable, so flipped to the same dark-bg / bold-volt-text pairing
           used everywhere else on the site instead of black-on-lime. */}

@@ -94,7 +94,9 @@ export function ProductCard({
         )}
         {sale ? (
           <span className="absolute left-3 top-3 z-10 rounded-md bg-[#c5f23c] px-2.5 py-1 text-[10px] font-bold uppercase tracking-wider text-black">
-            Save {salePct}%
+            {parseFloat(sale.was.amount) >= 100
+              ? `Save $${Math.round(parseFloat(sale.was.amount) - parseFloat(sale.now.amount))}`
+              : `Save ${salePct}%`}
           </span>
         ) : badge ? (
           <span className="absolute left-3 top-3 z-10 rounded-md bg-[#c5f23c] px-2.5 py-1 text-[10px] font-bold uppercase tracking-wider text-black">

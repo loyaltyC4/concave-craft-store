@@ -73,6 +73,11 @@ async function Results({
   );
 }
 
+// Prices depend on lib/flash-sale.ts, which switches on the real clock.
+// Rebuild this page every 5 minutes so a sale starts and ends on time
+// instead of staying frozen at whatever price was live at deploy.
+export const revalidate = 300;
+
 export default async function SearchPage(props: {
   searchParams?: Promise<{ [key: string]: string | string[] | undefined }>;
 }) {

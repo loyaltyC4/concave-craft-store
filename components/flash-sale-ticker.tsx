@@ -42,9 +42,9 @@ export function FlashSaleTicker() {
       href="/search/sale"
       className="flex items-center gap-8 text-[#c5f23c] hover:underline"
     >
-      {FLASH_SALE.name} — {FLASH_SALE.discountPct * 100}% off, ends in{" "}
+      {FLASH_SALE.name}: {FLASH_SALE.blurb}, ends in{" "}
       {formatRemaining(remaining)}
-      <span className="text-[#f3f1ea]/30">◆</span>
+      <span className="text-[#f3f1ea]/30 max-sm:hidden">◆</span>
     </Link>
   );
 }

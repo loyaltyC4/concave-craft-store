@@ -15,22 +15,23 @@
  * genuine subset of the catalog.
  */
 
+// The sale covers whole collections rather than a hand-kept list, so a new
+// mold or ramp listing is included automatically.
+// eslint-disable-next-line @typescript-eslint/no-require-imports
+const collectionMap: Record<string, string[]> = require("../data/collection-map.json");
+const SALE_COLLECTIONS = ["deck-building", "ramps-obstacles", "park-kits"];
+
 export const FLASH_SALE = {
-  name: "October Flash Sale",
+  name: "Halloween Sale",
   /** Short label used in the announcement bar / badges. */
-  shortLabel: "October Sale",
-  startsAt: "2026-10-11T18:00:00+10:00",
-  endsAt: "2026-10-18T23:59:59+10:00",
-  discountPct: 0.15,
-  handles: [
-    "alloy-fingerboard-park-set-kicker-stairs-rail",
-    "fingerboard-venue-set-4in1",
-    "alloy-fingerboard-venue-set-modular",
-    "fingerboard-brick-ladder-obstacle-set",
-    "alloy-fingerboard-park-set-4-in-1-terrain-combo",
-    "alloy-mini-fingerboard-park-combo-set",
-    "alloy-fingerboard-scene-set-modular-mini-park-combo",
-  ] as string[],
+  shortLabel: "Halloween Sale",
+  /** What is on sale, in the shopper's words, for the announcement bar. */
+  blurb: "20% off molds, ramps & park kits",
+  startsAt: "2026-10-31T00:00:00-07:00",
+  // Sunday 1 Nov, 23:59 US Pacific (PST from 1 Nov).
+  endsAt: "2026-11-01T23:59:59-08:00",
+  discountPct: 0.2,
+  handles: SALE_COLLECTIONS.flatMap((c) => collectionMap[c] ?? []),
 } as const;
 
 export function isFlashSaleActive(now: Date = new Date()): boolean {
