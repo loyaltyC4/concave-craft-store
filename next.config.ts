@@ -61,6 +61,26 @@ export default {
         permanent: true,
       },
       {
+        source: "/product/team-3-5-series-pro-complete-5-ply-maple-dual-concave",
+        destination: "/search/completes",
+        permanent: true,
+      },
+      {
+        source: "/product/bm-x-team-collab-fingerboard-complete-pro-maple",
+        destination: "/search/completes",
+        permanent: true,
+      },
+      {
+        source: "/product/32mm-colour-laminated-fingerboard-complete-maple-single-axle",
+        destination: "/search/completes",
+        permanent: true,
+      },
+      {
+        source: "/product/ramp-venue-fingerboard-set-of-2",
+        destination: "/search/completes",
+        permanent: true,
+      },
+      {
         // Deleted listings (2026-10-20): send old links to the completes collection, not a 404.
         source: "/product/wp-dyed-series-fingerboard-complete-handmade-maple",
         destination: "/search/completes",
@@ -123,12 +143,12 @@ export default {
       // (missing -x-team-) was never a real product and has no redirect yet.
       {
         source: "/product/blackmarket-x-team-collab-fingerboard-complete-pro-maple",
-        destination: "/product/bm-x-team-collab-fingerboard-complete-pro-maple",
+        destination: "/search/completes",
         permanent: true,
       },
       {
         source: "/product/blackmarket-collab-fingerboard-complete-pro-maple",
-        destination: "/product/bm-x-team-collab-fingerboard-complete-pro-maple",
+        destination: "/search/completes",
         permanent: true,
       },
 
