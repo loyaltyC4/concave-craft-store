@@ -347,14 +347,25 @@ export function CustomBuildConfigurator() {
           >
             −
           </button>
-          <span
-            aria-live="polite"
-            className={`inline-block w-8 text-center text-lg font-semibold transition-transform duration-150 ${
-              qtyPulse ? "scale-150 text-[#c5f23c]" : "scale-100"
+          {/* 2026-11-02 friction fix: buying 4 boards meant four rapid taps on
+              "+", which is both real effort and what PostHog logged as three
+              $rageclick on "+" (/custom). The count is now a direct 1-10
+              selector, so one gesture sets any quantity; the +/- buttons stay
+              for single steps. */}
+          <select
+            aria-label="Number of boards"
+            value={quantity}
+            onChange={(e) => setQuantity(Number(e.target.value))}
+            className={`h-11 cursor-pointer rounded-lg border border-white/15 bg-[#15171c] px-2 text-center text-lg font-semibold text-[#f3f1ea] transition hover:border-[#c5f23c] ${
+              qtyPulse ? "text-[#c5f23c]" : ""
             }`}
           >
-            {quantity}
-          </span>
+            {Array.from({ length: 10 }, (_, i) => i + 1).map((n) => (
+              <option key={n} value={n}>
+                {n}
+              </option>
+            ))}
+          </select>
           <button
             type="button"
             aria-label="Increase quantity"
