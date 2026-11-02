@@ -187,7 +187,7 @@ export default async function RootLayout({
          */}
         <script
           dangerouslySetInnerHTML={{
-            __html: `(function(){try{var u=new URL(location.href);var q=u.searchParams;var out=new URLSearchParams();var changed=false;q.forEach(function(v,k){var key=k.toLowerCase();var isCampaign=key.indexOf('utm_')===0||key==='gclid'||key==='fbclid'||key==='ttclid';if(isCampaign&&v.indexOf('…')>-1){changed=true;var parts=v.split('…');for(var i=0;i<parts.length;i++){var p=parts[i].trim();if(!p)continue;var eq=p.indexOf('=');if(eq>-1){out.append(p.slice(0,eq),p.slice(eq+1));}else if(i===0){out.append(k,p);}}}else{out.append(k,v);}});if(changed){var s=out.toString();history.replaceState(null,'',u.pathname+(s?'?'+s:'')+u.hash);}}catch(e){}})();`,
+            __html: `(function(){try{var u=new URL(location.href);var q=u.searchParams;var out=new URLSearchParams();var changed=false;q.forEach(function(v,k){var key=k.toLowerCase();var isCampaign=key.indexOf('utm_')===0||key==='gclid'||key==='fbclid'||key==='ttclid';if(isCampaign&&v.indexOf('…')>-1){changed=true;var parts=v.split('…');for(var i=0;i<parts.length;i++){var p=parts[i].trim();if(!p)continue;var eq=p.indexOf('=');if(eq>-1){out.append(p.slice(0,eq),p.slice(eq+1));}else if(i===0){out.append(k,p);}}}else{out.append(k,v);}});if(changed){var dedup=new URLSearchParams();var seen={};out.forEach(function(v,k){seen[k]=v;});Object.keys(seen).forEach(function(k){dedup.append(k,seen[k]);});var s=dedup.toString();history.replaceState(null,'',u.pathname+(s?'?'+s:'')+u.hash);}}catch(e){}})();`,
           }}
         />
         {META_PIXEL_ID && (
