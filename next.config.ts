@@ -121,6 +121,11 @@ export default {
         permanent: true,
       },
       {
+        source: "/product/fingerboard-deck-press-mold-style-g",
+        destination: "/search/deck-building",
+        permanent: true,
+      },
+      {
         // Deleted listings (2026-10-20): send old links to the completes collection, not a 404.
         source: "/product/wp-dyed-series-fingerboard-complete-handmade-maple",
         destination: "/search/completes",
