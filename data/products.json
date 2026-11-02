@@ -41432,7 +41432,7 @@
       "body_html": "<p>Wave Platform from Silent's 3D-printed simulation-prop series — realistic street furniture at fingerboard scale.</p><p><strong>Why this one</strong></p><ul><li>3D-printed simulation prop with fine surface detail</li><li>Solid and stable underfoot</li><li>Pairs with any 32–34mm setup</li><li>Part of Silent's street-scene series</li></ul><p><strong>Specifications</strong></p><table><tbody><tr><td><strong>Brand</strong></td><td>Silent</td></tr><tr><td><strong>Type</strong></td><td>Wave Platform prop</td></tr><tr><td><strong>Material</strong></td><td>3D-printed</td></tr></tbody></table><em>Ships directly from our supplier workshop with tracking, arriving in 7–14 business days. Prices in USD; shipping is free on orders over $50. 30-day returns if it is not right for you.</em>",
       "handle": "silent-3d-prop-wave-platform",
       "created_at": "2026-11-02T14:30:00+02:00",
-      "updated_at": "2026-11-02T14:30:00+02:00",
+      "updated_at": "2026-11-02T15:30:00+02:00",
       "published_at": "2026-11-02T14:30:00+02:00",
       "status": "active",
       "published_scope": "web",
@@ -41473,18 +41473,9 @@
       ],
       "images": [
         {
-          "id": 1029713000019102,
-          "product_id": 10297130000191,
-          "position": 1,
-          "src": "/products/primary-10297130000191-b6",
-          "width": 800,
-          "height": 800,
-          "alt": "3D-printed wave-platform fingerboard prop."
-        },
-        {
           "id": 1029713000019103,
           "product_id": 10297130000191,
-          "position": 2,
+          "position": 1,
           "src": "/products/gallery-1058736893633-prop-1",
           "width": 800,
           "height": 800,
@@ -41492,10 +41483,10 @@
         }
       ],
       "image": {
-        "id": 1029713000019102,
+        "id": 1029713000019103,
         "product_id": 10297130000191,
         "position": 1,
-        "src": "/products/primary-10297130000191-b6",
+        "src": "/products/gallery-1058736893633-prop-1",
         "width": 800,
         "height": 800,
         "alt": "3D-printed wave-platform fingerboard prop."
@@ -43069,6 +43060,198 @@
       },
       "seo_title": "Fingerboard Press Mold — B27 Series (3 Concaves)",
       "seo_description": "The B27 press-mold series: high-precision metal-bump molds in three concaves — Q27 shallow, BH25 medium, BD26 deep."
+    },
+    {
+      "id": 10297130000201,
+      "title": "WP Lucky Cat 34mm — Deck or Kit",
+      "body_html": "<p>Lucky Cat on WP's 34mm five-ply maple mid-concave deck — the charm-bringing graphic the seller can barely keep in stock. Deck only, or the self-assembly kit with trucks, wheels and tool.</p><p><strong>Why this one</strong></p><ul><li>Five-ply maple, 34 × 100mm mid concave</li><li>Choose bare deck or self-assembly kit with trucks, wheels and tool</li><li>Lucky Cat graphic</li><li>Packaged in a clear box for gifting</li></ul><em>Ships directly from our supplier workshop with tracking, arriving in 7–14 business days. Prices in USD; shipping is free on orders over $50. 30-day returns if it is not right for you.</em>",
+      "handle": "wp-lucky-cat-34mm-deck-kit",
+      "created_at": "2026-11-02T16:10:00+02:00",
+      "updated_at": "2026-11-02T16:10:00+02:00",
+      "published_at": "2026-11-02T16:10:00+02:00",
+      "status": "active",
+      "published_scope": "web",
+      "template_suffix": null,
+      "tags": "wp lucky cat 34mm — deck or kit",
+      "product_type": "Complete Fingerboards",
+      "vendor": "Fingerboard Lab",
+      "variants": [
+        {
+          "id": 92000000011901,
+          "product_id": 10297130000201,
+          "title": "Deck only",
+          "price": "13.95",
+          "compare_at_price": null,
+          "position": 1,
+          "option1": "Deck only",
+          "inventory_policy": "continue",
+          "taxable": false,
+          "sku": "FL-10297130000201-01",
+          "requires_shipping": true,
+          "available": true,
+          "inventory_quantity": 10,
+          "weight": 0.08,
+          "weight_unit": "kg",
+          "image_id": 1029713000020102
+        },
+        {
+          "id": 92000000011902,
+          "product_id": 10297130000201,
+          "title": "Self-assembly kit",
+          "price": "27.95",
+          "compare_at_price": null,
+          "position": 2,
+          "option1": "Self-assembly kit",
+          "inventory_policy": "continue",
+          "taxable": false,
+          "sku": "FL-10297130000201-02",
+          "requires_shipping": true,
+          "available": true,
+          "inventory_quantity": 4,
+          "weight": 0.08,
+          "weight_unit": "kg",
+          "image_id": 1029713000020103
+        }
+      ],
+      "options": [
+        {
+          "id": 102971300002010,
+          "product_id": 10297130000201,
+          "name": "Kit",
+          "position": 1,
+          "values": [
+            "Deck only",
+            "Self-assembly kit"
+          ]
+        }
+      ],
+      "images": [
+        {
+          "id": 1029713000020102,
+          "product_id": 10297130000201,
+          "position": 1,
+          "src": "/products/primary-10297130000201-b7",
+          "width": 800,
+          "height": 800,
+          "alt": "WP Lucky Cat 34mm five-ply maple deck with cat graphic."
+        },
+        {
+          "id": 1029713000020103,
+          "product_id": 10297130000201,
+          "position": 2,
+          "src": "/products/gallery-10297130000201-2",
+          "width": 800,
+          "height": 800,
+          "alt": "Lucky Cat deck and build parts from the WP kit."
+        }
+      ],
+      "image": {
+        "id": 1029713000020102,
+        "product_id": 10297130000201,
+        "position": 1,
+        "src": "/products/primary-10297130000201-b7",
+        "width": 800,
+        "height": 800,
+        "alt": "WP Lucky Cat 34mm five-ply maple deck with cat graphic."
+      },
+      "seo_title": "WP Lucky Cat 34mm — Deck or Kit",
+      "seo_description": "Lucky Cat on WP's 34mm five-ply maple mid-concave deck — the charm-bringing graphic the seller can barely keep in stock. Deck only, or the self-assemb"
+    },
+    {
+      "id": 10297130000202,
+      "title": "WP Magician 32mm Deck — Shallow Concave",
+      "body_html": "<p>The Magician deck from WP: shallow-concave 32 × 100mm maple in the new Magician graphic. Deck only, or supplied with the truck-and-wheel set.</p><p><strong>Why this one</strong></p><ul><li>Shallow concave — flat-feel tech profile</li><li>32 × 100mm maple deck</li><li>Deck only or with trucks and wheels</li><li>Magician graphic across the deck</li></ul><em>Ships directly from our supplier workshop with tracking, arriving in 7–14 business days. Prices in USD; shipping is free on orders over $50. 30-day returns if it is not right for you.</em>",
+      "handle": "wp-magician-32mm-deck-shallow-concave",
+      "created_at": "2026-11-02T16:10:00+02:00",
+      "updated_at": "2026-11-02T16:10:00+02:00",
+      "published_at": "2026-11-02T16:10:00+02:00",
+      "status": "active",
+      "published_scope": "web",
+      "template_suffix": null,
+      "tags": "wp magician 32mm deck — shallow concave",
+      "product_type": "Complete Fingerboards",
+      "vendor": "Fingerboard Lab",
+      "variants": [
+        {
+          "id": 92000000011903,
+          "product_id": 10297130000202,
+          "title": "Deck only",
+          "price": "11.95",
+          "compare_at_price": null,
+          "position": 1,
+          "option1": "Deck only",
+          "inventory_policy": "continue",
+          "taxable": false,
+          "sku": "FL-10297130000202-01",
+          "requires_shipping": true,
+          "available": true,
+          "inventory_quantity": 10,
+          "weight": 0.08,
+          "weight_unit": "kg",
+          "image_id": 1029713000020203
+        },
+        {
+          "id": 92000000011904,
+          "product_id": 10297130000202,
+          "title": "Deck + trucks & wheels",
+          "price": "23.95",
+          "compare_at_price": null,
+          "position": 2,
+          "option1": "Deck + trucks & wheels",
+          "inventory_policy": "continue",
+          "taxable": false,
+          "sku": "FL-10297130000202-02",
+          "requires_shipping": true,
+          "available": true,
+          "inventory_quantity": 10,
+          "weight": 0.08,
+          "weight_unit": "kg",
+          "image_id": 1029713000020202
+        }
+      ],
+      "options": [
+        {
+          "id": 102971300002020,
+          "product_id": 10297130000202,
+          "name": "Kit",
+          "position": 1,
+          "values": [
+            "Deck only",
+            "Deck + trucks & wheels"
+          ]
+        }
+      ],
+      "images": [
+        {
+          "id": 1029713000020202,
+          "product_id": 10297130000202,
+          "position": 1,
+          "src": "/products/primary-10297130000202-b7",
+          "width": 800,
+          "height": 800,
+          "alt": "WP Magician 32mm shallow-concave deck on its gift box."
+        },
+        {
+          "id": 1029713000020203,
+          "product_id": 10297130000202,
+          "position": 2,
+          "src": "/products/gallery-10297130000202-2",
+          "width": 800,
+          "height": 800,
+          "alt": "Magician graphic deck, top view."
+        }
+      ],
+      "image": {
+        "id": 1029713000020202,
+        "product_id": 10297130000202,
+        "position": 1,
+        "src": "/products/primary-10297130000202-b7",
+        "width": 800,
+        "height": 800,
+        "alt": "WP Magician 32mm shallow-concave deck on its gift box."
+      },
+      "seo_title": "WP Magician 32mm Deck — Shallow Concave",
+      "seo_description": "The Magician deck from WP: shallow-concave 32 × 100mm maple in the new Magician graphic. Deck only, or supplied with the truck-and-wheel set."
     }
   ]
 }
