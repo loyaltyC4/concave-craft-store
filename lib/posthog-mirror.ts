@@ -21,6 +21,32 @@ export type MirrorItem = {
 // GtagItem) can keep a single import statement.
 export type PosthogItem = MirrorItem;
 
+// 2026-11-02 fix: cart-level events (begin_checkout, purchase) must reach
+// PostHog ONCE, with the whole items array — mirroring per item made an
+// N-item order fire N `purchase` events (a 3-item order fired 3, plus one
+// more from lib/posthog.ts, which is why PostHog read 4 purchases / $207.40
+// for one $51.85 order). Single-item events (view_item, add_to_cart) keep
+// using mirrorToPosthog.
+export function mirrorItemsToPosthog(
+  event: "view_item" | "add_to_cart" | "begin_checkout" | "purchase",
+  items: MirrorItem[],
+  currency = "USD",
+  value?: number,
+  transactionId?: string,
+) {
+  if (typeof window === "undefined") return;
+  if (!POSTHOG_KEY) return;
+
+  const props = {
+    site: "fingerboardlab",
+    items,
+    currency,
+    ...(value != null ? { value } : {}),
+    ...(transactionId != null ? { transaction_id: transactionId } : {}),
+  };
+  captureWhenReady(event, props);
+}
+
 export function mirrorToPosthog(
   event: "view_item" | "add_to_cart" | "begin_checkout" | "purchase",
   item: MirrorItem,
@@ -42,10 +68,13 @@ export function mirrorToPosthog(
     ...(value != null ? { value } : {}),
     ...(transactionId != null ? { transaction_id: transactionId } : {}),
   };
+  captureWhenReady(event, props);
+}
 
-  // The PostHog script loads asynchronously. On the Stripe return page the
-  // purchase fires before it is ready, and the old code silently dropped it.
-  // Retry until PostHog can capture, for up to 20 seconds.
+// The PostHog script loads asynchronously. On the Stripe return page the
+// purchase fires before it is ready, and the old code silently dropped it.
+// Retry until PostHog can capture, for up to 20 seconds.
+function captureWhenReady(event: string, props: Record<string, unknown>) {
   const startedAt = Date.now();
   const attempt = () => {
     const ph = (window as { posthog?: { capture?: (e: string, p?: Record<string, unknown>) => void } }).posthog;

@@ -2,7 +2,6 @@
 
 import { useEffect } from "react";
 import { trackPurchase } from "lib/gtag";
-import { trackPurchasePh } from "lib/posthog";
 
 /**
  * Fires the GA4 + PostHog purchase events once per completed Stripe session.
@@ -44,15 +43,9 @@ export function PurchaseTracker({
       items: phItems,
     });
 
-    // PostHog mirror — same event name GA4 uses, same items payload. This is
-    // the first time `purchase` exists in PostHog at all (report: 0 tracked
-    // purchases while the last funnel mile was dark).
-    trackPurchasePh({
-      transactionId,
-      value,
-      currency,
-      items: phItems,
-    });
+    // PostHog is fed by trackPurchase's own mirror (lib/posthog-mirror) —
+    // exactly one `purchase` event with the full items array. This component
+    // used to fire a second PostHog purchase on top, which double-counted.
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [transactionId]);
 

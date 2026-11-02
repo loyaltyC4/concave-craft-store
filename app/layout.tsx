@@ -168,6 +168,28 @@ export default async function RootLayout({
          * afterInteractive; it drains whatever is already queued when it
          * loads, so nothing is lost by it arriving late.
          */}
+        {/*
+         * Campaign-parameter sanitiser (2026-11-02).
+         *
+         * The Meta ad for the Halloween campaign shipped a destination whose
+         * query string had been pasted from a truncated copy, so every "&"
+         * became a literal ellipsis:
+         *
+         *   ?utm_source=facebook&utm_medium=paid_social&utm_campaign=...&utm_content=fl11
+         *   ?utm_source=facebook…utm_content=fl11          <- what actually shipped
+         *
+         * PostHog therefore recorded utm_source = "facebook…utm_content=fl11"
+         * with medium/campaign/content all null, and no Meta traffic could be
+         * attributed. This repairs the URL in place *before* the Meta pixel,
+         * GA4 and PostHog scripts below get to read it, so a broken ad link no
+         * longer means unreadable analytics. It only rewrites the address bar
+         * (history.replaceState) — the server still saw the original request.
+         */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `(function(){try{var u=new URL(location.href);var q=u.searchParams;var out=new URLSearchParams();var changed=false;q.forEach(function(v,k){var key=k.toLowerCase();var isCampaign=key.indexOf('utm_')===0||key==='gclid'||key==='fbclid'||key==='ttclid';if(isCampaign&&v.indexOf('…')>-1){changed=true;var parts=v.split('…');for(var i=0;i<parts.length;i++){var p=parts[i].trim();if(!p)continue;var eq=p.indexOf('=');if(eq>-1){out.append(p.slice(0,eq),p.slice(eq+1));}else if(i===0){out.append(k,p);}}}else{out.append(k,v);}});if(changed){var s=out.toString();history.replaceState(null,'',u.pathname+(s?'?'+s:'')+u.hash);}}catch(e){}})();`,
+          }}
+        />
         {META_PIXEL_ID && (
           <script
             dangerouslySetInnerHTML={{

@@ -40,7 +40,7 @@
 // intercepting fetch / sendBeacon / XHR shows nothing either way. Use the
 // GA4 realtime report as the oracle.
 
-import { mirrorToPosthog, PosthogItem } from "lib/posthog-mirror";
+import { mirrorItemsToPosthog, mirrorToPosthog, PosthogItem } from "lib/posthog-mirror";
 
 /**
  * Queues a gtag.js command, preserving the Arguments-object shape gtag.js
@@ -138,7 +138,8 @@ export function trackBeginCheckout(
 ) {
   gtagEvent("begin_checkout", { currency, value, items });
   fbqTrack("InitiateCheckout", items, value, currency);
-  items.forEach((it) => mirrorToPosthog("begin_checkout", it, currency, value));
+  // 2026-11-02: one PostHog event per checkout, not one per line item.
+  mirrorItemsToPosthog("begin_checkout", items, currency, value);
 }
 
 export function trackPurchase(params: {
@@ -164,9 +165,9 @@ export function trackPurchase(params: {
     });
   }
   fbqTrack("Purchase", params.items, params.value, params.currency, params.transactionId);
-  params.items.forEach((it) =>
-    mirrorToPosthog("purchase", it, params.currency, params.value, params.transactionId),
-  );
+  // 2026-11-02: one PostHog `purchase` per ORDER (was: per item — a 3-item
+  // order produced 3 purchase events and 4x overstated revenue).
+  mirrorItemsToPosthog("purchase", params.items, params.currency, params.value, params.transactionId);
 }
 
 // Keep the posthog item type visible to TS consumers of this module.
