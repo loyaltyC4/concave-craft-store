@@ -1,5 +1,101 @@
 [
  {
+  "slug": "finger-bearing-guide",
+  "title": "Finger Bearing Guide: What It Is, How to Pick, Install & Care",
+  "metaTitle": "Finger Bearing Guide: What It Is, How to Pick, Install & Car",
+  "metaDescription": "Learn everything about finger bearings: definition, performance impact, sizing, installation and maintenance for a smoother fingerboard ride.",
+  "category": "Tuning",
+  "updated": "2026-11-02",
+  "readMinutes": 4,
+  "heroSummary": "Learn everything about finger bearings: definition, performance impact, sizing, installation and maintenance for a smoother fingerboard ride.",
+  "sections": [
+   {
+    "heading": "What is a finger bearing?",
+    "body": [
+     "A finger bearing is the tiny metal (or ceramic) component that lets the wheels spin on a fingerboard. It works like a skateboard bearing but at a fraction of the size. The bearing sits inside the wheel hub and rolls on a set of small steel balls. Those balls reduce friction and keep the wheel turning smoothly.",
+     "Typical finger bearings are made from steel, though some riders opt for ceramic inserts for a lighter feel. The outer ring of the bearing fits snugly into the wheel bore, while the inner ring mates with the axle of the truck."
+    ]
+   },
+   {
+    "heading": "How do finger bearings affect performance?",
+    "body": [
+     "The quality of the bearing directly influences how fast the wheels spin and how consistent the roll feels. A well‑lubricated steel bearing will spin for a decent distance before slowing. Ceramic inserts cut down on friction, giving a slightly quicker spin and a smoother feel.",
+     "Low‑quality bearings often have rough edges or uneven ball spacing. Those imperfections cause wobble, uneven wear and a gritty feel that makes tricks feel sluggish. In contrast, precision‑machined bearings keep the wheel centered and reduce the chance of wobble, which translates to more confidence on ledges and rails.",
+     "Another factor is the bearing's tolerance. Bearings that are too loose will have play in the wheel, while overly tight bearings can bind and stop the wheel from rotating freely. Finding the right tolerance is key for a responsive board."
+    ]
+   },
+   {
+    "heading": "How to choose the right bearing size for your board?",
+    "body": [
+     "Fingerboard wheels come in a standard bore size that matches the most common bearing dimensions. The rule of thumb is to match the bearing to the wheel bore on decks that fall within the typical width range of twenty‑nine to thirty‑six millimetres. If your deck sits at the narrower end of that range, a slightly slimmer bearing may fit better, but most riders stick with the standard size.",
+     "When evaluating bearings, consider these points:",
+     "- Material: Steel is durable and affordable. Ceramic offers smoother spin but can be more fragile.",
+     "- Seal type: Open bearings are easy to clean but let dust in. Sealed bearings keep contaminants out, extending life at the cost of a bit more maintenance when they finally need cleaning.",
+     "- Fit: A snug fit inside the wheel prevents rattling. Too tight a fit can cause the wheel to bind on the axle.",
+     "Most beginners start with standard steel bearings. As skill improves, experimenting with sealed or ceramic options can provide a marginal performance edge."
+    ]
+   },
+   {
+    "heading": "How to install finger bearings on a fingerboard?",
+    "body": [
+     "Installation is quick and requires only a few tools: a small screwdriver, a pair of tweezers and optionally a bearing press. Follow these steps:",
+     "- Remove the wheel from the truck axle by pulling it off gently.",
+     "- Insert the bearing into the wheel bore. Use tweezers to guide it straight, avoiding any tilt.",
+     "- If the bearing sits loosely, press it gently with a bearing press or the tip of a screwdriver wrapped in a cloth. The goal is a snug, flush fit.",
+     "- Re‑attach the wheel to the axle, making sure the bearing stays centered.",
+     "- Spin the wheel by hand. It should rotate freely without wobble. If you feel resistance, check that the bearing is seated correctly and that the axle is clean.",
+     "Remember to keep the axle free of debris. Even a tiny grain of dust can cause the bearing to bind and wear prematurely."
+    ]
+   },
+   {
+    "heading": "How to maintain and clean finger bearings?",
+    "body": [
+     "Regular maintenance extends bearing life and keeps the board feeling fast. The process is similar to cleaning skateboard bearings but on a smaller scale.",
+     "First, remove the wheels to expose the bearings. Use a small container of light oil or a dedicated bearing cleaner. Submerge the bearings and give them a gentle shake. Avoid harsh solvents that can strip lubrication from the steel.",
+     "After cleaning, dry the bearings thoroughly with a lint‑free cloth. Apply a thin layer of light oil to each bearing. The oil should coat the balls and the raceways without pooling.",
+     "Re‑install the bearings and spin the wheels to ensure smooth operation. If the spin feels gritty, repeat the cleaning process.",
+     "For sealed bearings, the cleaning steps are similar but you can skip the disassembly. Simply wipe the outer seal with a dry cloth and apply a small amount of oil to the seal edge.",
+     "Routine checks after each riding session help catch wear early. Look for any looseness, visible scratches on the balls, or rust. Replace bearings that show significant damage to maintain consistent performance."
+    ]
+   },
+   {
+    "heading": "When to upgrade your finger bearings?",
+    "body": [
+     "Upgrading is a personal decision based on riding style and desired feel. Consider an upgrade if you notice any of the following:",
+     "- Reduced spin time after a short ride.",
+     "- Wobble or uneven rotation during tricks.",
+     "- Frequent need to re‑lubricate.",
+     "- Desire for a smoother, faster feel for technical street lines.",
+     "Switching from standard steel to sealed steel bearings can solve dust issues without a major cost increase. Moving to ceramic inserts offers a subtle boost in speed and a premium feel, but the performance gain is most noticeable at higher skill levels.",
+     "The best bearing is the one that matches your board's width, your riding conditions and your tolerance for maintenance. Start with a reliable steel bearing, keep it clean, and upgrade only when the ride no longer feels smooth."
+    ]
+   }
+  ],
+  "faqs": [
+   {
+    "q": "What size bearing fits most fingerboards?",
+    "a": "Bearings that match the common wheel bore size used on decks with widths between twenty‑nine and thirty‑six millimetres are the standard choice."
+   },
+   {
+    "q": "Can I use skateboard bearings on a fingerboard?",
+    "a": "No. Skateboard bearings are too large for the tiny wheel bores of fingerboards."
+   },
+   {
+    "q": "How often should I clean my finger bearings?",
+    "a": "Clean them whenever you notice reduced spin or after a session on dusty surfaces."
+   },
+   {
+    "q": "Do ceramic bearings improve performance?",
+    "a": "Ceramic inserts reduce friction and can feel smoother, but the difference is subtle for most riders."
+   }
+  ],
+  "related": [
+   "fingerboard-deck-materials-explained",
+   "how-to-clean-fingerboard-bearings-and-wheels",
+   "wooden-fingerboard-ramps-diy-park-guide"
+  ]
+ },
+ {
   "slug": "cruiser-fingerboards-guide",
   "title": "Cruiser Fingerboards: Flow Over Flip Tricks",
   "metaTitle": "Cruiser Fingerboards: Flow Over Flip Tricks",
