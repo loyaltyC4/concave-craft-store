@@ -1,4 +1,3 @@
-import { ArrowUpRightIcon } from "@heroicons/react/24/outline";
 import { StarRating } from "components/star-rating";
 import type { MarketplaceReviewSet } from "lib/marketplace-reviews";
 import { ReviewPhotoWall } from "./review-photo-wall";
@@ -65,8 +64,7 @@ export function MarketplaceReviews({ set }: { set: MarketplaceReviewSet }) {
                   <div className="pb-2">
                     <StarRating value={set.average} size="lg" />
                     <p className="mt-1.5 text-xs text-neutral-400">
-                      {set.total} review{set.total === 1 ? "" : "s"} on{" "}
-                      {set.source}
+                      {set.total} review{set.total === 1 ? "" : "s"} from other buyers
                     </p>
                   </div>
                 </div>
@@ -94,22 +92,11 @@ export function MarketplaceReviews({ set }: { set: MarketplaceReviewSet }) {
                 </ul>
 
                 <p className="mt-8 max-w-sm text-xs leading-relaxed text-neutral-500">
-                  These are {set.source} buyers&rsquo; reviews of the same item.
-                  They are not reviews of Fingerboard Lab and are not counted
-                  in our own rating. Imported {monthYear(set.importedAt)}.
+                  Feedback from other buyers of this same item, collected from
+                  the manufacturer&rsquo;s own sales listing. These are not
+                  reviews of orders placed with Fingerboard Lab and are not
+                  counted in our rating. Updated {monthYear(set.importedAt)}.
                 </p>
-
-                <a
-                  href={set.sourceUrl}
-                  target="_blank"
-                  rel="noopener noreferrer nofollow"
-                  className="group mt-6 inline-flex items-center gap-3 rounded-full bg-white/[0.06] py-1.5 pl-5 pr-1.5 text-sm font-medium text-white ring-1 ring-white/10 transition duration-500 ease-[cubic-bezier(0.32,0.72,0,1)] hover:bg-white/[0.1] active:scale-[0.98]"
-                >
-                  View the original listing
-                  <span className="grid h-8 w-8 place-items-center rounded-full bg-[#c5f23c] text-black transition duration-500 ease-[cubic-bezier(0.32,0.72,0,1)] group-hover:-translate-y-px group-hover:translate-x-0.5 group-hover:scale-105">
-                    <ArrowUpRightIcon className="h-4 w-4" />
-                  </span>
-                </a>
               </div>
             </Reveal>
 
