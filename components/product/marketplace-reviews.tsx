@@ -32,7 +32,8 @@ function monthYear(iso: string): string {
  */
 export function MarketplaceReviews({ set }: { set: MarketplaceReviewSet }) {
   const photos = set.reviews.flatMap((r) => r.photos);
-  const max = Math.max(...set.histogram, 1);
+  const hist = set.histogram;
+  const max = Math.max(...(hist ?? [0]), 1);
   const withText = set.reviews.filter((r) => r.text);
 
   return (
@@ -57,39 +58,52 @@ export function MarketplaceReviews({ set }: { set: MarketplaceReviewSet }) {
                   What buyers say about this exact item
                 </h2>
 
-                <div className="mt-8 flex items-end gap-4">
-                  <span className="text-7xl font-semibold leading-none tracking-tighter text-white md:text-8xl">
-                    {set.average.toFixed(1)}
-                  </span>
-                  <div className="pb-2">
-                    <StarRating value={set.average} size="lg" />
-                    <p className="mt-1.5 text-xs text-neutral-400">
-                      {set.total} review{set.total === 1 ? "" : "s"} from other buyers
+                {set.average != null && hist ? (
+                  <>
+                    <div className="mt-8 flex items-end gap-4">
+                      <span className="text-7xl font-semibold leading-none tracking-tighter text-white md:text-8xl">
+                        {set.average.toFixed(1)}
+                      </span>
+                      <div className="pb-2">
+                        <StarRating value={set.average} size="lg" />
+                        <p className="mt-1.5 text-xs text-neutral-400">
+                          {set.total} review{set.total === 1 ? "" : "s"} from other buyers
+                        </p>
+                      </div>
+                    </div>
+
+                    <ul className="mt-8 space-y-2.5 text-xs text-neutral-400">
+                      {[5, 4, 3, 2, 1].map((n) => {
+                        const count = hist[n - 1] ?? 0;
+                        return (
+                          <li key={n} className="flex items-center gap-3">
+                            <span className="w-9 tabular-nums">{n} star</span>
+                            <span className="flex-1">
+                              <span
+                                className="block h-1 rounded-full bg-[#c5f23c]"
+                                style={{
+                                  width: `${Math.max((count / max) * 100, count ? 3 : 0)}%`,
+                                }}
+                              />
+                            </span>
+                            <span className="w-7 text-right tabular-nums text-neutral-300">
+                              {count}
+                            </span>
+                          </li>
+                        );
+                      })}
+                    </ul>
+                  </>
+                ) : (
+                  <div className="mt-8">
+                    <span className="text-7xl font-semibold leading-none tracking-tighter text-white md:text-8xl">
+                      {set.positivePct ?? 0}%
+                    </span>
+                    <p className="mt-3 text-xs text-neutral-400">
+                      positive across {set.total} rating{set.total === 1 ? "" : "s"} from other buyers
                     </p>
                   </div>
-                </div>
-
-                <ul className="mt-8 space-y-2.5 text-xs text-neutral-400">
-                  {[5, 4, 3, 2, 1].map((n) => {
-                    const count = set.histogram[n - 1] ?? 0;
-                    return (
-                      <li key={n} className="flex items-center gap-3">
-                        <span className="w-9 tabular-nums">{n} star</span>
-                        <span className="flex-1">
-                          <span
-                            className="block h-1 rounded-full bg-[#c5f23c]"
-                            style={{
-                              width: `${Math.max((count / max) * 100, count ? 3 : 0)}%`,
-                            }}
-                          />
-                        </span>
-                        <span className="w-7 text-right tabular-nums text-neutral-300">
-                          {count}
-                        </span>
-                      </li>
-                    );
-                  })}
-                </ul>
+                )}
 
                 <p className="mt-8 max-w-sm text-xs leading-relaxed text-neutral-500">
                   Feedback from other buyers of this same item, collected from

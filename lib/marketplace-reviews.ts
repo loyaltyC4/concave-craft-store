@@ -13,9 +13,11 @@ export type MarketplaceReviewSet = {
   itemId: string;
   sourceUrl: string;
   total: number;
-  average: number;
+  /** Null when the source has no star scale (positive share is used instead). */
+  average: number | null;
+  positivePct?: number;
   /** Counts for 1..5 stars, as reported by the marketplace listing. */
-  histogram: number[];
+  histogram: number[] | null;
   importedAt: string;
   reviews: MarketplaceReview[];
 };
@@ -30,5 +32,8 @@ export function getMarketplaceReviews(
   handle: string,
 ): MarketplaceReviewSet | null {
   const set = (data as Record<string, MarketplaceReviewSet>)[handle];
-  return set && set.reviews.length > 0 ? set : null;
+  if (!set || set.reviews.length === 0) return null;
+  const photos = set.reviews.some((r) => r.photos.length > 0);
+  // A single text-only review is too thin to show.
+  return set.reviews.length >= 2 || photos ? set : null;
 }
