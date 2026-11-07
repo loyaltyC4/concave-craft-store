@@ -95,7 +95,7 @@ export function ReviewsSection({
       <div className="flex flex-wrap items-center justify-between gap-4">
         <div>
           <h2 className="text-xl font-semibold">Reviews</h2>
-          {count > 0 ? (
+          {count > 0 && (
             <div className="mt-2 flex items-center gap-3">
               <StarRating value={average} size="lg" />
               <span className="text-sm text-neutral-400">
