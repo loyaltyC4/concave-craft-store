@@ -31,8 +31,15 @@ function getPrice(p: { variants: Array<{ price: string }> }): number | null {
   return Number.isFinite(n) ? n : null;
 }
 
+// Items whose supplier cost leaves no room for a 20% discount.
+const SALE_EXCLUDED_PREFIXES = [
+  "new-street-shape-fingerboard-wheels",
+  "cnc-fingerboard-wheels-swirl-color",
+];
+
 const SITEWIDE_HANDLES = productsData.products
   .filter((p) => {
+    if (SALE_EXCLUDED_PREFIXES.some((x) => p.handle.startsWith(x))) return false;
     const price = getPrice(p);
     return price !== null && price >= MIN_SALE_PRICE;
   })
