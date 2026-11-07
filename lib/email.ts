@@ -463,27 +463,32 @@ export async function sendAbandonedCartEmail(params: {
   currency: string;
   recoveryUrl: string;
 }): Promise<{ sent: boolean }> {
-  if (!isResendConfigured()) return { sent: false };
-  const from =
-    process.env.RESEND_FROM_EMAIL || "Fingerboard Lab <onboarding@resend.dev>";
-  try {
-    const res = await fetch("https://api.resend.com/emails", {
-      method: "POST",
-      headers: {
-        Authorization: `Bearer ${process.env.RESEND_API_KEY}`,
-        "content-type": "application/json",
-      },
-      body: JSON.stringify({
-        from,
-        to: [params.to],
-        subject: `Your ${SITE_NAME} cart is waiting (10% off inside)`,
-        html: abandonedCartHtml(params),
-      }),
-    });
-    return { sent: res.ok };
-  } catch {
-    return { sent: false };
-  }
+  // Sent through Bird like every other store email. This used to call Resend,
+  // which was never configured for this store, so no reminder was ever sent.
+  if (!params.to || !params.recoveryUrl) return { sent: false };
+  const lines = params.items
+    .map(
+      (it) =>
+        `- ${it.title} x ${it.quantity}: ${money(it.unitAmount * it.quantity, params.currency)}`,
+    )
+    .join("\n");
+  const text = [
+    "Your setup is still in the cart.",
+    "",
+    `You left before checking out. We saved everything. Use code ${WELCOME_DISCOUNT_CODE} at checkout for 10% off your first order.`,
+    "",
+    lines,
+    "",
+    `Finish checkout: ${params.recoveryUrl}`,
+    "",
+    `${SITE_NAME}. You got this because you started a checkout. Reply "stop" and we will not email again.`,
+  ].join("\n");
+  return birdSend({
+    to: params.to,
+    subject: `Your ${SITE_NAME} cart is waiting (10% off inside)`,
+    html: abandonedCartHtml(params),
+    text,
+  });
 }
 
 // ---------------------------------------------------------------------------

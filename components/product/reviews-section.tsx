@@ -106,7 +106,7 @@ export function ReviewsSection({
           ) : (
             <div className="mt-2">
               <p className="text-sm text-neutral-400">
-                No reviews yet — be the first to share how it rides.
+                No reviews yet. Leave a review and tell other riders how it rides.
               </p>
               <p className="mt-1 text-xs text-neutral-500">
                 Snapped a photo of your setup? Mention it in your review — real
@@ -119,11 +119,7 @@ export function ReviewsSection({
           onClick={() => setFormOpen((v) => !v)}
           className="rounded-full border border-white/20 px-5 py-2.5 text-sm font-semibold transition hover:border-[#c5f23c] hover:text-[#c5f23c]"
         >
-          {formOpen
-            ? "Cancel"
-            : count > 0
-              ? "Write a review"
-              : "Write the first review"}
+          {formOpen ? "Cancel" : "Leave a review"}
         </button>
       </div>
 
