@@ -15,23 +15,40 @@
  * genuine subset of the catalog.
  */
 
-// The sale covers whole collections rather than a hand-kept list, so a new
-// mold or ramp listing is included automatically.
 // eslint-disable-next-line @typescript-eslint/no-require-imports
-const collectionMap: Record<string, string[]> = require("../data/collection-map.json");
-const SALE_COLLECTIONS = ["deck-building", "ramps-obstacles", "park-kits"];
+const productsData: { products: Array<{ handle: string; variants: Array<{ price: string }> }> } = require("../data/products.json");
+
+// Sitewide this round, but gated by price: only items that weren't already
+// cheap to begin with. Keeps the entry-level completes, basic grip tape and
+// small tuning parts off the sale instead of discounting prices that are
+// already low.
+const MIN_SALE_PRICE = 35;
+
+function getPrice(p: { variants: Array<{ price: string }> }): number | null {
+  const raw = p.variants?.[0]?.price;
+  if (raw == null) return null;
+  const n = Number(raw);
+  return Number.isFinite(n) ? n : null;
+}
+
+const SITEWIDE_HANDLES = productsData.products
+  .filter((p) => {
+    const price = getPrice(p);
+    return price !== null && price >= MIN_SALE_PRICE;
+  })
+  .map((p) => p.handle);
 
 export const FLASH_SALE = {
   name: "Halloween Sale",
   /** Short label used in the announcement bar / badges. */
   shortLabel: "Halloween Sale",
   /** What is on sale, in the shopper's words, for the announcement bar. */
-  blurb: "20% off molds, ramps & park kits",
+  blurb: "20% off sitewide (excludes already-low prices)",
   startsAt: "2026-10-31T00:00:00-07:00",
-  // Sunday 1 Nov, 23:59 US Pacific (PST from 1 Nov).
-  endsAt: "2026-11-01T23:59:59-08:00",
+  // Extended one more week: Friday 14 Nov, 23:59 US Pacific.
+  endsAt: "2026-11-14T23:59:59-08:00",
   discountPct: 0.2,
-  handles: SALE_COLLECTIONS.flatMap((c) => collectionMap[c] ?? []),
+  handles: SITEWIDE_HANDLES,
 } as const;
 
 export function isFlashSaleActive(now: Date = new Date()): boolean {
