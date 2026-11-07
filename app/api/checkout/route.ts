@@ -33,7 +33,7 @@ export async function POST(req: NextRequest) {
     );
   }
 
-  let body: { lines?: IncomingLine[] };
+  let body: { lines?: IncomingLine[]; email?: string };
   try {
     body = await req.json();
   } catch {
@@ -170,6 +170,9 @@ export async function POST(req: NextRequest) {
         },
       };
 
+  const rawEmail = (body.email || "").trim().toLowerCase();
+  const prefillEmail = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(rawEmail) && rawEmail.length <= 160 ? rawEmail : null;
+
   try {
     const session = await stripe.checkout.sessions.create({
       mode: "payment",
@@ -180,6 +183,9 @@ export async function POST(req: NextRequest) {
       },
       shipping_options: [standardShippingOption],
       allow_promotion_codes: true,
+      // Prefill the email the shopper gave in the cart. It also means an
+      // abandoned checkout carries an address we can send a reminder to.
+      ...(prefillEmail ? { customer_email: prefillEmail } : {}),
       // Abandoned-cart recovery: expire after 1h (Stripe minimum is 30 min) and keep
       // a recovery link. consent_collection is not available for this Stripe
       // account's country (it fails every session), so it must not be sent.

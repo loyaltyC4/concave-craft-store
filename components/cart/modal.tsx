@@ -20,6 +20,7 @@ import { Fragment, useEffect, useState } from "react";
 import { toast } from "sonner";
 import { useCart } from "./cart-context";
 import { DeleteItemButton } from "./delete-item-button";
+import { CartEmailCapture } from "./cart-email-capture";
 import { EditItemQuantityButton } from "./edit-item-quantity-button";
 import { FreeShippingBar } from "./free-shipping-bar";
 import { CartCrossSell } from "./cart-cross-sell";
@@ -41,6 +42,7 @@ export default function CartModal() {
   const { cart, updateCartItem, reconcileCart } = useCart();
   const [isOpen, setIsOpen] = useState(false);
   const [loading, setLoading] = useState(false);
+  const [email, setEmail] = useState("");
   const openCart = () => setIsOpen(true);
   const closeCart = () => setIsOpen(false);
 
@@ -53,6 +55,28 @@ export default function CartModal() {
     window.addEventListener("fbl:cart-added", onAdded);
     return () => window.removeEventListener("fbl:cart-added", onAdded);
   }, []);
+
+  useEffect(() => {
+    try {
+      const saved = window.localStorage.getItem("fbl_cart_email");
+      if (saved) setEmail(saved);
+    } catch {}
+    if (new URLSearchParams(window.location.search).get("cart") === "open") {
+      setIsOpen(true);
+    }
+  }, []);
+
+  function cartItemsPayload() {
+    return (cart?.lines ?? []).map((l) => ({
+      title: l.merchandise.product.title,
+      quantity: l.quantity,
+      unitAmount: Math.round(
+        (l.quantity > 0
+          ? Number(l.cost.totalAmount.amount) / l.quantity
+          : Number(l.cost.totalAmount.amount)) * 100,
+      ),
+    }));
+  }
 
   async function handleCheckout() {
     if (!cart || cart.lines.length === 0) return;
@@ -72,11 +96,30 @@ export default function CartModal() {
     );
 
     setLoading(true);
+    const typedEmail = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(email.trim())
+      ? email.trim()
+      : "";
+    if (typedEmail) {
+      try {
+        window.localStorage.setItem("fbl_cart_email", typedEmail);
+      } catch {}
+      // Store only (silent): they are already heading to checkout.
+      fetch("/api/cart-lead", {
+        method: "POST",
+        headers: { "content-type": "application/json" },
+        body: JSON.stringify({
+          email: typedEmail,
+          items: cartItemsPayload(),
+          silent: true,
+        }),
+      }).catch(() => {});
+    }
     try {
       const res = await fetch("/api/checkout", {
         method: "POST",
         headers: { "content-type": "application/json" },
         body: JSON.stringify({
+          ...(typedEmail ? { email: typedEmail } : {}),
           lines: cart.lines.map((l) => ({
             merchandiseId: l.merchandise.id,
             quantity: l.quantity,
@@ -330,6 +373,11 @@ export default function CartModal() {
                       />
                     </div>
                   </div>
+                  <CartEmailCapture
+                    email={email}
+                    setEmail={setEmail}
+                    getItems={cartItemsPayload}
+                  />
                   <button
                     onClick={handleCheckout}
                     disabled={loading}

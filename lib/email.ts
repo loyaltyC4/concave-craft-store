@@ -491,6 +491,46 @@ export async function sendAbandonedCartEmail(params: {
   });
 }
 
+/** One-time "your cart is saved" email, sent when a shopper asks for it in the cart. */
+export async function sendCartSavedEmail(params: {
+  to: string;
+  items: { title: string; quantity: number; unitAmount: number }[];
+  amountTotal: number;
+  currency: string;
+}): Promise<{ sent: boolean }> {
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://fingerboardlab.com";
+  // Opens the cart drawer on the shopper's own browser, where the cart is saved.
+  const cartUrl = `${siteUrl}/?cart=open`;
+  const base = {
+    items: params.items,
+    amountTotal: params.amountTotal,
+    currency: params.currency,
+    recoveryUrl: cartUrl,
+  };
+  const lines = params.items
+    .map(
+      (it) =>
+        `- ${it.title} x ${it.quantity}: ${money(it.unitAmount * it.quantity, params.currency)}`,
+    )
+    .join("\n");
+  return birdSend({
+    to: params.to,
+    subject: `Your ${SITE_NAME} cart is saved (10% off inside)`,
+    html: abandonedCartHtml(base),
+    text: [
+      "Your setup is saved.",
+      "",
+      `Use code ${WELCOME_DISCOUNT_CODE} at checkout for 10% off your first order.`,
+      "",
+      lines,
+      "",
+      `Back to your cart: ${cartUrl}`,
+      "",
+      `${SITE_NAME}. You asked us to save your cart. Reply "stop" and we will not email again.`,
+    ].join("\n"),
+  });
+}
+
 // ---------------------------------------------------------------------------
 // Owner / operator notification — custom fingerboard build orders
 // ---------------------------------------------------------------------------
