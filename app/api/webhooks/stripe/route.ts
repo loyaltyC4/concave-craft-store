@@ -240,37 +240,43 @@ export async function POST(req: NextRequest) {
     session.customer_details?.address ??
     null;
 
-  const result = await recordOrder({
-    stripeSessionId: session.id,
-    stripePaymentIntent:
-      typeof session.payment_intent === "string"
-        ? session.payment_intent
-        : null,
-    customerEmail: session.customer_details?.email || null,
-    customerName: session.customer_details?.name || null,
-    shippingAddress,
-    amountSubtotal: session.amount_subtotal ?? null,
-    amountShipping: session.total_details?.amount_shipping ?? null,
-    amountTotal: session.amount_total ?? 0,
-    currency: session.currency || "usd",
-    items,
-  });
-
-  if (!result) {
-    // Supabase not configured — acknowledge Stripe (avoid endless retries
-    // over a config gap on our side) but make it loud in server logs.
-    console.warn(
-      "Order not recorded: Supabase isn't configured (SUPABASE_URL/SUPABASE_SERVICE_ROLE_KEY).",
-    );
-    return NextResponse.json({ received: true, recorded: false });
+  // Emails must never depend on the database: if Supabase is unconfigured,
+  // missing a table, or down, the customer confirmation and the owner alert
+  // still go out. The DB row is best-effort bookkeeping.
+  let result: { orderId: string; isNew: boolean } | null = null;
+  try {
+    result = await recordOrder({
+      stripeSessionId: session.id,
+      stripePaymentIntent:
+        typeof session.payment_intent === "string"
+          ? session.payment_intent
+          : null,
+      customerEmail: session.customer_details?.email || null,
+      customerName: session.customer_details?.name || null,
+      shippingAddress,
+      amountSubtotal: session.amount_subtotal ?? null,
+      amountShipping: session.total_details?.amount_shipping ?? null,
+      amountTotal: session.amount_total ?? 0,
+      currency: session.currency || "usd",
+      items,
+    });
+  } catch (err) {
+    console.error("recordOrder threw:", err);
   }
 
-  if (result.isNew) {
-    await decrementInventory(items);
+  if (!result) {
+    console.warn(
+      "Order not recorded in Supabase (unconfigured, table missing or insert failed). Sending emails anyway.",
+    );
+  }
+
+  const orderRef = result?.orderId ?? session.id;
+  if (!result || result.isNew) {
+    if (result) await decrementInventory(items);
 
     // Customer-facing order number: prefer the Stripe receipt number (what the
     // buyer sees on their card receipt), else the /track order id prefix.
-    let orderNumber = result.orderId.slice(0, 8).toUpperCase();
+    let orderNumber = (result ? orderRef.slice(0, 8) : orderRef.slice(-8)).toUpperCase();
     if (typeof session.payment_intent === "string") {
       try {
         const charges = await stripe.charges.list({
@@ -302,7 +308,7 @@ export async function POST(req: NextRequest) {
 
     await sendOrderConfirmationEmail({
       to: session.customer_details?.email || null,
-      orderId: result.orderId,
+      orderId: orderRef,
       orderNumber,
       customerName: session.customer_details?.name || null,
       items: itemsWithEmailData,
@@ -317,7 +323,7 @@ export async function POST(req: NextRequest) {
 
     // Owner notification: direct, plain, spam-proof — who ordered what.
     await sendOwnerOrderAlert({
-      orderId: result.orderId,
+      orderId: orderRef,
       orderNumber,
       customerName: session.customer_details?.name || null,
       customerEmail: session.customer_details?.email || null,
@@ -330,5 +336,5 @@ export async function POST(req: NextRequest) {
     });
   }
 
-  return NextResponse.json({ received: true, orderId: result.orderId });
+  return NextResponse.json({ received: true, orderId: orderRef });
 }

@@ -42,8 +42,10 @@ export async function POST(req: NextRequest) {
 
   const supabase = getSupabase();
   if (!supabase) {
-    // Still let the shopper carry on: the email just is not stored.
-    return NextResponse.json({ ok: true, stored: false, emailed: false });
+    // Not stored, but the shopper still gets their saved-cart email.
+    if (body.silent) return NextResponse.json({ ok: true, stored: false, emailed: false });
+    const r = await sendCartSavedEmail({ to: email, items, amountTotal, currency: "usd" });
+    return NextResponse.json({ ok: true, stored: false, emailed: r.sent });
   }
 
   const sessionId = `lead_${createHash("sha256").update(email).digest("hex").slice(0, 24)}`;
@@ -70,7 +72,9 @@ export async function POST(req: NextRequest) {
     });
     if (error) {
       console.error("cart lead insert failed:", error.message);
-      return NextResponse.json({ ok: true, stored: false, emailed: false });
+      if (body.silent) return NextResponse.json({ ok: true, stored: false, emailed: false });
+      const r = await sendCartSavedEmail({ to: email, items, amountTotal, currency: "usd" });
+      return NextResponse.json({ ok: true, stored: false, emailed: r.sent });
     }
   }
 

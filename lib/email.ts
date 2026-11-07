@@ -121,7 +121,7 @@ type BrandedOrderParams = {
  * The branded dark order-confirmation template (matches the hand-sent
  * confirmation format used for the first FBL order).
  */
-function brandedOrderEmailHtml(p: BrandedOrderParams): string {
+export function brandedOrderEmailHtml(p: BrandedOrderParams): string {
   const accent = "#c8ff3d";
   const itemRows = p.items
     .map((it) => {
@@ -322,7 +322,7 @@ function brandedOrderEmailHtml(p: BrandedOrderParams): string {
   </html>`;
 }
 
-function brandedOrderEmailText(p: BrandedOrderParams): string {
+export function brandedOrderEmailText(p: BrandedOrderParams): string {
   const a = p.shippingAddress || {};
   const addr = [a.line1, a.line2, a.city, a.state, a.postal_code, a.country]
     .filter(Boolean)
