@@ -105,11 +105,8 @@ export function MarketplaceReviews({ set }: { set: MarketplaceReviewSet }) {
                   </div>
                 )}
 
-                <p className="mt-8 max-w-sm text-xs leading-relaxed text-neutral-500">
-                  Feedback from other buyers of this same item, collected from
-                  the manufacturer&rsquo;s own sales listing. These are not
-                  reviews of orders placed with Fingerboard Lab and are not
-                  counted in our rating. Updated {monthYear(set.importedAt)}.
+                <p className="mt-6 max-w-xs text-[11px] leading-relaxed text-neutral-500">
+                  From buyers of this same item, not Fingerboard Lab orders.
                 </p>
               </div>
             </Reveal>
