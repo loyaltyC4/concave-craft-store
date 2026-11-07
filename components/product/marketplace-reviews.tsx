@@ -112,7 +112,7 @@ export function MarketplaceReviews({ set }: { set: MarketplaceReviewSet }) {
             </Reveal>
 
             {/* Photos then reviews */}
-            <div className="space-y-10 lg:col-span-8">
+            <div className="min-w-0 space-y-10 lg:col-span-8">
               {photos.length > 0 ? (
                 <Reveal delay={80}>
                   <h3 className="mb-4 text-sm font-medium text-neutral-300">
@@ -122,14 +122,14 @@ export function MarketplaceReviews({ set }: { set: MarketplaceReviewSet }) {
                 </Reveal>
               ) : null}
 
-              <ul className="columns-1 gap-4 md:columns-2 [&>li]:mb-4 [&>li]:break-inside-avoid">
+              <ul className="columns-1 gap-4 md:columns-2 [&>li]:mb-4 [&>li]:min-w-0 [&>li]:break-inside-avoid">
                 {withText.map((r, i) => (
                   <li key={i}>
                     <Reveal delay={Math.min(i, 5) * 60}>
-                      <article className="rounded-[1.5rem] bg-white/[0.025] p-1 ring-1 ring-white/10">
+                      <article className="overflow-hidden rounded-[1.5rem] bg-white/[0.025] p-1 ring-1 ring-white/10">
                         <div className="rounded-[calc(1.5rem-0.25rem)] bg-[#12151a] p-5 shadow-[inset_0_1px_1px_rgba(255,255,255,0.06)]">
                           <StarRating value={r.rating} size="sm" />
-                          <p className="mt-3 text-[15px] leading-relaxed text-neutral-100">
+                          <p className="mt-3 text-[15px] leading-relaxed text-neutral-100 [overflow-wrap:anywhere]">
                             &ldquo;{r.text}&rdquo;
                           </p>
                           {r.photos.length > 0 ? (

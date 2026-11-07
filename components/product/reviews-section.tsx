@@ -103,16 +103,6 @@ export function ReviewsSection({
                 {count === 1 ? "" : "s"}
               </span>
             </div>
-          ) : (
-            <div className="mt-2">
-              <p className="text-sm text-neutral-400">
-                No reviews yet. Leave a review and tell other riders how it rides.
-              </p>
-              <p className="mt-1 text-xs text-neutral-500">
-                Snapped a photo of your setup? Mention it in your review — real
-                builds help other riders choose.
-              </p>
-            </div>
           )}
         </div>
         <button
@@ -194,7 +184,7 @@ export function ReviewsSection({
               {r.title && (
                 <h3 className="mt-2 font-medium text-[#f3f1ea]">{r.title}</h3>
               )}
-              <p className="mt-1 text-sm leading-relaxed text-neutral-300">
+              <p className="mt-1 text-sm leading-relaxed text-neutral-300 [overflow-wrap:anywhere]">
                 {r.body}
               </p>
               <div className="mt-2 flex items-center gap-2 text-xs text-neutral-500">
