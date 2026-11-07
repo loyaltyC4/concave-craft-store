@@ -16,7 +16,7 @@ import { trackBeginCheckout } from "lib/gtag";
 import { createUrl } from "lib/utils";
 import Image from "next/image";
 import Link from "next/link";
-import { Fragment, useEffect, useRef, useState } from "react";
+import { Fragment, useEffect, useState } from "react";
 import { toast } from "sonner";
 import { useCart } from "./cart-context";
 import { DeleteItemButton } from "./delete-item-button";
@@ -41,21 +41,18 @@ export default function CartModal() {
   const { cart, updateCartItem, reconcileCart } = useCart();
   const [isOpen, setIsOpen] = useState(false);
   const [loading, setLoading] = useState(false);
-  const quantityRef = useRef(cart?.totalQuantity);
   const openCart = () => setIsOpen(true);
   const closeCart = () => setIsOpen(false);
 
-  // Open the cart automatically when an item is added.
+  // Open the cart when a shopper adds an item. This used to key off the cart
+  // quantity changing, but the cart hydrates from localStorage after mount, so
+  // every returning visitor with a saved cart got the full-screen drawer
+  // covering each page they opened. An explicit add event avoids that.
   useEffect(() => {
-    if (
-      cart?.totalQuantity &&
-      cart?.totalQuantity !== quantityRef.current &&
-      cart?.totalQuantity > 0
-    ) {
-      if (!isOpen) setIsOpen(true);
-      quantityRef.current = cart?.totalQuantity;
-    }
-  }, [isOpen, cart?.totalQuantity]);
+    const onAdded = () => setIsOpen(true);
+    window.addEventListener("fbl:cart-added", onAdded);
+    return () => window.removeEventListener("fbl:cart-added", onAdded);
+  }, []);
 
   async function handleCheckout() {
     if (!cart || cart.lines.length === 0) return;

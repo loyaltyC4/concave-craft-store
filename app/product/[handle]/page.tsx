@@ -9,6 +9,8 @@ import { StickyAddToCart } from "components/product/sticky-add-to-cart";
 import { ViewItemTracker } from "components/analytics/view-item-tracker";
 import { HIDDEN_PRODUCT_TAG } from "lib/constants";
 import { getProductReviews } from "lib/reviews";
+import { getMarketplaceReviews } from "lib/marketplace-reviews";
+import { MarketplaceReviews } from "components/product/marketplace-reviews";
 import {
   getProduct,
   getProductCollection,
@@ -144,6 +146,7 @@ export default async function ProductPage(props: {
     ? (GUIDES_FOR_COLLECTION[collectionHandle] ?? [])
     : [];
   const { reviews, average, count } = await getProductReviews(product.handle);
+  const marketplaceReviews = getMarketplaceReviews(product.handle);
 
   const productJsonLd = {
     "@context": "https://schema.org",
@@ -269,9 +272,9 @@ export default async function ProductPage(props: {
           <span className="text-neutral-300">{product.title}</span>
         </nav>
 
-        <div className="flex flex-col gap-8 rounded-3xl border border-white/10 bg-[#111317] p-6 md:p-10 lg:flex-row lg:gap-12">
+        <div className="flex flex-col gap-5 rounded-3xl border border-white/10 bg-[#111317] p-3 md:gap-8 md:p-10 lg:flex-row lg:gap-12">
           <div className="h-full w-full basis-full lg:basis-3/5">
-            <div className="rounded-2xl bg-white p-4">
+            <div className="rounded-2xl bg-white p-2 md:p-4">
               <Suspense
                 fallback={
                   <div className="relative aspect-square h-full max-h-[550px] w-full overflow-hidden" />
@@ -387,6 +390,10 @@ export default async function ProductPage(props: {
           initialAverage={average}
           initialCount={count}
         />
+
+        {marketplaceReviews ? (
+          <MarketplaceReviews set={marketplaceReviews} />
+        ) : null}
 
         {/* RELATED */}
         {related.length > 0 && (

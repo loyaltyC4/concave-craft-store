@@ -34,7 +34,11 @@ export function StickyAddToCart({ product }: { product: Product }) {
     if (!anchor) return;
     const onScroll = () => {
       const rect = anchor.getBoundingClientRect();
-      setVisible(rect.bottom < 0);
+      // Show whenever the main button is NOT on screen: below the fold on
+      // arrival (it sits ~2 screens down on phones) or scrolled past. The
+      // small scroll threshold keeps the bar off the very first paint.
+      const offscreen = rect.top > window.innerHeight || rect.bottom < 0;
+      setVisible(offscreen && window.scrollY > 80);
     };
     onScroll();
     window.addEventListener("scroll", onScroll, { passive: true });

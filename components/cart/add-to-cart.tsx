@@ -83,6 +83,9 @@ export function AddToCart({ product }: { product: Product }) {
       onClick={() => {
         if (!finalVariant) return;
         addCartItem(finalVariant, product);
+        // Tell the cart drawer a shopper just added something, so it opens
+        // for that and not merely because a saved cart loaded from storage.
+        window.dispatchEvent(new Event("fbl:cart-added"));
         trackAddToCart(
           {
             item_id: finalVariant.sku || finalVariant.id,

@@ -212,13 +212,13 @@ export function Gallery({
       </div>
 
       {thumbnails.length > 1 ? (
-        <ul className="my-12 flex items-center flex-wrap justify-center gap-2 overflow-auto py-1 lg:mb-0">
+        <ul className="mt-3 flex flex-nowrap items-center gap-2 overflow-x-auto py-1 [scrollbar-width:none] lg:my-12 lg:mb-0 lg:flex-wrap lg:justify-center">
           {thumbnails.map((image) => {
             const fullIndex = allImages.indexOf(image);
             const isActive = fullIndex === imageIndex;
 
             return (
-              <li key={image.src} className="h-20 w-20">
+              <li key={image.src} className="h-16 w-16 flex-none lg:h-20 lg:w-20">
                 <button
                   type="button"
                   onClick={() => go(fullIndex)}
