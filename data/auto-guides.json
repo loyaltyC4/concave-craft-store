@@ -1,5 +1,98 @@
 [
  {
+  "slug": "bearing-fingerboard",
+  "title": "Bearing Fingerboard Guide: Pick, Install & Keep Rolling",
+  "metaTitle": "Bearing Fingerboard Guide: Pick, Install & Keep Rolling",
+  "metaDescription": "Find the right bearings, install them fast, and maintain for smooth, fast fingerboard rides.",
+  "category": "Tuning",
+  "updated": "2026-11-09",
+  "readMinutes": 4,
+  "heroSummary": "Find the right bearings, install them fast, and maintain for smooth, fast fingerboard rides.",
+  "sections": [
+   {
+    "heading": "What is a bearing fingerboard and why does it matter?",
+    "body": [
+     "Feel the difference instantly. A bearing fingerboard uses standard 608 skateboard bearings to let the wheels rotate. The bearings sit in the wheel cores and spin on a steel race. Without bearings the wheels would drag on the deck, making tricks feel sluggish.",
+     "Fingerboarders notice the difference immediately. A board with clean bearings rolls smoother, launches quicker, and holds speed longer. The same principle applies to full‑size skateboards, just on a miniature scale.",
+     "Because the bearing size is fixed, any fingerboard that follows the common deck width range of 29‑36 mm and length of 94‑100 mm will accept the same bearings. This universality lets you swap parts between decks, wheels, and even complete setups."
+    ]
+   },
+   {
+    "heading": "How do I choose the right bearings for my fingerboard?",
+    "body": [
+     "The market offers a spectrum from basic steel bearings to premium ceramic ones. Your choice depends on three factors: performance expectation, maintenance willingness, and budget.",
+     "Performance. Steel bearings provide reliable spin for most riders. If you chase the fastest possible roll, ceramic bearings reduce friction and stay cooler under rapid tricks.",
+     "Maintenance. Steel bearings need regular cleaning and oiling. Ceramic bearings hold lubrication longer, but they still benefit from occasional wipe‑down.",
+     "Budget. Steel options are the cheapest and most widely available. Ceramic sets cost more, and the speed gain is noticeable only for very aggressive riding.",
+     "A solid steel set is a sensible starting point. Upgrade to ceramic only after you have a routine for cleaning and lubricating."
+    ]
+   },
+   {
+    "heading": "How do I install bearings on a fingerboard?",
+    "body": [
+     "Installation is a quick three‑step process. First, press the bearings into the wheel cores. Use a small flat‑head screwdriver or a bearing press tool; a gentle tap is enough. The bearing should sit flush with the wheel's inner edge.",
+     "Second, slide the wheels onto the trucks. The bearings will sit inside the wheel hubs, aligning with the axle. Push until the wheel contacts the axle stop.",
+     "Third, spin the wheel to check clearance. There should be no wobble and the wheel should rotate freely. If you feel drag, the bearing may be mis‑aligned or the wheel may be too tight.",
+     "When you swap wheels or bearings, repeat the steps. A clean workspace prevents dust from entering the bearing races.",
+     "Many riders also give the assembled wheel a quick spin test on a flat surface. A smooth, steady whir indicates proper installation."
+    ]
+   },
+   {
+    "heading": "How do I keep my bearings performing?",
+    "body": [
+     "Maintenance is the difference between a board that feels dead and one that feels alive. The routine consists of cleaning, lubricating, and storing.",
+     "Cleaning. Disassemble the wheel and pull out the bearing. Use a small brush and a drop of isopropyl alcohol to remove grit. Avoid soaking the bearing; a quick swipe is enough.",
+     "Lubricating. Apply a thin layer of fingerboard‑specific oil. Too much oil attracts dust, too little leaves metal‑to‑metal contact. A drop on each bearing surface spreads evenly when you spin the wheel.",
+     "After lubrication, spin the wheel a few times to distribute the oil fully. This extra motion helps the oil reach every race surface.",
+     "Storing. Keep your board in a dry case. Moisture corrodes steel races and can ruin ceramic inserts. If you ride often, a quick wipe after each session preserves the finish.",
+     "Skipping any of these steps will show up as slower spin, louder grinding, or reduced trick height."
+    ]
+   },
+   {
+    "heading": "What are common mistakes and how to avoid them?",
+    "body": [
+     "Many riders overlook small details that cripple performance. The first mistake is using the wrong bearing size. All fingerboard wheels accept 608 bearings; any other size will not fit.",
+     "Second, over‑tightening the axle. Tightening the axle nut too much compresses the bearings, causing premature wear. Tighten until the wheel spins freely, then give a half‑turn more for security.",
+     "Third, using the wrong lubricant. Heavy skate‑board grease creates drag on tiny wheels. Stick to light oils designed for fingerboards.",
+     "Finally, ignoring wear. Bearings develop pitting after many sessions. If you feel a rough spot, replace the bearing set rather than trying to sand it out.",
+     "By checking size, torque, oil, and wear regularly, you keep the board responsive and extend component life."
+    ]
+   },
+   {
+    "heading": "Should I upgrade my bearings or focus on other parts?",
+    "body": [
+     "Bearings are a visible upgrade, but they are not the only factor. Wheel durometer, deck flex, and truck geometry all shape the ride.",
+     "If your wheels are soft, a faster bearing will not make the board quicker; the wheel will still sink into the surface. Conversely, a stiff wheel paired with a sluggish bearing feels dead.",
+     "Start by ensuring your wheels match the terrain you ride. Then, if you still crave speed, upgrade the bearings. This staged approach yields the biggest performance jump for the least effort.",
+     "In short: balance the whole setup before splurging on bearings alone."
+    ]
+   }
+  ],
+  "faqs": [
+   {
+    "q": "Do I need real skateboard bearings for a fingerboard?",
+    "a": "Yes, most fingerboards use the same 608 size bearings found on skateboards; they fit the wheel cores perfectly."
+   },
+   {
+    "q": "How often should I lubricate fingerboard bearings?",
+    "a": "Every few weeks of active riding, or whenever you hear grinding or feel slower spin."
+   },
+   {
+    "q": "Can I mix different bearing brands on one board?",
+    "a": "Mixing is fine if the bearings share the same size and quality level; uneven performance may result."
+   },
+   {
+    "q": "Are ceramic bearings worth the extra cost?",
+    "a": "They spin faster and resist heat, but the gain is subtle for casual riders."
+   }
+  ],
+  "related": [
+   "which-fingerboard-mold-to-buy",
+   "which-fingerboard-bearings-to-buy",
+   "fingerboard-wheel-durometer-explained"
+  ]
+ },
+ {
   "slug": "fingerboard-kicker-guide",
   "title": "Fingerboard Kicker: Launch Your Tricks Higher",
   "metaTitle": "Fingerboard Kicker: Launch Your Tricks Higher",
