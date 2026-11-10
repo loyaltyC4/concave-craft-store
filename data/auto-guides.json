@@ -1,5 +1,124 @@
 [
  {
+  "slug": "google-sheets-fingerboard",
+  "title": "Google Sheets for Fingerboard Tracking and Builds",
+  "metaTitle": "Google Sheets for Fingerboard Tracking and Builds",
+  "metaDescription": "Organize decks, log tricks, calculate fit and share builds using only Google Sheets.",
+  "category": "Building",
+  "updated": "2026-11-10",
+  "readMinutes": 4,
+  "heroSummary": "Organize decks, log tricks, calculate fit and share builds using only Google Sheets.",
+  "sections": [
+   {
+    "heading": "How to start a fingerboard inventory in Google Sheets",
+    "body": [
+     "Open a new spreadsheet. Name the first tab Decks. Add columns for Name, Width (mm), Length (mm), Material and Notes. Populate each row with a deck you own. Refer to the width range of 29 mm to 36 mm and the length range of 94 mm to 100 mm. The layout instantly shows which decks match your style.",
+     "Begin with a brief list. Include brand, release year and any special graphics. If flex matters, add a Core column. One look reveals which decks are active and which are in storage."
+    ]
+   },
+   {
+    "heading": "Adding a components tab",
+    "body": [
+     "Next, create a tab named Components. List trucks, wheels, tape and custom parts. Add a Compatibility column to note which deck widths each part fits. The sheet now lives as a parts list you can refresh with every new acquisition.",
+     "Tip: apply data validation to keep width entries consistent. A drop‑down of allowed values stops typos and makes filters reliable."
+    ]
+   },
+   {
+    "heading": "Linking decks and parts",
+    "body": [
+     "Use VLOOKUP or INDEX/MATCH to pull deck width into the components tab. When you pick a deck, compatible trucks appear automatically. This saves you from flipping between sheets."
+    ]
+   },
+   {
+    "heading": "Tracking trick practice and progress",
+    "body": [
+     "Add a second tab called Trick Log. Record each session with columns for Date, Trick, Success Rate and Comments. Keep the trick name short and add a brief note on what felt right or wrong. Over weeks the sheet reveals patterns you can work on.",
+     "Conditional formatting highlights rows with low success rates, nudging you to focus on those moves. The visual cue appears instantly, no extra tools needed."
+    ]
+   },
+   {
+    "heading": "Scoring tricks without a calculator",
+    "body": [
+     "Enter the success rate as a plain number. The sheet then calculates an average per trick with AVERAGEIF. The result shows next to the trick name. Instantly you see which tricks dominate your sessions.",
+     "For a morale boost, add a column that marks a session as a \"win\" when the average passes a chosen threshold. The green highlight feels rewarding."
+    ]
+   },
+   {
+    "heading": "Calculating deck and component compatibility",
+    "body": [
+     "Google Sheets formulas can filter decks that match a specific width. Type the desired width in a cell, then use a filter function to pull rows where the width falls between 29 mm and 36 mm. The same method works for length, guaranteeing the deck you pick will hold the trucks you prefer.",
+     "For wheels, add a column that references the deck width column. A simple IF statement flags wheels that are too wide or too narrow for a given deck. This cuts guesswork and saves time when planning a build."
+    ]
+   },
+   {
+    "heading": "Building a compatibility matrix",
+    "body": [
+     "Set up a matrix with deck widths across the top and wheel sizes down the side. Place a check mark in each cell when the pair works. The matrix updates automatically as you add new wheels or decks.",
+     "Since the matrix relies on the existing width range, you never have to remember the numbers yourself."
+    ]
+   },
+   {
+    "heading": "Sharing setups with the fingerboarding community",
+    "body": [
+     "When your sheet is ready, click Share and set the link to view‑only for public distribution. You can also grant edit rights to a close group of friends. The shared view acts as a reference board that anyone can copy for their own use.",
+     "Embed the sheet in a forum post or Discord channel so others see your exact setup without screenshots. It also enables real‑time updates when you swap parts or finish a new deck."
+    ]
+   },
+   {
+    "heading": "Version control without extra software",
+    "body": [
+     "Use the built‑in version history to roll back changes. If a teammate overwrites a part list, you can restore the previous version with a single click. No separate backup tools required."
+    ]
+   },
+   {
+    "heading": "Automating size conversions and part lists",
+    "body": [
+     "Many riders think in millimetres while others prefer inches. Add a column called Width (in) and use a formula that multiplies the millimetre value by the conversion factor. The same works for length. This dual display removes the need for a separate calculator.",
+     "To generate a printable parts list, create a third tab named Build Sheet. Use a lookup function that pulls the selected deck's dimensions and matches compatible trucks and wheels. The result is a ready‑to‑print checklist you can take to a shop or use while ordering online."
+    ]
+   },
+   {
+    "heading": "Exporting for offline use",
+    "body": [
+     "Download the Build Sheet as a PDF with a single menu click. The PDF includes deck dimensions, wheel‑truck pairings and any notes you added. Hand it to a local hobby shop and they can cut the tape to the right size on the spot.",
+     "If you need a quick reference while riding, enable the mobile view. The sheet collapses columns so you can scroll with one finger."
+    ]
+   },
+   {
+    "heading": "Advanced tips for power users",
+    "body": [
+     "Use named ranges for the width and length columns. Named ranges make formulas easier to read and reduce errors when copying them across tabs.",
+     "Apply a script that sends you an email summary each week. The script pulls the average success rate and lists any new parts you added. This keeps you informed without opening the sheet.",
+     "Combine the inventory with a budget tracker. Add a Cost column in the Components tab, then sum the costs of the parts selected for a build. The total appears on the Build Sheet, giving you a quick cost estimate.",
+     "All of these tricks stay inside Google Sheets. No extra apps, no paper clutter. The system grows with your fingerboarding hobby, from the first deck to a fully custom setup."
+    ]
+   }
+  ],
+  "faqs": [
+   {
+    "q": "Can I use Google Sheets to keep track of my fingerboard parts?",
+    "a": "Yes, a simple table can list decks, trucks, wheels and tape with dimensions and notes."
+   },
+   {
+    "q": "How do I calculate deck size compatibility in a sheet?",
+    "a": "Use the width range of 29 mm to 36 mm and length range of 94 mm to 100 mm to filter rows that match."
+   },
+   {
+    "q": "Is it possible to share my fingerboard setup with friends?",
+    "a": "Google Sheets allows you to grant view or edit access, making collaboration easy."
+   },
+   {
+    "q": "Can I automate size conversions between mm and inches?",
+    "a": "A basic formula can multiply by the conversion factor to show both units."
+   }
+  ],
+  "related": [
+   "which-fingerboard-mold-to-buy",
+   "which-fingerboard-bearings-to-buy",
+   "fingerboard-wheel-durometer-explained"
+  ]
+ },
+ {
   "slug": "bearing-fingerboard",
   "title": "Bearing Fingerboard Guide: Pick, Install & Keep Rolling",
   "metaTitle": "Bearing Fingerboard Guide: Pick, Install & Keep Rolling",
