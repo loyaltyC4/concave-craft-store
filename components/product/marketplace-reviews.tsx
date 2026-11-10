@@ -104,10 +104,6 @@ export function MarketplaceReviews({ set }: { set: MarketplaceReviewSet }) {
                     </p>
                   </div>
                 )}
-
-                <p className="mt-6 max-w-xs text-[11px] leading-relaxed text-neutral-500">
-                  From buyers of this same item, not Fingerboard Lab orders.
-                </p>
               </div>
             </Reveal>
 
