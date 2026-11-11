@@ -1,5 +1,95 @@
 [
  {
+  "slug": "handmade-fingerboard-guide",
+  "title": "Handmade Fingerboard Guide: Build, Customize, Ride",
+  "metaTitle": "Handmade Fingerboard Guide: Build, Customize, Ride",
+  "metaDescription": "Step‑by‑step guide to craft a wooden fingerboard, choose wood, shape the deck, finish it, and add personal graphics for a ride that feels yours.",
+  "category": "Building",
+  "updated": "2026-11-11",
+  "readMinutes": 4,
+  "heroSummary": "Step‑by‑step guide to craft a wooden fingerboard, choose wood, shape the deck, finish it, and add personal graphics for a ride that feels yours.",
+  "sections": [
+   {
+    "heading": "What is a handmade fingerboard?",
+    "body": [
+     "A handmade fingerboard is a deck you cut, shape, and finish yourself. It starts with a blank piece of wood and ends with a board that fits your style. You control every dimension, every grain direction, every grip surface. The result feels personal. It also lets you experiment with shapes that mass‑produced decks don't offer."
+    ]
+   },
+   {
+    "heading": "How do I choose the right wood and dimensions?",
+    "body": [
+     "The most common woods are maple and birch. Both are dense, hold a tight pop, and resist warping. If you want a lighter feel, birch is a good choice. For a classic snap, maple is the go‑to. Many builders swear by maple for that crisp pop.",
+     "Deck length usually falls between 94 mm and 100 mm. Width ranges from 29 mm to 36 mm. Narrow decks feel quicker for technical tricks. Wider decks give more stability on rails. Pick a size that matches the type of tricks you enjoy.",
+     "Thickness matters too. A thickness of about 2 mm is standard. Thinner decks flex more, thicker decks feel sturdy. Keep the thickness consistent across the board for even pop."
+    ]
+   },
+   {
+    "heading": "What tools do I need to shape a deck?",
+    "body": [
+     "You don't need a full workshop. A small coping saw or a fine‑tooth hacksaw cuts the outline. A drill with a small bit makes the axle holes. Sandpaper in increments from coarse to fine smooths the edges. A file helps fine‑tune the concave and kick‑tail.",
+     "Optional tools improve precision. A ruler or a digital caliper checks the width and length. A small bench vise holds the blank while you cut. A rotary tool can round the nose if you prefer a more rounded profile.",
+     "All of these tools fit in a standard toolbox. You can buy them at a local hardware store. No need for expensive CNC machines. The setup stays compact and portable."
+    ]
+   },
+   {
+    "heading": "How do I shape the deck profile?",
+    "body": [
+     "Start by marking the outline with a pencil. Use the common deck length and width as a guide. Cut the shape with the saw, leaving a little extra material for sanding.",
+     "Next, sand the edges flat. Then decide on the concave. Many riders prefer a medium concave for balance. To create it, gently press the center of the deck with a rounded tool while sanding the sides. Keep the pressure even.",
+     "The kick‑tail is the next step. Carve a slight upward angle at the tail end. A shallow angle works for flip tricks; a steeper angle helps with manual lifts. Sand until the angle feels natural under your fingers.",
+     "Drill the axle holes at the standard distance from the ends. Measure carefully to keep the holes symmetrical. Use a small drill bit to avoid cracking the wood."
+    ]
+   },
+   {
+    "heading": "How do I finish and customize a handmade fingerboard?",
+    "body": [
+     "Finishing protects the wood and adds grip. Apply a thin layer of wood sealant or clear coat. Let it dry fully before adding any graphics.",
+     "Graphics are optional but fun. You can paint directly on the deck with acrylic paint. Mask off the edges if you want clean lines. Once the paint dries, a clear coat locks the design in place.",
+     "Grip tape is the final layer for control. Cut a piece of standard skateboard grip tape to the deck size. Peel and press it onto the deck, smoothing out bubbles. Trim excess with a razor blade.",
+     "After the grip tape, you can add stickers, decals, or even a custom logo. These additions don't affect performance, but they make the board yours. A personal touch adds pride every time you ride."
+    ]
+   },
+   {
+    "heading": "Where can I find supplies for a handmade fingerboard?",
+    "body": [
+     "Wood blanks, grip tape, and sealants are available at hobby shops and online craft stores. Look for sections dedicated to mini‑deck projects. Some sites organize their inventory under paths like /search/decks or /search/completes. Those sections contain raw decks and complete kits you can modify.",
+     "If you prefer a starting point, a blank deck kit gives you a pre‑shaped board that you can sand and finish. It saves the rough‑cut step but still lets you customize the graphics and grip.",
+     "Remember that the cheapest option isn't always the best. A low‑cost blank may have uneven grain, which can affect pop. Spend a little more on a well‑finished blank and you'll notice smoother rides."
+    ]
+   },
+   {
+    "heading": "Is a handmade fingerboard worth the effort?",
+    "body": [
+     "For many riders, the answer is yes. Building your own deck teaches you how shape influences performance. It also gives you a board that looks exactly how you want. The time investment is a few afternoons, not weeks. The result is a unique piece that stands out in any park.",
+     "If you value instant play, a ready‑made deck is faster. But if you enjoy the craft, the handmade route adds a layer of satisfaction that no store‑bought board can match."
+    ]
+   }
+  ],
+  "faqs": [
+   {
+    "q": "What size should a handmade fingerboard deck be?",
+    "a": "Most riders use decks between 94 mm and 100 mm long and 29 mm to 36 mm wide."
+   },
+   {
+    "q": "Which wood works best for a DIY fingerboard?",
+    "a": "Maple and birch are popular because they are dense and hold shape well."
+   },
+   {
+    "q": "Do I need special tools to shape a fingerboard deck?",
+    "a": "A small coping saw, sandpaper, and a drill are enough for most builds."
+   },
+   {
+    "q": "Can I add graphics to a handmade fingerboard?",
+    "a": "Yes, you can paint, apply stickers, or use a clear coat to protect the design."
+   }
+  ],
+  "related": [
+   "which-fingerboard-mold-to-buy",
+   "which-fingerboard-bearings-to-buy",
+   "fingerboard-wheel-durometer-explained"
+  ]
+ },
+ {
   "slug": "bearing-fingerboard",
   "title": "Bearing Fingerboard Guide: Pick, Install & Keep Rolling",
   "metaTitle": "Bearing Fingerboard Guide: Pick, Install & Keep Rolling",
