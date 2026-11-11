@@ -13,6 +13,7 @@ import {
   isFreeShipping,
   RETURN_WINDOW_DAYS,
   SHIPPING_FEE_USD,
+  SUPPORT_EMAIL,
 } from "lib/brand";
 
 export function ProductDescription({ product }: { product: Product }) {
@@ -173,6 +174,42 @@ export function ProductDescription({ product }: { product: Product }) {
           </li>
         ))}
       </ul>
+
+      {/* Molds and other big-ticket items: shoppers start $100-$290 checkouts
+          and drop out (7 mold checkouts, 0 paid as of 2026-10-31). A direct
+          line to a person before paying is the cheapest fix to test. */}
+      {isBigTicket(product, parseFloat(shown.amount)) ? (
+        <div className="mt-6 rounded-2xl border border-[#c5f23c]/30 bg-[#c5f23c]/5 p-4">
+          <p className="text-sm font-semibold text-[#f3f1ea]">
+            Questions before you buy?
+          </p>
+          <p className="mt-1 text-sm text-neutral-400">
+            Not sure which concave, size or kit fits your setup? Send us a
+            message and we&apos;ll help you pick before you pay.
+          </p>
+          <div className="mt-3 flex flex-wrap gap-2">
+            <a
+              href={`mailto:${SUPPORT_EMAIL}?subject=${encodeURIComponent(`Question about ${product.title}`)}`}
+              data-cta="big-ticket-email"
+              className="inline-flex min-h-10 items-center rounded-full bg-[#c5f23c] px-4 text-sm font-semibold text-black transition hover:brightness-95"
+            >
+              Email {SUPPORT_EMAIL}
+            </a>
+            <a
+              href="/contact"
+              data-cta="big-ticket-contact"
+              className="inline-flex min-h-10 items-center rounded-full border border-white/15 px-4 text-sm font-semibold text-[#f3f1ea] transition hover:border-[#c5f23c]/60"
+            >
+              Contact form
+            </a>
+          </div>
+        </div>
+      ) : null}
     </div>
   );
+}
+
+function isBigTicket(product: Product, price: number): boolean {
+  if (price >= 90) return true;
+  return /mold|press/i.test(product.title);
 }

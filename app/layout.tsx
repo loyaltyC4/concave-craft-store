@@ -10,6 +10,7 @@ import "./globals.css";
 import { baseUrl } from "lib/utils";
 import { GA_MEASUREMENT_ID, GOOGLE_ADS_ID, META_PIXEL_ID } from "lib/gtag";
 import { POSTHOG_KEY, POSTHOG_API_HOST } from "lib/posthog";
+import { EXPERIMENT_BOOT_SCRIPT, EXPERIMENT_POSTHOG_REGISTER } from "lib/experiments";
 import { ProductClickTracker } from "components/analytics/product-click-tracker";
 import {
   SITE_NAME,
@@ -128,8 +129,12 @@ export default async function RootLayout({
   };
 
   return (
-    <html lang="en" className={`dark ${GeistSans.variable}`}>
+    <html lang="en" suppressHydrationWarning className={`dark ${GeistSans.variable}`}>
       <body className="bg-[#0b0c0e] text-[#f3f1ea] antialiased selection:bg-[#c5f23c] selection:text-black">
+        {/* A/B assignment (lib/experiments.ts). Must stay the FIRST child of
+         * body: it sets data-theme / data-hero on <html> before anything
+         * paints, so visitors never see the other version flash. */}
+        <script dangerouslySetInnerHTML={{ __html: EXPERIMENT_BOOT_SCRIPT }} />
         {/* Supplier CDN (alicdn.com) hotlink-blocks requests that carry a
          * Referer header, returning 403 and leaving gallery/variant photos
          * blank. Stripping the referrer on outbound requests fixes the images
@@ -254,7 +259,7 @@ export default async function RootLayout({
         {POSTHOG_KEY && (
           <script
             dangerouslySetInnerHTML={{
-              __html: `(function(k,h){var s=document.createElement('script');s.src=h+'/static/array.js';s.async=true;s.onload=function(){try{window.posthog.init(k,{api_host:h,ui_host:'https://us.posthog.com',capture_pageview:'history_change',autocapture:{dom_event_allowlist:['click','change','submit']},capture_dead_clicks:true,capture_performance:false,persistence:'localStorage+cookie',session_recording:{maskAllInputs:true},before_send:function(e){try{var p=e&&e.properties;if(p&&typeof p.$current_url==='string'&&p.$current_url.indexOf('/track')>-1){var i=p.$current_url.indexOf('?');if(i>-1){p.$current_url=p.$current_url.slice(0,i);if(typeof p.$raw_user_url==='string')p.$raw_user_url=p.$current_url;p.$pathname='/track';}}}catch(_){}return e;}});}catch(e){}};document.head.appendChild(s);})('${POSTHOG_KEY}','${POSTHOG_API_HOST}');`,
+              __html: `(function(k,h){var s=document.createElement('script');s.src=h+'/static/array.js';s.async=true;s.onload=function(){try{window.posthog.init(k,{api_host:h,ui_host:'https://us.posthog.com',capture_pageview:'history_change',autocapture:{dom_event_allowlist:['click','change','submit']},capture_dead_clicks:true,capture_performance:false,persistence:'localStorage+cookie',session_recording:{maskAllInputs:true},before_send:function(e){try{var p=e&&e.properties;if(p&&window.__flExp){for(var x in window.__flExp)p[x]=window.__flExp[x]}if(p&&typeof p.$current_url==='string'&&p.$current_url.indexOf('/track')>-1){var i=p.$current_url.indexOf('?');if(i>-1){p.$current_url=p.$current_url.slice(0,i);if(typeof p.$raw_user_url==='string')p.$raw_user_url=p.$current_url;p.$pathname='/track';}}}catch(_){}return e;}});${EXPERIMENT_POSTHOG_REGISTER}}catch(e){}};document.head.appendChild(s);})('${POSTHOG_KEY}','${POSTHOG_API_HOST}');`,
             }}
           />
         )}

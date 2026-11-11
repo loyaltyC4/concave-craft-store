@@ -1,4 +1,5 @@
-import { getCollectionProducts, getPicks } from "lib/shopify";
+import { getCollectionProducts, getPicks, getProduct } from "lib/shopify";
+import { FeaturedShowcase } from "components/home/featured-showcase";
 import type { Product } from "lib/shopify/types";
 import Image from "next/image";
 import Link from "next/link";
@@ -80,11 +81,16 @@ export default async function HomePage() {
   });
   const totalProducts = collectionProducts.reduce((n, p) => n + p.length, 0);
 
-  const [topPicks, featuredMolds, proCompletes, parkPicks] = await Promise.all([
+  const [topPicks, featuredMolds, proCompletes, parkPicks, showcaseProduct] = await Promise.all([
     getPicks("top_picks"),
     getPicks("molds"),
     getPicks("pro_completes"),
     getPicks("parks"),
+    // exp_home_hero "showcase": a proven seller (paid order 2026-11-04,
+    // 4.9 from 15 buyers of the item). See components/home/featured-showcase.tsx.
+    getProduct(
+      "fingerboard-obstacle-set-wooden-rail-ledges-kit-for-finger-skateboarding-diy-skate-park-scene-props",
+    ),
   ]);
 
   const entry = (list: Product[]) =>
@@ -216,7 +222,19 @@ export default async function HomePage() {
         Deliberately NOT sticky: .cc-hero-shell / .cc-hero-media / .cc-hero-lift
         in globals.css are still used elsewhere and are left untouched.
       */}
-      <section className="relative overflow-hidden border-b border-white/10">
+      {showcaseProduct ? (
+        <FeaturedShowcase
+          product={showcaseProduct}
+          eyebrow="Street park starter"
+          features={[
+            "Rail and ledge in one piece, the two most-used street obstacles",
+            "Several grind edges, so you can link tricks into real lines",
+            "Solid wood that matches the rest of a park build",
+            "Sets up on any desk or table, no dedicated space needed",
+          ]}
+        />
+      ) : null}
+      <section className="exp-hero-lanes relative overflow-hidden border-b border-white/10">
         <div
           aria-hidden="true"
           className="pointer-events-none absolute inset-0"

@@ -190,3 +190,90 @@ h4 {
     scroll-behavior: auto;
   }
 }
+
+/* =====================================================================
+ * LIGHT THEME (A/B test exp_theme=light, see lib/experiments.ts)
+ *
+ * The storefront hard-codes its dark palette as Tailwind arbitrary-value
+ * classes, so instead of touching ~150 components this layer remaps those
+ * classes when <html data-theme="light"> is set by the boot script.
+ * Unlayered CSS beats Tailwind's @layer utilities, so no !important is
+ * needed except against inline style colours (VOLT).
+ * Remove this whole block if the test loses.
+ * ===================================================================== */
+html[data-theme="light"] {
+  color-scheme: light;
+  --l-canvas: #f5f6f2;
+  --l-alt: #eceee7;
+  --l-panel: #ffffff;
+  --l-ink: #111316;
+  --l-ink-rgb: 17 19 22;
+  --l-accent-text: #3d5a00; /* volt is unreadable as text on white; deep olive keeps the family */
+  --l-accent-line: #8fb81a;
+
+  /* Invert Tailwind's neutral scale: text-neutral-300 (light grey on dark)
+     becomes a dark grey on light, and so on. */
+  --color-neutral-50: oklch(14.5% 0 0);
+  --color-neutral-100: oklch(20.5% 0 0);
+  --color-neutral-200: oklch(26.9% 0 0);
+  --color-neutral-300: oklch(34% 0 0);
+  --color-neutral-400: oklch(44% 0 0);
+  --color-neutral-500: oklch(52% 0 0);
+  --color-neutral-600: oklch(62% 0 0);
+  --color-neutral-700: oklch(87% 0 0);
+  --color-neutral-800: oklch(92.2% 0 0);
+  --color-neutral-900: oklch(97% 0 0);
+  --color-neutral-950: oklch(98.5% 0 0);
+}
+
+/* Canvases and panels */
+html[data-theme="light"] :is(.bg-\[\#0b0c0e\], .bg-\[\#0c0e11\], .bg-\[\#0d0e12\]) { background-color: var(--l-canvas); }
+html[data-theme="light"] :is(.bg-\[\#0e1013\], .bg-\[\#0f1114\], .bg-\[\#10140a\], .bg-\[\#111317\], .bg-\[\#12151a\]) { background-color: var(--l-alt); }
+html[data-theme="light"] :is(.bg-\[\#15171c\], .bg-\[\#14171c\]) { background-color: var(--l-panel); }
+html[data-theme="light"] .bg-\[\#0b0c0e\]\/85 { background-color: rgb(245 246 242 / 0.85); }
+html[data-theme="light"] .bg-\[\#0b0c0e\]\/95 { background-color: rgb(245 246 242 / 0.95); }
+html[data-theme="light"] .from-\[\#15171c\] { --tw-gradient-from: var(--l-panel); }
+html[data-theme="light"] .from-\[\#0b0c0e\] { --tw-gradient-from: var(--l-canvas); }
+html[data-theme="light"] .to-\[\#0b0c0e\] { --tw-gradient-to: var(--l-canvas); }
+html[data-theme="light"] .to-\[\#101216\] { --tw-gradient-to: var(--l-alt); }
+
+/* Text */
+html[data-theme="light"] .text-\[\#f3f1ea\] { color: var(--l-ink); }
+html[data-theme="light"] .text-\[\#f3f1ea\]\/30 { color: rgb(var(--l-ink-rgb) / 0.3); }
+html[data-theme="light"] .text-\[\#c5f23c\] { color: var(--l-accent-text); }
+html[data-theme="light"] .text-\[\#ff8a8a\] { color: #b42318; }
+html[data-theme="light"] [style*="color:#c5f23c"] { color: var(--l-accent-text) !important; }
+html[data-theme="light"] [style*="color:#f3f1ea"] { color: var(--l-ink) !important; }
+/* White icons/text that sit on the page (navbar buttons, cart controls).
+   Overlays on photos and the lightbox keep white text. */
+html[data-theme="light"] header .text-white,
+html[data-theme="light"] [role="dialog"]:not(:has(.bg-black\/95, .bg-black\/80)) .text-white { color: var(--l-ink); }
+/* Lime fills keep dark text, never the inverted neutral */
+html[data-theme="light"] .bg-\[\#c5f23c\] { color: #111316; }
+
+/* Lines and translucent fills (white overlays become ink overlays) */
+html[data-theme="light"] :is(.border-white\/5) { border-color: rgb(var(--l-ink-rgb) / 0.06); }
+html[data-theme="light"] :is(.border-white\/10, .divide-white\/10 > * + *) { border-color: rgb(var(--l-ink-rgb) / 0.1); }
+html[data-theme="light"] :is(.border-white\/15) { border-color: rgb(var(--l-ink-rgb) / 0.14); }
+html[data-theme="light"] :is(.border-white\/20, .border-white\/25) { border-color: rgb(var(--l-ink-rgb) / 0.18); }
+html[data-theme="light"] .border-white\/30 { border-color: rgb(var(--l-ink-rgb) / 0.26); }
+html[data-theme="light"] .ring-white\/10 { --tw-ring-color: rgb(var(--l-ink-rgb) / 0.1); }
+html[data-theme="light"] :is(.bg-white\/\[0\.015\], .bg-white\/\[0\.02\], .bg-white\/\[0\.025\], .bg-white\/\[0\.03\]) { background-color: rgb(var(--l-ink-rgb) / 0.03); }
+html[data-theme="light"] :is(.bg-white\/\[0\.04\], .bg-white\/5, .bg-white\/\[0\.06\]) { background-color: rgb(var(--l-ink-rgb) / 0.05); }
+html[data-theme="light"] .bg-white\/10:not(:is(.bg-black\/95, .bg-black\/80, .bg-black\/70) *) { background-color: rgb(var(--l-ink-rgb) / 0.07); }
+
+/* Volt lines: darker so they read on white */
+html[data-theme="light"] .border-\[\#c5f23c\] { border-color: var(--l-accent-line); }
+html[data-theme="light"] :is(.border-\[\#c5f23c\]\/60, .border-\[\#c5f23c\]\/50) { border-color: rgb(143 184 26 / 0.8); }
+html[data-theme="light"] :is(.border-\[\#c5f23c\]\/40, .border-\[\#c5f23c\]\/30, .border-\[\#c5f23c\]\/25) { border-color: rgb(143 184 26 / 0.6); }
+html[data-theme="light"] :is(.bg-\[\#c5f23c\]\/5, .bg-\[\#c5f23c\]\/10) { background-color: rgb(143 184 26 / 0.12); }
+
+/* Panels get a soft shadow instead of relying on dark contrast */
+html[data-theme="light"] .bg-\[\#15171c\].rounded-2xl { box-shadow: 0 1px 2px rgb(var(--l-ink-rgb) / 0.04), 0 8px 24px -12px rgb(var(--l-ink-rgb) / 0.12); }
+
+/* ---------------------------------------------------------------------
+ * HOME HERO TEST (exp_home_hero). Both heroes ship in the HTML; the boot
+ * script picks one before paint.
+ * ------------------------------------------------------------------- */
+html:not([data-hero="showcase"]) .exp-hero-showcase { display: none; }
+html[data-hero="showcase"] .exp-hero-lanes { display: none; }
