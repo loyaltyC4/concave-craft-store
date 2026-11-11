@@ -42,9 +42,14 @@ for(var n in E){var opts=E[n],v=q.get(n);
 if(!v||opts.indexOf(v)<0){v=rc(n)}
 if(!v||opts.indexOf(v)<0){v=opts[Math.random()<0.5?0:1]}
 wc(n,v);out[n]=v}
-h.setAttribute('data-theme',out.exp_theme);
-h.setAttribute('data-hero',out.exp_home_hero);
-if(out.exp_theme==='light'){h.classList.remove('dark');h.style.colorScheme='light'}
+function apply(){
+if(h.getAttribute('data-theme')!==out.exp_theme)h.setAttribute('data-theme',out.exp_theme);
+if(h.getAttribute('data-hero')!==out.exp_home_hero)h.setAttribute('data-hero',out.exp_home_hero);
+if(out.exp_theme==='light'&&h.classList.contains('dark'))h.classList.remove('dark');}
+apply();
+/* React re-renders <html> on hydration and client navigation, which wipes
+   attributes it did not render. Re-apply whenever that happens. */
+new MutationObserver(apply).observe(h,{attributes:true,attributeFilter:['data-theme','data-hero','class']});
 window.__flExp=out;
 }catch(e){}})();`;
 

@@ -271,6 +271,30 @@ html[data-theme="light"] :is(.bg-\[\#c5f23c\]\/5, .bg-\[\#c5f23c\]\/10) { backgr
 /* Panels get a soft shadow instead of relying on dark contrast */
 html[data-theme="light"] .bg-\[\#15171c\].rounded-2xl { box-shadow: 0 1px 2px rgb(var(--l-ink-rgb) / 0.04), 0 8px 24px -12px rgb(var(--l-ink-rgb) / 0.12); }
 
+/* Text laid over photos keeps the dark-theme treatment: category tiles and
+   collection banners (black gradient over the image) and any block marked
+   .theme-keep-dark (e.g. the "Set the scene" park band). */
+html[data-theme="light"] :is(.theme-keep-dark, :has(> .bg-gradient-to-t[class*="from-black"])) {
+  color: #f3f1ea;
+  --color-neutral-200: oklch(92.2% 0 0);
+  --color-neutral-300: oklch(87% 0 0);
+  --color-neutral-400: oklch(70.8% 0 0);
+  --color-neutral-500: oklch(55.6% 0 0);
+}
+html[data-theme="light"] :is(.theme-keep-dark, :has(> .bg-gradient-to-t[class*="from-black"])) :is(.text-\[\#f3f1ea\], h1, h2, h3) { color: #f3f1ea; }
+html[data-theme="light"] :is(.theme-keep-dark, :has(> .bg-gradient-to-t[class*="from-black"])) .text-\[\#c5f23c\] { color: #c5f23c; }
+html[data-theme="light"] :is(.theme-keep-dark, :has(> .bg-gradient-to-t[class*="from-black"])) [style*="color:#c5f23c"] { color: #c5f23c !important; }
+/* ...but cards sitting on top of such a band are normal light panels again. */
+html[data-theme="light"] .theme-keep-dark .bg-\[\#15171c\] {
+  color: var(--l-ink);
+  --color-neutral-200: oklch(26.9% 0 0);
+  --color-neutral-300: oklch(34% 0 0);
+  --color-neutral-400: oklch(44% 0 0);
+  --color-neutral-500: oklch(52% 0 0);
+}
+html[data-theme="light"] .theme-keep-dark .bg-\[\#15171c\] :is(h3, .text-\[\#f3f1ea\]) { color: var(--l-ink); }
+html[data-theme="light"] .theme-keep-dark .bg-\[\#15171c\] .text-\[\#c5f23c\] { color: var(--l-accent-text); }
+
 /* ---------------------------------------------------------------------
  * HOME HERO TEST (exp_home_hero). Both heroes ship in the HTML; the boot
  * script picks one before paint.

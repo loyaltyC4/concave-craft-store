@@ -742,7 +742,7 @@ export default async function HomePage() {
         image after several product-dense sections so the eye rests before
         the guides teaser. Ships identically on mobile at a shorter height.
       */}
-      <section className="relative flex min-h-[52vh] items-end border-t border-white/10 md:min-h-[62vh]">
+      <section className="theme-keep-dark relative flex min-h-[52vh] items-end border-t border-white/10 md:min-h-[62vh]">
         <Image
           src="/brand/collection-ramps.jpg"
           alt="Wooden fingerboard ramp and rail obstacles"
