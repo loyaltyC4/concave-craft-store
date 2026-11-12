@@ -34082,7 +34082,7 @@
       "product_type": "Complete Fingerboards",
       "handle": "martlet-32mm-pro-complete-entry-wide",
       "created_at": "2026-09-25T23:55:00+02:00",
-      "updated_at": "2026-09-25T23:55:00+02:00",
+      "updated_at": "2026-11-12T10:30:00+02:00",
       "published_at": "2026-09-25T23:55:00+02:00",
       "template_suffix": null,
       "published_scope": "web",
@@ -34092,30 +34092,51 @@
       "seo_description": "Martlet 32mm maple complete fingerboard with a wider entry-level deck and bearing wheels. Assigned colourway varies by stock.",
       "variants": [
         {
-          "id": 92000000010301,
+          "id": 92000000012001,
           "product_id": 920000000103,
-          "title": "Default Title",
+          "title": "Yellow Cassette",
           "price": "17.95",
           "compare_at_price": null,
           "position": 1,
-          "option1": "Default Title",
+          "option1": "Yellow Cassette",
           "inventory_policy": "continue",
           "taxable": false,
-          "sku": "FL-92000000010301",
+          "sku": "FL-920000000103-YELLOW",
           "requires_shipping": true,
           "available": true,
-          "inventory_quantity": 14,
-          "weight": 0.13,
-          "weight_unit": "kg"
+          "inventory_quantity": 8,
+          "weight": 0.08,
+          "weight_unit": "kg",
+          "image_id": 920000000103003
+        },
+        {
+          "id": 92000000012002,
+          "product_id": 920000000103,
+          "title": "Earth Sky",
+          "price": "17.95",
+          "compare_at_price": null,
+          "position": 2,
+          "option1": "Earth Sky",
+          "inventory_policy": "continue",
+          "taxable": false,
+          "sku": "FL-920000000103-EARTH",
+          "requires_shipping": true,
+          "available": true,
+          "inventory_quantity": 8,
+          "weight": 0.08,
+          "weight_unit": "kg",
+          "image_id": 920000000103004
         }
       ],
       "options": [
         {
-          "id": 92000000010390,
-          "name": "Option",
+          "id": 9200000001030,
+          "product_id": 920000000103,
+          "name": "Colourway",
           "position": 1,
           "values": [
-            "Default Title"
+            "Yellow Cassette",
+            "Earth Sky"
           ]
         }
       ],
@@ -34127,7 +34148,7 @@
           "src": "https://img.alicdn.com/imgextra/i4/1952422867/O1CN01b6MGdz1X38II28L99_!!1952422867.jpg",
           "width": 800,
           "height": 800,
-          "alt": "Fingerboard set with cassette tape graphic deck, metal trucks, black wheels, and keychain."
+          "alt": "Yellow cassette-tape graphic deck with black grip and silver trucks."
         },
         {
           "id": 920000000103004,
@@ -34136,7 +34157,7 @@
           "src": "https://img.alicdn.com/imgextra/i1/1952422867/O1CN017DTvhf1X38IFtNKBy_!!1952422867.jpg",
           "width": 800,
           "height": 800,
-          "alt": "Fingerboard deck complete kit featuring a blue sky graphic wooden board with metal trucks and white wheels."
+          "alt": "Blue Earth-sky graphic deck with black grip and silver trucks."
         }
       ],
       "image": {
