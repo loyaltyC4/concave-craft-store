@@ -9,12 +9,24 @@ import { Suspense } from "react";
 import MobileMenu from "./mobile-menu";
 import Search, { SearchSkeleton } from "./search";
 
-const ANNOUNCEMENTS = [
-  "Free shipping on orders over $50 USD",
+const BASE_ANNOUNCEMENTS = [
+  "Free shipping on orders over $35 USD",
   "All prices in USD",
   "Worldwide delivery in 7–14 business days",
   "30-day returns",
 ];
+
+// Real, dated messages (2026-11-16). Delivery is 7–14 business days, so 4 Dec is the
+// last safe order day for Christmas; the line disappears by itself after that.
+const CHRISTMAS_CUTOFF_MS = Date.parse("2026-12-04T23:59:59-08:00");
+const PRICE_DROP_UNTIL_MS = Date.parse("2026-12-16T00:00:00-08:00");
+function announcements(now = Date.now()): string[] {
+  const dated: string[] = [];
+  if (now < CHRISTMAS_CUTOFF_MS) dated.push("Order by 4 Dec for Christmas delivery");
+  if (now < PRICE_DROP_UNTIL_MS) dated.push("New lower prices on trucks, wheels, molds and pro completes");
+  return [...dated, ...BASE_ANNOUNCEMENTS];
+}
+
 
 // handle -> short label, e.g. "Tuning & Hardware" -> "Hardware". The full
 // titles ("Deck Building & Molds", "Ramps & Obstacles", ...) are correct for
@@ -61,7 +73,7 @@ export async function Navbar() {
       <div className="hidden bg-[#0b0c0e] border-b border-white/10 sm:block">
         <div className="mx-auto flex max-w-7xl items-center justify-center gap-8 px-6 py-1.5 text-[12px] font-bold tracking-wide">
           {saleOn && <FlashSaleTicker />}
-          {ANNOUNCEMENTS.map((a) => (
+          {announcements().map((a) => (
             <span key={a} className="flex items-center gap-8 text-[#c5f23c]">
               {a}
               <span className="text-[#f3f1ea]/30">◆</span>

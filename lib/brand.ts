@@ -41,12 +41,12 @@ export const SOCIALS = {
 };
 
 // Revenue mechanics
-export const FREE_SHIPPING_THRESHOLD = 50; // USD subtotal; must match app/api/checkout logic + merchant feed
+export const FREE_SHIPPING_THRESHOLD = 35; // USD subtotal (was 50 until 2026-11-16: every sub-$50 checkout met the $12.95 fee and was abandoned); must match app/api/checkout logic + merchant feed
 export const SHIPPING_FEE_USD = 12.95; // flat shipping fee under the free-shipping threshold
 
 /**
  * One rule for the whole store: shipping is free only when the USD subtotal
- * is OVER the threshold. Exactly $50.00 pays the flat fee. Checkout, the cart,
+ * is OVER the threshold. Exactly $35.00 pays the flat fee. Checkout, the cart,
  * the product page, the cart bar and the Merchant Center table all use these
  * helpers, so the rule can't drift between them.
  */

@@ -31,7 +31,7 @@ export const COUNTRY_PAGES: CountryPage[] = [
     code: "AU",
     metaTitle: "Fingerboard Shop Shipping to Australia — Fingerboard Lab",
     metaDescription:
-      "Buy fingerboards, ramps, obstacles and parts with delivery to Australia. Flat $12.95 USD shipping, free over $50, 7–14 business day delivery.",
+      "Buy fingerboards, ramps, obstacles and parts with delivery to Australia. Flat $12.95 USD shipping, free over $35, 7–14 business day delivery.",
     featuredCollections: [
       { handle: "completes", label: "Complete Fingerboards" },
       { handle: "ramps-obstacles", label: "Ramps & Obstacles" },
@@ -45,7 +45,7 @@ export const COUNTRY_PAGES: CountryPage[] = [
     code: "GB",
     metaTitle: "Fingerboard Shop Shipping to the UK — Fingerboard Lab",
     metaDescription:
-      "Buy fingerboards, ramps, obstacles and parts with delivery to the UK. Flat $12.95 USD shipping, free over $50, 7–14 business day delivery.",
+      "Buy fingerboards, ramps, obstacles and parts with delivery to the UK. Flat $12.95 USD shipping, free over $35, 7–14 business day delivery.",
     featuredCollections: [
       { handle: "completes", label: "Complete Fingerboards" },
       { handle: "decks", label: "Decks" },
@@ -59,7 +59,7 @@ export const COUNTRY_PAGES: CountryPage[] = [
     code: "CA",
     metaTitle: "Fingerboard Shop Shipping to Canada — Fingerboard Lab",
     metaDescription:
-      "Buy fingerboards, ramps, obstacles and parts with delivery to Canada. Flat $12.95 USD shipping, free over $50, 7–14 business day delivery.",
+      "Buy fingerboards, ramps, obstacles and parts with delivery to Canada. Flat $12.95 USD shipping, free over $35, 7–14 business day delivery.",
     featuredCollections: [
       { handle: "completes", label: "Complete Fingerboards" },
       { handle: "ramps-obstacles", label: "Ramps & Obstacles" },
@@ -73,7 +73,7 @@ export const COUNTRY_PAGES: CountryPage[] = [
     code: "NZ",
     metaTitle: "Fingerboard Shop Shipping to New Zealand — Fingerboard Lab",
     metaDescription:
-      "Buy fingerboards, ramps, obstacles and parts with delivery to New Zealand. Flat $12.95 USD shipping, free over $50, 7–14 business day delivery.",
+      "Buy fingerboards, ramps, obstacles and parts with delivery to New Zealand. Flat $12.95 USD shipping, free over $35, 7–14 business day delivery.",
     featuredCollections: [
       { handle: "completes", label: "Complete Fingerboards" },
       { handle: "park-kits", label: "Park Kits & Sets" },
@@ -87,7 +87,7 @@ export const COUNTRY_PAGES: CountryPage[] = [
     code: "DE",
     metaTitle: "Fingerboard Shop Shipping to Germany — Fingerboard Lab",
     metaDescription:
-      "Buy fingerboards, ramps, obstacles and parts with delivery to Germany. Flat $12.95 USD shipping, free over $50, 7–14 business day delivery.",
+      "Buy fingerboards, ramps, obstacles and parts with delivery to Germany. Flat $12.95 USD shipping, free over $35, 7–14 business day delivery.",
     featuredCollections: [
       { handle: "completes", label: "Complete Fingerboards" },
       { handle: "deck-building", label: "Deck Building & Molds" },

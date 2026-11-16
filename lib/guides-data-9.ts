@@ -86,7 +86,7 @@ export const guidesBatch9: Guide[] = [
         heading: "The desk test",
         body: [
           "Most fingerboard parks live on a desk or shelf, so check the piece dimensions against the space the rider actually has. A 14cm-per-piece modular set rebuilds into new layouts in the same footprint; a large one-piece ramp needs a permanent home.",
-          "Everything in the Fingerboard Lab park collection is sized for desk riding and ships worldwide with free shipping over $50 — which a park kit alone usually clears.",
+          "Everything in the Fingerboard Lab park collection is sized for desk riding and ships worldwide with free shipping over $35 — which a park kit alone usually clears.",
         ],
       },
     ],
@@ -276,7 +276,7 @@ export const guidesBatch9: Guide[] = [
         heading: "What the AU market actually stocks",
         body: [
           "Walk into a general skate shop in Australia and you will find Tech Decks and maybe a generic ramp or two. The pro scene — wooden completes, metal trucks, bearing wheels, real park pieces — lives almost entirely in specialist online stores. That is not an AU gap; it is how the hobby works everywhere outside a handful of cities in the US and Europe.",
-          "For Australian riders that means two checks before any order: the parts spec (wooden deck, metal trucks, bearing wheels) and the shipping promise. Everything at Fingerboard Lab ships with tracking in 7-14 business days with prices in USD and free shipping over $50, which most park kits clear on their own.",
+          "For Australian riders that means two checks before any order: the parts spec (wooden deck, metal trucks, bearing wheels) and the shipping promise. Everything at Fingerboard Lab ships with tracking in 7-14 business days with prices in USD and free shipping over $35, which most park kits clear on their own.",
         ],
       },
       {
@@ -294,7 +294,7 @@ export const guidesBatch9: Guide[] = [
       },
       {
         q: "How long does shipping take within Australia?",
-        a: "Orders ship with tracking and typically arrive in 7-14 business days. Free shipping applies over $50, and returns are accepted within 30 days if something is not right.",
+        a: "Orders ship with tracking and typically arrive in 7-14 business days. Free shipping applies over $35, and returns are accepted within 30 days if something is not right.",
       },
     ],
     related: [

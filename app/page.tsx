@@ -32,7 +32,7 @@ export const revalidate = 300;
 export const metadata = {
   title: "Fingerboard Trucks, Completes & Molds — Fingerboard Lab",
   description:
-    "Completes from $17.95, trucks and wheels, deck-pressing molds, ramps and park kits. Free build guides, free shipping over $50, 30-day returns.",
+    "Completes from $17.95, trucks and wheels, deck-pressing molds, ramps and park kits. Free build guides, free shipping over $35, 30-day returns.",
   alternates: { canonical: "/" },
 };
 
