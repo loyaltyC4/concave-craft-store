@@ -33,7 +33,7 @@ const FAQS: Faq[] = [
   },
   {
     q: "Do you ship worldwide?",
-    a: "Yes, we ship worldwide for a flat $12.95, free on orders over $35 (all prices are in USD). Most orders arrive within 7–14 business days depending on destination. We are an online shop based in Melbourne, Australia; orders ship directly from our supplier workshops (mostly in China), so most of that time is international transit.",
+    a: "Yes, we ship worldwide for a flat $12.95, free on orders over $45 (all prices are in USD). Most orders arrive within 7–14 business days depending on destination. We are an online shop based in Melbourne, Australia; orders ship directly from our supplier workshops (mostly in China), so most of that time is international transit.",
   },
   {
     q: "What's your return policy?",

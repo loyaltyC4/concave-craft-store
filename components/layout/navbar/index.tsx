@@ -10,7 +10,7 @@ import MobileMenu from "./mobile-menu";
 import Search, { SearchSkeleton } from "./search";
 
 const BASE_ANNOUNCEMENTS = [
-  "Free shipping on orders over $35 USD",
+  "Free shipping on orders over $45 USD",
   "All prices in USD",
   "Worldwide delivery in 7–14 business days",
   "30-day returns",

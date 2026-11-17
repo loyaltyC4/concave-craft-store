@@ -32,7 +32,7 @@ export default function ShippingReturnsPage() {
         <p>
           Shipping is a flat{" "}
           <strong className="text-[#f3f1ea]">$12.95 USD</strong> worldwide, and{" "}
-          <strong className="text-[#f3f1ea]">free on orders over $35 USD</strong>.
+          <strong className="text-[#f3f1ea]">free on orders over $45 USD</strong>.
           One rate to everywhere we ship — no surprise regional charges at
           checkout.
         </p>

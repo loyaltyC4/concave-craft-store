@@ -41,7 +41,7 @@ export const SOCIALS = {
 };
 
 // Revenue mechanics
-export const FREE_SHIPPING_THRESHOLD = 35; // USD subtotal (was 50 until 2026-11-16: every sub-$50 checkout met the $12.95 fee and was abandoned); must match app/api/checkout logic + merchant feed
+export const FREE_SHIPPING_THRESHOLD = 45; // USD subtotal (was 50 until 2026-11-16: every sub-$50 checkout met the $12.95 fee and was abandoned); must match app/api/checkout logic + merchant feed
 export const SHIPPING_FEE_USD = 12.95; // flat shipping fee under the free-shipping threshold
 
 /**
