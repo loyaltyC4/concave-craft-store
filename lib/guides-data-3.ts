@@ -346,9 +346,9 @@ export const guidesBatch3: Guide[] = [
   {
     slug: "fingerboard-foam-tape-guide",
     title: "Fingerboard Foam Tape Explained: Foam Grip vs Standard Grip Tape",
-    metaTitle: "Fingerboard Foam Tape vs Standard Grip Tape",
+    metaTitle: "Fingerboard Foam Tape: What It Is & How to Apply It",
     metaDescription:
-      "Foam-style fingerboard tape (FBS-style pads) versus standard sandpaper-grip tape: what each does, when to use which, and how to apply either without air bubbles.",
+      "Foam fingerboard tape vs standard grip tape: why most riders switch to foam, which thickness to pick, and how to apply it without air bubbles.",
     category: "Tuning",
     readMinutes: 6,
     updated: "2026-08-18",

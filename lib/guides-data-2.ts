@@ -308,9 +308,9 @@ export const guidesBatch2: Guide[] = [
   {
     slug: "fingerboard-grip-tape-guide",
     title: "Fingerboard Grip Tape Guide: Foam vs Sandpaper-Style",
-    metaTitle: "Best Fingerboard Grip Tape: Foam vs Sandpaper Compared",
+    metaTitle: "Best Fingerboard Grip Tape: Foam vs Sandpaper Picks",
     metaDescription:
-      "The best fingerboard grip tape for your setup: foam vs sandpaper-style compared, application tips and how to pick for feel, grip and cost.",
+      "Which fingerboard grip tape to buy: foam vs sandpaper-style compared on grip, feel and cost, plus how to cut and apply it cleanly.",
     category: "Buying",
     updated: "2026-07-23",
     readMinutes: 5,

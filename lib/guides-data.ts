@@ -24,9 +24,9 @@ export const guides: Guide[] = [
   {
     slug: "fingerboard-sizing-guide",
     title: "Fingerboard Sizing Guide: 32mm vs 34mm vs 36mm Decks Compared",
-    metaTitle: "Fingerboard Sizes: 32mm vs 34mm vs 36mm Chart",
+    metaTitle: "Fingerboard Size Chart: Which Width to Buy (29-36mm)",
     metaDescription:
-      " 34mm is the safest all-round width; 29-32mm flips faster, 36mm lands more. What each fingerboard size feels like and which truck width fits.",
+      "Quick answer: 34mm suits most riders. Size chart for 29, 32, 34 and 36mm decks with matching truck widths, and how each width feels for flips and landings.",
     category: "Sizing",
     updated: "2026-07-20",
     readMinutes: 6,
@@ -523,9 +523,9 @@ export const guides: Guide[] = [
   {
     slug: "fingerboard-vs-tech-deck",
     title: "Fingerboard vs Tech Deck: What's Actually Different (2026)",
-    metaTitle: "Fingerboard vs Tech Deck: What's Different",
+    metaTitle: "Fingerboard vs Tech Deck: The Real Differences",
     metaDescription:
-      "Fingerboards and Tech Decks look similar but perform very differently. Compare deck material, trucks, wheels, and feel to see what sets them apart.",
+      "A real wooden fingerboard and a Tech Deck differ in deck, trucks, wheels and price. What you actually feel, and when it is worth upgrading.",
     category: "Buying",
     updated: "2026-07-20",
     readMinutes: 6,
@@ -640,9 +640,9 @@ export const guides: Guide[] = [
   {
     slug: "best-beginner-fingerboard-setup",
     title: "Best Fingerboard Setup for Beginners: Complete Buying Guide",
-    metaTitle: "Best Beginner Fingerboard Setup: 32-34mm, What to Buy",
+    metaTitle: "Best Beginner Fingerboard Setup: Exactly What to Buy",
     metaDescription:
-      "Start with a 32-34mm wooden complete: medium concave, medium bushings, foam grip tape. What each part does, what it costs, and when to build your own.",
+      "Start with a 32-34mm wooden complete, medium concave, medium bushings and foam tape. What each part does, what it costs, and when to build your own.",
     category: "Buying",
     updated: "2026-07-20",
     readMinutes: 7,

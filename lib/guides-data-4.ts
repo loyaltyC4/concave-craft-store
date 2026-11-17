@@ -16,9 +16,9 @@ export const guidesBatch4: Guide[] = [
   {
     slug: "fingerboard-wheels-types-explained",
     title: "Fingerboard Wheels Explained: Bearing, Urethane and Resin Compared",
-    metaTitle: "Fingerboard Wheels: Bearing vs Urethane vs Resin Compared",
+    metaTitle: "Fingerboard Wheels: Bearing vs Urethane (Which to Buy)",
     metaDescription:
-      "Fingerboard wheel types compared honestly. Bearing wheels, urethane wheels and resin wheels — what each is made of, how they feel, and which to buy first.",
+      "Bearing, urethane and resin fingerboard wheels compared: how each rolls, sounds and lasts, and which to buy first for your setup and budget.",
     category: "Tuning",
     readMinutes: 6,
     updated: "2026-08-18",
