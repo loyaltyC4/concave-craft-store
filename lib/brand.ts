@@ -50,9 +50,25 @@ export const SHIPPING_FEE_USD = 12.95; // flat shipping fee under the free-shipp
  * parcel) so it can be fulfilled from the normal order sheet. Landed cost is
  * about $2-3, covered by the margin on a $60+ basket.
  */
-export const GIFT_THRESHOLD = 60;
-export const GIFT_NAME = "Free gift: mini fingerboard screwdriver";
-export const GIFT_HANDLE = "double-ended-mini-fingerboard-screwdriver";
+export const GIFT_THRESHOLD = 50;
+
+/**
+ * Gift pool for the spin wheel and the default gift. Each is a real catalog
+ * product that is tiny (about 40 g or less, ships flat in the same parcel) and
+ * cheap at supplier level, so a gift adds no meaningful shipping cost.
+ */
+export const GIFT_POOL = [
+  { handle: "fingerboard-foam-grip-tape-110-38mm-uncut-deck-griptape-stickers", name: "Foam grip tape sheet", short: "Grip tape" },
+  { handle: "wp-3m-anti-slip-grip-pad-easyboost", name: "3M anti-slip grip pad", short: "Grip pad" },
+  { handle: "fingerboard-spacer-for-finger-skateboard-truck", name: "Truck spacers", short: "Spacers" },
+  { handle: "6-pcs-fingerboard-locknuts-with-nylon-self-lock-anti-loose-nuts-stainless-steel", name: "Stainless locknuts (set of 6)", short: "Locknuts" },
+  { handle: "fingerboard-truck-pivot-cup", name: "Truck pivot cups", short: "Pivot cups" },
+] as const;
+export const DEFAULT_GIFT = GIFT_POOL[0];
+export const GIFT_COOKIE = "fl_gift";
+export function giftForHandle(handle?: string | null) {
+  return GIFT_POOL.find((g) => g.handle === handle) ?? DEFAULT_GIFT;
+}
 export function qualifiesForGift(subtotalUsd: number): boolean {
   return subtotalUsd > GIFT_THRESHOLD;
 }

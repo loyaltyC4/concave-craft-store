@@ -11,7 +11,7 @@ import Search, { SearchSkeleton } from "./search";
 
 const BASE_ANNOUNCEMENTS = [
   "Free shipping on orders over $45 USD",
-  "Free gift on orders over $60 USD",
+  "Free gift on orders over $50 USD",
   "Ships worldwide to 42 countries in 7–14 business days",
   "All prices in USD",
   "30-day returns",

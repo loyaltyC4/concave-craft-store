@@ -15,6 +15,7 @@ import {
   RETURN_WINDOW_DAYS,
 } from "lib/brand";
 import { baseUrl } from "lib/utils";
+import { CountryMap } from "components/country-map";
 import Link from "next/link";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
@@ -115,6 +116,13 @@ export default async function CountryShippingPage(props: {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbLd) }}
       />
+      <div className="mb-10 flex items-center gap-5">
+        <CountryMap code={page.code} name={page.name} size={140} />
+        <p className="max-w-md text-sm text-neutral-400">
+          {page.name.replace(/^the /, "")} · ships in {DELIVERY_MIN_DAYS}–{DELIVERY_MAX_DAYS} business days · prices in USD
+        </p>
+      </div>
+
       <Section heading={`Delivery to ${page.name}`}>
         <ul className="list-disc space-y-1 pl-6 text-neutral-300">
           <li>

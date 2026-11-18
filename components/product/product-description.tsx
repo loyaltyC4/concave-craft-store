@@ -45,9 +45,29 @@ export function ProductDescription({ product }: { product: Product }) {
         )
       : 0;
 
-  const summary = product.description
-    ? product.description.split(". ").slice(0, 2).join(". ")
-    : "";
+  // Lead with the listing's own opening paragraph (first <p>), not the first
+  // two "sentences" of the flattened text, which on listings with a spec table
+  // ran together into a wall of text.
+  const descHtml = product.descriptionHtml || "";
+  const introPara =
+    [...descHtml.matchAll(/<p>([\s\S]*?)<\/p>/g)]
+      .map((m) => m[1] ?? "")
+      .find((x) => !/^\s*<(strong|em)>/.test(x)) ?? "";
+  // No intro paragraph left: lead with the first two feature bullets instead.
+  const bulletIntro = [...descHtml.matchAll(/<li>([\s\S]*?)<\/li>/g)]
+    .slice(0, 2)
+    .map((m) => (m[1] ?? "").replace(/<[^>]*>/g, "").trim().replace(/[.;]$/, ""))
+    .join(". ");
+  const firstPara = introPara || bulletIntro;
+  const summaryText = (firstPara || product.description || "")
+    .replace(/<[^>]*>/g, " ")
+    .replace(/&times;/g, "×")
+    .replace(/&ndash;/g, "–")
+    .replace(/&mdash;/g, "—")
+    .replace(/&amp;/g, "&")
+    .replace(/\s+/g, " ")
+    .trim();
+  const summary = summaryText.split(". ").slice(0, 2).join(". ");
 
   return (
     <div className="flex flex-col">
@@ -103,10 +123,8 @@ export function ProductDescription({ product }: { product: Product }) {
               <span className="text-sm text-red-400">Currently out of stock</span>
             );
           }
-          const qty = Number((stockVariant as { inventoryQuantity?: number } | undefined)?.inventoryQuantity);
-          if (Number.isFinite(qty) && qty > 0 && qty <= 10) {
-            return <span className="text-sm font-medium text-amber-400">Only {qty} left in stock</span>;
-          }
+          // No "Only N left" counts: the catalogue quantities (6/8/10) are not
+          // live supplier stock, so showing them would be invented scarcity.
           return <span className="text-sm text-neutral-400">In stock</span>;
         })()}
       </div>

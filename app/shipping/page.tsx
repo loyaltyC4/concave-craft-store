@@ -10,11 +10,12 @@ import {
   FREE_SHIPPING_THRESHOLD,
   SHIPPING_FEE_USD,
 } from "lib/brand";
+import { CountryMap } from "components/country-map";
 import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: `Worldwide Fingerboard Shipping to ${COUNTRY_PAGES.length} Countries | Fingerboard Lab`,
+  title: `Worldwide Fingerboard Shipping to ${COUNTRY_PAGES.length} Countries`,
   description: `Fingerboard Lab ships ramps, completes, decks and parts worldwide. Flat $${SHIPPING_FEE_USD} USD shipping, free over $${FREE_SHIPPING_THRESHOLD}, ${DELIVERY_MIN_DAYS}-${DELIVERY_MAX_DAYS} business days. See your country.`,
   alternates: { canonical: "/shipping" },
 };
@@ -34,8 +35,9 @@ export default function ShippingHubPage() {
               <li key={c.slug}>
                 <Link
                   href={`/shipping/${c.slug}`}
-                  className="text-[#c5f23c] hover:underline"
+                  className="flex items-center gap-3 text-[#c5f23c] hover:underline"
                 >
+                  <CountryMap code={c.code} name={c.name} size={44} />
                   {c.name.replace(/^the /, "")}
                 </Link>
               </li>
@@ -43,6 +45,13 @@ export default function ShippingHubPage() {
           </ul>
         </Section>
       ))}
+      <p className="mt-10 text-xs text-neutral-500">
+        Country maps by{" "}
+        <a href="https://github.com/djaiss/mapsicon" className="underline" rel="noopener noreferrer">Mapsicon</a>
+        , flags from{" "}
+        <a href="https://flagpedia.net" className="underline" rel="noopener noreferrer">Flagpedia</a>.
+      </p>
+
       <Section heading="Don't see your country?">
         <p>
           Email{" "}

@@ -144,7 +144,7 @@ export const COUNTRY_PAGES: CountryPage[] = ROWS.map(
     region,
     currency: { code: cur, name: curName },
     eu: eu || undefined,
-    metaTitle: `Fingerboards Shipped to ${short} | Fingerboard Lab`,
+    metaTitle: `Fingerboards Shipped to ${short}`,
     metaDescription: `Buy fingerboards, ramps, obstacles and parts with delivery to ${name}. Flat $${SHIPPING_FEE_USD} USD shipping, free over $${FREE_SHIPPING_THRESHOLD}, ${DELIVERY_MIN_DAYS}-${DELIVERY_MAX_DAYS} business day delivery.`,
     featuredCollections: FEATURED_OVERRIDES[code] ?? REGION_FEATURED[region],
   }),

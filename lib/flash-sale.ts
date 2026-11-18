@@ -56,7 +56,7 @@ export const FLASH_SALE = {
   /** Short label used in the announcement bar / badges. */
   shortLabel: "Black Friday",
   /** What is on sale, in the shopper's words, for the announcement bar. */
-  blurb: "15% off 28 best-value completes, decks and ramps, plus a free gift on orders over $60",
+  blurb: "15% off 28 best-value completes, decks and ramps, plus a free gift on orders over $50",
   // Thursday 26 Nov 00:00 to Monday 30 Nov 23:59, US Pacific (Black Friday + Cyber Monday).
   startsAt: "2026-11-26T00:00:00-08:00",
   endsAt: "2026-11-30T23:59:59-08:00",
@@ -64,12 +64,58 @@ export const FLASH_SALE = {
   handles: BLACK_FRIDAY_HANDLES,
 } as const;
 
-export function isFlashSaleActive(now: Date = new Date()): boolean {
+/**
+ * Surprise flash deals: a fixed, pre-set list of real windows (hours long, on
+ * scattered days in December). Customers can't predict them, but each one is a
+ * true bounded window evaluated against the server clock, on the same
+ * margin-checked items as Black Friday at a smaller 10% discount. Outside a
+ * window every price is the regular price.
+ */
+const FLASH_DEAL_PCT = 0.1;
+const FLASH_DEAL_WINDOWS = [
+  { startsAt: "2026-12-02T11:00:00-08:00", endsAt: "2026-12-02T18:59:59-08:00" },
+  { startsAt: "2026-12-04T19:00:00-08:00", endsAt: "2026-12-05T06:59:59-08:00" },
+  { startsAt: "2026-12-09T09:00:00-08:00", endsAt: "2026-12-09T16:59:59-08:00" },
+  { startsAt: "2026-12-10T14:00:00-08:00", endsAt: "2026-12-10T21:59:59-08:00" },
+  { startsAt: "2026-12-16T09:00:00-08:00", endsAt: "2026-12-16T16:59:59-08:00" },
+  { startsAt: "2026-12-20T09:00:00-08:00", endsAt: "2026-12-21T02:59:59-08:00" },
+  { startsAt: "2026-12-26T17:00:00-08:00", endsAt: "2026-12-27T04:59:59-08:00" },
+  { startsAt: "2026-12-27T09:00:00-08:00", endsAt: "2026-12-27T20:59:59-08:00" },
+  { startsAt: "2026-12-30T07:00:00-08:00", endsAt: "2026-12-30T12:59:59-08:00" },
+] as const;
+
+export type ActiveSale = {
+  name: string;
+  shortLabel: string;
+  blurb: string;
+  startsAt: string;
+  endsAt: string;
+  discountPct: number;
+};
+
+/** The sale running right now (Black Friday or a surprise flash deal), if any. */
+export function activeSale(now: Date = new Date()): ActiveSale | null {
   const t = now.getTime();
-  return (
-    t >= new Date(FLASH_SALE.startsAt).getTime() &&
-    t <= new Date(FLASH_SALE.endsAt).getTime()
-  );
+  if (t >= new Date(FLASH_SALE.startsAt).getTime() && t <= new Date(FLASH_SALE.endsAt).getTime()) {
+    return { ...FLASH_SALE };
+  }
+  for (const w of FLASH_DEAL_WINDOWS) {
+    if (t >= new Date(w.startsAt).getTime() && t <= new Date(w.endsAt).getTime()) {
+      return {
+        name: "Flash Deal",
+        shortLabel: "Flash Deal",
+        blurb: "10% off 28 best-value completes, decks and ramps, for a few hours only",
+        startsAt: w.startsAt,
+        endsAt: w.endsAt,
+        discountPct: FLASH_DEAL_PCT,
+      };
+    }
+  }
+  return null;
+}
+
+export function isFlashSaleActive(now: Date = new Date()): boolean {
+  return activeSale(now) !== null;
 }
 
 export function isFlashSaleHandle(handle: string): boolean {
@@ -78,9 +124,11 @@ export function isFlashSaleHandle(handle: string): boolean {
 
 /** Rounds a discounted price to 2dp. No psychological-pricing tricks. */
 export function flashSalePrice(regularPrice: number): number {
-  return Math.round(regularPrice * (1 - FLASH_SALE.discountPct) * 100) / 100;
+  const pct = activeSale()?.discountPct ?? 0;
+  return Math.round(regularPrice * (1 - pct) * 100) / 100;
 }
 
 export function getFlashSaleEndMs(): number {
-  return new Date(FLASH_SALE.endsAt).getTime();
+  const a = activeSale();
+  return a ? new Date(a.endsAt).getTime() : 0;
 }

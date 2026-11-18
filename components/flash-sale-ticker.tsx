@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { useEffect, useState } from "react";
-import { FLASH_SALE, getFlashSaleEndMs } from "lib/flash-sale";
+import { activeSale, getFlashSaleEndMs } from "lib/flash-sale";
 
 function formatRemaining(ms: number): string {
   if (ms <= 0) return "";
@@ -42,7 +42,7 @@ export function FlashSaleTicker() {
       href="/search/sale"
       className="flex items-center gap-8 text-[#c5f23c] hover:underline"
     >
-      {FLASH_SALE.name}: {FLASH_SALE.blurb}, ends in{" "}
+      {activeSale()?.name}: {activeSale()?.blurb}, ends in{" "}
       {formatRemaining(remaining)}
       <span className="text-[#f3f1ea]/30 max-sm:hidden">◆</span>
     </Link>

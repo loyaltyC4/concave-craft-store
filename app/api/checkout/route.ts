@@ -2,7 +2,7 @@ import { NextRequest, NextResponse } from "next/server";
 import { getStripe } from "lib/stripe";
 import { staticGetVariant } from "lib/shopify/static-data";
 import { baseUrl } from "lib/utils";
-import { isFreeShipping, qualifiesForGift, GIFT_NAME, GIFT_HANDLE } from "lib/brand";
+import { isFreeShipping, qualifiesForGift, giftForHandle, GIFT_COOKIE } from "lib/brand";
 import { SHIP_COUNTRIES } from "lib/shipping";
 
 export const dynamic = "force-dynamic";
@@ -175,6 +175,9 @@ export async function POST(req: NextRequest) {
 
   // Free gift: a $0 line over the threshold. Built separately so that if
   // Stripe ever rejects a $0 line we retry without it instead of losing the sale.
+  // The spin wheel stores the shopper's prize in a cookie; anything outside the
+  // pool falls back to the default gift, so the cookie can't pick a pricey item.
+  const gift = giftForHandle(req.cookies.get(GIFT_COOKIE)?.value);
   const giftItem = qualifiesForGift(subtotalCents / 100)
     ? {
         quantity: 1,
@@ -182,8 +185,8 @@ export async function POST(req: NextRequest) {
           currency: "usd",
           unit_amount: 0,
           product_data: {
-            name: GIFT_NAME,
-            metadata: { handle: GIFT_HANDLE, sku: "GIFT", gift: "1" },
+            name: `Free gift: ${gift.name}`,
+            metadata: { handle: gift.handle, sku: "GIFT", gift: "1" },
           },
         },
       }

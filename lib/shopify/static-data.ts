@@ -28,11 +28,31 @@ import { isFlashSaleActive, isFlashSaleHandle, flashSalePrice } from "lib/flash-
 
 // ── Helpers ──────────────────────────────────────────────────────────────────
 
+const NAMED_ENTITIES: Record<string, string> = {
+  amp: "&", lt: "<", gt: ">", quot: '"', apos: "'", nbsp: " ",
+  times: "×", ndash: "–", mdash: "—", rsquo: "’", lsquo: "‘",
+  rdquo: "”", ldquo: "“", hellip: "…", deg: "°",
+};
+
+/** Decodes the few HTML entities our catalogue copy uses, so plain-text
+ *  views (meta descriptions, summaries, JSON-LD) never show "&times;". */
+export function decodeEntities(text: string): string {
+  return text.replace(/&(#x?[0-9a-f]+|[a-z]+);/gi, (m, e: string) => {
+    if (e[0] === "#") {
+      const n = e[1]?.toLowerCase() === "x" ? parseInt(e.slice(2), 16) : parseInt(e.slice(1), 10);
+      return Number.isFinite(n) ? String.fromCodePoint(n) : m;
+    }
+    return NAMED_ENTITIES[e.toLowerCase()] ?? m;
+  });
+}
+
 function stripHtml(html: string): string {
-  return html
-    .replace(/<[^>]*>/g, " ")
-    .replace(/\s+/g, " ")
-    .trim();
+  return decodeEntities(
+    html
+      .replace(/<[^>]*>/g, " ")
+      .replace(/\s+/g, " ")
+      .trim(),
+  ).replace(/\s+/g, " ");
 }
 
 /**

@@ -39,7 +39,7 @@ export function FreeShippingBar({ subtotal }: { subtotal: number }) {
       <p className="mt-2 text-center text-xs font-medium text-neutral-300">
         {giftUnlocked ? (
           <span className="text-[#c5f23c]">
-            🎁 Free gift added: mini fingerboard screwdriver
+            🎁 Free gift added to your order
           </span>
         ) : unlocked ? (
           <>

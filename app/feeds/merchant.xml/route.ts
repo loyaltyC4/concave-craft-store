@@ -4,7 +4,7 @@ import {
 } from "lib/shopify/static-data";
 import { COLLECTIONS, SITE_NAME } from "lib/brand";
 import { baseUrl } from "lib/utils";
-import { FLASH_SALE, isFlashSaleActive, isFlashSaleHandle } from "lib/flash-sale";
+import { activeSale, isFlashSaleActive, isFlashSaleHandle } from "lib/flash-sale";
 
 /**
  * Google Merchant Center product feed, generated from the same catalog the
@@ -84,7 +84,7 @@ export async function GET() {
             ? [
                 `<g:price>${parseFloat(v.compareAtPrice.amount).toFixed(2)} USD</g:price>`,
                 `<g:sale_price>${price.toFixed(2)} USD</g:sale_price>`,
-                `<g:sale_price_effective_date>${FLASH_SALE.startsAt}/${FLASH_SALE.endsAt}</g:sale_price_effective_date>`,
+                `<g:sale_price_effective_date>${activeSale()?.startsAt}/${activeSale()?.endsAt}</g:sale_price_effective_date>`,
               ]
             : [`<g:price>${price.toFixed(2)} USD</g:price>`]),
           `<g:condition>new</g:condition>`,
