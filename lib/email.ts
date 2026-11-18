@@ -268,7 +268,7 @@ export function brandedOrderEmailHtml(p: BrandedOrderParams): string {
               <td style="padding:18px 22px;">
                 <div class="label">Shipping status</div>
                 <div style="color:#fff; font-size:15px; font-weight:700; margin-top:6px;">Preparing to ship</div>
-                <div class="muted" style="font-size:13px; margin-top:4px;">Ships within 1&#8211;2 business days from our workshop. Tracking number follows as soon as it's on its way.</div>
+                <div class="muted" style="font-size:13px; margin-top:4px;">Ships within 1&#8211;2 business days. We'll email your tracking number as soon as it's on its way.</div>
               </td>
             </tr>
           </table>

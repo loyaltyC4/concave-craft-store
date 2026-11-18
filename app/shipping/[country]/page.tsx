@@ -76,10 +76,6 @@ export default async function CountryShippingPage(props: {
       a: `Usually ${DELIVERY_MIN_DAYS}–${DELIVERY_MAX_DAYS} business days from your order, with a tracking link emailed once it ships.`,
     },
     {
-      q: `Will I pay import tax or duties in ${page.name}?`,
-      a: `${taxCopy} We don't collect these at checkout and can't predict the amount.`,
-    },
-    {
       q: `What currency do I pay in?`,
       a: `Prices are in US dollars. Your bank converts to ${page.currency.name} (${page.currency.code}) at its own rate when you pay by card.`,
     },
@@ -109,7 +105,7 @@ export default async function CountryShippingPage(props: {
     <PageShell
       eyebrow="Shipping"
       title={`Fingerboard Lab ships to ${page.name}.`}
-      intro={`Everything in the catalog ships to ${page.name} the same way it ships everywhere else — one flat rate, one honest delivery window, no regional markup.`}
+      intro={`Everything in the catalog ships to ${page.name} the same way it ships everywhere else — one flat rate, one delivery window, no regional markup.`}
       wide
     >
       <script
@@ -139,8 +135,7 @@ export default async function CountryShippingPage(props: {
             handles the conversion to {page.currency.name} ({page.currency.code}) at checkout.
           </li>
           <li>
-            {taxCopy} Import charges aren&apos;t collected at checkout — we
-            don&apos;t pretend otherwise.
+            {taxCopy}
           </li>
           <li>
             {RETURN_WINDOW_DAYS}-day returns apply the same way they do for
@@ -153,16 +148,6 @@ export default async function CountryShippingPage(props: {
         </ul>
       </Section>
 
-      <Section heading={`Where orders actually ship from`}>
-        <p>
-          Fingerboard Lab is run from Melbourne, Australia, but we don&apos;t
-          hold stock there. Orders for {page.demonym} ship directly from our
-          supplier network (mostly workshops in China) — the same source
-          every order ships from, worldwide. That&apos;s why delivery is
-          measured in business days of international transit rather than
-          next-day local shipping.
-        </p>
-      </Section>
 
       <Section heading={`Shipping to ${page.name}: common questions`}>
         <dl className="space-y-5">

@@ -202,23 +202,23 @@ const TRACKING_STATUS_COPY: Record<
 > = {
   pending: {
     label: "Payment received",
-    detail: "We're getting your order ready to send to the workshop.",
+    detail: "We're getting your order ready to ship.",
   },
   paid: {
     label: "Payment received",
-    detail: "We're getting your order ready to send to the workshop.",
+    detail: "We're getting your order ready to ship.",
   },
   processing: {
     label: "Preparing to ship",
-    detail: "Your order is being prepared at the supplier workshop.",
+    detail: "Your order is being prepared.",
   },
   in_production: {
     label: "In production",
-    detail: "Your order is being built at the supplier workshop.",
+    detail: "Your order is being built.",
   },
   shipped: {
     label: "Shipped",
-    detail: "Your order is on its way via EMS / local postal service.",
+    detail: "Your order is on its way.",
   },
   delivered: {
     label: "Delivered",

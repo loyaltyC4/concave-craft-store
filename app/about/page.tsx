@@ -14,7 +14,7 @@ import {
 export const metadata: Metadata = {
   title: "Who We Are and How We Work",
   description:
-    "Fingerboard Lab is a small online fingerboard shop run from Melbourne, Australia. How we source products, where orders ship from",
+    "Fingerboard Lab is a small online fingerboard shop run from Melbourne, Australia. How we pick products and look after your order",
   alternates: { canonical: "/about" },
 };
 
@@ -23,7 +23,7 @@ export default function AboutPage() {
     <PageShell
       eyebrow="About"
       title="Who we are and how we work."
-      intro="Fingerboard Lab is a small online shop for fingerboarders, run from Melbourne, Australia. Here is exactly how the business works, so you know what you're buying and who you're buying from."
+      intro="Fingerboard Lab is a small online shop for fingerboarders, run from Melbourne, Australia. Here is how we work."
     >
       <Section heading="The business">
         <ul className="list-disc space-y-1 pl-6 text-neutral-300">
@@ -33,8 +33,7 @@ export default function AboutPage() {
           </li>
           <li>
             Based in: {BUSINESS.locality} {BUSINESS.region}{" "}
-            {BUSINESS.postalCode}, {BUSINESS.country} (online only, no
-            walk-in store)
+            {BUSINESS.postalCode}, {BUSINESS.country}
           </li>
           <li>
             Contact:{" "}
@@ -50,14 +49,12 @@ export default function AboutPage() {
         </ul>
       </Section>
 
-      <Section heading="Where our products come from">
+      <Section heading="How we work">
         <p>{BUSINESS.supplyModel}</p>
         <p>
           We choose what goes in the catalogue, write every product page and
           build guide ourselves, and handle all customer service and returns
-          directly. We don&apos;t claim to make anything we don&apos;t make,
-          and where a product is a collaboration or a named brand, the product
-          page says so.
+          directly.
         </p>
       </Section>
 

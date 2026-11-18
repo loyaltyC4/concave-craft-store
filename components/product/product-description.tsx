@@ -163,7 +163,7 @@ export function ProductDescription({ product }: { product: Product }) {
         </p>
         <p className="mt-1 text-neutral-400">
           Arrives in {DELIVERY_MIN_DAYS}–{DELIVERY_MAX_DAYS} business days ·
-          ships from our supplier workshop · tracking emailed on dispatch
+          shipped worldwide
         </p>
       </div>
 

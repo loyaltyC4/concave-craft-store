@@ -34,12 +34,11 @@ export default function ContactPage() {
           </li>
           <li>
             {BUSINESS.locality} {BUSINESS.region} {BUSINESS.postalCode},{" "}
-            {BUSINESS.country} — online only, no walk-in store
+            {BUSINESS.country}
           </li>
           {BUSINESS.phone ? <li>Phone: {BUSINESS.phone}</li> : null}
           <li>
-            Orders ship directly from our supplier workshops (mostly in
-            China). Returns are sent to the address we give you in your return
+            Returns are sent to the address we give you in your return
             authorization email.
           </li>
         </ul>

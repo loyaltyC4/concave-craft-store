@@ -14,7 +14,7 @@ export default function ShippingReturnsPage() {
     <PageShell
       eyebrow="Policies"
       title="Shipping & returns."
-      intro="Worldwide delivery, honest transit windows, and a clear, fair 30-day return policy."
+      intro="Worldwide delivery, clear delivery windows, and a clear, fair 30-day return policy."
     >
       <Section heading="Dispatch & delivery">
         <p>
@@ -23,11 +23,7 @@ export default function ShippingReturnsPage() {
           is shown at checkout.
         </p>
         <p>
-          Fingerboard Lab is run from Melbourne, Australia, but we don&apos;t
-          hold stock here. Your order is sent to our supplier workshop
-          (mostly in China) within 1–2 business days of purchase and ships to
-          you directly from there, so most of the total time is international
-          transit.
+          Orders are dispatched within 1–2 business days of purchase.
         </p>
         <p>
           Shipping is a flat{" "}
@@ -37,9 +33,8 @@ export default function ShippingReturnsPage() {
           checkout.
         </p>
         <p>
-          We ship worldwide. Any import duties or taxes for international orders
-          are the responsibility of the recipient and are not collected at
-          checkout.
+          Any import duties or taxes charged by your country are paid by the
+          recipient.
         </p>
       </Section>
       <Section heading="Tracking">

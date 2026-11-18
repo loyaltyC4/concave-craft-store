@@ -55,7 +55,7 @@ export default function Footer() {
           <p className="mt-4 max-w-xs text-sm leading-relaxed text-neutral-500">
             An online fingerboard shop run from Melbourne, Australia — park
             kits, ramps, obstacles, completes, molds and grip tape. Prices in
-            USD, shipped worldwide from our supplier workshops.
+            USD, shipped worldwide.
           </p>
           <div className="mt-5 flex gap-3">
             {[

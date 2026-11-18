@@ -25,7 +25,7 @@ export const BUSINESS = {
   countryCode: "AU",
   founded: 2026,
   supplyModel:
-    "We are a small online shop run from Melbourne, Australia. We don't manufacture: every product comes from specialist fingerboard workshops and suppliers (mostly in China) and ships to you directly from them, which is why delivery takes 7–14 business days.",
+    "We pick every product ourselves from specialist fingerboard makers, and we look after your order from checkout to your door. Delivery takes 7–14 business days.",
 } as const;
 export const SITE_TAGLINE = "Fingerboard parks, ramps & gear";
 export const SITE_DESCRIPTION =
