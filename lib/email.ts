@@ -1,4 +1,4 @@
-import { SITE_NAME, SUPPORT_EMAIL, WELCOME_DISCOUNT_CODE } from "./brand";
+import { SITE_NAME, SUPPORT_EMAIL } from "./brand";
 
 export function isResendConfigured(): boolean {
   return Boolean(process.env.RESEND_API_KEY);
@@ -420,6 +420,7 @@ function abandonedCartHtml(params: {
   amountTotal: number;
   currency: string;
   recoveryUrl: string;
+  offer?: boolean;
 }) {
   const rows = params.items
     .map(
@@ -442,7 +443,7 @@ function abandonedCartHtml(params: {
         <div style="width:36px;height:36px;border-radius:10px;background:#c5f23c;margin-bottom:16px;"></div>
         <h1 style="color:#f3f1ea;font-size:22px;margin:0 0 8px;">Your setup is still in the cart.</h1>
         <p style="color:#8a8f98;font-size:14px;margin:0 0 24px;">
-          You left before checking out. We saved everything. Use code <strong style="color:#c5f23c;">${WELCOME_DISCOUNT_CODE}</strong> at checkout for 10% off your first order.
+          You left before checking out. We saved everything.${params.offer ? ' Your 10% off your first order is applied automatically at checkout.' : ''}
         </p>
         <table role="presentation" width="100%">${rows}</table>
         <p style="margin:28px 0 0;">
@@ -475,7 +476,7 @@ export async function sendAbandonedCartEmail(params: {
   const text = [
     "Your setup is still in the cart.",
     "",
-    `You left before checking out. We saved everything. Use code ${WELCOME_DISCOUNT_CODE} at checkout for 10% off your first order.`,
+    `You left before checking out. We saved everything.`,
     "",
     lines,
     "",
@@ -485,8 +486,8 @@ export async function sendAbandonedCartEmail(params: {
   ].join("\n");
   return birdSend({
     to: params.to,
-    subject: `Your ${SITE_NAME} cart is waiting (10% off inside)`,
-    html: abandonedCartHtml(params),
+    subject: `Your ${SITE_NAME} cart is waiting`,
+    html: abandonedCartHtml({ ...params, offer: false }),
     text,
   });
 }
@@ -500,12 +501,13 @@ export async function sendCartSavedEmail(params: {
 }): Promise<{ sent: boolean }> {
   const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://fingerboardlab.com";
   // Opens the cart drawer on the shopper's own browser, where the cart is saved.
-  const cartUrl = `${siteUrl}/?cart=open`;
+  const cartUrl = `${siteUrl}/?cart=open&welcome=1`;
   const base = {
     items: params.items,
     amountTotal: params.amountTotal,
     currency: params.currency,
     recoveryUrl: cartUrl,
+    offer: true,
   };
   const lines = params.items
     .map(
@@ -520,7 +522,7 @@ export async function sendCartSavedEmail(params: {
     text: [
       "Your setup is saved.",
       "",
-      `Use code ${WELCOME_DISCOUNT_CODE} at checkout for 10% off your first order.`,
+      "Your 10% off your first order is applied automatically at checkout.",
       "",
       lines,
       "",

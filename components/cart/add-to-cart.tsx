@@ -5,7 +5,6 @@ import clsx from "clsx";
 import { trackAddToCart } from "lib/gtag";
 import { Product, ProductVariant } from "lib/shopify/types";
 import { useSearchParams } from "next/navigation";
-import { toast } from "sonner";
 import { useCart } from "./cart-context";
 import { resolveVariant } from "lib/variant";
 
@@ -99,9 +98,6 @@ export function AddToCart({ product }: { product: Product }) {
           },
           finalVariant.price.currencyCode,
         );
-        toast.success(`Added to cart`, {
-          description: product.title,
-        });
       }}
       />
     </div>

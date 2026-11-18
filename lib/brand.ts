@@ -93,6 +93,7 @@ export const DELIVERY_MAX_DAYS = 14;
 export const HANDLING_DAYS = 2; // business days before the supplier dispatches
 export const RETURN_WINDOW_DAYS = 30;
 export const WELCOME_DISCOUNT_CODE = "LABFIRST10";
+export const WELCOME_COOKIE = "fl_welcome";
 export const WELCOME_DISCOUNT_LABEL = "10% off your first order";
 
 // Palette (mirrors globals.css tokens)

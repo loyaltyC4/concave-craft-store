@@ -19,7 +19,6 @@ import {
   GUIDES,
   SHIPPING_FEE_USD,
   VOLT,
-  WELCOME_DISCOUNT_CODE,
   WELCOME_DISCOUNT_LABEL,
 } from "lib/brand";
 import homepageData from "data/homepage.json";
@@ -332,10 +331,6 @@ export default async function HomePage() {
               <span className="font-semibold text-[#c5f23c]">
                 {WELCOME_DISCOUNT_LABEL}
               </span>{" "}
-              with{" "}
-              <code className="rounded bg-white/5 px-1.5 py-0.5 font-mono text-[12px] tracking-wide text-[#f3f1ea]">
-                {WELCOME_DISCOUNT_CODE}
-              </code>
             </span>
           </div>
         </div>

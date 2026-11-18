@@ -2,7 +2,9 @@ import { NextRequest, NextResponse } from "next/server";
 import { getStripe } from "lib/stripe";
 import { staticGetVariant } from "lib/shopify/static-data";
 import { baseUrl } from "lib/utils";
-import { isFreeShipping, qualifiesForGift, giftForHandle, GIFT_COOKIE } from "lib/brand";
+import { isFreeShipping, qualifiesForGift, giftForHandle, GIFT_COOKIE, WELCOME_COOKIE, WELCOME_DISCOUNT_CODE } from "lib/brand";
+import { activeSale } from "lib/flash-sale";
+import { getSupabase } from "lib/supabase";
 import { SHIP_COUNTRIES } from "lib/shipping";
 
 export const dynamic = "force-dynamic";
@@ -192,7 +194,37 @@ export async function POST(req: NextRequest) {
       }
     : null;
 
-  const createSession = (items: typeof line_items) =>
+  // First-order 10%: applied automatically (no code box) for shoppers who
+  // claimed it (cookie) or whose email is on the list. Never stacked on a sale.
+  let welcomePromoId: string | null = null;
+  try {
+    if (!activeSale()) {
+      let eligible = req.cookies.get(WELCOME_COOKIE)?.value === "1";
+      if (!eligible && prefillEmail) {
+        const sb = getSupabase();
+        if (sb) {
+          const { data } = await sb
+            .from("fbl_subscribers")
+            .select("email")
+            .eq("email", prefillEmail)
+            .maybeSingle();
+          eligible = !!data;
+        }
+      }
+      if (eligible) {
+        const found = await stripe.promotionCodes.list({
+          code: WELCOME_DISCOUNT_CODE,
+          active: true,
+          limit: 1,
+        });
+        welcomePromoId = found.data[0]?.id ?? null;
+      }
+    }
+  } catch (e) {
+    console.error("welcome discount lookup failed:", e);
+  }
+
+  const createSession = (items: typeof line_items, promoId: string | null = null) =>
     stripe.checkout.sessions.create({
       mode: "payment",
       line_items: items,
@@ -201,7 +233,7 @@ export async function POST(req: NextRequest) {
         allowed_countries: [...ALLOWED_COUNTRIES] as any,
       },
       shipping_options: [standardShippingOption],
-      allow_promotion_codes: true,
+      ...(promoId ? { discounts: [{ promotion_code: promoId }] } : {}),
       // Prefill the email the shopper gave in the cart. It also means an
       // abandoned checkout carries an address we can send a reminder to.
       ...(prefillEmail ? { customer_email: prefillEmail } : {}),
@@ -209,21 +241,32 @@ export async function POST(req: NextRequest) {
       // a recovery link. consent_collection is not available for this Stripe
       // account's country (it fails every session), so it must not be sent.
       expires_at: Math.floor(Date.now() / 1000) + 60 * 60,
-      after_expiration: { recovery: { enabled: true, allow_promotion_codes: true } },
+      after_expiration: { recovery: { enabled: true } },
       success_url: `${origin}/order/success?session_id={CHECKOUT_SESSION_ID}`,
       cancel_url: `${origin}/search`,
       metadata: { source: "fingerboardlab", ...(giftItem ? { gift: "1" } : {}) },
     });
 
   try {
-    let session;
-    try {
-      session = await createSession(giftItem ? [...line_items, giftItem] : line_items);
-    } catch (giftErr) {
-      if (!giftItem) throw giftErr;
-      console.error("Checkout with gift line failed, retrying without it:", giftErr);
-      session = await createSession(line_items);
+    const attempts: [typeof line_items, string | null][] = [];
+    if (giftItem) attempts.push([[...line_items, giftItem], welcomePromoId]);
+    attempts.push([line_items, welcomePromoId]);
+    if (welcomePromoId) {
+      if (giftItem) attempts.push([[...line_items, giftItem], null]);
+      attempts.push([line_items, null]);
     }
+    let session;
+    let lastErr: unknown;
+    for (const [its, promo] of attempts) {
+      try {
+        session = await createSession(its, promo);
+        break;
+      } catch (e) {
+        lastErr = e;
+        console.error("Checkout attempt failed, retrying simpler:", e);
+      }
+    }
+    if (!session) throw lastErr;
 
     return NextResponse.json({ url: session.url });
   } catch (err) {

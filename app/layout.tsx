@@ -12,7 +12,7 @@ import { GA_MEASUREMENT_ID, GOOGLE_ADS_ID, META_PIXEL_ID } from "lib/gtag";
 import { POSTHOG_KEY, POSTHOG_API_HOST } from "lib/posthog";
 import { EXPERIMENT_BOOT_SCRIPT, EXPERIMENT_POSTHOG_REGISTER } from "lib/experiments";
 import { ProductClickTracker } from "components/analytics/product-click-tracker";
-import { SpinWheel } from "components/spin-wheel";
+import { WelcomeCookie } from "components/welcome-cookie";
 import {
   SITE_NAME,
   SITE_TAGLINE,
@@ -274,7 +274,7 @@ export default async function RootLayout({
         />
         <CartProvider>
           <ProductClickTracker />
-          <SpinWheel />
+          <WelcomeCookie />
           <Navbar />
           <main>
             {children}

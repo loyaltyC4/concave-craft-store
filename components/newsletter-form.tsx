@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { toast } from "sonner";
-import { WELCOME_DISCOUNT_CODE } from "lib/brand";
+import { setWelcomeCookie } from "lib/welcome";
 
 export function NewsletterForm({ source = "footer" }: { source?: string }) {
   const [email, setEmail] = useState("");
@@ -32,8 +32,9 @@ export function NewsletterForm({ source = "footer" }: { source?: string }) {
         });
       } else {
         toast.success("You're on the list!", {
-          description: `Use code ${data.code || WELCOME_DISCOUNT_CODE} for 10% off your first order.`,
+          description: "10% off your first order is applied automatically at checkout.",
         });
+        setWelcomeCookie();
         setEmail("");
       }
     } catch {

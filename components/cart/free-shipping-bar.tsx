@@ -1,10 +1,46 @@
+"use client";
+
+import { useEffect, useState } from "react";
+import { readGiftCookie, setGiftCookie } from "lib/welcome";
 import {
+  DEFAULT_GIFT,
+  GIFT_POOL,
   FREE_SHIPPING_THRESHOLD,
   GIFT_THRESHOLD,
   amountToFreeShipping,
   isFreeShipping,
   qualifiesForGift,
 } from "lib/brand";
+
+function GiftPicker() {
+  const [chosen, setChosen] = useState<string>(DEFAULT_GIFT.handle);
+  useEffect(() => {
+    const c = readGiftCookie();
+    if (c && GIFT_POOL.some((g) => g.handle === c)) setChosen(c);
+  }, []);
+  return (
+    <div className="mt-2 flex flex-wrap justify-center gap-1.5">
+      {GIFT_POOL.map((g) => (
+        <button
+          key={g.handle}
+          type="button"
+          onClick={() => {
+            setChosen(g.handle);
+            setGiftCookie(g.handle);
+          }}
+          aria-pressed={chosen === g.handle}
+          className={
+            chosen === g.handle
+              ? "rounded-full border border-[#c5f23c] bg-[#c5f23c] px-2.5 py-1 text-[11px] font-semibold text-black"
+              : "rounded-full border border-white/15 px-2.5 py-1 text-[11px] text-neutral-300 hover:border-[#c5f23c]/60"
+          }
+        >
+          {g.short}
+        </button>
+      ))}
+    </div>
+  );
+}
 
 export function FreeShippingBar({ subtotal }: { subtotal: number }) {
   const remaining = amountToFreeShipping(subtotal);
@@ -39,7 +75,7 @@ export function FreeShippingBar({ subtotal }: { subtotal: number }) {
       <p className="mt-2 text-center text-xs font-medium text-neutral-300">
         {giftUnlocked ? (
           <span className="text-[#c5f23c]">
-            🎁 Free gift added to your order
+            🎁 Pick your free gift
           </span>
         ) : unlocked ? (
           <>
@@ -51,6 +87,7 @@ export function FreeShippingBar({ subtotal }: { subtotal: number }) {
           </>
         ) : null}
       </p>
+      {giftUnlocked ? <GiftPicker /> : null}
     </div>
   );
 }

@@ -216,7 +216,6 @@ export async function POST(req: NextRequest) {
         ] as any,
       },
       customer_email: customerEmail.trim().toLowerCase(),
-      allow_promotion_codes: true,
       success_url: `${origin}/order/success?session_id={CHECKOUT_SESSION_ID}`,
       cancel_url: `${origin}/custom-build`,
       metadata: {
