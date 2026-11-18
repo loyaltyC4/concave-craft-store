@@ -108,12 +108,20 @@ export async function getGuideUrls(): Promise<SiteUrl[]> {
 
 export async function getCountryUrls(): Promise<SiteUrl[]> {
   const now = new Date().toISOString();
-  return COUNTRY_PAGES.map((c) => ({
-    url: `${baseUrl}/shipping/${c.slug}`,
-    lastModified: now,
-    changeFrequency: "monthly" as const,
-    priority: 0.6,
-  }));
+  return [
+    {
+      url: `${baseUrl}/shipping`,
+      lastModified: now,
+      changeFrequency: "monthly" as const,
+      priority: 0.7,
+    },
+    ...COUNTRY_PAGES.map((c) => ({
+      url: `${baseUrl}/shipping/${c.slug}`,
+      lastModified: now,
+      changeFrequency: "monthly" as const,
+      priority: 0.6,
+    })),
+  ];
 }
 
 /** Everything indexable, in one list. Shared by the sitemap and IndexNow so

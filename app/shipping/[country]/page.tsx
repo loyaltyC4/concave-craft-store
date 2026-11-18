@@ -4,6 +4,7 @@ import { PageShell, Section } from "components/page-shell";
 import { getCollectionProducts } from "lib/shopify";
 import {
   COUNTRY_PAGES,
+  countriesInRegion,
   getCountryPage,
 } from "lib/country-pages-data";
 import {
@@ -13,6 +14,7 @@ import {
   SHIPPING_FEE_USD,
   RETURN_WINDOW_DAYS,
 } from "lib/brand";
+import { baseUrl } from "lib/utils";
 import Link from "next/link";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
@@ -51,6 +53,57 @@ export default async function CountryShippingPage(props: {
     })),
   );
 
+  const neighbours = countriesInRegion(page.region).filter(
+    (c) => c.slug !== page.slug,
+  );
+
+  const taxCopy = page.eu
+    ? `${page.name} is in the EU, so your carrier or customs may charge import VAT (and sometimes a handling fee) when the parcel arrives.`
+    : `Your carrier or customs in ${page.name} may charge import duty, VAT or GST when the parcel arrives, depending on local rules and the order value.`;
+
+  const faqs = [
+    {
+      q: `Do you ship fingerboards to ${page.name}?`,
+      a: `Yes. Every product in the shop ships to ${page.name} — pick your country at checkout and the same flat rate applies.`,
+    },
+    {
+      q: `How much is shipping to ${page.name}?`,
+      a: `$${SHIPPING_FEE_USD.toFixed(2)} USD flat, and free on orders over $${FREE_SHIPPING_THRESHOLD} USD. There is no extra regional charge.`,
+    },
+    {
+      q: `How long does delivery to ${page.name} take?`,
+      a: `Usually ${DELIVERY_MIN_DAYS}–${DELIVERY_MAX_DAYS} business days from your order, with a tracking link emailed once it ships.`,
+    },
+    {
+      q: `Will I pay import tax or duties in ${page.name}?`,
+      a: `${taxCopy} We don't collect these at checkout and can't predict the amount.`,
+    },
+    {
+      q: `What currency do I pay in?`,
+      a: `Prices are in US dollars. Your bank converts to ${page.currency.name} (${page.currency.code}) at its own rate when you pay by card.`,
+    },
+  ];
+
+  const breadcrumbLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: baseUrl },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "Shipping",
+        item: `${baseUrl}/shipping`,
+      },
+      {
+        "@type": "ListItem",
+        position: 3,
+        name: page.name.replace(/^the /, ""),
+        item: `${baseUrl}/shipping/${page.slug}`,
+      },
+    ],
+  };
+
   return (
     <PageShell
       eyebrow="Shipping"
@@ -58,6 +111,10 @@ export default async function CountryShippingPage(props: {
       intro={`Everything in the catalog ships to ${page.name} the same way it ships everywhere else — one flat rate, one honest delivery window, no regional markup.`}
       wide
     >
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbLd) }}
+      />
       <Section heading={`Delivery to ${page.name}`}>
         <ul className="list-disc space-y-1 pl-6 text-neutral-300">
           <li>
@@ -71,12 +128,11 @@ export default async function CountryShippingPage(props: {
           </li>
           <li>
             All prices are in USD, charged via Stripe. Your card or bank
-            handles the currency conversion at checkout.
+            handles the conversion to {page.currency.name} ({page.currency.code}) at checkout.
           </li>
           <li>
-            Any import duties or taxes are the responsibility of the
-            recipient and aren&apos;t collected at checkout — we don&apos;t
-            pretend otherwise.
+            {taxCopy} Import charges aren&apos;t collected at checkout — we
+            don&apos;t pretend otherwise.
           </li>
           <li>
             {RETURN_WINDOW_DAYS}-day returns apply the same way they do for
@@ -100,6 +156,17 @@ export default async function CountryShippingPage(props: {
         </p>
       </Section>
 
+      <Section heading={`Shipping to ${page.name}: common questions`}>
+        <dl className="space-y-5">
+          {faqs.map((f) => (
+            <div key={f.q}>
+              <dt className="font-semibold text-[#f3f1ea]">{f.q}</dt>
+              <dd className="mt-1 text-neutral-300">{f.a}</dd>
+            </div>
+          ))}
+        </dl>
+      </Section>
+
       <div className="mt-16 space-y-14">
         {collectionsWithProducts.map((c) => (
           <div key={c.handle}>
@@ -118,6 +185,23 @@ export default async function CountryShippingPage(props: {
           </div>
         ))}
       </div>
+
+      <Section heading={`Also shipping to nearby countries`}>
+        <p className="flex flex-wrap gap-x-4 gap-y-2">
+          {neighbours.map((n) => (
+            <Link
+              key={n.slug}
+              href={`/shipping/${n.slug}`}
+              className="text-[#c5f23c] hover:underline"
+            >
+              {n.name.replace(/^the /, "")}
+            </Link>
+          ))}
+          <Link href="/shipping" className="text-[#c5f23c] hover:underline">
+            All countries →
+          </Link>
+        </p>
+      </Section>
     </PageShell>
   );
 }

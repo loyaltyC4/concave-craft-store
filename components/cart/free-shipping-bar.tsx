@@ -1,9 +1,17 @@
-import { FREE_SHIPPING_THRESHOLD, amountToFreeShipping, isFreeShipping } from "lib/brand";
+import {
+  FREE_SHIPPING_THRESHOLD,
+  GIFT_THRESHOLD,
+  amountToFreeShipping,
+  isFreeShipping,
+  qualifiesForGift,
+} from "lib/brand";
 
 export function FreeShippingBar({ subtotal }: { subtotal: number }) {
   const remaining = amountToFreeShipping(subtotal);
   const pct = Math.min(100, (subtotal / FREE_SHIPPING_THRESHOLD) * 100);
   const unlocked = isFreeShipping(subtotal);
+  const giftUnlocked = qualifiesForGift(subtotal);
+  const giftRemaining = Math.max(0.01, GIFT_THRESHOLD + 0.01 - subtotal);
 
   return (
     <div className="mb-4 rounded-2xl border border-white/10 bg-white/[0.03] p-3.5">
@@ -28,6 +36,21 @@ export function FreeShippingBar({ subtotal }: { subtotal: number }) {
           style={{ width: `${pct}%` }}
         />
       </div>
+      <p className="mt-2 text-center text-xs font-medium text-neutral-300">
+        {giftUnlocked ? (
+          <span className="text-[#c5f23c]">
+            🎁 Free gift added: mini fingerboard screwdriver
+          </span>
+        ) : unlocked ? (
+          <>
+            Add{" "}
+            <span className="font-semibold text-[#f3f1ea]">
+              ${giftRemaining.toFixed(2)}
+            </span>{" "}
+            more for a free gift
+          </>
+        ) : null}
+      </p>
     </div>
   );
 }

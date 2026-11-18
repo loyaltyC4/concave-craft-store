@@ -2,7 +2,7 @@ import { NextRequest, NextResponse } from "next/server";
 import { getStripe } from "lib/stripe";
 import { staticGetVariant } from "lib/shopify/static-data";
 import { baseUrl } from "lib/utils";
-import { isFreeShipping } from "lib/brand";
+import { isFreeShipping, qualifiesForGift, GIFT_NAME, GIFT_HANDLE } from "lib/brand";
 import { SHIP_COUNTRIES } from "lib/shipping";
 
 export const dynamic = "force-dynamic";
@@ -173,10 +173,26 @@ export async function POST(req: NextRequest) {
   const rawEmail = (body.email || "").trim().toLowerCase();
   const prefillEmail = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(rawEmail) && rawEmail.length <= 160 ? rawEmail : null;
 
-  try {
-    const session = await stripe.checkout.sessions.create({
+  // Free gift: a $0 line over the threshold. Built separately so that if
+  // Stripe ever rejects a $0 line we retry without it instead of losing the sale.
+  const giftItem = qualifiesForGift(subtotalCents / 100)
+    ? {
+        quantity: 1,
+        price_data: {
+          currency: "usd",
+          unit_amount: 0,
+          product_data: {
+            name: GIFT_NAME,
+            metadata: { handle: GIFT_HANDLE, sku: "GIFT", gift: "1" },
+          },
+        },
+      }
+    : null;
+
+  const createSession = (items: typeof line_items) =>
+    stripe.checkout.sessions.create({
       mode: "payment",
-      line_items,
+      line_items: items,
       billing_address_collection: "auto",
       shipping_address_collection: {
         allowed_countries: [...ALLOWED_COUNTRIES] as any,
@@ -193,8 +209,18 @@ export async function POST(req: NextRequest) {
       after_expiration: { recovery: { enabled: true, allow_promotion_codes: true } },
       success_url: `${origin}/order/success?session_id={CHECKOUT_SESSION_ID}`,
       cancel_url: `${origin}/search`,
-      metadata: { source: "fingerboardlab" },
+      metadata: { source: "fingerboardlab", ...(giftItem ? { gift: "1" } : {}) },
     });
+
+  try {
+    let session;
+    try {
+      session = await createSession(giftItem ? [...line_items, giftItem] : line_items);
+    } catch (giftErr) {
+      if (!giftItem) throw giftErr;
+      console.error("Checkout with gift line failed, retrying without it:", giftErr);
+      session = await createSession(line_items);
+    }
 
     return NextResponse.json({ url: session.url });
   } catch (err) {

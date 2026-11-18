@@ -9,7 +9,11 @@ import {
   SUPPORT_EMAIL,
   SOCIALS,
 } from "lib/brand";
-import { COUNTRY_PAGES } from "lib/country-pages-data";
+import {
+  COUNTRY_PAGES,
+  FOOTER_COUNTRY_SLUGS,
+  getCountryPage,
+} from "lib/country-pages-data";
 
 function Column({
   title,
@@ -107,11 +111,24 @@ export default function Footer() {
         />
 
         <Column
-          title="Ships to"
-          links={COUNTRY_PAGES.map((c) => ({
-            label: c.name.replace(/^the /, ""),
-            href: `/shipping/${c.slug}`,
-          }))}
+          title="Ships worldwide"
+          links={[
+            ...FOOTER_COUNTRY_SLUGS.flatMap((s) => {
+              const c = getCountryPage(s);
+              return c
+                ? [
+                    {
+                      label: c.name.replace(/^the /, ""),
+                      href: `/shipping/${c.slug}`,
+                    },
+                  ]
+                : [];
+            }),
+            {
+              label: `All ${COUNTRY_PAGES.length} countries →`,
+              href: "/shipping",
+            },
+          ]}
         />
 
         <div className="col-span-2 md:col-span-1">

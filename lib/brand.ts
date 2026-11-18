@@ -45,6 +45,19 @@ export const FREE_SHIPPING_THRESHOLD = 45; // USD subtotal (was 50 until 2026-11
 export const SHIPPING_FEE_USD = 12.95; // flat shipping fee under the free-shipping threshold
 
 /**
+ * Free gift: a $0 line item added at checkout when the subtotal is OVER the
+ * threshold. The gift is a real catalog item (cheap, light, ships in the same
+ * parcel) so it can be fulfilled from the normal order sheet. Landed cost is
+ * about $2-3, covered by the margin on a $60+ basket.
+ */
+export const GIFT_THRESHOLD = 60;
+export const GIFT_NAME = "Free gift: mini fingerboard screwdriver";
+export const GIFT_HANDLE = "double-ended-mini-fingerboard-screwdriver";
+export function qualifiesForGift(subtotalUsd: number): boolean {
+  return subtotalUsd > GIFT_THRESHOLD;
+}
+
+/**
  * One rule for the whole store: shipping is free only when the USD subtotal
  * is OVER the threshold. Exactly $35.00 pays the flat fee. Checkout, the cart,
  * the product page, the cart bar and the Merchant Center table all use these

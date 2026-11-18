@@ -11,8 +11,9 @@ import Search, { SearchSkeleton } from "./search";
 
 const BASE_ANNOUNCEMENTS = [
   "Free shipping on orders over $45 USD",
+  "Free gift on orders over $60 USD",
+  "Ships worldwide to 42 countries in 7–14 business days",
   "All prices in USD",
-  "Worldwide delivery in 7–14 business days",
   "30-day returns",
 ];
 
@@ -20,10 +21,14 @@ const BASE_ANNOUNCEMENTS = [
 // last safe order day for Christmas; the line disappears by itself after that.
 const CHRISTMAS_CUTOFF_MS = Date.parse("2026-12-04T23:59:59-08:00");
 const PRICE_DROP_UNTIL_MS = Date.parse("2026-12-16T00:00:00-08:00");
+const BF_PREVIEW_FROM_MS = Date.parse("2026-11-19T00:00:00-08:00");
+const BF_START_MS = Date.parse("2026-11-26T00:00:00-08:00");
 function announcements(now = Date.now()): string[] {
   const dated: string[] = [];
   if (now < CHRISTMAS_CUTOFF_MS) dated.push("Order by 4 Dec for Christmas delivery");
   if (now < PRICE_DROP_UNTIL_MS) dated.push("New lower prices on trucks, wheels, molds and pro completes");
+  // Black Friday preview: the sale itself switches on by the real clock in lib/flash-sale.ts.
+  if (now >= BF_PREVIEW_FROM_MS && now < BF_START_MS) dated.unshift("Black Friday starts 26 Nov: 15% off 28 completes, decks and ramps");
   return [...dated, ...BASE_ANNOUNCEMENTS];
 }
 
