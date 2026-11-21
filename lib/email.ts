@@ -643,7 +643,7 @@ export async function sendCustomOrderOwnerNotification(
   supabase: import("@supabase/supabase-js").SupabaseClient,
 ): Promise<{ sent: boolean }> {
   const recipientEmail =
-    process.env.ADMIN_NOTIFICATION_EMAIL || SUPPORT_EMAIL || null;
+    SUPPORT_EMAIL || null;
 
   if (!process.env.BIRD_API_KEY) {
     console.warn(
@@ -717,7 +717,10 @@ export async function sendOwnerOrderAlert(params: {
   currency: string;
   shippingAddress?: Record<string, string | null | undefined> | null;
 }): Promise<{ sent: boolean }> {
-  const owner = process.env.ADMIN_NOTIFICATION_EMAIL || OWNER_BCC_FALLBACK;
+  // Sent to the store address (Cloudflare forwards it to the owner). A direct
+  // Bird -> Gmail send was accepted by Gmail but never reached the inbox
+  // (21 Nov 2026), while the forwarded route arrived, so alerts use that route.
+  const owner = SUPPORT_EMAIL;
   if (!owner) return { sent: false };
 
   const total = money(params.amountTotal, params.currency);
