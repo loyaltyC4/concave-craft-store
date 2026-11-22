@@ -43288,7 +43288,7 @@
           "src": "/products/primary-10297130000202-b7",
           "width": 800,
           "height": 800,
-          "alt": "WP Magician 32mm shallow-concave deck on its gift box."
+          "alt": "WP Magician 32mm shallow-concave graphic deck, top view."
         },
         {
           "id": 1029713000020203,
@@ -43298,6 +43298,15 @@
           "width": 800,
           "height": 800,
           "alt": "Magician graphic deck, top view."
+        },
+        {
+          "id": 1029713000020204,
+          "product_id": 10297130000202,
+          "position": 3,
+          "src": "/products/gallery-10297130000202-box",
+          "width": 850,
+          "height": 850,
+          "alt": "Magician graphic deck on its gift box."
         }
       ],
       "image": {
@@ -43307,7 +43316,7 @@
         "src": "/products/primary-10297130000202-b7",
         "width": 800,
         "height": 800,
-        "alt": "WP Magician 32mm shallow-concave deck on its gift box."
+        "alt": "WP Magician 32mm shallow-concave graphic deck, top view."
       },
       "seo_title": "WP Magician 32mm Deck — Shallow Concave",
       "seo_description": "The Magician deck from WP: shallow-concave 32 × 100mm maple in the new Magician graphic. Deck only, or supplied with the truck-and-wheel set."
