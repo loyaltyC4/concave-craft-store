@@ -1,4 +1,5 @@
 /**
+ * ENDED 2026-11-22: both tests closed with no significant winner; locked to dark + lanes.
  * A/B experiments (started 2026-11-11 on branch cro-tests-nov11).
  *
  * Two independent 50/50 tests, assigned per browser and kept for 90 days:
@@ -25,8 +26,8 @@
  */
 
 export const EXPERIMENTS = {
-  exp_theme: ["dark", "light"],
-  exp_home_hero: ["lanes", "showcase"],
+  exp_theme: ["dark"],
+  exp_home_hero: ["lanes"],
 } as const;
 
 export type ExperimentName = keyof typeof EXPERIMENTS;
@@ -40,7 +41,7 @@ function rc(n){var m=d.cookie.match(new RegExp('(?:^|; )'+n+'=([^;]*)'));return 
 function wc(n,v){d.cookie=n+'='+encodeURIComponent(v)+'; path=/; max-age=${COOKIE_DAYS * 86400}; SameSite=Lax'}
 for(var n in E){var opts=E[n],v=q.get(n);
 if(!v||opts.indexOf(v)<0){v=rc(n)}
-if(!v||opts.indexOf(v)<0){v=opts[Math.random()<0.5?0:1]}
+if(!v||opts.indexOf(v)<0){v=opts[Math.floor(Math.random()*opts.length)]}
 wc(n,v);out[n]=v}
 function apply(){
 if(h.getAttribute('data-theme')!==out.exp_theme)h.setAttribute('data-theme',out.exp_theme);
