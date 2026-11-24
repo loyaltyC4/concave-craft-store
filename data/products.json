@@ -1016,18 +1016,9 @@
           "alt": "WhitePolar DIY fingerboard kit"
         },
         {
-          "id": 1029713000031505,
-          "product_id": 10297130000315,
-          "position": 5,
-          "src": "/products/gallery-10297130000315-b7-5.jpg",
-          "width": 1000,
-          "height": 1000,
-          "alt": "WhitePolar Brawl fingerboard"
-        },
-        {
           "id": 1029713000031506,
           "product_id": 10297130000315,
-          "position": 6,
+          "position": 5,
           "src": "/products/gallery-10297130000315-b7-6.jpg",
           "width": 1000,
           "height": 1000,
@@ -1036,7 +1027,7 @@
         {
           "id": 1029713000031507,
           "product_id": 10297130000315,
-          "position": 7,
+          "position": 6,
           "src": "/products/gallery-10297130000315-b7-7.jpg",
           "width": 1000,
           "height": 1000,
@@ -4541,18 +4532,9 @@
           "alt": "DTzero half-U fingerboard ramp with brick surface on a white background"
         },
         {
-          "id": 1029713000031002,
-          "product_id": 10297130000310,
-          "position": 2,
-          "src": "/products/gallery-10297130000310-b6-2.jpg",
-          "width": 1000,
-          "height": 1000,
-          "alt": "DTzero half-U ramp close-up of the brick surface"
-        },
-        {
           "id": 1029713000031003,
           "product_id": 10297130000310,
-          "position": 3,
+          "position": 2,
           "src": "/products/gallery-10297130000310-b6-3.jpg",
           "width": 1000,
           "height": 1000,
@@ -4561,7 +4543,7 @@
         {
           "id": 1029713000031004,
           "product_id": 10297130000310,
-          "position": 4,
+          "position": 3,
           "src": "/products/gallery-10297130000310-b6-4.jpg",
           "width": 1000,
           "height": 1000,
@@ -4570,7 +4552,7 @@
         {
           "id": 1029713000031005,
           "product_id": 10297130000310,
-          "position": 5,
+          "position": 4,
           "src": "/products/gallery-10297130000310-b6-5.jpg",
           "width": 1000,
           "height": 1000,
