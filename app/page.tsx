@@ -1,5 +1,6 @@
 import { getCollectionProducts, getPicks, getProduct } from "lib/shopify";
 import { FeaturedShowcase } from "components/home/featured-showcase";
+import { ProductHero } from "components/home/product-hero";
 import type { Product } from "lib/shopify/types";
 import Image from "next/image";
 import Link from "next/link";
@@ -80,6 +81,13 @@ export default async function HomePage() {
   });
   const totalProducts = collectionProducts.reduce((n, p) => n + p.length, 0);
 
+  const [heroPicks, bestSellers, addOns, newDrops] = await Promise.all([
+    getPicks("hero_picks"),
+    getPicks("best_sellers"),
+    getPicks("addons"),
+    getPicks("new_drops"),
+  ]);
+
   const [topPicks, featuredMolds, proCompletes, parkPicks, showcaseProduct] = await Promise.all([
     getPicks("top_picks"),
     getPicks("molds"),
@@ -102,7 +110,7 @@ export default async function HomePage() {
   const specs = [
     `${totalProducts} products`,
     `Completes from ${entry(collectionProducts[0] ?? [])}`,
-    "$12.95 USD flat shipping worldwide",
+    `$${SHIPPING_FEE_USD.toFixed(2)} USD shipping under $${FREE_SHIPPING_THRESHOLD}`,
     `Free shipping over $${FREE_SHIPPING_THRESHOLD} USD`,
     "Deck molds & pressing supplies",
     "Free build guides",
@@ -233,6 +241,73 @@ export default async function HomePage() {
           ]}
         />
       ) : null}
+      <ProductHero
+        picks={heroPicks}
+        completesFrom={heroPicks[0] ? money(priceNum(heroPicks[0])) : money(lowest(listOf("completes")))}
+        totalProducts={totalProducts}
+      />
+
+      {/* Reveal sentinel for the mobile sticky CTA (moved up with the new hero). */}
+      <span id={REVEAL_SENTINEL_ID} aria-hidden="true" />
+
+      {/* BEST SELLERS — ranked by add-to-cart, then product clicks (PostHog,
+          last 60 days). The hero links here. Baymard: show a wide spread of
+          real products, with images, high on the homepage. */}
+      <section id="best-sellers" className="mx-auto max-w-7xl scroll-mt-24 px-6 pt-14 pb-6 md:px-12 md:pt-20">
+        <div className="mb-8 flex items-end justify-between gap-6">
+          <div>
+            <span className="text-xs font-semibold uppercase tracking-[0.18em]" style={{ color: VOLT }}>
+              Best sellers
+            </span>
+            <h2 className="mt-3 text-3xl font-semibold md:text-5xl">What riders are buying.</h2>
+            <p className="mt-3 max-w-md text-neutral-400">
+              Ranked by how often shoppers add them to their carts. Completes, ramps and parts.
+            </p>
+          </div>
+          <Link href="/search" className="hidden shrink-0 text-sm font-semibold text-neutral-300 hover:text-[#c5f23c] md:block">
+            View all →
+          </Link>
+        </div>
+        <div className="grid grid-cols-2 gap-3 md:grid-cols-4 md:gap-5">
+          {bestSellers.map((p, i) => (
+            <ProductCard
+              key={p.id}
+              product={p}
+              badge={i < 3 ? "Best seller" : undefined}
+              priority={i < 4}
+              sizes="(min-width:1040px) 22vw, 46vw"
+            />
+          ))}
+        </div>
+      </section>
+
+      {/* ADD-ONS UNDER $25 — goal-gradient nudge toward the free-shipping
+          threshold; small parts people add to an order. */}
+      {addOns.length > 0 && (
+        <section className="mx-auto max-w-7xl px-6 pt-10 pb-12 md:px-12">
+          <div className="mb-6 flex flex-wrap items-end justify-between gap-4 rounded-2xl border border-[#c5f23c]/25 bg-[#11140b] px-5 py-4">
+            <div>
+              <span className="text-xs font-semibold uppercase tracking-[0.18em]" style={{ color: VOLT }}>
+                Add-ons under $25
+              </span>
+              <h2 className="mt-1.5 text-xl font-semibold md:text-2xl">
+                Top up to free shipping over ${FREE_SHIPPING_THRESHOLD}.
+              </h2>
+            </div>
+            <Link href="/search/tuning-hardware" className="text-sm font-semibold text-[#c5f23c]">
+              All parts →
+            </Link>
+          </div>
+          <div className="cc-hscroll flex gap-4 overflow-x-auto pb-3">
+            {addOns.map((p) => (
+              <div key={p.id} className="cc-hscroll-item w-[44%] shrink-0 sm:w-[30%] lg:w-[18%]">
+                <ProductCard product={p} sizes="(min-width:1040px) 16vw, 44vw" />
+              </div>
+            ))}
+          </div>
+        </section>
+      )}
+
       <section className="exp-hero-lanes relative overflow-hidden border-b border-white/10">
         <div
           aria-hidden="true"
@@ -251,14 +326,13 @@ export default async function HomePage() {
                 className="text-[11px] font-semibold uppercase tracking-[0.18em] md:text-xs"
                 style={{ color: VOLT }}
               >
-                {totalProducts} products · free build guides
-                {moldCeiling ? ` · molds to ${money(moldCeiling)}` : ""}
+                Shop by build
               </span>
             </div>
 
-            <h1 className="max-w-[18ch] text-[38px] font-semibold leading-[1.02] md:text-[60px]">
-              Where are you in your <span style={{ color: VOLT }}>build?</span>
-            </h1>
+            <h2 className="max-w-[20ch] text-[30px] font-semibold leading-[1.05] md:text-[44px]">
+              Or shop by what you&apos;re <span style={{ color: VOLT }}>building.</span>
+            </h2>
 
             <p className="mt-5 max-w-xl text-base text-neutral-300 md:text-lg">
               Ride it out of the box, build a park you can actually skate, or
@@ -312,27 +386,6 @@ export default async function HomePage() {
             ))}
           </div>
 
-          <div className="mt-8 flex flex-wrap items-center gap-x-6 gap-y-2 text-[13px] text-neutral-400">
-            <span>
-              <span className="font-semibold text-[#c5f23c]">
-                ${SHIPPING_FEE_USD}
-              </span>{" "}
-              flat worldwide
-            </span>
-            <span>
-              <span className="font-semibold text-[#c5f23c]">Free</span>{" "}
-              shipping over ${FREE_SHIPPING_THRESHOLD}
-            </span>
-            <span>
-              <span className="font-semibold text-[#c5f23c]">30-day</span>{" "}
-              returns
-            </span>
-            <span>
-              <span className="font-semibold text-[#c5f23c]">
-                {WELCOME_DISCOUNT_LABEL}
-              </span>{" "}
-            </span>
-          </div>
         </div>
       </section>
 
@@ -341,8 +394,6 @@ export default async function HomePage() {
         user scrolls past this point (below the hero copy). See
         components/mobile-sticky-cta.tsx.
       */}
-      <span id={REVEAL_SENTINEL_ID} aria-hidden="true" />
-
       {/* MARQUEE — kept from previous design; it's the store's "as seen in" moment.
           Was black text on the volt background — reported unreadable, so flipped
           to the site's dark ink with bold volt-green text (the same
@@ -377,11 +428,11 @@ export default async function HomePage() {
               Just dropped
             </span>
             <h2 className="mt-3 text-3xl font-semibold md:text-5xl">
-              This week&apos;s picks.
+              New this week.
             </h2>
             <p className="mt-3 max-w-md text-neutral-400">
-              Recent additions — press molds, collab completes,
-              race-grade wheels and park sets. One of each, low to high.
+              Anti Once graphic completes, the Plies x Silent collab, HAILEY
+              and new wooden park pieces.
             </p>
           </div>
           <Link
@@ -392,14 +443,14 @@ export default async function HomePage() {
           </Link>
         </Reveal>
         <div className="cc-hscroll flex gap-5 overflow-x-auto pb-4">
-          {topPicks.map((p, i) => (
+          {newDrops.map((p, i) => (
             <Reveal
               key={p.id}
               direction="up"
               delay={i * 60}
               className="cc-hscroll-item w-[78%] shrink-0 sm:w-[44%] lg:w-[28%]"
             >
-              <ProductCard product={p} badge={pickBadge(p, i)} />
+              <ProductCard product={p} badge="New" />
             </Reveal>
           ))}
         </div>

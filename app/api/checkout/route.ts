@@ -2,7 +2,7 @@ import { NextRequest, NextResponse } from "next/server";
 import { getStripe } from "lib/stripe";
 import { staticGetVariant } from "lib/shopify/static-data";
 import { baseUrl } from "lib/utils";
-import { isFreeShipping, qualifiesForGift, giftForHandle, GIFT_COOKIE, WELCOME_COOKIE, WELCOME_DISCOUNT_CODE } from "lib/brand";
+import { isFreeShipping, qualifiesForGift, giftForHandle, GIFT_COOKIE, WELCOME_COOKIE, WELCOME_DISCOUNT_CODE, SHIPPING_FEE_USD } from "lib/brand";
 import { activeSale } from "lib/flash-sale";
 import { getSupabase } from "lib/supabase";
 import { SHIP_COUNTRIES } from "lib/shipping";
@@ -163,7 +163,7 @@ export async function POST(req: NextRequest) {
     : {
         shipping_rate_data: {
           type: "fixed_amount" as const,
-          fixed_amount: { amount: 1295, currency: "usd" },
+          fixed_amount: { amount: Math.round(SHIPPING_FEE_USD * 100), currency: "usd" },
           display_name: "Standard shipping",
           delivery_estimate: {
             minimum: { unit: "business_day" as const, value: 7 },

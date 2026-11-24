@@ -16,7 +16,7 @@ import { activeSale, isFlashSaleActive, isFlashSaleHandle } from "lib/flash-sale
  * https://fingerboardlab.com/feeds/merchant.xml (feed label "US", USD prices,
  * target countries = LISTING_COUNTRIES in lib/shipping.ts; Google converts
  * currency for display in non-USD countries). Shipping is configured once at
- * account level in Merchant Center ($12.95 USD, free over $45 USD, 7–14
+ * account level in Merchant Center ($4.95 USD since 2026-11-24, free over $45 USD, 7–14
  * business days) rather than repeated on every item. One <item> per variant,
  * grouped by item_group_id.
  */

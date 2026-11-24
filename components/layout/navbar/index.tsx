@@ -46,9 +46,6 @@ const SHORT_LABEL: Record<string, string> = Object.fromEntries(
 export async function Navbar() {
   const collections = await getCollections();
   const links = [
-    // Custom Builds is a premium/high-margin service — placed first for
-    // maximum visibility, before the standard catalog collections.
-    { title: "Custom Builds", path: "/custom" },
     ...collections
       // "sale" is a real collection page (so it can be linked/indexed) but
       // deliberately excluded from the persistent nav — it should only be
@@ -60,6 +57,10 @@ export async function Navbar() {
         path: c.path,
       })),
     { title: "Guides", path: "/guides" },
+    // Custom Builds moved from first (highlighted) to last on 2026-11-24:
+    // /custom had 82 landings in 30 days, 65% bounced, 1 add-to-cart, and the
+    // bright first slot pulled shoppers away from the catalogue.
+    { title: "Custom Builds", path: "/custom" },
   ];
   const saleOn = isFlashSaleActive();
 
@@ -127,9 +128,7 @@ export async function Navbar() {
                 href={item.path}
                 prefetch={true}
                 className={`inline-flex min-h-[44px] items-center whitespace-nowrap text-sm font-medium underline-offset-4 transition-colors hover:text-[#c5f23c] ${
-                  item.path === "/custom"
-                    ? "font-semibold text-[#c5f23c]"
-                    : "text-neutral-300"
+                  "text-neutral-300"
                 }`}
               >
                 {item.title}

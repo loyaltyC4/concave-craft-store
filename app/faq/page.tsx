@@ -33,7 +33,7 @@ const FAQS: Faq[] = [
   },
   {
     q: "Do you ship worldwide?",
-    a: "Yes, we ship worldwide for a flat $12.95, free on orders over $45 (all prices are in USD). Most orders arrive within 7–14 business days depending on destination.",
+    a: "Yes, we ship worldwide for a flat $4.95, free on orders over $45 (all prices are in USD). Most orders arrive within 7–14 business days depending on destination.",
   },
   {
     q: "What's your return policy?",

@@ -1,5 +1,5 @@
 import { PageShell, Section } from "components/page-shell";
-import { SUPPORT_EMAIL } from "lib/brand";
+import { SHIPPING_FEE_USD, SUPPORT_EMAIL } from "lib/brand";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -27,7 +27,7 @@ export default function ShippingReturnsPage() {
         </p>
         <p>
           Shipping is a flat{" "}
-          <strong className="text-[#f3f1ea]">$12.95 USD</strong> worldwide, and{" "}
+          <strong className="text-[#f3f1ea]">${SHIPPING_FEE_USD.toFixed(2)} USD</strong> worldwide, and{" "}
           <strong className="text-[#f3f1ea]">free on orders over $45 USD</strong>.
           One rate to everywhere we ship — no surprise regional charges at
           checkout.
