@@ -123,6 +123,22 @@ async function handleCustomOrderPaid(
   }
 }
 
+/**
+ * This Stripe account is shared with other businesses (TenderWin and Bidcheck software plans use the same
+ * account), so every checkout lands on this webhook too. Only our own store checkouts may create orders, send
+ * order emails or adjust stock. Fingerboard Lab checkouts are stamped metadata.source = "fingerboardlab"
+ * (app/api/checkout/route.ts); custom builds carry custom_order_id. Anything that is a subscription or carries a
+ * plan / kind / service tag, or another source, belongs to someone else. (2026-11-24: a TenderWin trial
+ * sign-up produced a "NEW FINGERBOARD LAB ORDER" alert and a confirmation email to the customer.)
+ */
+function isForeignSession(session: Stripe.Checkout.Session): boolean {
+  const m = session.metadata || {};
+  if (m.source === "fingerboardlab" || m.custom_order_id) return false;
+  if (session.mode === "subscription") return true;
+  if (m.source || m.plan || m.kind || m.service) return true;
+  return false;
+}
+
 export async function POST(req: NextRequest) {
   const stripe = getStripe();
   const webhookSecret = process.env.STRIPE_WEBHOOK_SECRET;
@@ -156,6 +172,9 @@ export async function POST(req: NextRequest) {
   }
 
   if (event.type === "checkout.session.expired") {
+    if (isForeignSession(event.data.object as Stripe.Checkout.Session)) {
+      return NextResponse.json({ received: true, ignored: "not_a_fingerboardlab_checkout" });
+    }
     try {
       const expired = await stripe.checkout.sessions.retrieve(
         (event.data.object as Stripe.Checkout.Session).id,
@@ -187,6 +206,10 @@ export async function POST(req: NextRequest) {
       { error: "session_retrieve_failed" },
       { status: 500 },
     );
+  }
+
+  if (isForeignSession(session)) {
+    return NextResponse.json({ received: true, ignored: "not_a_fingerboardlab_checkout" });
   }
 
   await markCartRecovered(session);
