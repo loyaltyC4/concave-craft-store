@@ -28,7 +28,7 @@ function announcements(now = Date.now()): string[] {
   if (now < CHRISTMAS_CUTOFF_MS) dated.push("Order by 4 Dec for Christmas delivery");
   if (now < PRICE_DROP_UNTIL_MS) dated.push("New lower prices on trucks, wheels, molds and pro completes");
   // Black Friday preview: the sale itself switches on by the real clock in lib/flash-sale.ts.
-  if (now >= BF_PREVIEW_FROM_MS && now < BF_START_MS) dated.unshift("Black Friday starts 26 Nov: 15% off 28 completes, decks and ramps");
+  if (now >= BF_PREVIEW_FROM_MS && now < BF_START_MS) dated.unshift("Black Friday starts 26 Nov: up to 15% off completes, decks and ramps");
   return [...dated, ...BASE_ANNOUNCEMENTS];
 }
 

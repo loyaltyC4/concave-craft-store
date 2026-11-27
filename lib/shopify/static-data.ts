@@ -85,7 +85,7 @@ function restProductToProduct(p: any): Product {
   const prices = (p.variants ?? [])
     .map((v: any) => {
       const raw = parseFloat(v.price ?? "0");
-      return onSaleProduct ? flashSalePrice(raw) : raw;
+      return onSaleProduct ? flashSalePrice(raw, p.handle as string) : raw;
     })
     .filter((n: number) => !isNaN(n));
   const minPrice = prices.length ? Math.min(...prices) : 0;
@@ -133,7 +133,7 @@ function restProductToProduct(p: any): Product {
     // at" shown during the sale is the product's own real regular price, not
     // an invented anchor, and the discount disappears automatically once
     // `endsAt` passes: nothing here needs to be manually reverted.
-    const price = onSaleProduct ? flashSalePrice(regularPrice) : regularPrice;
+    const price = onSaleProduct ? flashSalePrice(regularPrice, p.handle as string) : regularPrice;
     const compareAt = onSaleProduct ? regularPrice : existingCompareAt;
 
     return {
