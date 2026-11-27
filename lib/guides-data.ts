@@ -28,7 +28,7 @@ export const guides: Guide[] = [
     metaDescription:
       "Quick answer: 34mm suits most riders. Size chart for 29, 32, 34 and 36mm decks with matching truck widths, and how each width feels for flips and landings.",
     category: "Sizing",
-    updated: "2026-07-20",
+    updated: "2026-11-27",
     readMinutes: 6,
     heroSummary:
       "The best fingerboard width depends on your hand size and riding style, but 34mm is the most popular and most versatile choice for the majority of riders. Narrower 29-32mm decks flip faster and suit technical, precise tricks, while wider 36mm decks trade flip speed for stability and a larger landing area. If you only own one deck, 34mm balances both extremes better than any other width.",
@@ -123,6 +123,22 @@ export const guides: Guide[] = [
       {
         q: "Can I switch fingerboard sizes as I improve?",
         a: "Yes, many riders start on 32mm or 34mm and experiment with 36mm once they want more stability for park-style riding, or size down if they chase faster, more technical flip tricks.",
+      },
+      {
+        q: "What are the different fingerboard sizes?",
+        a: "Fingerboard decks are sold by width in millimetres. The common sizes are 29-30mm (narrow), 32mm, 34mm (the most popular) and 36mm (wide). Length barely changes between them, so width is the size that matters.",
+      },
+      {
+        q: "How do I measure a fingerboard?",
+        a: "Measure straight across the widest part of the deck in millimetres. That number is the size. Do not measure the trucks or wheels; the deck width is what the listing means by 29mm, 32mm, 34mm or 36mm.",
+      },
+      {
+        q: "32mm vs 34mm fingerboard: which should I buy?",
+        a: "Buy 34mm if you want the safe all-rounder that is stable on obstacles and still flips well. Buy 32mm if you have smaller hands or want a quicker, lighter board for technical flip tricks. If you are unsure, start with 34mm and try 32mm later.",
+      },
+      {
+        q: "What fingerboard size is best for adults or bigger hands?",
+        a: "Riders with larger fingers usually find 34mm or 36mm more comfortable because the wider deck gives more room to balance and flick. Smaller hands often prefer 29-32mm.",
       },
     ],
     related: [

@@ -132,7 +132,7 @@ export const HUBS: Hub[] = [
         a: "Usually, yes. A set costs less per piece and the sizes are made to match, so you can build lines straight away.",
       },
     ],
-    guides: ["best-beginner-fingerboard-setup", "finger-board-rails-guide"],
+    guides: ["fingerboard-obstacles-guide", "best-beginner-fingerboard-setup", "finger-board-rails-guide"],
     related: ["fingerboard-rails", "wooden-fingerboard-ramps", "fingerboard-parks"],
     match: (p, c) => c(["ramps-obstacles", "park-kits"]),
   },
@@ -313,7 +313,7 @@ export const HUBS: Hub[] = [
         a: "Yes. A set that already includes several obstacles is a complete present; add a complete fingerboard if the person does not yet own one.",
       },
     ],
-    guides: ["best-beginner-fingerboard-setup", "complete-beginner-fingerboard-kit"],
+    guides: ["fingerboard-obstacles-guide", "best-beginner-fingerboard-setup", "complete-beginner-fingerboard-kit"],
     related: ["wooden-fingerboard-ramps", "fingerboard-rails", "fingerboard-mini-ramps"],
     match: (p, c) =>
       c(["park-kits"]) ||
@@ -716,7 +716,7 @@ export const HUBS: Hub[] = [
         a: "Yes. Fingerboard ramps, rails and ledges are built for the standard width range.",
       },
     ],
-    guides: ["fingerboard-sizing-guide", "32mm-vs-34mm-fingerboard-width-guide", "best-beginner-fingerboard-setup"],
+    guides: ["best-fingerboards-guide", "fingerboard-sizing-guide", "32mm-vs-34mm-fingerboard-width-guide", "best-beginner-fingerboard-setup"],
     related: ["32mm-fingerboards", "36mm-fingerboards", "maple-fingerboard-decks"],
     match: (p, c) => /34 ?mm/.test(titleTags(p)) && c(["completes", "decks", "trucks"]),
   },
