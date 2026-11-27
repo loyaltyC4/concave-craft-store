@@ -2,6 +2,7 @@ import { getCollections, getProducts } from "lib/shopify";
 import { baseUrl } from "lib/utils";
 import { allGuides } from "lib/all-guides";
 import { COUNTRY_PAGES } from "lib/country-pages-data";
+import { seoHubs } from "lib/seo-hubs";
 
 export type SiteUrl = {
   url: string;
@@ -48,12 +49,20 @@ function abs(url: string): string {
 /** Static pages. */
 export async function getStaticUrls(): Promise<SiteUrl[]> {
   const now = new Date().toISOString();
-  return STATIC_PAGES.map((p) => ({
+  const pages = STATIC_PAGES.map((p) => ({
     url: `${baseUrl}${p.path}`,
     lastModified: now,
     changeFrequency: p.freq,
     priority: p.priority,
   }));
+  // SEO hub pages (lib/seo-hubs.ts): only hubs that still match enough products.
+  const hubs = seoHubs(await getProducts({})).map(({ hub }) => ({
+    url: `${baseUrl}/${hub.slug}`,
+    lastModified: now,
+    changeFrequency: "weekly" as const,
+    priority: 0.85,
+  }));
+  return [...pages, ...hubs];
 }
 
 /** Category pages — the highest-intent commercial URLs on the site. */

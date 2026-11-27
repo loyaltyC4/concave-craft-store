@@ -239,7 +239,7 @@ export const FLASH_SALE = {
   /** Short label used in the announcement bar / badges. */
   shortLabel: "Black Friday",
   /** What is on sale, in the shopper's words, for the announcement bar. */
-  blurb: "15% off best-value picks and 10% off most of the store, plus a free gift on orders over $50",
+  blurb: "15% off top picks, 10% off most items, free gift over $50",
   // Thursday 26 Nov 00:00 to Monday 30 Nov 23:59, US Pacific (Black Friday + Cyber Monday).
   startsAt: "2026-11-26T00:00:00-08:00",
   endsAt: "2026-11-30T23:59:59-08:00",

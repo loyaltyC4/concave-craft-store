@@ -9,6 +9,7 @@ import {
   SUPPORT_EMAIL,
   SOCIALS,
 } from "lib/brand";
+import { HUBS } from "lib/seo-hubs";
 import {
   COUNTRY_PAGES,
   FOOTER_COUNTRY_SLUGS,
@@ -49,7 +50,7 @@ export default function Footer() {
 
   return (
     <footer className="border-t border-white/10 bg-[#0b0c0e] text-sm text-neutral-400">
-      <div className="mx-auto grid w-full max-w-7xl grid-cols-2 gap-10 px-6 py-16 md:grid-cols-6 md:px-12">
+      <div className="mx-auto grid w-full max-w-7xl grid-cols-2 gap-10 px-6 py-16 md:grid-cols-7 md:px-12">
         <div className="col-span-2 md:col-span-2">
           <BrandLogo />
           <p className="mt-4 max-w-xs text-sm leading-relaxed text-neutral-500">
@@ -85,6 +86,28 @@ export default function Footer() {
               href: `/search/${c.handle}`,
             })),
           ]}
+        />
+
+        <Column
+          title="Popular"
+          links={[
+            "fingerboard-obstacles",
+            "fingerboard-ramps",
+            "fingerboard-rails",
+            "wooden-fingerboard-ramps",
+            "fingerboard-parks",
+            "fingerboard-molds",
+            "fingerboard-foam-grip-tape",
+            "fingerboard-bearing-wheels",
+            "fingerboard-trucks",
+            "34mm-fingerboards",
+            "32mm-fingerboards",
+            "36mm-fingerboards",
+            "29mm-fingerboards",
+          ].flatMap((slug) => {
+            const h = HUBS.find((x) => x.slug === slug);
+            return h ? [{ label: h.h1, href: `/${h.slug}` }] : [];
+          })}
         />
 
         <Column

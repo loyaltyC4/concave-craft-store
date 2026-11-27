@@ -1,6 +1,7 @@
 import { getCollectionProducts, getPicks, getProduct } from "lib/shopify";
 import { FeaturedShowcase } from "components/home/featured-showcase";
 import { ProductHero } from "components/home/product-hero";
+import { HUBS } from "lib/seo-hubs";
 import type { Product } from "lib/shopify/types";
 import Image from "next/image";
 import Link from "next/link";
@@ -456,6 +457,44 @@ export default async function HomePage() {
         </div>
       </section>
 
+
+      {/* POPULAR SEARCHES: crawlable links to the SEO hub pages (lib/seo-hubs.ts). */}
+      <section className="mx-auto max-w-7xl px-6 pb-10 md:px-12">
+        <h2 className="text-xs font-semibold uppercase tracking-[0.18em]" style={{ color: VOLT }}>
+          Popular searches
+        </h2>
+        <ul className="mt-4 flex flex-wrap gap-2">
+          {[
+            "fingerboard-obstacles",
+            "fingerboard-ramps",
+            "fingerboard-rails",
+            "wooden-fingerboard-ramps",
+            "fingerboard-mini-ramps",
+            "fingerboard-parks",
+            "fingerboard-molds",
+            "fingerboard-foam-grip-tape",
+            "fingerboard-bearing-wheels",
+            "fingerboard-trucks",
+            "29mm-fingerboards",
+            "32mm-fingerboards",
+            "34mm-fingerboards",
+            "36mm-fingerboards",
+            "maple-fingerboard-decks",
+          ].flatMap((slug) => {
+            const h = HUBS.find((x) => x.slug === slug);
+            return h ? [h] : [];
+          }).map((h) => (
+            <li key={h.slug}>
+              <Link
+                href={`/${h.slug}`}
+                className="inline-block rounded-full border border-white/15 px-4 py-2 text-sm text-neutral-300 transition hover:border-[#c5f23c]/60 hover:text-[#c5f23c]"
+              >
+                {h.h1}
+              </Link>
+            </li>
+          ))}
+        </ul>
+      </section>
 
       {/*
         SECONDARY CATEGORY STRIP — the remaining 7 categories. Horizontal
